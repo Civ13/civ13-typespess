@@ -1,7 +1,6 @@
 
 const EventEmitter = require("events");
 const {
-	Sound,
 	make_watched_property,
 	to_chat,
 	stoplag,
@@ -9,8 +8,8 @@ const {
 } = require("./../../typespess/index.js");
 const Mind = require("./mobs/mind/mind.js");
 const _ = require("underscore");
-const tips = require("../../strings/tips.json");
-const sillytips = require("../../strings/sillytips.json");
+//const tips = require("../../strings/tips.json");
+//const sillytips = require("../../strings/sillytips.json");
 
 class GameTicker extends EventEmitter {
 	constructor(server) {
@@ -44,10 +43,10 @@ class GameTicker extends EventEmitter {
 		if (this.game_state == "pregame") {
 			if (this.start_at != null) {
 				let time_left = this.start_at - this.server.now();
-				if (time_left <= 30000 && !this.round_tip_sent) {
+/** 				if (time_left <= 30000 && !this.round_tip_sent) {
 					this.send_tip_of_the_round();
 					this.round_tip_sent = true;
-				}
+				}*/
 				if (time_left <= 0) {
 					this.start_game().then(
 						(success) => {
@@ -94,16 +93,13 @@ class GameTicker extends EventEmitter {
 		for (let mind of this.server.job_controller.assigned) {
 			if (!mind.assigned_role) continue; //
 			// alright now spawn everyone in
-			let mob = mind.assigned_role.instance(
-				this.server,
-				mind.character_preferences
-			);
+			let mob = mind.assigned_role.instance(this.server,mind.character_preferences);
 			mind.transfer_to(mob);
 			this.server.job_controller.send_to_spawn(mob, mind.assigned_role.id);
 			mind.assigned_role.after_spawn(mob);
 		}
 		stoplag();
-		to_chat`<span style='color:blue;font-weight:bold'>Welcome to Space Station 13, enjoy your stay!</span>`(
+		to_chat`<span style='color:red;font-weight:bold'>Welcome to Civilization 13, enjoy your stay!</span>`(
 			Object.values(this.server.clients)
 		);
 		this.busy = false;
@@ -117,7 +113,7 @@ class GameTicker extends EventEmitter {
 			this.start_at = this.start_at =
         this.server.now() + this.server.config.lobby_countdown * 1000;
 	}
-	send_tip_of_the_round() {
+/** 	send_tip_of_the_round() {
 		let tip = this.round_tip_override;
 		if (!tip) {
 			if (tips.length && Math.random() < 0.95) tip = _.sample(tips);
@@ -128,7 +124,7 @@ class GameTicker extends EventEmitter {
 			to_chat`<span style='color:purple'><b>Tip of the round: </b>${tip}</span>`(
 				Object.values(this.server.clients)
 			);
-	}
+	} */
 }
 
 module.exports.now = (server) => {

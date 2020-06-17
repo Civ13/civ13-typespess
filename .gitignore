@@ -71,3 +71,4 @@ Windows PowerShell.lnk
 .jshintrc
 *.code-workspace
 maps/newmap.bsmap
+quick_launch.bat
