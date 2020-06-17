@@ -1,0 +1,877 @@
+{
+  "cigarette": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cig": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cig_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cig_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "dromedary": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "dromedary_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "dromedary_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "uplift": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "uplift_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "uplift_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "carp": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "carp_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "carp_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "robust": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "robust_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "robust_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "syndie": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "syndie_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "syndie_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "midori": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "midori_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "midori_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "shadyjim": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "shadyjim_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "shadyjim_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "robustg": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "robustg_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "robustg_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cigarcase_open": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cigarcase": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "premium cigar": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cigar": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "match_lit": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 128,
+            "delay": 200
+          },
+          {
+            "x": 32,
+            "y": 128,
+            "delay": 200
+          },
+          {
+            "x": 64,
+            "y": 128,
+            "delay": 200
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "match_unlit": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "match_burnt": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "matchbox": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "matchbox_almostfull": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "matchbox_e": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "matchbox_almostempty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cig_paper": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cig_paper_pack_empty": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cig_paper_pack": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cig_filter": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "lighter_base": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "lighter_on": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "lighter": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "zippo": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "zippo_on": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 192,
+            "delay": 100
+          },
+          {
+            "x": 64,
+            "y": 192,
+            "delay": 100
+          },
+          {
+            "x": 96,
+            "y": 192,
+            "delay": 100
+          },
+          {
+            "x": 128,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "lighter_in": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "zippo_in": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  }
+}

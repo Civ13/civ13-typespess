@@ -1,0 +1,1098 @@
+{
+  "0": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "3": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "4": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "screen": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "micro_mani": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "nano_mani": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "pico_mani": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "micro_laser": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "high_micro_laser": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "ultra_high_micro_laser": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "matter_bin": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "advanced_matter_bin": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "super_matter_bin": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "subspace_ansible": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "hyperwave_filter": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "subspace_amplifier": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 32,
+            "delay": 200
+          },
+          {
+            "x": 256,
+            "y": 32,
+            "delay": 400
+          },
+          {
+            "x": 288,
+            "y": 32,
+            "delay": 200
+          },
+          {
+            "x": 0,
+            "y": 64,
+            "delay": 400
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "treatment_disk": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "wavelength_analyzer": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "ansible_crystal": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "subspace_transmitter": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "datadisk0": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 64,
+            "delay": 100
+          },
+          {
+            "x": 192,
+            "y": 64,
+            "delay": 100
+          },
+          {
+            "x": 224,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "datadisk1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 64,
+            "delay": 100
+          },
+          {
+            "x": 288,
+            "y": 64,
+            "delay": 100
+          },
+          {
+            "x": 0,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "datadisk2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 96,
+            "delay": 100
+          },
+          {
+            "x": 64,
+            "y": 96,
+            "delay": 100
+          },
+          {
+            "x": 96,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "datadisk3": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 96,
+            "delay": 100
+          },
+          {
+            "x": 160,
+            "y": 96,
+            "delay": 100
+          },
+          {
+            "x": 192,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "datadisk4": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 96,
+            "delay": 100
+          },
+          {
+            "x": 256,
+            "y": 96,
+            "delay": 100
+          },
+          {
+            "x": 288,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "datadisk5": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 32,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 64,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "datadisk6": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 128,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 160,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "rom1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "rom2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "romos1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "romos2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "hdd1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "hdd2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "bluespace_matter_bin": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 160,
+            "delay": 100
+          },
+          {
+            "x": 96,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "femto_mani": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 160,
+            "delay": 100
+          },
+          {
+            "x": 160,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "quadratic_capacitor": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 160,
+            "delay": 100
+          },
+          {
+            "x": 224,
+            "y": 160,
+            "delay": 100
+          },
+          {
+            "x": 256,
+            "y": 160,
+            "delay": 100
+          },
+          {
+            "x": 288,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "triphasic_scan_module": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 192,
+            "delay": 100
+          },
+          {
+            "x": 32,
+            "y": 192,
+            "delay": 100
+          },
+          {
+            "x": 64,
+            "y": 192,
+            "delay": 100
+          },
+          {
+            "x": 96,
+            "y": 192,
+            "delay": 100
+          },
+          {
+            "x": 128,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "quadultra_micro_laser": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 192,
+            "delay": 100
+          },
+          {
+            "x": 192,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "capacitor": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "adv_capacitor": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "super_capacitor": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "scan_module": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 224,
+            "delay": 100
+          },
+          {
+            "x": 32,
+            "y": 224,
+            "delay": 100
+          },
+          {
+            "x": 64,
+            "y": 224,
+            "delay": 100
+          },
+          {
+            "x": 96,
+            "y": 224,
+            "delay": 100
+          },
+          {
+            "x": 128,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "adv_scan_module": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 224,
+            "delay": 100
+          },
+          {
+            "x": 192,
+            "y": 224,
+            "delay": 100
+          },
+          {
+            "x": 224,
+            "y": 224,
+            "delay": 100
+          },
+          {
+            "x": 256,
+            "y": 224,
+            "delay": 100
+          },
+          {
+            "x": 288,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "super_scan_module": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 256,
+            "delay": 100
+          },
+          {
+            "x": 32,
+            "y": 256,
+            "delay": 100
+          },
+          {
+            "x": 64,
+            "y": 256,
+            "delay": 100
+          },
+          {
+            "x": 96,
+            "y": 256,
+            "delay": 100
+          },
+          {
+            "x": 128,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "box_0": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "box_1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "box_2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "vbox_0": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "vbox_1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "vbox_2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "vbox_3": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  }
+}

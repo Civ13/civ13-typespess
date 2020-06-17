@@ -1,0 +1,2927 @@
+{
+  "donut1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "donut2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "jdonut1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "jdonut2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "faggot": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "chips": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "candy": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "monkeycube": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "egg": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "egg-purple": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "egg-blue": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "egg-red": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "egg-orange": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "egg-yellow": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 0,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "egg-green": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "egg-rainbow": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "egg-mime": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "chocolateegg": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "donkpocket": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "badrecipe": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "tofu": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "fishfillet": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "meat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "rottenmeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "xenomeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "bearmeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "hugemushroomslice": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "tomatomeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 32,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "spidermeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "waffles": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "rofflewaffles": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "soylent_green": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "soylent_yellow": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "sosjerky": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "4no_raisins": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "space_twinkie": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "syndi_cakes": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cheesie_honkers": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "candy_corn": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "loadedbakedpotato": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "phelmbiscuit": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "omelette": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 64,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "friedegg": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "mint": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "benedict": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cornedbeef": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "fries": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cheesyfries": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "carrotfries": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "eggplantparm": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "kebab": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "sausage": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "popcorn": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "muffin": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "berrymuffin": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "poppypretzel": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 96,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "enchiladas": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "fishandchips": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "fishfingers": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cubancarp": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "sashimi": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "spiderleg": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "spiderlegcooked": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 128,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "spidereggs": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 256,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 288,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 320,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 352,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 384,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 416,
+            "y": 128,
+            "delay": 100
+          },
+          {
+            "x": 0,
+            "y": 160,
+            "delay": 100
+          },
+          {
+            "x": 32,
+            "y": 160,
+            "delay": 100
+          },
+          {
+            "x": 64,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "spiderling": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "spiderlollipop": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "spidereggsham": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 160,
+            "delay": 200
+          },
+          {
+            "x": 192,
+            "y": 160,
+            "delay": 200
+          },
+          {
+            "x": 224,
+            "y": 160,
+            "delay": 200
+          },
+          {
+            "x": 256,
+            "y": 160,
+            "delay": 200
+          },
+          {
+            "x": 288,
+            "y": 160,
+            "delay": 200
+          },
+          {
+            "x": 320,
+            "y": 160,
+            "delay": 200
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "beans": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "meatbun": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "meatsteak": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 160,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "soydope": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "stewedsoymeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "watermelonslice": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "candiedapple": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cheesewheel": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cheesewedge": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "chawanmushi": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "fortune_cookie": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "COOKIE!!!": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cracker": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cocoa": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "chocolatebar": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "sugarcookie": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "icecreamsandwich": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 192,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "boiledrorocore": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "slimemeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "agolemmeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "golemmeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "lizardmeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "plantmeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "shadowmeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "skeletonmeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "flymeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 224,
+            "delay": 500
+          },
+          {
+            "x": 288,
+            "y": 224,
+            "delay": 500
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "chococornet": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "chococoin": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "chocoorange": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "bacon": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 224,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "baconcooked": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "baconb": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "baconcookedb": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "rod_filling": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "rod": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "rawcutlet": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "rawcutlet_coloration": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cutlet": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "bearsteak": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 256,
+            "delay": 125
+          },
+          {
+            "x": 288,
+            "y": 256,
+            "delay": 150
+          },
+          {
+            "x": 320,
+            "y": 256,
+            "delay": 150
+          },
+          {
+            "x": 352,
+            "y": 256,
+            "delay": 125
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "hotcrossbun": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "scotchegg": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 256,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "chocolatebunny": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "hotdog": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cherrycupcake": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "bluecherrycupcake": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "yakiimo": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "melonfruitbowl": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "melonkeg": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "spacefreezy": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "sundae": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "honkdae": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "eggwrap": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "fuegoburrito": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "carneburrito": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cheesyburrito": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 288,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "burrito": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "nachos": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cheesynachos": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "cubannachos": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "raisincookie": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "oatmealcookie": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "roastparsnip": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "chocodice": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "nugget_lump": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "nugget_star": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "nugget_corgi": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "nugget_lizard": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "honeybun": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "honeybar": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 320,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "goliathmeat": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 352,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "goliathsteak": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 352,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "stuffed_legion": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 352,
+            "delay": 100
+          },
+          {
+            "x": 96,
+            "y": 352,
+            "delay": 100
+          },
+          {
+            "x": 128,
+            "y": 352,
+            "delay": 100
+          },
+          {
+            "x": 160,
+            "y": 352,
+            "delay": 100
+          },
+          {
+            "x": 192,
+            "y": 352,
+            "delay": 100
+          },
+          {
+            "x": 224,
+            "y": 352,
+            "delay": 100
+          },
+          {
+            "x": 256,
+            "y": 352,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "khinkali": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 352,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "khachapuri": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 352,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "meatwheat_clump": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 352,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "dankpocket": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 352,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "powercrepe": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 352,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "tatortot": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "taco": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "taco_plain": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  " ": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "bran_requests": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "butter": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "pigblanket": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "butterbiscuit": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 224,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "butteredtoast": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 256,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "onionrings": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 288,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "onionslice": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 320,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "onionslice_red": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 352,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "pancakes_1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 384,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "pancakes_2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 416,
+            "y": 384,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "pancakes_3": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 0,
+            "y": 416,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "bbpancakes_1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 32,
+            "y": 416,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "ccpancakes_2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 64,
+            "y": 416,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "ccpancakes_3": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 96,
+            "y": 416,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "ccpancakes_1": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 128,
+            "y": 416,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "bbpancakes_2": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 160,
+            "y": 416,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  },
+  "bbpancakes_3": {
+    "dir_count": 1,
+    "width": 32,
+    "height": 32,
+    "dirs": {
+      "2": {
+        "frames": [
+          {
+            "x": 192,
+            "y": 416,
+            "delay": 100
+          }
+        ]
+      }
+    },
+    "tile_size": 32
+  }
+}

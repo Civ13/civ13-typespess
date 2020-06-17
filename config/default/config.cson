@@ -1,0 +1,11 @@
+lobby_countdown: 10
+round_end_countdown: 30
+
+motd: '''
+	<div class="motd">
+		<h1>Welcome to Civ13 TypeSpess edition, a port of Civ13 to typespess!</h1>
+		<i>This is still extremely unfinished.</i>
+	</div>
+	'''
+
+title_screen: 'icons/title_screen/civ13.png'
