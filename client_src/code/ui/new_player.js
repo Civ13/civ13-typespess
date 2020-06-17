@@ -1,5 +1,3 @@
-
-
 class NewPlayerPanel {
 	constructor(panel) {
 		this.panel = panel;
@@ -41,7 +39,7 @@ class NewPlayerPanel {
 		this.panel.header_obj.classList.add("center");
 		this.panel.content_obj.classList.add("center");
 		this.panel.content_obj.innerHTML = `
-			<div class="vertical-margins"><div class='button' data-message='{"setup_character":true}'>Setup Character</div></div>
+			<div class="vertical-margins"><div class='button' data-message='{"setup_character":true}'>Character & Preferences</div></div>
 			<div class="pregame vertical-margins">
 				Starting in: <span class='timer'></span>
 			</div>

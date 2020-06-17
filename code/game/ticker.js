@@ -106,9 +106,6 @@ class GameTicker extends EventEmitter {
 		to_chat`<span style='color:blue;font-weight:bold'>Welcome to Space Station 13, enjoy your stay!</span>`(
 			Object.values(this.server.clients)
 		);
-		new Sound(this.server, { path: "sound/ai/welcome.ogg" }).play_to(
-			Object.values(this.server.clients)
-		);
 		this.busy = false;
 		this.game_state = "playing";
 		return true;

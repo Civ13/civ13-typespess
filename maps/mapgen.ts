@@ -1,8 +1,4 @@
-import { strict } from "assert";
-
-
-
-const fs = require("fs");
+import fs from "fs";
 
 console.log("Loading definitions...");
 let originalLoadedConfigs: Array<number> = [100, 100, 25, 20]; // width, height, water, dirt
@@ -10,7 +6,7 @@ let finalData = "";
 
 function load_configs() {
 	fs.readFile("mapdef.txt", function (
-		err: any,
+		err: unknown,
 		data: { toString: () => string }
 	) {
 		if (err) {
@@ -58,6 +54,21 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		}
 		const floorname = random_floor(originalLoadedConfigs[3]);
 		finalData = finalData + `		"${i},${j},0": [\n`;
+		if (i == inc_w) {
+			finalData = finalData + "			{\n";
+			finalData = finalData + "				\"instance_vars\": {\n";
+			finalData = finalData + "					\"name\": \"start\",\n";
+			finalData = finalData + "					\"components\": {\n";
+			finalData = finalData + "						\"JobLandmark\": {\n";
+			finalData = finalData + "							\"name\": \"start\"\n";
+			finalData = finalData + "						}\n";
+			finalData = finalData + "					}\n";
+			finalData = finalData + "				},\n";
+			finalData = finalData + "				\"template_name\": \"job_landmark\",\n";
+			finalData = finalData + `				"x": ${i},\n`;
+			finalData = finalData + `				"y": ${j}\n`;
+			finalData = finalData + "			},\n";
+		}
 		finalData = finalData + "			{\n";
 		finalData = finalData + `				"template_name": "floor_${floorname}",\n`;
 		finalData = finalData + "				\"variant_leaf_path\": [\n";
@@ -92,7 +103,7 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 finalData = finalData + "	}\n";
 finalData = finalData + "}";
 
-fs.writeFile("newmap.bsmap", finalData, function (err: any) {
+fs.writeFile("newmap.bsmap", finalData, function (err: unknown) {
 	if (err) {
 		return console.error(err);
 	}

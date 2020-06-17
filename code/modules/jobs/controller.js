@@ -220,8 +220,9 @@ class JobController {
 
 	send_to_atom(mob, atom) {
 		if (!atom) return;
-		if (atom.is_base_loc || atom.is_fine_loc) mob.loc = atom;
-		else mob.loc = atom.base_mover.fine_loc;
+		if (atom.is_base_loc || atom.is_fine_loc) {mob.loc = atom;}
+		else {mob.loc = atom.base_mover.fine_loc;}
+		mob.force_move(atom.x, atom.y, atom.y, mob.client.server.station_dim);
 	}
 
 	send_to_late_join(mob) {
@@ -230,8 +231,8 @@ class JobController {
 		}
 	}
 
-	send_to_spawn(mob, landmark_name) {
-		let landmarks_list = this.job_landmarks[landmark_name];
+	send_to_spawn(mob) {
+		let landmarks_list = this.job_landmarks["start"];
 		if (landmarks_list && landmarks_list.length) {
 			let landmark = landmarks_list.shift(); // we rotate through the landmarks. If we have more jobs than landmarks, I guess people can spawn on top of each other.
 			landmarks_list.push(landmark);

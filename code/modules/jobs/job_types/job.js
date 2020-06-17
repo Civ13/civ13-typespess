@@ -71,13 +71,6 @@ class JobType {
 			to_chat`<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>`(
 				user
 			);
-		if (user.server.game_options.minimal_access_threshold) {
-			to_chat`<span style='color:blue;font-weight:bold'>As this station was initially staffed with a ${
-				user.server.job_controller.minimal_access
-					? "full crew, only your job's necessities"
-					: "skeleton crew, additional access may"
-			} have been added to your ID card.</span>`(user);
-		}
 	}
 
 	equip(mob) {
