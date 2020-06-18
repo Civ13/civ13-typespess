@@ -48,7 +48,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"lhand",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "hand_l",
 				screen_loc_x: 7.5,
 				screen_loc_y: 0.15625,
@@ -67,7 +67,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"rhand",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "hand_r",
 				screen_loc_x: 6.5,
 				screen_loc_y: 0.15625,
@@ -86,7 +86,7 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.swap_hands = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "swap",
 				screen_loc_x: 6.5,
 				screen_loc_y: 1.15625,
@@ -100,7 +100,7 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.act_equip = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "act_equip",
 				screen_loc_x: 6.5,
 				screen_loc_y: 1.15625,
@@ -112,7 +112,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"id",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "id",
 				screen_loc_x: 3.375,
 				screen_loc_y: 0.15625,
@@ -129,7 +129,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"belt",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "belt",
 				screen_loc_x: 4.4375,
 				screen_loc_y: 0.15625,
@@ -147,7 +147,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"back",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "back",
 				screen_loc_x: 5.4375,
 				screen_loc_y: 0.15625,
@@ -164,7 +164,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"storage1",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "pocket",
 				screen_loc_x: 8.5625,
 				screen_loc_y: 0.15625,
@@ -180,7 +180,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"storage2",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "pocket",
 				screen_loc_x: 9.625,
 				screen_loc_y: 0.15625,
@@ -196,7 +196,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"suit_storage",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "suit_storage",
 				screen_loc_x: 2.3125,
 				screen_loc_y: 0.15625,
@@ -214,7 +214,7 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.toggle_clothing = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "toggle",
 				screen_loc_x: 0.1875,
 				screen_loc_y: 0.15625,
@@ -240,7 +240,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"shoes",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "shoes",
 				screen_loc_x: 1.25,
 				screen_loc_y: 0.15625,
@@ -258,7 +258,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"iclothing",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "uniform",
 				screen_loc_x: 0.1875,
 				screen_loc_y: 1.21875,
@@ -274,7 +274,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"oclothing",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "suit",
 				screen_loc_x: 1.25,
 				screen_loc_y: 1.21875,
@@ -290,7 +290,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"gloves",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "gloves",
 				screen_loc_x: 2.3125,
 				screen_loc_y: 1.21875,
@@ -307,7 +307,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"mask",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "mask",
 				screen_loc_x: 1.25,
 				screen_loc_y: 2.28125,
@@ -324,7 +324,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"neck",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "neck",
 				screen_loc_x: 0.1875,
 				screen_loc_y: 2.28125,
@@ -341,7 +341,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"glasses",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "glasses",
 				screen_loc_x: 0.1875,
 				screen_loc_y: 3.34375,
@@ -358,7 +358,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"ears",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "ears",
 				screen_loc_x: 2.3125,
 				screen_loc_y: 2.28125,
@@ -375,7 +375,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"head",
 			{
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "head",
 				screen_loc_x: 1.25,
 				screen_loc_y: 3.34375,
@@ -394,7 +394,7 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.drop_item = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "act_drop",
 				screen_loc_x: 13.875,
 				screen_loc_y: 1.21875,
@@ -407,7 +407,7 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.throw_item = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "act_throw_off",
 				screen_loc_x: 13.875,
 				screen_loc_y: 1.21875,
@@ -421,7 +421,7 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.resist = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "act_resist",
 				screen_loc_x: 12.8125,
 				screen_loc_y: 1.21875,

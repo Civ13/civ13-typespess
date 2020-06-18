@@ -3,7 +3,7 @@
 let preload_list = [
 	"icons/effects/parallax.png",
 	"icons/mob/screen_gen.png",
-	"icons/mob/screen_civ.png",
+	"icons/mob/screen_midnight.png",
 	"icons/mob/screen_full.png",
 	"icons/obj/clothing/uniforms.png",
 	"icons/obj/clothing/suits.png",

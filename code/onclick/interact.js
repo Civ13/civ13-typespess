@@ -25,7 +25,7 @@ class MobInteract extends Component {
 		this.move_mode = mob_defines.MOVE_INTENT_RUN;
 		this.a.c.Eye.screen.move_intent = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/mob/screen_civ.png",
+				icon: "icons/mob/screen_midnight.png",
 				icon_state: "running",
 				screen_loc_x: 12.8125,
 				screen_loc_y: 0.15625,
