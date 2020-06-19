@@ -65,7 +65,7 @@ ZoneSel.template = {
 				overlay_icon: "icons/mob/screen_gen.png",
 			},
 		},
-		icon: "icons/mob/screen_midnight.png",
+		icon: "icons/mob/screen_civ13.png",
 		icon_state: "zone_sel",
 		name: "damage zone",
 		screen_loc_x: 13.875,
