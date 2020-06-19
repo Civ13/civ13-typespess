@@ -18,7 +18,7 @@ class NewPlayer extends Component {
 			vars: {
 				screen_loc_x: 0,
 				screen_loc_y: 14,
-				icon: this.a.server.config.title_screen,
+				icon: "icons/title_screen/default.png",
 				icon_state: "",
 				layer: 30,
 			},
@@ -36,7 +36,6 @@ class NewPlayer extends Component {
 		}
 		if (new_client) {
 			this.a.server.ticker.total_players++;
-			to_chat(this.a, this.a.server.config.motd);
 
 			this.new_player_panel = new NewPlayerPanel(new_client);
 			this.new_player_panel.open();

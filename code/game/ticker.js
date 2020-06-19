@@ -7,7 +7,6 @@ const {
 	has_component,
 } = require("./../../typespess/index.js");
 const Mind = require("./mobs/mind/mind.js");
-const _ = require("underscore");
 //const tips = require("../../strings/tips.json");
 //const sillytips = require("../../strings/sillytips.json");
 
@@ -36,15 +35,14 @@ class GameTicker extends EventEmitter {
 		setInterval(this.tick.bind(this), 2000);
 		if (this.total_players)
 			this.start_at =
-        this.server.now() + this.server.config.lobby_countdown * 1000;
+        this.server.now() + 3 * 1000;
 	}
 	tick() {
 		if (this.busy) return;
 		if (this.game_state == "pregame") {
 			if (this.start_at != null) {
 				let time_left = this.start_at - this.server.now();
-/** 				if (time_left <= 30000 && !this.round_tip_sent) {
-					this.send_tip_of_the_round();
+				/** if (time_left <= 30000 && !this.round_tip_sent) {this.send_tip_of_the_round();
 					this.round_tip_sent = true;
 				}*/
 				if (time_left <= 0) {
@@ -56,7 +54,7 @@ class GameTicker extends EventEmitter {
 								if (this.total_players)
 									this.start_at =
                     this.server.now() +
-                    this.server.config.lobby_countdown * 1000;
+                    3 * 1000;
 								else this.start_at = null;
 							}
 						},
@@ -111,7 +109,7 @@ class GameTicker extends EventEmitter {
 		if (from && !to) this.start_at = null;
 		if (to && !from)
 			this.start_at = this.start_at =
-        this.server.now() + this.server.config.lobby_countdown * 1000;
+        this.server.now() + 3 * 1000;
 	}
 /** 	send_tip_of_the_round() {
 		let tip = this.round_tip_override;

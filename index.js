@@ -15,8 +15,8 @@ global.server = server; // So the debugger can access it. No, you are not allowe
 global.require = require;
 server.resRoot = "./res/";
 
-server.config = read_config("config.cson");
-server.game_options = read_config("game_options.cson");
+//server.config = read_config("config.cson");
+//server.game_options = read_config("game_options.cson");
 
 server.importModule(require("./code/game/area/area_components.js"));
 server.importModule(require("./code/game/area/area.js"));

@@ -1,17 +1,12 @@
 /* eslint-disable camelcase */
 /* eslint-disable max-len */
 
-
-// BASED OFF OF tgstation COMMIT 910be9f4e29270e3a0a36ed8042310ed4bee1845
-
 const Typespess = require("./typespess/index.js");
 const read_config = require("./code/config.js");
 
 console.log("Loading game...");
 
 const server = new Typespess();
-global.server = server; // So the debugger can access it. No, you are not allowed to use it in your code.
-// I should be able to remove this line with *nothing* breaking (except the ability to use the debugger)
 global.require = require;
 server.resRoot = "./res/";
 
@@ -234,7 +229,9 @@ if (global.is_bs_editor_env) {
 
 	server.on("client_login", (client) => {
 		if (!client.mob) {
-			const mob = new Typespess.Atom(server, { components: ["NewPlayer"] });
+			const mob = new Typespess.Atom(server, {
+				components: ["NewPlayer"]
+			});
 			mob.c.Mob.client = client;
 		}
 	});
@@ -254,7 +251,7 @@ if (global.is_bs_editor_env) {
 				`${server_config.gh_login.client_id}:${server_config.gh_login.client_secret}`
 			).toString("base64");
 		const invalid_tokens = new Set();
-		server.handle_login = function (ws) {
+		server.handle_login = function(ws) {
 			ws.send(
 				JSON.stringify({
 					login_type: "github",
@@ -268,51 +265,53 @@ if (global.is_bs_editor_env) {
 				const obj = JSON.parse(msg);
 				if (obj.access_token) {
 					obj.access_token = "" + obj.access_token;
-					const req = https.request(
-						{
-							hostname: "api.github.com",
-							path: `/applications/${
-								server_config.gh_login.client_id
-							}/tokens/${querystring.escape(obj.access_token)}`,
-							method: "GET",
-							headers: {
-								"User-Agent": server_config.gh_login.user_agent,
-								Authorization: authorization,
-							},
+					const req = https.request({
+						hostname: "api.github.com",
+						path: `/applications/${
+							server_config.gh_login.client_id
+						}/tokens/${querystring.escape(obj.access_token)}`,
+						method: "GET",
+						headers: {
+							"User-Agent": server_config.gh_login.user_agent,
+							Authorization: authorization,
 						},
-						(res) => {
-							res.setEncoding("utf8");
-							let data = "";
-							res.on("data", (chunk) => {
-								data += chunk;
-							});
-							res.on("end", () => {
-								const obj2 = JSON.parse(data);
-								if (
-									!obj2.user ||
+					},
+					(res) => {
+						res.setEncoding("utf8");
+						let data = "";
+						res.on("data", (chunk) => {
+							data += chunk;
+						});
+						res.on("end", () => {
+							const obj2 = JSON.parse(data);
+							if (
+								!obj2.user ||
 									!obj2.scopes ||
 									!obj2.scopes.includes("user:email")
-								) {
-									ws.send(JSON.stringify({ valid: false }));
-								} else {
-									name = obj2.user.login;
-									id = obj2.user.id;
-									token = obj.access_token;
-									ws.send(
-										JSON.stringify({
-											valid: true,
-											logged_in_as: obj2.user.login,
-											autojoin:
-												server.dc_mobs[id] != null ||
+							) {
+								ws.send(JSON.stringify({
+									valid: false
+								}));
+							} else {
+								name = obj2.user.login;
+								id = obj2.user.id;
+								token = obj.access_token;
+								ws.send(
+									JSON.stringify({
+										valid: true,
+										logged_in_as: obj2.user.login,
+										autojoin: server.dc_mobs[id] != null ||
 												server.clients[id] != null,
-										})
-									);
-								}
-							});
-						}
+									})
+								);
+							}
+						});
+					}
 					);
 					req.on("error", (err) => {
-						ws.send(JSON.stringify({ valid: false }));
+						ws.send(JSON.stringify({
+							valid: false
+						}));
 						console.error(err);
 					});
 					req.end();
@@ -348,40 +347,45 @@ if (global.is_bs_editor_env) {
 		};
 	}
 
-	const serve = serveStatic(server.resRoot, { index: ["index.html"] });
+	const serve = serveStatic(server.resRoot, {
+		index: ["index.html"]
+	});
 
 	const http_handler = (req, res) => {
 		const done = finalhandler(req, res);
 		const url_obj = url.parse(req.url, true);
 		if (url_obj.pathname == "/gh-oauth" && server_config.gh_login.enabled) {
-			const req2 = https.request(
-				{
-					hostname: "github.com",
-					path: "/login/oauth/access_token",
-					method: "POST",
-					headers: { "User-Agent": server_config.gh_login.user_agent },
+			const req2 = https.request({
+				hostname: "github.com",
+				path: "/login/oauth/access_token",
+				method: "POST",
+				headers: {
+					"User-Agent": server_config.gh_login.user_agent
 				},
-				(res2) => {
-					res2.setEncoding("utf8");
-					let data = "";
-					res2.on("data", (chunk) => {
-						data += chunk;
+			},
+			(res2) => {
+				res2.setEncoding("utf8");
+				let data = "";
+				res2.on("data", (chunk) => {
+					data += chunk;
+				});
+				res2.on("end", () => {
+					const obj = querystring.parse(data);
+					if (!obj.access_token) {
+						console.error(obj);
+						return done();
+					}
+					res.writeHead(200, {
+						"Content-Type": "text/html"
 					});
-					res2.on("end", () => {
-						const obj = querystring.parse(data);
-						if (!obj.access_token) {
-							console.error(obj);
-							return done();
-						}
-						res.writeHead(200, { "Content-Type": "text/html" });
-						res.write(
-							`<html><head><script>localStorage.setItem("gh_access_token", ${JSON.stringify(
-								obj.access_token
-							)}); window.location.href="/";</script></head><body></body></html>`
-						);
-						res.end();
-					});
-				}
+					res.write(
+						`<html><head><script>localStorage.setItem("gh_access_token", ${JSON.stringify(
+							obj.access_token
+						)}); window.location.href="/";</script></head><body></body></html>`
+					);
+					res.end();
+				});
+			}
 			);
 			req2.on("error", (err) => {
 				console.error(err);
@@ -397,7 +401,9 @@ if (global.is_bs_editor_env) {
 			req2.end();
 		} else if (url_obj.pathname == "/status") {
 			res.setHeader("Access-Control-Allow-Origin", "*");
-			res.writeHead(200, { "Content-Type": "application/json" });
+			res.writeHead(200, {
+				"Content-Type": "application/json"
+			});
 			const clients = [...Object.keys(server.clients)];
 			const clients_by_name = [...Object.keys(server.clients_by_name)];
 			res.write(
@@ -443,7 +449,11 @@ if (global.is_bs_editor_env) {
 		http_server.listen(server_config.port);
 	}
 
-	server.startServer({ websocket: { server: http_server } });
+	server.startServer({
+		websocket: {
+			server: http_server
+		}
+	});
 	console.log("Server started.");
 	process.exit(0);
 }

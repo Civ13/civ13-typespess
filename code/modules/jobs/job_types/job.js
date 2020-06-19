@@ -42,10 +42,7 @@ class JobType {
 	get_access_list(server) {
 		let access = [...this.access];
 		if (server.job_controller.minimal_access) access = [...this.minimal_access];
-		if (
-			server.game_options.everyone_has_maint_access &&
-      !access.includes("maint")
-		)
+		if (!access.includes("maint"))
 			access.push("maint");
 		return access;
 	}

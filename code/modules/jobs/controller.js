@@ -1,4 +1,4 @@
-
+"use strict";
 const _ = require("underscore");
 
 class JobController {
@@ -9,7 +9,7 @@ class JobController {
 		this.assigned = new Set(); // those assigned roles that spawn on the station.
 		this.job_landmarks = {};
 
-		this.minimal_access = this.server.game_options.jobs_have_minimal_access;
+		this.minimal_access = false;
 
 		this.importModule(require("./job_types/assistant.js"));
 		this.importModule(require("./job_types/cargo.js"));
@@ -149,19 +149,13 @@ class JobController {
 	divide_occupations() {
 		if (this.unassigned.size == 0) return false;
 
-		if (this.server.game_options.minimal_access_threshold) {
-			if (
-				this.server.game_options.minimal_access_threshold > this.unassigned.size
-			)
-				this.minimal_access = false;
-			else this.minimal_access = true;
+		if (20 > this.unassigned.size) {
+			this.minimal_access = false;
 		}
+		else this.minimal_access = true;
 
 		// people who want to be assistants, sure, go on.
-		for (let candidate of this.find_occupation_candidates(
-			this.jobs.assistant,
-			1
-		)) {
+		for (let candidate of this.find_occupation_candidates(this.jobs.assistant,1)) {
 			this.assign_role(candidate, this.jobs.assistant);
 		}
 
