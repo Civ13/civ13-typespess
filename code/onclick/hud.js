@@ -179,8 +179,7 @@ Alert.template = {
 				resist_alert: false,
 			},
 		},
-		icon: "icons/mob/screen_alert.png",
-		icon_state: "default",
+		icon: "icons/ui/screen_alert/default.png",
 		name: "Alert",
 		layer: 30,
 	},
@@ -227,7 +226,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Buckled",
-			icon_state: "buckled",
+			icon: "icons/ui/screen_alert/buckled.png",
 		},
 	},
 	alert_handcuffed: {
@@ -255,7 +254,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Choking (No O2)",
-			icon_state: "not_enough_oxy",
+			icon: "icons/ui/screen_alert/not_enough_oxy.gif",
 		},
 	},
 
@@ -269,7 +268,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Choking (O2)",
-			icon_state: "too_much_oxy",
+			icon: "icons/ui/screen_alert/too_much_oxy.gif",
 		},
 	},
 
@@ -283,7 +282,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Choking (No CO2)",
-			icon_state: "not_enough_co2",
+			icon: "icons/ui/screen_alert/not_enough_co2.gif",
 		},
 	},
 
@@ -297,7 +296,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Choking (CO2)",
-			icon_state: "too_much_co2",
+			icon: "icons/ui/screen_alert/too_much_co2.gif",
 		},
 	},
 
@@ -311,7 +310,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Choking (No Plasma)",
-			icon_state: "not_enough_tox",
+			icon: "icons/ui/screen_alert/not_enough_tox.gif",
 		},
 	},
 
@@ -326,7 +325,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Choking (Plasma)",
-			icon_state: "too_much_tox",
+			icon: "icons/ui/screen_alert/too_much_tox.gif",
 		},
 	},
 	//End gas alerts
@@ -341,7 +340,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Fat",
-			icon_state: "fat",
+			icon: "icons/ui/screen_alert/fat.png",
 		},
 	},
 	alert_hungry: {
@@ -353,7 +352,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Hungry",
-			icon_state: "hungry",
+			icon: "icons/ui/screen_alert/hungry.png",
 		},
 	},
 	alert_starving: {
@@ -366,7 +365,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Starving",
-			icon_state: "starving",
+			icon: "icons/ui/screen_alert/starving.png",
 		},
 	},
 	alert_hot: {
@@ -379,7 +378,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Too Hot",
-			icon_state: "hot",
+			icon: "icons/ui/screen_alert/hot2.png",	
 		},
 	},
 	alert_cold: {
@@ -392,7 +391,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Too Cold",
-			icon_state: "cold",
+			icon: "icons/ui/screen_alert/cold.gif",
 		},
 	},
 	alert_lowpressure: {
@@ -405,7 +404,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Low Pressure",
-			icon_state: "lowpressure",
+			icon: "icons/ui/screen_alert/lowpressure2.gif",
 		},
 	},
 	alert_highpressure: {
@@ -418,7 +417,7 @@ module.exports.templates = {
 				},
 			},
 			name: "High Pressure",
-			icon_state: "highpressure",
+			icon: "icons/ui/screen_alert/highpressure2.gif",
 		},
 	},
 	alert_blind: {
@@ -432,7 +431,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Blind",
-			icon_state: "blind",
+			icon: "icons/ui/screen_alert/blind.png",
 		},
 	},
 	alert_high: {
@@ -445,7 +444,7 @@ module.exports.templates = {
 				},
 			},
 			name: "High",
-			icon_state: "high",
+			icon: "icons/ui/screen_alert/high.png",
 		},
 	},
 	alert_drunk: {
@@ -459,7 +458,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Drunk",
-			icon_state: "drunk",
+			icon: "icons/ui/screen_alert/drunk.png",
 		},
 	},
 	alert_embeddedobject: {
@@ -474,7 +473,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Embedded Object",
-			icon_state: "embeddedobject",
+			icon: "icons/ui/screen_alert/embeddedobject.png",
 		},
 	},
 	alert_weightless: {
@@ -490,7 +489,7 @@ module.exports.templates = {
 				},
 			},
 			name: "Weightless",
-			icon_state: "weightless",
+			icon: "icons/ui/screen_alert/weightless.png",
 		},
 	},
 	alert_fire: {
@@ -504,68 +503,7 @@ module.exports.templates = {
 				},
 			},
 			name: "On Fire",
-			icon_state: "fire",
-		},
-	},
-
-	//ALIENS
-
-	alert_alien_tox: {
-		components: ["Alert"],
-		vars: {
-			components: {
-				Tooltip: {
-					desc:
-            "There's flammable plasma in the air. If it lights up, you'll be toast.",
-					theme: "alien",
-				},
-			},
-			name: "Plasma",
-			icon_state: "alien_tox",
-		},
-	},
-	alert_alien_fire: {
-		components: ["Alert"],
-		vars: {
-			components: {
-				Tooltip: {
-					desc:
-            "It's too hot! Flee to space or at least away from the flames. Standing on weeds will heal you.",
-					theme: "alien",
-				},
-			},
-			name: "Too Hot",
-			icon_state: "alien_fire",
-		},
-	},
-	alert_alien_vulnerable: {
-		components: ["Alert"],
-		vars: {
-			components: {
-				Tooltip: {
-					desc:
-            "Your queen has been killed, you will suffer movement penalties and loss of hivemind. A new queen cannot be made until you recover.",
-					theme: "alien",
-				},
-			},
-			name: "Severed Matriarchy",
-			icon_state: "alien_noqueen",
-		},
-	},
-
-	//BLOBS
-
-	alert_nofactory: {
-		components: ["Alert"],
-		vars: {
-			components: {
-				Tooltip: {
-					desc: "You have no factory, and are slowly dying!",
-					theme: "blob",
-				},
-			},
-			name: "No Factory",
-			icon_state: "blobbernaut_nofactory",
+			icon: "icons/ui/screen_alert/fire.png",
 		},
 	},
 };

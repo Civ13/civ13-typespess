@@ -52,8 +52,7 @@ class ZoneSel extends Component {
 
 	update_selected() {
 		this.a.overlays.selecting = {
-			icon: this.overlay_icon,
-			icon_state: this.mob.c.MobInteract.zone_sel,
+			icon: `icons/ui/screen_gen${this.mob.c.MobInteract.zone_sel}.png`
 		};
 	}
 }
@@ -62,11 +61,10 @@ ZoneSel.template = {
 	vars: {
 		components: {
 			ZoneSel: {
-				overlay_icon: "icons/mob/screen_gen.png",
+				overlay_icon: "icons/ui/screen_gen/chest.png",
 			},
 		},
-		icon: "icons/mob/screen_civ13.png",
-		icon_state: "zone_sel",
+		icon: "icons/ui/screen_civ13/zone_sel.png",
 		name: "damage zone",
 		screen_loc_x: 13.875,
 		screen_loc_y: 0.15625,

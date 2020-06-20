@@ -141,7 +141,7 @@ class CarbonMob extends Component.Networked {
 		} else {
 			variant = 7;
 		}
-		health_hud.icon_state = `health${variant}`;
+		health_hud.icon = `icons/ui/screen_gen/health${variant}.png`;
 	}
 
 	update_damage_hud() {
@@ -174,7 +174,7 @@ class CarbonMob extends Component.Networked {
 						this.a.server,
 						"screen_crit_vision"
 					);
-				this.a.c.Eye.screen.crit_vision.icon_state = `oxydamageoverlay${visionseverity}`;
+				this.a.c.Eye.screen.crit_vision.icon = `icons/ui/screen_overlays/oxydamageoverlay${visionseverity}.png`;
 			} else {
 				if (this.a.c.Eye.screen.crit_vision) {
 					this.a.c.Eye.screen.crit_vision.destroy();
@@ -183,7 +183,7 @@ class CarbonMob extends Component.Networked {
 			}
 			if (!this.a.c.Eye.screen.crit)
 				this.a.c.Eye.screen.crit = new Atom(this.a.server, "screen_crit");
-			this.a.c.Eye.screen.crit.icon_state = `passage${severity}`;
+			this.a.c.Eye.screen.crit.icon = `icons/ui/screen_overlays/passage${severity}.png`;
 		} else {
 			if (this.a.c.Eye.screen.crit) {
 				this.a.c.Eye.screen.crit.destroy();
@@ -201,7 +201,7 @@ class CarbonMob extends Component.Networked {
 			if (oxyloss >= 45) severity = 7;
 			if (!this.a.c.Eye.screen.oxy)
 				this.a.c.Eye.screen.oxy = new Atom(this.a.server, "screen_oxy");
-			this.a.c.Eye.screen.oxy.icon_state = `oxydamageoverlay${severity}`;
+			this.a.c.Eye.screen.oxy.icon = `icons/ui/screen_overlays/oxydamageoverlay${severity}.png`;
 		} else {
 			if (this.a.c.Eye.screen.oxy) {
 				this.a.c.Eye.screen.oxy.destroy();
@@ -219,7 +219,7 @@ class CarbonMob extends Component.Networked {
 			}
 			if (!this.a.c.Eye.screen.brute)
 				this.a.c.Eye.screen.brute = new Atom(this.a.server, "screen_brute");
-			this.a.c.Eye.screen.brute.icon_state = `brutedamageoverlay${severity}`;
+			this.a.c.Eye.screen.brute.icon = `icons/ui/screen_overlays/brutedamageoverlay${severity}.png`;
 		} else {
 			if (this.a.c.Eye.screen.brute) {
 				this.a.c.Eye.screen.brute.destroy();
@@ -516,7 +516,7 @@ CarbonMob.template = {
 module.exports.templates = {
 	screen_crit: {
 		vars: {
-			icon: "icons/mob/screen_full.png",
+			icon: "icons/ui/screen_overlays/passage0.png",
 			screen_loc_x: 0,
 			screen_loc_y: 14,
 			mouse_opacity: 0,
@@ -525,7 +525,7 @@ module.exports.templates = {
 	},
 	screen_crit_vision: {
 		vars: {
-			icon: "icons/mob/screen_full.png",
+			icon: "icons/ui/screen_overlays/oxydamageoverlay0.png",
 			screen_loc_x: 0,
 			screen_loc_y: 14,
 			mouse_opacity: 0,
@@ -534,7 +534,7 @@ module.exports.templates = {
 	},
 	screen_brute: {
 		vars: {
-			icon: "icons/mob/screen_full.png",
+			icon: "icons/ui/screen_overlays/brutedamageoverlay0.png",
 			screen_loc_x: 0,
 			screen_loc_y: 14,
 			mouse_opacity: 0,
@@ -543,7 +543,7 @@ module.exports.templates = {
 	},
 	screen_oxy: {
 		vars: {
-			icon: "icons/mob/screen_full.png",
+			icon: "icons/ui/screen_overlays/oxydamageoverlay0.png",
 			screen_loc_x: 0,
 			screen_loc_y: 14,
 			mouse_opacity: 0,
