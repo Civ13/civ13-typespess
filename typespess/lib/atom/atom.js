@@ -57,24 +57,20 @@ class Atom extends EventEmitter {
 		if (typeof template == "string") template = server.templates[template];
 		if (template && template.pick_from) {
 			template =
-        template.pick_from[
-        	Math.floor(Math.random() * template.pick_from.length)
-        ];
+		template.pick_from[
+			Math.floor(Math.random() * template.pick_from.length)
+		];
 			if (typeof template == "string") template = server.templates[template];
 		}
 		if (
-			template &&
-      template.use_random_variant &&
-      !template.is_variant &&
-      template.variants &&
-      template.variants.length
+			template && template.use_random_variant && !template.is_variant && template.variants && template.variants.length
 		) {
 			let new_variant_leaf_path = new Array(template.variants.length);
 			for (let i = 0; i < template.variants.length; i++) {
 				let variant = template.variants[i];
 				if (variant.type == "single") {
 					new_variant_leaf_path[i] =
-            variant.values[Math.floor(Math.random() * variant.values.length)];
+			variant.values[Math.floor(Math.random() * variant.values.length)];
 				}
 			}
 			template = server.get_template_variant(template, new_variant_leaf_path);
@@ -87,16 +83,16 @@ class Atom extends EventEmitter {
 		super();
 
 		/**
-     * The template this atom was constructed with. Useful to get the initial values of variables.
-     * @type {template}
-     */
+	 * The template this atom was constructed with. Useful to get the initial values of variables.
+	 * @type {template}
+	 */
 		this.template = template;
 
 		/**
-     * @see {@link Typespess.Atom#destroy}
-     * @type {boolean}
-     * @default false
-     */
+	 * @see {@link Typespess.Atom#destroy}
+	 * @type {boolean}
+	 * @default false
+	 */
 		this.destroyed = false;
 
 		Object.defineProperty(this, "server", {
@@ -106,9 +102,9 @@ class Atom extends EventEmitter {
 			value: server,
 		});
 		/**
-     * The server object
-     * @type {Typespess}
-     */
+	 * The server object
+	 * @type {Typespess}
+	 */
 		this.server;
 		Object.defineProperty(this, "object_id", {
 			enumerable: true,
@@ -117,12 +113,12 @@ class Atom extends EventEmitter {
 			value: `ID_${id_counter++}`,
 		});
 		/**
-     * A list of atoms whos loc is this atom.
-     * @type {Array<Typespess.Atom>}
-     * @member contents
-     * @memberof Typespess.Atom
-     * @instance
-     */
+	 * A list of atoms whos loc is this atom.
+	 * @type {Array<Typespess.Atom>}
+	 * @member contents
+	 * @memberof Typespess.Atom
+	 * @instance
+	 */
 		Object.defineProperty(this, "contents", {
 			enumerable: true,
 			configurable: false,
@@ -135,10 +131,10 @@ class Atom extends EventEmitter {
 		this[_layer] = 0;
 		this[_dir] = 2;
 		/**
-     * Can be "neuter", "male", "female", or "plural".
-     * @type {string}
-     * @default "neuter"
-     */
+	 * Can be "neuter", "male", "female", or "plural".
+	 * @type {string}
+	 * @default "neuter"
+	 */
 		this.gender = "neuter";
 
 		this[_crosses] = [];
@@ -154,19 +150,19 @@ class Atom extends EventEmitter {
 		this[mob_symbols._visgroups] = [];
 
 		/**
-     * Whether it's dense or not. 1 means that it can't be crossed, 0 means that it can be crossed, -1 means that it passes through everything, even with density 1.
-     * @type {number}
-     */
+	 * Whether it's dense or not. 1 means that it can't be crossed, 0 means that it can be crossed, -1 means that it passes through everything, even with density 1.
+	 * @type {number}
+	 */
 		this.density = 0;
 		/**
-     * A bitfield for ability to pass through other objects.
-     * @type {number}
-     */
+	 * A bitfield for ability to pass through other objects.
+	 * @type {number}
+	 */
 		this.pass_flags = 0;
 		/**
-     * A bitfield for ability of other objects to pass through this one.
-     * @type {number}
-     */
+	 * A bitfield for ability of other objects to pass through this one.
+	 * @type {number}
+	 */
 		this.let_pass_flags = 0;
 		this[_opacity] = false;
 		this[_visible] = true;
@@ -174,37 +170,34 @@ class Atom extends EventEmitter {
 		this[_walking] = false;
 		this[_walk_stepping] = false;
 		/**
-     * @type {number}
-     * @see {@link Typespess.Atom#walking}
-     */
+	 * @type {number}
+	 * @see {@link Typespess.Atom#walking}
+	 */
 		this.walk_dir = 0;
 		/**
-     * @type {number}
-     * @default 1
-     * @see {@link Typespess.Atom#walking}
-     */
+	 * @type {number}
+	 * @default 1
+	 * @see {@link Typespess.Atom#walking}
+	 */
 		this.walk_size = 1;
 		/**
-     * @type {number}
-     * @default 150
-     * @see {@link Typespess.Atom#walking}
-     */
+	 * @type {number}
+	 * @default 150
+	 * @see {@link Typespess.Atom#walking}
+	 */
 		this.walk_delay = 150;
 		/**
-     * @type {number}
-     * @default "walking"
-     * @see {@link Typespess.Atom#walking}
-     */
+	 * @type {number}
+	 * @default "walking"
+	 * @see {@link Typespess.Atom#walking}
+	 */
 		this.walk_reason = "walking";
 		this.movement_granularity = 65536; // Keep this a power of 2 to avoid floating point errors.
 
 		if (template.vars) {
 			for (var key in template.vars) {
 				if (
-					!template.vars.hasOwnProperty(key) ||
-          key == "appearance" ||
-          key == "components" ||
-          key == "overlays"
+					!Object.prototype.hasOwnProperty.call(template.vars,key) || key == "appearance" || key == "components" || key == "overlays"
 				)
 					continue;
 				this[key] = template.vars[key];
@@ -215,16 +208,16 @@ class Atom extends EventEmitter {
 			Object.assign(this, template.vars.appearance);
 
 		/**
-     * The overlays of this object. They are named, unlike BYOND where it's just a list.
-     * @type {Object}
-     * @property {Object} <key>
-     * @property {string} [<key>.icon] {@link Typespess.Atom#icon}
-     * @property {string} [<key>.icon_state] {@link Typespess.Atom#icon_state} The string <code>[parent]</code> gets replaced with this atom's <code>icon_state</code> by the client, or the current flick's.
-     * @property {number} [<key>.dir] {@link Typespess.Atom#dir}
-     * @property {string} [<key>.color] {@link Typespess.Atom#color}
-     * @property {string} [<key>.alpha] {@link Typespess.Atom#alpha}
-     * @property {number} [<key>.overlay_layer=0] set negative to display below the atom, and 0 or greater for above the atom. Also use to control which overlays show in front.
-     */
+	 * The overlays of this object. They are named, unlike BYOND where it's just a list.
+	 * @type {Object}
+	 * @property {Object} <key>
+	 * @property {string} [<key>.icon] {@link Typespess.Atom#icon}
+	 * @property {string} [<key>.icon_state] {@link Typespess.Atom#icon_state} The string <code>[parent]</code> gets replaced with this atom's <code>icon_state</code> by the client, or the current flick's.
+	 * @property {number} [<key>.dir] {@link Typespess.Atom#dir}
+	 * @property {string} [<key>.color] {@link Typespess.Atom#color}
+	 * @property {string} [<key>.alpha] {@link Typespess.Atom#alpha}
+	 * @property {number} [<key>.overlay_layer=0] set negative to display below the atom, and 0 or greater for above the atom. Also use to control which overlays show in front.
+	 */
 		this.overlays = new Proxy(
 			{},
 			{
@@ -256,10 +249,10 @@ class Atom extends EventEmitter {
 		);
 
 		/**
-     * The components for this object.
-     * @type {Object<string,Typespess.Component>}
-     * @see {@link Typespess.Component}
-     */
+	 * The components for this object.
+	 * @type {Object<string,Typespess.Component>}
+	 * @see {@link Typespess.Component}
+	 */
 		this.components = {};
 		if (template.components) {
 			for (let i = 0; i < template.components.length; i++) {
@@ -273,12 +266,7 @@ class Atom extends EventEmitter {
 					throw new Error(
 						`Template '${template.id}' references non-existent component '${componentName}'`
 					);
-				let templateVars =
-          template.vars &&
-          template.vars.components &&
-          template.vars.components[componentName]
-          	? template.vars.components[componentName]
-          	: {};
+				let templateVars = template.vars && template.vars.components && template.vars.components[componentName] ? template.vars.components[componentName]: {};
 				this.components[componentName] = new this.server.components[
 					componentName
 				](this, templateVars);
@@ -424,11 +412,7 @@ class Atom extends EventEmitter {
 		newBounds_height
 	) {
 		if (
-			newLoc &&
-      !newLoc.is_base_loc &&
-      this[_loc] &&
-      !this[_loc].is_base_loc &&
-      newLoc == this[_loc]
+			newLoc && !newLoc.is_base_loc && this[_loc] && !this[_loc].is_base_loc && newLoc == this[_loc]
 		)
 			return;
 		var old_fine_loc = this.fine_loc;
@@ -442,10 +426,7 @@ class Atom extends EventEmitter {
 		};
 		var movement = { old: old_fine_loc, new: new_fine_loc };
 		if (
-			old_fine_loc.loc &&
-      old_fine_loc.loc.is_base_loc &&
-      new_fine_loc.loc &&
-      new_fine_loc.loc.is_base_loc
+			old_fine_loc.loc && old_fine_loc.loc.is_base_loc && new_fine_loc.loc && new_fine_loc.loc.is_base_loc
 		) {
 			movement.offset = {};
 			movement.offset.x = new_fine_loc.x - old_fine_loc.x;
@@ -461,20 +442,13 @@ class Atom extends EventEmitter {
 			new_fine_loc.loc.emit("before_enter", movement);
 		}
 		if (
-			newLoc &&
-      !newLoc.is_base_loc &&
-      this.loc &&
-      !this.loc.is_base_loc &&
-      newLoc == this.loc
+			newLoc && !newLoc.is_base_loc && this.loc && !this.loc.is_base_loc && newLoc == this.loc
 		)
 			return;
 		old_fine_loc = this.fine_loc;
 		movement.old = old_fine_loc;
 		if (
-			old_fine_loc.loc &&
-      old_fine_loc.loc.is_base_loc &&
-      new_fine_loc.loc &&
-      new_fine_loc.loc.is_base_loc
+			old_fine_loc.loc && old_fine_loc.loc.is_base_loc && new_fine_loc.loc && new_fine_loc.loc.is_base_loc
 		) {
 			movement.offset = {};
 			movement.offset.x = new_fine_loc.x - old_fine_loc.x;
@@ -490,9 +464,7 @@ class Atom extends EventEmitter {
 				if (fastPointer) fastPointer = fastPointer[_loc];
 				if (fastPointer) fastPointer = fastPointer[_loc];
 				if (
-					(fastPointer && fastPointer == slowPointer) ||
-          fastPointer == this ||
-          slowPointer == this
+					(fastPointer && fastPointer == slowPointer) || fastPointer == this || slowPointer == this
 				)
 					throw new Error(
 						`Cycle detected when assigning the location of ${this} to ${newLoc}`
@@ -515,16 +487,15 @@ class Atom extends EventEmitter {
 			if (this[_loc].is_base_loc) {
 				for (
 					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
-					x <
-          Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
 					x++
 				) {
 					for (
 						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(
-            	this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
-            );
+			Math.ceil(
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+			);
 						y++
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
@@ -564,16 +535,15 @@ class Atom extends EventEmitter {
 			if (this[_loc].is_base_loc) {
 				for (
 					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
-					x <
-          Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
 					x++
 				) {
 					for (
 						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(
-            	this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
-            );
+			Math.ceil(
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+			);
 						y++
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
@@ -588,7 +558,7 @@ class Atom extends EventEmitter {
 								if (idx == -1) {
 									if (
 										!gained_crossers.includes(atom) &&
-                    !common_crossers.includes(atom)
+					!common_crossers.includes(atom)
 									)
 										gained_crossers.push(atom);
 								} else {
@@ -697,16 +667,15 @@ class Atom extends EventEmitter {
 			if (this[_loc].is_base_loc) {
 				for (
 					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
-					x <
-          Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
 					x++
 				) {
 					for (
 						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(
-            	this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
-            );
+			Math.ceil(
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+			);
 						y++
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
@@ -728,7 +697,7 @@ class Atom extends EventEmitter {
 					for (
 						let y = Math.floor(newY + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(newY + this[_bounds_y] + this[_bounds_height] - 0.00001);
+			Math.ceil(newY + this[_bounds_y] + this[_bounds_height] - 0.00001);
 						y++
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
@@ -739,7 +708,7 @@ class Atom extends EventEmitter {
 								if (idx == -1) {
 									if (
 										!gained_crossers.includes(atom) &&
-                    !common_crossers.includes(atom)
+					!common_crossers.includes(atom)
 									)
 										gained_crossers.push(atom);
 								} else {
@@ -834,15 +803,13 @@ class Atom extends EventEmitter {
 	set loc(newLoc) {
 		if (newLoc === this[_loc]) return;
 		if (
-			newLoc !== null &&
-      (typeof newLoc !== "object" ||
-        (!(newLoc.contents instanceof Array) && !newLoc.is_fine_loc))
+			newLoc !== null && (typeof newLoc !== "object" || (!(newLoc.contents instanceof Array) && !newLoc.is_fine_loc))
 		)
 			throw new TypeError(
 				`New loc '${newLoc}' is not a valid location (null, object with contents list, or fine loc)`
 			);
 		if (newLoc !== null && newLoc.is_fine_loc) {
-			if (!newLoc.hasOwnProperty("x") || !newLoc.hasOwnProperty("y")) {
+			if (!Object.prototype.hasOwnProperty.call(newLoc,"x") || !Object.prototype.hasOwnProperty.call(newLoc,"y")) {
 				this.loc = newLoc.loc || null;
 				return;
 			}
@@ -855,10 +822,10 @@ class Atom extends EventEmitter {
 				return;
 			}
 			if (
-				(newLoc.hasOwnProperty("z") && newLoc.z !== +newLoc.z) ||
-        newLoc.x !== +newLoc.x ||
-        newLoc.y !== +newLoc.y ||
-        !newLoc.dim
+				(Object.prototype.hasOwnProperty.call(newLoc,"z") && newLoc.z !== +newLoc.z) ||
+		newLoc.x !== +newLoc.x ||
+		newLoc.y !== +newLoc.y ||
+		!newLoc.dim
 			)
 				throw new TypeError("new fine loc is invalid");
 			var newz = newLoc.z != null ? newLoc.z : this.z;
@@ -883,9 +850,8 @@ class Atom extends EventEmitter {
    */
 	get base_loc() {
 		// gets the Location object this belongs to
-		var a = this;
-		while (a && !a.is_base_loc) a = a.loc;
-		return a;
+		while (this && !this.is_base_loc) {var a = this.loc; return a;}
+		return this;
 	}
 
 	/**
@@ -894,9 +860,8 @@ class Atom extends EventEmitter {
    */
 	get base_mover() {
 		// gets the lowest atom
-		var a = this;
-		while (a.loc && !a.loc.is_base_loc) a = a.loc;
-		return a;
+		while (this.loc && !this.loc.is_base_loc) {var a = this.loc; return a;}
+		return this;
 	}
 
 	/**
@@ -1058,11 +1023,11 @@ class Atom extends EventEmitter {
 		let cy = this.y;
 		for (let i = 0; i < move_splits; i++) {
 			let newx =
-        Math.round((cx + step_x) * this.movement_granularity) /
-        this.movement_granularity;
+		Math.round((cx + step_x) * this.movement_granularity) /
+		this.movement_granularity;
 			let newy =
-        Math.round((cy + step_y) * this.movement_granularity) /
-        this.movement_granularity;
+		Math.round((cy + step_y) * this.movement_granularity) /
+		this.movement_granularity;
 			let result = this.test_move(newx, newy);
 			for (let gained of result.gained_crossers) {
 				if (!this.can_cross(gained, remaining_x, remaining_y, reason)) {
@@ -1100,17 +1065,16 @@ class Atom extends EventEmitter {
 		let first_bump_layer = -Infinity;
 		for (
 			let i = 1;
-			i * Math.max(Math.abs(step_x), Math.abs(step_y)) >=
-      1 / this.movement_granularity / 2;
+			i * Math.max(Math.abs(step_x), Math.abs(step_y)) >= 1 / this.movement_granularity / 2;
 			i /= 2
 		) {
 			first_bump_layer = -Infinity;
 			let newx =
-        Math.round((cx + step_x * i) * this.movement_granularity) /
-        this.movement_granularity;
+		Math.round((cx + step_x * i) * this.movement_granularity) /
+		this.movement_granularity;
 			let newy =
-        Math.round((cy + step_y * i) * this.movement_granularity) /
-        this.movement_granularity;
+		Math.round((cy + step_y * i) * this.movement_granularity) /
+		this.movement_granularity;
 			if (newx == this.x && newy == this.y) break;
 			let result = this.test_move(newx, newy);
 			clang = false;
@@ -1254,18 +1218,11 @@ class Atom extends EventEmitter {
    */
 	does_enclose_tile(tile) {
 		if (
-			!tile.is_base_loc ||
-      !this[_loc] ||
-      !this[_loc].is_base_loc ||
-      this[_z] != tile.z
+			!tile.is_base_loc || !this[_loc] || !this[_loc].is_base_loc || this[_z] != tile.z
 		)
 			return false;
 		return (
-			this[_x] + this[_bounds_x] - 0.00001 <= tile.x &&
-      this[_y] + this[_bounds_y] - 0.00001 <= tile.y &&
-      this[_x] + this[_bounds_x] + this[_bounds_width] + 0.00001 >=
-        tile.x + 1 &&
-      this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001 >= tile.y + 1
+			this[_x] + this[_bounds_x] - 0.00001 <= tile.x && this[_y] + this[_bounds_y] - 0.00001 <= tile.y && this[_x] + this[_bounds_x] + this[_bounds_width] + 0.00001 >= tile.x + 1 && this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001 >= tile.y + 1
 		);
 	}
 
@@ -1287,21 +1244,10 @@ class Atom extends EventEmitter {
 		} = {}
 	) {
 		if (
-			atom[_x] == +atom[_x] &&
-      atom[_y] == +atom[_y] &&
-      atom[_z] == z &&
-      this[_loc] &&
-      atom[_loc] &&
-      this[_loc].is_base_loc &&
-      atom[_loc].is_base_loc
+			atom[_x] == +atom[_x] && atom[_y] == +atom[_y] && atom[_z] == z && this[_loc] && atom[_loc] && this[_loc].is_base_loc && atom[_loc].is_base_loc
 		) {
 			return (
-				x + bounds_x + bounds_width - 0.00001 > atom[_x] + atom[_bounds_x] &&
-        x + bounds_x + 0.00001 <
-          atom[_x] + atom[_bounds_x] + atom[_bounds_width] &&
-        y + bounds_y + bounds_height - 0.00001 > atom[_y] + atom[_bounds_y] &&
-        y + bounds_y + 0.00001 <
-          atom[_y] + atom[_bounds_y] + atom[_bounds_height]
+				x + bounds_x + bounds_width - 0.00001 > atom[_x] + atom[_bounds_x] && x + bounds_x + 0.00001 < atom[_x] + atom[_bounds_x] + atom[_bounds_width] && y + bounds_y + bounds_height - 0.00001 > atom[_y] + atom[_bounds_y] && y + bounds_y + 0.00001 < atom[_y] + atom[_bounds_y] + atom[_bounds_height]
 			);
 		}
 	}
@@ -1498,16 +1444,15 @@ class Atom extends EventEmitter {
 			if (this[_loc].is_base_loc) {
 				for (
 					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
-					x <
-          Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
 					x++
 				) {
 					for (
 						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(
-            	this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
-            );
+			Math.ceil(
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+			);
 						y++
 					) {
 						let thisloc = this.dim.location(x, y, this[_z]);
@@ -1611,7 +1556,7 @@ class Atom extends EventEmitter {
 			for (
 				let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 				y <
-        Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001);
+		Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001);
 				y++
 			) {
 				locs.push(this.dim.location(x, y, this[_z]));
@@ -1636,7 +1581,7 @@ class Atom extends EventEmitter {
 			for (
 				let y = Math.floor(this[_y] + this[_bounds_y] - 0.00001);
 				y <
-        Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001);
+		Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001);
 				y++
 			) {
 				locs.push(this.dim.location(x, y, this[_z]));
