@@ -72,3 +72,6 @@ Windows PowerShell.lnk
 *.code-workspace
 maps/newmap.bsmap
 quick_launch.bat
+tools/unused-files-finder/unused.txt
+tools/unused-files-finder/jslist.txt
+tools/unused-files-finder/imglist.txt
