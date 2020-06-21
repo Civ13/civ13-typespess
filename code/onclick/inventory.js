@@ -41,9 +41,9 @@ class MobInventory extends Component {
 		this.next_move = 0;
 		this[_slots] = {};
 		this.slots = new Proxy(this[_slots], {
-			set: () => {},
-			deleteProperty: () => {},
-			defineProperty: () => {},
+			set: () => {return;},
+			deleteProperty: () => {return;},
+			defineProperty: () => {return;},
 		});
 		this.add_slot(
 			"lhand",
@@ -105,7 +105,7 @@ class MobInventory extends Component {
 				layer: 30,
 			},
 		});
-		this.a.c.Eye.screen.act_equip.on("clicked", () => {});
+		this.a.c.Eye.screen.act_equip.on("clicked", () => {return;});
 
 		this.add_slot(
 			"id",
@@ -880,8 +880,8 @@ class MobInventory extends Component {
 	}
 }
 
-Atom.prototype.attack_hand = () => {};
-Atom.prototype.attack_by = () => {};
+Atom.prototype.attack_hand = () => {return;};
+Atom.prototype.attack_by = () => {return;};
 
 class Slot extends EventEmitter {
 	constructor(mob, id, atom, props) {

@@ -15,7 +15,7 @@ class TransitHelper extends Component {
 		};
 		this.a.del = chain_func(this.a.del, this.del.bind(this));
 		this.a.on_render_tick = this.on_render_tick.bind(this);
-		this.a.draw = () => {};
+		this.a.draw = () => {return;};
 	}
 
 	on_render_tick(timestamp) {

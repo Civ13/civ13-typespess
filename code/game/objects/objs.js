@@ -61,7 +61,7 @@ class Tangible extends Component {
 				this.a.removeListener("bumped_by", this.stop_throw);
 				still_throwing = false;
 				this.a.pass_flags &= ~pass_flags.LETPASSTHROW;
-				this.stop_throw = function () {};
+				this.stop_throw = function () {return;};
 			};
 
 			let throw_impact = (target) => {

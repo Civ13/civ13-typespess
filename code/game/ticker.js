@@ -111,7 +111,7 @@ class GameTicker extends EventEmitter {
 			this.start_at = this.start_at =
 		this.server.now() + 3 * 1000;
 	}
-/** 	send_tip_of_the_round() {
+/**	 send_tip_of_the_round() {
 		let tip = this.round_tip_override;
 		if (!tip) {
 			if (tips.length && Math.random() < 0.95) tip = _.sample(tips);
