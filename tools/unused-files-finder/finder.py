@@ -67,8 +67,8 @@ if (text == "y" or text == "Y"):
 				os.remove(files_parsed)
 				print("Removed {}".format(files_parsed))
 			if (os.path.isfile(files_parsed+".json")):
-				os.remove(files_parsed)
-				print("Removed {}".format(files_parsed))
+				os.remove(files_parsed+".json")
+				print("Removed {}".format(files_parsed+".json"))
 else:
 	print("Exiting.")
 	sys.exit()
