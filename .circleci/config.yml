@@ -9,8 +9,11 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm install
-            - run: sh launch_test.sh
+            - run: sudo npm install -g gulp
+            - run: sudo sh setup.sh
+            - run:	
+                command: sudo sh launch_test.sh	
+                no_output_timeout: 2m
 workflows:
     build-and-test:
       jobs:
