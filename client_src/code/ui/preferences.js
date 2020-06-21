@@ -268,16 +268,14 @@ class PreferencesPanel {
 				this.panel.$(".property-name").value = msg.char_prefs.name;
 			}
 			if (msg.char_prefs.gender) {
-				this.panel.$(".property-gender").textContent =
-          msg.char_prefs.gender == "male" ? "Male" : "Female";
+				this.panel.$(".property-gender").textContent = msg.char_prefs.gender == "male" ? "Male" : "Female";
 			}
 			if (msg.char_prefs.age) {
 				this.panel.$(".property-age").value = msg.char_prefs.age;
 			}
 
 			if (msg.char_prefs.skin_tone) {
-				this.panel.$(".property-skin_tone").textContent =
-          msg.char_prefs.skin_tone;
+				this.panel.$(".property-skin_tone").textContent = msg.char_prefs.skin_tone;
 			}
 			if (msg.char_prefs.hair_color) {
 				let hc = msg.char_prefs.hair_color;
@@ -312,18 +310,14 @@ class PreferencesPanel {
 			job_order.sort((a, b) => {
 				let ameta = this.job_metas[a];
 				let bmeta = this.job_metas[b];
-				let department_diff =
-          department_order.indexOf(ameta.departments[0] || "misc") -
-          department_order.indexOf(bmeta.departments[0] || "misc");
+				let department_diff = department_order.indexOf(ameta.departments[0] || "misc") - department_order.indexOf(bmeta.departments[0] || "misc");
 				if (department_diff != 0) return department_diff;
 				if (
-					ameta.departments.includes("command") &&
-          !bmeta.departments.includes("command")
+					ameta.departments.includes("command") && !bmeta.departments.includes("command")
 				)
 					return -1;
 				if (
-					!ameta.departments.includes("command") &&
-          bmeta.departments.includes("command")
+					!ameta.departments.includes("command") && bmeta.departments.includes("command")
 				)
 					return 1;
 				return 0;

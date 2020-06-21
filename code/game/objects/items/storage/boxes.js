@@ -94,7 +94,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "This box is shaped on the inside so that only light tubes and bulbs fit.",
+			"This box is shaped on the inside so that only light tubes and bulbs fit.",
 				},
 				StorageItem: {
 					max_combined_size: 21,

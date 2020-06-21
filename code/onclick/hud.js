@@ -100,7 +100,7 @@ class MobHud extends Component {
 		//this.c.Eye.screen[`alert_${category}`] = undefined;
 		// TODO: destroy the alert;
 	}
-	_onclick() {}
+	_onclick() {return;}
 	reorganize_alerts() {
 		var alert_idx = 0;
 		for (var alertname in this.alerts) {
@@ -148,7 +148,7 @@ Tooltip.template = {
 		components: {
 			Tooltip: {
 				desc:
-          "Something seems to have gone wrong with this tooltip, so report this bug please",
+		"Something seems to have gone wrong with this tooltip, so report this bug please",
 				theme: "",
 			},
 		},
@@ -165,8 +165,8 @@ class Alert extends Component {
 	clicked() {
 		if (
 			this.resist_alert &&
-      this.mob_viewer &&
-      has_component(this.mob_viewer, "MobInteract")
+	this.mob_viewer &&
+	has_component(this.mob_viewer, "MobInteract")
 		)
 			this.mob_viewer.c.MobInteract.resist();
 	}
@@ -219,7 +219,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You've been buckled to something. Click the alert to unbuckle unless you're handcuffed.",
+			"You've been buckled to something. Click the alert to unbuckle unless you're handcuffed.",
 				},
 				Alert: {
 					resist_alert: true,
@@ -235,7 +235,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You're handcuffed and can't act. If anyone drags you, you won't be able to move. Click the alert to free yourself.",
+			"You're handcuffed and can't act. If anyone drags you, you won't be able to move. Click the alert to free yourself.",
 				},
 				Alert: {
 					resist_alert: true,
@@ -250,7 +250,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You're not getting enough oxygen. Find some good air before you pass out! The box in your backpack has an oxygen tank and breath mask in it",
+			"You're not getting enough oxygen. Find some good air before you pass out! The box in your backpack has an oxygen tank and breath mask in it",
 				},
 			},
 			name: "Choking (No O2)",
@@ -264,7 +264,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "There's too much oxygen in the air, and you're breathing it in! Find some good air before you pass out!",
+			"There's too much oxygen in the air, and you're breathing it in! Find some good air before you pass out!",
 				},
 			},
 			name: "Choking (O2)",
@@ -278,7 +278,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You're not getting enough carbon dioxide. Find some good air before you pass out!",
+			"You're not getting enough carbon dioxide. Find some good air before you pass out!",
 				},
 			},
 			name: "Choking (No CO2)",
@@ -292,7 +292,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "There's too much carbon dioxide in the air, and you're breathing it in! Find some good air before you pass out!",
+			"There's too much carbon dioxide in the air, and you're breathing it in! Find some good air before you pass out!",
 				},
 			},
 			name: "Choking (CO2)",
@@ -306,7 +306,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You're not getting enough plasma. Find some good air before you pass out!",
+			"You're not getting enough plasma. Find some good air before you pass out!",
 				},
 			},
 			name: "Choking (No Plasma)",
@@ -320,7 +320,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "There's highly flammable, toxic plasma in the air and you're breathing it in. Find some fresh air. \
+			"There's highly flammable, toxic plasma in the air and you're breathing it in. Find some fresh air. \
 		The box in your backpack has an oxygen tank and gas mask in it.",
 				},
 			},
@@ -336,7 +336,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You ate too much food, lardass. Run around the station and lose some weight.",
+			"You ate too much food, lardass. Run around the station and lose some weight.",
 				},
 			},
 			name: "Fat",
@@ -361,7 +361,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You're severely malnourished. The hunger pains make moving around a chore.",
+			"You're severely malnourished. The hunger pains make moving around a chore.",
 				},
 			},
 			name: "Starving",
@@ -374,7 +374,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You're flaming hot! Get somewhere cooler and take off any insulating clothing like a fire suit.",
+			"You're flaming hot! Get somewhere cooler and take off any insulating clothing like a fire suit.",
 				},
 			},
 			name: "Too Hot",
@@ -387,7 +387,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You're freezing cold! Get somewhere warmer and take off any insulating clothing like a space suit.",
+			"You're freezing cold! Get somewhere warmer and take off any insulating clothing like a space suit.",
 				},
 			},
 			name: "Too Cold",
@@ -400,7 +400,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "The air around you is hazardously thin. A space suit would protect you.",
+			"The air around you is hazardously thin. A space suit would protect you.",
 				},
 			},
 			name: "Low Pressure",
@@ -413,7 +413,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "The air around you is hazardously thick. A fire suit would protect you.",
+			"The air around you is hazardously thick. A fire suit would protect you.",
 				},
 			},
 			name: "High Pressure",
@@ -426,7 +426,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You can't see! This may be caused by a genetic defect, eye trauma, being unconscious, \
+			"You can't see! This may be caused by a genetic defect, eye trauma, being unconscious, \
 		or something covering your eyes.",
 				},
 			},
@@ -440,7 +440,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "Whoa man, you're tripping balls! Careful you don't get addicted... if you aren't already.",
+			"Whoa man, you're tripping balls! Careful you don't get addicted... if you aren't already.",
 				},
 			},
 			name: "High",
@@ -454,7 +454,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "All that alcohol you've been drinking is impairing your speech, motor skills, and mental cognition. Make sure to act like it.",
+			"All that alcohol you've been drinking is impairing your speech, motor skills, and mental cognition. Make sure to act like it.",
 				},
 			},
 			name: "Drunk",
@@ -468,7 +468,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "Something got lodged into your flesh and is causing major bleeding. It might fall out with time, but surgery is the safest way. \
+			"Something got lodged into your flesh and is causing major bleeding. It might fall out with time, but surgery is the safest way. \
 		If you're feeling frisky, click yourself in help intent to pull the object out.",
 				},
 			},
@@ -482,7 +482,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "Gravity has ceased affecting you, and you're floating around aimlessly. You'll need something large and heavy, like a \
+			"Gravity has ceased affecting you, and you're floating around aimlessly. You'll need something large and heavy, like a \
 		wall or lattice, to push yourself off if you want to move. A jetpack would enable free range of motion. A pair of \
 		magboots would let you walk around normally on the floor. Barring those, you can throw things, use a fire extinguisher, \
 		or shoot a gun to move around via Newton's 3rd Law of Motion.",
@@ -499,7 +499,7 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-            "You're on fire. Stop, drop and roll to put the fire out or move to a vacuum area.",
+			"You're on fire. Stop, drop and roll to put the fire out or move to a vacuum area.",
 				},
 			},
 			name: "On Fire",

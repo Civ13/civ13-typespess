@@ -16,8 +16,8 @@ class Handcuffs extends Component {
 	attack(target, user) {
 		if (
 			this.used ||
-      !has_component(target, "MobInventory") ||
-      !target.c.MobInventory.check_can_handcuff(user)
+	!has_component(target, "MobInventory") ||
+	!target.c.MobInventory.check_can_handcuff(user)
 		)
 			return;
 		if (!target.c.MobInventory.handcuffed) {
@@ -46,8 +46,8 @@ class Handcuffs extends Component {
 	apply(target, user) {
 		if (
 			this.used ||
-      !target.c.MobInventory.check_can_handcuff(user) ||
-      target.c.MobInventory.handcuffed
+	!target.c.MobInventory.check_can_handcuff(user) ||
+	target.c.MobInventory.handcuffed
 		)
 			return;
 		if (this.a.c.Item.slot && !this.a.c.Item.slot.can_unequip) return;

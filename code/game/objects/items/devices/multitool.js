@@ -23,7 +23,7 @@ Multitool.template = {
 			},
 			Examine: {
 				desc:
-          "Used for pulsing wires to test which to cut. Not recommended by doctors.",
+		"Used for pulsing wires to test which to cut. Not recommended by doctors.",
 			},
 		},
 		name: "multitool",

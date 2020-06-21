@@ -44,7 +44,7 @@ class TableFrame extends Component {
 			}
 		} else if (
 			has_component(item, "MetalSheet") &&
-      this.frame_material == "stack_rods"
+	this.frame_material == "stack_rods"
 		) {
 			if (item.c.Stack.amount >= 1) {
 				to_chat`<span class='notice'>You start adding ${item} to ${this.a}...</span>`(
@@ -66,7 +66,7 @@ class TableFrame extends Component {
 			}
 		} else if (
 			has_component(item, "PlasteelSheet") &&
-      this.frame_material == "stack_rods"
+	this.frame_material == "stack_rods"
 		) {
 			if (item.c.Stack.amount >= 1) {
 				to_chat`<span class='notice'>You start adding ${item} to ${this.a}...</span>`(
@@ -88,7 +88,7 @@ class TableFrame extends Component {
 			}
 		} else if (
 			has_component(item, "WoodSheet") &&
-      this.frame_material == "wood_sheet"
+	this.frame_material == "wood_sheet"
 		) {
 			if (item.c.Stack.amount >= 1) {
 				to_chat`<span class='notice'>You start adding ${item} to ${this.a}...</span>`(
@@ -144,7 +144,7 @@ TableFrame.template = {
 			},
 			Examine: {
 				desc:
-          "Four metal legs with four framing rods for a table. You could easily pass through this.",
+		"Four metal legs with four framing rods for a table. You could easily pass through this.",
 			},
 		},
 		name: "table frame",
@@ -169,7 +169,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "Four wooden legs with four framing wooden rods for a wooden table. You could easily pass through this.",
+			"Four wooden legs with four framing wooden rods for a wooden table. You could easily pass through this.",
 				},
 			},
 			name: "wooden table frame",

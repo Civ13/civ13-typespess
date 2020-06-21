@@ -25,13 +25,13 @@ module.exports.reagents.ReplicatingFoam = ReplicatingFoam;
 Object.assign(ReplicatingFoam.prototype, {
 	name: "Replicating Foam",
 	description:
-    "will do medium brute damage and occasionally expand again when expanding.",
+	"will do medium brute damage and occasionally expand again when expanding.",
 	shortdesc: "will do medium brute damage.",
 	effectdesc:
-    "will also expand when attacked with burn damage, but takes more brute damage.",
+	"will also expand when attacked with burn damage, but takes more brute damage.",
 	analyzerdescdamage: "Does medium brute damage.",
 	analyzerdesceffect:
-    "Expands when attacked with burn damage, will occasionally expand again when expanding, and is fragile to brute damage.",
+	"Expands when attacked with burn damage, will occasionally expand again when expanding, and is fragile to brute damage.",
 	color: [0.48, 0.35, 0.34],
 	complementary_color: [0.34, 0.47, 0.48],
 });
@@ -41,7 +41,7 @@ module.exports.reagents.NetworkedFibers = NetworkedFibers;
 Object.assign(NetworkedFibers.prototype, {
 	name: "Networked Fibers",
 	description:
-    "will do high brute and burn damage and will generate resources quicker, but can only expand manually.",
+	"will do high brute and burn damage and will generate resources quicker, but can only expand manually.",
 	shortdesc: "will do high brute and burn damage.",
 	effectdesc: "will move your core when manually expanding near it.",
 	analyzerdescdamage: "Does high brute and burn damage.",
@@ -68,10 +68,10 @@ Object.assign(BlazingOil.prototype, {
 	name: "Blazing Oil",
 	description: "will do medium burn damage and set targets on fire.",
 	effectdesc:
-    "will also release bursts of flame when burnt, but takes damage from water.",
+	"will also release bursts of flame when burnt, but takes damage from water.",
 	analyzerdescdamage: "Does medium burn damage and sets targets on fire.",
 	analyzerdesceffect:
-    "Releases fire when burnt, but takes damage from water and other extinguishing liquids.",
+	"Releases fire when burnt, but takes damage from water and other extinguishing liquids.",
 	color: [0.71, 0.55, 0],
 	complementary_color: [0.75, 0.33, 0.2],
 	blobbernaut_message: "splashes",
@@ -84,9 +84,9 @@ module.exports.reagents.RegenerativeMateria = RegenerativeMateria;
 Object.assign(RegenerativeMateria.prototype, {
 	name: "Regenerative Materia",
 	description:
-    "will do toxin damage and cause targets to believe they are fully healed.",
+	"will do toxin damage and cause targets to believe they are fully healed.",
 	analyzerdescdamage:
-    "Does toxin damage and injects a toxin that causes the target to believe they are fully healed.",
+	"Does toxin damage and injects a toxin that causes the target to believe they are fully healed.",
 	color: [0.78, 0.65, 0.86],
 	complementary_color: [0.8, 0.47, 0.58],
 	message_living: ", and you feel <i>alive</i>",
@@ -97,12 +97,12 @@ module.exports.reagents.ZombifyingPods = ZombifyingPods;
 Object.assign(ZombifyingPods.prototype, {
 	name: "Zombifying Pods",
 	description:
-    "will do very low toxin damage and harvest sleeping targets for additional resources and a blob zombie.",
+	"will do very low toxin damage and harvest sleeping targets for additional resources and a blob zombie.",
 	effectdesc: "will also produce fragile spores when killed and on expanding.",
 	shortdesc:
-    "will do very low toxin damage and harvest sleeping targets for additional resources(for your overmind) and a blob zombie.",
+	"will do very low toxin damage and harvest sleeping targets for additional resources(for your overmind) and a blob zombie.",
 	analyzerdescdamage:
-    "Does very low toxin damage and kills unconscious humans, turning them into blob zombies.",
+	"Does very low toxin damage and kills unconscious humans, turning them into blob zombies.",
 	analyzerdesceffect: "Produces spores when expanding and when killed.",
 	color: [0.91, 0.55, 0.36],
 	complementary_color: [0.51, 0.23, 0.73],
@@ -114,12 +114,12 @@ module.exports.reagents.EnergizedJelly = EnergizedJelly;
 Object.assign(EnergizedJelly.prototype, {
 	name: "Energized Jelly",
 	description:
-    "will cause low stamina and high oxygen damage, and cause targets to be unable to breathe.",
+	"will cause low stamina and high oxygen damage, and cause targets to be unable to breathe.",
 	effectdesc: "will also conduct electricity, but takes damage from EMPs.",
 	analyzerdescdamage:
-    "Does low stamina damage, high oxygen damage, and prevents targets from breathing.",
+	"Does low stamina damage, high oxygen damage, and prevents targets from breathing.",
 	analyzerdesceffect:
-    "Is immune to electricity and will easily conduct it, but is weak to EMPs.",
+	"Is immune to electricity and will easily conduct it, but is weak to EMPs.",
 	color: [0.94, 0.84, 0.35],
 	complementary_color: [0, 0.9, 0.69],
 	message_living: ", and you feel a horrible tingling sensation",
@@ -131,11 +131,11 @@ Object.assign(ExplosiveLattice.prototype, {
 	name: "Explosive Lattice",
 	description: "will do brute damage in an area around targets.",
 	effectdesc:
-    "will also resist explosions, but takes increased damage from fire and other energy sources.",
+	"will also resist explosions, but takes increased damage from fire and other energy sources.",
 	analyzerdescdamage:
-    "Does medium brute damage and causes damage to everyone near its targets.",
+	"Does medium brute damage and causes damage to everyone near its targets.",
 	analyzerdesceffect:
-    "Is highly resistant to explosions, but takes increased damage from fire and other energy sources.",
+	"Is highly resistant to explosions, but takes increased damage from fire and other energy sources.",
 	color: [0.55, 0.15, 0],
 	complementary_color: [0, 0.4, 0.55],
 	blobbernaut_message: "blasts",
@@ -147,9 +147,9 @@ module.exports.reagents.CryogenicPoison = CryogenicPoison;
 Object.assign(CryogenicPoison.prototype, {
 	name: "Cryogenic Poison",
 	description:
-    "will inject targets with a freezing poison that does high damage over time.",
+	"will inject targets with a freezing poison that does high damage over time.",
 	analyzerdescdamage:
-    "Injects targets with a freezing poison that will gradually solidify the target's internal organs.",
+	"Injects targets with a freezing poison that will gradually solidify the target's internal organs.",
 	color: [0.55, 0.65, 0.91],
 	complementary_color: [0.49, 0.43, 0.71],
 	blobbernaut_message: "injects",
@@ -163,10 +163,10 @@ Object.assign(ElectromagneticWeb.prototype, {
 	name: "Electromagnetic Web",
 	description: "will do high burn damage and EMP targets.",
 	effectdesc:
-    "will also take massively increased damage and release an EMP when killed.",
+	"will also take massively increased damage and release an EMP when killed.",
 	analyzerdescdamage: "Does low burn damage and EMPs targets.",
 	analyzerdesceffect:
-    "Is fragile to all types of damage, but takes massive damage from brute. In addition, releases a small EMP when killed.",
+	"Is fragile to all types of damage, but takes massive damage from brute. In addition, releases a small EMP when killed.",
 	color: [0.51, 0.93, 0.93],
 	complementary_color: [0.93, 0.51, 0.51],
 	blobbernaut_message: "lashes",
@@ -179,13 +179,13 @@ module.exports.reagents.SynchronousMesh = SynchronousMesh;
 Object.assign(SynchronousMesh.prototype, {
 	name: "Synchronous Mesh",
 	description:
-    "will do massively increased brute damage for each blob near the target.",
+	"will do massively increased brute damage for each blob near the target.",
 	effectdesc:
-    "will also spread damage between each blob near the attacked blob.",
+	"will also spread damage between each blob near the attacked blob.",
 	analyzerdescdamage:
-    "Does brute damage, increasing for each blob near the target.",
+	"Does brute damage, increasing for each blob near the target.",
 	analyzerdesceffect:
-    "When attacked, spreads damage between all blobs near the attacked blob.",
+	"When attacked, spreads damage between all blobs near the attacked blob.",
 	color: [0.4, 0.68, 0.64],
 	complementary_color: [0.68, 0.4, 0.44],
 	blobbernaut_message: "synchronously strikes",
@@ -198,11 +198,11 @@ Object.assign(ReactiveSpines.prototype, {
 	name: "Reactive Spines",
 	description: "will do medium brute damage through armor and bio resistance.",
 	effectdesc:
-    "will also react when attacked with brute damage, attacking all near the attacked blob.",
+	"will also react when attacked with brute damage, attacking all near the attacked blob.",
 	analyzerdescdamage:
-    "Does medium brute damage, ignoring armor and bio resistance.",
+	"Does medium brute damage, ignoring armor and bio resistance.",
 	analyzerdesceffect:
-    "When attacked with brute damage, will lash out, attacking everything near it.",
+	"When attacked with brute damage, will lash out, attacking everything near it.",
 	color: [0.6, 0.8, 0.2],
 	complementary_color: [1, 0.65, 0],
 	blobbernaut_message: "stabs",
@@ -214,12 +214,12 @@ module.exports.reagents.PressurizedSlime = PressurizedSlime;
 Object.assign(PressurizedSlime.prototype, {
 	name: "Pressurized Slime",
 	description:
-    "will do low brute, oxygen, and stamina damage, and wet tiles under targets.",
+	"will do low brute, oxygen, and stamina damage, and wet tiles under targets.",
 	effectdesc: "will also wet tiles near blobs that are attacked or killed.",
 	analyzerdescdamage:
-    "Does low brute damage, low oxygen damage, drains stamina, and wets tiles under targets, extinguishing them.",
+	"Does low brute damage, low oxygen damage, drains stamina, and wets tiles under targets, extinguishing them.",
 	analyzerdesceffect:
-    "When attacked or killed, wets nearby tiles, extinguishing anything on them.",
+	"When attacked or killed, wets nearby tiles, extinguishing anything on them.",
 	color: [0.67, 0.67, 0.73],
 	complementary_color: [0.73, 0.73, 0.67],
 	blobbernaut_message: "emits slime at",

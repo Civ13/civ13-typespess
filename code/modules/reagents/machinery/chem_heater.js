@@ -52,10 +52,10 @@ class ChemHeater extends Component {
 		}
 		if (this.beaker) {
 			let difference =
-        this.target_temperature - this.beaker.c.ReagentHolder.temperature;
+		this.target_temperature - this.beaker.c.ReagentHolder.temperature;
 			difference *= this.heater_coefficient;
 			difference =
-        difference > 0 ? Math.ceil(difference) : Math.floor(difference);
+		difference > 0 ? Math.ceil(difference) : Math.floor(difference);
 			this.beaker.c.ReagentHolder.temperature += difference;
 		}
 	}
@@ -63,7 +63,7 @@ class ChemHeater extends Component {
 	attack_hand(prev, user) {
 		if (
 			user.c.Mob.get_panel(this.a, ChemHeaterPanel) ||
-      !user.c.Mob.can_read_panel(this.a, ChemHeaterPanel)
+	!user.c.Mob.can_read_panel(this.a, ChemHeaterPanel)
 		) {
 			return prev();
 		}
@@ -194,10 +194,10 @@ class ChemHeaterPanel extends Panel {
 	message_handler(msg) {
 		if (
 			msg.dispense != null &&
-      this.bound_atom.c.ChemHeater.dispensable_reagents.includes(
-      	msg.dispense
-      ) &&
-      this.bound_atom.c.ChemHeater.beaker
+	this.bound_atom.c.ChemHeater.dispensable_reagents.includes(
+		msg.dispense
+	) &&
+	this.bound_atom.c.ChemHeater.beaker
 		) {
 			this.bound_atom.c.ChemHeater.beaker.c.ReagentHolder.add(
 				msg.dispense,

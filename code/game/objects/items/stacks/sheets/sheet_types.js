@@ -424,7 +424,7 @@ PlasticSheet.template = {
 		},
 		name: "plastic",
 		desc:
-      "Compress dinosaur over millions of years, then refine, split and mold, and voila! You have plastic.",
+	"Compress dinosaur over millions of years, then refine, split and mold, and voila! You have plastic.",
 		icon_state: "sheet-plastic",
 	},
 };

@@ -19,8 +19,8 @@ class PreferencesPanel extends Panel {
 		this.on("close", this.closed.bind(this));
 		this.on("open", this.opened.bind(this));
 		this.char_prefs =
-      client.character_preferences ||
-      (client.character_preferences = new CharacterPreferences());
+	client.character_preferences ||
+	(client.character_preferences = new CharacterPreferences());
 	}
 
 	message_handler(msg) {
@@ -46,8 +46,7 @@ class PreferencesPanel extends Panel {
 				}
 			}
 			if (msg.char_prefs.gender != null) {
-				this.char_prefs.gender =
-          msg.char_prefs.gender == "female" ? "female" : "male";
+				this.char_prefs.gender = msg.char_prefs.gender == "female" ? "female" : "male";
 			}
 			if (msg.char_prefs.age != null) {
 				let age = +msg.char_prefs.age || 0;
@@ -57,9 +56,7 @@ class PreferencesPanel extends Panel {
 			if (msg.char_prefs.hair_style != null) {
 				let hair_obj = sprite_accessories.hair[msg.char_prefs.hair_style];
 				if (
-					hair_obj &&
-          sprite_accessories.hair.hasOwnProperty(msg.char_prefs.hair_style) &&
-          (!hair_obj.gender || hair_obj.gender.includes(this.char_prefs.gender))
+					hair_obj && Object.prototype.hasOwnProperty.call(sprite_accessories.hair,msg.char_prefs.hair_style) && (!hair_obj.gender || hair_obj.gender.includes(this.char_prefs.gender))
 				)
 					this.char_prefs.hair_style = msg.char_prefs.hair_style;
 			}

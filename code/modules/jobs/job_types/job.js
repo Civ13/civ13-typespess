@@ -112,7 +112,7 @@ class JobOutfit extends Outfit {
 		if (visuals_only) return;
 		if (has_component(target, "MobInventory")) {
 			let id =
-        target.c.MobInventory.slots.id && target.c.MobInventory.slots.id.item;
+		target.c.MobInventory.slots.id && target.c.MobInventory.slots.id.item;
 			if (has_component(id, "CardId")) {
 				id.c.CardId.access = [
 					...this.jobtype.get_access_list(target.server, target),

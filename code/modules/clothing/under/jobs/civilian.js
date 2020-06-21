@@ -29,7 +29,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's a blue jumpsuit with some gold markings denoting the rank of \"Captain\".",
+			"It's a blue jumpsuit with some gold markings denoting the rank of \"Captain\".",
 				},
 			},
 			name: "captain's jumpsuit",
@@ -46,7 +46,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's a jumpsuit worn by the quartermaster. It's specially designed to prevent back injuries caused by pushing paper.",
+			"It's a jumpsuit worn by the quartermaster. It's specially designed to prevent back injuries caused by pushing paper.",
 				},
 			},
 			name: "quartermaster's jumpsuit",
@@ -107,7 +107,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A suit which is given only to the most <b>hardcore</b> cooks in space.",
+			"A suit which is given only to the most <b>hardcore</b> cooks in space.",
 				},
 			},
 			name: "cook's suit",
@@ -148,7 +148,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's a jumpsuit worn by someone who works in the position of \"Head of Personnel\".",
+			"It's a jumpsuit worn by someone who works in the position of \"Head of Personnel\".",
 				},
 			},
 			name: "head of personnel's jumpsuit",
@@ -168,7 +168,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's a jumpsuit designed to protect against minor plant-related hazards.",
+			"It's a jumpsuit designed to protect against minor plant-related hazards.",
 				},
 			},
 			name: "botanist's jumpsuit",
@@ -198,7 +198,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's the official uniform of the station's janitor. It has minor protection from biohazards.",
+			"It's the official uniform of the station's janitor. It has minor protection from biohazards.",
 				},
 			},
 			name: "janitor's jumpsuit",
@@ -334,7 +334,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A professional black suit. Nanotrasen Investigation Bureau approved!",
+			"A professional black suit. Nanotrasen Investigation Bureau approved!",
 				},
 			},
 			name: "black suit",
@@ -402,7 +402,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's a snappy jumpsuit with a sturdy set of overalls. It is very dirty.",
+			"It's a snappy jumpsuit with a sturdy set of overalls. It is very dirty.",
 				},
 			},
 			name: "shaft miner's jumpsuit",

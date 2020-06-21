@@ -23,7 +23,7 @@ class StackCraftPanel {
 		}
 		if (message.build_limit) {
 			this.recipes[message.build_limit.index].build_limit =
-        message.build_limit.build_limit;
+		message.build_limit.build_limit;
 			this.build_recipe(message.build_limit.index);
 		}
 	}

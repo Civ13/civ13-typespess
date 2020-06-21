@@ -136,7 +136,7 @@ class Apc extends Component {
 			overlay_num = 0;
 		} else if (
 			this.cell.c.PowerCell.charge >=
-      this.cell.c.PowerCell.max_charge - 0.001
+	this.cell.c.PowerCell.max_charge - 0.001
 		) {
 			overlay_num = 2;
 		} else if (this.last_charge > 0) {
@@ -147,7 +147,7 @@ class Apc extends Component {
 		let new_icon_state = `apco3-${overlay_num}`;
 		if (
 			!this.a.overlays.apc_charge ||
-      new_icon_state != this.a.overlays.apc_charge.icon_state
+	new_icon_state != this.a.overlays.apc_charge.icon_state
 		) {
 			this.a.overlays.apc_charge = { icon_state: new_icon_state };
 			if (overlay_num == 0)

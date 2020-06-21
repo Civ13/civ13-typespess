@@ -102,7 +102,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A dark blue jacket with reflective strips for emergency medical technicians.",
+			"A dark blue jacket with reflective strips for emergency medical technicians.",
 				},
 			},
 			name: "EMT's jacket",
@@ -137,7 +137,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A suit that protects against minor chemical spills. Has a blue stripe on the shoulder.",
+			"A suit that protects against minor chemical spills. Has a blue stripe on the shoulder.",
 				},
 			},
 			name: "geneticist labcoat",
@@ -172,7 +172,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A suit that protects against minor chemical spills. Has an orange stripe on the shoulder.",
+			"A suit that protects against minor chemical spills. Has an orange stripe on the shoulder.",
 				},
 			},
 			name: "chemist labcoat",
@@ -207,7 +207,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A suit that protects against minor chemical spills. Offers slightly more protection against biohazards than the standard model. Has a green stripe on the shoulder.", //It doesn't actually offer more protection. wew lad
+			"A suit that protects against minor chemical spills. Offers slightly more protection against biohazards than the standard model. Has a green stripe on the shoulder.", //It doesn't actually offer more protection. wew lad
 				},
 			},
 			name: "virologist labcoat",
@@ -242,7 +242,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A suit that protects against minor chemical spills. Has a purple stripe on the shoulder.",
+			"A suit that protects against minor chemical spills. Has a purple stripe on the shoulder.",
 				},
 			},
 			name: "scientist labcoat",

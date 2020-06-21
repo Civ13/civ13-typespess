@@ -31,7 +31,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A lightweight support lattice. These hold our station together.",
+			"A lightweight support lattice. These hold our station together.",
 				},
 			},
 			name: "lattice",

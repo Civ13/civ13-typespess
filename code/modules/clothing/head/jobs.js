@@ -183,7 +183,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this hat.",
+			"There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this hat.",
 				},
 			},
 			name: "detective's fedora",
@@ -228,7 +228,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A black beret, perfect for war veterans and dark, brooding, anti-hero mimes.",
+			"A black beret, perfect for war veterans and dark, brooding, anti-hero mimes.",
 				},
 			},
 			name: "black beret",
@@ -262,7 +262,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "The robust standard-issue cap of the Head of Security. For showing the officers who's in charge.",
+			"The robust standard-issue cap of the Head of Security. For showing the officers who's in charge.",
 				},
 			},
 			name: "head of security cap",
@@ -296,7 +296,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A robust beret for the Head of Security, for looking stylish while not sacrificing protection.",
+			"A robust beret for the Head of Security, for looking stylish while not sacrificing protection.",
 				},
 			},
 			name: "head of security beret",
@@ -363,7 +363,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A black beret with thick armor padding inside. Stylish and robust.",
+			"A black beret with thick armor padding inside. Stylish and robust.",
 				},
 			},
 			name: "syndicate beret",
@@ -395,7 +395,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's a special armored hat issued to the Warden of a security force. Protects the head from impacts.",
+			"It's a special armored hat issued to the Warden of a security force. Protects the head from impacts.",
 				},
 			},
 			name: "warden's police hat",
@@ -429,7 +429,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection.",
+			"A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection.",
 				},
 			},
 			name: "security beret",
@@ -463,7 +463,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A special beret with the Head of Security's insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction.",
+			"A special beret with the Head of Security's insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction.",
 				},
 			},
 			name: "head of security's beret",
@@ -497,7 +497,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A special beret with the Warden's insignia emblazoned on it. For wardens with class.",
+			"A special beret with the Warden's insignia emblazoned on it. For wardens with class.",
 				},
 			},
 			name: "warden's beret",
@@ -531,7 +531,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A special beret with the security insignia emblazoned on it. For officers with class.",
+			"A special beret with the security insignia emblazoned on it. For officers with class.",
 				},
 			},
 			name: "security beret",
@@ -561,7 +561,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "You got red text today kid, but it doesn't mean you have to like it.",
+			"You got red text today kid, but it doesn't mean you have to like it.",
 				},
 			},
 			name: "treasure hunter's fedora",

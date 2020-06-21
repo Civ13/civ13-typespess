@@ -105,7 +105,7 @@ class Action /*lawsuit*/ extends EventEmitter {
 		return true;
 	}
 
-	click_act(/*user*/) {}
+	click_act(/*user*/) {return;}
 }
 
 class ItemAction extends Action {
@@ -126,8 +126,8 @@ class ItemAction extends Action {
 		if (!super.check_mob_use(mob)) return false;
 		if (
 			!has_component(mob, "MobInventory") ||
-      !this.target ||
-      this.target.loc != mob
+	!this.target ||
+	this.target.loc != mob
 		)
 			return false;
 		return true;

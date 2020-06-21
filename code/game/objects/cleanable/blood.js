@@ -164,7 +164,7 @@ module.exports.templates = {
 					footprint_amount: 0,
 				},
 				Examine: {
-					desc: "Looks like it's been here a while.  Eew.",
+					desc: "Looks like it's been here a while. Eew.",
 				},
 			},
 			name: "dried blood",

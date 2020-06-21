@@ -99,15 +99,15 @@ class Panel extends EventEmitter {
 				top: oldtop,
 			} = this.container_obj.getBoundingClientRect();
 			this.container_obj.style.left =
-        Math.min(
-        	document.documentElement.clientWidth - 160 - pad,
-        	Math.max(-pad, oldleft + dx)
-        ) + "px";
+		Math.min(
+			document.documentElement.clientWidth - 160 - pad,
+			Math.max(-pad, oldleft + dx)
+		) + "px";
 			this.container_obj.style.top =
-        Math.min(
-        	document.documentElement.clientHeight - 35 - pad,
-        	Math.max(-pad, oldtop + dy)
-        ) + "px";
+		Math.min(
+			document.documentElement.clientHeight - 35 - pad,
+			Math.max(-pad, oldtop + dy)
+		) + "px";
 			this.emit("move");
 		};
 		var mouseup = () => {
@@ -138,7 +138,7 @@ class Panel extends EventEmitter {
 				out.cursor = "nesw-resize";
 			} else if (
 				(out.drag_left && out.drag_up) ||
-        (out.drag_down && out.drag_right)
+		(out.drag_down && out.drag_right)
 			) {
 				out.cursor = "nwse-resize";
 			} else if (out.drag_left || out.drag_right) {
@@ -148,7 +148,7 @@ class Panel extends EventEmitter {
 			}
 		}
 		out.can_resize =
-      out.drag_right || out.drag_left || out.drag_up || out.drag_down;
+	out.drag_right || out.drag_left || out.drag_up || out.drag_down;
 		return out;
 	}
 
@@ -156,7 +156,7 @@ class Panel extends EventEmitter {
 		// bring the panel into focus
 		if (
 			this.container_obj !=
-      document.getElementById("uiframes-container").lastChild
+	document.getElementById("uiframes-container").lastChild
 		)
 			document
 				.getElementById("uiframes-container")
@@ -179,28 +179,16 @@ class Panel extends EventEmitter {
 				top: oldtop,
 			} = this.container_obj.getBoundingClientRect();
 			if (resize_meta.drag_left) {
-				this.container_obj.style.left =
-          Math.min(
-          	document.documentElement.clientWidth - 160 - pad,
-          	Math.max(-pad, oldleft + dx)
-          ) + "px";
-				this.container_obj.style.width =
-          Math.max(160, this.panel_obj.clientWidth - dx) + "px";
+				this.container_obj.style.left = Math.min( 	document.documentElement.clientWidth - 160 - pad, 	Math.max(-pad, oldleft + dx) ) + "px";
+				this.container_obj.style.width = Math.max(160, this.panel_obj.clientWidth - dx) + "px";
 			} else if (resize_meta.drag_right) {
-				this.container_obj.style.width =
-          Math.max(160, this.panel_obj.clientWidth + dx) + "px";
+				this.container_obj.style.width = Math.max(160, this.panel_obj.clientWidth + dx) + "px";
 			}
 			if (resize_meta.drag_up) {
-				this.container_obj.style.top =
-          Math.min(
-          	document.documentElement.clientHeight - 35 - pad,
-          	Math.max(-pad, oldtop + dy)
-          ) + "px";
-				this.container_obj.style.height =
-          Math.max(35, this.panel_obj.clientHeight - dy) + "px";
+				this.container_obj.style.top = Math.min( 	document.documentElement.clientHeight - 35 - pad, 	Math.max(-pad, oldtop + dy) ) + "px";
+				this.container_obj.style.height = Math.max(35, this.panel_obj.clientHeight - dy) + "px";
 			} else if (resize_meta.drag_down) {
-				this.container_obj.style.height =
-          Math.max(35, this.panel_obj.clientHeight + dy) + "px";
+				this.container_obj.style.height = Math.max(35, this.panel_obj.clientHeight + dy) + "px";
 			}
 			this.emit("resize");
 		};
@@ -278,10 +266,10 @@ class Panel extends EventEmitter {
 	is_valid_button(elem) {
 		return (
 			elem &&
-      elem.classList &&
-      elem.classList.contains("button") &&
-      !elem.classList.contains("disabled") &&
-      !elem.classList.contains("selected")
+	elem.classList &&
+	elem.classList.contains("button") &&
+	!elem.classList.contains("disabled") &&
+	!elem.classList.contains("selected")
 		);
 	}
 

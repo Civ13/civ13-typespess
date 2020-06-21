@@ -35,7 +35,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "These gloves are cheap knockoffs of the coveted ones - no way this can end badly.",
+			"These gloves are cheap knockoffs of the coveted ones - no way this can end badly.",
 				},
 			},
 			name: "budget insulated gloves",

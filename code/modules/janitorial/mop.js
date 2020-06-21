@@ -90,7 +90,7 @@ Mop.template = {
 			Item: {
 				inhand_lhand_icon: "icons/mob/inhands/equipment/custodial_lefthand.png",
 				inhand_rhand_icon:
-          "icons/mob/inhands/equipment/custodial_righthand.png",
+		"icons/mob/inhands/equipment/custodial_righthand.png",
 				force: 3,
 				size: 3,
 				attack_verb: ["mopped", "bashed", "bludgeoned", "whacked"],

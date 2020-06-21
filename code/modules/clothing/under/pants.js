@@ -37,7 +37,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "Made in the finest space jeans factory this side of Alpha Centauri.",
+			"Made in the finest space jeans factory this side of Alpha Centauri.",
 				},
 			},
 			name: "must hang jeans",
@@ -82,7 +82,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "For those tired of boring old jeans. Relive the passion of your youth!",
+			"For those tired of boring old jeans. Relive the passion of your youth!",
 				},
 			},
 			name: "young folks jeans",
@@ -171,7 +171,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "Some tan pants. You look like a white collar worker with these on.",
+			"Some tan pants. You look like a white collar worker with these on.",
 				},
 			},
 			name: "tan pants",
@@ -260,7 +260,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A pair of woodland camouflage pants. Probably not the best choice for a space station.",
+			"A pair of woodland camouflage pants. Probably not the best choice for a space station.",
 				},
 			},
 			name: "camo pants",

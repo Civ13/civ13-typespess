@@ -12,7 +12,7 @@ class GasPumpPanel {
 		this.panel.$(".target_pressure").addEventListener("input", () => {
 			this.panel.$(".target_pressure_display").textContent = (
 				this.panel.$(".target_pressure").value ** 2 *
-        4500
+		4500
 			).toFixed(2);
 		});
 		this.panel.$(".target_pressure").addEventListener("change", () => {

@@ -44,7 +44,7 @@ class ChemDispenser extends Component {
 	attack_hand(prev, user) {
 		if (
 			user.c.Mob.get_panel(this.a, ChemDispenserPanel) ||
-      !user.c.Mob.can_read_panel(this.a, ChemDispenserPanel)
+	!user.c.Mob.can_read_panel(this.a, ChemDispenserPanel)
 		) {
 			return prev();
 		}
@@ -215,10 +215,10 @@ class ChemDispenserPanel extends Panel {
 	message_handler(msg) {
 		if (
 			msg.dispense != null &&
-      this.bound_atom.c.ChemDispenser.dispensable_reagents.includes(
-      	msg.dispense
-      ) &&
-      this.bound_atom.c.ChemDispenser.beaker
+	this.bound_atom.c.ChemDispenser.dispensable_reagents.includes(
+		msg.dispense
+	) &&
+	this.bound_atom.c.ChemDispenser.beaker
 		) {
 			this.bound_atom.c.ChemDispenser.beaker.c.ReagentHolder.add(
 				msg.dispense,

@@ -179,7 +179,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's standardised Nanotrasen prisoner-wear. Its suit sensors are sruck in the \"Fully On\" position.",
+			"It's standardised Nanotrasen prisoner-wear. Its suit sensors are sruck in the \"Fully On\" position.",
 				},
 			},
 			name: "prison jumpsuit",
@@ -283,7 +283,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's the standard issue pretty-boy outfit, as seen on Holo-Vision.",
+			"It's the standard issue pretty-boy outfit, as seen on Holo-Vision.",
 				},
 			},
 			name: "vice officer's jumpsuit",
@@ -343,7 +343,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A soft brown jumpsuit made of synthetic feathers and strong conviction.",
+			"A soft brown jumpsuit made of synthetic feathers and strong conviction.",
 				},
 			},
 			name: "owl uniform",
@@ -362,7 +362,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A soft brown jumpsuit with a white feather collar made of synthetic feathers and a lust for mayhem.",
+			"A soft brown jumpsuit with a white feather collar made of synthetic feathers and a lust for mayhem.",
 				},
 			},
 			name: "griffon uniform",
@@ -423,7 +423,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A teal suit and yellow necktie. An authoritative yet tacky ensemble.",
+			"A teal suit and yellow necktie. An authoritative yet tacky ensemble.",
 				},
 			},
 			name: "head of personnel's suit",
@@ -466,7 +466,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A formal black suit and red tie, intended for the station's finest.",
+			"A formal black suit and red tie, intended for the station's finest.",
 				},
 			},
 			name: "executive suit",
@@ -488,7 +488,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A formal trouser suit for women, intended for the station's finest.",
+			"A formal trouser suit for women, intended for the station's finest.",
 				},
 			},
 			name: "executive suit",
@@ -615,7 +615,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "That's a very nice suit you have there. Shame if something were to happen to it, eh?",
+			"That's a very nice suit you have there. Shame if something were to happen to it, eh?",
 				},
 			},
 			name: "checkered suit",
@@ -658,7 +658,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A white suit and jacket with a blue shirt. You wanna play rough? OKAY!",
+			"A white suit and jacket with a blue shirt. You wanna play rough? OKAY!",
 				},
 			},
 			name: "white suit",
@@ -1062,7 +1062,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "This gladiator uniform appears to be covered in ash and fairly dated.",
+			"This gladiator uniform appears to be covered in ash and fairly dated.",
 				},
 			},
 			name: "gladiator uniform",
@@ -1153,7 +1153,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A female head of security's luxury-wear, for special occasions.",
+			"A female head of security's luxury-wear, for special occasions.",
 				},
 			},
 			name: "head of security's parade uniform",
@@ -1175,7 +1175,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "An assistant's formal-wear. Why an assistant needs formal-wear is still unknown.",
+			"An assistant's formal-wear. Why an assistant needs formal-wear is still unknown.",
 				},
 			},
 			name: "assistant's formal uniform",
@@ -1449,7 +1449,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A change of wardrobe is necessary if you ever want to catch a real superhero.",
+			"A change of wardrobe is necessary if you ever want to catch a real superhero.",
 				},
 			},
 			name: "villain suit",
@@ -1644,7 +1644,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A black jumpsuit with a white bone pattern printed on it. Spooky!",
+			"A black jumpsuit with a white bone pattern printed on it. Spooky!",
 				},
 			},
 			name: "skeleton jumpsuit",

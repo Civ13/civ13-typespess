@@ -65,13 +65,13 @@ class StripPanel {
 				if (!this.panel.$(`tr[data-slot=${slot}]`)) continue;
 				if (!this.covered[slot]) {
 					this.panel.$(`tr[data-slot=${slot}] .item-name`).textContent =
-            newname || "Empty";
+			newname || "Empty";
 					if (newname)
 						this.panel.$(`tr[data-slot=${slot}] .strip-button`).style.color =
-              "inherit";
+			"inherit";
 					else
 						this.panel.$(`tr[data-slot=${slot}] .strip-button`).style.color =
-              "grey";
+			"grey";
 				}
 			}
 		}

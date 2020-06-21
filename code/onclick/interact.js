@@ -55,10 +55,10 @@ class MobInteract extends Component {
 
 		if (
 			hasinv &&
-      this.a.c.MobInventory.throw_mode &&
-      (!e.atom || (e.atom.loc && e.atom.loc.is_base_loc)) &&
-      this.a.loc &&
-      this.a.loc.is_base_loc
+	this.a.c.MobInventory.throw_mode &&
+	(!e.atom || (e.atom.loc && e.atom.loc.is_base_loc)) &&
+	this.a.loc &&
+	this.a.loc.is_base_loc
 		) {
 			this.a.c.MobInventory.throw_item({
 				x: e.world_x - 0.5,
@@ -79,7 +79,7 @@ class MobInteract extends Component {
 
 			if (
 				Math.abs(e.atom.x - this.a.x) <= 1.50001 &&
-        Math.abs(e.atom.y - this.a.y) <= 1.50001
+		Math.abs(e.atom.y - this.a.y) <= 1.50001
 			) {
 				if (active_item) {
 					active_item.c.Item.melee_attack_chain(this.a, e.atom, e);
@@ -98,8 +98,8 @@ class MobInteract extends Component {
 			}
 		} else {
 			let flag =
-        Math.abs(Math.floor(e.world_x) - this.a.x) <= 1.50001 &&
-        Math.abs(Math.floor(e.world_y) - this.a.y) <= 1.50001;
+		Math.abs(Math.floor(e.world_x) - this.a.x) <= 1.50001 &&
+		Math.abs(Math.floor(e.world_y) - this.a.y) <= 1.50001;
 			let target = {
 				x: e.world_x - 0.5,
 				y: e.world_y - 0.5,
@@ -132,8 +132,8 @@ class MobInteract extends Component {
 
 	change_next_move(num) {
 		this.next_move =
-      this.a.server.now() +
-      (num + this.next_move_adjust) * this.next_move_modifier;
+	this.a.server.now() +
+	(num + this.next_move_adjust) * this.next_move_modifier;
 	}
 
 	unarmed_attack(target, e) {
