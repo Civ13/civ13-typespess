@@ -29,6 +29,12 @@ function random_floor(prob: number) {
 	else return "grass";
 }
 
+function random_flora() {
+	if (Math.random() <= 0.25) return "bush";
+	else if (Math.random() <= 0.7) return "grass";
+	else return "tree";
+}
+
 originalLoadedConfigs = load_configs();
 console.log(
 	"Read definitions as: " +
@@ -57,6 +63,18 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		if (i == inc_w) {
 			finalData = finalData + "			{\n";
 			finalData = finalData + "				\"instance_vars\": {\n";
+			finalData = finalData + "					\"components\": {\n";
+			finalData = finalData + "						\"Area\": {\n";
+			finalData = finalData + "							\"map_id\": \"area_outside_arrivals\"\n";
+			finalData = finalData + "						}\n";
+			finalData = finalData + "					}\n";
+			finalData = finalData + "				},\n";
+			finalData = finalData + "				\"template_name\": \"area_outside_arrivals\",\n";
+			finalData = finalData + `				"x": ${i},\n`;
+			finalData = finalData + `				"y": ${j}\n`;
+			finalData = finalData + "			},\n";
+			finalData = finalData + "			{\n";
+			finalData = finalData + "				\"instance_vars\": {\n";
 			finalData = finalData + "					\"name\": \"start\",\n";
 			finalData = finalData + "					\"components\": {\n";
 			finalData = finalData + "						\"JobLandmark\": {\n";
@@ -71,31 +89,28 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		}
 		finalData = finalData + "			{\n";
 		finalData = finalData + `				"template_name": "floor_${floorname}",\n`;
-		finalData = finalData + "				\"variant_leaf_path\": [\n";
-		finalData = finalData + `					"${floorname}"\n`;
-		finalData = finalData + "				],\n";
+		finalData = finalData + `				"variant_leaf_path": ["${floorname}"],\n`;
 		finalData = finalData + `				"x": ${i},\n`;
 		finalData = finalData + `				"y": ${j}\n`;
-		finalData = finalData + "			},\n";
 		if (i == 0 && j == 0) {
+			finalData = finalData + "			},\n";
 			finalData = finalData + "			{\n";
 			finalData = finalData + "				\"template_name\": \"sun\",\n";
 			finalData = finalData + `				"x": ${i},\n`;
 			finalData = finalData + `				"y": ${j}\n`;
-			finalData = finalData + "			},\n";
+			finalData = finalData + "			}\n";
 		}
-		finalData = finalData + "			{\n";
-		finalData = finalData + "				\"instance_vars\": {\n";
-		finalData = finalData + "					\"components\": {\n";
-		finalData = finalData + "						\"Area\": {\n";
-		finalData = finalData + "							\"map_id\": \"area_outside_arrivals\"\n";
-		finalData = finalData + "						}\n";
-		finalData = finalData + "					}\n";
-		finalData = finalData + "				},\n";
-		finalData = finalData + "				\"template_name\": \"area_outside_arrivals\",\n";
-		finalData = finalData + `				"x": ${i},\n`;
-		finalData = finalData + `				"y": ${j}\n`;
-		finalData = finalData + "			}\n";
+		else {
+			if (Math.random() <= 0.5) {
+				finalData = finalData + "			},\n";
+				finalData = finalData + "			{\n";
+				finalData = finalData + `				"template_name": "${random_flora()}",\n`;
+				finalData = finalData + `				"x": ${i},\n`;
+				finalData = finalData + `				"y": ${j}\n`;
+				finalData = finalData + "			}\n";
+			}
+			else {finalData = finalData + "			}\n";}
+		}
 		finalData = finalData + hascomma;
 	}
 }

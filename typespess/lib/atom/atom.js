@@ -48,33 +48,33 @@ const _emit_parent_move = Symbol("_emit_parent_move");
  */
 class Atom extends EventEmitter {
 	/**
-   * @constructor
-   * @param {Typespess} server The server object
-   * @param {template} template The template
-   * @param {Location|Typespess.Atom|null} location The starting location. You can also add 3 arguments x,y,z alternatively
-   */
+	 * @constructor
+	 * @param {Typespess} server The server object
+	 * @param {template} template The template
+	 * @param {Location|Typespess.Atom|null} location The starting location. You can also add 3 arguments x,y,z alternatively
+	 */
 	constructor(server, template, x, y, z, dim) {
 		if (typeof template == "string") template = server.templates[template];
 		if (template && template.pick_from) {
 			template =
-        template.pick_from[
-        	Math.floor(Math.random() * template.pick_from.length)
-        ];
+		template.pick_from[
+			Math.floor(Math.random() * template.pick_from.length)
+		];
 			if (typeof template == "string") template = server.templates[template];
 		}
 		if (
 			template &&
-      template.use_random_variant &&
-      !template.is_variant &&
-      template.variants &&
-      template.variants.length
+		template.use_random_variant &&
+		!template.is_variant &&
+		template.variants &&
+		template.variants.length
 		) {
 			let new_variant_leaf_path = new Array(template.variants.length);
 			for (let i = 0; i < template.variants.length; i++) {
 				let variant = template.variants[i];
 				if (variant.type == "single") {
 					new_variant_leaf_path[i] =
-            variant.values[Math.floor(Math.random() * variant.values.length)];
+			variant.values[Math.floor(Math.random() * variant.values.length)];
 				}
 			}
 			template = server.get_template_variant(template, new_variant_leaf_path);
@@ -87,16 +87,16 @@ class Atom extends EventEmitter {
 		super();
 
 		/**
-     * The template this atom was constructed with. Useful to get the initial values of variables.
-     * @type {template}
-     */
+	 * The template this atom was constructed with. Useful to get the initial values of variables.
+	 * @type {template}
+	 */
 		this.template = template;
 
 		/**
-     * @see {@link Typespess.Atom#destroy}
-     * @type {boolean}
-     * @default false
-     */
+	 * @see {@link Typespess.Atom#destroy}
+	 * @type {boolean}
+	 * @default false
+	 */
 		this.destroyed = false;
 
 		Object.defineProperty(this, "server", {
@@ -106,9 +106,9 @@ class Atom extends EventEmitter {
 			value: server,
 		});
 		/**
-     * The server object
-     * @type {Typespess}
-     */
+	 * The server object
+	 * @type {Typespess}
+	 */
 		this.server;
 		Object.defineProperty(this, "object_id", {
 			enumerable: true,
@@ -117,12 +117,12 @@ class Atom extends EventEmitter {
 			value: `ID_${id_counter++}`,
 		});
 		/**
-     * A list of atoms whos loc is this atom.
-     * @type {Array<Typespess.Atom>}
-     * @member contents
-     * @memberof Typespess.Atom
-     * @instance
-     */
+	 * A list of atoms whos loc is this atom.
+	 * @type {Array<Typespess.Atom>}
+	 * @member contents
+	 * @memberof Typespess.Atom
+	 * @instance
+	 */
 		Object.defineProperty(this, "contents", {
 			enumerable: true,
 			configurable: false,
@@ -135,10 +135,10 @@ class Atom extends EventEmitter {
 		this[_layer] = 0;
 		this[_dir] = 2;
 		/**
-     * Can be "neuter", "male", "female", or "plural".
-     * @type {string}
-     * @default "neuter"
-     */
+	 * Can be "neuter", "male", "female", or "plural".
+	 * @type {string}
+	 * @default "neuter"
+	 */
 		this.gender = "neuter";
 
 		this[_crosses] = [];
@@ -154,19 +154,19 @@ class Atom extends EventEmitter {
 		this[mob_symbols._visgroups] = [];
 
 		/**
-     * Whether it's dense or not. 1 means that it can't be crossed, 0 means that it can be crossed, -1 means that it passes through everything, even with density 1.
-     * @type {number}
-     */
+	 * Whether it's dense or not. 1 means that it can't be crossed, 0 means that it can be crossed, -1 means that it passes through everything, even with density 1.
+	 * @type {number}
+	 */
 		this.density = 0;
 		/**
-     * A bitfield for ability to pass through other objects.
-     * @type {number}
-     */
+	 * A bitfield for ability to pass through other objects.
+	 * @type {number}
+	 */
 		this.pass_flags = 0;
 		/**
-     * A bitfield for ability of other objects to pass through this one.
-     * @type {number}
-     */
+	 * A bitfield for ability of other objects to pass through this one.
+	 * @type {number}
+	 */
 		this.let_pass_flags = 0;
 		this[_opacity] = false;
 		this[_visible] = true;
@@ -174,37 +174,37 @@ class Atom extends EventEmitter {
 		this[_walking] = false;
 		this[_walk_stepping] = false;
 		/**
-     * @type {number}
-     * @see {@link Typespess.Atom#walking}
-     */
+	 * @type {number}
+	 * @see {@link Typespess.Atom#walking}
+	 */
 		this.walk_dir = 0;
 		/**
-     * @type {number}
-     * @default 1
-     * @see {@link Typespess.Atom#walking}
-     */
+	 * @type {number}
+	 * @default 1
+	 * @see {@link Typespess.Atom#walking}
+	 */
 		this.walk_size = 1;
 		/**
-     * @type {number}
-     * @default 150
-     * @see {@link Typespess.Atom#walking}
-     */
+	 * @type {number}
+	 * @default 150
+	 * @see {@link Typespess.Atom#walking}
+	 */
 		this.walk_delay = 150;
 		/**
-     * @type {number}
-     * @default "walking"
-     * @see {@link Typespess.Atom#walking}
-     */
+	 * @type {number}
+	 * @default "walking"
+	 * @see {@link Typespess.Atom#walking}
+	 */
 		this.walk_reason = "walking";
 		this.movement_granularity = 65536; // Keep this a power of 2 to avoid floating point errors.
 
 		if (template.vars) {
 			for (var key in template.vars) {
 				if (
-					!template.vars.hasOwnProperty(key) ||
-          key == "appearance" ||
-          key == "components" ||
-          key == "overlays"
+					!Object.prototype.hasOwnProperty.call(template.vars,key) ||
+			key == "appearance" ||
+			key == "components" ||
+			key == "overlays"
 				)
 					continue;
 				this[key] = template.vars[key];
@@ -215,16 +215,16 @@ class Atom extends EventEmitter {
 			Object.assign(this, template.vars.appearance);
 
 		/**
-     * The overlays of this object. They are named, unlike BYOND where it's just a list.
-     * @type {Object}
-     * @property {Object} <key>
-     * @property {string} [<key>.icon] {@link Typespess.Atom#icon}
-     * @property {string} [<key>.icon_state] {@link Typespess.Atom#icon_state} The string <code>[parent]</code> gets replaced with this atom's <code>icon_state</code> by the client, or the current flick's.
-     * @property {number} [<key>.dir] {@link Typespess.Atom#dir}
-     * @property {string} [<key>.color] {@link Typespess.Atom#color}
-     * @property {string} [<key>.alpha] {@link Typespess.Atom#alpha}
-     * @property {number} [<key>.overlay_layer=0] set negative to display below the atom, and 0 or greater for above the atom. Also use to control which overlays show in front.
-     */
+	 * The overlays of this object. They are named, unlike BYOND where it's just a list.
+	 * @type {Object}
+	 * @property {Object} <key>
+	 * @property {string} [<key>.icon] {@link Typespess.Atom#icon}
+	 * @property {string} [<key>.icon_state] {@link Typespess.Atom#icon_state} The string <code>[parent]</code> gets replaced with this atom's <code>icon_state</code> by the client, or the current flick's.
+	 * @property {number} [<key>.dir] {@link Typespess.Atom#dir}
+	 * @property {string} [<key>.color] {@link Typespess.Atom#color}
+	 * @property {string} [<key>.alpha] {@link Typespess.Atom#alpha}
+	 * @property {number} [<key>.overlay_layer=0] set negative to display below the atom, and 0 or greater for above the atom. Also use to control which overlays show in front.
+	 */
 		this.overlays = new Proxy(
 			{},
 			{
@@ -256,10 +256,10 @@ class Atom extends EventEmitter {
 		);
 
 		/**
-     * The components for this object.
-     * @type {Object<string,Typespess.Component>}
-     * @see {@link Typespess.Component}
-     */
+	 * The components for this object.
+	 * @type {Object<string,Typespess.Component>}
+	 * @see {@link Typespess.Component}
+	 */
 		this.components = {};
 		if (template.components) {
 			for (let i = 0; i < template.components.length; i++) {
@@ -274,11 +274,11 @@ class Atom extends EventEmitter {
 						`Template '${template.id}' references non-existent component '${componentName}'`
 					);
 				let templateVars =
-          template.vars &&
-          template.vars.components &&
-          template.vars.components[componentName]
-          	? template.vars.components[componentName]
-          	: {};
+			template.vars &&
+			template.vars.components &&
+			template.vars.components[componentName]
+				? template.vars.components[componentName]
+				: {};
 				this.components[componentName] = new this.server.components[
 					componentName
 				](this, templateVars);
@@ -305,113 +305,113 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Alias for components
-   * @see {@link Typespess.Atom#components}
-   */
+	 * Alias for components
+	 * @see {@link Typespess.Atom#components}
+	 */
 	get c() {
 		return this.components;
 	}
 
 	/**
-   * Event name is prepended with, if applicable: ctrl_, alt_, shift_, middle_ in that order.
-   * @event Typespess.Atom#clicked
-   * @type {mouse_event}
-   */
+	 * Event name is prepended with, if applicable: ctrl_, alt_, shift_, middle_ in that order.
+	 * @event Typespess.Atom#clicked
+	 * @type {mouse_event}
+	 */
 	/**
-   * @event Typespess.Atom#mouse_dragged_to
-   * @type {Object}
-   * @property {mouse_event} from
-   * @property {mouse_event} to
-   * @property {Client} client
-   * @property {Typespess.Atom<Mob>} mob
-   */
+	 * @event Typespess.Atom#mouse_dragged_to
+	 * @type {Object}
+	 * @property {mouse_event} from
+	 * @property {mouse_event} to
+	 * @property {Client} client
+	 * @property {Typespess.Atom<Mob>} mob
+	 */
 	/**
-   * @event Typespess.Atom#mouse_dropped_by
-   * @type {Object}
-   * @property {mouse_event} from
-   * @property {mouse_event} to
-   * @property {Client} client
-   * @property {Typespess.Atom<Mob>} mob
-   */
+	 * @event Typespess.Atom#mouse_dropped_by
+	 * @type {Object}
+	 * @property {mouse_event} from
+	 * @property {mouse_event} to
+	 * @property {Client} client
+	 * @property {Typespess.Atom<Mob>} mob
+	 */
 
 	/**
-   * Passed to movement events.
-   * @class
-   * @property {Object} old
-   * @property {number} old.x
-   * @property {number} old.y
-   * @property {number} old.z
-   * @property {Typespess.Atom|Location|null} old.loc
-   * @property {boolean} old.is_fine_loc=true
-   * @property {Object} new
-   * @property {number} new.x
-   * @property {number} new.y
-   * @property {number} new.z
-   * @property {Typespess.Atom|Location|null} new.loc
-   * @property {boolean} new.is_fine_loc=true
-   * @name movement
-   * @alias movement
-   */
+	 * Passed to movement events.
+	 * @class
+	 * @property {Object} old
+	 * @property {number} old.x
+	 * @property {number} old.y
+	 * @property {number} old.z
+	 * @property {Typespess.Atom|Location|null} old.loc
+	 * @property {boolean} old.is_fine_loc=true
+	 * @property {Object} new
+	 * @property {number} new.x
+	 * @property {number} new.y
+	 * @property {number} new.z
+	 * @property {Typespess.Atom|Location|null} new.loc
+	 * @property {boolean} new.is_fine_loc=true
+	 * @name movement
+	 * @alias movement
+	 */
 
 	/**
-   * Fires before any type of movement occurs. This cannot be used to prevent the movement from occuring.
-   * @type {movement}
-   * @event Typespess.Atom#before_move
-   */
+	 * Fires before any type of movement occurs. This cannot be used to prevent the movement from occuring.
+	 * @type {movement}
+	 * @event Typespess.Atom#before_move
+	 */
 	/**
-   * Fires before another atom leaves this atom's <code>contents</code> list
-   * @type {movement}
-   * @event Typespess.Atom#before_exit
-   */
+	 * Fires before another atom leaves this atom's <code>contents</code> list
+	 * @type {movement}
+	 * @event Typespess.Atom#before_exit
+	 */
 	/**
-   * Fires before another atom enters this atom's <code>contents</code> list
-   * @type {movement}
-   * @event Typespess.Atom#before_enter
-   */
+	 * Fires before another atom enters this atom's <code>contents</code> list
+	 * @type {movement}
+	 * @event Typespess.Atom#before_enter
+	 */
 	/**
-   * Fires when this atom moves and begins intersecting another atom
-   * @param {Typespess.Atom} crossing
-   * @param {movement} movement
-   * @event Typespess.Atom#crossed
-   */
+	 * Fires when this atom moves and begins intersecting another atom
+	 * @param {Typespess.Atom} crossing
+	 * @param {movement} movement
+	 * @event Typespess.Atom#crossed
+	 */
 	/**
-   * Fires when another atom moves and begins intersecting this atom
-   * @param {Typespess.Atom} crosser
-   * @param {movement} movement
-   * @event Typespess.Atom#crossed_by
-   */
+	 * Fires when another atom moves and begins intersecting this atom
+	 * @param {Typespess.Atom} crosser
+	 * @param {movement} movement
+	 * @event Typespess.Atom#crossed_by
+	 */
 	/**
-   * Fires when this atom moves and stops intersecting another atom
-   * @param {Typespess.Atom} uncrossing
-   * @param {movement} movement
-   * @event Typespess.Atom#uncrossed
-   */
+	 * Fires when this atom moves and stops intersecting another atom
+	 * @param {Typespess.Atom} uncrossing
+	 * @param {movement} movement
+	 * @event Typespess.Atom#uncrossed
+	 */
 	/**
-   * Fires when another atom moves and stops intersecting this atom
-   * @param {Typespess.Atom} uncrosser
-   * @param {movement} movement
-   * @event Typespess.Atom#uncrossed_by
-   */
+	 * Fires when another atom moves and stops intersecting this atom
+	 * @param {Typespess.Atom} uncrosser
+	 * @param {movement} movement
+	 * @event Typespess.Atom#uncrossed_by
+	 */
 	/**
-   * Fires when this atom moves.
-   * @type {movement}
-   * @event Typespess.Atom#moved
-   */
+	 * Fires when this atom moves.
+	 * @type {movement}
+	 * @event Typespess.Atom#moved
+	 */
 	/**
-   * Fires when an atom that contains this atom moves, recursively..
-   * @type {movement}
-   * @event Typespess.Atom#parent_moved
-   */
+	 * Fires when an atom that contains this atom moves, recursively..
+	 * @type {movement}
+	 * @event Typespess.Atom#parent_moved
+	 */
 	/**
-   * Fires when another atom leaves this atom's <code>contents</code> list
-   * @type {movement}
-   * @event Typespess.Atom#exited
-   */
+	 * Fires when another atom leaves this atom's <code>contents</code> list
+	 * @type {movement}
+	 * @event Typespess.Atom#exited
+	 */
 	/**
-   * Fires when another atom enters this atom's <code>contents</code> list
-   * @type {movement}
-   * @event Typespess.Atom#entered
-   */
+	 * Fires when another atom enters this atom's <code>contents</code> list
+	 * @type {movement}
+	 * @event Typespess.Atom#entered
+	 */
 
 	[_changeloc](
 		newX,
@@ -425,10 +425,10 @@ class Atom extends EventEmitter {
 	) {
 		if (
 			newLoc &&
-      !newLoc.is_base_loc &&
-      this[_loc] &&
-      !this[_loc].is_base_loc &&
-      newLoc == this[_loc]
+		!newLoc.is_base_loc &&
+		this[_loc] &&
+		!this[_loc].is_base_loc &&
+		newLoc == this[_loc]
 		)
 			return;
 		var old_fine_loc = this.fine_loc;
@@ -443,9 +443,9 @@ class Atom extends EventEmitter {
 		var movement = { old: old_fine_loc, new: new_fine_loc };
 		if (
 			old_fine_loc.loc &&
-      old_fine_loc.loc.is_base_loc &&
-      new_fine_loc.loc &&
-      new_fine_loc.loc.is_base_loc
+		old_fine_loc.loc.is_base_loc &&
+		new_fine_loc.loc &&
+		new_fine_loc.loc.is_base_loc
 		) {
 			movement.offset = {};
 			movement.offset.x = new_fine_loc.x - old_fine_loc.x;
@@ -462,19 +462,19 @@ class Atom extends EventEmitter {
 		}
 		if (
 			newLoc &&
-      !newLoc.is_base_loc &&
-      this.loc &&
-      !this.loc.is_base_loc &&
-      newLoc == this.loc
+		!newLoc.is_base_loc &&
+		this.loc &&
+		!this.loc.is_base_loc &&
+		newLoc == this.loc
 		)
 			return;
 		old_fine_loc = this.fine_loc;
 		movement.old = old_fine_loc;
 		if (
 			old_fine_loc.loc &&
-      old_fine_loc.loc.is_base_loc &&
-      new_fine_loc.loc &&
-      new_fine_loc.loc.is_base_loc
+		old_fine_loc.loc.is_base_loc &&
+		new_fine_loc.loc &&
+		new_fine_loc.loc.is_base_loc
 		) {
 			movement.offset = {};
 			movement.offset.x = new_fine_loc.x - old_fine_loc.x;
@@ -491,8 +491,8 @@ class Atom extends EventEmitter {
 				if (fastPointer) fastPointer = fastPointer[_loc];
 				if (
 					(fastPointer && fastPointer == slowPointer) ||
-          fastPointer == this ||
-          slowPointer == this
+			fastPointer == this ||
+			slowPointer == this
 				)
 					throw new Error(
 						`Cycle detected when assigning the location of ${this} to ${newLoc}`
@@ -516,15 +516,15 @@ class Atom extends EventEmitter {
 				for (
 					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
 					x <
-          Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+			Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
 					x++
 				) {
 					for (
 						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(
-            	this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
-            );
+			Math.ceil(
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+			);
 						y++
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
@@ -565,15 +565,15 @@ class Atom extends EventEmitter {
 				for (
 					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
 					x <
-          Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+			Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
 					x++
 				) {
 					for (
 						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(
-            	this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
-            );
+			Math.ceil(
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+			);
 						y++
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
@@ -588,7 +588,7 @@ class Atom extends EventEmitter {
 								if (idx == -1) {
 									if (
 										!gained_crossers.includes(atom) &&
-                    !common_crossers.includes(atom)
+					!common_crossers.includes(atom)
 									)
 										gained_crossers.push(atom);
 								} else {
@@ -681,13 +681,13 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * @param {number} newX
-   * @param {number} newY
-   * @returns {Object}
-   * @property {Array<Typespess.Atom>} gained_crossers
-   * @property {Array<Typespess.Atom>} lost_crossers
-   * @property {Array<Typespess.Atom>} common_crossers
-   */
+	 * @param {number} newX
+	 * @param {number} newY
+	 * @returns {Object}
+	 * @property {Array<Typespess.Atom>} gained_crossers
+	 * @property {Array<Typespess.Atom>} lost_crossers
+	 * @property {Array<Typespess.Atom>} common_crossers
+	 */
 	test_move(newX, newY) {
 		var lost_crossers = [];
 		var gained_crossers = [];
@@ -698,15 +698,15 @@ class Atom extends EventEmitter {
 				for (
 					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
 					x <
-          Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+			Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
 					x++
 				) {
 					for (
 						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(
-            	this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
-            );
+			Math.ceil(
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+			);
 						y++
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
@@ -728,7 +728,7 @@ class Atom extends EventEmitter {
 					for (
 						let y = Math.floor(newY + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(newY + this[_bounds_y] + this[_bounds_height] - 0.00001);
+			Math.ceil(newY + this[_bounds_y] + this[_bounds_height] - 0.00001);
 						y++
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
@@ -739,7 +739,7 @@ class Atom extends EventEmitter {
 								if (idx == -1) {
 									if (
 										!gained_crossers.includes(atom) &&
-                    !common_crossers.includes(atom)
+					!common_crossers.includes(atom)
 									)
 										gained_crossers.push(atom);
 								} else {
@@ -835,14 +835,14 @@ class Atom extends EventEmitter {
 		if (newLoc === this[_loc]) return;
 		if (
 			newLoc !== null &&
-      (typeof newLoc !== "object" ||
-        (!(newLoc.contents instanceof Array) && !newLoc.is_fine_loc))
+		(typeof newLoc !== "object" ||
+		(!(newLoc.contents instanceof Array) && !newLoc.is_fine_loc))
 		)
 			throw new TypeError(
 				`New loc '${newLoc}' is not a valid location (null, object with contents list, or fine loc)`
 			);
 		if (newLoc !== null && newLoc.is_fine_loc) {
-			if (!newLoc.hasOwnProperty("x") || !newLoc.hasOwnProperty("y")) {
+			if (!Object.prototype.hasOwnProperty.call(newLoc,"x") || !newLoc.hasOwnProperty.call(newLoc,"y")) {
 				this.loc = newLoc.loc || null;
 				return;
 			}
@@ -855,10 +855,10 @@ class Atom extends EventEmitter {
 				return;
 			}
 			if (
-				(newLoc.hasOwnProperty("z") && newLoc.z !== +newLoc.z) ||
-        newLoc.x !== +newLoc.x ||
-        newLoc.y !== +newLoc.y ||
-        !newLoc.dim
+				(Object.prototype.hasOwnProperty.call(newLoc,"z") && newLoc.z !== +newLoc.z) ||
+		newLoc.x !== +newLoc.x ||
+		newLoc.y !== +newLoc.y ||
+		!newLoc.dim
 			)
 				throw new TypeError("new fine loc is invalid");
 			var newz = newLoc.z != null ? newLoc.z : this.z;
@@ -878,35 +878,33 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * The Location object up the tree.
-   * @type {Location|Null}
-   */
+	 * The Location object up the tree.
+	 * @type {Location|Null}
+	 */
 	get base_loc() {
 		// gets the Location object this belongs to
-		var a = this;
-		while (a && !a.is_base_loc) a = a.loc;
+		while (this && !this.is_base_loc) var a = this.loc;
 		return a;
 	}
 
 	/**
-   * The Atom up the tree whos loc is a Location.
-   * @type {Typespess.Atom|Null}
-   */
+	 * The Atom up the tree whos loc is a Location.
+	 * @type {Typespess.Atom|Null}
+	 */
 	get base_mover() {
 		// gets the lowest atom
-		var a = this;
-		while (a.loc && !a.loc.is_base_loc) a = a.loc;
+		while (this && !this.is_base_loc) var a = this.loc;
 		return a;
 	}
 
 	/**
-   * @type {Object}
-   * @property {number} x
-   * @property {number} y
-   * @property {number} z
-   * @property {Typespess.Atom|Location|null} loc
-   * @property {boolean} is_fine_loc=true
-   */
+	 * @type {Object}
+	 * @property {number} x
+	 * @property {number} y
+	 * @property {number} z
+	 * @property {Typespess.Atom|Location|null} loc
+	 * @property {boolean} is_fine_loc=true
+	 */
 	get fine_loc() {
 		return {
 			x: this.x,
@@ -922,9 +920,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * @type {number}
-   * @default 0
-   */
+	 * @type {number}
+	 * @default 0
+	 */
 	get bounds_x() {
 		return this[_bounds_x];
 	}
@@ -946,9 +944,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * @type {number}
-   * @default 0
-   */
+	 * @type {number}
+	 * @default 0
+	 */
 	get bounds_y() {
 		return this[_bounds_y];
 	}
@@ -970,9 +968,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * @type {number}
-   * @default 1
-   */
+	 * @type {number}
+	 * @default 1
+	 */
 	get bounds_width() {
 		return this[_bounds_width];
 	}
@@ -994,9 +992,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * @type {number}
-   * @default 1
-   */
+	 * @type {number}
+	 * @default 1
+	 */
 	get bounds_height() {
 		return this[_bounds_height];
 	}
@@ -1018,28 +1016,28 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Fired when this atom collides with another atom while doing {@link Typespess.Atom#move}
-   * @event bumped
-   * @param {Typespess.Atom} bumping
-   * @param {number} remaining_x
-   * @param {number} remaining_y
-   * @param {string} reason
-   */
+	 * Fired when this atom collides with another atom while doing {@link Typespess.Atom#move}
+	 * @event bumped
+	 * @param {Typespess.Atom} bumping
+	 * @param {number} remaining_x
+	 * @param {number} remaining_y
+	 * @param {string} reason
+	 */
 	/**
-   * Fired when another atom collides with this atom while doing {@link Typespess.Atom#move}
-   * @event bumped_by
-   * @param {Typespess.Atom} bumper
-   * @param {number} remaining_x
-   * @param {number} remaining_y
-   * @param {string} reason
-   */
+	 * Fired when another atom collides with this atom while doing {@link Typespess.Atom#move}
+	 * @event bumped_by
+	 * @param {Typespess.Atom} bumper
+	 * @param {number} remaining_x
+	 * @param {number} remaining_y
+	 * @param {string} reason
+	 */
 
 	/**
-   * Moves this atom the given amount
-   * @param {number} offsetx
-   * @param {number} offsety
-   * @param {string} reason
-   */
+	 * Moves this atom the given amount
+	 * @param {number} offsetx
+	 * @param {number} offsety
+	 * @param {string} reason
+	 */
 	move(offsetx, offsety, reason) {
 		if (!this.loc || !this.loc.is_base_loc) return false;
 		if (!this.can_move(offsetx, offsety, reason)) return false;
@@ -1058,11 +1056,11 @@ class Atom extends EventEmitter {
 		let cy = this.y;
 		for (let i = 0; i < move_splits; i++) {
 			let newx =
-        Math.round((cx + step_x) * this.movement_granularity) /
-        this.movement_granularity;
+		Math.round((cx + step_x) * this.movement_granularity) /
+		this.movement_granularity;
 			let newy =
-        Math.round((cy + step_y) * this.movement_granularity) /
-        this.movement_granularity;
+		Math.round((cy + step_y) * this.movement_granularity) /
+		this.movement_granularity;
 			let result = this.test_move(newx, newy);
 			for (let gained of result.gained_crossers) {
 				if (!this.can_cross(gained, remaining_x, remaining_y, reason)) {
@@ -1101,16 +1099,16 @@ class Atom extends EventEmitter {
 		for (
 			let i = 1;
 			i * Math.max(Math.abs(step_x), Math.abs(step_y)) >=
-      1 / this.movement_granularity / 2;
+		1 / this.movement_granularity / 2;
 			i /= 2
 		) {
 			first_bump_layer = -Infinity;
 			let newx =
-        Math.round((cx + step_x * i) * this.movement_granularity) /
-        this.movement_granularity;
+		Math.round((cx + step_x * i) * this.movement_granularity) /
+		this.movement_granularity;
 			let newy =
-        Math.round((cy + step_y * i) * this.movement_granularity) /
-        this.movement_granularity;
+		Math.round((cy + step_y * i) * this.movement_granularity) /
+		this.movement_granularity;
 			if (newx == this.x && newy == this.y) break;
 			let result = this.test_move(newx, newy);
 			clang = false;
@@ -1165,115 +1163,115 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Whether this atom can move the given amount
-   * @param {number} offsetx
-   * @param {number} offsety
-   * @param {string} reason
-   * @abstract
-   */
+	 * Whether this atom can move the given amount
+	 * @param {number} offsetx
+	 * @param {number} offsety
+	 * @param {string} reason
+	 * @abstract
+	 */
 	can_move() {
 		return true;
 	}
 
 	/**
-   * Whether this atom can cross the given atom. Calls {@link Typespess.Atom.can_be_crossed} crosser by default
-   * @param {Typespess.Atom} crossing
-   * @param {number} offsetx
-   * @param {number} offsety
-   * @param {string} reason
-   * @abstract
-   */
+	 * Whether this atom can cross the given atom. Calls {@link Typespess.Atom.can_be_crossed} crosser by default
+	 * @param {Typespess.Atom} crossing
+	 * @param {number} offsetx
+	 * @param {number} offsety
+	 * @param {string} reason
+	 * @abstract
+	 */
 	can_cross(crossing, offsetx, offsety, reason) {
 		return crossing.can_be_crossed(this, offsetx, offsety, reason);
 	}
 
 	/**
-   * Whether this atom can cross the given atom. Calls {@link Typespess.Atom.can_be_uncrossed} on the uncrosser by default
-   * @param {Typespess.Atom} uncrossing
-   * @param {number} offsetx
-   * @param {number} offsety
-   * @param {string} reason
-   * @abstract
-   */
+	 * Whether this atom can cross the given atom. Calls {@link Typespess.Atom.can_be_uncrossed} on the uncrosser by default
+	 * @param {Typespess.Atom} uncrossing
+	 * @param {number} offsetx
+	 * @param {number} offsety
+	 * @param {string} reason
+	 * @abstract
+	 */
 	can_uncross(uncrossing, offsetx, offsety, reason) {
 		return uncrossing.can_be_uncrossed(this, offsetx, offsety, reason);
 	}
 
 	/**
-   * Whether this atom can move while crossing the given atom. Calls {@link Typespess.Atom.can_crosser_move_within} on the atom moving within by default
-   * @param {Typespess.Atom} atom
-   * @param {number} offsetx
-   * @param {number} offsety
-   * @param {string} reason
-   */
+	 * Whether this atom can move while crossing the given atom. Calls {@link Typespess.Atom.can_crosser_move_within} on the atom moving within by default
+	 * @param {Typespess.Atom} atom
+	 * @param {number} offsetx
+	 * @param {number} offsety
+	 * @param {string} reason
+	 */
 	can_move_within(atom, offsetx, offsety, reason) {
 		return atom.can_crosser_move_within(atom, offsetx, offsety, reason);
 	}
 
 	/**
-   * Whether this atom can be crossed by the given atom. By default performs checks using the densities and the pass flags
-   * @param {Typespess.Atom} crosser
-   * @param {number} offsetx
-   * @param {number} offsety
-   * @param {string} reason
-   * @abstract
-   */
+	 * Whether this atom can be crossed by the given atom. By default performs checks using the densities and the pass flags
+	 * @param {Typespess.Atom} crosser
+	 * @param {number} offsetx
+	 * @param {number} offsety
+	 * @param {string} reason
+	 * @abstract
+	 */
 	can_be_crossed(crosser) {
 		if (this.let_pass_flags & crosser.pass_flags) return true;
 		return crosser.density < 0 || this.density <= 0;
 	}
 
 	/**
-   * Whether this atom can be uncrossed by the given atom.
-   * @param {Typespess.Atom} uncrosser
-   * @param {number} offsetx
-   * @param {number} offsety
-   * @param {string} reason
-   * @abstract
-   */
+	 * Whether this atom can be uncrossed by the given atom.
+	 * @param {Typespess.Atom} uncrosser
+	 * @param {number} offsetx
+	 * @param {number} offsety
+	 * @param {string} reason
+	 * @abstract
+	 */
 	can_be_uncrossed() {
 		return true;
 	}
 
 	/**
-   * Whether this atom allows the given atom to move while crossing this one.
-   * @param {Typespess.Atom} atom
-   * @param {number} offsetx
-   * @param {number} offsety
-   * @param {string} reason
-   * @abstract
-   */
+	 * Whether this atom allows the given atom to move while crossing this one.
+	 * @param {Typespess.Atom} atom
+	 * @param {number} offsetx
+	 * @param {number} offsety
+	 * @param {string} reason
+	 * @abstract
+	 */
 	can_crosser_move_within() {
 		return true;
 	}
 
 	/**
-   * Checks if this atom encloses the given location.
-   * @param {Location} tile
-   * @returns {boolean}
-   */
+	 * Checks if this atom encloses the given location.
+	 * @param {Location} tile
+	 * @returns {boolean}
+	 */
 	does_enclose_tile(tile) {
 		if (
 			!tile.is_base_loc ||
-      !this[_loc] ||
-      !this[_loc].is_base_loc ||
-      this[_z] != tile.z
+		!this[_loc] ||
+		!this[_loc].is_base_loc ||
+		this[_z] != tile.z
 		)
 			return false;
 		return (
 			this[_x] + this[_bounds_x] - 0.00001 <= tile.x &&
-      this[_y] + this[_bounds_y] - 0.00001 <= tile.y &&
-      this[_x] + this[_bounds_x] + this[_bounds_width] + 0.00001 >=
-        tile.x + 1 &&
-      this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001 >= tile.y + 1
+		this[_y] + this[_bounds_y] - 0.00001 <= tile.y &&
+		this[_x] + this[_bounds_x] + this[_bounds_width] + 0.00001 >=
+		tile.x + 1 &&
+		this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001 >= tile.y + 1
 		);
 	}
 
 	/**
-   * Checks if this atom crosses the target atom
-   * @param {Typespess.Atom} atom
-   * @param {Object} overrides Overrides for the location and bounding box parameters to use for this atom
-   */
+	 * Checks if this atom crosses the target atom
+	 * @param {Typespess.Atom} atom
+	 * @param {Object} overrides Overrides for the location and bounding box parameters to use for this atom
+	 */
 	does_cross(
 		atom,
 		{
@@ -1288,20 +1286,20 @@ class Atom extends EventEmitter {
 	) {
 		if (
 			atom[_x] == +atom[_x] &&
-      atom[_y] == +atom[_y] &&
-      atom[_z] == z &&
-      this[_loc] &&
-      atom[_loc] &&
-      this[_loc].is_base_loc &&
-      atom[_loc].is_base_loc
+		atom[_y] == +atom[_y] &&
+		atom[_z] == z &&
+		this[_loc] &&
+		atom[_loc] &&
+		this[_loc].is_base_loc &&
+		atom[_loc].is_base_loc
 		) {
 			return (
 				x + bounds_x + bounds_width - 0.00001 > atom[_x] + atom[_bounds_x] &&
-        x + bounds_x + 0.00001 <
-          atom[_x] + atom[_bounds_x] + atom[_bounds_width] &&
-        y + bounds_y + bounds_height - 0.00001 > atom[_y] + atom[_bounds_y] &&
-        y + bounds_y + 0.00001 <
-          atom[_y] + atom[_bounds_y] + atom[_bounds_height]
+		x + bounds_x + 0.00001 <
+			atom[_x] + atom[_bounds_x] + atom[_bounds_width] &&
+		y + bounds_y + bounds_height - 0.00001 > atom[_y] + atom[_bounds_y] &&
+		y + bounds_y + 0.00001 <
+			atom[_y] + atom[_bounds_y] + atom[_bounds_height]
 			);
 		}
 	}
@@ -1309,12 +1307,12 @@ class Atom extends EventEmitter {
 	// WALKING
 
 	/**
-   * Whether this atom should walk.
-   * This calls {@link Typespess.Atom.move}. It automatically sets {@link Typespess.Atom.glide_size} to the correct value
-   * to ensure that the movement does not appear jerky. The {@link Typespess.Atom.walk_delay} property can be updated
-   * in an overrided {@link Typespess.Atom.move} and it will still look correct.
-   * @type {boolean}
-   */
+	 * Whether this atom should walk.
+	 * This calls {@link Typespess.Atom.move}. It automatically sets {@link Typespess.Atom.glide_size} to the correct value
+	 * to ensure that the movement does not appear jerky. The {@link Typespess.Atom.walk_delay} property can be updated
+	 * in an overrided {@link Typespess.Atom.move} and it will still look correct.
+	 * @type {boolean}
+	 */
 	get walking() {
 		return this[_walking];
 	}
@@ -1345,9 +1343,9 @@ class Atom extends EventEmitter {
 	// main appearance
 
 	/**
-   * The path to the icon file of this atom
-   * @type {string}
-   */
+	 * The path to the icon file of this atom
+	 * @type {string}
+	 */
 	get icon() {
 		return this[_icon];
 	}
@@ -1357,9 +1355,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * The icon to pick from the icon file
-   * @type {string}
-   */
+	 * The icon to pick from the icon file
+	 * @type {string}
+	 */
 	get icon_state() {
 		return this[_icon_state];
 	}
@@ -1369,9 +1367,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * The direction this atom points
-   * @type {number}
-   */
+	 * The direction this atom points
+	 * @type {number}
+	 */
 	get dir() {
 		return this[_dir];
 	}
@@ -1384,9 +1382,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * The layer this atom is on. Used to control which atoms show up above which other atoms.
-   * @type {number}
-   */
+	 * The layer this atom is on. Used to control which atoms show up above which other atoms.
+	 * @type {number}
+	 */
 	get layer() {
 		return this[_layer];
 	}
@@ -1396,8 +1394,8 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * @type {string}
-   */
+	 * @type {string}
+	 */
 	get name() {
 		return this[_name];
 	}
@@ -1408,9 +1406,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * How fast this atom's position is interpolated on the client, in tiles per second
-   * @type {number}
-   */
+	 * How fast this atom's position is interpolated on the client, in tiles per second
+	 * @type {number}
+	 */
 	get glide_size() {
 		return this[_glide_size];
 	}
@@ -1420,9 +1418,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Overrides the x position on the screen of this atom. Used for hud elements.
-   * @type {number|null}
-   */
+	 * Overrides the x position on the screen of this atom. Used for hud elements.
+	 * @type {number|null}
+	 */
 	get screen_loc_x() {
 		return this[_screen_loc_x];
 	}
@@ -1433,9 +1431,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Overrides the y position on the screen of this atom. Used for hud elements.
-   * @type {number|null}
-   */
+	 * Overrides the y position on the screen of this atom. Used for hud elements.
+	 * @type {number|null}
+	 */
 	get screen_loc_y() {
 		return this[_screen_loc_y];
 	}
@@ -1446,9 +1444,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Controls how this atom responds to mouse events. 2 means use the whole bounding box, 1 means where the icon has a nonzero alpha, and 0 means never receive mouse events.
-   * @type {number}
-   */
+	 * Controls how this atom responds to mouse events. 2 means use the whole bounding box, 1 means where the icon has a nonzero alpha, and 0 means never receive mouse events.
+	 * @type {number}
+	 */
 	get mouse_opacity() {
 		return this[_mouse_opacity];
 	}
@@ -1459,9 +1457,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * The color of this, in CSS color format.
-   * @type {string|null}
-   */
+	 * The color of this, in CSS color format.
+	 * @type {string|null}
+	 */
 	get color() {
 		return this[_color];
 	}
@@ -1472,9 +1470,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * The transparency of this atom.
-   * @type {number|null}
-   */
+	 * The transparency of this atom.
+	 * @type {number|null}
+	 */
 	get alpha() {
 		return this[_alpha];
 	}
@@ -1485,9 +1483,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Whether this atom gets sent to clients or not.
-   * @type {boolean}
-   */
+	 * Whether this atom gets sent to clients or not.
+	 * @type {boolean}
+	 */
 	get visible() {
 		return this[_visible];
 	}
@@ -1499,15 +1497,15 @@ class Atom extends EventEmitter {
 				for (
 					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
 					x <
-          Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+			Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
 					x++
 				) {
 					for (
 						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 						y <
-            Math.ceil(
-            	this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
-            );
+			Math.ceil(
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+			);
 						y++
 					) {
 						let thisloc = this.dim.location(x, y, this[_z]);
@@ -1523,14 +1521,14 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * A temporary animation that is shown on this atom.
-   * @type {Object}
-   * @property {string} [icon] {@link Typespess.Atom#icon}
-   * @property {string} [icon_state] {@link Typespess.Atom#icon_state}
-   * @property {number} [dir] {@link Typespess.Atom#dir}
-   * @property {Object} [overlays] {@link Typespess.Atom#overlays}
-   * @property {number} [time_begin]
-   */
+	 * A temporary animation that is shown on this atom.
+	 * @type {Object}
+	 * @property {string} [icon] {@link Typespess.Atom#icon}
+	 * @property {string} [icon_state] {@link Typespess.Atom#icon_state}
+	 * @property {number} [dir] {@link Typespess.Atom#dir}
+	 * @property {Object} [overlays] {@link Typespess.Atom#overlays}
+	 * @property {number} [time_begin]
+	 */
 	get flick() {
 		return this[_flick];
 	}
@@ -1547,9 +1545,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Whether this atom blocks visibility.
-   * @type {boolean}
-   */
+	 * Whether this atom blocks visibility.
+	 * @type {boolean}
+	 */
 	get opacity() {
 		return this[_opacity];
 	}
@@ -1587,19 +1585,19 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Returns an iterator with the atoms this atom is intersecting.
-   * @generator
-   * @yields {Typespess.Atom}
-   */
+	 * Returns an iterator with the atoms this atom is intersecting.
+	 * @generator
+	 * @yields {Typespess.Atom}
+	 */
 	crosses() {
 		return this[_crosses][Symbol.iterator]();
 	}
 
 	/**
-   * Returns an iterator with all the Locations this intersects
-   * @generator
-   * @yields {Location}
-   */
+	 * Returns an iterator with all the Locations this intersects
+	 * @generator
+	 * @yields {Location}
+	 */
 	partial_locs(base_only = true) {
 		if (!this.loc || !this.loc.is_base_loc) return base_only ? [] : [this.loc];
 		let locs = [];
@@ -1611,7 +1609,7 @@ class Atom extends EventEmitter {
 			for (
 				let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
 				y <
-        Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001);
+		Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001);
 				y++
 			) {
 				locs.push(this.dim.location(x, y, this[_z]));
@@ -1621,10 +1619,10 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Returns an iterator with all the Locations this intersects, even by an edge.
-   * @generator
-   * @yields {Location}
-   */
+	 * Returns an iterator with all the Locations this intersects, even by an edge.
+	 * @generator
+	 * @yields {Location}
+	 */
 	marginal_locs(base_only = true) {
 		if (!this.loc || !this.loc.is_base_loc) return base_only ? [] : [this.loc];
 		let locs = [];
@@ -1636,7 +1634,7 @@ class Atom extends EventEmitter {
 			for (
 				let y = Math.floor(this[_y] + this[_bounds_y] - 0.00001);
 				y <
-        Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001);
+		Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001);
 				y++
 			) {
 				locs.push(this.dim.location(x, y, this[_z]));
@@ -1646,9 +1644,9 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * @generator
-   * @yields {Typespess.Atom}
-   */
+	 * @generator
+	 * @yields {Typespess.Atom}
+	 */
 	*recursive_contents() {
 		for (var item of this.contents) {
 			yield item;
@@ -1715,8 +1713,8 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-   * Deletes this object from the world.
-   */
+	 * Deletes this object from the world.
+	 */
 	destroy() {
 		this.destroyed = true;
 		for (var component of Object.values(this.c)) {
