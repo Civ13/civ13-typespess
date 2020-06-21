@@ -104,7 +104,6 @@ class MobInteract extends Component {
 				x: e.world_x - 0.5,
 				y: e.world_y - 0.5,
 				z: this.a.z,
-				dim: this.a.dim,
 				is_fine_loc: true,
 				loc: this.a.dim.location(
 					Math.floor(e.world_x),
@@ -146,10 +145,6 @@ class MobInteract extends Component {
 		this.change_next_move(mob_defines.CLICK_CD_RESIST);
 		this.resist_act();
 	}
-
-	resist_act() {}
-
-	ranged_attack() {}
 }
 
 MobInteract.template = {

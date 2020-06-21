@@ -110,6 +110,7 @@ server.importModule(require("./code/game/objects/structures/rack.js"));
 server.importModule(require("./code/game/objects/structures/table_frames.js"));
 server.importModule(require("./code/game/objects/structures/table.js"));
 server.importModule(require("./code/game/objects/structures/window.js"));
+server.importModule(require("./code/game/objects/structures/wild.js"));
 server.importModule(require("./code/game/objects/buckling.js"));
 server.importModule(require("./code/game/objects/destructible.js"));
 server.importModule(require("./code/game/objects/items.js"));
