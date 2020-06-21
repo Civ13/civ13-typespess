@@ -145,6 +145,10 @@ class MobInteract extends Component {
 		this.change_next_move(mob_defines.CLICK_CD_RESIST);
 		this.resist_act();
 	}
+
+	resist_act() {return;}
+
+	ranged_attack() {return;}
 }
 
 MobInteract.template = {
