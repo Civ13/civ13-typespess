@@ -18,8 +18,8 @@ class ProgressBar extends Component {
 	update_offset(timestamp) {
 		if (
 			this.target_offset_y &&
-      this.target_offset_y < this.offset_y &&
-      this.last_timestamp
+	this.target_offset_y < this.offset_y &&
+	this.last_timestamp
 		) {
 			this.offset_y = Math.max(
 				this.target_offset_y,
@@ -34,7 +34,7 @@ class ProgressBar extends Component {
 			if (!this.attached_atom[_progress_bars])
 				this.attached_atom[_progress_bars] = [];
 			this.target_offset_y =
-        1 + PROGRESSBAR_HEIGHT * this.attached_atom[_progress_bars].length;
+		1 + PROGRESSBAR_HEIGHT * this.attached_atom[_progress_bars].length;
 			if (this.attached_atom[_progress_bars].length) {
 				var prev_bar = this.attached_atom[_progress_bars][
 					this.attached_atom[_progress_bars].length - 1
@@ -68,8 +68,8 @@ class ProgressBar extends Component {
 	on_render_tick(prev, timestamp) {
 		this.update_offset(timestamp);
 		var percentage =
-      (timestamp - (this.time_begin + this.atom.client.server_time_to_client)) /
-      this.delay;
+	(timestamp - (this.time_begin + this.atom.client.server_time_to_client)) /
+	this.delay;
 		this.atom.icon_state = `prog_bar_${
 			Math.max(0, Math.min(20, Math.round(percentage * 20))) * 5
 		}`;

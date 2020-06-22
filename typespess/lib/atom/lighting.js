@@ -103,18 +103,18 @@ class LightSource extends Component {
 				if (!this[_lighting_object]) return;
 				if (
 					!this[_enabled] ||
-          !this.a.loc ||
-          (!this.a.loc.is_base_loc &&
-            (!this.a.loc.loc || !this.a.loc.loc.is_base_loc))
+		!this.a.loc ||
+		(!this.a.loc.is_base_loc &&
+			(!this.a.loc.loc || !this.a.loc.loc.is_base_loc))
 				) {
 					this[_lighting_object].loc = null;
 					this[_lighting_object].c.LightingObject.enabled = false;
 					return;
 				}
 				this[_lighting_object].glide_size =
-          this.a.base_mover == this.last_base_mover
-          	? this.a.base_mover.glide_size
-          	: 0;
+		this.a.base_mover == this.last_base_mover
+			? this.a.base_mover.glide_size
+			: 0;
 				this[_lighting_object].fine_loc = this.a.base_mover.fine_loc;
 				this[_lighting_object].c.LightingObject.enabled = true;
 				this[_lighting_object].c.LightingObject.color = this[_color];
@@ -126,9 +126,9 @@ class LightSource extends Component {
 		});
 	}
 	/**
-   * @type {boolean}
-   * @default false
-   */
+  * @type {boolean}
+  * @default false
+  */
 	get enabled() {
 		return this[_enabled];
 	}
@@ -141,10 +141,10 @@ class LightSource extends Component {
 	}
 
 	/**
-   * CSS color of the light
-   * @type {string}
-   * @default "#FFFFFF"
-   */
+  * CSS color of the light
+  * @type {string}
+  * @default "#FFFFFF"
+  */
 	get color() {
 		return this[_color];
 	}
@@ -157,10 +157,10 @@ class LightSource extends Component {
 	}
 
 	/**
-   * How many tiles away this emits light
-   * @type {number}
-   * @default 2
-   */
+  * How many tiles away this emits light
+  * @type {number}
+  * @default 2
+  */
 	get radius() {
 		return this[_radius];
 	}

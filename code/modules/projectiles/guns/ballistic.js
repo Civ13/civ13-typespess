@@ -62,9 +62,9 @@ class BallisticGun extends Component {
 	attack_by(prev, item, user) {
 		if (
 			has_component(item, "GunMagazine") &&
-      !has_component(item, "InternalMagazine") &&
-      this.mag_caliber == item.c.AmmoBox.caliber &&
-      this.mag_form_factor == item.c.AmmoBox.form_factor
+	!has_component(item, "InternalMagazine") &&
+	this.mag_caliber == item.c.AmmoBox.caliber &&
+	this.mag_form_factor == item.c.AmmoBox.form_factor
 		) {
 			if (this.magazine && !this.tactical_reloads) {
 				to_chat`<span class='notice'>There's already a magazine in the ${this.a}.</span>`(

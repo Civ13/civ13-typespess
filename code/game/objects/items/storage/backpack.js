@@ -13,9 +13,9 @@ module.exports.templates = {
 				Item: {
 					inhand_icon_state: "backpack",
 					inhand_lhand_icon:
-            "icons/mob/inhands/equipment/backpack_lefthand.png",
+			"icons/mob/inhands/equipment/backpack_lefthand.png",
 					inhand_rhand_icon:
-            "icons/mob/inhands/equipment/backpack_righthand.png",
+			"icons/mob/inhands/equipment/backpack_righthand.png",
 					size: 4,
 				},
 			},
@@ -33,7 +33,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's useful for both carrying extra gear and proudly declaring your insanity.",
+			"It's useful for both carrying extra gear and proudly declaring your insanity.",
 				},
 			},
 			name: "trophy rack",
@@ -98,7 +98,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's a backpack especially designed for use in a sterile environment.",
+			"It's a backpack especially designed for use in a sterile environment.",
 				},
 			},
 			name: "medical backpack",
@@ -131,7 +131,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "It's a special backpack made exclusively for Nanotrasen officers.",
+			"It's a special backpack made exclusively for Nanotrasen officers.",
 				},
 			},
 			name: "captain's backpack",
@@ -182,7 +182,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A backpack specially designed to repel stains and hazardous liquids.",
+			"A backpack specially designed to repel stains and hazardous liquids.",
 				},
 			},
 			name: "chemistry backpack",
@@ -199,7 +199,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A bag designed to be super tough, just in case someone hulks out on you.",
+			"A bag designed to be super tough, just in case someone hulks out on you.",
 				},
 			},
 			name: "genetics backpack",
@@ -216,7 +216,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A specially designed backpack. It's fire resistant and smells vaguely of plasma.",
+			"A specially designed backpack. It's fire resistant and smells vaguely of plasma.",
 				},
 			},
 			name: "science backpack",
@@ -234,7 +234,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A backpack made of hypo-allergenic fibers. It's designed to help prevent the spread of disease. Smells like monkey.",
+			"A backpack made of hypo-allergenic fibers. It's designed to help prevent the spread of disease. Smells like monkey.",
 				},
 			},
 			name: "virology backpack",

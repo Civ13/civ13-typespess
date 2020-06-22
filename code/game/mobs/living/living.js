@@ -137,13 +137,13 @@ class LivingMob extends Component {
 		this.emit("stat_changed", oldstat, val);
 		if (
 			val >= combat_defines.UNCONSCIOUS &&
-      oldstat < combat_defines.UNCONSCIOUS
+	oldstat < combat_defines.UNCONSCIOUS
 		) {
 			this.nomove_counter++;
 			this.a.c.MobInteract.nointeract_counter++;
 		} else if (
 			val < combat_defines.UNCONSCIOUS &&
-      oldstat >= combat_defines.UNCONSCIOUS
+	oldstat >= combat_defines.UNCONSCIOUS
 		) {
 			this.nomove_counter--;
 			this.a.c.MobInteract.nointeract_counter--;
@@ -159,15 +159,15 @@ class LivingMob extends Component {
 	get in_crit() {
 		return (
 			this.health <= combat_defines.HEALTH_THRESHOLD_CRIT &&
-      (this.stat == combat_defines.SOFT_CRIT ||
-        this.stat == combat_defines.UNCONSCIOUS)
+	(this.stat == combat_defines.SOFT_CRIT ||
+		this.stat == combat_defines.UNCONSCIOUS)
 		);
 	}
 
 	get in_full_crit() {
 		return (
 			this.health <= combat_defines.HEALTH_THRESHOLD_FULLCRIT &&
-      this.stat == combat_defines.UNCONSCIOUS
+	this.stat == combat_defines.UNCONSCIOUS
 		);
 	}
 
@@ -175,7 +175,7 @@ class LivingMob extends Component {
 		this.update_stat();
 	}
 
-	update_stat() {}
+	update_stat() {return;}
 
 	//DAMAGE
 	apply_damage(
@@ -207,7 +207,7 @@ class LivingMob extends Component {
 			this.life_timeout = setTimeout(this.run_life.bind(this), 2000);
 	}
 
-	life() {}
+	life() {return;}
 
 	movement_delay() {
 		if (this.a.c.MobInteract.move_mode == mob_defines.MOVE_INTENT_WALK) {
@@ -217,7 +217,7 @@ class LivingMob extends Component {
 		}
 	}
 
-	client_changed(old_client, new_client) {
+	client_changed(new_client) {
 		if (new_client) {
 			if (!this.mind) {
 				let mind = new Mind(new_client.key);
@@ -275,8 +275,8 @@ class LivingMob extends Component {
 	can_interact_with_panel(target) {
 		return (
 			target.z == this.a.z &&
-      target.dim == this.a.dim &&
-      Math.max(Math.abs(target.x - this.a.x), Math.abs(target.y - this.a.y)) < 1
+	target.dim == this.a.dim &&
+	Math.max(Math.abs(target.x - this.a.x), Math.abs(target.y - this.a.y)) < 1
 		);
 	}
 
@@ -289,11 +289,11 @@ class LivingMob extends Component {
 		prev();
 	}
 
-	can_be_crossed(prev, mover, dx, dy, reason) {
+	can_be_crossed(prev, mover, reason) {
 		if (
 			(mover.density < 1 || this.a.density < 1) &&
-      reason != "throw" &&
-      reason != "projectile"
+	reason != "throw" &&
+	reason != "projectile"
 		)
 			return true;
 		return prev();
@@ -330,9 +330,9 @@ class LivingMob extends Component {
 		else return;
 		if (item.c.Tangible.throw_force > 0) {
 			let sound =
-        item.c.Tangible.throwhitsound ||
-        item.c.Item.hitsound ||
-        "sound/weapons/genhit.ogg";
+		item.c.Tangible.throwhitsound ||
+		item.c.Item.hitsound ||
+		"sound/weapons/genhit.ogg";
 			if (!item.c.Tangible.throw_force) sound = "sound/weapons/throwtap.ogg";
 			new Sound(this.a.server, { path: sound, volume, vary: true }).emit_from(
 				this.a
@@ -349,13 +349,13 @@ class LivingMob extends Component {
 		);
 	}
 
-	add_splatter_floor(/*{turf, small_drip = false} = {}*/) {}
+	add_splatter_floor(/*{turf, small_drip = false} = {}*/) {return;}
 
 	attacked_by(item, user) {
 		let zone = random_zone(user.c.MobInteract.zone_sel);
 		let bp =
-      has_component(this.a, "MobBodyParts") &&
-      (this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.chest);
+	has_component(this.a, "MobBodyParts") &&
+	(this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.chest);
 		this.send_item_attack_message(item, user, bp && bp.name);
 		if (item.c.Item.force) {
 			this.apply_damage(item.c.Item.force, item.c.Item.damage_type, zone);
@@ -441,7 +441,7 @@ class LivingMob extends Component {
 		if (has_component(atom, "Tangible")) {
 			if (
 				has_component(atom, "LivingMob") &&
-        this.mob_collide(atom, offsetx, offsety)
+		this.mob_collide(atom)
 			)
 				return;
 			if (!atom.c.Tangible.anchored) {
@@ -453,7 +453,7 @@ class LivingMob extends Component {
 			}
 		}
 	}
-	mob_collide(atom, offsetx, offsety) {
+	mob_collide(atom) {
 		if (this.now_pushing) return true;
 		if (!atom.c.LivingMob.buckled) {
 			let mob_swap = false;
@@ -465,8 +465,8 @@ class LivingMob extends Component {
 				: "harm";
 			if (
 				has_component(this.a, "Puller") &&
-        this.a.c.Puller.pulling == atom &&
-        this_intent == "grab"
+		this.a.c.Puller.pulling == atom &&
+		this_intent == "grab"
 			)
 				mob_swap = true;
 			else if (this_intent == "help" || other_intent == "help") mob_swap = true;
@@ -487,7 +487,7 @@ class LivingMob extends Component {
 				atom.glide_size = this.a.glide_size;
 				if (
 					!atom.move(-dx, -dy, "push_swap") ||
-          !this.a.move(dx, dy, "push_swap")
+		!this.a.move(dx, dy, "push_swap")
 				) {
 					move_failed = true;
 					this.a.loc = oldloc;
@@ -530,10 +530,10 @@ LivingMob.template = {
 		components: {
 			LivingMob: {
 				status_flags:
-          combat_defines.CANSTUN |
-          combat_defines.CANWEAKEN |
-          combat_defines.CANPARALYSE |
-          combat_defines.CANPUSH,
+		combat_defines.CANSTUN |
+		combat_defines.CANWEAKEN |
+		combat_defines.CANPARALYSE |
+		combat_defines.CANPUSH,
 				max_health: 100,
 				stat: combat_defines.CONSCIOUS,
 				nomove_counter: 0,

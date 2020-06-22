@@ -20,8 +20,8 @@ class AdminPanel extends Panel {
 			let tool = admin_tools[msg.button_tool];
 			if (
 				tool &&
-        this.client.holder &&
-        this.client.holder.has_permission(tool.perm_required)
+		this.client.holder &&
+		this.client.holder.has_permission(tool.perm_required)
 			) {
 				let func = tool.buttons[msg.button];
 				if (func) func(this.client);
@@ -34,7 +34,7 @@ class AdminPanel extends Panel {
 		for (let [key, tool] of Object.entries(admin_tools)) {
 			if (
 				!this.client.holder ||
-        !this.client.holder.has_permission(tool.perm_required)
+		!this.client.holder.has_permission(tool.perm_required)
 			)
 				continue;
 			tools[key] = {

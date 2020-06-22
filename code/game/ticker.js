@@ -35,7 +35,7 @@ class GameTicker extends EventEmitter {
 		setInterval(this.tick.bind(this), 2000);
 		if (this.total_players)
 			this.start_at =
-        this.server.now() + 3 * 1000;
+		this.server.now() + 3 * 1000;
 	}
 	tick() {
 		if (this.busy) return;
@@ -53,8 +53,8 @@ class GameTicker extends EventEmitter {
 								this.busy = false;
 								if (this.total_players)
 									this.start_at =
-                    this.server.now() +
-                    3 * 1000;
+					this.server.now() +
+					3 * 1000;
 								else this.start_at = null;
 							}
 						},
@@ -77,8 +77,8 @@ class GameTicker extends EventEmitter {
 		for (let client of Object.values(this.server.clients)) {
 			if (
 				has_component(client.mob, "NewPlayer") &&
-        client.mob.c.NewPlayer.new_player_panel &&
-        client.mob.c.NewPlayer.new_player_panel.ready
+		client.mob.c.NewPlayer.new_player_panel &&
+		client.mob.c.NewPlayer.new_player_panel.ready
 			) {
 				// readied up.
 				let mind = new Mind(client.key);
@@ -109,7 +109,7 @@ class GameTicker extends EventEmitter {
 		if (from && !to) this.start_at = null;
 		if (to && !from)
 			this.start_at = this.start_at =
-        this.server.now() + 3 * 1000;
+		this.server.now() + 3 * 1000;
 	}
 /**	 send_tip_of_the_round() {
 		let tip = this.round_tip_override;

@@ -71,8 +71,8 @@ class Grille extends Component {
 				return true;
 			} else if (
 				item.c.Tool.can_use("Screwdriver", user) &&
-        ((this.a.base_loc && this.a.base_loc.turf) ||
-          !this.a.c.Tangible.anchored)
+		((this.a.base_loc && this.a.base_loc.turf) ||
+		!this.a.c.Tangible.anchored)
 			) {
 				item.c.Tool.used("Screwdriver");
 				this.a.c.Tangible.anchored = !this.a.c.Tangible.anchored;

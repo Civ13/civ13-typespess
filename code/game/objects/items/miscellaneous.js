@@ -7,9 +7,9 @@ module.exports.templates = {
 			components: {
 				Item: {
 					inhand_lhand_icon:
-            "icons/mob/inhands/equipment/custodial_lefthand.png",
+			"icons/mob/inhands/equipment/custodial_lefthand.png",
 					inhand_rhand_icon:
-            "icons/mob/inhands/equipment/custodial_righthand.png",
+			"icons/mob/inhands/equipment/custodial_righthand.png",
 					size: 2,
 					force: 1,
 					attack_verb: ["warned", "cautioned", "smashed"],

@@ -30,7 +30,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A tactical security jumpsuit for officers complete with Nanotrasen belt buckle.",
+			"A tactical security jumpsuit for officers complete with Nanotrasen belt buckle.",
 				},
 			},
 			name: "security jumpsuit",
@@ -67,7 +67,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A tactical relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood.",
+			"A tactical relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood.",
 				},
 			},
 			name: "grey security jumpsuit",
@@ -142,7 +142,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A formal security suit for officers complete with Nanotrasen belt buckle.",
+			"A formal security suit for officers complete with Nanotrasen belt buckle.",
 				},
 			},
 			name: "security suit",
@@ -179,7 +179,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A formal relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood.",
+			"A formal relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood.",
 				},
 			},
 			name: "grey security suit",
@@ -216,7 +216,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "The insignia on this uniform tells you that this uniform belongs to the Warden.",
+			"The insignia on this uniform tells you that this uniform belongs to the Warden.",
 				},
 			},
 			name: "warden's formal uniform",
@@ -329,7 +329,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A security jumpsuit decorated for those few with the dedication to achieve the position of Head of Security.",
+			"A security jumpsuit decorated for those few with the dedication to achieve the position of Head of Security.",
 				},
 			},
 			name: "head of security's jumpsuit",
@@ -366,7 +366,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "There are old men, and there are bold men, but there are very few old, bold men.",
+			"There are old men, and there are bold men, but there are very few old, bold men.",
 				},
 			},
 			name: "head of security's grey jumpsuit",
@@ -403,7 +403,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "The insignia on this uniform tells you that this uniform belongs to the Head of Security.",
+			"The insignia on this uniform tells you that this uniform belongs to the Head of Security.",
 				},
 			},
 			name: "head of security's formal uniform",
@@ -440,7 +440,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A stylish alternative to the normal head of security jumpsuit, complete with tactical pants.",
+			"A stylish alternative to the normal head of security jumpsuit, complete with tactical pants.",
 				},
 			},
 			name: "head of security's turtleneck",

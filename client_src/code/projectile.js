@@ -19,7 +19,7 @@ class Projectile extends Component {
 
 	get_displacement(prev, timestamp) {
 		let dt =
-      timestamp - this.a.client.server_time_to_client - this.last_process;
+	timestamp - this.a.client.server_time_to_client - this.last_process;
 		let dispx = this.a.x;
 		let dispy = this.a.y;
 		let dist_to_move = (this.speed * dt) / 1000;

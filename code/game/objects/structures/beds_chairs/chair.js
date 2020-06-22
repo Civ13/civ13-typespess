@@ -22,8 +22,8 @@ class Chair extends Component {
 	deconstruct(prev) {
 		if (
 			!this.a.c.Destructible.no_deconstruct &&
-      this.a.base_loc &&
-      this.stack_type
+	this.a.base_loc &&
+	this.stack_type
 		) {
 			let stack = new Atom(this.a.server, this.stack_type);
 			stack.c.Stack.amount = this.stack_amount;

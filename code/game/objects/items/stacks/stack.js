@@ -83,9 +83,9 @@ class Stack extends Component {
 		// merge into S, as much as possible
 		if (
 			!has_component(S, "Stack") ||
-      S.destroyed ||
-      this.a.destroyed ||
-      S == this.a
+	S.destroyed ||
+	this.a.destroyed ||
+	S == this.a
 		)
 			return;
 		var transfer = Math.min(
@@ -119,9 +119,9 @@ class Stack extends Component {
 		let slot = this.a.c.Item.slot;
 		if (
 			slot &&
-      slot.mob == user &&
-      slot.props.is_hand_slot &&
-      user.c.MobInventory.active_hand != slot
+	slot.mob == user &&
+	slot.props.is_hand_slot &&
+	user.c.MobInventory.active_hand != slot
 		) {
 			return this.split(user, 1);
 		} else {
@@ -132,9 +132,9 @@ class Stack extends Component {
 	attack_self(prev, user) {
 		if (
 			!this.recipes ||
-      !this.recipes.length ||
-      user.c.Mob.get_panel(this.a, StackCraftPanel) ||
-      !user.c.Mob.can_read_panel(this.a, StackCraftPanel)
+	!this.recipes.length ||
+	user.c.Mob.get_panel(this.a, StackCraftPanel) ||
+	!user.c.Mob.can_read_panel(this.a, StackCraftPanel)
 		) {
 			return prev();
 		}
@@ -164,8 +164,8 @@ class Stack extends Component {
 	crossed_by(target) {
 		if (
 			this.merge_type &&
-      has_component(target, this.merge_type) &&
-      !target.c.Tangible.throwing
+	has_component(target, this.merge_type) &&
+	!target.c.Tangible.throwing
 		) {
 			process.nextTick(() => this.merge(target));
 		}

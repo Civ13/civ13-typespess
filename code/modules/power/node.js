@@ -55,14 +55,14 @@ class PowerNode extends Component {
 		for (let crosser of this.a.crosses()) {
 			if (
 				has_component(crosser, "Cable") &&
-        crosser.c.Cable.d1 == 0 &&
-        crosser.c.Cable.powernet &&
-        crosser.crosses(this.a, {
-        	bounds_x: 0.5,
-        	bounds_y: 0.5,
-        	bounds_width: 0,
-        	bounds_height: 0,
-        })
+		crosser.c.Cable.d1 == 0 &&
+		crosser.c.Cable.powernet &&
+		crosser.crosses(this.a, {
+			bounds_x: 0.5,
+			bounds_y: 0.5,
+			bounds_width: 0,
+			bounds_height: 0,
+		})
 			) {
 				// Yes, we've got it!
 				this.cable = crosser;

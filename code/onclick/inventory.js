@@ -440,8 +440,8 @@ class MobInventory extends Component {
 	set active_hand(value) {
 		if (
 			typeof value != "string" ||
-      !this[_slots][value] ||
-      !this[_slots][value].props.is_hand_slot
+	!this[_slots][value] ||
+	!this[_slots][value].props.is_hand_slot
 		)
 			throw new TypeError(
 				`${value} is not a string referring to a valid hand slot.`
@@ -497,8 +497,8 @@ class MobInventory extends Component {
 			// z
 			if (
 				this.active_hand &&
-        this.slots[this.active_hand] &&
-        this.slots[this.active_hand].item
+		this.slots[this.active_hand] &&
+		this.slots[this.active_hand].item
 			) {
 				this.slots[this.active_hand].item.c.Item.attack_self(this.a);
 			}
@@ -585,7 +585,7 @@ class MobInventory extends Component {
 	can_use_guns(gun) {
 		if (
 			gun.c.Gun.trigger_guard != combat_defines.TRIGGER_GUARD_ALLOW_ALL &&
-      !this.a.c.MobInteract.advanced_tool_user
+	!this.a.c.MobInteract.advanced_tool_user
 		) {
 			to_chat`<span class='warning'>You don't have the dexterity to do this!</span>`(
 				this.a
@@ -657,8 +657,8 @@ class MobInventory extends Component {
 		for (let slot of Object.values(this.slots)) {
 			if (
 				slot.props.clothing_slot &&
-        has_component(slot.item, slot.props.clothing_slot) &&
-        slot.item.c[slot.props.clothing_slot].hide_face
+		has_component(slot.item, slot.props.clothing_slot) &&
+		slot.item.c[slot.props.clothing_slot].hide_face
 			)
 				return false;
 		}
@@ -670,7 +670,7 @@ class MobInventory extends Component {
 		for (let slot of Object.values(this.slots)) {
 			if (
 				!slot.props.clothing_slot ||
-        !has_component(slot.item, slot.props.clothing_slot)
+		!has_component(slot.item, slot.props.clothing_slot)
 			)
 				continue;
 			let covered_slots = slot.item.c[slot.props.clothing_slot].covered_slots;
@@ -688,7 +688,7 @@ class MobInventory extends Component {
 			let slotitem = slot.item;
 			if (
 				!has_component(slotitem, "IdSlotItem") ||
-        !has_component(slotitem, "HasAccess")
+		!has_component(slotitem, "HasAccess")
 			)
 				continue;
 			if (slotitem.c.HasAccess.has_access(access)) return true;
@@ -699,13 +699,13 @@ class MobInventory extends Component {
 		let user = e.mob;
 		if (
 			e.from.atom == this.a &&
-      e.to.atom == user &&
-      (!has_component(e.mob, "Tangible") || e.mob.c.Tangible.can_reach(this.a))
+	e.to.atom == user &&
+	(!has_component(e.mob, "Tangible") || e.mob.c.Tangible.can_reach(this.a))
 		) {
 			// time for some fun strippy times
 			if (
 				!user.c.Mob.get_panel(this.a, StripPanel) &&
-        user.c.Mob.can_read_panel(this.a, StripPanel)
+		user.c.Mob.can_read_panel(this.a, StripPanel)
 			) {
 				var panel = new StripPanel(user.c.Mob.client, {
 					title: `${this.a.name}`,
@@ -921,16 +921,16 @@ class Slot extends EventEmitter {
 		}
 		if (
 			!this.item &&
-      this.can_accept_item(
-      	this.mob.c.MobInventory.slots[this.mob.c.MobInventory.active_hand].item
-      )
+	this.can_accept_item(
+		this.mob.c.MobInventory.slots[this.mob.c.MobInventory.active_hand].item
+	)
 		) {
 			this.item = this.mob.c.MobInventory.slots[
 				this.mob.c.MobInventory.active_hand
 			].item;
 		} else if (
 			this.item &&
-      !this.mob.c.MobInventory.slots[this.mob.c.MobInventory.active_hand].item
+	!this.mob.c.MobInventory.slots[this.mob.c.MobInventory.active_hand].item
 		) {
 			this.item.attack_hand(this.mob, e);
 		}
@@ -939,11 +939,11 @@ class Slot extends EventEmitter {
 	mouse_dropped_by(e) {
 		if (
 			this.props.is_hand_slot &&
-      this.can_accept_item(e.from.atom) &&
-      e.from.atom.c.Item.slot &&
-      e.from.atom.c.Item.slot.mob == this.mob &&
-      this.mob.c.MobInteract.can_interact() &&
-      !this.item
+	this.can_accept_item(e.from.atom) &&
+	e.from.atom.c.Item.slot &&
+	e.from.atom.c.Item.slot.mob == this.mob &&
+	this.mob.c.MobInteract.can_interact() &&
+	!this.item
 		) {
 			this.item = e.from.atom;
 		}
@@ -959,7 +959,7 @@ class Slot extends EventEmitter {
 			return false;
 		if (
 			this.props.clothing_slot &&
-      !has_component(item, this.props.clothing_slot)
+	!has_component(item, this.props.clothing_slot)
 		)
 			return false;
 		if (this.props.requires_slot) {
@@ -967,13 +967,13 @@ class Slot extends EventEmitter {
 			if (!rslot.item) return false;
 			if (rslot.props.clothing_slot) {
 				let whitelist =
-          rslot.item.c[rslot.props.clothing_slot][
-          	`${this.props.requires_slot_prefix || this.id}_whitelist`
-          ];
+		rslot.item.c[rslot.props.clothing_slot][
+			`${this.props.requires_slot_prefix || this.id}_whitelist`
+		];
 				let blacklist =
-          rslot.item.c[rslot.props.clothing_slot][
-          	`${this.props.requires_slot_prefix || this.id}_blacklist`
-          ];
+		rslot.item.c[rslot.props.clothing_slot][
+			`${this.props.requires_slot_prefix || this.id}_blacklist`
+		];
 				if (whitelist) {
 					let valid = false;
 					for (let comp of whitelist) {
@@ -1065,12 +1065,12 @@ class Slot extends EventEmitter {
 				this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = this[_item];
 			if (
 				this.props.is_hand_slot &&
-        (this[_item].c.Item.inhand_icon_state || this[_item].icon_state)
+		(this[_item].c.Item.inhand_icon_state || this[_item].icon_state)
 			) {
 				this.mob.overlays[`inhand_${this.id}`] = {
 					icon: this[_item].c.Item[`inhand_${this.id}_icon`],
 					icon_state:
-            this[_item].c.Item.inhand_icon_state || this[_item].icon_state,
+			this[_item].c.Item.inhand_icon_state || this[_item].icon_state,
 					overlay_layer: this.props.worn_layer,
 				};
 			}
@@ -1078,8 +1078,8 @@ class Slot extends EventEmitter {
 				this.mob.overlays[`clothing_${this.id}`] = {
 					icon: this[_item].c[this.props.clothing_slot].worn_icon,
 					icon_state:
-            this[_item].c[this.props.clothing_slot].worn_icon_state ||
-            this[_item].icon_state,
+			this[_item].c[this.props.clothing_slot].worn_icon_state ||
+			this[_item].icon_state,
 					overlay_layer: this.props.worn_layer,
 				};
 			}

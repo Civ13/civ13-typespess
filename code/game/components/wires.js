@@ -91,7 +91,7 @@ class MachineWires extends Component {
 	show_ui(user) {
 		if (
 			user.c.Mob.get_panel(this.a, MachineWirePanel) ||
-      !user.c.Mob.can_read_panel(this.a, MachineWirePanel)
+	!user.c.Mob.can_read_panel(this.a, MachineWirePanel)
 		) {
 			return;
 		}
@@ -107,8 +107,8 @@ class MachineWires extends Component {
 	is_wire_tool(tool) {
 		if (
 			has_component(tool, "Tool") &&
-      (tool.c.Tool.can_use("Wirecutters", this.bound_mob) ||
-        tool.c.Tool.can_use("Multitool", this.bound_mob))
+	(tool.c.Tool.can_use("Wirecutters", this.bound_mob) ||
+		tool.c.Tool.can_use("Multitool", this.bound_mob))
 		)
 			return true;
 		return false;
@@ -201,8 +201,8 @@ class MachineWirePanel extends Panel {
 				].item;
 			if (
 				msg.cut &&
-        has_component(tool, "Tool") &&
-        tool.c.Tool.can_use("Wirecutters", this.bound_mob)
+		has_component(tool, "Tool") &&
+		tool.c.Tool.can_use("Wirecutters", this.bound_mob)
 			) {
 				tool.c.Tool.used("Wirecutters");
 				let wire = this.bound_atom.c.MachineWires.colors[msg.cut];
@@ -213,8 +213,8 @@ class MachineWirePanel extends Panel {
 			}
 			if (
 				msg.pulse &&
-        has_component(tool, "Tool") &&
-        tool.c.Tool.can_use("Multitool", this.bound_mob)
+		has_component(tool, "Tool") &&
+		tool.c.Tool.can_use("Multitool", this.bound_mob)
 			) {
 				new Sound(this.client.server, {
 					path: "sound/weapons/empty.ogg",
@@ -232,12 +232,12 @@ class MachineWirePanel extends Panel {
 		let item_type = null;
 		if (
 			has_component(to, "Tool") &&
-      to.c.Tool.can_use("Wirecutters", this.bound_mob)
+	to.c.Tool.can_use("Wirecutters", this.bound_mob)
 		)
 			item_type = "Wirecutters";
 		else if (
 			has_component(to, "Tool") &&
-      to.c.Tool.can_use("Multitool", this.bound_mob)
+	to.c.Tool.can_use("Multitool", this.bound_mob)
 		)
 			item_type = "Multitool";
 		this.send_message({ item_type });

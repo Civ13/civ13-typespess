@@ -66,12 +66,12 @@ class Girder extends Component {
 				}
 			} else if (
 				item.c.Tool.can_use("Wrench", user) &&
-        (this.state == "displaced" || this.state == "normal")
+		(this.state == "displaced" || this.state == "normal")
 			) {
 				let orig_state = this.state;
 				if (
 					this.state == "normal" &&
-          !(this.a.base_loc && this.a.base_loc.turf)
+		!(this.a.base_loc && this.a.base_loc.turf)
 				) {
 					to_chat`<span class='warning'>A floor must be present to secure the girder!</span>`(
 						user
@@ -98,7 +98,7 @@ class Girder extends Component {
 				return true;
 			} else if (
 				item.c.Tool.can_use("Wirecutters") &&
-        this.state == "reinf_struts"
+		this.state == "reinf_struts"
 			) {
 				item.c.Tool.used("Wirecutters");
 				to_chat`<span class='notice'>You start removing the inner grille...</span>`(
@@ -205,9 +205,9 @@ class Girder extends Component {
 Girder.update_map_instance = function (instobj) {
 	// Make it show up correctly in the map editor
 	instobj.client_atom.icon_state =
-    instobj.computed_vars.components.Girder.state_states[
-    	instobj.computed_vars.components.Girder.state
-    ];
+	instobj.computed_vars.components.Girder.state_states[
+		instobj.computed_vars.components.Girder.state
+	];
 };
 
 Girder.one_per_tile = true;
@@ -241,7 +241,7 @@ Girder.template = {
 			},
 			Examine: {
 				desc:
-          "A large structural assembly made out of metal; It requires a layer of metal before it can be considered a wall.",
+		"A large structural assembly made out of metal; It requires a layer of metal before it can be considered a wall.",
 			},
 		},
 		name: "girder",

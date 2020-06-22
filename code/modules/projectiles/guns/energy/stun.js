@@ -14,7 +14,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A dual-mode taser designed to fire both short-range high-power electrodes and long-range disabler beams.",
+			"A dual-mode taser designed to fire both short-range high-power electrodes and long-range disabler beams.",
 				},
 			},
 			name: "hybrid taser",

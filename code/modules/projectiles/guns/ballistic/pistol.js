@@ -15,7 +15,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A small, easily concealable 10mm handgun. Has a threaded barrel for suppressors.",
+			"A small, easily concealable 10mm handgun. Has a threaded barrel for suppressors.",
 				},
 				Item: {
 					size: 2,
@@ -57,7 +57,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-            "A gold plated Desert Eagle folded over a million times by superior martian gunsmiths. Uses .50 AE ammo.",
+			"A gold plated Desert Eagle folded over a million times by superior martian gunsmiths. Uses .50 AE ammo.",
 				},
 			},
 			icon_state: "deagleg",
@@ -70,7 +70,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-            "A Deagle brand Deagle for operators operating operationally. Uses .50 AE ammo.",
+			"A Deagle brand Deagle for operators operating operationally. Uses .50 AE ammo.",
 				},
 			},
 			icon_state: "deaglecamo",

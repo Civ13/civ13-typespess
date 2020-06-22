@@ -20,7 +20,7 @@ module.exports.reagent_reactions.push(
 			WeldingFuel: 1,
 		},
 		mix_message:
-      "The mixture violently reacts, leaving behind a few crystalline shards.",
+	"The mixture violently reacts, leaving behind a few crystalline shards.",
 		min_temp: 390,
 	})
 );

@@ -179,7 +179,7 @@ Crowbar.template = {
 			},
 			Examine: {
 				desc:
-          "A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors.",
+		"A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors.",
 			},
 		},
 		icon_state: "crowbar",

@@ -27,9 +27,7 @@ class LightingObject extends Component {
 		} else if (this.shadows_list != this.last_shadows_list) {
 			this.dirty = true;
 		} else if (
-			!this.last_disp ||
-      this.last_disp.dispx != disp.dispx ||
-      this.last_disp.dispy != disp.dispy
+			!this.last_disp || this.last_disp.dispx != disp.dispx || this.last_disp.dispy != disp.dispy
 		) {
 			this.dirty = true;
 		} else if (this.a.client.soft_shadow_resolution != this.last_resolution) {
@@ -55,9 +53,7 @@ class LightingObject extends Component {
 
 	draw(ctx, timestamp) {
 		if (
-			this.atom.screen_loc_x != null ||
-      this.radius !== +this.radius ||
-      !this.enabled
+			this.atom.screen_loc_x != null || this.radius !== +this.radius || !this.enabled
 		)
 			return;
 
@@ -79,14 +75,14 @@ class LightingObject extends Component {
 			let sample_points = [];
 			if (
 				this.soft_shadow_radius <= 0 ||
-        this.a.client.soft_shadow_resolution <= 1
+		this.a.client.soft_shadow_resolution <= 1
 			) {
 				sample_points.push([dispx, dispy]);
 			} else {
 				for (let i = 0; i < this.a.client.soft_shadow_resolution; i++) {
 					let angle =
-            ((i + this.random_angle_offset) * Math.PI * 2) /
-            this.a.client.soft_shadow_resolution;
+			((i + this.random_angle_offset) * Math.PI * 2) /
+			this.a.client.soft_shadow_resolution;
 					sample_points.push([
 						dispx + Math.cos(angle) * this.soft_shadow_radius,
 						dispy + Math.sin(angle) * this.soft_shadow_radius,
@@ -144,17 +140,14 @@ class LightingObject extends Component {
 						}
 						if (
 							(wall1.x1 > 0 &&
-                wall1.x1 == wall2.x1 &&
-                (wall1.y1 == wall2.y2 || wall1.y2 == wall2.y1)) ||
-              (wall1.y1 > 0 &&
-                wall1.y1 == wall2.y1 &&
-                (wall1.x1 == wall2.x2 || wall1.x2 == wall2.x1)) ||
-              (wall1.x2 < 0 &&
-                wall1.x2 == wall2.x2 &&
-                (wall1.y1 == wall2.y2 || wall1.y2 == wall2.y1)) ||
-              (wall1.y2 < 0 &&
-                wall1.y2 == wall2.y2 &&
-                (wall1.x1 == wall2.x2 || wall1.x2 == wall2.x1))
+				wall1.x1 == wall2.x1 &&
+				(wall1.y1 == wall2.y2 || wall1.y2 == wall2.y1)) || (wall1.y1 > 0 &&
+				wall1.y1 == wall2.y1 &&
+				(wall1.x1 == wall2.x2 || wall1.x2 == wall2.x1)) || (wall1.x2 < 0 &&
+				wall1.x2 == wall2.x2 &&
+				(wall1.y1 == wall2.y2 || wall1.y2 == wall2.y1)) || (wall1.y2 < 0 &&
+				wall1.y2 == wall2.y2 &&
+				(wall1.x1 == wall2.x2 || wall1.x2 == wall2.x1))
 						) {
 							if (wall1.x1 == wall2.x1 || wall1.x2 == wall2.x2) {
 								if (wall2.used_vertically) continue;

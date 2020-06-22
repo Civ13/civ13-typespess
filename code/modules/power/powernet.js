@@ -122,7 +122,7 @@ class Powernet {
 		if (this.avail >= 1000)
 			return (
 				Math.min(Math.max(Math.round(this.avail / 10000), 10), 90) +
-        _.rand(-5, 5)
+		_.rand(-5, 5)
 			);
 		else return 0;
 	}

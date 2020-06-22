@@ -55,17 +55,13 @@ class Eye extends EventEmitter {
 			this.handle_mousemove(this.last_mouse_event, timestamp);
 	}
 	get_world_draw_pos(x, y, timestamp) {
-		let { dispx, dispy } = (this.origin &&
-      this.origin.get_displacement &&
-      this.origin.get_displacement(timestamp)) || { dispx: 0, dispy: 0 };
+		let { dispx, dispy } = (this.origin && this.origin.get_displacement && this.origin.get_displacement(timestamp)) || { dispx: 0, dispy: 0 };
 		dispx = Math.round(dispx * 32) / 32;
 		dispy = Math.round(dispy * 32) / 32;
 		return [(x - dispx + 7) * 32, -(y - dispy - 7) * 32];
 	}
 	screen_to_world(x, y, timestamp) {
-		let { dispx, dispy } = (this.origin &&
-      this.origin.get_displacement &&
-      this.origin.get_displacement(timestamp)) || { dispx: 0, dispy: 0 };
+		let { dispx, dispy } = (this.origin && this.origin.get_displacement && this.origin.get_displacement(timestamp)) || { dispx: 0, dispy: 0 };
 		return [x / 32 - 7 + dispx, -y / 32 + 8 + dispy];
 	}
 	create_click_handlers() {
@@ -118,15 +114,11 @@ class Eye extends EventEmitter {
 				localY += 0.5;
 				var bounds = atom.get_bounds(timestamp);
 				if (
-					bounds &&
-          localX >= bounds.x &&
-          localX < bounds.x + bounds.width &&
-          localY >= bounds.y &&
-          localY < bounds.y + bounds.height
+					bounds && localX >= bounds.x && localX < bounds.x + bounds.width && localY >= bounds.y && localY < bounds.y + bounds.height
 				) {
 					if (
 						atom.mouse_opacity == 2 ||
-            atom.is_mouse_over(localX, localY, timestamp)
+			atom.is_mouse_over(localX, localY, timestamp)
 					) {
 						clickedAtom = atom;
 						break;
@@ -163,8 +155,7 @@ class Eye extends EventEmitter {
 					this.client.connection.send(
 						JSON.stringify({
 							click_on: Object.assign({}, start_meta, {
-								atom:
-                  start_meta && start_meta.atom && start_meta.atom.network_id,
+								atom: start_meta && start_meta.atom && start_meta.atom.network_id,
 							}),
 						})
 					);
@@ -337,10 +328,10 @@ class Plane {
 					newbounds.transform = atom.get_transform(timestamp);
 					if (
 						newbounds.x != lastbounds.x ||
-            newbounds.y != lastbounds.y ||
-            newbounds.width != lastbounds.width ||
-            newbounds.height != lastbounds.height ||
-            !newbounds.transform.equals(lastbounds.transform)
+			newbounds.y != lastbounds.y ||
+			newbounds.width != lastbounds.width ||
+			newbounds.height != lastbounds.height ||
+			!newbounds.transform.equals(lastbounds.transform)
 					) {
 						for (
 							let x = Math.floor(lastbounds.x);
@@ -590,10 +581,7 @@ class WorldPlane extends Plane {
 
 	calculate_composite_offset(timestamp) {
 		let [originx, originy] = this.calculate_origin();
-		let { dispx, dispy } =
-      this.eye.origin && this.eye.origin.get_displacement
-      	? this.eye.origin.get_displacement(timestamp)
-      	: { dispx: 0, dispy: 0 };
+		let { dispx, dispy } = this.eye.origin && this.eye.origin.get_displacement 	? this.eye.origin.get_displacement(timestamp) 	: { dispx: 0, dispy: 0 };
 		dispx = Math.round(dispx * 32) / 32;
 		dispy = Math.round(dispy * 32) / 32;
 		return [

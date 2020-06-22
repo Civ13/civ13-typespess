@@ -82,7 +82,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A gun magazine. Loaded with hollow-point rounds, extremely effective against unarmored targets, but nearly useless against protective clothing.",
+			"A gun magazine. Loaded with hollow-point rounds, extremely effective against unarmored targets, but nearly useless against protective clothing.",
 				},
 			},
 			name: "pistol magazine (10mm HP)",
@@ -104,7 +104,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A gun magazine. Loaded with rounds which penetrate armour, but are less effective against normal targets.",
+			"A gun magazine. Loaded with rounds which penetrate armour, but are less effective against normal targets.",
 				},
 			},
 			name: "pistol magazine (10mm AP)",
@@ -492,7 +492,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "Soporific sniper rounds, designed for happy days and dead quiet nights...",
+			"Soporific sniper rounds, designed for happy days and dead quiet nights...",
 				},
 			},
 			name: "sniper rounds (Zzzzz)",
@@ -514,7 +514,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it.",
+			"An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it.",
 				},
 			},
 			name: "sniper rounds (penetrator)",

@@ -11,12 +11,12 @@ class Dimension {
 	}
 
 	/**
-   * Used for getting a specific location.
-   * @param {number} x
-   * @param {number} y
-   * @param {number} z
-   * @return {Location} The location object.
-   */
+  * Used for getting a specific location.
+  * @param {number} x
+  * @param {number} y
+  * @param {number} z
+  * @return {Location} The location object.
+  */
 	location(x, y, z) {
 		if (x !== +x || y !== +y || z !== +z) {
 			// OI THERE NUMBERS only
@@ -130,10 +130,10 @@ class Location {
 	}
 
 	/**
-   * Returns a location in the given direction
-   * @param {number} dir
-   * @returns {Location}
-   */
+  * Returns a location in the given direction
+  * @param {number} dir
+  * @returns {Location}
+  */
 	get_step(dir) {
 		if ((dir & 3) == 3) dir &= ~3;
 		if ((dir & 12) == 12) dir &= ~12;

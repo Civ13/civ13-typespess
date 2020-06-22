@@ -48,7 +48,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A slim Type I armored vest that provides decent protection against most types of damage.",
+			"A slim Type I armored vest that provides decent protection against most types of damage.",
 				},
 			},
 			name: "armor vest",
@@ -93,7 +93,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A Type I armored vest that provides decent protection against most types of damage.",
+			"A Type I armored vest that provides decent protection against most types of damage.",
 				},
 			},
 			name: "armor vest",
@@ -138,7 +138,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "Older generation Type 1 armored vest. Due to degradation over time the vest is far less maneuverable to move in.",
+			"Older generation Type 1 armored vest. Due to degradation over time the vest is far less maneuverable to move in.",
 				},
 			},
 			name: "degrading armor vest",
@@ -184,7 +184,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A slim Type I armored vest that provides decent protection against most types of damage.",
+			"A slim Type I armored vest that provides decent protection against most types of damage.",
 				},
 			},
 			name: "armor vest",
@@ -246,7 +246,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A greatcoat enhanced with a special alloy for some extra protection and style for those with a commanding presence.",
+			"A greatcoat enhanced with a special alloy for some extra protection and style for those with a commanding presence.",
 				},
 			},
 			name: "armored greatcoat",
@@ -309,7 +309,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A trenchcoat enchanced with a special lightweight kevlar. The epitome of tactical plainclothes.",
+			"A trenchcoat enchanced with a special lightweight kevlar. The epitome of tactical plainclothes.",
 				},
 			},
 			name: "armored trenchcoat",
@@ -353,7 +353,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A navy-blue armored jacket with blue shoulder designations and '/Warden/' stitched into one of the chest pockets.",
+			"A navy-blue armored jacket with blue shoulder designations and '/Warden/' stitched into one of the chest pockets.",
 				},
 			},
 			name: "warden's jacket",
@@ -397,7 +397,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A red jacket with silver rank pips and body armor strapped on top.",
+			"A red jacket with silver rank pips and body armor strapped on top.",
 				},
 			},
 			name: "warden's armored jacket",
@@ -462,7 +462,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "Lightly armored leather overcoat meant as casual wear for high-ranking officers. Bears the crest of Nanotrasen Security.",
+			"Lightly armored leather overcoat meant as casual wear for high-ranking officers. Bears the crest of Nanotrasen Security.",
 				},
 			},
 			name: "security overcoat",
@@ -506,7 +506,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A fireproof armored chestpiece reinforced with ceramic plates and plasteel pauldrons to provide additional protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest, although it does chafe your nipples.",
+			"A fireproof armored chestpiece reinforced with ceramic plates and plasteel pauldrons to provide additional protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest, although it does chafe your nipples.",
 				},
 			},
 			name: "captain's carapace",
@@ -593,7 +593,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A sinister looking vest of advanced armor worn over a black and red fireproof jacket. The gold collar and shoulders denote that this belongs to a high ranking syndicate officer.",
+			"A sinister looking vest of advanced armor worn over a black and red fireproof jacket. The gold collar and shoulders denote that this belongs to a high ranking syndicate officer.",
 				},
 			},
 			name: "syndicate captain's vest",
@@ -655,7 +655,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks.",
+			"A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks.",
 				},
 			},
 			name: "riot suit",
@@ -750,7 +750,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.",
+			"A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.",
 				},
 			},
 			name: "bulletproof armor",
@@ -855,7 +855,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A classic suit of plate armour, highly effective at stopping melee attacks.",
+			"A classic suit of plate armour, highly effective at stopping melee attacks.",
 				},
 			},
 			name: "plate armor",
@@ -917,7 +917,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A classic suit of plate armour, highly effective at stopping melee attacks.",
+			"A classic suit of plate armour, highly effective at stopping melee attacks.",
 				},
 			},
 			name: "plate armor",
@@ -979,7 +979,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A classic suit of plate armour, highly effective at stopping melee attacks.",
+			"A classic suit of plate armour, highly effective at stopping melee attacks.",
 				},
 			},
 			name: "plate armor",
@@ -1041,7 +1041,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-            "A classic suit of plate armour, highly effective at stopping melee attacks.",
+			"A classic suit of plate armour, highly effective at stopping melee attacks.",
 				},
 			},
 			name: "plate armor",

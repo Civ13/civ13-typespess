@@ -5,8 +5,7 @@ module.exports.now = function (server) {
 		client.on("message", (obj) => {
 			if (obj.ooc_message) {
 				if (
-					client.last_ooc_message &&
-          server.now() < client.last_ooc_message + 300
+					client.last_ooc_message && server.now() < client.last_ooc_message + 300
 				) {
 					to_chat`You're doing that too fast!`(client);
 				} else {
