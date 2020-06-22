@@ -60,8 +60,8 @@ class AmmoBox extends Component {
 		}
 		if (
 			!ammo_casing ||
-	(this.caliber && ammo_casing.c.AmmoCasing.caliber != this.caliber) ||
-	(!this.caliber && ammo_casing.c.AmmoCasing.casing_type != this.ammo_type)
+      (this.caliber && ammo_casing.c.AmmoCasing.caliber != this.caliber) ||
+      (!this.caliber && ammo_casing.c.AmmoCasing.casing_type != this.ammo_type)
 		) {
 			return false;
 		}

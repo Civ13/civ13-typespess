@@ -56,7 +56,7 @@ class Window extends Component {
 	update_damage_overlay() {
 		if (this.a.destroyed) return;
 		var ratio =
-	this.a.c.Destructible.obj_integrity / this.a.c.Destructible.max_integrity;
+      this.a.c.Destructible.obj_integrity / this.a.c.Destructible.max_integrity;
 		ratio = Math.ceil(ratio * 4) * 25;
 
 		if (ratio > 75 || !this.enable_damage_overlay)
@@ -74,7 +74,7 @@ class Window extends Component {
 			if (item.c.Tool.can_use("WeldingTool")) {
 				if (
 					this.a.c.Destructible.obj_integrity >=
-		this.a.c.Destructible.max_integrity
+          this.a.c.Destructible.max_integrity
 				) {
 					to_chat`<span class='warning'>The ${this.a} is already in good condition!</span>`(
 						user

@@ -632,7 +632,7 @@ module.exports.reagent_reactions.push(
 			SyndicateBomb: 1,
 		},
 		mix_message:
-	"<span class='warning'>The mixture turns to a sickening froth.</span>",
+      "<span class='warning'>The mixture turns to a sickening froth.</span>",
 	})
 );
 
@@ -641,7 +641,7 @@ module.exports.reagent_reactions.push(
 		results: { ArnoldPalmer: 2 },
 		required_reagents: { Tea: 1, LemonJuice: 1 },
 		mix_message:
-	"The smells of fresh green grass and sand traps waft through the air as the mixture turns a friendly yellow-orange.",
+      "The smells of fresh green grass and sand traps waft through the air as the mixture turns a friendly yellow-orange.",
 	})
 );
 
@@ -1237,7 +1237,7 @@ module.exports.reagent_reactions.push(
 		results: { SmartFoamingAgent: 3 },
 		required_reagents: { FoamingAgent: 3, Acetone: 1, Iron: 1 },
 		mix_message:
-	"The solution mixes into a frothy metal foam and conforms to the walls of its container.",
+      "The solution mixes into a frothy metal foam and conforms to the walls of its container.",
 	})
 );
 

@@ -26,7 +26,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's a high visibility jumpsuit given to those engineers insane enough to achieve the rank of \"Chief Engineer\". It has minor radiation shielding.",
+            "It's a high visibility jumpsuit given to those engineers insane enough to achieve the rank of \"Chief Engineer\". It has minor radiation shielding.",
 				},
 			},
 			name: "chief engineer's jumpsuit",
@@ -76,7 +76,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's an orange high visibility jumpsuit worn by engineers. It has minor radiation shielding.",
+            "It's an orange high visibility jumpsuit worn by engineers. It has minor radiation shielding.",
 				},
 			},
 			name: "engineer's jumpsuit",

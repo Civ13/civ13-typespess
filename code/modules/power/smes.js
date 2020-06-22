@@ -103,8 +103,8 @@ class Smes extends Component {
 		if (
 			!(
 				(overlay == null && this.a.overlays.smes_charge == null) ||
-		(this.a.overlays.smes_charge &&
-		this.a.overlays.smes_charge.icon_state == overlay)
+        (this.a.overlays.smes_charge &&
+          this.a.overlays.smes_charge.icon_state == overlay)
 			)
 		) {
 			this.a.overlays.smes_charge = overlay;
@@ -114,7 +114,7 @@ class Smes extends Component {
 	attack_hand(prev, user) {
 		if (
 			user.c.Mob.get_panel(this.a, SmesPanel) ||
-	!user.c.Mob.can_read_panel(this.a, SmesPanel)
+      !user.c.Mob.can_read_panel(this.a, SmesPanel)
 		) {
 			return prev();
 		}
@@ -137,7 +137,7 @@ class Smes extends Component {
 		this.did_restore = true;
 		let to_restore = Math.min(
 			(powernet.avail - powernet.load) *
-		(this.last_output_used / (powernet.smes_output_total || 1)),
+        (this.last_output_used / (powernet.smes_output_total || 1)),
 			this.last_output_used,
 			(this.capacity - this.charge) * 1000
 		);
@@ -154,7 +154,7 @@ class Smes extends Component {
 		let to_charge = Math.min(
 			(this.capacity - this.charge) * 1000,
 			this.last_input_potential *
-		(powernet.smes_input_total / powernet.smes_input_potential || 1)
+        (powernet.smes_input_total / powernet.smes_input_potential || 1)
 		);
 		if (to_charge <= 0) to_charge = 0;
 		powernet.smes_input_total -= to_charge;
@@ -172,23 +172,23 @@ class Smes extends Component {
 		this.last_output_used = this.new_last_output_used;
 
 		this.total_input_available =
-	this.terminal && this.terminal.c.PowerNode.powernet
-		? (this.terminal.c.PowerNode.surplus +
-			this.terminal.c.PowerNode.powernet.smes_input_total) /
-		dt
-		: 0;
+      this.terminal && this.terminal.c.PowerNode.powernet
+      	? (this.terminal.c.PowerNode.surplus +
+            this.terminal.c.PowerNode.powernet.smes_input_total) /
+          dt
+      	: 0;
 		if (
 			this.terminal &&
-	this.terminal.c.PowerNode.powernet &&
-	this.input_attempt
+      this.terminal.c.PowerNode.powernet &&
+      this.input_attempt
 		) {
 			let surplus = this.terminal.c.PowerNode.surplus;
 			this.inputting =
-		this.charge < this.capacity &&
-		(surplus > 0 ||
-		this.terminal.c.PowerNode.powernet.smes_input_total > 0);
+        this.charge < this.capacity &&
+        (surplus > 0 ||
+          this.terminal.c.PowerNode.powernet.smes_input_total > 0);
 			this.total_input_available =
-		(surplus + this.terminal.c.PowerNode.powernet.smes_input_total) / dt;
+        (surplus + this.terminal.c.PowerNode.powernet.smes_input_total) / dt;
 			if (this.inputting) {
 				this.last_input_available = Math.min(
 					(this.capacity - this.charge) * 1000,
@@ -216,9 +216,9 @@ class Smes extends Component {
 
 		if (this.output_attempt) {
 			this.outputting =
-		this.a.c.PowerNode.powernet &&
-		this.output_level > 0 &&
-		(this.outputting || this.charge * 1000 > this.output_level * dt);
+        this.a.c.PowerNode.powernet &&
+        this.output_level > 0 &&
+        (this.outputting || this.charge * 1000 > this.output_level * dt);
 			if (this.outputting) {
 				this.new_last_output_used = Math.min(
 					this.charge * 1000,
@@ -249,8 +249,8 @@ class Smes extends Component {
 		}
 		if (
 			has_component(target, "SmesTerminal") &&
-	target.c.SmesTerminal.does_touch_smes(this.a) &&
-	!target.c.SmesTerminal.master
+      target.c.SmesTerminal.does_touch_smes(this.a) &&
+      !target.c.SmesTerminal.master
 		) {
 			this.terminal = target;
 			target.c.SmesTerminal.master = this.a;
@@ -260,8 +260,8 @@ class Smes extends Component {
 				for (let terminal of loc.contents) {
 					if (
 						has_component(terminal, "SmesTerminal") &&
-			terminal.c.SmesTerminal.does_touch_smes(this.a) &&
-			!terminal.c.SmesTerminal.master
+            terminal.c.SmesTerminal.does_touch_smes(this.a) &&
+            !terminal.c.SmesTerminal.master
 					) {
 						this.terminal = terminal;
 						terminal.c.SmesTerminal.master = this.a;
@@ -302,7 +302,7 @@ Smes.template = {
 			},
 			Examine: {
 				desc:
-		"A high-capacity superconducting magnetic energy storage (SMES) unit.",
+          "A high-capacity superconducting magnetic energy storage (SMES) unit.",
 			},
 		},
 		name: "power storage unit",
@@ -325,21 +325,21 @@ class SmesTerminal extends Component {
 	does_touch_smes(smes) {
 		if (
 			!smes.loc ||
-	!smes.loc.is_base_loc ||
-	!this.a.loc ||
-	!this.a.loc.is_base_loc ||
-	this.a.z != smes.z
+      !smes.loc.is_base_loc ||
+      !this.a.loc ||
+      !this.a.loc.is_base_loc ||
+      this.a.z != smes.z
 		)
 			return false;
 		if (
 			(this.a.dir == 1 || this.a.dir == 2) &&
-	Math.abs(this.a.x - smes.x) > 0.00001
+      Math.abs(this.a.x - smes.x) > 0.00001
 		) {
 			return false;
 		}
 		if (
 			(this.a.dir == 4 || this.a.dir == 8) &&
-	Math.abs(this.a.y - smes.y) > 0.00001
+      Math.abs(this.a.y - smes.y) > 0.00001
 		) {
 			return false;
 		}
@@ -347,34 +347,34 @@ class SmesTerminal extends Component {
 			return (
 				Math.abs(
 					this.a.y +
-			this.a.bounds_y +
-			this.a.bounds_height -
-			(smes.y + smes.bounds_y)
+            this.a.bounds_y +
+            this.a.bounds_height -
+            (smes.y + smes.bounds_y)
 				) < 0.00001
 			);
 		if (this.a.dir == 2)
 			return (
 				Math.abs(
 					this.a.y +
-			this.a.bounds_y -
-			(smes.y + smes.bounds_y + smes.bounds_height)
+            this.a.bounds_y -
+            (smes.y + smes.bounds_y + smes.bounds_height)
 				) < 0.00001
 			);
 		if (this.a.dir == 4)
 			return (
 				Math.abs(
 					this.a.x +
-			this.a.bounds_x +
-			this.a.bounds_width -
-			(smes.x + smes.bounds_x)
+            this.a.bounds_x +
+            this.a.bounds_width -
+            (smes.x + smes.bounds_x)
 				) < 0.00001
 			);
 		if (this.a.dir == 8)
 			return (
 				Math.abs(
 					this.a.x +
-			this.a.bounds_x -
-			(smes.x + smes.bounds_x + smes.bounds_width)
+            this.a.bounds_x -
+            (smes.x + smes.bounds_x + smes.bounds_width)
 				) < 0.00001
 			);
 		return false;
@@ -389,8 +389,8 @@ class SmesTerminal extends Component {
 			for (let smes of loc.contents) {
 				if (
 					has_component(smes, "Smes") &&
-		this.does_touch_smes(smes) &&
-		!smes.c.Smes.terminal
+          this.does_touch_smes(smes) &&
+          !smes.c.Smes.terminal
 				) {
 					smes.c.Smes.reconnect_terminal(this.a);
 					if (this.master) return;

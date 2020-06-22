@@ -231,9 +231,9 @@ class Eye extends Component {
 		}
 	}
 	/**
-  * @param {Typespess.Atom} item
-  * @returns {boolean}
-  */
+   * @param {Typespess.Atom} item
+   * @returns {boolean}
+   */
 	can_see(item) {
 		if (this[_screen_set].has(item)) return true;
 		let visible_value = item.visible;
@@ -250,9 +250,9 @@ class Eye extends Component {
 		return false;
 	}
 	/**
-  * @param {Typespess.Atom} item
-  * @returns {string}
-  */
+   * @param {Typespess.Atom} item
+   * @returns {string}
+   */
 	get_netid_for_atom(atom) {
 		return this[_server_to_net][atom.object_id];
 	}
@@ -263,10 +263,10 @@ class Eye extends Component {
 	}
 
 	/**
-  * Returns the mobs that are looking from this mob
-  * @generator
-  * @yields {Typespess.Atom<Mob>}
-  */
+   * Returns the mobs that are looking from this mob
+   * @generator
+   * @yields {Typespess.Atom<Mob>}
+   */
 	observers() {
 		return this[_observers][Symbol.iterator]();
 	}
@@ -330,11 +330,11 @@ class Mob extends Component {
 		this[_eye_to_eyeid] = new WeakMap();
 
 		/**
-	* @type {Object<string,Typespess.Atom<Mob>>}
-	* @member eyes
-	* @memberof Mob
-	* @instance
-	*/
+     * @type {Object<string,Typespess.Atom<Mob>>}
+     * @member eyes
+     * @memberof Mob
+     * @instance
+     */
 		// Eyes map
 		Object.defineProperty(this, "eyes", {
 			enumerable: true,
@@ -404,9 +404,9 @@ class Mob extends Component {
 	}
 
 	/**
-  * @see Client#key
-  * @type {string}
-  */
+   * @see Client#key
+   * @type {string}
+   */
 	get key() {
 		return this[_key];
 	}
@@ -424,8 +424,8 @@ class Mob extends Component {
 	}
 
 	/**
-  * @type {Client}
-  */
+   * @type {Client}
+   */
 	get client() {
 		return this[_client];
 	}
@@ -443,20 +443,20 @@ class Mob extends Component {
 	}
 
 	/**
-  * @param {Typespess.Atom<Eye>}
-  * @returns {string}
-  */
+   * @param {Typespess.Atom<Eye>}
+   * @returns {string}
+   */
 	get_eyeid_for_eye(eye) {
 		return this[_eye_to_eyeid].get(eye);
 	}
 
 	/**
-  * @param {Typespess.Atom} atom
-  * @param {Typespess.Panel|Constructor} panel
-  * @param {string} key=""
-  * @returns {boolean}
-  * @abstract
-  */
+   * @param {Typespess.Atom} atom
+   * @param {Typespess.Panel|Constructor} panel
+   * @param {string} key=""
+   * @returns {boolean}
+   * @abstract
+   */
 	can_interact_with_panel() {
 		return true;
 	}
@@ -465,7 +465,7 @@ class Mob extends Component {
 		if (typeof panel == "object") {
 			if (
 				panel.client != this.client ||
-		(panel.bound_mob && panel.bound_mob != this.a)
+        (panel.bound_mob && panel.bound_mob != this.a)
 			)
 				return false;
 		}
@@ -473,16 +473,16 @@ class Mob extends Component {
 	}
 
 	/**
-  * @param {Typespess.Atom} atom
-  * @param {Typespess.Panel|Constructor} panel
-  * @param {string} key=""
-  * @returns {boolean}
-  * @abstract
-  */
+   * @param {Typespess.Atom} atom
+   * @param {Typespess.Panel|Constructor} panel
+   * @param {string} key=""
+   * @returns {boolean}
+   * @abstract
+   */
 	can_read_panel(atom, panel, key = "") {
 		if (
 			atom.can_user_read_panel &&
-	!atom.can_user_read_panel(this.a, panel, key)
+      !atom.can_user_read_panel(this.a, panel, key)
 		)
 			return false;
 		for (var eye of Object.values(this.eyes))
@@ -491,15 +491,15 @@ class Mob extends Component {
 	}
 
 	/**
-  * Binds the panel to this mob and the panel.
-  * @param {Typespess.Atom} atom
-  * @param {Typespess.Panel} panel
-  * @param {string} [key=""]
-  */
+   * Binds the panel to this mob and the panel.
+   * @param {Typespess.Atom} atom
+   * @param {Typespess.Panel} panel
+   * @param {string} [key=""]
+   */
 	bind_panel(atom, panel, key = "") {
 		if (
 			!this.basic_panel_read_checks(atom, panel, key) ||
-	!this.can_read_panel(atom, panel, key)
+      !this.can_read_panel(atom, panel, key)
 		)
 			throw new Error(
 				"Check that your panel can be opened *before* creating and trying to bind it you tit"
@@ -513,8 +513,8 @@ class Mob extends Component {
 		var check = () => {
 			if (
 				panel.is_open &&
-		this.basic_panel_read_checks(atom, panel, key) &&
-		this.can_read_panel(atom, panel, key)
+        this.basic_panel_read_checks(atom, panel, key) &&
+        this.can_read_panel(atom, panel, key)
 			) {
 				panel.visibility_indicator = this.can_interact_with_panel(
 					atom,
@@ -556,11 +556,11 @@ class Mob extends Component {
 	}
 
 	/**
-  * Binds the panel to this mob and the panel.
-  * @param {Typespess.Atom} atom
-  * @param {Constructor} panel
-  * @param {string} [key=""]
-  */
+   * Binds the panel to this mob and the panel.
+   * @param {Typespess.Atom} atom
+   * @param {Constructor} panel
+   * @param {string} [key=""]
+   */
 	get_panel(atom, panel, key = "") {
 		return this[_panel_map].get(
 			`${atom.object_id},${

@@ -102,7 +102,7 @@ module.exports.reagent_reactions.push(
 		results: { Heparin: 4 },
 		required_reagents: { Formaldehyde: 1, Sodium: 1, Chlorine: 1, Lithium: 1 },
 		mix_message:
-	"<span class='danger'>The mixture thins and loses all color.</span>",
+      "<span class='danger'>The mixture thins and loses all color.</span>",
 	})
 );
 
@@ -111,7 +111,7 @@ module.exports.reagent_reactions.push(
 		results: { Rotatium: 3 },
 		required_reagents: { MindbreakerToxin: 1, Teslium: 1, Neurotoxin: 1 },
 		mix_message:
-	"<span class='danger'>After sparks, fire, and the smell of mindbreaker, the mix is constantly spinning with no stop in sight.</span>",
+      "<span class='danger'>After sparks, fire, and the smell of mindbreaker, the mix is constantly spinning with no stop in sight.</span>",
 	})
 );
 
@@ -120,7 +120,7 @@ module.exports.reagent_reactions.push(
 		results: { Skewium: 5 },
 		required_reagents: { Rotatium: 2, Plasma: 2, SAcid: 1 },
 		mix_message:
-	"<span class='danger'>Wow! it turns out if you mix rotatium with some plasma and sulphuric acid, it gets even worse!</span>",
+      "<span class='danger'>Wow! it turns out if you mix rotatium with some plasma and sulphuric acid, it gets even worse!</span>",
 	})
 );
 

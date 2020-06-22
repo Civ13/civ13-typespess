@@ -19,13 +19,13 @@ class Leporazine extends Medicine {
 			this.holder.c.CarbonMob.bodytemperature = Math.max(
 				310,
 				this.holder.c.CarbonMob.bodytemperature -
-		20 * dt * atmos_defines.TEMPERATURE_DAMAGE_COEFFICIENT
+          20 * dt * atmos_defines.TEMPERATURE_DAMAGE_COEFFICIENT
 			);
 		} else if (this.holder.c.CarbonMob.bodytemperature < 311) {
 			this.holder.c.CarbonMob.bodytemperature = Math.min(
 				310,
 				this.holder.c.CarbonMob.bodytemperature +
-		20 * dt * atmos_defines.TEMPERATURE_DAMAGE_COEFFICIENT
+          20 * dt * atmos_defines.TEMPERATURE_DAMAGE_COEFFICIENT
 			);
 		}
 		super.mob_life(...arguments);
@@ -35,7 +35,7 @@ module.exports.reagents.Leporazine = Leporazine;
 Object.assign(Leporazine.prototype, {
 	name: "Leporazine",
 	description:
-	"Leporazine will effectively regulate a patient's body temperature, ensuring it never leaves safe levels.",
+    "Leporazine will effectively regulate a patient's body temperature, ensuring it never leaves safe levels.",
 	color: [0.78, 0.65, 0.86],
 });
 
@@ -84,7 +84,7 @@ module.exports.reagents.Synaptizine = Synaptizine;
 Object.assign(Synaptizine.prototype, {
 	name: "Synaptizine",
 	description:
-	"Increases resistance to stuns as well as reducing drowsiness and hallucinations.",
+    "Increases resistance to stuns as well as reducing drowsiness and hallucinations.",
 	color: [1, 0, 1],
 });
 
@@ -123,7 +123,7 @@ module.exports.reagents.Inacusiate = Inacusiate;
 Object.assign(Inacusiate.prototype, {
 	name: "Inacusiate",
 	description:
-	"Instantly restores all hearing to the patient, but does not cure deafness.",
+    "Instantly restores all hearing to the patient, but does not cure deafness.",
 	color: [0.4, 0, 1],
 });
 
@@ -132,7 +132,7 @@ class Cryoxadone extends Medicine {
 	mob_life(dt) {
 		if (
 			this.holder.c.CarbonMob.bodytemperature >= 0 &&
-	this.holder.c.CarbonMob.bodytemperature <= 99
+      this.holder.c.CarbonMob.bodytemperature <= 99
 		) {
 			// At extreme temperatures (upgraded cryo) the effect is greatly increased.
 			this.holder.c.LivingMob.status_flags &= ~combat_defines.DISFIGURED;
@@ -143,7 +143,7 @@ class Cryoxadone extends Medicine {
 			this.holder.c.LivingMob.adjust_damage("clone", -0.5 * dt);
 		} else if (
 			this.holder.c.CarbonMob.bodytemperature >= 100 &&
-	this.holder.c.CarbonMob.bodytemperature <= 224
+      this.holder.c.CarbonMob.bodytemperature <= 224
 		) {
 			// At lower temperatures (cryo) the full effect is boosted
 			this.holder.c.LivingMob.status_flags &= ~combat_defines.DISFIGURED;
@@ -154,7 +154,7 @@ class Cryoxadone extends Medicine {
 			this.holder.c.LivingMob.adjust_damage("clone", -0.5 * dt);
 		} else if (
 			this.holder.c.CarbonMob.bodytemperature >= 225 &&
-	this.holder.c.CarbonMob.bodytemperature <= atmos_defines.T0C
+      this.holder.c.CarbonMob.bodytemperature <= atmos_defines.T0C
 		) {
 			this.holder.c.LivingMob.status_flags &= ~combat_defines.DISFIGURED;
 			this.holder.c.LivingMob.adjust_damage("brute", -0.5 * dt);
@@ -170,7 +170,7 @@ module.exports.reagents.Cryoxadone = Cryoxadone;
 Object.assign(Cryoxadone.prototype, {
 	name: "Cryoxadone",
 	description:
-	"A chemical mixture with almost magical healing powers. Its main limitation is that the patient's body temperature must be under 270K for it to metabolise correctly.",
+    "A chemical mixture with almost magical healing powers. Its main limitation is that the patient's body temperature must be under 270K for it to metabolise correctly.",
 	color: [0, 0, 0.78],
 	taste_description: "sludge",
 });
@@ -180,21 +180,21 @@ class Clonexadone extends Medicine {
 	mob_life(dt) {
 		if (
 			this.holder.c.CarbonMob.bodytemperature >= 0 &&
-	this.holder.c.CarbonMob.bodytemperature <= 99
+      this.holder.c.CarbonMob.bodytemperature <= 99
 		) {
 			// At extreme temperatures (upgraded cryo) the effect is greatly increased.
 			this.holder.c.LivingMob.status_flags &= ~combat_defines.DISFIGURED;
 			this.holder.c.LivingMob.adjust_damage("clone", -3.5 * dt);
 		} else if (
 			this.holder.c.CarbonMob.bodytemperature >= 100 &&
-	this.holder.c.CarbonMob.bodytemperature <= 224
+      this.holder.c.CarbonMob.bodytemperature <= 224
 		) {
 			// At lower temperatures (cryo) the full effect is boosted
 			this.holder.c.LivingMob.status_flags &= ~combat_defines.DISFIGURED;
 			this.holder.c.LivingMob.adjust_damage("clone", -1.5 * dt);
 		} else if (
 			this.holder.c.CarbonMob.bodytemperature >= 225 &&
-	this.holder.c.CarbonMob.bodytemperature <= atmos_defines.T0C
+      this.holder.c.CarbonMob.bodytemperature <= atmos_defines.T0C
 		) {
 			this.holder.c.LivingMob.status_flags &= ~combat_defines.DISFIGURED;
 			this.holder.c.LivingMob.adjust_damage("clone", -1 * dt);
@@ -206,7 +206,7 @@ module.exports.reagents.Clonexadone = Clonexadone;
 Object.assign(Clonexadone.prototype, {
 	name: "Clonexadone",
 	description:
-	"A chemical that derives from Cryoxadone. It specializes in healing clone damage, but nothing else. Requires very cold temperatures to properly metabolize, and metabolizes quicker than cryoxadone.",
+    "A chemical that derives from Cryoxadone. It specializes in healing clone damage, but nothing else. Requires very cold temperatures to properly metabolize, and metabolizes quicker than cryoxadone.",
 	color: [0, 0, 0.78],
 	taste_description: "muscle",
 	metabolization_rate: 0.75,
@@ -233,7 +233,7 @@ module.exports.reagents.Rezadone = Rezadone;
 Object.assign(Rezadone.prototype, {
 	name: "Rezadone",
 	description:
-	"A powder derived from fish toxin, Rezadone can effectively treat genetic damage as well as restoring minor wounds. Overdose will cause intense nausea and minor toxin damage.",
+    "A powder derived from fish toxin, Rezadone can effectively treat genetic damage as well as restoring minor wounds. Overdose will cause intense nausea and minor toxin damage.",
 	reagent_state: "solid",
 	color: [0.4, 0.6, 0],
 	overdose_threshold: 30,
@@ -245,7 +245,7 @@ module.exports.reagents.Spaceacillin = Spaceacillin;
 Object.assign(Spaceacillin.prototype, {
 	name: "Spaceacillin",
 	description:
-	"Spaceacillin will prevent a patient from conventionally spreading any diseases they are currently infected with.",
+    "Spaceacillin will prevent a patient from conventionally spreading any diseases they are currently infected with.",
 	color: [0.78, 0.65, 0.86],
 	metabolization_rate: 0.25,
 });
@@ -261,7 +261,7 @@ module.exports.reagents.SilverSulfadiazine = SilverSulfadiazine;
 Object.assign(SilverSulfadiazine.prototype, {
 	name: "Silver Sulfadiazine",
 	description:
-	"If used in touch-based applications, immediately restores burn wounds as well as restoring more over time. If ingested through other means, deals minor toxin damage.",
+    "If used in touch-based applications, immediately restores burn wounds as well as restoring more over time. If ingested through other means, deals minor toxin damage.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 });
@@ -288,7 +288,7 @@ module.exports.reagents.Oxandrolone = Oxandrolone;
 Object.assign(Oxandrolone.prototype, {
 	name: "Oxandrolone",
 	description:
-	"Stimulates the healing of severe burns. Extremely rapidly heals severe burns and slowly heals minor ones. Overdose will worsen existing burns.",
+    "Stimulates the healing of severe burns. Extremely rapidly heals severe burns and slowly heals minor ones. Overdose will worsen existing burns.",
 	reagent_state: "liquid",
 	color: [0.97, 1, 0.65],
 	metabolization_rate: 0.25,
@@ -306,7 +306,7 @@ module.exports.reagents.StypticPowder = StypticPowder;
 Object.assign(StypticPowder.prototype, {
 	name: "Styptic Powder",
 	description:
-	"If used in touch-based applications, immediately restores bruising as well as restoring more over time. If ingested through other means, deals minor toxin damage.",
+    "If used in touch-based applications, immediately restores bruising as well as restoring more over time. If ingested through other means, deals minor toxin damage.",
 	reagent_state: "liquid",
 	color: [1, 0.59, 0.59],
 });
@@ -334,7 +334,7 @@ module.exports.reagents.SalineGlucoseSolution = SalineGlucoseSolution;
 Object.assign(SalineGlucoseSolution.prototype, {
 	name: "Saline-Glucose Solution",
 	description:
-	"Has a 33% chance per metabolism cycle to heal brute and burn damage. Can be used as a temporary blood substitute.",
+    "Has a 33% chance per metabolism cycle to heal brute and burn damage. Can be used as a temporary blood substitute.",
 	reagent_state: "liquid",
 	color: [0.86, 0.86, 0.86],
 	metabolization_rate: 0.25,
@@ -349,7 +349,7 @@ module.exports.reagents.MinersSalve = MinersSalve;
 Object.assign(MinersSalve.prototype, {
 	name: "Miner's Salve",
 	description:
-	"A powerful painkiller. Restores bruising and burns in addition to making the patient believe they are fully healed.",
+    "A powerful painkiller. Restores bruising and burns in addition to making the patient believe they are fully healed.",
 	reagent_state: "liquid",
 	color: [0.43, 0.39, 0.45],
 	metabolization_rate: 0.2,
@@ -360,7 +360,7 @@ module.exports.reagents.Synthflesh = Synthflesh;
 Object.assign(Synthflesh.prototype, {
 	name: "Synthflesh",
 	description:
-	"Has a 100% chance of instantly healing brute and burn damage. One unit of the chemical will heal one point of damage. Touch application only.",
+    "Has a 100% chance of instantly healing brute and burn damage. One unit of the chemical will heal one point of damage. Touch application only.",
 	reagent_state: "liquid",
 	color: [1, 0.92, 0.92],
 });
@@ -381,7 +381,7 @@ module.exports.reagents.Charcoal = Charcoal;
 Object.assign(Charcoal.prototype, {
 	name: "Charcoal",
 	description:
-	"Heals toxin damage as well as slowly removing any other chemicals the patient has in their bloodstream.",
+    "Heals toxin damage as well as slowly removing any other chemicals the patient has in their bloodstream.",
 	reagent_state: "liquid",
 	color: [0, 0, 0],
 	metabolization_rate: 0.25,
@@ -409,7 +409,7 @@ module.exports.reagents.Omnizine = Omnizine;
 Object.assign(Omnizine.prototype, {
 	name: "Omnizine",
 	description:
-	"Slowly heals all damage types. Overdose will cause damage in all types instead.",
+    "Slowly heals all damage types. Overdose will cause damage in all types instead.",
 	reagent_state: "liquid",
 	color: [0.86, 0.86, 0.86],
 	metabolization_rate: 0.125,
@@ -434,7 +434,7 @@ module.exports.reagents.Calomel = Calomel;
 Object.assign(Calomel.prototype, {
 	name: "Calomel",
 	description:
-	"Quickly purges the body of all chemicals. Toxin damage is dealt if the patient is in good condition.",
+    "Quickly purges the body of all chemicals. Toxin damage is dealt if the patient is in good condition.",
 	reagent_state: "liquid",
 	color: [0.1, 0.78, 0.2],
 	metabolization_rate: 0.25,
@@ -466,7 +466,7 @@ class PenteticAcid extends Medicine {
 	// /datum/reagent/medicine/pen_acid
 	mob_life(dt) {
 		this.holder.c.CarbonMob.radiation -=
-	Math.min(this.holder.c.CarbonMob.radiation - 250 * dt, 0) / 50;
+      Math.min(this.holder.c.CarbonMob.radiation - 250 * dt, 0) / 50;
 		this.holder.c.LivingMob.adjust_damage("tox", -1 * dt);
 		for (let key of this.holder.c.ReagentHolder.reagents.keys()) {
 			if (key != this.constructor.name) {
@@ -480,7 +480,7 @@ module.exports.reagents.PenteticAcid = PenteticAcid;
 Object.assign(PenteticAcid.prototype, {
 	name: "Pentetic Acid",
 	description:
-	"Reduces massive amounts of radiation and toxin damage while purging other chemicals from the body.",
+    "Reduces massive amounts of radiation and toxin damage while purging other chemicals from the body.",
 	reagent_state: "liquid",
 	color: [0.9, 1, 0.94],
 	metabolization_rate: 0.25,
@@ -508,7 +508,7 @@ module.exports.reagents.SalicyclicAcid = SalicyclicAcid;
 Object.assign(SalicyclicAcid.prototype, {
 	name: "Salicyclic Acid",
 	description:
-	"Stimulates the healing of severe bruises. Extremely rapidly heals severe bruising and slowly heals minor ones. Overdose will worsen existing bruising.",
+    "Stimulates the healing of severe bruises. Extremely rapidly heals severe bruising and slowly heals minor ones. Overdose will worsen existing bruising.",
 	reagent_state: "liquid",
 	color: [0.82, 0.82, 0.82],
 	metabolization_rate: 0.25,
@@ -529,7 +529,7 @@ module.exports.reagents.Salbutamol = Salbutamol;
 Object.assign(Salbutamol.prototype, {
 	name: "Salbutamol",
 	description:
-	"Rapidly restores oxygen deprivation as well as preventing more of it to an extent.",
+    "Rapidly restores oxygen deprivation as well as preventing more of it to an extent.",
 	reagent_state: "liquid",
 	color: [0, 1, 1],
 	metabolization_rate: 0.125,
@@ -551,7 +551,7 @@ module.exports.reagents.Perfluorodecalin = Perfluorodecalin;
 Object.assign(Perfluorodecalin.prototype, {
 	name: "Perfluorodecalin",
 	description:
-	"Extremely rapidly restores oxygen deprivation, but inhibits speech. May also heal small amounts of bruising and burns.",
+    "Extremely rapidly restores oxygen deprivation, but inhibits speech. May also heal small amounts of bruising and burns.",
 	reagent_state: "liquid",
 	color: [1, 0.39, 0.39],
 	metabolization_rate: 0.125,
@@ -608,7 +608,7 @@ module.exports.reagents.Ephedrine = Ephedrine;
 Object.assign(Ephedrine.prototype, {
 	name: "Ephedrine",
 	description:
-	"Increases stun resistance and movement speed. Overdose deals toxin damage and inhibits breathing.",
+    "Increases stun resistance and movement speed. Overdose deals toxin damage and inhibits breathing.",
 	reagent_state: "liquid",
 	color: [0.82, 1, 0.98],
 	metabolization_rate: 0.25,
@@ -631,7 +631,7 @@ module.exports.reagents.Diphenhydramine = Diphenhydramine;
 Object.assign(Diphenhydramine.prototype, {
 	name: "Diphenhydramine",
 	description:
-	"Rapidly purges the body of Histamine and reduces jitteriness. Slight chance of causing drowsiness.",
+    "Rapidly purges the body of Histamine and reduces jitteriness. Slight chance of causing drowsiness.",
 	reagent_state: "liquid",
 	color: [0.39, 1, 0.9],
 	metabolization_rate: 0.25,
@@ -657,7 +657,7 @@ module.exports.reagents.Morphine = Morphine;
 Object.assign(Morphine.prototype, {
 	name: "Morphine",
 	description:
-	"A painkiller that allows the patient to move at full speed even in bulky objects. Causes drowsiness and eventually unconsciousness in high doses. Overdose will cause a variety of effects, ranging from minor to lethal.",
+    "A painkiller that allows the patient to move at full speed even in bulky objects. Causes drowsiness and eventually unconsciousness in high doses. Overdose will cause a variety of effects, ranging from minor to lethal.",
 	reagent_state: "liquid",
 	color: [0.66, 0.98, 0.98],
 	metabolization_rate: 0.25,
@@ -670,7 +670,7 @@ module.exports.reagents.Oculine = Oculine;
 Object.assign(Oculine.prototype, {
 	name: "Oculine",
 	description:
-	"Quickly restores eye damage, cures nearsightedness, and has a chance to restore vision to the blind.",
+    "Quickly restores eye damage, cures nearsightedness, and has a chance to restore vision to the blind.",
 	reagent_state: "liquid",
 	color: [1, 1, 1],
 	metabolization_rate: 0.125,
@@ -716,7 +716,7 @@ module.exports.reagents.Atropine = Atropine;
 Object.assign(Atropine.prototype, {
 	name: "Atropine",
 	description:
-	"If a patient is in critical condition, rapidly heals all damage types as well as regulating oxygen in the body. Excellent for stabilizing wounded patients.",
+    "If a patient is in critical condition, rapidly heals all damage types as well as regulating oxygen in the body. Excellent for stabilizing wounded patients.",
 	reagent_state: "liquid",
 	color: [0, 0, 0],
 	metabolization_rate: 0.125,
@@ -761,7 +761,7 @@ module.exports.reagents.Epinephrine = Epinephrine;
 Object.assign(Epinephrine.prototype, {
 	name: "Epinephrine",
 	description:
-	"Minor boost to stun resistance. Slowly heals damage if a patient is in critical condition, as well as regulating oxygen loss. Overdose causes weakness and toxin damage.",
+    "Minor boost to stun resistance. Slowly heals damage if a patient is in critical condition, as well as regulating oxygen loss. Overdose causes weakness and toxin damage.",
 	reagent_state: "liquid",
 	color: [0.82, 1, 0.98],
 	metabolization_rate: 0.125,
@@ -780,7 +780,7 @@ module.exports.reagents.StrangeReagent = StrangeReagent;
 Object.assign(StrangeReagent.prototype, {
 	name: "Strange Reagent",
 	description:
-	"A miracle drug capable of bringing the dead back to life. Only functions if the target has less than 100 brute and burn damage (independent of one another), and causes slight damage to the living.",
+    "A miracle drug capable of bringing the dead back to life. Only functions if the target has less than 100 brute and burn damage (independent of one another), and causes slight damage to the living.",
 	reagent_state: "liquid",
 	color: [0.63, 0.91, 0.37],
 	metabolization_rate: 0.25,
@@ -815,7 +815,7 @@ module.exports.reagents.Antihol = Antihol;
 Object.assign(Antihol.prototype, {
 	name: "Antihol",
 	description:
-	"Purges alcoholic substance from the patient's body and eliminates its side effects.",
+    "Purges alcoholic substance from the patient's body and eliminates its side effects.",
 	color: [0, 0.71, 0.78],
 	taste_description: "raw egg",
 });
@@ -850,7 +850,7 @@ module.exports.reagents.Stimulants = Stimulants;
 Object.assign(Stimulants.prototype, {
 	name: "Stimulants",
 	description:
-	"Increases stun resistance and movement speed in addition to restoring minor damage and weakness. Overdose causes weakness and toxin damage.",
+    "Increases stun resistance and movement speed in addition to restoring minor damage and weakness. Overdose causes weakness and toxin damage.",
 	color: [0.47, 0, 0.55],
 	metabolization_rate: 0.25,
 	overdose_threshold: 60,
@@ -946,7 +946,7 @@ module.exports.reagents.AntiToxin = AntiToxin;
 Object.assign(AntiToxin.prototype, {
 	name: "Anti-Toxin",
 	description:
-	"Heals toxin damage and removes toxins in the bloodstream. Overdose causes toxin damage.",
+    "Heals toxin damage and removes toxins in the bloodstream. Overdose causes toxin damage.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 	overdose_threshold: 30,
@@ -966,7 +966,7 @@ module.exports.reagents.Inaprovaline = Inaprovaline;
 Object.assign(Inaprovaline.prototype, {
 	name: "Inaprovaline",
 	description:
-	"Stabilizes the breathing of patients. Good for those in critical condition.",
+    "Stabilizes the breathing of patients. Good for those in critical condition.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 });
@@ -994,7 +994,7 @@ module.exports.reagents.Tricordrazine = Tricordrazine;
 Object.assign(Tricordrazine.prototype, {
 	name: "Tricordrazine",
 	description:
-	"Has a high chance to heal all types of damage. Overdose instead causes it.",
+    "Has a high chance to heal all types of damage. Overdose instead causes it.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 	overdose_threshold: 30,
@@ -1054,7 +1054,7 @@ module.exports.reagents.Earthsblood = Earthsblood;
 Object.assign(Earthsblood.prototype, {
 	name: "Earthsblood",
 	description:
-	"Ichor from an extremely powerful plant. Great for restoring wounds, but it's a little heavy on the brain.",
+    "Ichor from an extremely powerful plant. Great for restoring wounds, but it's a little heavy on the brain.",
 	color: [1, 0.69, 0],
 	overdose_threshold: 25,
 });
@@ -1083,7 +1083,7 @@ module.exports.reagents.Haloperidol = Haloperidol;
 Object.assign(Haloperidol.prototype, {
 	name: "Haloperidol",
 	description:
-	"Increases depletion rates for most stimulating/hallucinogenic drugs. Reduces druggy effects and jitteriness. Severe stamina regeneration penalty, causes drowsiness. Small chance of brain damage.",
+    "Increases depletion rates for most stimulating/hallucinogenic drugs. Reduces druggy effects and jitteriness. Severe stamina regeneration penalty, causes drowsiness. Small chance of brain damage.",
 	reagent_state: "liquid",
 	color: [0.15, 0.53, 0.04],
 	metabolization_rate: 0.2,
@@ -1152,6 +1152,6 @@ module.exports.reagents.Corazone = Corazone;
 Object.assign(Corazone.prototype, {
 	name: "Corazone",
 	description:
-	"A medication used to treat pain, fever, and inflammation, along with heart attacks.",
+    "A medication used to treat pain, fever, and inflammation, along with heart attacks.",
 	color: [0.96, 0.96, 0.96],
 });

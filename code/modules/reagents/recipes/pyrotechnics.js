@@ -80,7 +80,7 @@ module.exports.reagent_reactions.push(
 		strengthdiv: 6,
 		modifier: 1,
 		mix_message:
-	"<span class='boldannounce'>Sparks start flying around the black powder!</span>",
+      "<span class='boldannounce'>Sparks start flying around the black powder!</span>",
 	})
 );
 
@@ -267,7 +267,7 @@ module.exports.reagent_reactions.push(
 		results: { Teslium: 3 },
 		required_reagents: { StablePlasma: 1, Silver: 1, BlackPowder: 1 },
 		mix_message:
-	"<span class='danger'>A jet of sparks flies from the mixture as it merges into a flickering slurry.</span>",
+      "<span class='danger'>A jet of sparks flies from the mixture as it merges into a flickering slurry.</span>",
 		min_temp: 400,
 	})
 );
@@ -279,7 +279,7 @@ module.exports.reagent_reactions.push(
 		strengthdiv: 100,
 		modifier: -100,
 		mix_message:
-	"<span class='boldannounce'>The teslium starts to spark as electricity arcs away from it!</span>",
+      "<span class='boldannounce'>The teslium starts to spark as electricity arcs away from it!</span>",
 		mix_sound: "sound/machines/defib_zap.ogg",
 	})
 );

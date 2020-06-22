@@ -98,10 +98,10 @@ class Shuttle extends Component {
 		for (let atom of this.a.crosses()) {
 			if (
 				has_component(atom, "DockingPort") &&
-		atom.x == this.a.x &&
-		atom.y == this.a.y &&
-		atom.z == this.a.z &&
-		atom.dir == this.a.dir
+        atom.x == this.a.x &&
+        atom.y == this.a.y &&
+        atom.z == this.a.z &&
+        atom.dir == this.a.dir
 			) {
 				return atom;
 			}
@@ -122,7 +122,7 @@ class Shuttle extends Component {
 						return false;
 					if (
 						has_component(atom, "TransitHelper") ||
-			has_component(atom, "LightingObject")
+            has_component(atom, "LightingObject")
 					)
 					// let's not drag the transit helpers or light objects around
 						return false;

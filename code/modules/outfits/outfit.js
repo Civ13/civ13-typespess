@@ -41,8 +41,8 @@ class Outfit {
 
 			if (!visuals_only) {
 				let backpack =
-		target.c.MobInventory.slots.back &&
-		target.c.MobInventory.slots.back.item;
+          target.c.MobInventory.slots.back &&
+          target.c.MobInventory.slots.back.item;
 				if (clone.backpack_contents && has_component(backpack, "StorageItem")) {
 					for (let item of clone.backpack_contents) {
 						backpack.c.StorageItem.insert_item_or_del(

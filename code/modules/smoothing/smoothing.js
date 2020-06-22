@@ -24,35 +24,35 @@ class Smooth extends Component {
 				if (!has_component(atom, "SmoothGroup")) continue;
 				if (
 					!atom.c.SmoothGroup.enabled ||
-		!atom.c.SmoothGroup.groups.includes(this.smooth_with)
+          !atom.c.SmoothGroup.groups.includes(this.smooth_with)
 				)
 					continue;
 				let left_touch =
-		Math.abs(
-			atom.x +
-			atom.bounds_x +
-			atom.bounds_width -
-			(this.a.x + this.a.bounds_x)
-		) < 0.00001;
+          Math.abs(
+          	atom.x +
+              atom.bounds_x +
+              atom.bounds_width -
+              (this.a.x + this.a.bounds_x)
+          ) < 0.00001;
 				let right_touch =
-		Math.abs(
-			atom.x +
-			atom.bounds_x -
-			(this.a.x + this.a.bounds_x + this.a.bounds_width)
-		) < 0.00001;
+          Math.abs(
+          	atom.x +
+              atom.bounds_x -
+              (this.a.x + this.a.bounds_x + this.a.bounds_width)
+          ) < 0.00001;
 				let top_touch =
-		Math.abs(
-			atom.y +
-			atom.bounds_y -
-			(this.a.y + this.a.bounds_y + this.a.bounds_height)
-		) < 0.00001;
+          Math.abs(
+          	atom.y +
+              atom.bounds_y -
+              (this.a.y + this.a.bounds_y + this.a.bounds_height)
+          ) < 0.00001;
 				let bottom_touch =
-		Math.abs(
-			atom.y +
-			atom.bounds_y +
-			atom.bounds_height -
-			(this.a.y + this.a.bounds_y)
-		) < 0.00001;
+          Math.abs(
+          	atom.y +
+              atom.bounds_y +
+              atom.bounds_height -
+              (this.a.y + this.a.bounds_y)
+          ) < 0.00001;
 				if (Math.abs(atom.x - this.a.x) < 0.00001) {
 					if (bottom_touch) {
 						this.adjacent |= 1 << 2;
@@ -128,8 +128,8 @@ class SmoothGroup extends Component {
 			for (let atom of loc.partial_contents) {
 				if (
 					has_component(atom, "Smooth") &&
-		atom.c.Smooth.enabled &&
-		this.groups.includes(atom.c.Smooth.smooth_with)
+          atom.c.Smooth.enabled &&
+          this.groups.includes(atom.c.Smooth.smooth_with)
 				) {
 					atom.c.Smooth.rebuild_smooth(this.a);
 				}
@@ -142,8 +142,8 @@ class SmoothGroup extends Component {
 			for (let atom of loc.partial_contents) {
 				if (
 					has_component(atom, "Smooth") &&
-		atom.c.Smooth.enabled &&
-		this.groups.includes(atom.c.Smooth.smooth_with)
+          atom.c.Smooth.enabled &&
+          this.groups.includes(atom.c.Smooth.smooth_with)
 				) {
 					atom.c.Smooth.rebuild_smooth();
 				}

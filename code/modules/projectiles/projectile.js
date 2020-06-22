@@ -59,10 +59,10 @@ class Projectile extends Component.Networked {
 		//Does a Box-Muller transform to make the bullet spread a normal distribution.
 		// This is to make it easier to have spread from multiple sources work as you would expect.
 			this.angle =
-		angle +
-		Math.sqrt(-2.0 * Math.log(Math.random() || 0.001)) *
-		Math.cos(2.0 * Math.PI * Math.random()) *
-		this.spread;
+        angle +
+        Math.sqrt(-2.0 * Math.log(Math.random() || 0.001)) *
+          Math.cos(2.0 * Math.PI * Math.random()) *
+          this.spread;
 		else this.angle = this.angle || 0;
 		this.paused = false;
 		if (!this.process_timer) {
@@ -106,7 +106,7 @@ class Projectile extends Component.Networked {
 			return true;
 		if (
 			target == this.target &&
-	(target.density == 1 || has_component(target, "LivingMob"))
+      (target.density == 1 || has_component(target, "LivingMob"))
 		)
 			return false; // We aimed at the thing, so clearly we aimed down on it.
 		return prev();
@@ -127,9 +127,9 @@ class Projectile extends Component.Networked {
 	hit(target, blocked = 0, def_zone) {
 		if (
 			has_component(target, "Wall") &&
-	["brute", "burn"].includes(this.damage_type) &&
-	!this.no_damage &&
-	Math.random() < 0.75
+      ["brute", "burn"].includes(this.damage_type) &&
+      !this.no_damage &&
+      Math.random() < 0.75
 		) {
 			// TODO the damage decal
 		}
@@ -242,7 +242,7 @@ Projectile.template = {
 				damage_type: "brute",
 				no_damage: false,
 				armour_penetration: 0,
-				flag: "bullet", // Defines what armor to use when it hits things. Must be set to bullet, laser, energy,or bomb
+				flag: "bullet", // Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb
 				status_effects: {}, // Example: {"Knockdown": {delay: 3000}}
 
 				fired: false,

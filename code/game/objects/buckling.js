@@ -60,9 +60,9 @@ class Buckle extends Component {
 		}
 		if (
 			(!this.can_buckle && !force) ||
-	buckling.c.LivingMob.buckled ||
-	this.buckled_mobs.length >= this.max_buckled_mobs ||
-	this.atom == buckling
+      buckling.c.LivingMob.buckled ||
+      this.buckled_mobs.length >= this.max_buckled_mobs ||
+      this.atom == buckling
 		) {
 			//TODO: restraints check
 			return false;
@@ -89,13 +89,13 @@ class Buckle extends Component {
 	unbuckle_mob(unbuckling, force = false) {
 		if (
 			(has_component(unbuckling, "LivingMob") &&
-		unbuckling.c.LivingMob.buckled == this.atom) ||
-	force
+        unbuckling.c.LivingMob.buckled == this.atom) ||
+      force
 		) {
 			//TODO: can_unbuckle() from TG. Irrelevant until slimes are added.
 			unbuckling.c.LivingMob.buckled = null;
 			unbuckling.c.Tangible.anchored =
-		unbuckling.template.vars.components.Tangible.anchored;
+        unbuckling.template.vars.components.Tangible.anchored;
 			unbuckling.c.LivingMob.nomove_counter--;
 			unbuckling.c.MobHud.clear_alert("buckled");
 			let idx = this.buckled_mobs.indexOf(unbuckling);

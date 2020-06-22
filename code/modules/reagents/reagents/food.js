@@ -9,7 +9,7 @@ module.exports.reagents.Nutriment = Nutriment;
 Object.assign(Nutriment.prototype, {
 	name: "Nutriment",
 	description:
-	"All the vitamins, minerals, and carbohydrates the body needs in pure form.",
+    "All the vitamins, minerals, and carbohydrates the body needs in pure form.",
 	reagent_state: "solid",
 	nutriment_factor: 7.5,
 	color: [0.4, 0.26, 0.19],
@@ -22,7 +22,7 @@ module.exports.reagents.Vitamin = Vitamin;
 Object.assign(Vitamin.prototype, {
 	name: "Vitamin",
 	description:
-	"All the best vitamins, minerals, and carbohydrates the body needs in pure form.",
+    "All the best vitamins, minerals, and carbohydrates the body needs in pure form.",
 	brute_heal: 1,
 	burn_heal: 1,
 });
@@ -32,7 +32,7 @@ module.exports.reagents.Sugar = Sugar;
 Object.assign(Sugar.prototype, {
 	name: "Sugar",
 	description:
-	"The organic compound commonly known as table sugar and sometimes called saccharose. This white, odorless, crystalline powder has a pleasing, sweet taste.",
+    "The organic compound commonly known as table sugar and sometimes called saccharose. This white, odorless, crystalline powder has a pleasing, sweet taste.",
 	reagent_state: "solid",
 	color: [1, 1, 1],
 	taste_mult: 1.5,
@@ -47,7 +47,7 @@ module.exports.reagents.VirusFood = VirusFood;
 Object.assign(VirusFood.prototype, {
 	name: "Virus Food",
 	description:
-	"A mixture of water and milk. Virus cells can use this mixture to reproduce.",
+    "A mixture of water and milk. Virus cells can use this mixture to reproduce.",
 	nutriment_factor: 1,
 	color: [0.54, 0.59, 0.07],
 	taste_description: "watery milk",
@@ -88,7 +88,7 @@ module.exports.reagents.FrostOil = FrostOil;
 Object.assign(FrostOil.prototype, {
 	name: "Frost Oil",
 	description:
-	"A special oil that noticably chills the body. Extracted from Icepeppers and slimes.",
+    "A special oil that noticably chills the body. Extracted from Icepeppers and slimes.",
 	color: [0.55, 0.65, 0.91],
 	taste_description: "mint",
 });
@@ -150,7 +150,7 @@ module.exports.reagents.MushroomHallucinogen = MushroomHallucinogen;
 Object.assign(MushroomHallucinogen.prototype, {
 	name: "Mushroom Hallucinogen",
 	description:
-	"A strong hallucinogenic drug derived from certain species of mushroom.",
+    "A strong hallucinogenic drug derived from certain species of mushroom.",
 	color: [0.91, 0, 0.91],
 	metabolization_rate: 0.1,
 	taste_description: "mushroom",
@@ -161,7 +161,7 @@ module.exports.reagents.Sprinkles = Sprinkles;
 Object.assign(Sprinkles.prototype, {
 	name: "Sprinkles",
 	description:
-	"Multi-colored little bits of sugar, commonly found on donuts. Loved by cops.",
+    "Multi-colored little bits of sugar, commonly found on donuts. Loved by cops.",
 	color: [1, 0, 1],
 	taste_description: "childhood whimsy",
 });
@@ -181,7 +181,7 @@ module.exports.reagents.UniversalEnzyme = UniversalEnzyme;
 Object.assign(UniversalEnzyme.prototype, {
 	name: "Universal Enzyme",
 	description:
-	"A universal enzyme used in the preperation of certain chemicals and foods.",
+    "A universal enzyme used in the preperation of certain chemicals and foods.",
 	color: [0.21, 0.37, 0.19],
 	taste_description: "sweetness",
 });
@@ -191,7 +191,7 @@ module.exports.reagents.DryRamen = DryRamen;
 Object.assign(DryRamen.prototype, {
 	name: "Dry Ramen",
 	description:
-	"Space age food, since August 25, 1958. Contains dried noodles, vegetables, and chemicals that boil in contact with water.",
+    "Space age food, since August 25, 1958. Contains dried noodles, vegetables, and chemicals that boil in contact with water.",
 	reagent_state: "solid",
 	color: [0.19, 0.13, 0],
 	taste_description: "dry and cheap noodles",
@@ -202,7 +202,7 @@ module.exports.reagents.HotRamen = HotRamen;
 Object.assign(HotRamen.prototype, {
 	name: "Hot Ramen",
 	description:
-	"The noodles are boiled, the flavors are artificial, just like being back in school.",
+    "The noodles are boiled, the flavors are artificial, just like being back in school.",
 	nutriment_factor: 2.5,
 	color: [0.19, 0.13, 0],
 	taste_description: "wet and cheap noodles",
@@ -213,7 +213,7 @@ module.exports.reagents.HellRamen = HellRamen;
 Object.assign(HellRamen.prototype, {
 	name: "Hell Ramen",
 	description:
-	"The noodles are boiled, the flavors are artificial, just like being back in school.",
+    "The noodles are boiled, the flavors are artificial, just like being back in school.",
 	nutriment_factor: 2.5,
 	color: [0.19, 0.13, 0],
 	taste_description: "wet and cheap noodles on fire",
@@ -224,7 +224,7 @@ module.exports.reagents.Flour = Flour;
 Object.assign(Flour.prototype, {
 	name: "Flour",
 	description:
-	"This is what you rub all over yourself to pretend to be a ghost.",
+    "This is what you rub all over yourself to pretend to be a ghost.",
 	reagent_state: "solid",
 	color: [1, 1, 1],
 	taste_description: "chalky wheat",
@@ -235,7 +235,7 @@ module.exports.reagents.CherryJelly = CherryJelly;
 Object.assign(CherryJelly.prototype, {
 	name: "Cherry Jelly",
 	description:
-	"Totally the best. Only to be spread on foods with excellent lateral symmetry.",
+    "Totally the best. Only to be spread on foods with excellent lateral symmetry.",
 	color: [0.5, 0.12, 0.16],
 	taste_description: "cherry",
 });
@@ -304,7 +304,7 @@ module.exports.reagents.Honey = Honey;
 Object.assign(Honey.prototype, {
 	name: "honey",
 	description:
-	"Sweet sweet honey, decays into sugar and has natural healing properties.",
+    "Sweet sweet honey, decays into sugar and has natural healing properties.",
 	color: [0.83, 0.64, 0.03],
 	nutriment_factor: 7.5,
 	metabolization_rate: 0.5,
@@ -334,7 +334,7 @@ module.exports.reagents.EntropicPolypnium = EntropicPolypnium;
 Object.assign(EntropicPolypnium.prototype, {
 	name: "Entropic Polypnium",
 	description:
-	"An ichor, derived from a certain mushroom, makes for a bad time.",
+    "An ichor, derived from a certain mushroom, makes for a bad time.",
 	color: [0.11, 0.02, 0.24],
 	taste_description: "bitter mushroom",
 });
@@ -344,7 +344,7 @@ module.exports.reagents.TineaLuxor = TineaLuxor;
 Object.assign(TineaLuxor.prototype, {
 	name: "Tinea Luxor",
 	description:
-	"A stimulating ichor which causes luminescent fungi to grow on the skin. ",
+    "A stimulating ichor which causes luminescent fungi to grow on the skin. ",
 	color: [0.71, 0.64, 0.07],
 	taste_description: "tingling mushroom",
 });

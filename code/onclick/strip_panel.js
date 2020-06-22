@@ -13,7 +13,7 @@ class StripPanel extends Panel {
 		if (msg.slot) {
 			if (
 				has_component(this.bound_mob, "MobInventory") &&
-		!this.cached_covered[msg.slot]
+        !this.cached_covered[msg.slot]
 			) {
 				let slot_to_strip = this.bound_atom.c.MobInventory.slots[msg.slot];
 				if (!slot_to_strip) return;
@@ -97,9 +97,9 @@ class StripPanel extends Panel {
 							: "Full"
 						: null;
 					new_item_appearances_msg[otherslotname] =
-			otherslot.item && otherslot.props.visible
-				? otherslot.item.network_encode(this.bound_mob)
-				: null;
+            otherslot.item && otherslot.props.visible
+            	? otherslot.item.network_encode(this.bound_mob)
+            	: null;
 				}
 			}
 		}
@@ -110,7 +110,7 @@ class StripPanel extends Panel {
 					: "Full"
 				: null;
 			new_item_appearances_msg[slotid] =
-		to && slot.props.visible ? to.network_encode(this.bound_mob) : null;
+        to && slot.props.visible ? to.network_encode(this.bound_mob) : null;
 		}
 		this.send_message({
 			covered: new_covered_msg,

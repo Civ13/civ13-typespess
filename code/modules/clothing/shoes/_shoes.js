@@ -35,7 +35,7 @@ class FootItem extends Component {
 		if (has_component(obj, "CleanableDecal")) {
 			if (
 				obj.c.CleanableDecal.footprint_amount &&
-		obj.c.CleanableDecal.footprint_type
+        obj.c.CleanableDecal.footprint_type
 			) {
 				let type = obj.c.CleanableDecal.footprint_type;
 				let to_get = Math.min(
@@ -45,7 +45,7 @@ class FootItem extends Component {
 				);
 				if (to_get > 0) {
 					this.footprint_amounts[type] =
-			(+this.footprint_amounts[type] || 0) + to_get;
+            (+this.footprint_amounts[type] || 0) + to_get;
 					obj.c.CleanableDecal.footprint_amount -= to_get;
 				}
 			}
@@ -55,7 +55,7 @@ class FootItem extends Component {
 			if (amount > 0) {
 				this.footprint_amounts[obj.c.FootprintsDecal.type] = Math.max(
 					this.footprint_amounts[obj.c.FootprintsDecal.type] -
-			BLOOD_LOSS_PER_STEP,
+            BLOOD_LOSS_PER_STEP,
 					0
 				);
 				obj.c.FootprintsDecal.entered_dirs |= dir_to(
@@ -71,7 +71,7 @@ class FootItem extends Component {
 			if (amount > 0) {
 				this.footprint_amounts[obj.c.FootprintsDecal.type] = Math.max(
 					this.footprint_amounts[obj.c.FootprintsDecal.type] -
-			BLOOD_LOSS_PER_STEP,
+            BLOOD_LOSS_PER_STEP,
 					0
 				);
 				obj.c.FootprintsDecal.exited_dirs |= dir_to(
@@ -89,7 +89,7 @@ class FootItem extends Component {
 			for (let obj of this.a.crosses()) {
 				if (
 					has_component(obj, "FootprintsDecal") &&
-		obj.c.FootprintsDecal == type
+          obj.c.FootprintsDecal == type
 				) {
 					valid = false;
 					break;

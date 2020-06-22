@@ -30,10 +30,10 @@ class LightFixture extends Component {
 
 	update_on() {
 		let functional =
-	this.turned_on &&
-	this.tube &&
-	!this.tube.c.LightTube.broken &&
-	!this.tube.c.LightTube.burned;
+      this.turned_on &&
+      this.tube &&
+      !this.tube.c.LightTube.broken &&
+      !this.tube.c.LightTube.burned;
 		this.using_idle_power = functional;
 		if (functional && this.a.c.ApcPowered.powered) {
 			this.a.icon_state = `${this.base_state}1`;
@@ -57,8 +57,8 @@ class LightFixture extends Component {
 			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) return true;
 			if (
 				this.tube &&
-		!this.tube.c.LightTube.broken &&
-		!this.tube.c.LightTube.burned
+        !this.tube.c.LightTube.broken &&
+        !this.tube.c.LightTube.burned
 			)
 				to_chat`<span class='warning'>There is a ${this.tube_type} already inserted!</span>`(
 					user

@@ -73,7 +73,7 @@ class AmmoCasing extends Component {
 					if (has_component(bullet, "AmmoCasing")) {
 						if (
 							item.c.AmmoBox.stored_ammo &&
-			item.c.AmmoBox.stored_ammo.length >= item.c.AmmoBox.max_ammo
+              item.c.AmmoBox.stored_ammo.length >= item.c.AmmoBox.max_ammo
 						) {
 							break;
 						}

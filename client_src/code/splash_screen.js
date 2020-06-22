@@ -23,7 +23,7 @@ class SplashScreen extends Component {
 		let old_alpha = ctx.globalAlpha;
 		if (this.fading) {
 			ctx.globalAlpha *=
-		1 - (1 / this.fade_len) * (timestamp - this.fade_start);
+        1 - (1 / this.fade_len) * (timestamp - this.fade_start);
 		}
 		prev();
 		ctx.globalAlpha = old_alpha;

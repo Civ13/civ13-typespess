@@ -133,7 +133,7 @@ class CharacterPreferences {
 		};
 		if (name_override == "clown") {
 			template.vars.components.LivingMob.real_name =
-		clown_names[Math.floor(Math.random() * clown_names.length)];
+        clown_names[Math.floor(Math.random() * clown_names.length)];
 		} else {
 			template.vars.components.LivingMob.real_name = this.name;
 		}

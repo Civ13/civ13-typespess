@@ -26,7 +26,7 @@ Analyzer.template = {
 			},
 			Examine: {
 				desc:
-		"A hand-held environmental scanner which reports current gas levels.",
+          "A hand-held environmental scanner which reports current gas levels.",
 			},
 		},
 		name: "analyzer",

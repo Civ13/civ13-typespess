@@ -81,9 +81,9 @@ class IconRenderer {
 				return;
 			}
 			this.icon_state_meta =
-		this.icon_meta[this.icon_state] ||
-		this.icon_meta[" "] ||
-		this.icon_meta[""];
+        this.icon_meta[this.icon_state] ||
+        this.icon_meta[" "] ||
+        this.icon_meta[""];
 			if (!this.icon_state_meta) {
 				this.change_level = CHANGE_LEVEL_NONE;
 				return;
@@ -96,13 +96,13 @@ class IconRenderer {
 				return;
 			}
 			var progression =
-		this.icon_state_meta.dir_progression ||
-		dir_progressions[this.icon_state_meta.dir_count] ||
-		dir_progressions[1];
+        this.icon_state_meta.dir_progression ||
+        dir_progressions[this.icon_state_meta.dir_count] ||
+        dir_progressions[1];
 
 			this.dir_meta =
-		this.icon_state_meta.dirs[progression[this.dir]] ||
-		this.icon_state_meta.dirs[2];
+        this.icon_state_meta.dirs[progression[this.dir]] ||
+        this.icon_state_meta.dirs[2];
 
 			if (!this.dir_meta) {
 				this.change_level = CHANGE_LEVEL_NONE;
@@ -120,15 +120,18 @@ class IconRenderer {
 		var icon_time = timestamp % this.dir_meta.total_delay;
 		if (this.flick)
 			icon_time =
-		timestamp - (this.flick.time_begin + this.client.server_time_to_client);
+        timestamp - (this.flick.time_begin + this.client.server_time_to_client);
 		else if (
-			this.parent && this.parent.flick && ((!this._icon && this.parent.flick.icon) ||
-		((!this._icon_state || this._icon_state.includes("[parent]")) && this.parent.flick.icon_state) ||
-		(!this._dir && this.parent.flick.dir))
+			this.parent &&
+      this.parent.flick &&
+      ((!this._icon && this.parent.flick.icon) ||
+        ((!this._icon_state || this._icon_state.includes("[parent]")) &&
+          this.parent.flick.icon_state) ||
+        (!this._dir && this.parent.flick.dir))
 		)
 			icon_time =
-		timestamp -
-		(this.parent.flick.time_begin + this.client.server_time_to_client);
+        timestamp -
+        (this.parent.flick.time_begin + this.client.server_time_to_client);
 		var accum_delay = 0;
 		for (var i = 0; i < this.dir_meta.frames.length; i++) {
 			accum_delay += this.dir_meta.frames[i].delay;
@@ -233,11 +236,18 @@ class IconRenderer {
 				: 0
 		];
 		if (
-			pxx < 0 || pxy < 0 || pxx > this.icon_state_meta.width || pxy > this.icon_state_meta.height
+			pxx < 0 ||
+      pxy < 0 ||
+      pxx > this.icon_state_meta.width ||
+      pxy > this.icon_state_meta.height
 		)
 			return false;
-		var idx = 3 + 4 *
-		(pxx + frame_meta.x + (pxy + frame_meta.y) * this.icon_meta.__image_data.width);
+		var idx =
+      3 +
+      4 *
+        (pxx +
+          frame_meta.x +
+          (pxy + frame_meta.y) * this.icon_meta.__image_data.width);
 		return this.icon_meta.__image_data.data[idx] > 0;
 	}
 
@@ -287,18 +297,24 @@ class IconRenderer {
 		if (!this.flick) return;
 		var icon_meta = this.client.icon_metas[this.icon];
 		if (!icon_meta) return;
-		var icon_state_meta = icon_meta[this.icon_state] || icon_meta[" "] || icon_meta[""];
+		var icon_state_meta =
+      icon_meta[this.icon_state] || icon_meta[" "] || icon_meta[""];
 		if (!icon_state_meta) {
 			this.flick = null;
 			return;
 		}
-		var progression = icon_state_meta.dir_progression || dir_progressions[icon_state_meta.dir_count] || dir_progressions[1];
-		var dir_meta = icon_state_meta.dirs[progression[this.dir]] || icon_state_meta.dirs[2];
+		var progression =
+      icon_state_meta.dir_progression ||
+      dir_progressions[icon_state_meta.dir_count] ||
+      dir_progressions[1];
+		var dir_meta =
+      icon_state_meta.dirs[progression[this.dir]] || icon_state_meta.dirs[2];
 		if (!dir_meta) {
 			this.flick = null;
 			return;
 		}
-		var flick_time = timestamp - (this.flick.time_begin + this.client.server_time_to_client);
+		var flick_time =
+      timestamp - (this.flick.time_begin + this.client.server_time_to_client);
 		if (flick_time > dir_meta.total_delay) this.flick = null;
 	}
 

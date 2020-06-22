@@ -28,30 +28,30 @@ class Typespess extends EventEmitter {
 		this.components = {};
 		this.templates = {};
 		/**
-	* An object containing all the clients by their key
-	* @type {Object<string,Client>}
-	*/
+     * An object containing all the clients by their key
+     * @type {Object<string,Client>}
+     */
 		this.clients = {};
 		/**
-	* An object containing all the clients by their display name
-	* @type {Object<string,Client>}
-	*/
+     * An object containing all the clients by their display name
+     * @type {Object<string,Client>}
+     */
 		this.clients_by_name = {};
 		/**
-	* An object containing mobs with keys but no client
-	* @type {Object<string,Typespess.Atom<Mob>>}
-	*/
+     * An object containing mobs with keys but no client
+     * @type {Object<string,Typespess.Atom<Mob>>}
+     */
 		this.dc_mobs = {};
 		this.atoms = new Map();
 		/**
-	* An object containing lists of atoms for each component type
-	* @type {Object<string,Set<Typespess.Atom>>}
-	*/
+     * An object containing lists of atoms for each component type
+     * @type {Object<string,Set<Typespess.Atom>>}
+     */
 		this.atoms_for_components = {};
 		/**
-	* A writable stream for the demo file being written to
-	* @type {WritableStream}
-	*/
+     * A writable stream for the demo file being written to
+     * @type {WritableStream}
+     */
 		this.demo_stream = null;
 
 		// Import default modules
@@ -66,21 +66,21 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * True if the server has been started.
-  * @type {boolean}
-  */
+   * True if the server has been started.
+   * @type {boolean}
+   */
 	get is_server_started() {
 		return this[_is_server_started];
 	}
 
 	/**
-  * Imports a module into the server code.
-  * @param {Object} mod
-  * @param {Object} [mod.components] An object containing the component constructors you want to import
-  * @param {Object} [mod.templates] An object containing the templates you want to import
-  * @param {Function} [mod.now] A callback which is called immediately with an instance of this server object
-  * @param {Function} [mod.server_start] A callback which is called when the server starts (or now if it already has) with an instance of this server object
-  */
+   * Imports a module into the server code.
+   * @param {Object} mod
+   * @param {Object} [mod.components] An object containing the component constructors you want to import
+   * @param {Object} [mod.templates] An object containing the templates you want to import
+   * @param {Function} [mod.now] A callback which is called immediately with an instance of this server object
+   * @param {Function} [mod.server_start] A callback which is called when the server starts (or now if it already has) with an instance of this server object
+   */
 	importModule(mod) {
 		if (mod.components) {
 			for (var componentName in mod.components) {
@@ -116,11 +116,11 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * Starts the server.
-  * @param {Object} opts
-  * @param {Object} opts.websocket The parameters passed to the websocket server
-  * @param {Object} opts.demo_stream A stream (probably to a file) to log network updates to
-  */
+   * Starts the server.
+   * @param {Object} opts
+   * @param {Object} opts.websocket The parameters passed to the websocket server
+   * @param {Object} opts.demo_stream A stream (probably to a file) to log network updates to
+   */
 	startServer({ websocket, demo_stream } = {}) {
 		if (global.is_bs_editor_env)
 			throw new Error("Server should not be started in editor mode");
@@ -142,10 +142,10 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * Handles login.
-  * @param {WebSocket} ws The websocket
-  * @abstract
-  */
+   * Handles login.
+   * @param {WebSocket} ws The websocket
+   * @abstract
+   */
 	handle_login(ws) {
 		let handle_message = (data) => {
 			var obj = JSON.parse(data);
@@ -161,12 +161,12 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * Creates a client with the given parameters
-  * @param {WebSocket} socket The websocket
-  * @param {String|number} key The unique key string identifying the client.
-  * @param {String} name The name to display for the client
-  * @returns {Client}
-  */
+   * Creates a client with the given parameters
+   * @param {WebSocket} socket The websocket
+   * @param {String|number} key The unique key string identifying the client.
+   * @param {String} name The name to display for the client
+   * @returns {Client}
+   */
 	login(socket, username, name) {
 		if (this.clients[username] && this.clients[username].socket) {
 			var mob = this.clients[username].mob;
@@ -192,10 +192,10 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * @param {Typespess.Atom|Location} origin The origin
-  * @param {number} dist The radius to go out
-  * @returns {Set<Location>} A set of tiles a given distance away from the origin
-  */
+   * @param {Typespess.Atom|Location} origin The origin
+   * @param {number} dist The radius to go out
+   * @returns {Set<Location>} A set of tiles a given distance away from the origin
+   */
 	compute_inrange_tiles(atom, dist) {
 		var inrange_tiles = new Set();
 		if (atom.base_loc == null) return inrange_tiles;
@@ -216,10 +216,10 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * @param {Typespess.Atom|Location} origin The origin
-  * @param {number} dist The radius to go out
-  * @returns {Set<Location>} A set of tiles a given distance away from the origin that are visible to the origin (not blocked by opaque atoms)
-  */
+   * @param {Typespess.Atom|Location} origin The origin
+   * @param {number} dist The radius to go out
+   * @returns {Set<Location>} A set of tiles a given distance away from the origin that are visible to the origin (not blocked by opaque atoms)
+   */
 	compute_visible_tiles(atom, dist) {
 		if (atom.base_loc == null) return new Set();
 		var ring_tiles = [];
@@ -308,20 +308,20 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * Returns a precise timestamp, in milliseconds, since the server was constructed.
-  * This timestamp is sent to clients periodically.
-  * @returns {number} The timestamp
-  */
+   * Returns a precise timestamp, in milliseconds, since the server was constructed.
+   * This timestamp is sent to clients periodically.
+   * @returns {number} The timestamp
+   */
 	now() {
 		var hr = process.hrtime(this[_construct_time]);
 		return hr[0] * 1000 + hr[1] * 0.000001;
 	}
 
 	/**
-  * Processes a template, sorting out all the dependencies and applying default values.
-  * Usually called internally.
-  * @param {template} template
-  */
+   * Processes a template, sorting out all the dependencies and applying default values.
+   * Usually called internally.
+   * @param {template} template
+   */
 	process_template(template) {
 		if (template[_is_template_processed]) return;
 		if (template.parent_template) {
@@ -400,7 +400,7 @@ class Typespess extends EventEmitter {
 					}
 					if (curr_obj)
 						curr_obj[variant.var_path[variant.var_path.length - 1]] =
-			variant.values[0];
+              variant.values[0];
 				}
 			}
 		}
@@ -409,10 +409,10 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * Extends the template with the given variant.
-  * @param {template} template
-  * @param {Array} variant_leaf_path
-  */
+   * Extends the template with the given variant.
+   * @param {template} template
+   * @param {Array} variant_leaf_path
+   */
 	get_template_variant(template, variant_leaf_path, instance_vars) {
 		if (!instance_vars && (!variant_leaf_path || variant_leaf_path.length == 0))
 			return template;
@@ -443,7 +443,7 @@ class Typespess extends EventEmitter {
 					}
 					if (curr_obj)
 						curr_obj[variant.var_path[variant.var_path.length - 1]] =
-			variant.values[idx];
+              variant.values[idx];
 				}
 			}
 		}
@@ -455,12 +455,12 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * Instances a map, like {@link instance_map}, but synchronous, and no callback for percentage.
-  * @param {Object} obj Parsed JSON object representing the map
-  * @param {number} x
-  * @param {number} y
-  * @param {number} z
-  */
+   * Instances a map, like {@link instance_map}, but synchronous, and no callback for percentage.
+   * @param {Object} obj Parsed JSON object representing the map
+   * @param {number} x
+   * @param {number} y
+   * @param {number} z
+   */
 	instance_map_sync(obj, x = 0, y = 0, z = 0, dim) {
 		let inst_list = [];
 		for (var loc in obj.locs) {
@@ -497,13 +497,13 @@ class Typespess extends EventEmitter {
 	}
 
 	/**
-  * Instances a map
-  * @param {Object} obj Parsed JSON object representing the map
-  * @param {number} x
-  * @param {number} y
-  * @param {number} z
-  * @param {Function} [percentage_callback] A callback that is called periodically with a number 0 to 1 denoting how far along the instancing process is done.
-  */
+   * Instances a map
+   * @param {Object} obj Parsed JSON object representing the map
+   * @param {number} x
+   * @param {number} y
+   * @param {number} z
+   * @param {Function} [percentage_callback] A callback that is called periodically with a number 0 to 1 denoting how far along the instancing process is done.
+   */
 	async instance_map(obj, x = 0, y = 0, z = 0, dim, percentage_callback) {
 		let locs = [...Object.values(obj.locs)];
 		let inst_list = [];

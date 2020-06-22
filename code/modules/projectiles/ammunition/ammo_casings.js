@@ -352,7 +352,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A cased high explosive grenade that can only be activated once fired out of a grenade launcher.",
+            "A cased high explosive grenade that can only be activated once fired out of a grenade launcher.",
 				},
 			},
 			name: "40mm HE shell",
@@ -390,7 +390,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A .50 bullet casing, specialised in sending the target to sleep, instead of hell.",
+            "A .50 bullet casing, specialised in sending the target to sleep, instead of hell.",
 				},
 			},
 			name: ".50 soporific bullet casing",
@@ -445,7 +445,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A 1.95x129mm bullet casing designed with a hardened-tipped core to help penetrate armored targets.",
+            "A 1.95x129mm bullet casing designed with a hardened-tipped core to help penetrate armored targets.",
 				},
 			},
 			name: "1.95x129mm armor-piercing bullet casing",
@@ -463,7 +463,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A 1.95x129mm bullet casing designed to cause more damage to unarmored targets.",
+            "A 1.95x129mm bullet casing designed to cause more damage to unarmored targets.",
 				},
 			},
 			name: "1.95x129mm hollow point bullet casing",
@@ -481,7 +481,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A 1.95x129mm bullet casing designed with a chemical-filled capsule on the tip that when bursted, reacts with the atmosphere to produce a fireball, engulfing the target in flames.",
+            "A 1.95x129mm bullet casing designed with a chemical-filled capsule on the tip that when bursted, reacts with the atmosphere to produce a fireball, engulfing the target in flames.",
 				},
 			},
 			name: "1.95x129mm incendiary bullet casing",
@@ -610,7 +610,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A shotgun shell rigged with CMC technology, which launches a massive slug when fired.",
+            "A shotgun shell rigged with CMC technology, which launches a massive slug when fired.",
 				},
 			},
 			name: "meteorslug shell",
@@ -632,7 +632,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A delicate device which can be loaded into a shotgun. The primer acts as a button which triggers the gain medium and fires a powerful energy blast. While the heat and power drain limit it to one use, it can still allow an operator to engage targets that ballistic ammunition would have difficulty with.",
+            "A delicate device which can be loaded into a shotgun. The primer acts as a button which triggers the gain medium and fires a powerful energy blast. While the heat and power drain limit it to one use, it can still allow an operator to engage targets that ballistic ammunition would have difficulty with.",
 				},
 			},
 			name: "pulse slug",
@@ -700,7 +700,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A shotgun casing filled with densely-packed rubber balls, used to incapacitate crowds from a distance.",
+            "A shotgun casing filled with densely-packed rubber balls, used to incapacitate crowds from a distance.",
 				},
 			},
 			name: "rubber shot",
@@ -724,7 +724,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"An extremely weak shotgun shell with multiple small pellets made out of metal shards.",
+            "An extremely weak shotgun shell with multiple small pellets made out of metal shards.",
 				},
 			},
 			name: "improvised shell",
@@ -748,7 +748,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"An advanced shotgun shell which uses a subspace ansible crystal to produce an effect similar to a standard ion rifle. The unique properties of the crystal split the pulse into a spread of individually weaker bolts.",
+            "An advanced shotgun shell which uses a subspace ansible crystal to produce an effect similar to a standard ion rifle. The unique properties of the crystal split the pulse into a spread of individually weaker bolts.",
 				},
 			},
 			name: "ion shell",
@@ -770,7 +770,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"An advanced shotgun shell that uses a micro laser to replicate the effects of a laser weapon in a ballistic package.",
+            "An advanced shotgun shell that uses a micro laser to replicate the effects of a laser weapon in a ballistic package.",
 				},
 			},
 			name: "shotgun slug",
@@ -792,7 +792,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A high-tech shotgun shell which can be loaded with materials to produce unique effects.",
+            "A high-tech shotgun shell which can be loaded with materials to produce unique effects.",
 				},
 			},
 			name: "unloaded technological shell",

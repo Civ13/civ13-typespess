@@ -20,7 +20,7 @@ module.exports.reagents.TomatoJuice = TomatoJuice;
 Object.assign(TomatoJuice.prototype, {
 	name: "Tomato Juice",
 	description:
-	"Tomatoes made into juice. What a waste of big, juicy tomatoes, huh?",
+    "Tomatoes made into juice. What a waste of big, juicy tomatoes, huh?",
 	color: [0.45, 0.06, 0.03],
 	taste_description: "tomatoes",
 	glass_icon_state: "glass_red",
@@ -48,7 +48,7 @@ Object.assign(CarrotJuice.prototype, {
 	color: [0.59, 0.22, 0],
 	taste_description: "carrots",
 	glass_icon_state: "carrotjuice",
-	glass_name: "glass of carrot juice",
+	glass_name: "glass of  carrot juice",
 	glass_desc: "It's just like a carrot but without crunching.",
 });
 
@@ -78,7 +78,7 @@ module.exports.reagents.PoisonBerryJuice = PoisonBerryJuice;
 Object.assign(PoisonBerryJuice.prototype, {
 	name: "Poison Berry Juice",
 	description:
-	"A tasty juice blended from various kinds of very deadly and toxic berries.",
+    "A tasty juice blended from various kinds of very deadly and toxic berries.",
 	color: [0.53, 0.2, 0.33],
 	taste_description: "berries",
 	glass_icon_state: "poisonberryjuice",
@@ -139,7 +139,7 @@ module.exports.reagents.Laughter = Laughter;
 Object.assign(Laughter.prototype, {
 	name: "Laughter",
 	description:
-	"Some say that this is the best medicine, but recent studies have proven that to be untrue.",
+    "Some say that this is the best medicine, but recent studies have proven that to be untrue.",
 	metabolization_rate: Infinity,
 	color: [1, 0.3, 0.82],
 	taste_description: "laughter",
@@ -172,7 +172,7 @@ module.exports.reagents.Milk = Milk;
 Object.assign(Milk.prototype, {
 	name: "Milk",
 	description:
-	"An opaque white liquid produced by the mammary glands of mammals.",
+    "An opaque white liquid produced by the mammary glands of mammals.",
 	color: [0.87, 0.87, 0.87],
 	taste_description: "milk",
 	glass_icon_state: "glass_white",
@@ -197,7 +197,7 @@ module.exports.reagents.Cream = Cream;
 Object.assign(Cream.prototype, {
 	name: "Cream",
 	description:
-	"The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?",
+    "The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?",
 	color: [0.87, 0.84, 0.69],
 	taste_description: "creamy milk",
 	glass_icon_state: "glass_white",
@@ -210,7 +210,7 @@ module.exports.reagents.Coffee = Coffee;
 Object.assign(Coffee.prototype, {
 	name: "Coffee",
 	description:
-	"Coffee is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant.",
+    "Coffee is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant.",
 	color: [0.28, 0.13, 0],
 	nutriment_factor: 0,
 	overdose_threshold: 80,
@@ -218,7 +218,7 @@ Object.assign(Coffee.prototype, {
 	glass_icon_state: "glass_brown",
 	glass_name: "glass of coffee",
 	glass_desc:
-	"Don't drop it, or you'll send scalding liquid and glass shards everywhere.",
+    "Don't drop it, or you'll send scalding liquid and glass shards everywhere.",
 });
 
 class Tea extends Consumable {} // /datum/reagent/consumable/tea
@@ -245,7 +245,7 @@ Object.assign(ArnoldPalmer.prototype, {
 	glass_icon_state: "arnold_palmer",
 	glass_name: "Arnold Palmer",
 	glass_desc:
-	"You feel like taking a few golf swings after a few swigs of this.",
+    "You feel like taking a few golf swings after a few swigs of this.",
 });
 
 class IcedCoffee extends Consumable {} // /datum/reagent/consumable/icecoffee
@@ -308,7 +308,7 @@ Object.assign(SMWind.prototype, {
 	glass_icon_state: "Space_mountain_wind_glass",
 	glass_name: "glass of Space Mountain Wind",
 	glass_desc:
-	"Space Mountain Wind. As you know, there are no mountains in space, only wind.",
+    "Space Mountain Wind. As you know, there are no mountains in space, only wind.",
 });
 
 class DrGibb extends Consumable {} // /datum/reagent/consumable/dr_gibb
@@ -345,7 +345,7 @@ Object.assign(LemonLime.prototype, {
 	glass_icon_state: "glass_yellow",
 	glass_name: "glass of Lemon-Lime",
 	glass_desc:
-	"You're pretty certain a real fruit has never actually touched this.",
+    "You're pretty certain a real fruit has never actually touched this.",
 });
 
 class PwrGame extends Consumable {} // /datum/reagent/consumable/pwr_game
@@ -389,13 +389,13 @@ module.exports.reagents.TonicWater = TonicWater;
 Object.assign(TonicWater.prototype, {
 	name: "Tonic Water",
 	description:
-	"It tastes strange but at least the quinine keeps the Space Malaria at bay.",
+    "It tastes strange but at least the quinine keeps the Space Malaria at bay.",
 	color: [0, 0.39, 0.78],
 	taste_description: "tart and fresh",
 	glass_icon_state: "glass_clear",
 	glass_name: "glass of Tonic Water",
 	glass_desc:
-	"Quinine tastes funny, but at least it'll keep that Space Malaria away.",
+    "Quinine tastes funny, but at least it'll keep that Space Malaria away.",
 });
 
 class Ice extends Consumable {} // /datum/reagent/consumable/ice
@@ -409,7 +409,7 @@ Object.assign(Ice.prototype, {
 	glass_icon_state: "iceglass",
 	glass_name: "glass of ice",
 	glass_desc:
-	"Generally, you're supposed to put something else in there too...",
+    "Generally, you're supposed to put something else in there too...",
 });
 
 class SoyLatte extends Consumable {} // /datum/reagent/consumable/soy_latte
@@ -417,7 +417,7 @@ module.exports.reagents.SoyLatte = SoyLatte;
 Object.assign(SoyLatte.prototype, {
 	name: "Soy Latte",
 	description:
-	"A nice and tasty beverage while you are reading your hippie books.",
+    "A nice and tasty beverage while you are reading your hippie books.",
 	color: [0.4, 0.26, 0],
 	taste_description: "creamy coffee",
 	glass_icon_state: "soy_latte",
@@ -442,13 +442,13 @@ module.exports.reagents.TheDoctorsDelight = TheDoctorsDelight;
 Object.assign(TheDoctorsDelight.prototype, {
 	name: "The Doctor's Delight",
 	description:
-	"A gulp a day keeps the Medibot away! A mixture of juices that heals most damage types fairly quickly at the cost of hunger.",
+    "A gulp a day keeps the Medibot away! A mixture of juices that heals most damage types fairly quickly at the cost of hunger.",
 	color: [1, 0.55, 1],
 	taste_description: "homely fruit",
 	glass_icon_state: "doctorsdelightglass",
 	glass_name: "Doctor's Delight",
 	glass_desc:
-	"The space doctor's favorite. Guaranteed to restore bodily injury; side effects include cravings and hunger.",
+    "The space doctor's favorite. Guaranteed to restore bodily injury; side effects include cravings and hunger.",
 });
 
 class ChocolatePudding extends Consumable {} // /datum/reagent/consumable/chocolatepudding

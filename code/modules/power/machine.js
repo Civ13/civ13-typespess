@@ -29,7 +29,7 @@ class ApcPowered extends Component {
 			for (let brush of this.a.crosses()) {
 				if (
 					has_component(brush, "AreaBrush") &&
-		has_component(brush.c.AreaBrush.area, "AreaPower")
+          has_component(brush.c.AreaBrush.area, "AreaPower")
 				) {
 					this.area = brush.c.AreaBrush.area;
 					return;
@@ -40,20 +40,20 @@ class ApcPowered extends Component {
 	}
 
 	/**
-  * @param {string} channel
-  * @return {number} Amount of availible energy in joules
-  */
+   * @param {string} channel
+   * @return {number} Amount of availible energy in joules
+   */
 	get_available_power(channel = this.power_channel) {
 		if (!this.area) return 0;
 		return this.area.c.AreaPower.get_available_power(channel);
 	}
 
 	/**
-  *
-  * @param {number} amount
-  * @param {string} channel
-  * @return {number} Amount of energy used in joules
-  */
+   *
+   * @param {number} amount
+   * @param {string} channel
+   * @return {number} Amount of energy used in joules
+   */
 	use_power(amount, channel = this.power_channel) {
 		if (!this.area) return 0;
 		return this.area.c.AreaPower.use_power(amount, channel);

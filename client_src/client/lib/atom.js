@@ -316,10 +316,10 @@ class Glide {
 		this.y = 0;
 		if (
 			params.oldx == +params.oldx &&
-	params.oldy == +params.oldy &&
-	(params.oldx != object.x || params.oldy != object.y) &&
-	Math.abs(Math.max(object.x - params.oldx, object.y - params.oldy)) <=
-		1.50001
+      params.oldy == +params.oldy &&
+      (params.oldx != object.x || params.oldy != object.y) &&
+      Math.abs(Math.max(object.x - params.oldx, object.y - params.oldy)) <=
+        1.50001
 		) {
 			var pgx = (object.glide && object.glide.x) || 0;
 			if (Math.sign(pgx) == params.oldx - object.x) pgx = 0;

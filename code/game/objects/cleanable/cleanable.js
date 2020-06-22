@@ -14,8 +14,8 @@ class CleanableDecal extends Component {
 	crossed(other) {
 		if (
 			this.merge_group &&
-	has_component(other, "CleanableDecal") &&
-	other.c.CleanableDecal.merge_group == this.merge_group
+      has_component(other, "CleanableDecal") &&
+      other.c.CleanableDecal.merge_group == this.merge_group
 		) {
 			if (other.c.CleanableDecal.merge_priority >= this.merge_priority) {
 				other.c.CleanableDecal.emit("merged", this.a);

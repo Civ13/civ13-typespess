@@ -8,7 +8,7 @@ module.exports.reagents.Thermite = Thermite;
 Object.assign(Thermite.prototype, {
 	name: "Thermite",
 	description:
-	"Thermite produces an aluminothermic reaction known as a thermite reaction. Can be used to melt walls.",
+    "Thermite produces an aluminothermic reaction known as a thermite reaction. Can be used to melt walls.",
 	reagent_state: "solid",
 	color: [0.33, 0, 0],
 	taste_description: "sweet tasting metal",
@@ -19,7 +19,7 @@ module.exports.reagents.Nitroglycerin = Nitroglycerin;
 Object.assign(Nitroglycerin.prototype, {
 	name: "Nitroglycerin",
 	description:
-	"Nitroglycerin is a heavy, colorless, oily, explosive liquid obtained by nitrating glycerol.",
+    "Nitroglycerin is a heavy, colorless, oily, explosive liquid obtained by nitrating glycerol.",
 	color: [0.5, 0.5, 0.5],
 	taste_description: "oil",
 });
@@ -29,7 +29,7 @@ module.exports.reagents.StabilizingAgent = StabilizingAgent;
 Object.assign(StabilizingAgent.prototype, {
 	name: "Stabilizing Agent",
 	description:
-	"Keeps unstable chemicals stable. This does not work on everything.",
+    "Keeps unstable chemicals stable. This does not work on everything.",
 	reagent_state: "liquid",
 	color: [1, 1, 0],
 	taste_description: "metal",
@@ -40,7 +40,7 @@ module.exports.reagents.ChlorineTrifluoride = ChlorineTrifluoride;
 Object.assign(ChlorineTrifluoride.prototype, {
 	name: "Chlorine Trifluoride",
 	description:
-	"Makes a temporary 3x3 fireball when it comes into existence, so be careful when mixing. ClF3 applied to a surface burns things that wouldn't otherwise burn, sometimes through the very floors of the station and exposing it to the vacuum of space.",
+    "Makes a temporary 3x3 fireball when it comes into existence, so be careful when mixing. ClF3 applied to a surface burns things that wouldn't otherwise burn, sometimes through the very floors of the station and exposing it to the vacuum of space.",
 	reagent_state: "liquid",
 	color: [1, 0.78, 0.78],
 	metabolization_rate: 4,
@@ -133,7 +133,7 @@ module.exports.reagents.Cryostylane = Cryostylane;
 Object.assign(Cryostylane.prototype, {
 	name: "Cryostylane",
 	description:
-	"Comes into existence at 20K. As long as there is sufficient oxygen for it to react with, Cryostylane slowly cools all other reagents in the container 0K.",
+    "Comes into existence at 20K. As long as there is sufficient oxygen for it to react with, Cryostylane slowly cools all other reagents in the container 0K.",
 	color: [0, 0, 0.86],
 	metabolization_rate: 0.25,
 	taste_description: "bitterness",
@@ -144,7 +144,7 @@ module.exports.reagents.Pyrosium = Pyrosium;
 Object.assign(Pyrosium.prototype, {
 	name: "Pyrosium",
 	description:
-	"Comes into existence at 20K. As long as there is sufficient oxygen for it to react with, Pyrosium slowly heats all other reagents in the container.",
+    "Comes into existence at 20K. As long as there is sufficient oxygen for it to react with, Pyrosium slowly heats all other reagents in the container.",
 	color: [0.39, 0.98, 0.78],
 	metabolization_rate: 0.25,
 	taste_description: "bitterness",
@@ -155,7 +155,7 @@ module.exports.reagents.Teslium = Teslium;
 Object.assign(Teslium.prototype, {
 	name: "Teslium",
 	description:
-	"An unstable, electrically-charged metallic slurry. Periodically electrocutes its victim, and makes electrocutions against them more deadly. Excessively heating teslium results in dangerous destabilization. Do not allow to come into contact with water.",
+    "An unstable, electrically-charged metallic slurry. Periodically electrocutes its victim, and makes electrocutions against them more deadly. Excessively heating teslium results in dangerous destabilization. Do not allow to come into contact with water.",
 	reagent_state: "liquid",
 	color: [0.13, 0.2, 0.3],
 	metabolization_rate: 0.25,

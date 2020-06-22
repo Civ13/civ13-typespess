@@ -82,8 +82,8 @@ class SmesPanel {
 		}
 		if (
 			msg.output_level != null ||
-	msg.output_level_max != null ||
-	msg.output_used != null
+      msg.output_level_max != null ||
+      msg.output_used != null
 		) {
 			if (msg.output_level != null) this.output_level = msg.output_level[1];
 			if (msg.output_level_max != null)
@@ -129,8 +129,8 @@ class SmesPanel {
 		}
 		if (
 			msg.input_level != null ||
-	msg.input_level_max != null ||
-	msg.input_available != null
+      msg.input_level_max != null ||
+      msg.input_available != null
 		) {
 			if (msg.input_level != null) this.input_level = msg.input_level[1];
 			if (msg.input_level_max != null)

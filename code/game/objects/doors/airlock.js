@@ -119,7 +119,7 @@ class Airlock extends Component {
 		if (!this.a.c.ApcPowered.powered) {
 			if (
 				this.a.c.ApcPowered.get_available_power() >
-		this.a.c.ApcPowered.power_usage
+        this.a.c.ApcPowered.power_usage
 			) {
 				this.a.c.ApcPowered.use_power(this.a.c.ApcPowered.power_usage);
 				this.a.c.ApcPowered.powered = true;
@@ -129,13 +129,13 @@ class Airlock extends Component {
 			}
 		}
 		this.a.overlays.airlock_emergency_lights =
-	on && this.a.c.Door.emergency
-		? { icon: this.overlays_file, icon_state: "lights_emergency_[parent]" }
-		: null;
+      on && this.a.c.Door.emergency
+      	? { icon: this.overlays_file, icon_state: "lights_emergency_[parent]" }
+      	: null;
 		this.a.overlays.airlock_lights =
-	on && this.a.c.Door.locked
-		? { icon: this.overlays_file, icon_state: "lights_bolts_[parent]" }
-		: { icon: this.overlays_file, icon_state: "lights_[parent]" };
+      on && this.a.c.Door.locked
+      	? { icon: this.overlays_file, icon_state: "lights_bolts_[parent]" }
+      	: { icon: this.overlays_file, icon_state: "lights_[parent]" };
 	}
 
 	try_to_crowbar(tool, user) {
@@ -275,9 +275,9 @@ class Airlock extends Component {
 	emag_act(prev) {
 		if (
 			!this.a.c.Door.operating &&
-	this.a.density &&
-	this.a.c.ApcPowered.get_available_power() >= 50 &&
-	!this.a.c.Emaggable.emagged
+      this.a.density &&
+      this.a.c.ApcPowered.get_available_power() >= 50 &&
+      !this.a.c.Emaggable.emagged
 		) {
 			this.a.c.Door.operating = true;
 			this.a.flick = { overlays: { airlock_lights: { icon_state: "sparks" } } };
@@ -335,7 +335,7 @@ class Airlock extends Component {
 	attack_by(prev, item, user) {
 		if (
 			has_component(item, "Tool") &&
-	item.c.Tool.can_use("Screwdriver", user)
+      item.c.Tool.can_use("Screwdriver", user)
 		) {
 			this.panel_open = !this.panel_open;
 			to_chat`<span class='notice'>You ${
@@ -369,7 +369,7 @@ class Airlock extends Component {
 		if (wire.type == "power1" || wire.type == "power2") {
 			if (
 				this.a.c.MachineWires.wire_types["power1"].cut ||
-		this.a.c.MachineWires.wire_types["power2"].cut
+        this.a.c.MachineWires.wire_types["power2"].cut
 			)
 				return;
 			this.regain_main_power();
@@ -378,7 +378,7 @@ class Airlock extends Component {
 		if (wire.type == "backup1" || wire.type == "backup2") {
 			if (
 				this.a.c.MachineWires.wire_types["backup1"].cut ||
-		this.a.c.MachineWires.wire_types["backup2"].cut
+        this.a.c.MachineWires.wire_types["backup2"].cut
 			)
 				return;
 			this.regain_backup_power();
@@ -405,9 +405,9 @@ class Airlock extends Component {
 	is_all_power_cut() {
 		return (
 			this.a.c.MachineWires.wires["power1"].cut &&
-	this.a.c.MachineWires.wires["power2"].cut &&
-	this.a.c.MachineWires.wires["backup1"].cut &&
-	this.a.c.MachineWires.wires["backup2"].cut
+      this.a.c.MachineWires.wires["power2"].cut &&
+      this.a.c.MachineWires.wires["backup1"].cut &&
+      this.a.c.MachineWires.wires["backup2"].cut
 		);
 	}
 
@@ -431,7 +431,7 @@ class Airlock extends Component {
 	process(prev, dt) {
 		if (
 			!this.a.c.MachineWires.wire_types["power1"].cut &&
-	!this.a.c.MachineWires.wire_types["power2"].cut
+      !this.a.c.MachineWires.wire_types["power2"].cut
 		)
 			this.seconds_main_power_lost = Math.max(
 				this.seconds_main_power_lost - dt,
@@ -439,7 +439,7 @@ class Airlock extends Component {
 			);
 		if (
 			!this.a.c.MachineWires.wire_types["backup1"].cut &&
-	!this.a.c.MachineWires.wire_types["backup2"].cut
+      !this.a.c.MachineWires.wire_types["backup2"].cut
 		)
 			this.seconds_backup_power_lost = Math.max(
 				this.seconds_backup_power_lost - dt,
@@ -460,7 +460,7 @@ class Airlock extends Component {
 The door bolts ${this.a.c.Door.locked ? "have fallen!" : "look up."}<br>
 The test light is ${
 	this.a.c.ApcPowered.powered &&
-	(!this.seconds_main_power_lost || !this.seconds_backup_power_lost)
+      (!this.seconds_main_power_lost || !this.seconds_backup_power_lost)
 		? "on"
 		: "off"
 }<br>`;
@@ -548,7 +548,7 @@ Airlock.loadBefore = ["Door", "Emaggable", "MachineWires", "ApcPowered"];
 
 Airlock.update_map_instance = function (instobj) {
 	let airlock_material =
-	instobj.computed_vars.components.Airlock.airlock_material;
+    instobj.computed_vars.components.Airlock.airlock_material;
 	if (instobj.computed_vars.components.Door.glass) airlock_material = "glass";
 
 	if (airlock_material) {

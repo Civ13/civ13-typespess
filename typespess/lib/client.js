@@ -21,16 +21,16 @@ class Client extends EventEmitter {
 		super();
 		this.socket = socket;
 		/**
-	* @type {string}
-	*/
+     * @type {string}
+     */
 		this.key = username;
 		/**
-	* @type {string}
-	*/
+     * @type {string}
+     */
 		this.name = name || username;
 		/**
-	* @type {Typespess}
-	*/
+     * @type {Typespess}
+     */
 		this.server = server;
 		this[_atom_net_queue] = {}; // It's not *really* a queue but whatever.
 		this[_tiles_to_add] = new Set();
@@ -38,15 +38,15 @@ class Client extends EventEmitter {
 		this[_netid_to_atom] = {};
 		this[_netid_to_eye] = [];
 		/**
-	* An object containing some of the message to be sent on the next network tick. Add properties to this object to send things to the client.
-	* @type {Object}
-	*/
+     * An object containing some of the message to be sent on the next network tick. Add properties to this object to send things to the client.
+     * @type {Object}
+     */
 		this.next_message = {};
 
 		/**
-	* All the panels currently open
-	* @type {Map<string,Typespess.Panel>}
-	*/
+     * All the panels currently open
+     * @type {Map<string,Typespess.Panel>}
+     */
 		this.panels = new Map();
 
 		this.socket.on("message", this.message_handler.bind(this));
@@ -80,45 +80,45 @@ class Client extends EventEmitter {
 		this.last_click_time = 0;
 	}
 	/**
-  * Passed to mouse events.
-  * @class
-  * @name mouse_event
-  * @alias mouse_event
-  * @property {Typespess.Atom} atom
-  * @property {Client} client
-  * @property {Typespess.Atom<Mob>} mob
-  * @property {number} x Where on the atom the mouse event occured
-  * @property {number} y Where on the atom the mouse event occured
-  */
+   * Passed to mouse events.
+   * @class
+   * @name mouse_event
+   * @alias mouse_event
+   * @property {Typespess.Atom} atom
+   * @property {Client} client
+   * @property {Typespess.Atom<Mob>} mob
+   * @property {number} x Where on the atom the mouse event occured
+   * @property {number} y Where on the atom the mouse event occured
+   */
 	/**
-  * @event Client#keydown
-  * @type {Object}
-  * @property {number} which keycode
-  */
+   * @event Client#keydown
+   * @type {Object}
+   * @property {number} which keycode
+   */
 	/**
-  * @event Client#keyup
-  * @type {Object}
-  * @property {number} which keycode
-  */
+   * @event Client#keyup
+   * @type {Object}
+   * @property {number} which keycode
+   */
 	/**
-  * Event name is prepended with, if applicable: ctrl_, alt_, shift_, middle_ in that order.
-  * @event Client#click_on
-  * @type {mouse_event}
-  */
+   * Event name is prepended with, if applicable: ctrl_, alt_, shift_, middle_ in that order.
+   * @event Client#click_on
+   * @type {mouse_event}
+   */
 	/**
-  * @event Client#mouse_dragged
-  * @type {Object}
-  * @property {mouse_event} from
-  * @property {mouse_event} to
-  */
+   * @event Client#mouse_dragged
+   * @type {Object}
+   * @property {mouse_event} from
+   * @property {mouse_event} to
+   */
 	/**
-  * @event Client#message
-  * @type {Object}
-  */
+   * @event Client#message
+   * @type {Object}
+   */
 	/**
-  * @event Client#message_pre
-  * @type {Object}
-  */
+   * @event Client#message_pre
+   * @type {Object}
+   */
 	message_handler(data) {
 		try {
 			var obj = JSON.parse(data);
@@ -228,9 +228,9 @@ class Client extends EventEmitter {
 	}
 
 	/**
-  * The mob currently being controlled by the client
-  * @type {Typespess.Atom<Mob>|null}
-  */
+   * The mob currently being controlled by the client
+   * @type {Typespess.Atom<Mob>|null}
+   */
 	get mob() {
 		return this[_mob];
 	}
@@ -314,7 +314,7 @@ class Client extends EventEmitter {
 		} else {
 			var subentry = entry.update;
 			var setname =
-		type == 1 ? "appearance_items" : type == 2 ? "overlays" : "items";
+        type == 1 ? "appearance_items" : type == 2 ? "overlays" : "items";
 			if (!subentry[setname]) subentry[setname] = new Set();
 			subentry[setname].add(varname);
 		}
@@ -422,7 +422,7 @@ class Client extends EventEmitter {
 					submessage.overlays = {};
 					for (let item of entry.update.overlays) {
 						submessage.overlays[item] =
-			atom.overlays[item] === undefined ? null : atom.overlays[item];
+              atom.overlays[item] === undefined ? null : atom.overlays[item];
 					}
 				}
 				if (entry.update.components) {
@@ -433,7 +433,7 @@ class Client extends EventEmitter {
 						submessage.components[component_name] = {};
 						for (let item of entry.update.components[component_name]) {
 							submessage.components[component_name][item] =
-				atom.components[component_name][item];
+                atom.components[component_name][item];
 						}
 					}
 				}

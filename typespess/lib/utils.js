@@ -13,32 +13,32 @@ const _chain_spliced = Symbol("_chain_spliced");
 
 module.exports = {
 	/**
-  * Sort of like Object.assign(), but it assigns *behind* the other object, and it's also recursive.
-  * @memberof Typespess
-  * @param {Object} a
-  * @param {Object} b
-  */
+   * Sort of like Object.assign(), but it assigns *behind* the other object, and it's also recursive.
+   * @memberof Typespess
+   * @param {Object} a
+   * @param {Object} b
+   */
 	weak_deep_assign(a, b) {
 		for (var key in b) {
 			if (!b.hasOwnProperty(key)) continue;
 			if (
 				typeof b[key] == "object" &&
-		b[key] != null &&
-		!(b[key] instanceof Array) &&
-		(!a.hasOwnProperty(key) ||
-		typeof a[key] != "object" ||
-		a[key] == null ||
-		a[key] instanceof Array)
+        b[key] != null &&
+        !(b[key] instanceof Array) &&
+        (!a.hasOwnProperty(key) ||
+          typeof a[key] != "object" ||
+          a[key] == null ||
+          a[key] instanceof Array)
 			)
 				a[key] = {};
 			if (a.hasOwnProperty(key)) {
 				if (
 					typeof a[key] == "object" &&
-		a[key] != null &&
-		!(a[key] instanceof Array) &&
-		typeof b[key] == "object" &&
-		b[key] != null &&
-		!(b[key] instanceof Array)
+          a[key] != null &&
+          !(a[key] instanceof Array) &&
+          typeof b[key] == "object" &&
+          b[key] != null &&
+          !(b[key] instanceof Array)
 				)
 					module.exports.weak_deep_assign(a[key], b[key]);
 			} else {
@@ -60,34 +60,34 @@ module.exports = {
 	},
 
 	/**
-  * Used for overriding functions. Similar to underscore's <code>wrap</code> function.
-  * @example
-  * function foo(a) {
-  * 	return a;
-  * }
-  * console.log(foo("bar")); // logs "bar"
-  * foo = chain_func(foo, function(prev) {
-  * 	return prev() + "baz";
-  * });
-  * let splice = foo.splice;
-  * console.log(foo("bar")); // logs "barbaz"
-  * splice();
-  * console.log(foo("bar")); // logs "bar"
-  * @memberof! Typespess
-  * @static
-  * @param {Function} func1 The original Function
-  * @param {Function} func2 The function overriding this one. The first argument should be <code>prev</code>
-  * @returns {Function}
-  */
+   * Used for overriding functions. Similar to underscore's <code>wrap</code> function.
+   * @example
+   * function foo(a) {
+   * 	return a;
+   * }
+   * console.log(foo("bar")); // logs "bar"
+   * foo = chain_func(foo, function(prev) {
+   * 	return prev() + "baz";
+   * });
+   * let splice = foo.splice;
+   * console.log(foo("bar")); // logs "barbaz"
+   * splice();
+   * console.log(foo("bar")); // logs "bar"
+   * @memberof! Typespess
+   * @static
+   * @param {Function} func1 The original Function
+   * @param {Function} func2 The function overriding this one. The first argument should be <code>prev</code>
+   * @returns {Function}
+   */
 	chain_func(func1, func2) {
 		if (func2 == undefined) throw new Error("Chaining undefined function!");
 		function chained_func(...args) {
 			while (
 				chained_func[_chain_parent] &&
-		chained_func[_chain_parent][_chain_spliced]
+        chained_func[_chain_parent][_chain_spliced]
 			) {
 				chained_func[_chain_parent] =
-		chained_func[_chain_parent][_chain_parent];
+          chained_func[_chain_parent][_chain_parent];
 			}
 			let prev = (...override_args) => {
 				if (!chained_func[_chain_parent]) return;
@@ -107,11 +107,11 @@ module.exports = {
 	},
 
 	/**
-  *
-  * @param {any} obj
-  * @param {string} name
-  * @param {string|((val) => boolean)} check
-  */
+   *
+   * @param {any} obj
+   * @param {string} name
+   * @param {string|((val) => boolean)} check
+   */
 	make_watched_property(obj, name, check) {
 		let init_value = obj[name];
 		let value = null;
@@ -144,33 +144,33 @@ module.exports = {
 	},
 
 	/**
-  * Checks if a given object is an atom and has the given component
-  * @memberof Typespess
-  * @param {Typespess.Atom} atom The object to check
-  * @param {string} name The name of the component
-  * @returns {boolean}
-  */
+   * Checks if a given object is an atom and has the given component
+   * @memberof Typespess
+   * @param {Typespess.Atom} atom The object to check
+   * @param {string} name The name of the component
+   * @returns {boolean}
+   */
 	has_component(atom, name) {
 		return atom && atom instanceof Atom && !!atom.components[name];
 	},
 
 	/**
-  * Checks if a given object is an atom
-  * @memberof Typespess
-  * @param {Typespess.Atom} atom The object to check
-  * @returns {boolean}
-  */
+   * Checks if a given object is an atom
+   * @memberof Typespess
+   * @param {Typespess.Atom} atom The object to check
+   * @returns {boolean}
+   */
 	is_atom(atom) {
 		return atom && atom instanceof Atom;
 	},
 
 	/**
-  * Rotates the given direction by the given angle clockwise
-  * @memberof Typespess
-  * @param {number} dir The direction to turn
-  * @param {number} angle The angle to turn it by
-  * @returns {number} The resulting direction
-  */
+   * Rotates the given direction by the given angle clockwise
+   * @memberof Typespess
+   * @param {number} dir The direction to turn
+   * @param {number} angle The angle to turn it by
+   * @returns {number} The resulting direction
+   */
 	turn_dir(dir, angle) {
 		dir = dir & 15;
 		angle = ((angle % 360) + 360) % 360;
@@ -211,10 +211,10 @@ module.exports = {
 	},
 
 	/**
-  * Returns a promise that resolves on setImmediate(). Useful for doing expensive things without blocking the node.js event loop.
-  * @memberof Typespess
-  * @async
-  */
+   * Returns a promise that resolves on setImmediate(). Useful for doing expensive things without blocking the node.js event loop.
+   * @memberof Typespess
+   * @async
+   */
 	stoplag() {
 		return new Promise((resolve) => {
 			setImmediate(resolve);
@@ -222,11 +222,11 @@ module.exports = {
 	},
 
 	/**
-  * Returns a promise that resolves in the given amount of time.
-  * @memberof Typespess
-  * @param {number} time The amount of time before resolving the promise, in milliseconds.
-  * @async
-  */
+   * Returns a promise that resolves in the given amount of time.
+   * @memberof Typespess
+   * @param {number} time The amount of time before resolving the promise, in milliseconds.
+   * @async
+   */
 	sleep(time = 0) {
 		return new Promise((resolve) => {
 			setTimeout(resolve, time);
@@ -234,12 +234,12 @@ module.exports = {
 	},
 
 	/**
-  * Has template literal form, see {@link Typespess.format_html}
-  * Builds a visible chat message object
-  * @param {string} message
-  * @returns {Typespess.ChatMessage} (this object)
-  * @memberof Typespess
-  */
+   * Has template literal form, see {@link Typespess.format_html}
+   * Builds a visible chat message object
+   * @param {string} message
+   * @returns {Typespess.ChatMessage} (this object)
+   * @memberof Typespess
+   */
 	visible_message(a, ...b) {
 		if (typeof a == "string") {
 			return new ChatMessage("see", a);
@@ -248,12 +248,12 @@ module.exports = {
 	},
 
 	/**
-  * Has template literal form, see {@link Typespess.format_html}
-  * Builds an audible chat message object
-  * @param {string} message
-  * @returns {Typespess.ChatMessage} (this object)
-  * @memberof Typespess
-  */
+   * Has template literal form, see {@link Typespess.format_html}
+   * Builds an audible chat message object
+   * @param {string} message
+   * @returns {Typespess.ChatMessage} (this object)
+   * @memberof Typespess
+   */
 	audible_message(a, ...b) {
 		if (typeof a == "string") {
 			return new ChatMessage("hear", a);
@@ -262,22 +262,22 @@ module.exports = {
 	},
 
 	/**
-  * Sends the given chat message to the given clients. There's a tagged template literal form of this function that uses format_html that is demonstrated in the example
-  * @example
-  * to_chat(user, "<span class='warning'>The action failed</span>");
-  *
-  * // If you use this in tagged template literal form:
-  * to_chat`<span class='warning'>The ${this.a} explodes!</span>`(user);
-  * // It's the equivalent to:
-  * to_chat(user, format_html`<span class='warning'>The ${this.a} explodes!</span>`);
-  *
-  * // Be careful, if you do this, the HTML will not be escaped! Use one of the above 2 formats to ensure that your HTML is escaped to prevent XSS exploits.
-  * to_chat(user, `<span class='warning'>The ${this.a} explodes!</span>`);
-  * @memberof Typespess
-  * @see {@link Typespess#format_html}
-  * @param {Typespess.Atom|Client|Array<Typespess.Atom|Client>} target
-  * @param {string} message
-  */
+   * Sends the given chat message to the given clients. There's a tagged template literal form of this function that uses format_html that is demonstrated in the example
+   * @example
+   * to_chat(user, "<span class='warning'>The action failed</span>");
+   *
+   * // If you use this in tagged template literal form:
+   * to_chat`<span class='warning'>The ${this.a} explodes!</span>`(user);
+   * // It's the equivalent to:
+   * to_chat(user, format_html`<span class='warning'>The ${this.a} explodes!</span>`);
+   *
+   * // Be careful, if you do this, the HTML will not be escaped! Use one of the above 2 formats to ensure that your HTML is escaped to prevent XSS exploits.
+   * to_chat(user, `<span class='warning'>The ${this.a} explodes!</span>`);
+   * @memberof Typespess
+   * @see {@link Typespess#format_html}
+   * @param {Typespess.Atom|Client|Array<Typespess.Atom|Client>} target
+   * @param {string} message
+   */
 	to_chat(a, ...b) {
 		if (a instanceof Atom || a instanceof Client) {
 			var cl;
@@ -288,8 +288,8 @@ module.exports = {
 			cl.next_message.to_chat.push(b.join(""));
 		} else if (
 			a instanceof Array &&
-	a.length &&
-	(a[0] instanceof Atom || a[0] instanceof Client || a[0] instanceof Array)
+      a.length &&
+      (a[0] instanceof Atom || a[0] instanceof Client || a[0] instanceof Array)
 		) {
 			for (var item of a) {
 				module.exports.to_chat(item, ...b);
@@ -303,19 +303,19 @@ module.exports = {
 	},
 
 	/**
-  * A tagged template literal function.
-  * Anything in the <code>${}</code> is escaped.
-  * @example
-  * // obj gets html-escaped.
-  * let obj = "<b>hah</b>";
-  * let formatted = format_html`<span class='warning'>The ${str} explodes!</span>`;
-  * console.log(formatted);
-  * // <span class='warning'>The &lt;b&gt;hah&lt;/b&gt; explodes!</span>
-  * @param {TemplateStringsArray} strs
-  * @param {...(string|Typespess.Atom)} tags
-  * @returns {string}
-  * @memberof Typespess
-  */
+   * A tagged template literal function.
+   * Anything in the <code>${}</code> is escaped.
+   * @example
+   * // obj gets html-escaped.
+   * let obj = "<b>hah</b>";
+   * let formatted = format_html`<span class='warning'>The ${str} explodes!</span>`;
+   * console.log(formatted);
+   * // <span class='warning'>The &lt;b&gt;hah&lt;/b&gt; explodes!</span>
+   * @param {TemplateStringsArray} strs
+   * @param {...(string|Typespess.Atom)} tags
+   * @returns {string}
+   * @memberof Typespess
+   */
 	format_html(strs, ...tags) {
 		var out_str = "";
 		for (let i = 0; i < strs.length; i++) {
@@ -355,11 +355,11 @@ module.exports = {
 	},
 
 	/**
-  * Escapes the characters &, <, >, ", and ' using their HTML encodings.
-  * @memberof Typespess
-  * @param {string} str
-  * @returns {string}
-  */
+   * Escapes the characters &, <, >, ", and ' using their HTML encodings.
+   * @memberof Typespess
+   * @param {string} str
+   * @returns {string}
+   */
 	escape_html(str) {
 		return str.replace(/[&<>"']/gi, (chr) => {
 			if (chr == "&") return "&amp;";
@@ -377,28 +377,28 @@ module.exports = {
 	},
 
 	/**
-  * @memberof Typespess
-  * @default 1
-  * @constant
-  */
+   * @memberof Typespess
+   * @default 1
+   * @constant
+   */
 	NORTH: 1,
 	/**
-  * @memberof Typespess
-  * @default 2
-  * @constant
-  */
+   * @memberof Typespess
+   * @default 2
+   * @constant
+   */
 	SOUTH: 2,
 	/**
-  * @memberof Typespess
-  * @default 4
-  * @constant
-  */
+   * @memberof Typespess
+   * @default 4
+   * @constant
+   */
 	EAST: 4,
 	/**
-  * @memberof Typespess
-  * @default 8
-  * @constant
-  */
+   * @memberof Typespess
+   * @default 8
+   * @constant
+   */
 	WEST: 8,
 
 	readonly_traps: {

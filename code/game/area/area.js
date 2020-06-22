@@ -45,7 +45,7 @@ Area.update_map_instance = function (instobj) {
 	for (let brush of instobj.map[_area_brushes][id]) {
 		brush.client_atom.icon = instobj.computed_vars.components.Area.brush_icon;
 		brush.client_atom.icon_state =
-	instobj.computed_vars.components.Area.brush_icon_state;
+      instobj.computed_vars.components.Area.brush_icon_state;
 	}
 };
 
@@ -83,7 +83,7 @@ class AreaBrush extends Component {
 		for (let brush of atom.crosses()) {
 			if (
 				has_component(brush, "AreaBrush") &&
-		brush.c.AreaBrush.area == this.area
+        brush.c.AreaBrush.area == this.area
 			)
 				return;
 		}
@@ -134,7 +134,7 @@ AreaBrush.update_map_instance = function (instobj) {
 	if (area) {
 		instobj.client_atom.icon = area.computed_vars.components.Area.brush_icon;
 		instobj.client_atom.icon_state =
-	area.computed_vars.components.Area.brush_icon_state;
+      area.computed_vars.components.Area.brush_icon_state;
 	}
 };
 

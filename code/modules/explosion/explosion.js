@@ -98,7 +98,7 @@ async function explosion({
 				await stoplag();
 				// first check if it's too far away
 				let dist =
-		accumulated_explosion_block + Math.sqrt(dx * dx + dy * dy) - 0.5;
+          accumulated_explosion_block + Math.sqrt(dx * dx + dy * dy) - 0.5;
 				if (dist > max_range) break; // we don't need to cast any more rays.
 				let this_explosion_block = 0;
 				for (let obj of tile.partial_contents) {

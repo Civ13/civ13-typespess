@@ -28,7 +28,7 @@ module.exports.reagents.SlimeJelly = SlimeJelly;
 Object.assign(SlimeJelly.prototype, {
 	name: "Slime Jelly",
 	description:
-	"A gooey semi-liquid produced from one of the deadliest lifeforms in existence. SO REAL.",
+    "A gooey semi-liquid produced from one of the deadliest lifeforms in existence. SO REAL.",
 	color: [0.5, 0.12, 0.16],
 	toxpwr: 0,
 	taste_description: "slime",
@@ -60,7 +60,7 @@ module.exports.reagents.ZombiePowder = ZombiePowder;
 Object.assign(ZombiePowder.prototype, {
 	name: "Zombie Powder",
 	description:
-	"A strong neurotoxin that puts the subject into a death-like state.",
+    "A strong neurotoxin that puts the subject into a death-like state.",
 	reagent_state: "solid",
 	color: [0.4, 0.6, 0],
 	toxpwr: 0.5,
@@ -109,7 +109,7 @@ module.exports.reagents.SporeToxin = SporeToxin;
 Object.assign(SporeToxin.prototype, {
 	name: "Spore Toxin",
 	description:
-	"A natural toxin produced by blob spores that inhibits vision when ingested.",
+    "A natural toxin produced by blob spores that inhibits vision when ingested.",
 	color: [0.6, 0.8, 0.2],
 	toxpwr: 1,
 });
@@ -119,7 +119,7 @@ module.exports.reagents.BurningSporeToxin = BurningSporeToxin;
 Object.assign(BurningSporeToxin.prototype, {
 	name: "Burning Spore Toxin",
 	description:
-	"A natural toxin produced by blob spores that induces combustion in its victim.",
+    "A natural toxin produced by blob spores that induces combustion in its victim.",
 	color: [0.6, 0.8, 0.2],
 	toxpwr: 0.5,
 	taste_description: "burning",
@@ -130,7 +130,7 @@ module.exports.reagents.ChloralHydrate = ChloralHydrate;
 Object.assign(ChloralHydrate.prototype, {
 	name: "Chloral Hydrate",
 	description:
-	"A powerful sedative that induces confusion and drowsiness before putting its target to sleep.",
+    "A powerful sedative that induces confusion and drowsiness before putting its target to sleep.",
 	reagent_state: "solid",
 	color: [0, 0, 0.4],
 	toxpwr: 0,
@@ -142,7 +142,7 @@ module.exports.reagents.ChloralHydrateDelayed = ChloralHydrateDelayed;
 Object.assign(ChloralHydrateDelayed.prototype, {
 	name: "Chloral Hydrate",
 	description:
-	"A powerful sedative that induces confusion and drowsiness before putting its target to sleep.",
+    "A powerful sedative that induces confusion and drowsiness before putting its target to sleep.",
 	reagent_state: "solid",
 	color: [0, 0, 0.4],
 	toxpwr: 0,
@@ -154,7 +154,7 @@ module.exports.reagents.Beer2 = Beer2;
 Object.assign(Beer2.prototype, {
 	name: "Beer",
 	description:
-	"A specially-engineered sedative disguised as beer. It induces instant sleep in its target.",
+    "A specially-engineered sedative disguised as beer. It induces instant sleep in its target.",
 	color: [0.4, 0.26, 0],
 	metabolization_rate: 0.75,
 	taste_description: "piss water",
@@ -198,7 +198,7 @@ module.exports.reagents.Tirizene = Tirizene;
 Object.assign(Tirizene.prototype, {
 	name: "Tirizene",
 	description:
-	"A nonlethal poison that causes extreme fatigue and weakness in its victim.",
+    "A nonlethal poison that causes extreme fatigue and weakness in its victim.",
 	color: [0.43, 0.16, 0.16],
 	toxpwr: 0,
 });
@@ -208,7 +208,7 @@ module.exports.reagents.Polonium = Polonium;
 Object.assign(Polonium.prototype, {
 	name: "Polonium",
 	description:
-	"An extremely radioactive material in liquid form. Ingestion results in fatal irradiation.",
+    "An extremely radioactive material in liquid form. Ingestion results in fatal irradiation.",
 	reagent_state: "liquid",
 	color: [0.47, 0.47, 0.47],
 	metabolization_rate: 0.0625,
@@ -220,7 +220,7 @@ module.exports.reagents.Histamine = Histamine;
 Object.assign(Histamine.prototype, {
 	name: "Histamine",
 	description:
-	"Histamine's effects become more dangerous depending on the dosage amount. They range from mildly annoying to incredibly lethal.",
+    "Histamine's effects become more dangerous depending on the dosage amount. They range from mildly annoying to incredibly lethal.",
 	reagent_state: "liquid",
 	color: [0.98, 0.39, 0.39],
 	metabolization_rate: 0.125,
@@ -233,7 +233,7 @@ module.exports.reagents.Formaldehyde = Formaldehyde;
 Object.assign(Formaldehyde.prototype, {
 	name: "Formaldehyde",
 	description:
-	"Formaldehyde, on its own, is a fairly weak toxin. It contains trace amounts of Histamine, very rarely making it decay into Histamine..",
+    "Formaldehyde, on its own, is a fairly weak toxin. It contains trace amounts of Histamine, very rarely making it decay into Histamine..",
 	reagent_state: "liquid",
 	color: [0.71, 0, 0.29],
 	metabolization_rate: 0.25,
@@ -245,7 +245,7 @@ module.exports.reagents.Venom = Venom;
 Object.assign(Venom.prototype, {
 	name: "Venom",
 	description:
-	"An exotic poison extracted from highly toxic fauna. Causes scaling amounts of toxin damage and bruising depending and dosage. Often decays into Histamine.",
+    "An exotic poison extracted from highly toxic fauna. Causes scaling amounts of toxin damage and bruising depending and dosage. Often decays into Histamine.",
 	reagent_state: "liquid",
 	color: [0.94, 1, 0.94],
 	metabolization_rate: 0.125,
@@ -257,7 +257,7 @@ module.exports.reagents.Neurotoxin2 = Neurotoxin2;
 Object.assign(Neurotoxin2.prototype, {
 	name: "Neurotoxin",
 	description:
-	"Neurotoxin will inhibit brain function and cause toxin damage before eventually knocking out its victim.",
+    "Neurotoxin will inhibit brain function and cause toxin damage before eventually knocking out its victim.",
 	reagent_state: "liquid",
 	color: [0.39, 0.57, 0.43],
 	metabolization_rate: 0.25,
@@ -269,7 +269,7 @@ module.exports.reagents.Cyanide = Cyanide;
 Object.assign(Cyanide.prototype, {
 	name: "Cyanide",
 	description:
-	"An infamous poison known for its use in assassination. Causes small amounts of toxin damage with a small chance of oxygen damage or a stun.",
+    "An infamous poison known for its use in assassination. Causes small amounts of toxin damage with a small chance of oxygen damage or a stun.",
 	reagent_state: "liquid",
 	color: [0, 0.71, 1],
 	metabolization_rate: 0.0625,
@@ -281,7 +281,7 @@ module.exports.reagents.BadFood = BadFood;
 Object.assign(BadFood.prototype, {
 	name: "Bad Food",
 	description:
-	"The result of some abomination of cookery, food so bad it's toxic.",
+    "The result of some abomination of cookery, food so bad it's toxic.",
 	reagent_state: "liquid",
 	color: [0.84, 0.84, 0.85],
 	metabolization_rate: 0.125,
@@ -294,7 +294,7 @@ module.exports.reagents.ItchingPowder = ItchingPowder;
 Object.assign(ItchingPowder.prototype, {
 	name: "Itching Powder",
 	description:
-	"A powder that induces itching upon contact with the skin. Causes the victim to scratch at their itches and has a very low chance to decay into Histamine.",
+    "A powder that induces itching upon contact with the skin. Causes the victim to scratch at their itches and has a very low chance to decay into Histamine.",
 	reagent_state: "liquid",
 	color: [0.78, 0.78, 0.78],
 	metabolization_rate: 0.2,
@@ -306,7 +306,7 @@ module.exports.reagents.Initropidril = Initropidril;
 Object.assign(Initropidril.prototype, {
 	name: "Initropidril",
 	description:
-	"A powerful poison with insidious effects. It can cause stuns, lethal breathing failure, and cardiac arrest.",
+    "A powerful poison with insidious effects. It can cause stuns, lethal breathing failure, and cardiac arrest.",
 	reagent_state: "liquid",
 	color: [0.5, 0.06, 0.75],
 	metabolization_rate: 0.25,
@@ -318,7 +318,7 @@ module.exports.reagents.Pancuronium = Pancuronium;
 Object.assign(Pancuronium.prototype, {
 	name: "Pancuronium",
 	description:
-	"An undetectable toxin that swiftly incapacitates its victim. May also cause breathing failure.",
+    "An undetectable toxin that swiftly incapacitates its victim. May also cause breathing failure.",
 	reagent_state: "liquid",
 	color: [0.1, 0.31, 0.59],
 	metabolization_rate: 0.125,
@@ -331,7 +331,7 @@ module.exports.reagents.SodiumThiopental = SodiumThiopental;
 Object.assign(SodiumThiopental.prototype, {
 	name: "Sodium Thiopental",
 	description:
-	"Sodium Thiopental induces heavy weakness in its target as well as unconsciousness.",
+    "Sodium Thiopental induces heavy weakness in its target as well as unconsciousness.",
 	reagent_state: "liquid",
 	color: [0.39, 0.59, 0.98],
 	metabolization_rate: 0.375,
@@ -343,7 +343,7 @@ module.exports.reagents.Sulfonal = Sulfonal;
 Object.assign(Sulfonal.prototype, {
 	name: "Sulfonal",
 	description:
-	"A stealthy poison that deals minor toxin damage and eventually puts the target to sleep.",
+    "A stealthy poison that deals minor toxin damage and eventually puts the target to sleep.",
 	reagent_state: "liquid",
 	color: [0.49, 0.76, 0.63],
 	metabolization_rate: 0.0625,
@@ -355,7 +355,7 @@ module.exports.reagents.Amanitin = Amanitin;
 Object.assign(Amanitin.prototype, {
 	name: "Amanitin",
 	description:
-	"A very powerful delayed toxin. Upon full metabolization, a massive amount of toxin damage will be dealt depending on how long it has been in the victim's bloodstream.",
+    "A very powerful delayed toxin. Upon full metabolization, a massive amount of toxin damage will be dealt depending on how long it has been in the victim's bloodstream.",
 	reagent_state: "liquid",
 	color: [1, 1, 1],
 	toxpwr: 0,
@@ -367,7 +367,7 @@ module.exports.reagents.Lipolicide = Lipolicide;
 Object.assign(Lipolicide.prototype, {
 	name: "Lipolicide",
 	description:
-	"A powerful toxin that will destroy fat cells, massively reducing body weight in a short time. More deadly to those without nutriment in their body.",
+    "A powerful toxin that will destroy fat cells, massively reducing body weight in a short time. More deadly to those without nutriment in their body.",
 	taste_description: "mothballs",
 	reagent_state: "liquid",
 	color: [0.94, 1, 0.94],
@@ -380,7 +380,7 @@ module.exports.reagents.Coniine = Coniine;
 Object.assign(Coniine.prototype, {
 	name: "Coniine",
 	description:
-	"Coniine metabolizes extremely slowly, but deals high amounts of toxin damage and stops breathing.",
+    "Coniine metabolizes extremely slowly, but deals high amounts of toxin damage and stops breathing.",
 	reagent_state: "liquid",
 	color: [0.49, 0.76, 0.63],
 	metabolization_rate: 0.03,
@@ -392,7 +392,7 @@ module.exports.reagents.Spewium = Spewium;
 Object.assign(Spewium.prototype, {
 	name: "Spewium",
 	description:
-	"A powerful emetic, causes uncontrollable vomiting. May result in vomiting organs at high doses.",
+    "A powerful emetic, causes uncontrollable vomiting.  May result in vomiting organs at high doses.",
 	reagent_state: "liquid",
 	color: [0.18, 0.4, 0.09],
 	metabolization_rate: 0.5,
@@ -406,7 +406,7 @@ module.exports.reagents.Curare = Curare;
 Object.assign(Curare.prototype, {
 	name: "Curare",
 	description:
-	"Causes slight toxin damage followed by chain-stunning and oxygen damage.",
+    "Causes slight toxin damage followed by chain-stunning and oxygen damage.",
 	reagent_state: "liquid",
 	color: [0.1, 0.1, 0.1],
 	metabolization_rate: 0.0625,
@@ -418,7 +418,7 @@ module.exports.reagents.Heparin = Heparin;
 Object.assign(Heparin.prototype, {
 	name: "Heparin",
 	description:
-	"A powerful anticoagulant. Victims will bleed uncontrollably and suffer scaling bruising.",
+    "A powerful anticoagulant. Victims will bleed uncontrollably and suffer scaling bruising.",
 	reagent_state: "liquid",
 	color: [0.78, 0.78, 0.78],
 	metabolization_rate: 0.1,
@@ -430,7 +430,7 @@ module.exports.reagents.Rotatium = Rotatium;
 Object.assign(Rotatium.prototype, {
 	name: "Rotatium",
 	description:
-	"A constantly swirling, oddly colourful fluid. Causes the consumer's sense of direction and hand-eye coordination to become wild.",
+    "A constantly swirling, oddly colourful fluid. Causes the consumer's sense of direction and hand-eye coordination to become wild.",
 	reagent_state: "liquid",
 	color: [0.67, 0.53, 0.79],
 	metabolization_rate: 0.3,
@@ -443,7 +443,7 @@ module.exports.reagents.Skewium = Skewium;
 Object.assign(Skewium.prototype, {
 	name: "Skewium",
 	description:
-	"A strange, dull coloured liquid that appears to warp back and forth inside its container. Causes any consumer to experience a visual phenomena similar to said warping.",
+    "A strange, dull coloured liquid that appears to warp back and forth inside its container. Causes any consumer to experience a visual phenomena similar to said warping.",
 	reagent_state: "liquid",
 	color: [0.68, 0.74, 0.8],
 	metabolization_rate: 0.4,
@@ -456,7 +456,7 @@ module.exports.reagents.Anacea = Anacea;
 Object.assign(Anacea.prototype, {
 	name: "Anacea",
 	description:
-	"A toxin that quickly purges medicines and metabolizes very slowly.",
+    "A toxin that quickly purges medicines and metabolizes very slowly.",
 	reagent_state: "liquid",
 	color: [0.24, 0.32, 0.2],
 	metabolization_rate: 0.04,
@@ -479,7 +479,7 @@ module.exports.reagents.FAcid = FAcid;
 Object.assign(FAcid.prototype, {
 	name: "Fluorosulfuric acid",
 	description:
-	"Fluorosulfuric acid is an extremely corrosive chemical substance.",
+    "Fluorosulfuric acid is an extremely corrosive chemical substance.",
 	color: [0.31, 0.31, 1],
 	toxpwr: 2,
 	acidpwr: 42.0,
@@ -500,7 +500,7 @@ module.exports.reagents.TiringSolution = TiringSolution;
 Object.assign(TiringSolution.prototype, {
 	name: "Tiring Solution",
 	description:
-	"An extremely weak stamina-toxin that tires out the target. Completely harmless.",
+    "An extremely weak stamina-toxin that tires out the target. Completely harmless.",
 	toxpwr: 0,
 	metabolization_rate: 0.75,
 	taste_description: "tiredness",
@@ -521,7 +521,7 @@ module.exports.reagents.MimesBane = MimesBane;
 Object.assign(MimesBane.prototype, {
 	name: "Mime's Bane",
 	description:
-	"A nonlethal neurotoxin that interferes with the victim's ability to gesture.",
+    "A nonlethal neurotoxin that interferes with the victim's ability to gesture.",
 	color: [0.94, 0.97, 1],
 	toxpwr: 0,
 	taste_description: "stillness",

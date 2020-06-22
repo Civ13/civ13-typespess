@@ -27,11 +27,13 @@ class Tangible extends Component {
 		if (this.anchored) return false;
 		if (
 			this.last_high_pressure_movement_air_cycle <
-	this.a.server.air_controller.ticknum
+      this.a.server.air_controller.ticknum
 		) {
 			var move_prob = 100;
 			if (this.pressure_resistance > 0) {
-				move_prob = (difference / this.pressure_resistance) * PROBABILITY_BASE_PERCENT - PROBABILITY_OFFSET;
+				move_prob =
+          (difference / this.pressure_resistance) * PROBABILITY_BASE_PERCENT -
+          PROBABILITY_OFFSET;
 			}
 			move_prob += pressure_resistance_prob_delta;
 			if (move_prob > PROBABILITY_OFFSET && Math.random() * 100 < move_prob) {
@@ -109,7 +111,10 @@ class Tangible extends Component {
 				let this_dx = this.a.x - oldx;
 				let this_dy = this.a.y - oldy;
 				dist_traveled += Math.sqrt(this_dx * this_dx + this_dy * this_dy);
-				let dist_covered_delay = range > dist_traveled 	? ((range - dist_traveled) * 100) / speed 	: 123456789;
+				let dist_covered_delay =
+          range > dist_traveled
+          	? ((range - dist_traveled) * 100) / speed
+          	: 123456789;
 				await sleep(Math.max(Math.min(dist_covered_delay, 50), 1));
 				if (dist_traveled >= range - 0.001) {
 					this.stop_throw();
@@ -126,13 +131,13 @@ class Tangible extends Component {
 		return projectile.c.Projectile.hit(this.a, 0, def_zone);
 	}
 
-	stop_throw() {return;} // This only has actual code once throw_at is called
+	stop_throw() {} // This only has actual code once throw_at is called
 
 	drop_location() {
 		return this.a.loc;
 	}
 
-	ex_act() {return;}
+	ex_act() {}
 
 	do_attack_animation() {
 		//later
@@ -145,7 +150,7 @@ class Tangible extends Component {
 	adjacent(target) {
 		return (
 			Math.abs(target.x - this.a.x) <= 1.50001 &&
-	Math.abs(target.y - this.a.y) <= 1.50001
+      Math.abs(target.y - this.a.y) <= 1.50001
 		);
 	}
 	can_reach(target) {

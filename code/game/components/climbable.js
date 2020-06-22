@@ -27,11 +27,11 @@ class Climbable extends Component {
 		let from = e.from.atom;
 		if (
 			from &&
-	from == user &&
-	has_component(user, "MobInventory") &&
-	has_component(user, "CarbonMob") &&
-	user.c.Tangible.adjacent(this.a) &&
-	!user.c.LivingMob.nomove_counter
+      from == user &&
+      has_component(user, "MobInventory") &&
+      has_component(user, "CarbonMob") &&
+      user.c.Tangible.adjacent(this.a) &&
+      !user.c.LivingMob.nomove_counter
 		) {
 			visible_message`<span class='warning'>The ${user} starts climbing onto the ${this.a}.</span>`
 				.self`<span class='notice'>You start climbing onto the ${this.a}...</span>`.emit_from(

@@ -91,7 +91,7 @@ class CarbonMob extends Component.Networked {
 			let total_health = this.a.c.LivingMob.health - staminaloss;
 			if (
 				total_health <= combat_defines.HEALTH_THRESHOLD_CRIT &&
-		!this.a.c.LivingMob.stat
+        !this.a.c.LivingMob.stat
 			) {
 				to_chat`<span class='notice'>You're too exhausted to keep going...</span>`(
 					this.a
@@ -112,8 +112,8 @@ class CarbonMob extends Component.Networked {
 			}
 			if (
 				this.a.c.LivingMob.get_damage("oxy") > 50 ||
-		health <= combat_defines.HEALTH_THRESHOLD_FULLCRIT ||
-		this.a.c.LivingMob.effects.Unconscious
+        health <= combat_defines.HEALTH_THRESHOLD_FULLCRIT ||
+        this.a.c.LivingMob.effects.Unconscious
 			) {
 				this.a.c.LivingMob.stat = combat_defines.UNCONSCIOUS;
 			} else {
@@ -130,7 +130,7 @@ class CarbonMob extends Component.Networked {
 		let health_hud = this.a.c.Eye.screen.health;
 		if (!health_hud) return;
 		let health =
-	this.a.c.LivingMob.health - this.a.c.LivingMob.get_damage("stamina");
+      this.a.c.LivingMob.health - this.a.c.LivingMob.get_damage("stamina");
 		let max_health = this.a.c.LivingMob.max_health;
 		let variant;
 		if (this.a.c.LivingMob.stat != combat_defines.DEAD) {
@@ -210,8 +210,8 @@ class CarbonMob extends Component.Networked {
 		}
 
 		let damage =
-	this.a.c.LivingMob.get_damage("brute") +
-	this.a.c.LivingMob.get_damage("burn");
+      this.a.c.LivingMob.get_damage("brute") +
+      this.a.c.LivingMob.get_damage("burn");
 		if (damage >= 0) {
 			let severity = 0;
 			if (damage >= 5) {
@@ -233,9 +233,9 @@ class CarbonMob extends Component.Networked {
 		if (this.a.c.LivingMob.stat == combat_defines.SOFT_CRIT)
 			delay += combat_defines.SOFTCRIT_ADD_SLOWDOWN;
 		let health_deficiency =
-	100 -
-	this.a.c.LivingMob.health +
-	this.a.c.LivingMob.get_damage("stamina");
+      100 -
+      this.a.c.LivingMob.health +
+      this.a.c.LivingMob.get_damage("stamina");
 		if (health_deficiency >= 40) {
 			delay += health_deficiency * 4;
 		}
@@ -255,7 +255,7 @@ class CarbonMob extends Component.Networked {
 	moved(e) {
 		if (
 			!!(e.old.loc && e.old.loc.is_base_loc) !=
-	!!(e.old.loc && e.old.loc.is_base_loc)
+      !!(e.old.loc && e.old.loc.is_base_loc)
 		) {
 			this.update_lying();
 		}
@@ -459,7 +459,7 @@ class CarbonMob extends Component.Networked {
 
 		if (
 			this.uses_blood &&
-	this.a.c.ReagentHolder.volume_of("Blood") < mob_defines.BLOOD_VOLUME_SAFE
+      this.a.c.ReagentHolder.volume_of("Blood") < mob_defines.BLOOD_VOLUME_SAFE
 		)
 			to_chat`<span class='warning'>${t_He} ${t_has} pale skin.</span>`(user);
 

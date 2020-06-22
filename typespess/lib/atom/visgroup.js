@@ -18,9 +18,9 @@ const mob_symbols = require("./mob.js")._symbols;
 class VisibilityGroup {
 	constructor() {
 		/**
-	* Which atoms are changed
-	* @type {Set<Typespess.Atom>}
-	*/
+     * Which atoms are changed
+     * @type {Set<Typespess.Atom>}
+     */
 		this.atoms = new Set();
 		this.atoms.add = chain_func(this.atoms.add, (prev, item) => {
 			let ret = prev();
@@ -37,9 +37,9 @@ class VisibilityGroup {
 			return ret;
 		});
 		/**
-	* Which eyes to show these changes to
-	* @type {Set<Typespess.Atom<Eye>>}
-	*/
+     * Which eyes to show these changes to
+     * @type {Set<Typespess.Atom<Eye>>}
+     */
 		this.viewers = new Set();
 		this.viewers.add = chain_func(this.viewers.add, (prev, item) => {
 			let ret = prev();
@@ -54,9 +54,9 @@ class VisibilityGroup {
 			return ret;
 		});
 		/**
-	* The property changes
-	* @type {Map<string,any>}
-	*/
+     * The property changes
+     * @type {Map<string,any>}
+     */
 		this.overrides = new Map();
 		this.overrides.set = chain_func(this.overrides.set, (prev, key) => {
 			let ret = prev();

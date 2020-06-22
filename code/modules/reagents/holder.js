@@ -37,7 +37,7 @@ class ReagentHolder extends Component {
 
 	add(reagent, amount, { temp } = {}) {
 		let reagent_name =
-	typeof reagent == "string" ? reagent : reagent.constructor.name;
+      typeof reagent == "string" ? reagent : reagent.constructor.name;
 		return this.assume_reagent(reagent_name).add(amount, {
 			reagent: typeof reagent == "object" ? reagent : null,
 			temp,
@@ -90,8 +90,8 @@ class ReagentHolder extends Component {
 		for (let reaction of this.held_reactions) {
 			if (
 				reagent.reactions &&
-		reagent.reactions.get(reagent) &&
-		reagent.reactions.get(reagent) < reagent.volume
+        reagent.reactions.get(reagent) &&
+        reagent.reactions.get(reagent) < reagent.volume
 			)
 				this.held_reactions.delete(reaction);
 		}
@@ -169,8 +169,8 @@ class ReagentHolder extends Component {
 		percent = Math.min(
 			percent,
 			(target.c.ReagentHolder.maximum_volume -
-		target.c.ReagentHolder.total_volume) /
-		this.total_volume
+        target.c.ReagentHolder.total_volume) /
+        this.total_volume
 		);
 		if (percent <= 0) return 0;
 		let amount_transferred = 0;
@@ -215,16 +215,16 @@ class ReagentHolder extends Component {
 			if (!this.should_metabolize_reagent(key, reagent)) continue;
 			if (
 				reagent.overdose_threshold &&
-		reagent.volume >= reagent.overdose_threshold &&
-		!reagent.overdosed
+        reagent.volume >= reagent.overdose_threshold &&
+        !reagent.overdosed
 			) {
 				reagent.overdosed = true;
 				reagent.overdose_start();
 			}
 			if (
 				reagent.addiction_threshold &&
-		reagent.volume >= reagent.addiction_threshold &&
-		!this.addictions.has(key)
+        reagent.volume >= reagent.addiction_threshold &&
+        !this.addictions.has(key)
 			) {
 				let addiction = new reagent.constructor();
 				addiction.holder = this.a;

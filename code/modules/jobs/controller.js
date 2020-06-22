@@ -44,14 +44,14 @@ class JobController {
 		if (mind.restricted_roles.has(job.id)) return false;
 		if (
 			latejoin &&
-	job.total_positions != -1 &&
-	job.current_positions > job.total_positions
+      job.total_positions != -1 &&
+      job.current_positions > job.total_positions
 		)
 			return false;
 		if (
 			!latejoin &&
-	job.spawn_positions != -1 &&
-	job.current_positions > job.spawn_positions
+      job.spawn_positions != -1 &&
+      job.current_positions > job.spawn_positions
 		)
 			return false;
 		return true;
@@ -61,7 +61,7 @@ class JobController {
 		let candidates = [];
 		if (
 			job.spawn_positions != -1 &&
-	job.current_positions > job.spawn_positions
+      job.current_positions > job.spawn_positions
 		)
 			return candidates; // this ain't gonna be useful so let's get out of here.
 		for (let mind of this.unassigned) {
@@ -76,9 +76,9 @@ class JobController {
 		for (let job of _.shuffle(Object.values(this.jobs))) {
 			if (
 				job &&
-		job.id != "assistant" &&
-		!job.departments.includes("command") &&
-		this.can_be_job(mind, job)
+        job.id != "assistant" &&
+        !job.departments.includes("command") &&
+        this.can_be_job(mind, job)
 			) {
 				if (this.assign_role(mind, job)) return true;
 			}
@@ -182,7 +182,7 @@ class JobController {
 		for (let mind of [...this.unassigned]) {
 			if (
 				!this.can_be_job(mind, this.jobs.assistant) &&
-		mind.character_preferences.jobless_role != "none"
+        mind.character_preferences.jobless_role != "none"
 			)
 				this.give_random_job(mind); // you get to roll for random before everyone else just to be sure you don't get assistant. you're so speshul
 		}

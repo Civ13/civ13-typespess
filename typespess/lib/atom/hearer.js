@@ -41,41 +41,41 @@ class Hearer extends Component {
 	}
 
 	/**
-  * Gets the tiles visible to this atom.
-  * @generator
-  * @yields {Location}
-  */
+   * Gets the tiles visible to this atom.
+   * @generator
+   * @yields {Location}
+   */
 	get visible_tiles() {
 		return this[_visible_tiles][Symbol.iterator].bind(this);
 	}
 
 	/**
-  * @param {Typespess.Sound} sound
-  * @abstract
-  */
+   * @param {Typespess.Sound} sound
+   * @abstract
+   */
 	can_hear_sound() {
 		return this.can_hear();
 	}
 
 	/**
-  * @param {Typespess.Atom} [origin]
-  * @abstract
-  */
+   * @param {Typespess.Atom} [origin]
+   * @abstract
+   */
 	can_hear() {
 		return true;
 	}
 
 	/**
-  * @param {Typespess.Atom} origin
-  * @abstract
-  */
+   * @param {Typespess.Atom} origin
+   * @abstract
+   */
 	can_see(atom) {
 		return atom && atom.loc && atom.loc == atom.base_loc;
 	}
 
 	/**
-  * @param {Typespess.Atom} atom
-  */
+   * @param {Typespess.Atom} atom
+   */
 	in_view(atom) {
 		for (var tile of atom.partial_locs())
 			if (tile.hearers.includes(this)) return true;
@@ -83,9 +83,9 @@ class Hearer extends Component {
 	}
 
 	/**
-  * @param {Typespess.ChatMessage} message
-  * @returns {string} The message this atom will be shown
-  */
+   * @param {Typespess.ChatMessage} message
+   * @returns {string} The message this atom will be shown
+   */
 	show_message(message) {
 		var can_hear = this.a.c.Hearer.can_hear(message.emitter);
 		var can_see = this.a.c.Hearer.can_see(message.emitter);

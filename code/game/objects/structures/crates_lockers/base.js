@@ -57,9 +57,9 @@ class LargeContainer extends Component {
 			if (!has_component(atom, "LivingMob")) continue;
 			if (
 				atom.c.Tangible.anchored ||
-		(this.horizontal &&
-		atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY &&
-		atom.density > 0)
+        (this.horizontal &&
+          atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY &&
+          atom.density > 0)
 			) {
 				if (user)
 					to_chat`<span class='danger'>There's something large on top of the ${this.a}, preventing it from opening.</span>`(
@@ -76,9 +76,9 @@ class LargeContainer extends Component {
 			if (!has_component(atom, "LivingMob")) continue;
 			if (
 				atom.c.Tangible.anchored ||
-		(this.horizontal &&
-		atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY &&
-		atom.density > 0)
+        (this.horizontal &&
+          atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY &&
+          atom.density > 0)
 			) {
 				if (user)
 					to_chat`<span class='danger'>There's something large on top of the ${this.a}, preventing it from closing.</span>`(

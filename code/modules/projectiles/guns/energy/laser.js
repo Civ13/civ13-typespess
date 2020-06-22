@@ -29,7 +29,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal.",
+            "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal.",
 				},
 			},
 			name: "laser gun",
@@ -52,7 +52,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice.",
+            "A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice.",
 				},
 			},
 			name: "practice laser gun",
@@ -65,7 +65,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"An older model of the basic lasergun, no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws.",
+            "An older model of the basic lasergun, no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws.",
 				},
 			},
 			name: "retro laser gun",
@@ -82,7 +82,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"First generation lasergun, developed by Nanotrasen. Suffers from ammo issues but its unique ability to recharge its ammo without the need of a magazine helps compensate. You really hope someone has developed a better lasergun while you were in cyro.",
+            "First generation lasergun, developed by Nanotrasen. Suffers from ammo issues but its unique ability to recharge its ammo without the need of a magazine helps compensate. You really hope someone has developed a better lasergun while you were in cyro.",
 				},
 			},
 			name: "laser gun",
@@ -99,7 +99,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"This is an antique laser gun. All craftsmanship is of the highest quality. It is decorated with assistant leather and chrome. The object menaces with spikes of energy. On the item is an image of Space Station 13. The station is exploding.",
+            "This is an antique laser gun. All craftsmanship is of the highest quality. It is decorated with assistant leather and chrome. The object menaces with spikes of energy. On the item is an image of Space Station 13. The station is exploding.",
 				},
 			},
 			name: "antique laser gun",
@@ -124,7 +124,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A retro laser gun modified to fire harmless blue beams of light. Sound effects included!",
+            "A retro laser gun modified to fire harmless blue beams of light. Sound effects included!",
 				},
 			},
 			name: "laser tag gun",
@@ -149,7 +149,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A retro laser gun modified to fire harmless red beams of light. Sound effects included!",
+            "A retro laser gun modified to fire harmless red beams of light. Sound effects included!",
 				},
 			},
 			name: "laser tag gun",

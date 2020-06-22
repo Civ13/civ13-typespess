@@ -13,9 +13,9 @@ const _networked_vars = Symbol("_networked_vars");
  */
 class Component extends EventEmitter {
 	/**
-  * @param {Typespess.Atom} atom
-  * @param {template} template
-  */
+   * @param {Typespess.Atom} atom
+   * @param {template} template
+   */
 	constructor(atom, template) {
 		super();
 		Object.defineProperty(this, "atom", {
@@ -25,9 +25,9 @@ class Component extends EventEmitter {
 			value: atom,
 		});
 		/**
-	* The atom this component belongs to
-	* @type {Typespess.Atom}
-	*/
+     * The atom this component belongs to
+     * @type {Typespess.Atom}
+     */
 		this.atom;
 		if (!this.a.server.atoms_for_components[this.constructor.name]) {
 			this.a.server.atoms_for_components[this.constructor.name] = new Set();
@@ -40,18 +40,18 @@ class Component extends EventEmitter {
 	}
 
 	/**
-  * Alias for {@link Typespess.Component#atom}
-  * @type {Typespess.Atom}
-  * @instance
-  */
+   * Alias for {@link Typespess.Component#atom}
+   * @type {Typespess.Atom}
+   * @instance
+   */
 	get a() {
 		return this.atom;
 	}
 
 	/**
-  * Called when the atom this component belongs to is destroyed.
-  * @abstract
-  */
+   * Called when the atom this component belongs to is destroyed.
+   * @abstract
+   */
 	destroy() {
 		this.a.server.atoms_for_components[this.constructor.name].delete(this.atom);
 	}
@@ -105,10 +105,10 @@ class NetworkedComponent extends Component {
 	}
 
 	/**
-  * Makes the property with the specified name networked.
-  * @param {string} name
-  * @param {Function} on_set A function that is called when this property gets changed. If it returns falsish, the property does not get set.
-  */
+   * Makes the property with the specified name networked.
+   * @param {string} name
+   * @param {Function} on_set A function that is called when this property gets changed. If it returns falsish, the property does not get set.
+   */
 	add_networked_var(name, on_set) {
 		if (this[_networked_vars].hasOwnProperty(name)) return;
 		this[_networked_vars][name] = this[name];
@@ -130,9 +130,9 @@ class NetworkedComponent extends Component {
 	}
 
 	/**
-  * Returns an object with all the networked vars on this component
-  * @returns {Object}
-  */
+   * Returns an object with all the networked vars on this component
+   * @returns {Object}
+   */
 	get_networked_vars() {
 		// This isn't as slow as you think it is.
 		return Object.assign({}, this[_networked_vars]);

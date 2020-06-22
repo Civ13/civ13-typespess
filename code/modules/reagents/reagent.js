@@ -24,7 +24,7 @@ class Reagent extends EventEmitter {
 		}
 		amount = Math.min(
 			this.holder.c.ReagentHolder.maximum_volume -
-		this.holder.c.ReagentHolder.total_volume,
+        this.holder.c.ReagentHolder.total_volume,
 			amount
 		);
 		if (amount <= 0) return 0;
@@ -33,10 +33,10 @@ class Reagent extends EventEmitter {
 		}
 		if (this.holder)
 			this.holder.c.ReagentHolder.temperature =
-		(this.holder.c.ReagentHolder.temperature *
-		this.holder.c.ReagentHolder.total_volume +
-		amount * temp) /
-		(this.holder.c.ReagentHolder.total_volume + amount);
+        (this.holder.c.ReagentHolder.temperature *
+          this.holder.c.ReagentHolder.total_volume +
+          amount * temp) /
+        (this.holder.c.ReagentHolder.total_volume + amount);
 		this.volume += amount;
 		this.emit("added", amount);
 		if (this.holder) this.holder.c.ReagentHolder.emit("added", this, amount);
@@ -52,7 +52,7 @@ class Reagent extends EventEmitter {
 		return amount;
 	}
 
-	overdose_process() {return;}
+	overdose_process() {}
 	overdose_start() {
 		to_chat`<span class='userdanger'>You feel like you took too much of ${this.name}!</span>`(
 			this.holder
@@ -93,13 +93,13 @@ class Reagent extends EventEmitter {
 		this.remove(this.metabolization_rate * dt);
 	}
 
-	reaction_obj() {return;}
+	reaction_obj() {}
 	reaction_mob(target, { method, volume } = {}) {
 		if (method == "vapor") {
 			if (volume > 0.5) target.c.ReagentHolder.add(this, volume);
 		}
 	}
-	reaction_turf() {return;}
+	reaction_turf() {}
 }
 Object.assign(Reagent.prototype, {
 	name: "Reagent",
@@ -149,12 +149,12 @@ class ReagentReaction {
 		}
 		if (
 			this.min_temp != null &&
-	container.c.ReagentHolder.temperature < this.min_temp
+      container.c.ReagentHolder.temperature < this.min_temp
 		)
 			return 1;
 		if (
 			this.max_temp != null &&
-	container.c.ReagentHolder.temperature > this.max_temp
+      container.c.ReagentHolder.temperature > this.max_temp
 		)
 			return 1;
 		return 0;
@@ -188,8 +188,8 @@ class ReagentReaction {
 			multiplier = Math.min(
 				multiplier,
 				(container.c.ReagentHolder.maximum_volume -
-		container.c.ReagentHolder.total_volume) /
-		dv
+          container.c.ReagentHolder.total_volume) /
+          dv
 			);
 		}
 		multiplier = Math.floor(multiplier);

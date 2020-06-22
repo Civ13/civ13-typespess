@@ -28,7 +28,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "bl_suit",
@@ -51,7 +51,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A tasteful grey jumpsuit that reminds you of the good old days.",
+            "A tasteful grey jumpsuit that reminds you of the good old days.",
 				},
 				Item: {
 					inhand_icon_state: "gy_suit",
@@ -73,7 +73,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "b_suit",
@@ -95,7 +95,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "g_suit",
@@ -159,7 +159,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "r_suit",
@@ -181,7 +181,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "w_suit",
@@ -203,7 +203,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "y_suit",
@@ -225,7 +225,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "b_suit",
@@ -247,7 +247,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "b_suit",
@@ -269,7 +269,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "p_suit",
@@ -291,7 +291,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "g_suit",
@@ -313,7 +313,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "lb_suit",
@@ -335,7 +335,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "lb_suit",
@@ -357,7 +357,7 @@ module.exports.templates = {
 			components: {
 				Examine: {
 					desc:
-			"A standard issue colored jumpsuit. Variety is the spice of life!",
+            "A standard issue colored jumpsuit. Variety is the spice of life!",
 				},
 				Item: {
 					inhand_icon_state: "r_suit",

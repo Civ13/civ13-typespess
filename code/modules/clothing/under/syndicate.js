@@ -28,7 +28,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A non-descript and slightly suspicious looking turtleneck with digital camouflage cargo pants.",
+            "A non-descript and slightly suspicious looking turtleneck with digital camouflage cargo pants.",
 				},
 			},
 			name: "tactical turtleneck",
@@ -64,7 +64,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"Just looking at it makes you want to buy an SKS, go into the woods, and -operate-.",
+            "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-.",
 				},
 			},
 			name: "tacticool turtleneck",
@@ -100,7 +100,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A double seamed tactical turtleneck disguised as a civilian grade silk suit. Intended for the most formal operator. The collar is really sharp.",
+            "A double seamed tactical turtleneck disguised as a civilian grade silk suit. Intended for the most formal operator. The collar is really sharp.",
 				},
 			},
 			name: "tactical turtleneck suit",
@@ -168,7 +168,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"Badly translated labels tell you to clean this in Vodka. Great for squatting in.",
+            "Badly translated labels tell you to clean this in Vodka. Great for squatting in.",
 				},
 			},
 			name: "ratnik 5 tracksuit",
@@ -202,7 +202,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"With a suit lined with this many pockets, you are ready to operate.",
+            "With a suit lined with this many pockets, you are ready to operate.",
 				},
 			},
 			name: "combat uniform",

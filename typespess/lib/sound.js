@@ -10,12 +10,12 @@ const _clients = Symbol("_clients");
  */
 class Sound {
 	/**
-  * @param {Typespess} server
-  * @param {Object} sndobj
-  * @param {string} sndobj.path
-  * @param {number} sndobj.playback_rate How fast to play it, also affects pitch
-  * @param {boolean} sndobj.vary Multiplies playback_rate by a number between 0.75 and 1.25
-  */
+   * @param {Typespess} server
+   * @param {Object} sndobj
+   * @param {string} sndobj.path
+   * @param {number} sndobj.playback_rate How fast to play it, also affects pitch
+   * @param {boolean} sndobj.vary Multiplies playback_rate by a number between 0.75 and 1.25
+   */
 	constructor(server, sndobj) {
 		Object.assign(this, sndobj);
 		Object.defineProperty(this, "id", {
@@ -45,7 +45,7 @@ class Sound {
 				/{([0-9]+)-([0-9]+)}/g,
 				(match, from, to) => {
 					let result =
-			"" + (Math.floor(Math.random() * (1 + +to - +from)) + +from);
+            "" + (Math.floor(Math.random() * (1 + +to - +from)) + +from);
 					// Hey idiots making libraries on NPM
 					// Left padding is a native part of javascript! No need to include left-pad.
 					if (from.length == to.length)
@@ -57,8 +57,8 @@ class Sound {
 	}
 
 	/**
-  * @param {Array<Typespess.Atom<Mob>|Client>|Typespess.Atom<Mob>|Client} mobs
-  */
+   * @param {Array<Typespess.Atom<Mob>|Client>|Typespess.Atom<Mob>|Client} mobs
+   */
 	play_to(mobs) {
 		if (!(mobs instanceof Array)) mobs = [mobs];
 		if (this.playing != null)
@@ -87,9 +87,9 @@ class Sound {
 	}
 
 	/**
-  * Emits the sound from the given atom
-  * @param {Typespess.Atom} emitter
-  */
+   * Emits the sound from the given atom
+   * @param {Typespess.Atom} emitter
+   */
 	emit_from(atom) {
 		if (!this.emitter) this.emitter = { x: atom.x, y: atom.y };
 		var hearers = new Set();
@@ -102,7 +102,7 @@ class Sound {
 		for (let hearer of hearers) {
 			if (
 				has_component(hearer, "Mob") &&
-		hearer.c.Hearer.can_hear_sound(this)
+        hearer.c.Hearer.can_hear_sound(this)
 			) {
 				clients.push(hearer.c.Mob.client);
 			}
@@ -111,8 +111,8 @@ class Sound {
 	}
 
 	/**
-  * Makes the sound stop playing.
-  */
+   * Makes the sound stop playing.
+   */
 	stop() {
 		if (!this.playing) return;
 		this[_playing] = false;
@@ -124,8 +124,8 @@ class Sound {
 	}
 
 	/**
-  * @type {boolean}
-  */
+   * @type {boolean}
+   */
 	get playing() {
 		return this[_playing];
 	}

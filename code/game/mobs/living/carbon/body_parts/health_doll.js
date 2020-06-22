@@ -22,8 +22,8 @@ class HealthDoll extends Component {
 				this.a.overlays[zone] = {
 					icon: `icons/ui/screen_gen/${zone}${Math.ceil(
 						((bp.c.BodyPart.brute_damage + bp.c.BodyPart.burn_damage) /
-			bp.c.BodyPart.max_damage) *
-			5
+              bp.c.BodyPart.max_damage) *
+              5
 					)}`,
 				};
 		}

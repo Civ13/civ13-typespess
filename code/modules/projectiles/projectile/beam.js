@@ -29,7 +29,7 @@ BeamProjectile.template = {
 		name: "laser",
 		icon_state: "laser",
 		pass_flags:
-	pass_flags.PASSTABLE | pass_flags.PASSGLASS | pass_flags.PASSGRILLE,
+      pass_flags.PASSTABLE | pass_flags.PASSGLASS | pass_flags.PASSGRILLE,
 	},
 };
 

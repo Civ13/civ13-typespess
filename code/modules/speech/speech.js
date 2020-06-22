@@ -16,7 +16,7 @@ class SpeechEmitter extends Component {
 					let client = this.a.c.Mob.client;
 					if (
 						client.last_say_message &&
-			this.a.server.now() < client.last_say_message + 300
+            this.a.server.now() < client.last_say_message + 300
 					) {
 						to_chat`You're doing that too fast!`(client);
 					} else {
@@ -55,7 +55,7 @@ class SpeechEmitter extends Component {
 			let new_message = message.clone();
 			new_message.radio_freq = 1459;
 			for (let target of this.a.server.atoms_for_components["SpeechHearer"] ||
-		[]) {
+        []) {
 				target.c.SpeechHearer.hear_message(new_message, target);
 			}
 		}

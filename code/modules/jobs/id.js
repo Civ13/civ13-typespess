@@ -64,7 +64,7 @@ CardId.template = {
 			},
 			Examine: {
 				desc:
-		"A card used to provide ID and determine access across the station.",
+          "A card used to provide ID and determine access across the station.",
 			},
 		},
 		name: "identification card",

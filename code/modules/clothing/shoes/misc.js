@@ -17,7 +17,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"The prankster's standard-issue clowning shoes. Damn, they're huge!",
+            "The prankster's standard-issue clowning shoes. Damn, they're huge!",
 				},
 			},
 			name: "clown shoes",
@@ -36,13 +36,13 @@ module.exports.templates = {
 				Item: {
 					inhand_icon_state: "jackboots",
 					inhand_lhand_icon:
-			"icons/mob/inhands/equipment/security_lefthand.png",
+            "icons/mob/inhands/equipment/security_lefthand.png",
 					inhand_rhand_icon:
-			"icons/mob/inhands/equipment/security_righthand.png",
+            "icons/mob/inhands/equipment/security_righthand.png",
 				},
 				Examine: {
 					desc:
-			"Nanotrasen-issue Engineering lace-up work boots for the especially blue-collar.",
+            "Nanotrasen-issue Engineering lace-up work boots for the especially blue-collar.",
 				},
 			},
 			name: "work boots",
@@ -61,13 +61,13 @@ module.exports.templates = {
 				Item: {
 					inhand_icon_state: "jackboots",
 					inhand_lhand_icon:
-			"icons/mob/inhands/equipment/security_lefthand.png",
+            "icons/mob/inhands/equipment/security_lefthand.png",
 					inhand_rhand_icon:
-			"icons/mob/inhands/equipment/security_righthand.png",
+            "icons/mob/inhands/equipment/security_righthand.png",
 				},
 				Examine: {
 					desc:
-			"Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time.",
+            "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time.",
 				},
 			},
 			name: "jackboots",
@@ -88,13 +88,13 @@ module.exports.templates = {
 				Item: {
 					inhand_icon_state: "jackboots",
 					inhand_lhand_icon:
-			"icons/mob/inhands/equipment/security_lefthand.png",
+            "icons/mob/inhands/equipment/security_lefthand.png",
 					inhand_rhand_icon:
-			"icons/mob/inhands/equipment/security_righthand.png",
+            "icons/mob/inhands/equipment/security_righthand.png",
 				},
 				Examine: {
 					desc:
-			"Steel-toed mining boots for mining in hazardous environments. Very good at keeping toes uncrushed.",
+            "Steel-toed mining boots for mining in hazardous environments. Very good at keeping toes uncrushed.",
 				},
 			},
 			name: "mining boots",

@@ -30,7 +30,7 @@ module.exports.reagents.LeaperVenom = LeaperVenom;
 Object.assign(LeaperVenom.prototype, {
 	name: "Leaper venom",
 	description:
-	"A toxin spat out by leapers that, while harmless in small doses, quickly creates a toxic reaction if too much is in the body.",
+    "A toxin spat out by leapers that, while harmless in small doses, quickly creates a toxic reaction if too much is in the body.",
 	color: [0.5, 0.12, 0.16],
 	toxpwr: 0,
 	taste_description: "french cuisine",
@@ -83,7 +83,7 @@ module.exports.reagents.Water = Water;
 Object.assign(Water.prototype, {
 	name: "Water",
 	description:
-	"An ubiquitous chemical substance that is composed of hydrogen and oxygen.",
+    "An ubiquitous chemical substance that is composed of hydrogen and oxygen.",
 	color: [0.67, 0.67, 0.67, 0.47],
 	taste_description: "water",
 	cooling_temperature: 2,
@@ -114,7 +114,7 @@ Object.assign(WeldingFuel.prototype, {
 	glass_icon_state: "dr_gibb_glass",
 	glass_name: "glass of welder fuel",
 	glass_desc:
-	"Unless you're an industrial tool, this is probably not safe for consumption.",
+    "Unless you're an industrial tool, this is probably not safe for consumption.",
 });
 
 class UnholyWater extends WeldingFuel {} // /datum/reagent/fuel/unholywater
@@ -138,7 +138,7 @@ module.exports.reagents.Godblood = Godblood;
 Object.assign(Godblood.prototype, {
 	name: "Godblood",
 	description:
-	"Slowly heals all damage types. Has a rather high overdose threshold. Glows with mysterious power.",
+    "Slowly heals all damage types. Has a rather high overdose threshold. Glows with mysterious power.",
 	overdose_threshold: 150,
 });
 
@@ -147,7 +147,7 @@ module.exports.reagents.SpaceLube = SpaceLube;
 Object.assign(SpaceLube.prototype, {
 	name: "Space Lube",
 	description:
-	"Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them. giggity.",
+    "Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them. giggity.",
 	color: [0, 0.61, 0.66],
 	taste_description: "cherry",
 });
@@ -172,7 +172,7 @@ Object.assign(StableMutationToxin.prototype, {
 	metabolization_rate: Infinity,
 	taste_description: "slime",
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... human.</span>",
+    "<span class='danger'>The pain subsides. You feel... human.</span>",
 });
 
 class MutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/classic
@@ -182,7 +182,7 @@ Object.assign(MutationToxin.prototype, {
 	description: "A corruptive toxin produced by slimes.",
 	color: [0.07, 0.74, 0.37],
 	mutationtext:
-	"<span class='danger'>The pain subsides. Your whole body feels like slime.</span>",
+    "<span class='danger'>The pain subsides. Your whole body feels like slime.</span>",
 });
 
 class LizardMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/lizard
@@ -192,7 +192,7 @@ Object.assign(LizardMutationToxin.prototype, {
 	description: "A lizarding toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... scaly.</span>",
+    "<span class='danger'>The pain subsides. You feel... scaly.</span>",
 });
 
 class FlyMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/fly
@@ -202,7 +202,7 @@ Object.assign(FlyMutationToxin.prototype, {
 	description: "An insectifying toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... buzzy.</span>",
+    "<span class='danger'>The pain subsides. You feel... buzzy.</span>",
 });
 
 class PodpersonMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/pod
@@ -212,7 +212,7 @@ Object.assign(PodpersonMutationToxin.prototype, {
 	description: "A vegetalizing toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... plantlike.</span>",
+    "<span class='danger'>The pain subsides. You feel... plantlike.</span>",
 });
 
 class ImperfectMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/jelly
@@ -222,7 +222,7 @@ Object.assign(ImperfectMutationToxin.prototype, {
 	description: "An jellyfying toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... wobbly.</span>",
+    "<span class='danger'>The pain subsides. You feel... wobbly.</span>",
 });
 
 class GolemMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/golem
@@ -232,7 +232,7 @@ Object.assign(GolemMutationToxin.prototype, {
 	description: "A crystal toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... rocky.</span>",
+    "<span class='danger'>The pain subsides. You feel... rocky.</span>",
 });
 
 class AbductorMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/abductor
@@ -242,7 +242,7 @@ Object.assign(AbductorMutationToxin.prototype, {
 	description: "An alien toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... alien.</span>",
+    "<span class='danger'>The pain subsides. You feel... alien.</span>",
 });
 
 class AndroidMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/android
@@ -252,7 +252,7 @@ Object.assign(AndroidMutationToxin.prototype, {
 	description: "A robotic toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... artificial.</span>",
+    "<span class='danger'>The pain subsides. You feel... artificial.</span>",
 });
 
 class SkeletonMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/skeleton
@@ -262,7 +262,7 @@ Object.assign(SkeletonMutationToxin.prototype, {
 	description: "A scary toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... spooky.</span>",
+    "<span class='danger'>The pain subsides. You feel... spooky.</span>",
 });
 
 class ZombieMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/zombie
@@ -272,7 +272,7 @@ Object.assign(ZombieMutationToxin.prototype, {
 	description: "An undead toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... undead.</span>",
+    "<span class='danger'>The pain subsides. You feel... undead.</span>",
 });
 
 class AshMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/ash
@@ -282,7 +282,7 @@ Object.assign(AshMutationToxin.prototype, {
 	description: "An ashen toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... savage.</span>",
+    "<span class='danger'>The pain subsides. You feel... savage.</span>",
 });
 
 class ShadowMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/shadow
@@ -292,7 +292,7 @@ Object.assign(ShadowMutationToxin.prototype, {
 	description: "A dark toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... darker.</span>",
+    "<span class='danger'>The pain subsides. You feel... darker.</span>",
 });
 
 class PlasmaMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/plasma
@@ -302,7 +302,7 @@ Object.assign(PlasmaMutationToxin.prototype, {
 	description: "A plasma-based toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... flammable.</span>",
+    "<span class='danger'>The pain subsides. You feel... flammable.</span>",
 });
 
 class UnstableMutationToxin extends StableMutationToxin {} // /datum/reagent/stableslimetoxin/unstable
@@ -310,10 +310,10 @@ module.exports.reagents.UnstableMutationToxin = UnstableMutationToxin;
 Object.assign(UnstableMutationToxin.prototype, {
 	name: "Unstable Mutation Toxin",
 	description:
-	"An unstable and unpredictable corruptive toxin produced by slimes.",
+    "An unstable and unpredictable corruptive toxin produced by slimes.",
 	color: [0.37, 1, 0.23],
 	mutationtext:
-	"<span class='danger'>The pain subsides. You feel... different.</span>",
+    "<span class='danger'>The pain subsides. You feel... different.</span>",
 });
 
 class MulliganToxin extends Reagent {} // /datum/reagent/mulligan
@@ -321,7 +321,7 @@ module.exports.reagents.MulliganToxin = MulliganToxin;
 Object.assign(MulliganToxin.prototype, {
 	name: "Mulligan Toxin",
 	description:
-	"This toxin will rapidly change the DNA of human beings. Commonly used by Syndicate spies and assassins in need of an emergency ID change.",
+    "This toxin will rapidly change the DNA of human beings. Commonly used by Syndicate spies and assassins in need of an emergency ID change.",
 	color: [0.37, 1, 0.23],
 	metabolization_rate: Infinity,
 	taste_description: "slime",
@@ -351,7 +351,7 @@ module.exports.reagents.Serotrotium = Serotrotium;
 Object.assign(Serotrotium.prototype, {
 	name: "Serotrotium",
 	description:
-	"A chemical compound that promotes concentrated production of the serotonin neurotransmitter in humans.",
+    "A chemical compound that promotes concentrated production of the serotonin neurotransmitter in humans.",
 	color: [0.13, 0.13, 0.25],
 	metabolization_rate: 0.125,
 	taste_description: "bitterness",
@@ -362,7 +362,7 @@ module.exports.reagents.Oxygen = Oxygen;
 Object.assign(Oxygen.prototype, {
 	name: "Oxygen",
 	description:
-	"A colorless, odorless gas. Grows on trees but is still pretty valuable.",
+    "A colorless, odorless gas. Grows on trees but is still pretty valuable.",
 	reagent_state: "gas",
 	color: [0.5, 0.5, 0.5],
 	taste_mult: 0,
@@ -373,7 +373,7 @@ module.exports.reagents.Copper = Copper;
 Object.assign(Copper.prototype, {
 	name: "Copper",
 	description:
-	"A highly ductile metal. Things made out of copper aren't very durable, but it makes a decent material for electrical wiring.",
+    "A highly ductile metal. Things made out of copper aren't very durable, but it makes a decent material for electrical wiring.",
 	reagent_state: "solid",
 	color: [0.43, 0.23, 0.03],
 	taste_description: "metal",
@@ -384,7 +384,7 @@ module.exports.reagents.Nitrogen = Nitrogen;
 Object.assign(Nitrogen.prototype, {
 	name: "Nitrogen",
 	description:
-	"A colorless, odorless, tasteless gas. A simple asphyxiant that can silently displace vital oxygen.",
+    "A colorless, odorless, tasteless gas. A simple asphyxiant that can silently displace vital oxygen.",
 	reagent_state: "gas",
 	color: [0.5, 0.5, 0.5],
 	taste_mult: 0,
@@ -395,7 +395,7 @@ module.exports.reagents.Hydrogen = Hydrogen;
 Object.assign(Hydrogen.prototype, {
 	name: "Hydrogen",
 	description:
-	"A colorless, odorless, nonmetallic, tasteless, highly combustible diatomic gas.",
+    "A colorless, odorless, nonmetallic, tasteless, highly combustible diatomic gas.",
 	reagent_state: "gas",
 	color: [0.5, 0.5, 0.5],
 	taste_mult: 0,
@@ -406,7 +406,7 @@ module.exports.reagents.Potassium = Potassium;
 Object.assign(Potassium.prototype, {
 	name: "Potassium",
 	description:
-	"A soft, low-melting solid that can easily be cut with a knife. Reacts violently with water.",
+    "A soft, low-melting solid that can easily be cut with a knife. Reacts violently with water.",
 	reagent_state: "solid",
 	color: [0.63, 0.63, 0.63],
 	taste_description: "sweetness",
@@ -417,7 +417,7 @@ module.exports.reagents.Mercury = Mercury;
 Object.assign(Mercury.prototype, {
 	name: "Mercury",
 	description:
-	"A curious metal that's a liquid at room temperature. Neurodegenerative and very bad for the mind.",
+    "A curious metal that's a liquid at room temperature. Neurodegenerative and very bad for the mind.",
 	color: [0.28, 0.28, 0.28],
 	taste_mult: 0,
 });
@@ -427,7 +427,7 @@ module.exports.reagents.Sulfur = Sulfur;
 Object.assign(Sulfur.prototype, {
 	name: "Sulfur",
 	description:
-	"A sickly yellow solid mostly known for its nasty smell. It's actually much more helpful than it looks in biochemisty.",
+    "A sickly yellow solid mostly known for its nasty smell. It's actually much more helpful than it looks in biochemisty.",
 	reagent_state: "solid",
 	color: [0.75, 0.55, 0],
 	taste_description: "rotten eggs",
@@ -438,7 +438,7 @@ module.exports.reagents.Carbon = Carbon;
 Object.assign(Carbon.prototype, {
 	name: "Carbon",
 	description:
-	"A crumbly black solid that, while unexciting on an physical level, forms the base of all known life. Kind of a big deal.",
+    "A crumbly black solid that, while unexciting on an physical level, forms the base of all known life. Kind of a big deal.",
 	reagent_state: "solid",
 	color: [0.11, 0.07, 0],
 	taste_description: "sour chalk",
@@ -449,7 +449,7 @@ module.exports.reagents.Chlorine = Chlorine;
 Object.assign(Chlorine.prototype, {
 	name: "Chlorine",
 	description:
-	"A pale yellow gas that's well known as an oxidizer. While it forms many harmless molecules in its elemental form it is far from harmless.",
+    "A pale yellow gas that's well known as an oxidizer. While it forms many harmless molecules in its elemental form it is far from harmless.",
 	reagent_state: "gas",
 	color: [0.5, 0.5, 0.5],
 	taste_description: "chlorine",
@@ -460,7 +460,7 @@ module.exports.reagents.Fluorine = Fluorine;
 Object.assign(Fluorine.prototype, {
 	name: "Fluorine",
 	description:
-	"A comically-reactive chemical element. The universe does not want this stuff to exist in this form in the slightest.",
+    "A comically-reactive chemical element. The universe does not want this stuff to exist in this form in the slightest.",
 	reagent_state: "gas",
 	color: [0.5, 0.5, 0.5],
 	taste_description: "acid",
@@ -471,7 +471,7 @@ module.exports.reagents.Sodium = Sodium;
 Object.assign(Sodium.prototype, {
 	name: "Sodium",
 	description:
-	"A soft silver metal that can easily be cut with a knife. It's not salt just yet, so refrain from putting in on your chips.",
+    "A soft silver metal that can easily be cut with a knife. It's not salt just yet, so refrain from putting in on your chips.",
 	reagent_state: "solid",
 	color: [0.5, 0.5, 0.5],
 	taste_description: "salty metal",
@@ -482,7 +482,7 @@ module.exports.reagents.Phosphorus = Phosphorus;
 Object.assign(Phosphorus.prototype, {
 	name: "Phosphorus",
 	description:
-	"A ruddy red powder that burns readily. Though it comes in many colors, the general theme is always the same.",
+    "A ruddy red powder that burns readily. Though it comes in many colors, the general theme is always the same.",
 	reagent_state: "solid",
 	color: [0.51, 0.16, 0.16],
 	taste_description: "vinegar",
@@ -493,7 +493,7 @@ module.exports.reagents.Lithium = Lithium;
 Object.assign(Lithium.prototype, {
 	name: "Lithium",
 	description:
-	"A silver metal, its claim to fame is its remarkably low density. Using it is a bit too effective in calming oneself down.",
+    "A silver metal, its claim to fame is its remarkably low density. Using it is a bit too effective in calming oneself down.",
 	reagent_state: "solid",
 	color: [0.5, 0.5, 0.5],
 	taste_description: "metal",
@@ -504,7 +504,7 @@ module.exports.reagents.Glycerol = Glycerol;
 Object.assign(Glycerol.prototype, {
 	name: "Glycerol",
 	description:
-	"Glycerol is a simple polyol compound. Glycerol is sweet-tasting and of low toxicity.",
+    "Glycerol is a simple polyol compound. Glycerol is sweet-tasting and of low toxicity.",
 	color: [0.5, 0.5, 0.5],
 	taste_description: "sweetness",
 });
@@ -514,7 +514,7 @@ module.exports.reagents.Radium = Radium;
 Object.assign(Radium.prototype, {
 	name: "Radium",
 	description:
-	"Radium is an alkaline earth metal. It is extremely radioactive.",
+    "Radium is an alkaline earth metal. It is extremely radioactive.",
 	reagent_state: "solid",
 	color: [0.78, 0.78, 0.78],
 	taste_description: "the colour blue and regret",
@@ -531,7 +531,7 @@ module.exports.reagents.SpaceCleaner = SpaceCleaner;
 Object.assign(SpaceCleaner.prototype, {
 	name: "Space cleaner",
 	description:
-	"A compound used to clean things. Now with 50% more sodium hypochlorite!",
+    "A compound used to clean things. Now with 50% more sodium hypochlorite!",
 	color: [0.65, 0.94, 0.93],
 	taste_description: "sourness",
 });
@@ -560,7 +560,7 @@ module.exports.reagents.Gold = Gold;
 Object.assign(Gold.prototype, {
 	name: "Gold",
 	description:
-	"Gold is a dense, soft, shiny metal and the most malleable and ductile metal known.",
+    "Gold is a dense, soft, shiny metal and the most malleable and ductile metal known.",
 	reagent_state: "solid",
 	color: [0.97, 0.77, 0.19],
 	taste_description: "expensive metal",
@@ -571,7 +571,7 @@ module.exports.reagents.Silver = Silver;
 Object.assign(Silver.prototype, {
 	name: "Silver",
 	description:
-	"A soft, white, lustrous transition metal, it has the highest electrical conductivity of any element and the highest thermal conductivity of any metal.",
+    "A soft, white, lustrous transition metal, it has the highest electrical conductivity of any element and the highest thermal conductivity of any metal.",
 	reagent_state: "solid",
 	color: [0.82, 0.82, 0.82],
 	taste_description: "expensive yet reasonable metal",
@@ -582,7 +582,7 @@ module.exports.reagents.Uranium = Uranium;
 Object.assign(Uranium.prototype, {
 	name: "Uranium",
 	description:
-	"A silvery-white metallic chemical element in the actinide series, weakly radioactive.",
+    "A silvery-white metallic chemical element in the actinide series, weakly radioactive.",
 	reagent_state: "solid",
 	color: [0.72, 0.72, 0.75],
 	taste_description: "the inside of a reactor",
@@ -593,7 +593,7 @@ module.exports.reagents.BluespaceDust = BluespaceDust;
 Object.assign(BluespaceDust.prototype, {
 	name: "Bluespace Dust",
 	description:
-	"A dust composed of microscopic bluespace crystals, with minor space-warping properties.",
+    "A dust composed of microscopic bluespace crystals, with minor space-warping properties.",
 	reagent_state: "solid",
 	color: [0, 0, 0.8],
 	taste_description: "fizzling blue",
@@ -604,7 +604,7 @@ module.exports.reagents.Aluminium = Aluminium;
 Object.assign(Aluminium.prototype, {
 	name: "Aluminium",
 	description:
-	"A silvery white and ductile member of the boron group of chemical elements.",
+    "A silvery white and ductile member of the boron group of chemical elements.",
 	reagent_state: "solid",
 	color: [0.66, 0.66, 0.66],
 	taste_description: "metal",
@@ -615,7 +615,7 @@ module.exports.reagents.Silicon = Silicon;
 Object.assign(Silicon.prototype, {
 	name: "Silicon",
 	description:
-	"A tetravalent metalloid, silicon is less reactive than its chemical analog carbon.",
+    "A tetravalent metalloid, silicon is less reactive than its chemical analog carbon.",
 	reagent_state: "solid",
 	color: [0.66, 0.66, 0.66],
 	taste_mult: 0,
@@ -626,7 +626,7 @@ module.exports.reagents.EZClean = EZClean;
 Object.assign(EZClean.prototype, {
 	name: "EZ Clean",
 	description:
-	"A powerful, acidic cleaner sold by Waffle Co. Affects organic matter while leaving other objects unaffected.",
+    "A powerful, acidic cleaner sold by Waffle Co. Affects organic matter while leaving other objects unaffected.",
 	metabolization_rate: 0.75,
 	taste_description: "acid",
 });
@@ -646,7 +646,7 @@ module.exports.reagents.Impedrezene = Impedrezene;
 Object.assign(Impedrezene.prototype, {
 	name: "Impedrezene",
 	description:
-	"Impedrezene is a narcotic that impedes one's ability by slowing down the higher brain cell functions.",
+    "Impedrezene is a narcotic that impedes one's ability by slowing down the higher brain cell functions.",
 	color: [0.78, 0.65, 0.86],
 	taste_description: "numbness",
 });
@@ -685,7 +685,7 @@ module.exports.reagents.Fluorosurfactant = Fluorosurfactant;
 Object.assign(Fluorosurfactant.prototype, {
 	name: "Fluorosurfactant",
 	description:
-	"A perfluoronated sulfonic acid that forms a foam when mixed with water.",
+    "A perfluoronated sulfonic acid that forms a foam when mixed with water.",
 	color: [0.62, 0.42, 0.22],
 	taste_description: "metal",
 });
@@ -695,7 +695,7 @@ module.exports.reagents.FoamingAgent = FoamingAgent;
 Object.assign(FoamingAgent.prototype, {
 	name: "Foaming agent",
 	description:
-	"An agent that yields metallic foam when mixed with light metal and a strong acid.",
+    "An agent that yields metallic foam when mixed with light metal and a strong acid.",
 	reagent_state: "solid",
 	color: [0.4, 0.29, 0.39],
 	taste_description: "metal",
@@ -706,7 +706,7 @@ module.exports.reagents.SmartFoamingAgent = SmartFoamingAgent;
 Object.assign(SmartFoamingAgent.prototype, {
 	name: "Smart foaming agent",
 	description:
-	"An agent that yields metallic foam which conforms to area boundaries when mixed with light metal and a strong acid.",
+    "An agent that yields metallic foam which conforms to area boundaries when mixed with light metal and a strong acid.",
 	reagent_state: "solid",
 	color: [0.4, 0.29, 0.39],
 	taste_description: "metal",
@@ -717,7 +717,7 @@ module.exports.reagents.Ammonia = Ammonia;
 Object.assign(Ammonia.prototype, {
 	name: "Ammonia",
 	description:
-	"A caustic substance commonly used in fertilizer or household cleaners.",
+    "A caustic substance commonly used in fertilizer or household cleaners.",
 	reagent_state: "gas",
 	color: [0.25, 0.25, 0.19],
 	taste_description: "mordant",
@@ -738,7 +738,7 @@ Object.assign(CarbonDioxide.prototype, {
 	name: "Carbon Dioxide",
 	reagent_state: "gas",
 	description:
-	"A gas commonly produced by burning carbon fuels. You're constantly producing this in your lungs.",
+    "A gas commonly produced by burning carbon fuels. You're constantly producing this in your lungs.",
 	color: [0.69, 0.69, 0.69],
 	taste_description: "something unknowable",
 });
@@ -748,7 +748,7 @@ module.exports.reagents.NitrousOxide = NitrousOxide;
 Object.assign(NitrousOxide.prototype, {
 	name: "Nitrous Oxide",
 	description:
-	"A potent oxidizer used as fuel in rockets and as an anaesthetic during surgery.",
+    "A potent oxidizer used as fuel in rockets and as an anaesthetic during surgery.",
 	reagent_state: "liquid",
 	metabolization_rate: 0.75,
 	color: [0.5, 0.5, 0.5],
@@ -760,7 +760,7 @@ module.exports.reagents.Stimulum = Stimulum;
 Object.assign(Stimulum.prototype, {
 	name: "Stimulum",
 	description:
-	"An unstable experimental gas that greatly increases the energy of those that inhale it",
+    "An unstable experimental gas that greatly increases the energy of those that inhale it",
 	reagent_state: "gas",
 	metabolization_rate: 0.75,
 	color: "E1A116",
@@ -793,7 +793,7 @@ module.exports.reagents.CrayonPowder = CrayonPowder;
 Object.assign(CrayonPowder.prototype, {
 	name: "Crayon Powder",
 	description:
-	"A powder made by grinding down crayons, good for colouring chemical reagents.",
+    "A powder made by grinding down crayons, good for colouring chemical reagents.",
 	reagent_state: "solid",
 	color: [1, 1, 1],
 	taste_description: "the back of class",
@@ -867,7 +867,7 @@ module.exports.reagents.PlantNutriment = PlantNutriment;
 Object.assign(PlantNutriment.prototype, {
 	name: "Generic nutriment",
 	description:
-	"Some kind of nutriment. You can't really tell what it is. You should probably report it, along with how you obtained it.",
+    "Some kind of nutriment. You can't really tell what it is. You should probably report it, along with how you obtained it.",
 	color: [0, 0, 0],
 	tox_prob: 0,
 	taste_description: "plant food",
@@ -887,7 +887,7 @@ module.exports.reagents.Left4Zed = Left4Zed;
 Object.assign(Left4Zed.prototype, {
 	name: "Left 4 Zed",
 	description:
-	"Unstable nutriment that makes plants mutate more often than usual.",
+    "Unstable nutriment that makes plants mutate more often than usual.",
 	color: [0.1, 0.12, 0.3],
 	tox_prob: 25,
 });
@@ -916,7 +916,7 @@ module.exports.reagents.StablePlasma = StablePlasma;
 Object.assign(StablePlasma.prototype, {
 	name: "Stable Plasma",
 	description:
-	"Non-flammable plasma locked into a liquid form that cannot ignite or become gaseous/solid.",
+    "Non-flammable plasma locked into a liquid form that cannot ignite or become gaseous/solid.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 	taste_description: "bitterness",
@@ -928,7 +928,7 @@ module.exports.reagents.Iodine = Iodine;
 Object.assign(Iodine.prototype, {
 	name: "Iodine",
 	description:
-	"Commonly added to table salt as a nutrient. On its own it tastes far less pleasing.",
+    "Commonly added to table salt as a nutrient. On its own it tastes far less pleasing.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 	taste_description: "metal",
@@ -939,7 +939,7 @@ module.exports.reagents.Carpet = Carpet;
 Object.assign(Carpet.prototype, {
 	name: "Carpet",
 	description:
-	"For those that need a more creative way to roll out a red carpet.",
+    "For those that need a more creative way to roll out a red carpet.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 	taste_description: "carpet",
@@ -950,7 +950,7 @@ module.exports.reagents.Bromine = Bromine;
 Object.assign(Bromine.prototype, {
 	name: "Bromine",
 	description:
-	"A brownish liquid that's highly reactive. Useful for stopping free radicals, but not intended for human consumption.",
+    "A brownish liquid that's highly reactive. Useful for stopping free radicals, but not intended for human consumption.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 	taste_description: "chemicals",
@@ -961,7 +961,7 @@ module.exports.reagents.Phenol = Phenol;
 Object.assign(Phenol.prototype, {
 	name: "Phenol",
 	description:
-	"An aromatic ring of carbon with a hydroxyl group. A useful precursor to some medicines, but has no healing properties on its own.",
+    "An aromatic ring of carbon with a hydroxyl group. A useful precursor to some medicines, but has no healing properties on its own.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 	taste_description: "acid",
@@ -972,7 +972,7 @@ module.exports.reagents.Ash = Ash;
 Object.assign(Ash.prototype, {
 	name: "Ash",
 	description:
-	"Supposedly phoenixes rise from these, but you've never seen it.",
+    "Supposedly phoenixes rise from these, but you've never seen it.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 	taste_description: "ash",
@@ -983,7 +983,7 @@ module.exports.reagents.Acetone = Acetone;
 Object.assign(Acetone.prototype, {
 	name: "Acetone",
 	description:
-	"A slick, slightly carcinogenic liquid. Has a multitude of mundane uses in everyday life.",
+    "A slick, slightly carcinogenic liquid. Has a multitude of mundane uses in everyday life.",
 	reagent_state: "liquid",
 	color: [0.78, 0.65, 0.86],
 	taste_description: "acid",
@@ -1034,7 +1034,7 @@ module.exports.reagents.Lye = Lye;
 Object.assign(Lye.prototype, {
 	name: "Lye",
 	description:
-	"Also known as sodium hydroxide. As a profession making this is somewhat underwhelming.",
+    "Also known as sodium hydroxide. As a profession making this is somewhat underwhelming.",
 	reagent_state: "liquid",
 	color: [1, 1, 0.84],
 	taste_description: "acid",
@@ -1143,7 +1143,7 @@ module.exports.reagents.RoyalBeeJelly = RoyalBeeJelly;
 Object.assign(RoyalBeeJelly.prototype, {
 	name: "royal bee jelly",
 	description:
-	"Royal Bee Jelly, if injected into a Queen Space Bee said bee will split into two bees.",
+    "Royal Bee Jelly, if injected into a Queen Space Bee said bee will split into two bees.",
 	color: [0, 1, 0.5],
 	taste_description: "strange honey",
 });
@@ -1153,7 +1153,7 @@ module.exports.reagents.Romerol = Romerol;
 Object.assign(Romerol.prototype, {
 	name: "Romerol",
 	description:
-	"Romerol is a highly experimental bioterror agent which causes dormant nodules to be etched into the grey matter of the subject. These nodules only become active upon death of the host, upon which, the secondary structures activate and take control of the host body.",
+    "Romerol is a highly experimental bioterror agent which causes dormant nodules to be etched into the grey matter of the subject. These nodules only become active upon death of the host, upon which, the secondary structures activate and take control of the host body.",
 	color: [0.07, 0.21, 0.14],
 	metabolization_rate: Infinity,
 	can_synth: 0,
@@ -1165,7 +1165,7 @@ module.exports.reagents.Magillitis = Magillitis;
 Object.assign(Magillitis.prototype, {
 	name: "Magillitis",
 	description:
-	"An experimental serum which causes rapid muscular growth in Hominidae. Side-affects may include hypertrichosis, violent outbursts, and an unending affinity for bananas.",
+    "An experimental serum which causes rapid muscular growth in Hominidae. Side-affects may include hypertrichosis, violent outbursts, and an unending affinity for bananas.",
 	reagent_state: "liquid",
 	color: [0, 0.94, 0.25],
 });
@@ -1175,7 +1175,7 @@ module.exports.reagents.GrowthSerum = GrowthSerum;
 Object.assign(GrowthSerum.prototype, {
 	name: "Growth Serum",
 	description:
-	"A commercial chemical designed to help older men in the bedroom.",
+    "A commercial chemical designed to help older men in the bedroom.",
 	color: [1, 0, 0],
 	taste_description: "bitterness",
 });

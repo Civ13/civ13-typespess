@@ -78,8 +78,8 @@ class Gun extends Component {
 		let angle = angle_offset + (Math.atan2(dy, dx) * 180) / Math.PI;
 		if (
 			!this.a.c.Item.slot ||
-	this.a.c.Item.slot.mob != user ||
-	!this.a.c.Item.slot.props.is_hand_slot
+      this.a.c.Item.slot.mob != user ||
+      !this.a.c.Item.slot.props.is_hand_slot
 		) {
 			return false;
 		}
@@ -99,9 +99,9 @@ class Gun extends Component {
 					user,
 					message,
 					point_blank:
-			Math.max(target.x - user.x, target.y - user.y) <= 1.5
-				? target
-				: null,
+            Math.max(target.x - user.x, target.y - user.y) <= 1.5
+            	? target
+            	: null,
 				});
 			} else {
 				this.shoot_with_empty_chamber({ user });
@@ -148,7 +148,7 @@ class Gun extends Component {
 	can_trigger(user) {
 		if (
 			!has_component(user, "MobInventory") ||
-	!user.c.MobInventory.can_use_guns(this.a)
+      !user.c.MobInventory.can_use_guns(this.a)
 		)
 			return false;
 		return true;
@@ -165,7 +165,7 @@ class Gun extends Component {
 		return true;
 	}
 
-	update_icon() {return;}
+	update_icon() {}
 }
 
 Gun.loadBefore = ["Item", "BeltItem"];

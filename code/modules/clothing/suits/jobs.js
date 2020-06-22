@@ -262,7 +262,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"An 18th-century multi-purpose trenchcoat. Someone who wears this means serious business.",
+            "An 18th-century multi-purpose trenchcoat. Someone who wears this means serious business.",
 				},
 			},
 			name: "trenchcoat",
@@ -429,7 +429,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"This jacket is for those special occasions when a security officer isn't required to wear their armor.",
+            "This jacket is for those special occasions when a security officer isn't required to wear their armor.",
 				},
 			},
 			name: "security officer's jacket",
@@ -449,7 +449,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"Perfectly suited for the warden that wants to leave an impression of style on those who visit the brig.",
+            "Perfectly suited for the warden that wants to leave an impression of style on those who visit the brig.",
 				},
 			},
 			name: "warden's jacket",
@@ -469,7 +469,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"This piece of clothing was specifically designed for asserting superior authority.",
+            "This piece of clothing was specifically designed for asserting superior authority.",
 				},
 			},
 			name: "head of security's jacket",
@@ -520,7 +520,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"Both fashionable and lightly armoured, this jacket is favoured by treasure hunters the galaxy over.",
+            "Both fashionable and lightly armoured, this jacket is favoured by treasure hunters the galaxy over.",
 				},
 			},
 			name: "treasure hunter's coat",

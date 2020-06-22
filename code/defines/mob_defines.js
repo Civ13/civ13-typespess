@@ -44,9 +44,9 @@ module.exports.BODYPART_ORGANIC = 1;
 module.exports.BODYPART_ROBOTIC = 2;
 
 module.exports.DEFAULT_BODYPART_ICON_ORGANIC =
- "icons/mob/human_parts_greyscale.dmi";
+  "icons/mob/human_parts_greyscale.dmi";
 module.exports.DEFAULT_BODYPART_ICON_ROBOTIC =
- "icons/mob/augmentation/augments.dmi";
+  "icons/mob/augmentation/augments.dmi";
 
 module.exports.MONKEY_BODYPART = "monkey";
 module.exports.ALIEN_BODYPART = "alien";

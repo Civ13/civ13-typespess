@@ -153,8 +153,8 @@ class StorageItem extends Component {
 	attack_hand(prev, mob) {
 		if (
 			this.a.c.Item.slot &&
-	this.a.c.Item.slot.mob == mob &&
-	this.a.c.Item.slot.id != mob.c.MobInventory.active_hand
+      this.a.c.Item.slot.mob == mob &&
+      this.a.c.Item.slot.id != mob.c.MobInventory.active_hand
 		) {
 			if (this.is_showing_to(mob)) {
 				this.hide_from(mob);
@@ -263,7 +263,7 @@ class StorageItem extends Component {
 
 		if (
 			has_component(item, "StorageItem") &&
-	item.c.Item.size >= this.a.c.Item.size
+      item.c.Item.size >= this.a.c.Item.size
 		) {
 			if (user && !stop_messages)
 				to_chat`<span class='warning'>The ${this.a} cannot hold ${item} as it's a storage item of the same size!</span>`(
@@ -297,7 +297,7 @@ class StorageItem extends Component {
 	is_showing_to(user) {
 		return (
 			has_component(user, "Eye") &&
-	user.components.Eye[_current_storage_item] == this.a
+      user.components.Eye[_current_storage_item] == this.a
 		);
 	}
 

@@ -27,7 +27,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's a suit worn by those with the know-how to achieve the position of \"Research Director\". Its fabric provides minor protection from biological contaminants.",
+            "It's a suit worn by those with the know-how to achieve the position of \"Research Director\". Its fabric provides minor protection from biological contaminants.",
 				},
 			},
 			name: "research director's vest suit",
@@ -61,7 +61,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"Maybe you'll engineer your own half-man, half-pig creature some day. Its fabric provides minor protection from biological contaminants.",
+            "Maybe you'll engineer your own half-man, half-pig creature some day. Its fabric provides minor protection from biological contaminants.",
 				},
 			},
 			name: "research director's tan suit",
@@ -95,7 +95,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"A dark purple turtleneck and tan khakis, for a director with a superior sense of style.",
+            "A dark purple turtleneck and tan khakis, for a director with a superior sense of style.",
 				},
 			},
 			name: "research director's turtleneck",
@@ -113,7 +113,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's a slimming black with reinforced seams; great for industrial work.",
+            "It's a slimming black with reinforced seams; great for industrial work.",
 				},
 			},
 			name: "roboticist's jumpsuit",
@@ -146,7 +146,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's made of a special fiber that provides minor protection against explosives. It has markings that denote the wearer as a scientist.",
+            "It's made of a special fiber that provides minor protection against explosives. It has markings that denote the wearer as a scientist.",
 				},
 			},
 			name: "scientist's jumpsuit",
@@ -180,7 +180,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's a jumpsuit worn by those with the experience to be \"Chief Medical Officer\". It provides minor biological protection.",
+            "It's a jumpsuit worn by those with the experience to be \"Chief Medical Officer\". It provides minor biological protection.",
 				},
 			},
 			name: "chief medical officer's jumpsuit",
@@ -212,7 +212,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's made of a special fiber that gives special protection against biohazards. It has a chemist rank stripe on it.",
+            "It's made of a special fiber that gives special protection against biohazards. It has a chemist rank stripe on it.",
 				},
 			},
 			name: "chemist's jumpsuit",
@@ -244,7 +244,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's made of a special fiber that gives special protection against biohazards. It has a genetics rank stripe on it.",
+            "It's made of a special fiber that gives special protection against biohazards. It has a genetics rank stripe on it.",
 				},
 			},
 			name: "geneticist's jumpsuit",
@@ -276,7 +276,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's made of a special fiber that gives special protection against biohazards. It has a virologist rank stripe on it.",
+            "It's made of a special fiber that gives special protection against biohazards. It has a virologist rank stripe on it.",
 				},
 			},
 			name: "virologist's jumpsuit",
@@ -311,7 +311,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's a jumpsuit commonly worn by nursing staff in the medical department.",
+            "It's a jumpsuit commonly worn by nursing staff in the medical department.",
 				},
 			},
 			name: "nurse's suit",
@@ -343,7 +343,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's made of a special fiber that provides minor protection against biohazards. It has a cross on the chest denoting that the wearer is trained medical personnel.",
+            "It's made of a special fiber that provides minor protection against biohazards. It has a cross on the chest denoting that the wearer is trained medical personnel.",
 				},
 			},
 			name: "medical doctor's jumpsuit",
@@ -378,7 +378,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's made of a special fiber that provides minor protection against biohazards. This one is in baby blue.",
+            "It's made of a special fiber that provides minor protection against biohazards. This one is in baby blue.",
 				},
 			},
 			name: "medical scrubs",
@@ -413,7 +413,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's made of a special fiber that provides minor protection against biohazards. This one is in dark green.",
+            "It's made of a special fiber that provides minor protection against biohazards. This one is in dark green.",
 				},
 			},
 			name: "medical scrubs",
@@ -448,7 +448,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"It's made of a special fiber that provides minor protection against biohazards. This one is in deep purple.",
+            "It's made of a special fiber that provides minor protection against biohazards. This one is in deep purple.",
 				},
 			},
 			name: "medical scrubs",

@@ -31,8 +31,8 @@ class Cable extends Component {
 		let d2 = +match[2];
 		if (
 			![0, 1, 2, 4, 5, 6, 8, 9].includes(d1) ||
-	![1, 2, 4, 5, 6, 8, 9, 10].includes(d2) ||
-	d1 >= d2
+      ![1, 2, 4, 5, 6, 8, 9, 10].includes(d2) ||
+      d1 >= d2
 		) {
 			console.warn(new Error(`Invalid cable icon_state ${this.a.icon_state}`));
 		}
@@ -55,7 +55,7 @@ class Cable extends Component {
 	attack_by(prev, item, user) {
 		if (
 			has_component(item, "Tool") &&
-	item.c.Tool.can_use("Wirecutters", user)
+      item.c.Tool.can_use("Wirecutters", user)
 		) {
 			item.c.Tool.used("Wirecutters");
 			this.a.c.Destructible.deconstruct(true);
@@ -197,7 +197,7 @@ class Cable extends Component {
 				let end_other = other.c.Cable.get_end(n_other);
 				if (
 					Math.abs(end_this[0] - end_other[0]) < 0.00001 &&
-		Math.abs(end_this[1] - end_other[1]) < 0.00001
+          Math.abs(end_this[1] - end_other[1]) < 0.00001
 				)
 					return true;
 			}
@@ -223,7 +223,7 @@ Cable.template = {
 			},
 			Examine: {
 				desc:
-		"A flexible, superconducting insulated cable for heavy-duty power transfer.",
+          "A flexible, superconducting insulated cable for heavy-duty power transfer.",
 			},
 		},
 		name: "power cable",
@@ -235,7 +235,7 @@ Cable.template = {
 
 Cable.update_map_instance = function (instobj) {
 	instobj.client_atom.color =
-	cable_colors[instobj.computed_vars.components.Cable.cable_color];
+    cable_colors[instobj.computed_vars.components.Cable.cable_color];
 };
 
 class StackCable extends Component {
@@ -266,8 +266,8 @@ class StackCable extends Component {
 
 		if (
 			target_cable &&
-	target_cable.c.Cable.d1 == 0 &&
-	target_dir != target_cable.c.Cable.d2
+      target_cable.c.Cable.d1 == 0 &&
+      target_dir != target_cable.c.Cable.d2
 		) {
 			let orig_dir = target_cable.c.Cable.d2;
 			let target_cable_loc = target_cable.fine_loc;

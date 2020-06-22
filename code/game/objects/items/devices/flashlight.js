@@ -142,7 +142,7 @@ module.exports.templates = {
 				},
 				Examine: {
 					desc:
-			"Only a clown would think to make a ghetto banana-shaped lamp. Even has a goofy pullstring.",
+            "Only a clown would think to make a ghetto banana-shaped lamp. Even has a goofy pullstring.",
 				},
 			},
 			icon_state: "bananalamp",

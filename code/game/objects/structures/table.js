@@ -47,7 +47,7 @@ class Table extends Component {
 				return true;
 			} else if (
 				item.c.Tool.can_use("Screwdriver", user) &&
-		this.deconstruction_ready
+        this.deconstruction_ready
 			) {
 				item.c.Tool.used("Screwdriver");
 				to_chat`<span class='notice'>You start disassembling ${this.a}...</span>`(
@@ -158,7 +158,7 @@ Table.template = {
 			},
 			Examine: {
 				desc:
-		"A square piece of metal standing on four metal legs. It can not move.",
+          "A square piece of metal standing on four metal legs. It can not move.",
 			},
 		},
 		name: "table",

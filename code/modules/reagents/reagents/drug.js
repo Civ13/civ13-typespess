@@ -25,7 +25,7 @@ module.exports.reagents.Nicotine = Nicotine;
 Object.assign(Nicotine.prototype, {
 	name: "Nicotine",
 	description:
-	"Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage.",
+    "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage.",
 	reagent_state: "liquid",
 	color: [0.38, 0.65, 0.52],
 	addiction_threshold: 30,
@@ -37,7 +37,7 @@ module.exports.reagents.Menthol = Menthol;
 Object.assign(Menthol.prototype, {
 	name: "Menthol",
 	description:
-	"Tastes naturally minty, and imparts a very mild numbing sensation.",
+    "Tastes naturally minty, and imparts a very mild numbing sensation.",
 	taste_description: "mint",
 	reagent_state: "liquid",
 	color: [0.5, 0.69, 0.61],
@@ -48,7 +48,7 @@ module.exports.reagents.Crank = Crank;
 Object.assign(Crank.prototype, {
 	name: "Crank",
 	description:
-	"Reduces stun times by about 200%. If overdosed or addicted it will deal significant Toxin, Brute and Brain damage.",
+    "Reduces stun times by about 200%. If overdosed or addicted it will deal significant Toxin, Brute and Brain damage.",
 	reagent_state: "liquid",
 	color: [0.98, 0, 0.78],
 	overdose_threshold: 20,
@@ -60,7 +60,7 @@ module.exports.reagents.Krokodil = Krokodil;
 Object.assign(Krokodil.prototype, {
 	name: "Krokodil",
 	description:
-	"Cools and calms you down. If overdosed it will deal significant Brain and Toxin damage. If addicted it will begin to deal fatal amounts of Brute damage as the subject's skin falls off.",
+    "Cools and calms you down. If overdosed it will deal significant Brain and Toxin damage. If addicted it will begin to deal fatal amounts of Brute damage as the subject's skin falls off.",
 	reagent_state: "liquid",
 	color: [0, 0.39, 0.71],
 	overdose_threshold: 20,
@@ -72,7 +72,7 @@ module.exports.reagents.Methamphetamine = Methamphetamine;
 Object.assign(Methamphetamine.prototype, {
 	name: "Methamphetamine",
 	description:
-	"Reduces stun times by about 300%, speeds the user up, and allows the user to quickly recover stamina while dealing a small amount of Brain damage. If overdosed the subject will move randomly, laugh randomly, drop items and suffer from Toxin and Brain damage. If addicted the subject will constantly jitter and drool, before becoming dizzy and losing motor control and eventually suffer heavy toxin damage.",
+    "Reduces stun times by about 300%, speeds the user up, and allows the user to quickly recover stamina while dealing a small amount of Brain damage. If overdosed the subject will move randomly, laugh randomly, drop items and suffer from Toxin and Brain damage. If addicted the subject will constantly jitter and drool, before becoming dizzy and losing motor control and eventually suffer heavy toxin damage.",
 	reagent_state: "liquid",
 	color: [0.98, 0.98, 0.98],
 	overdose_threshold: 20,
@@ -85,7 +85,7 @@ module.exports.reagents.BathSalts = BathSalts;
 Object.assign(BathSalts.prototype, {
 	name: "Bath Salts",
 	description:
-	"Makes you nearly impervious to stuns and grants a stamina regeneration buff, but you will be a nearly uncontrollable tramp-bearded raving lunatic.",
+    "Makes you nearly impervious to stuns and grants a stamina regeneration buff, but you will be a nearly uncontrollable tramp-bearded raving lunatic.",
 	reagent_state: "liquid",
 	color: [0.98, 0.98, 0.98],
 	overdose_threshold: 20,
@@ -98,7 +98,7 @@ module.exports.reagents.Aranesp = Aranesp;
 Object.assign(Aranesp.prototype, {
 	name: "Aranesp",
 	description:
-	"Amps you up and gets you going, fixes all stamina damage you might have but can cause toxin and oxygen damage..",
+    "Amps you up and gets you going, fixes all stamina damage you might have but can cause toxin and oxygen damage..",
 	reagent_state: "liquid",
 	color: [0.47, 1, 0.94],
 });
