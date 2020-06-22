@@ -15,8 +15,8 @@ class Outfit {
 		);
 	}
 
-	pre_equip() {}
-	post_equip() {}
+	pre_equip() {return;}
+	post_equip() {return;}
 
 	equip(target, visuals_only = false) {
 		let clone = Object.create(this);

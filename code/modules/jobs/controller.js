@@ -9,18 +9,7 @@ class JobController {
 		this.assigned = new Set(); // those assigned roles that spawn on the station.
 		this.job_landmarks = {};
 
-		this.minimal_access = false;
-
-		this.importModule(require("./job_types/assistant.js"));
-		this.importModule(require("./job_types/cargo.js"));
-		this.importModule(require("./job_types/chaplain.js"));
-		this.importModule(require("./job_types/command.js"));
-		this.importModule(require("./job_types/civilian.js"));
-		this.importModule(require("./job_types/engineering.js"));
-		this.importModule(require("./job_types/medical.js"));
-		this.importModule(require("./job_types/science.js"));
-		this.importModule(require("./job_types/security.js"));
-		this.importModule(require("./job_types/service.js"));
+		this.importModule(require("./job_types/nomad.js"));
 	}
 
 	assign_role(mind, job, { latejoin = false, run_checks = true } = {}) {
@@ -76,7 +65,7 @@ class JobController {
 		for (let job of _.shuffle(Object.values(this.jobs))) {
 			if (
 				job &&
-		job.id != "assistant" &&
+		job.id != "nomad" &&
 		!job.departments.includes("command") &&
 		this.can_be_job(mind, job)
 			) {
@@ -84,54 +73,6 @@ class JobController {
 			}
 		}
 		return false;
-	}
-
-	//This method is called before the level loop of divide_occupations() and will try to select a head,
-	//ignoring ALL non-head preferences for every level until it locates a head or runs out of levels to check
-	//This is basically to ensure that there's atleast a few heads in the round
-	fill_head_position() {
-		for (let level of [3, 2, 1]) {
-			for (let job of _.shuffle(Object.values(this.jobs))) {
-				if (!job.departments.includes("command")) continue;
-				let candidates = this.find_occupation_candidates(job, level);
-				if (!candidates.length) continue;
-				let candidate = _.sample(candidates);
-				if (this.assign_role(candidate, job)) return true;
-			}
-		}
-		return false;
-	}
-
-	check_head_positions(level) {
-		for (let job of _.shuffle(Object.values(this.jobs))) {
-			if (!job.departments.includes("command")) continue;
-			let candidates = this.find_occupation_candidates(job, level);
-			if (!candidates.length) continue;
-			let candidate = _.sample(candidates);
-			this.assign_role(candidate, job);
-		}
-	}
-
-	fill_ai_position() {
-		// we don't even have AI's yet, but when we do this will assign an AI position
-		let job = this.jobs.ai;
-		if (!job)
-		// There's no AI job implemented yet? Wow, who could have guessed.
-			return false;
-		let success = false;
-		for (let i = job.spawn_positions - 1; i >= 0; i--) {
-			for (let level of [3, 2, 1]) {
-				let candidates = this.find_occupation_candidates(job, level);
-				if (candidates.length) {
-					let candidate = _.sample(candidates);
-					if (this.assign_role(candidate, job)) {
-						success = true;
-						break;
-					}
-				}
-			}
-		}
-		return success;
 	}
 
 	importModule(mod) {
@@ -149,22 +90,11 @@ class JobController {
 	divide_occupations() {
 		if (this.unassigned.size == 0) return false;
 
-		if (20 > this.unassigned.size) {
-			this.minimal_access = false;
-		}
-		else this.minimal_access = true;
-
 		// people who want to be assistants, sure, go on.
-		for (let candidate of this.find_occupation_candidates(this.jobs.assistant,1)) {
-			this.assign_role(candidate, this.jobs.assistant);
+		for (let candidate of this.find_occupation_candidates(this.jobs.nomad,1)) {
+			this.assign_role(candidate, this.jobs.nomad);
 		}
-
-		this.fill_head_position();
-		this.fill_ai_position();
-
 		for (let level of [3, 2, 1]) {
-			this.check_head_positions(level);
-
 			for (let mind of _.shuffle([...this.unassigned])) {
 				for (let job of _.shuffle(Object.values(this.jobs))) {
 					if (!job) continue;
@@ -181,7 +111,7 @@ class JobController {
 
 		for (let mind of [...this.unassigned]) {
 			if (
-				!this.can_be_job(mind, this.jobs.assistant) &&
+				!this.can_be_job(mind, this.jobs.nomad) &&
 		mind.character_preferences.jobless_role != "none"
 			)
 				this.give_random_job(mind); // you get to roll for random before everyone else just to be sure you don't get assistant. you're so speshul
@@ -193,8 +123,8 @@ class JobController {
 
 		// for those who wanted to be assistant
 		for (let mind of [...this.unassigned]) {
-			if (mind.character_preferences.jobless_role == "assistant")
-				this.assign_role(mind, this.jobs.assistant);
+			if (mind.character_preferences.jobless_role == "nomad")
+				this.assign_role(mind, this.jobs.nomad);
 			else this.reject_player(mind);
 		}
 
@@ -206,7 +136,7 @@ class JobController {
 				// you rolled antag, *and* you're jobbanned from assistant *and* you can't get literally any other job
 				// you may now feel good about being the greatest edge case in the history of edge cases.
 				// oh yeah and just this once you get to be assistant even though you're jobbanned. edge case.
-				this.assign_role(mind, this.jobs.assistant, { run_checks: false }); // run_checks = false, because you *NEED A FUCKING JOB DAMN IT ALL ANTAGS NEED JOBS*
+				this.assign_role(mind, this.jobs.nomad, { run_checks: false }); // run_checks = false, because you *NEED A FUCKING JOB DAMN IT ALL ANTAGS NEED JOBS*
 			}
 		}
 		return true;

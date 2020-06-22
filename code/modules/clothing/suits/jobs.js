@@ -1,12 +1,3 @@
-
-
-//TODO:
-/*
-Basically every suit_storage_whitelist since none of the items are implemented yet.
-/obj/item/clothing/head/hooded/chaplain_hood
-/obj/item/clothing/suit/suspenders //icon shenanigans
-*/
-
 module.exports.templates = {
 	apron: {
 		components: ["SuitItem"],

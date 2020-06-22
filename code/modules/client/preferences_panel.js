@@ -70,7 +70,7 @@ class PreferencesPanel extends Panel {
 				this.char_prefs.hair_color = arr;
 			}
 			if (msg.char_prefs.skin_tone != null) {
-				if (skin_tones.hasOwnProperty(msg.char_prefs.skin_tone))
+				if (Object.prototype.hasOwnProperty.call(skin_tones,msg.char_prefs.skin_tone))
 					this.char_prefs.skin_tone = msg.char_prefs.skin_tone;
 			}
 		}
@@ -81,7 +81,7 @@ class PreferencesPanel extends Panel {
 		if (msg.job_preferences) {
 			for (let [key, setting] of Object.entries(msg.job_preferences)) {
 				setting = Math.max(Math.min(Math.round(+setting || 0), 3), 0); // sanitize the value
-				if (key == "assistant") setting = +!!setting; // turn it into 0/1 deal
+				if (key == "nomad") setting = +!!setting; // turn it into 0/1 deal
 				if (!this.client.server.job_controller.jobs[key]) continue; // oi that job doesnt exist ree
 				if (setting == 0) delete this.char_prefs.job_preferences[key];
 				else this.char_prefs.job_preferences[key] = setting;

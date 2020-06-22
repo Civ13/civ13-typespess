@@ -292,7 +292,7 @@ class PreferencesPanel {
 			}
 			this.update_previews();
 		}
-		if (msg.hasOwnProperty("name_valid")) {
+		if (Object.prototype.hasOwnProperty.call(msg,"name_valid")) {
 			let elem = this.panel.$(".property-name");
 			if (msg.name_valid) elem.classList.remove("red");
 			else elem.classList.add("red");
@@ -347,7 +347,7 @@ class PreferencesPanel {
 					"white",
 					"job-selection-button"
 				);
-				if (key == "assistant") {
+				if (key == "nomad") {
 					if (setting) {
 						assistant_disable = true;
 						job_pref_button.style.color = "green";

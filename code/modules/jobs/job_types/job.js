@@ -2,6 +2,7 @@
 const Outfit = require("../../outfits/outfit.js");
 const {
 	weak_deep_assign,
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	has_component,
 	to_chat,
 } = require("./../../../../typespess/index.js");
@@ -13,18 +14,12 @@ class JobType {
 			this,
 			{
 				title: "NOPE",
-				minimal_access: [],
-				access: [],
 
-				department_head: [],
-				departments: [],
-
+				description: "none",
 				total_positions: 0,
 				spawn_positions: 0,
 				current_positions: 0,
-
-				supervisors: "",
-
+				departments: ["misc"],
 				selection_color: "#ffffff",
 
 				name_override: "",
@@ -39,14 +34,6 @@ class JobType {
 		);
 	}
 
-	get_access_list(server) {
-		let access = [...this.access];
-		if (server.job_controller.minimal_access) access = [...this.minimal_access];
-		if (!access.includes("maint"))
-			access.push("maint");
-		return access;
-	}
-
 	instance(server, prefs) {
 		if (!prefs) prefs = new CharacterPreferences();
 		let mob = prefs.instance_human(server, {
@@ -57,17 +44,10 @@ class JobType {
 	}
 
 	after_spawn(user) {
-		to_chat`<b>You are the ${""}${this.title}.</b>`(user);
-		to_chat`<b>As the ${this.title} you answer directly to ${this.supervisors}. Special circumstances may change this.</b>`(
-			user
-		);
-		to_chat`<b>To speak on your department's radio, use the :h button. To see others, look closely at your headset.</b>`(
-			user
-		);
+		to_chat`<b>You are a ${""}${this.title}.</b>`(user);
+		to_chat`Your role is ${this.description}`(user);
 		if (this.req_admin_notify)
-			to_chat`<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>`(
-				user
-			);
+			to_chat`<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>`(user);
 	}
 
 	equip(mob) {
@@ -83,16 +63,16 @@ class JobOutfit extends Outfit {
 			jobtype: null,
 			slots: {
 				iclothing: "jumpsuit_grey",
-				shoes: "shoes_black",
-				id: "id",
+				//shoes: "shoes_black",
+				//id: "id",
 			},
 
-			backpack: "backpack",
-			satchel: "backpack",
-			duffelbag: "backpack",
-			box: "survival_box",
+			//backpack: "backpack",
+			//satchel: "backpack",
+			//duffelbag: "backpack",
+			//box: "survival_box",
 
-			pda_slot: "belt",
+			//pda_slot: "belt",
 		});
 		Object.defineProperty(this, "jobtype", {
 			enumerable: false,
@@ -108,22 +88,8 @@ class JobOutfit extends Outfit {
 		}
 	}
 
-	post_equip(target, visuals_only = false) {
-		if (visuals_only) return;
-		if (has_component(target, "MobInventory")) {
-			let id =
-		target.c.MobInventory.slots.id && target.c.MobInventory.slots.id.item;
-			if (has_component(id, "CardId")) {
-				id.c.CardId.access = [
-					...this.jobtype.get_access_list(target.server, target),
-				];
-				id.c.CardId.registered_name = target.c.LivingMob.real_name;
-				id.c.CardId.job = this.jobtype;
-				id.c.CardId.job_name = this.jobtype.title;
-				id.c.CardId.update_label();
-			}
-		}
-	}
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	post_equip(target, visuals_only = false) {return;}
 }
 
 JobType.Outfit = JobOutfit;
