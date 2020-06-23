@@ -1,6 +1,5 @@
 res/client.js.map
 res/client.js
-res/client.css
 
 config/*.cson
 config/*.json
