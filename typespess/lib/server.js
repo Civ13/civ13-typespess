@@ -84,7 +84,7 @@ class Typespess extends EventEmitter {
 	importModule(mod) {
 		if (mod.components) {
 			for (var componentName in mod.components) {
-				if (Object.prototype.hasOwnProperty.call(mod.components,componentName)) {
+				if (mod.components.hasOwnProperty(componentName)) {
 					if (this.components[componentName]) {
 						throw new Error(`Component ${componentName} already exists!`);
 					}
@@ -98,7 +98,7 @@ class Typespess extends EventEmitter {
 		}
 		if (mod.templates) {
 			for (var templateName in mod.templates) {
-				if (!Object.prototype.hasOwnProperty.call(mod.templates,templateName)) continue;
+				if (!mod.templates.hasOwnProperty(templateName)) continue;
 				if (this.templates[templateName])
 					throw new Error(`Template ${templateName} already exists!`);
 				var template = mod.templates[templateName];
@@ -183,7 +183,7 @@ class Typespess extends EventEmitter {
 
 	[_net_tick]() {
 		for (let key in this.clients) {
-			if (!Object.prototype.hasOwnProperty.call(this.clients,key)) continue;
+			if (!this.clients.hasOwnProperty(key)) continue;
 			let client = this.clients[key];
 			client.send_network_updates();
 		}
@@ -464,7 +464,7 @@ class Typespess extends EventEmitter {
 	instance_map_sync(obj, x = 0, y = 0, z = 0, dim) {
 		let inst_list = [];
 		for (var loc in obj.locs) {
-			if (!Object.prototype.hasOwnProperty.call(obj.locs,loc)) continue;
+			if (!obj.locs.hasOwnProperty(loc)) continue;
 			for (var instobj of obj.locs[loc]) {
 				let base_template = this.templates[instobj.template_name];
 				if (!base_template) {

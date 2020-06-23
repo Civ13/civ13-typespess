@@ -110,7 +110,7 @@ class NetworkedComponent extends Component {
   * @param {Function} on_set A function that is called when this property gets changed. If it returns falsish, the property does not get set.
   */
 	add_networked_var(name, on_set) {
-		if (Object.prototype.hasOwnProperty.call(this[_networked_vars],name)) return;
+		if (this[_networked_vars].hasOwnProperty(name)) return;
 		this[_networked_vars][name] = this[name];
 		Object.defineProperty(this, name, {
 			configurable: false,
