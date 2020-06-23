@@ -99,7 +99,7 @@ class TypespessClient extends EventEmitter {
 	importModule(mod) {
 		if (mod.components) {
 			for (var componentName in mod.components) {
-				if (Object.prototype.hasOwnProperty.call(mod.components,componentName)) {
+				if (mod.components.hasOwnProperty(componentName)) {
 					if (this.components[componentName]) {
 						throw new Error(`Component ${componentName} already exists!`);
 					}
@@ -113,7 +113,7 @@ class TypespessClient extends EventEmitter {
 		}
 		if (mod.panel_classes) {
 			for (var class_name in mod.panel_classes) {
-				if (Object.prototype.hasOwnProperty.call(mod.panel_classes,class_name)) {
+				if (mod.panel_classes.hasOwnProperty(class_name)) {
 					if (this.panel_classes[class_name]) {
 						throw new Error(`Panel class ${class_name} already exists!`);
 					}
@@ -146,7 +146,7 @@ class TypespessClient extends EventEmitter {
 				var oldx = atom.x;
 				var oldy = atom.y;
 				for (let key in inst) {
-					if (!Object.prototype.hasOwnProperty.call(inst,key)) continue;
+					if (!inst.hasOwnProperty(key)) continue;
 					if (
 						key == "appearance" ||
 						key == "network_id" ||
@@ -160,15 +160,15 @@ class TypespessClient extends EventEmitter {
 				atom.glide = new Atom.Glide(atom, { oldx, oldy, lasttime: timestamp });
 				if (inst.overlays) {
 					for (let key in inst.overlays) {
-						if (!Object.prototype.hasOwnProperty.call(inst.overlays,key)) continue;
+						if (!inst.overlays.hasOwnProperty(key)) continue;
 						atom.set_overlay(key, inst.overlays[key]);
 					}
 				}
 				if (inst.components) {
 					for (let component_name in inst.components) {
-						if (!Object.prototype.hasOwnProperty.call(inst.components,component_name)) continue;
+						if (!inst.components.hasOwnProperty(component_name)) continue;
 						for (let key in inst.components[component_name]) {
-							if (!Object.prototype.hasOwnProperty.call(inst.components[component_name],key))
+							if (!inst.components[component_name].hasOwnProperty(key))
 								continue;
 							atom.components[component_name][key] =
 								inst.components[component_name][key];

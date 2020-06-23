@@ -129,7 +129,7 @@ class Rechargeable extends Component {
 	check_can_charge(/*user, recharger*/) {
 		return false;
 	}
-	recharge(/*recharger, dt*/) {return;}
+	recharge(/*recharger, dt*/) {}
 }
 
 Rechargeable.loadBefore = ["Item"];

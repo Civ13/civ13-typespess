@@ -307,7 +307,7 @@ class BodyPart extends Component {
 		return "#ffffff";
 	}
 
-	apply_prefs(/*prefs*/) {return;}
+	apply_prefs(/*prefs*/) {}
 
 	multiply_damage(type, amount) {
 		return amount;

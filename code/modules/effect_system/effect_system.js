@@ -40,7 +40,7 @@ class EffectSystem {
 		this.total_effects--;
 	}
 
-	create_effect_atom() {return;}
+	create_effect_atom() {}
 }
 
 module.exports = EffectSystem;

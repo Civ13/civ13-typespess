@@ -318,7 +318,7 @@ class SalineGlucoseSolution extends Medicine {
 			to_chat`<span class='warning'>You feel salty.</span>`(this.holder);
 			this.holder.add("TableSalt", 1);
 			this.holder.c.ReagentHolder.remove(this.constructor.name, 0.5);
-		} else if (Math.random() < 0.06) {
+		} else if (Math.random() < 0.03) {
 			to_chat`<span class='warning'>You feel sweet.</span>`(this.holder);
 			this.holder.add("Sugar", 1);
 			this.holder.c.ReagentHolder.remove(this.constructor.name, 0.5);

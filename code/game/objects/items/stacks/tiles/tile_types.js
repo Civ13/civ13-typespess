@@ -1,7 +1,10 @@
 
 const {
 	Component,
+	Sound,
+	Atom,
 	chain_func,
+	has_component,
 } = require("./../../../../../../typespess/index.js");
 
 class StackTile extends Component {
@@ -21,7 +24,7 @@ class StackTile extends Component {
 		);
 	}
 
-	pre_attack(prev) {
+	pre_attack(prev, target) {
 		return prev();
 	}
 }

@@ -2,6 +2,7 @@ const {
 	Component,
 	Sound,
 	Atom,
+	to_chat,
 } = require("./../../../typespess/index.js");
 const NewPlayerPanel = require("./new_player_panel.js");
 const _ = require("underscore");

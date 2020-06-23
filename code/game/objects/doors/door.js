@@ -128,13 +128,13 @@ class Door extends Component {
 		return true;
 	}
 
-	crush() {return;}
+	crush() {}
 
-	deny() {return;}
+	deny() {}
 
-	try_to_crowbar(/*tool, user*/) {return;}
+	try_to_crowbar(/*tool, user*/) {}
 
-	try_to_weld(/*tool, user*/) {return;}
+	try_to_weld(/*tool, user*/) {}
 
 	attack_by(prev, item, user) {
 		if (has_component(item, "Tool") && item.c.Tool.can_use("Crowbar")) {

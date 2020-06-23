@@ -21,7 +21,7 @@ class SparkEffect extends Component {
 		}, 2000);
 	}
 
-	moved() {return;}
+	moved() {}
 }
 
 SparkEffect.depends = ["LightSource"];

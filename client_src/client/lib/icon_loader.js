@@ -32,12 +32,12 @@ function enqueue_icon_meta_load(newIcon) {
 				};
 			}
 			for (var statekey in meta) {
-				if (!Object.prototype.hasOwnProperty.call(meta,statekey)) {
+				if (!meta.hasOwnProperty(statekey)) {
 					continue;
 				}
 				var state = meta[statekey];
 				for (var dir in state.dirs) {
-					if (!Object.prototype.hasOwnProperty.call(state.dirs,dir)) {
+					if (!state.dirs.hasOwnProperty(dir)) {
 						continue;
 					}
 					var total_delay = 0;

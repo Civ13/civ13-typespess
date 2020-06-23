@@ -93,7 +93,7 @@ class Destructible extends Component {
 		this.a.destroy();
 	}
 
-	obj_break() {return;}
+	obj_break() {}
 	obj_destruction() {
 		this.deconstruct(false);
 	}
