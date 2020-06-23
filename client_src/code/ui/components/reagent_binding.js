@@ -24,7 +24,7 @@ class ReagentBinding {
 
 	message_handler(obj) {
 		for (let split of this.path.split(".")) {
-			if (!obj || !obj.hasOwnProperty(split)) return;
+			if (!obj || !Object.prototype.hasOwnProperty.call(obj,split)) return;
 			obj = obj[split];
 		}
 		if (!obj) {
