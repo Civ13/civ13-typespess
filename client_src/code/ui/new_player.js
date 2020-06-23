@@ -43,10 +43,6 @@ class NewPlayerPanel {
 			<div class="pregame vertical-margins">
 				Starting in: <span class='timer'></span>
 			</div>
-			<div class="pregame vertical-margins">
-				<div class='button' data-radio-group='ready' data-radio-value='true'>Ready</div>
-				<div class='button selected' data-radio-group='ready' data-radio-value='false'>Not Ready</div>
-			</div>
 			<div class="latejoin vertical-margins"><div class='button' data-message='{"latejoin":true}'>Join Game</div></div>
 			<div class="vertical-margins"><div class='button' data-message='{"observe":true}'>Observe</div></div>
 		`;

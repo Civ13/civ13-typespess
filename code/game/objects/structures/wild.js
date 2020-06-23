@@ -12,9 +12,6 @@ const {
 	to_chat,
 } = require("./../../../../typespess/index.js");
 
-function generateRandomInteger(min, max) {
-	return Math.floor(min + Math.random()*(max + 1 - min));
-}
 class Wild extends Component {
 	constructor(atom, template) {
 		super(atom, template);
@@ -126,9 +123,10 @@ module.exports.templates = {
 		components: ["Wild"],
 		vars: {
 			name: "small bush",
-			icon: `icons/obj/flora/bushes/smallbush${generateRandomInteger(1, 44)}.png`,
+			icon: "icons/obj/flora/bushes/smallbush1.png",
 			density: 0,
 			opacity: false,
+			layer: layers.BELOW_MOB_LAYER,
 			components: {
 				Examine: {
 					desc: "A small bush.",
@@ -140,13 +138,64 @@ module.exports.templates = {
 				},
 			}
 		},
+		variants: [
+			{
+				type: "single",
+				var_path: ["icon"],
+				values: ["icons/obj/flora/bushes/smallbush1.png",
+					"icons/obj/flora/bushes/smallbush2.png",
+					"icons/obj/flora/bushes/smallbush3.png",
+					"icons/obj/flora/bushes/smallbush4.png",
+					"icons/obj/flora/bushes/smallbush5.png",
+					"icons/obj/flora/bushes/smallbush6.png",
+					"icons/obj/flora/bushes/smallbush7.png",
+					"icons/obj/flora/bushes/smallbush8.png",
+					"icons/obj/flora/bushes/smallbush9.png",
+					"icons/obj/flora/bushes/smallbush10.png",
+					"icons/obj/flora/bushes/smallbush11.png",
+					"icons/obj/flora/bushes/smallbush12.png",
+					"icons/obj/flora/bushes/smallbush13.png",
+					"icons/obj/flora/bushes/smallbush14.png",
+					"icons/obj/flora/bushes/smallbush15.png",
+					"icons/obj/flora/bushes/smallbush16.png",
+					"icons/obj/flora/bushes/smallbush17.png",
+					"icons/obj/flora/bushes/smallbush18.png",
+					"icons/obj/flora/bushes/smallbush19.png",
+					"icons/obj/flora/bushes/smallbush20.png",
+					"icons/obj/flora/bushes/smallbush21.png",
+					"icons/obj/flora/bushes/smallbush22.png",
+					"icons/obj/flora/bushes/smallbush23.png",
+					"icons/obj/flora/bushes/smallbush24.png",
+					"icons/obj/flora/bushes/smallbush25.png",
+					"icons/obj/flora/bushes/smallbush26.png",
+					"icons/obj/flora/bushes/smallbush27.png",
+					"icons/obj/flora/bushes/smallbush28.png",
+					"icons/obj/flora/bushes/smallbush29.png",
+					"icons/obj/flora/bushes/smallbush30.png",
+					"icons/obj/flora/bushes/smallbush31.png",
+					"icons/obj/flora/bushes/smallbush32.png",
+					"icons/obj/flora/bushes/smallbush33.png",
+					"icons/obj/flora/bushes/smallbush34.png",
+					"icons/obj/flora/bushes/smallbush35.png",
+					"icons/obj/flora/bushes/smallbush36.png",
+					"icons/obj/flora/bushes/smallbush37.png",
+					"icons/obj/flora/bushes/smallbush38.png",
+					"icons/obj/flora/bushes/smallbush39.png",
+					"icons/obj/flora/bushes/smallbush40.png",
+					"icons/obj/flora/bushes/smallbush41.png",
+					"icons/obj/flora/bushes/smallbush42.png",
+					"icons/obj/flora/bushes/smallbush43.png",
+					"icons/obj/flora/bushes/smallbush44.png",
+				],
+			},
+		],
 		tree_paths: ["basic_structures/flora/bush"],
 	},
 	tree: {
 		components: ["Wild"],
 		vars: {
 			name: "tree",
-			icon: `icons/obj/flora/bigtrees/tree${generateRandomInteger(1, 5)}.png`,
+			icon: "icons/obj/flora/bigtrees/tree1.png",
 			density: 1,
 			components: {
 				Examine: {
@@ -154,13 +203,24 @@ module.exports.templates = {
 				},
 			}
 		},
+		variants: [
+			{
+				type: "single",
+				var_path: ["icon"],
+				values: ["icons/obj/flora/bigtrees/tree1.png",
+					"icons/obj/flora/bigtrees/tree2.png",
+					"icons/obj/flora/bigtrees/tree3.png",
+					"icons/obj/flora/bigtrees/tree4.png",
+					"icons/obj/flora/bigtrees/tree5.png",],
+			},
+		],
 		tree_paths: ["basic_structures/flora/tree"],
 	},
 	grass: {
 		components: ["Wild"],
 		vars: {
 			name: "grass",
-			icon: `icons/obj/flora/wild/tall_grass_${generateRandomInteger(1, 9)}.gif`,
+			icon: "icons/obj/flora/wild/tall_grass_1.gif",
 			density: 0,
 			opacity: false,
 			components: {
@@ -174,6 +234,21 @@ module.exports.templates = {
 				},
 			}
 		},
+		variants: [
+			{
+				type: "single",
+				var_path: ["icon"],
+				values: ["icons/obj/flora/wild/tall_grass_1.gif",
+					"icons/obj/flora/wild/tall_grass_2.gif",
+					"icons/obj/flora/wild/tall_grass_3.gif",
+					"icons/obj/flora/wild/tall_grass_4.gif",
+					"icons/obj/flora/wild/tall_grass_5.gif",
+					"icons/obj/flora/wild/tall_grass_6.gif",
+					"icons/obj/flora/wild/tall_grass_7.gif",
+					"icons/obj/flora/wild/tall_grass_8.gif",
+					"icons/obj/flora/wild/tall_grass_9.gif",],
+			},
+		],
 		tree_paths: ["basic_structures/flora/grass"],
 	},
 };

@@ -7,8 +7,8 @@ class NewPlayerPanel extends Panel {
 	constructor(client) {
 		super(client, {
 			width: 200,
-			height: 300,
-			title: "New Player Options",
+			height: 230,
+			title: "Welcome!",
 			can_close: false,
 		});
 		this.on("message", this.message_handler.bind(this));
