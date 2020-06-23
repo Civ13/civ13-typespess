@@ -1,5 +1,3 @@
-/// <reference path="./utils_overloads.d.js">
-
 var Atom, Client, ChatMessage;
 
 const _chain_parent = Symbol("_chain_parent");
@@ -20,18 +18,18 @@ module.exports = {
   */
 	weak_deep_assign(a, b) {
 		for (var key in b) {
-			if (!b.hasOwnProperty(key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(b,key)) continue;
 			if (
 				typeof b[key] == "object" &&
 		b[key] != null &&
 		!(b[key] instanceof Array) &&
-		(!a.hasOwnProperty(key) ||
+		(!Object.prototype.hasOwnProperty.call(a,key) ||
 		typeof a[key] != "object" ||
 		a[key] == null ||
 		a[key] instanceof Array)
 			)
 				a[key] = {};
-			if (a.hasOwnProperty(key)) {
+			if (Object.prototype.hasOwnProperty.call(a,key)) {
 				if (
 					typeof a[key] == "object" &&
 		a[key] != null &&
@@ -52,7 +50,7 @@ module.exports = {
 	deep_create(obj) {
 		var newobj = Object.create(obj);
 		for (var key in obj) {
-			if (!obj.hasOwnProperty(key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(obj,key)) continue;
 			if (typeof obj[key] == "object" && !(obj[key] instanceof Array))
 				newobj[key] = module.exports.deep_create(obj[key]);
 		}
@@ -402,10 +400,10 @@ module.exports = {
 	WEST: 8,
 
 	readonly_traps: {
-		set: () => {},
-		deleteProperty: () => {},
-		defineProperty: () => {},
-		setPrototypeOf: () => {},
+		set: () => {return;},
+		deleteProperty: () => {return;},
+		defineProperty: () => {return;},
+		setPrototypeOf: () => {return;},
 		isExtensible: () => {
 			return false;
 		},

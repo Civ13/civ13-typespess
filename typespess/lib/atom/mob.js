@@ -353,7 +353,7 @@ class Mob extends Component {
 						var oldEye = target[property];
 						if (oldEye && this.client) {
 							for (let netid in oldEye.c.Eye[_viewing]) {
-								if (!oldEye.c.Eye[_viewing].hasOwnProperty(netid)) continue;
+								if (!Object.prototype.hasOwnProperty.call(oldEye.c.Eye[_viewing],netid)) continue;
 								this.client.enqueue_delete_atom(netid);
 							}
 							for (let tile of oldEye.c.Eye[_visible_tiles]) {
@@ -373,7 +373,7 @@ class Mob extends Component {
 						}
 						if (value && this.client) {
 							for (let netid in value.c.Eye[_viewing]) {
-								if (!value.c.Eye[_viewing].hasOwnProperty(netid)) continue;
+								if (!Object.prototype.hasOwnProperty.call(value.c.Eye[_viewing],netid)) continue;
 								var atom = value.c.Eye[_viewing][netid];
 								this.client.enqueue_create_atom(netid, atom, value);
 							}

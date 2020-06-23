@@ -243,10 +243,10 @@ class Client extends EventEmitter {
 			this[_mob].c.Mob[mob_symbols._key] = undefined;
 			this.next_message.eye = this.next_message.eye || {};
 			for (let eyeId in this[_mob].c.Mob.eyes) {
-				if (!this[_mob].c.Mob.eyes.hasOwnProperty(eyeId)) continue;
+				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) continue;
 				let eye = this[_mob].c.Mob.eyes[eyeId];
 				for (let netid in eye.c.Eye[mob_symbols._viewing]) {
-					if (!eye.c.Eye[mob_symbols._viewing].hasOwnProperty(netid)) continue;
+					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) continue;
 					this.enqueue_delete_atom(netid);
 				}
 				for (let tile of eye.c.Eye[mob_symbols._visible_tiles]) {
@@ -263,10 +263,10 @@ class Client extends EventEmitter {
 			var old_client = this[_mob].c.Mob.client;
 			if (old_client) old_client.mob = null;
 			for (let eyeId in this[_mob].c.Mob.eyes) {
-				if (!this[_mob].c.Mob.eyes.hasOwnProperty(eyeId)) continue;
+				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) continue;
 				let eye = this[_mob].c.Mob.eyes[eyeId];
 				for (let netid in eye.c.Eye[mob_symbols._viewing]) {
-					if (!eye.c.Eye[mob_symbols._viewing].hasOwnProperty(netid)) continue;
+					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) continue;
 					this.enqueue_create_atom(
 						netid,
 						eye.c.Eye[mob_symbols._viewing][netid],
@@ -428,7 +428,7 @@ class Client extends EventEmitter {
 				if (entry.update.components) {
 					submessage.components = {};
 					for (let component_name in entry.update.components) {
-						if (!entry.update.components.hasOwnProperty(component_name))
+						if (!Object.prototype.hasOwnProperty.call(entry.update.components,component_name))
 							continue;
 						submessage.components[component_name] = {};
 						for (let item of entry.update.components[component_name]) {
@@ -453,7 +453,7 @@ class Client extends EventEmitter {
 			this[_tiles_to_remove].clear();
 		}
 		for (let key in this.next_message) {
-			if (!this.next_message.hasOwnProperty(key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(this.next_message,key)) continue;
 			message[key] = this.next_message[key];
 			delete this.next_message[key];
 		}
