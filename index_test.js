@@ -11,7 +11,6 @@ global.require = require;
 server.resRoot = "./res/";
 
 server.config = read_config("config.json");
-server.game_options = read_config("game_options.json");
 
 server.importModule(require("./code/game/area/area_components.js"));
 server.importModule(require("./code/game/area/area.js"));
