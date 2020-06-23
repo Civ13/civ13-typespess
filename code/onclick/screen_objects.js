@@ -52,7 +52,7 @@ class ZoneSel extends Component {
 
 	update_selected() {
 		this.a.overlays.selecting = {
-			icon: `icons/ui/screen_gen${this.mob.c.MobInteract.zone_sel}.png`
+			icon: `icons/ui/screen_gen/${this.mob.c.MobInteract.zone_sel}.png`
 		};
 	}
 }

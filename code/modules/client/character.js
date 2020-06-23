@@ -6,7 +6,6 @@ const first_names = require("../../../strings/names/first.json");
 const first_names_male = require("../../../strings/names/first_male.json");
 const first_names_female = require("../../../strings/names/first_female.json");
 const last_names = require("../../../strings/names/last.json");
-const clown_names = require("../../../strings/names/clown.json");
 const sprite_accessories = require("../../game/mobs/living/carbon/human/sprite_accessories.js");
 const {
 	skin_tones,
@@ -126,17 +125,12 @@ class CharacterPreferences {
 		return t_out;
 	}
 
-	instance_human(server, { name_override = null }) {
+	instance_human(server) {
 		let template = {
 			components: ["HumanMob"],
 			vars: { components: { LivingMob: {} } },
 		};
-		if (name_override == "clown") {
-			template.vars.components.LivingMob.real_name =
-		clown_names[Math.floor(Math.random() * clown_names.length)];
-		} else {
-			template.vars.components.LivingMob.real_name = this.name;
-		}
+		template.vars.components.LivingMob.real_name = this.name;
 		template.vars.gender = this.gender;
 		let mob = new Atom(server, template);
 		for (let limb of mob.c.MobBodyParts.limbs_set) {
