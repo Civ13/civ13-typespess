@@ -24,7 +24,7 @@ class Item extends Component {
 		);
 	}
 
-	attack_self() {}
+	attack_self() {return;}
 
 	_attack_hand(prev, user) {
 		if (has_component(user, "MobInventory")) {
@@ -78,11 +78,11 @@ class Item extends Component {
 		}
 	}
 
-	pre_attack() {}
+	pre_attack() {return;}
 
-	after_attack() {}
+	after_attack() {return;}
 
-	attack_space() {}
+	attack_space() {return;}
 
 	melee_attack_chain(user, target, e) {
 		if (!this.pre_attack(target, user, e)) {

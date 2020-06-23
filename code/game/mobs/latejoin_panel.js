@@ -5,7 +5,7 @@ class LatejoinPanel extends Panel {
 		super(client, {
 			width: 660,
 			height: 500,
-			title: "Late Join",
+			title: "Roles",
 			can_close: true,
 		});
 		this.on("message", this.message_handler.bind(this));

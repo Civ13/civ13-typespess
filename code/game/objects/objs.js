@@ -190,8 +190,8 @@ class Examine extends Component {
 	}
 
 	examine(user) {
-		to_chat`That's a ${this.a}`(user);
-		if (this.desc) to_chat(user, this.desc);
+		to_chat`That's <b>${this.a}</b>`(user);
+		if (this.desc) to_chat(user, "<i>"+this.desc+"</i>");
 	}
 }
 
