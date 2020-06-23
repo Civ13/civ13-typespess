@@ -7,9 +7,6 @@ const {
 	has_component,
 } = require("./../../typespess/index.js");
 const Mind = require("./mobs/mind/mind.js");
-//const tips = require("../../strings/tips.json");
-//const sillytips = require("../../strings/sillytips.json");
-
 class GameTicker extends EventEmitter {
 	constructor(server) {
 		super();
@@ -111,18 +108,6 @@ class GameTicker extends EventEmitter {
 			this.start_at = this.start_at =
 		this.server.now() + 3 * 1000;
 	}
-/**	 send_tip_of_the_round() {
-		let tip = this.round_tip_override;
-		if (!tip) {
-			if (tips.length && Math.random() < 0.95) tip = _.sample(tips);
-			else if (sillytips.length) tip = _.sample(sillytips);
-		}
-		if (tip)
-		// fun fact tg uses <font> tags. Well... uhhh... *no*.
-			to_chat`<span style='color:purple'><b>Tip of the round: </b>${tip}</span>`(
-				Object.values(this.server.clients)
-			);
-	} */
 }
 
 module.exports.now = (server) => {
