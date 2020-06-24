@@ -1,5 +1,3 @@
-
-
 var defines = {};
 defines.R_IDEAL_GAS_EQUATION = 8.31; // kPa*L/(K*mol)
 defines.ONE_ATMOSPHERE = 101.325; //kPa
@@ -10,37 +8,7 @@ defines.TCMB = 2.7; // -270.3degC
 defines.FIRE_DAMAGE_MODIFIER = 0.0215; //Higher values result in more external fire damage to the skin (default 0.0215)
 defines.AIR_DAMAGE_MODIFIER = 2.025; //More means less damage from hot air scalding lungs, less = more damage. (default 2.025)
 
-defines.CELL_VOLUME = 2500; //liters in a cell
-defines.MOLES_CELLSTANDARD =
-	(defines.ONE_ATMOSPHERE * defines.CELL_VOLUME) /
-	(defines.T20C * defines.R_IDEAL_GAS_EQUATION); //moles in a 2.5 m^3 cell at 101.325 Pa and 20 degC
-defines.M_CELL_WITH_RATIO = defines.MOLES_CELLSTANDARD * 0.005;
-defines.O2STANDARD = 0.21;
-defines.N2STANDARD = 0.79;
-defines.MOLES_O2STANDARD = defines.MOLES_CELLSTANDARD * defines.O2STANDARD; // O2 standard value (21%)
-defines.MOLES_N2STANDARD = defines.MOLES_CELLSTANDARD * defines.N2STANDARD; // N2 standard value (79%)
-
 //stuff you should probably leave well alone!
-//ATMOS
-defines.BREATH_VOLUME = 0.5; //liters in a normal breath
-defines.BREATH_PERCENTAGE = defines.BREATH_VOLUME / defines.CELL_VOLUME; //Amount of air to take a from a tile
-defines.HUMAN_NEEDED_OXYGEN =
-	defines.MOLES_CELLSTANDARD * defines.BREATH_PERCENTAGE * 0.16; //Amount of air needed before pass out/suffocation commences
-defines.NORMPIPERATE = 30; //pipe-insulation rate divisor
-defines.HEATPIPERATE = 8; //heat-exch pipe insulation
-defines.FLOWFRAC = 0.99; //fraction of gas transfered per process
-defines.TANK_LEAK_PRESSURE = 30 * defines.ONE_ATMOSPHERE; //Tank starts leaking
-defines.TANK_RUPTURE_PRESSURE = 35 * defines.ONE_ATMOSPHERE; //Tank spills all contents into atmosphere
-defines.TANK_FRAGMENT_PRESSURE = 40 * defines.ONE_ATMOSPHERE; //Boom 3x3 base explosion
-defines.TANK_FRAGMENT_SCALE = 6 * defines.ONE_ATMOSPHERE; //+1 for each SCALE kPa aboe threshold
-defines.MINIMUM_AIR_RATIO_TO_SUSPEND = 0.1; //Ratio of air that must move to/from a tile to reset group processing
-defines.MINIMUM_AIR_RATIO_TO_MOVE = 0.001; //Minimum ratio of air that must move to/from a tile
-defines.MINIMUM_AIR_TO_SUSPEND =
-	defines.MOLES_CELLSTANDARD * defines.MINIMUM_AIR_RATIO_TO_SUSPEND; //Minimum amount of air that has to move before a group processing can be suspended
-defines.MINIMUM_MOLES_DELTA_TO_MOVE =
-	defines.MOLES_CELLSTANDARD * defines.MINIMUM_AIR_RATIO_TO_MOVE; //Either this must be active
-defines.EXCITED_GROUP_BREAKDOWN_CYCLES = 4;
-defines.EXCITED_GROUP_DISMANTLE_CYCLES = 16;
 defines.MINIMUM_TEMPERATURE_TO_MOVE = defines.T20C + 100; //or this (or both, obviously)
 defines.MINIMUM_TEMPERATURE_RATIO_TO_SUSPEND = 0.012;
 defines.MINIMUM_TEMPERATURE_DELTA_TO_SUSPEND = 4; //Minimum temperature difference before group processing is suspended
@@ -61,17 +29,6 @@ defines.FIRE_SPREAD_RADIOSITY_SCALE = 0.85;
 defines.FIRE_GROWTH_RATE = 40000; //For small fires
 defines.CARBON_LIFEFORM_FIRE_RESISTANCE = 200 + defines.T0C; //Resistance to fire damage
 defines.CARBON_LIFEFORM_FIRE_DAMAGE = 4; //Fire damage
-//Plasma fire properties
-defines.OXYGEN_BURN_RATE_BASE = 1.4;
-defines.PLASMA_BURN_RATE_DELTA = 9;
-defines.PLASMA_MINIMUM_BURN_TEMPERATURE = 100 + defines.T0C;
-defines.PLASMA_UPPER_TEMPERATURE = 1370 + defines.T0C;
-defines.PLASMA_MINIMUM_OXYGEN_NEEDED = 2;
-defines.PLASMA_MINIMUM_OXYGEN_PLASMA_RATIO = 30;
-defines.PLASMA_OXYGEN_FULLBURN = 10;
-defines.MIN_TOXIC_GAS_DAMAGE = 1;
-defines.MAX_TOXIC_GAS_DAMAGE = 10;
-defines.MOLES_GAS_VISIBLE = 0.5; //Moles in a standard cell after which plasma is visible
 
 // Pressure limits.
 defines.HAZARD_HIGH_PRESSURE = 550; //This determins at what pressure the ultra-high pressure red icon is displayed. (This one is set as a constant)
@@ -118,17 +75,5 @@ defines.MAX_HIGH_PRESSURE_DAMAGE = 4; //This used to be 20... I got this much ra
 defines.LOW_PRESSURE_DAMAGE = 2; //The amounb of damage someone takes when in a low pressure area (The pressure threshold is so low that it doesn't make sense to do any calculations, so it just applies this flat value).
 
 defines.COLD_SLOWDOWN_FACTOR = 20; //Humans are slowed by the difference between bodytemp and BODYTEMP_COLD_DAMAGE_LIMIT divided by this
-
-// Atmos pipe limits
-defines.MAX_OUTPUT_PRESSURE = 4500; // (kPa) What pressure pumps and powered equipment max out at.
-defines.MAX_TRANSFER_RATE = 200; // (L/s) Maximum speed powered equipment can work at.
-
-//Tanks
-defines.TANK_MAX_RELEASE_PRESSURE = defines.ONE_ATMOSPHERE * 3;
-defines.TANK_MIN_RELEASE_PRESSURE = 0;
-defines.TANK_DEFAULT_RELEASE_PRESSURE = 16;
-
-defines.LAVALAND_EQUIPMENT_EFFECT_PRESSURE = 50; //what pressure you have to be under to increase the effect of equipment meant for lavaland
-defines.LAVALAND_DEFAULT_ATMOS = "o2=14;n2=23;TEMP=300";
 
 module.exports = defines;

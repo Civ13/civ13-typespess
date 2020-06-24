@@ -26,10 +26,6 @@ class MobInventory extends Component {
 		super(atom, template);
 
 		this.a.c.Mob.on("keydown", this.keydown.bind(this));
-		this.a.c.HasAccess.has_access = chain_func(
-			this.a.c.HasAccess.has_access,
-			this.has_access.bind(this)
-		);
 		this.a.on("mouse_dragged_to", this.mouse_dragged_to.bind(this));
 		if (has_component(this.a, "LivingMob")) {
 			this.a.c.LivingMob.identifiable = chain_func(
@@ -697,20 +693,6 @@ class MobInventory extends Component {
 		return set;
 	}
 
-	has_access(prev, access) {
-		if (prev()) return true;
-		for (let slotname of ["id", "lhand", "rhand"]) {
-			let slot = this.slots[slotname];
-			if (!slot) continue;
-			let slotitem = slot.item;
-			if (
-				!has_component(slotitem, "IdSlotItem") ||
-		!has_component(slotitem, "HasAccess")
-			)
-				continue;
-			if (slotitem.c.HasAccess.has_access(access)) return true;
-		}
-	}
 
 	mouse_dragged_to(e) {
 		let user = e.mob;
@@ -1116,8 +1098,8 @@ class Slot extends EventEmitter {
 	}
 }
 
-MobInventory.depends = ["Mob", "MobHud", "HasAccess"];
-MobInventory.loadBefore = ["Mob", "MobHud", "HasAccess", "LivingMob"];
+MobInventory.depends = ["Mob", "MobHud"];
+MobInventory.loadBefore = ["Mob", "MobHud", "LivingMob"];
 
 MobInventory.template = {
 	vars: {
