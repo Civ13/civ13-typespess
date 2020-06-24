@@ -22,7 +22,6 @@ server.importModule(require("./code/game/area/area.js"));
 server.importModule(require("./code/game/components/climbable.js"));
 server.importModule(require("./code/game/components/squeak.js"));
 server.importModule(require("./code/game/components/wires.js"));
-server.importModule(require("./code/game/machinery/recharger.js"));
 server.importModule(require("./code/game/mobs/mob_movement.js"));
 server.importModule(require("./code/game/mobs/new_player.js"));
 server.importModule(require("./code/game/mobs/dead/ghost.js"));
