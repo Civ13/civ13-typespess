@@ -31,7 +31,6 @@ const access_types = {
 	ce: { name: "CE Office", group: "station" },
 	construction: { name: "Construction", group: "station" },
 	engineering: { name: "Engineering", group: "station" },
-	external_airlocks: { name: "External Airlocks", group: "station" },
 	maint: { name: "Maintenance", group: "station" },
 	power_equipment: { name: "Power Equipment", group: "station" },
 	tech_storage: { name: "Technical Storage", group: "station" },
