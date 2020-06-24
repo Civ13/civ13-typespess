@@ -18,7 +18,7 @@ class Component extends EventEmitter {
 		return this.atom;
 	}
 
-	destroy() {}
+	destroy() {return;}
 }
 
 module.exports = Component;
