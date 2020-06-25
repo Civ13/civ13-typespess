@@ -54,6 +54,7 @@ class Atom extends EventEmitter {
   * @param {Location|Typespess.Atom|null} location The starting location. You can also add 3 arguments x,y,z alternatively
   */
 	constructor(server, template, x, y, z, dim) {
+		var otemp = template;
 		if (typeof template == "string") template = server.templates[template];
 		if (template && template.pick_from) {
 			template =
@@ -76,9 +77,13 @@ class Atom extends EventEmitter {
 			template = server.get_template_variant(template, new_variant_leaf_path);
 		}
 
-		if (!server || !template)
+		if (!server)
 			throw new Error(
-				`Invalid arguments while instantiating: server: ${server}, template: ${template}`
+				`Invalid arguments while instantiating: server: ${server}`
+			);
+		if (!template)
+			throw new Error(
+				`Invalid arguments while instantiating template: ${otemp}, ${template}`
 			);
 		super();
 
