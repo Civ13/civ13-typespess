@@ -32,16 +32,15 @@ const traverseDir = (dir) =>
 			),
 	relativePaths (dir)
 	);
-var templateArray = [];
+var templateArray = {};
 
 for (const f of traverseDir("./code/")) {
 	if (getFileExtension(f) == "objlist") {
 		console.log("loading "+f);
 		const nobj = JSON.parse(fs.readFileSync(f, "utf8"));
-		templateArray.push(nobj);
+		var str = JSON.stringify(nobj, null, 4); // (Optional) beautiful indented output.
+		console.log(str); // Logs output to dev tools console.
 	}
 }
 
-for (var i of templateArray) {
-	module.exports.templates = {i};
-}
+module.exports.templates = templateArray;

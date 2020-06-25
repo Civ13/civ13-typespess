@@ -129,6 +129,7 @@ server.importModule(require("./code/modules/clothing/under/jobs/civilian.js"));
 server.importModule(
 	require("./code/modules/clothing/under/jobs/engineering.js")
 );
+server.importModule(require("./code/modules/clothing/under/nomads.js"));
 server.importModule(require("./code/game/objects/importer.js"));
 server.importModule(require("./code/modules/clothing/under/jobs/medsci.js"));
 server.importModule(require("./code/modules/clothing/under/jobs/security.js"));

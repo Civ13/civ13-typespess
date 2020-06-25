@@ -19,3 +19,6 @@ module.exports.templates = {
 		tree_paths: ["items/clothing/under/loincloth"],
 	}
 };
+
+var str = JSON.stringify(module.exports.templates, null, 4); // (Optional) beautiful indented output.
+console.log(str); // Logs output to dev tools console.
