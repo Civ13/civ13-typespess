@@ -38,7 +38,7 @@ class LargeContainer extends Component {
 			if (do_close && !this.start_empty) this.populate_contents();
 		});
 	}
-	populate_contents() {}
+	populate_contents() {return;}
 
 	examine(prev, user) {
 		prev();
