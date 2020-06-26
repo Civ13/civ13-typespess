@@ -13,6 +13,7 @@
 		"ajv": "^6.12.2",
 		"cson": "^7.12.0",
 		"finalhandler": "^1.1.2",
+		"mysql": "^2.18.1",
 		"serve-static": "^1.14.1",
 		"streampng": "^0.1.8",
 		"toposort": "^2.0.2",

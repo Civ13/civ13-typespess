@@ -7,7 +7,7 @@ const {
 	to_chat,
 	visible_message,
 	Sound,
-} = require("./../../../../typespess/index.js");
+} = require("./../../../../../typespess/index.js");
 
 // Reagent containers where you can pour from one to another.
 class OpenReagentContainer extends Component {

@@ -157,11 +157,11 @@ server.importModule(require("./code/modules/projectiles/ammunition.js"));
 server.importModule(require("./code/modules/projectiles/box_magazine.js"));
 server.importModule(require("./code/modules/projectiles/gun.js"));
 server.importModule(require("./code/modules/projectiles/projectile.js"));
-server.importModule(require("./code/modules/reagents/containers/open.js"));
-server.importModule(require("./code/modules/reagents/containers/pill.js"));
-server.importModule(require("./code/modules/reagents/containers/spray.js"));
+server.importModule(require("./code/modules/atoms/reagents/containers/open.js"));
+server.importModule(require("./code/modules/atoms/reagents/containers/pill.js"));
+server.importModule(require("./code/modules/atoms/reagents/containers/spray.js"));
 server.importModule(
-	require("./code/modules/reagents/machinery/chem_dispenser.js")
+	require("./code/modules/atoms/reagents/machinery/chem_dispenser.js")
 );
 
 server.importModule(require("./code/modules/reagents/holder.js"));

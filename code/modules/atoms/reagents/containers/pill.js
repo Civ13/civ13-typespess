@@ -2,7 +2,7 @@ const {
 	Component,
 	visible_message,
 	to_chat,
-} = require("./../../../../typespess/index.js");
+} = require("./../../../../../typespess/index.js");
 
 const _ = require("underscore");
 

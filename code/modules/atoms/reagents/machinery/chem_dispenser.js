@@ -5,9 +5,9 @@ const {
 	has_component,
 	to_chat,
 	Panel,
-} = require("./../../../../typespess/index.js");
-const { reagent_types } = require("../holder.js");
-const ReagentBinding = require("../binding.js");
+} = require("./../../../../../typespess/index.js");
+const { reagent_types } = require("../../../reagents/holder.js");
+const ReagentBinding = require("../../../reagents/binding.js");
 
 const _beaker = Symbol("_beaker");
 const _dispense_amount = Symbol("_dispense_amount");
