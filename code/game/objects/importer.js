@@ -1,6 +1,7 @@
 const { join } = require ("path");
 const {readdirSync, statSync } = require ("fs");
 const fs = require("fs");
+const CSON = require("cson");
 
 function getFileExtension(filename) {
 	var a = filename.split(".");
@@ -36,10 +37,8 @@ var templateArray = {};
 
 for (const f of traverseDir("./code/")) {
 	if (getFileExtension(f) == "objlist") {
-		console.log("loading "+f);
-		const nobj = JSON.parse(fs.readFileSync(f, "utf8"));
-		var str = JSON.stringify(nobj, null, 4); // (Optional) beautiful indented output.
-		console.log(str); // Logs output to dev tools console.
+		const nobj = CSON.parse(fs.readFileSync(f, "utf8"));
+		Object.assign(templateArray,nobj);
 	}
 }
 

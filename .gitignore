@@ -1,8 +1,6 @@
 res/client.js.map
 res/client.js
 
-config/*.cson
-config/*.json
 config/*.txt
 
 .vscode/

@@ -10,7 +10,7 @@ const server = new Typespess();
 global.require = require;
 server.resRoot = "./res/";
 
-server.config = read_config("config.json");
+server.config = read_config("config.cson");
 
 server.importModule(require("./code/game/area/area_components.js"));
 server.importModule(require("./code/game/area/area.js"));
@@ -205,7 +205,7 @@ if (global.is_bs_editor_env) {
 	const url = require("url");
 	const querystring = require("querystring");
 
-	const server_config = read_config("server.json");
+	const server_config = read_config("server.cson");
 	const map = server_config.maps.current_map;
 	console.log("Loading map " + map + "...");
 	server.station_dim = new Typespess.Dimension(server);

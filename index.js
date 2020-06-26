@@ -15,7 +15,7 @@ global.server = server; // So the debugger can access it. No, you are not allowe
 global.require = require;
 server.resRoot = "./res/";
 
-server.config = read_config("config.json");
+server.config = read_config("config.cson");
 
 server.importModule(require("./code/game/area/area_components.js"));
 server.importModule(require("./code/game/area/area.js"));
@@ -129,7 +129,6 @@ server.importModule(require("./code/modules/clothing/under/jobs/civilian.js"));
 server.importModule(
 	require("./code/modules/clothing/under/jobs/engineering.js")
 );
-server.importModule(require("./code/modules/clothing/under/nomads.js"));
 server.importModule(require("./code/game/objects/importer.js"));
 server.importModule(require("./code/modules/clothing/under/jobs/medsci.js"));
 server.importModule(require("./code/modules/clothing/under/jobs/security.js"));
@@ -212,7 +211,7 @@ if (global.is_bs_editor_env) {
 	const url = require("url");
 	const querystring = require("querystring");
 
-	const server_config = read_config("server.json");
+	const server_config = read_config("server.cson");
 	const map = server_config.maps.current_map;
 	console.log("Loading map " + map + "...");
 	server.station_dim = new Typespess.Dimension(server);
