@@ -1,5 +1,5 @@
 
-const Outfit = require("../../outfits/outfit.js");
+const Outfit = require("../../outfit.js");
 const {
 	weak_deep_assign,
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars

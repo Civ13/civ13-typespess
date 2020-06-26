@@ -6,7 +6,7 @@ const {
 	visible_message,
 	has_component,
 	chain_func,
-} = require("./../../../typespess/index.js");
+} = require("./../../../../../typespess/index.js");
 
 class Mop extends Component {
 	constructor(atom, template) {

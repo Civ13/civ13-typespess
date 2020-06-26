@@ -1,0 +1,69 @@
+floor:
+	components: ["FloorCover"]
+	tree_paths: ["basic_structures/floor"]
+	variants: [
+			type: "single"
+			var_path: ["icon_state"]
+			values: [
+				"floor"
+				"white"
+				"dark"
+				"bar"
+				"floorgrime"
+				"delivery"
+				"bot"
+				"barber"
+				"whitebot"
+				"whitedelivery"
+				"cmo"
+				"grimy"
+				"freezerfloor"
+				"cafeteria"
+				"engine"
+			]
+			label: true
+			orientation: "vertical"
+		
+	]
+
+floor_grass:
+	components: ["FloorCover"]
+	tree_paths: ["basic_structures/floor/grass"]
+	vars:
+		name: "grass"
+	variants: [
+		type: "single"
+		var_path: ["icon_state"]
+		values: ["grass"]
+		label: true
+		orientation: "vertical"
+	]
+
+floor_dirt:
+	components: ["FloorCover"]
+	tree_paths: ["basic_structures/floor/dirt"]
+	vars:
+		name: "dirt"
+	variants: [
+		type: "single"
+		var_path: ["icon_state"]
+		values: ["dirt"
+		"dark dirt"
+		"ploughed"]
+		label: true
+		orientation: "vertical"
+	]
+
+
+floor_wood:
+	components: ["FloorCover"]
+	vars:
+		components:
+			FloorCover:
+				floor_tile: "wood_tile"
+				icon_group: null
+			
+		
+		icon_state: "wood"
+	
+	tree_paths: ["basic_structures/floor/wood"]

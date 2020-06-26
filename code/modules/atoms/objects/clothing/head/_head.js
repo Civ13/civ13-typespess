@@ -1,4 +1,4 @@
-const { Component } = require("./../../../../typespess/index.js");
+const { Component } = require("./../../../../../../typespess/index.js");
 
 class HeadItem extends Component {
 	constructor(atom, template) {

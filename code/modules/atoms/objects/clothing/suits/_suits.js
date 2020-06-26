@@ -1,4 +1,4 @@
-const { Component } = require("./../../../../typespess/index.js");
+const { Component } = require("./../../../../../../typespess/index.js");
 
 //TODO: var/fire_resist = T0C+100
 //TODO: /obj/item/clothing/suit/worn_overlays(isinhands = FALSE)

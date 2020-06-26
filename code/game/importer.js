@@ -36,7 +36,7 @@ const traverseDir = (dir) =>
 var templateArray = {};
 
 for (const f of traverseDir("./code/")) {
-	if (getFileExtension(f) == "objlist") {
+	if (getFileExtension(f) == "atom") {
 		const nobj = CSON.parse(fs.readFileSync(f, "utf8"));
 		Object.assign(templateArray,nobj);
 	}

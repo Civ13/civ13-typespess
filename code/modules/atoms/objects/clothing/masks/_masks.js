@@ -1,4 +1,4 @@
-const { Component } = require("./../../../../typespess/index.js");
+const { Component } = require("./../../../../../../typespess/index.js");
 
 class MaskItem extends Component {
 	constructor(atom, template) {
