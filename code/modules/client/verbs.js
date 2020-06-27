@@ -1,4 +1,4 @@
-const { to_chat } = require("./../../../typespess/index.js");
+const { to_chat } = require("./../../../code/game/server.js");
 
 module.exports.now = function (server) {
 	server.on("client_login", function (client) {

@@ -6,7 +6,7 @@ const {
 	has_component,
 	audible_message,
 	to_chat,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 
 class Reagent extends EventEmitter {
 	constructor() {

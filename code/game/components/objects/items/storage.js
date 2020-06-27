@@ -7,7 +7,7 @@ const {
 	has_component,
 	is_atom,
 	to_chat,
-} = require("./../../../../../typespess/index.js");
+} = require("./../../../../../code/game/server.js");
 const sounds = require("../../../../defines/sounds.js");
 
 const _current_storage_item = Symbol("_current_storage_item");

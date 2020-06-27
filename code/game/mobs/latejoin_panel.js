@@ -1,4 +1,4 @@
-const { Panel } = require("./../../../typespess/index.js");
+const { Panel } = require("./../../../code/game/server.js");
 
 class LatejoinPanel extends Panel {
 	constructor(client) {

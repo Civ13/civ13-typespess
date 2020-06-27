@@ -5,7 +5,7 @@ const {
 	has_component,
 	to_chat,
 	Panel,
-} = require("./../../../../../typespess/index.js");
+} = require("./../../../../../code/game/server.js");
 const { reagent_types } = require("../../../reagents/holder.js");
 const ReagentBinding = require("../../../reagents/binding.js");
 

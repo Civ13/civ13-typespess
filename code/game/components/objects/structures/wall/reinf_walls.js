@@ -2,7 +2,7 @@ const {
 	Component,
 	has_component,
 	to_chat,
-} = require("./../../../../../../typespess/index.js");
+} = require("./../../../../../../code/game/server.js");
 
 const d_states = {
 	intact: 0,

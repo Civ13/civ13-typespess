@@ -3,7 +3,7 @@ const {
 	has_component,
 	to_chat,
 	chain_func,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 
 const _temperature = Symbol("_temperature");
 

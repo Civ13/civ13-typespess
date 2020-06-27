@@ -2,7 +2,7 @@ const {
 	Component,
 	chain_func,
 	make_watched_property,
-} = require("./../../../../../../typespess/index.js");
+} = require("./../../../../../../code/game/server.js");
 
 const { skin_tones } = require("./helpers.js");
 const sprite_accessories = require("../human/sprite_accessories.js");

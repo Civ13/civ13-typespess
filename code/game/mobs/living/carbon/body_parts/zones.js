@@ -1,4 +1,4 @@
-const { Component } = require("./../../../../../../typespess/index.js");
+const { Component } = require("./../../../../../../code/game/server.js");
 
 class ChestBodyPart extends Component {}
 ChestBodyPart.depends = ["BodyPart"];

@@ -5,7 +5,7 @@ const {
 	Atom,
 	chain_func,
 	has_component,
-} = require("./../../../../../../../typespess/index.js");
+} = require("./../../../../../../../code/game/server.js");
 
 class StackTile extends Component {
 	constructor(atom, template) {

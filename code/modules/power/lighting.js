@@ -7,7 +7,7 @@ const {
 	has_component,
 	chain_func,
 	to_chat,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 const SparkSystem = require("../effect_system/sparks.js");
 
 class LightFixture extends Component {

@@ -1,6 +1,6 @@
 
 
-const { Component } = require("./../../../../../../typespess/index.js");
+const { Component } = require("./../../../../../../code/game/server.js");
 const lighting = require("../../../../../defines/lighting.js");
 
 class Flashlight extends Component {

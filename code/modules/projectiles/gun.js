@@ -5,7 +5,7 @@ const {
 	Sound,
 	visible_message,
 	to_chat,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 const combat_defines = require("../../defines/combat_defines.js");
 const sounds = require("../../defines/sounds.js");
 

@@ -3,7 +3,7 @@
 const {
 	Component,
 	has_component,
-} = require("./../../../../../typespess/index.js");
+} = require("./../../../../../code/game/server.js");
 const layers = require("../../../../defines/layers.js");
 
 class CleanableDecal extends Component {

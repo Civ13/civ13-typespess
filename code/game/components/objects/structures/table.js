@@ -5,7 +5,7 @@ const {
 	chain_func,
 	to_chat,
 	Atom,
-} = require("./../../../../../typespess/index.js");
+} = require("./../../../../../code/game/server.js");
 const pass_flags = require("../../../../defines/pass_flags.js");
 const layers = require("../../../../defines/layers.js");
 

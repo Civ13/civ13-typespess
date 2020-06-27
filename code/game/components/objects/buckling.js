@@ -5,7 +5,7 @@ const {
 	chain_func,
 	has_component,
 	visible_message,
-} = require("./../../../../typespess/index.js");
+} = require("./../../../../code/game/server.js");
 
 class Buckle extends Component {
 	constructor(atom, template) {

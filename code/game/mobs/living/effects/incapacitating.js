@@ -1,4 +1,4 @@
-const { has_component } = require("./../../../../../typespess/index.js");
+const { has_component } = require("./../../../../../code/game/server.js");
 
 const StatusEffect = require("./effect.js");
 

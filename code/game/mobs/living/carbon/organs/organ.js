@@ -1,7 +1,7 @@
 const {
 	Component,
 	has_component,
-} = require("./../../../../../../typespess/index.js");
+} = require("./../../../../../../code/game/server.js");
 
 class Organ extends Component {
 	constructor(atom, template) {

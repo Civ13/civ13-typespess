@@ -1,4 +1,4 @@
-const { to_chat, has_component } = require("./../../../../typespess/index.js");
+const { to_chat, has_component } = require("./../../../../code/game/server.js");
 
 const { random_zone } = require("./carbon/body_parts/helpers.js");
 

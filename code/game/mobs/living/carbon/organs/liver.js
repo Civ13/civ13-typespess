@@ -3,7 +3,7 @@ const {
 	has_component,
 	chain_func,
 	to_chat,
-} = require("./../../../../../../typespess/index.js");
+} = require("./../../../../../../code/game/server.js");
 
 const { reagent_types } = require("../../../../../modules/reagents/holder.js");
 const _ = require("underscore");

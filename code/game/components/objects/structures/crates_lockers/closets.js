@@ -3,7 +3,7 @@
 const {
 	Component,
 	chain_func,
-} = require("./../../../../../../typespess/index.js");
+} = require("./../../../../../../code/game/server.js");
 const layers = require("../../../../../defines/layers.js");
 
 class Closet extends Component {

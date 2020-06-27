@@ -6,7 +6,7 @@ const {
 	Component,
 	chain_func,
 	has_component,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 
 const layers = require("../../defines/layers.js");
 

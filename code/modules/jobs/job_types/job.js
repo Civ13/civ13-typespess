@@ -5,7 +5,7 @@ const {
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	has_component,
 	to_chat,
-} = require("./../../../../typespess/index.js");
+} = require("./../../../../code/game/server.js");
 const CharacterPreferences = require("../../client/character.js");
 
 class JobType {

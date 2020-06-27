@@ -1,6 +1,6 @@
 
 
-const { Component, has_component } = require("./../../../../typespess/index.js");
+const { Component, has_component } = require("./../../../../code/game/server.js");
 
 const _pulling = Symbol("_pulling");
 

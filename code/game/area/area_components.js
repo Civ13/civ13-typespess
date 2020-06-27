@@ -2,7 +2,7 @@ const {
 	Component,
 	Sound,
 	has_component,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 
 class AreaAmbience extends Component {
 	constructor(atom, template) {

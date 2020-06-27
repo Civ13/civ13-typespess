@@ -1,4 +1,4 @@
-const { weak_deep_assign } = require("./../typespess/index.js");
+const { weak_deep_assign } = require("./../code/game/server.js");
 const fs = require("fs");
 const path = require("path");
 const CSON = require("cson");

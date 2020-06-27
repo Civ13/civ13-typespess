@@ -5,7 +5,7 @@ const {
 	has_component,
 	chain_func,
 	visible_message,
-} = require("./../../../../typespess/index.js");
+} = require("./../../../../code/game/server.js");
 const combat_defines = require("../../../defines/combat_defines.js");
 const _ = require("underscore");
 

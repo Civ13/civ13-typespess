@@ -7,7 +7,7 @@ const {
 	format_html,
 	visible_message,
 	has_component,
-} = require("./../../../../typespess/index.js");
+} = require("./../../../../code/game/server.js");
 const _ = require("underscore");
 const Mind = require("../mind/mind.js");
 const combat_defines = require("../../../defines/combat_defines.js");

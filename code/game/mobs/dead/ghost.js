@@ -3,7 +3,7 @@ const {
 	Atom,
 	VisibilityGroup,
 	to_chat,
-} = require("./../../../../typespess/index.js");
+} = require("./../../../../code/game/server.js");
 
 const layers = require("../../../defines/layers.js");
 

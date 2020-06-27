@@ -3,7 +3,7 @@ const {
 	chain_func,
 	has_component,
 	sleep,
-} = require("./../../../../../typespess/index.js");
+} = require("./../../../../../code/game/server.js");
 
 const layers = require("../../../../defines/layers.js");
 const pass_flags = require("../../../../defines/pass_flags.js");

@@ -1,4 +1,4 @@
-const { Component, Atom } = require("./../../../../../../typespess/index.js");
+const { Component, Atom } = require("./../../../../../../code/game/server.js");
 
 const _ = require("underscore");
 const { cable_colors } = require("../../../../../modules/power/cable.js");

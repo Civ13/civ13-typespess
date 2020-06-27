@@ -4,7 +4,7 @@ const {
 	Atom,
 	has_component,
 	make_watched_property,
-} = require("./../../typespess/index.js");
+} = require("./../../code/game/server.js");
 const combat_defines = require("../defines/combat_defines.js");
 const mob_defines = require("../defines/mob_defines.js");
 

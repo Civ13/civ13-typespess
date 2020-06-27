@@ -5,7 +5,7 @@ const {
 	visible_message,
 	to_chat,
 	has_component,
-} = require("./../../../../../typespess/index.js");
+} = require("./../../../../../code/game/server.js");
 
 class Handcuffs extends Component {
 	constructor(atom, template) {

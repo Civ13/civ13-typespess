@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable max-len */
 
-const Typespess = require("./typespess/index.js");
+const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 
 console.log("Loading game...");

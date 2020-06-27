@@ -1,4 +1,4 @@
-const { Atom, Panel, to_chat } = require("./../../../typespess/index.js");
+const { Atom, Panel, to_chat } = require("./../../../code/game/server.js");
 
 const LatejoinPanel = require("./latejoin_panel");
 const PreferencesPanel = require("../../modules/client/preferences_panel.js");

@@ -5,7 +5,7 @@ const {
 	to_chat,
 	stoplag,
 	has_component,
-} = require("./../../typespess/index.js");
+} = require("./../../code/game/server.js");
 const Mind = require("./mobs/mind/mind.js");
 class GameTicker extends EventEmitter {
 	constructor(server) {

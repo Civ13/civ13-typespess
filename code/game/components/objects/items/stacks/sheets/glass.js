@@ -3,7 +3,7 @@ const {
 	Atom,
 	has_component,
 	chain_func,
-} = require("./../../../../../../../typespess/index.js");
+} = require("./../../../../../../../code/game/server.js");
 
 const _ = require("underscore");
 const combat_defines = require("../../../../../../defines/combat_defines.js");

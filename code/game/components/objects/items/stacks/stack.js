@@ -5,7 +5,7 @@ const {
 	chain_func,
 	has_component,
 	to_chat,
-} = require("./../../../../../../typespess/index.js");
+} = require("./../../../../../../code/game/server.js");
 const StackCraftPanel = require("./stack_craft_panel.js");
 
 const _amount = Symbol("_amount");

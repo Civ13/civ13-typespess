@@ -7,7 +7,7 @@ const {
 	Atom,
 	chain_func,
 	to_chat,
-} = require("./../../../../../../typespess/index.js");
+} = require("./../../../../../../code/game/server.js");
 
 class Wall extends Component {
 	constructor(atom, template) {

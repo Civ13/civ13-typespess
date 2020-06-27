@@ -6,7 +6,7 @@ const {
 	has_component,
 	chain_func,
 	dir_to,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 const layers = require("../../defines/layers.js");
 const _ = require("underscore");
 const { display_watts } = require("./helpers.js");

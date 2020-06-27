@@ -3,7 +3,7 @@
 const { Reagent } = require("../reagent.js");
 const { atmos_defines } = require("../../../defines/atmos_defines.js");
 const { combat_defines } = require("../../../defines/combat_defines.js");
-const { to_chat } = require("./../../../../typespess/index.js");
+const { to_chat } = require("./../../../../code/game/server.js");
 module.exports.reagents = {};
 
 class Medicine extends Reagent {} // /datum/reagent/medicine

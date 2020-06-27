@@ -1,6 +1,6 @@
 
 
-const { has_component } = require("./../../../../typespess/index.js");
+const { has_component } = require("./../../../../code/game/server.js");
 const { Reagent } = require("../reagent.js");
 const { Synaptizine, Omnizine } = require("./medicine.js").reagents;
 module.exports.reagents = {};

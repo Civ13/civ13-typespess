@@ -16,7 +16,7 @@
 
 //TODO: Most of the recipe items
 
-const { Component } = require("./../../../../../../../typespess/index.js");
+const { Component } = require("./../../../../../../../code/game/server.js");
 
 class MetalSheet extends Component {
 	constructor(atom, template) {

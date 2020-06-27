@@ -1,6 +1,6 @@
 
 
-const { Atom } = require("./../../../typespess/index.js");
+const { Atom } = require("./../../../code/game/server.js");
 const _ = require("underscore");
 const first_names = require("../../../strings/names/first.json");
 const first_names_male = require("../../../strings/names/first_male.json");
