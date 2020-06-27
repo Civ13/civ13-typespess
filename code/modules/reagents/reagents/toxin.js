@@ -23,50 +23,6 @@ Object.assign(Lexorin.prototype, {
 	taste_description: "acid",
 });
 
-class SlimeJelly extends Toxin {} // /datum/reagent/toxin/slimejelly
-module.exports.reagents.SlimeJelly = SlimeJelly;
-Object.assign(SlimeJelly.prototype, {
-	name: "Slime Jelly",
-	description:
-	"A gooey semi-liquid produced from one of the deadliest lifeforms in existence. SO REAL.",
-	color: [0.5, 0.12, 0.16],
-	toxpwr: 0,
-	taste_description: "slime",
-	taste_mult: 1.3,
-});
-
-class MintToxin extends Toxin {} // /datum/reagent/toxin/minttoxin
-module.exports.reagents.MintToxin = MintToxin;
-Object.assign(MintToxin.prototype, {
-	name: "Mint Toxin",
-	description: "Useful for dealing with undesirable customers.",
-	color: [0.81, 0.21, 0],
-	toxpwr: 0,
-	taste_description: "mint",
-});
-
-class Carpotoxin extends Toxin {} // /datum/reagent/toxin/carpotoxin
-module.exports.reagents.Carpotoxin = Carpotoxin;
-Object.assign(Carpotoxin.prototype, {
-	name: "Carpotoxin",
-	description: "A deadly neurotoxin produced by the dreaded spess carp.",
-	color: [0, 0.2, 0.2],
-	toxpwr: 2,
-	taste_description: "fish",
-});
-
-class ZombiePowder extends Toxin {} // /datum/reagent/toxin/zombiepowder
-module.exports.reagents.ZombiePowder = ZombiePowder;
-Object.assign(ZombiePowder.prototype, {
-	name: "Zombie Powder",
-	description:
-	"A strong neurotoxin that puts the subject into a death-like state.",
-	reagent_state: "solid",
-	color: [0.4, 0.6, 0],
-	toxpwr: 0.5,
-	taste_description: "death",
-});
-
 class MindbreakerToxin extends Toxin {} // /datum/reagent/toxin/mindbreaker
 module.exports.reagents.MindbreakerToxin = MindbreakerToxin;
 Object.assign(MindbreakerToxin.prototype, {
@@ -102,27 +58,6 @@ Object.assign(PestKiller.prototype, {
 	description: "A harmful toxic mixture to kill pests. Do not ingest!",
 	color: [0.29, 0, 0.29],
 	toxpwr: 1,
-});
-
-class SporeToxin extends Toxin {} // /datum/reagent/toxin/spore
-module.exports.reagents.SporeToxin = SporeToxin;
-Object.assign(SporeToxin.prototype, {
-	name: "Spore Toxin",
-	description:
-	"A natural toxin produced by blob spores that inhibits vision when ingested.",
-	color: [0.6, 0.8, 0.2],
-	toxpwr: 1,
-});
-
-class BurningSporeToxin extends Toxin {} // /datum/reagent/toxin/spore_burning
-module.exports.reagents.BurningSporeToxin = BurningSporeToxin;
-Object.assign(BurningSporeToxin.prototype, {
-	name: "Burning Spore Toxin",
-	description:
-	"A natural toxin produced by blob spores that induces combustion in its victim.",
-	color: [0.6, 0.8, 0.2],
-	toxpwr: 0.5,
-	taste_description: "burning",
 });
 
 class ChloralHydrate extends Toxin {} // /datum/reagent/toxin/chloralhydrate

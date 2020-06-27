@@ -15,6 +15,8 @@ class Reagent extends EventEmitter {
 		this.holder = null;
 		this.overdosing = false;
 		this.time_in_mob = 0;
+		this.boozepwr = 0;
+		this.subtype = "reagent";
 	}
 	add(amount, { reagent, temp } = {}) {
 		if (temp == null && (reagent == null || reagent.holder == null)) {

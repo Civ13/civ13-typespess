@@ -134,17 +134,6 @@ Object.assign(Nothing.prototype, {
 	shot_glass_icon_state: "shotglass",
 });
 
-class Laughter extends Consumable {} // /datum/reagent/consumable/laughter
-module.exports.reagents.Laughter = Laughter;
-Object.assign(Laughter.prototype, {
-	name: "Laughter",
-	description:
-	"Some say that this is the best medicine, but recent studies have proven that to be untrue.",
-	metabolization_rate: Infinity,
-	color: [1, 0.3, 0.82],
-	taste_description: "laughter",
-});
-
 class PotatoJuice extends Consumable {} // /datum/reagent/consumable/potato_juice
 module.exports.reagents.PotatoJuice = PotatoJuice;
 Object.assign(PotatoJuice.prototype, {
@@ -234,20 +223,6 @@ Object.assign(Tea.prototype, {
 	glass_desc: "Drinking it from here would not seem right.",
 });
 
-class ArnoldPalmer extends Tea {} // /datum/reagent/consumable/tea/arnold_palmer
-module.exports.reagents.ArnoldPalmer = ArnoldPalmer;
-Object.assign(ArnoldPalmer.prototype, {
-	name: "Arnold Palmer",
-	description: "Encourages the patient to go golfing.",
-	color: [1, 0.72, 0.4],
-	nutriment_factor: 2,
-	taste_description: "bitter tea",
-	glass_icon_state: "arnold_palmer",
-	glass_name: "Arnold Palmer",
-	glass_desc:
-	"You feel like taking a few golf swings after a few swigs of this.",
-});
-
 class IcedCoffee extends Consumable {} // /datum/reagent/consumable/icecoffee
 module.exports.reagents.IcedCoffee = IcedCoffee;
 Object.assign(IcedCoffee.prototype, {
@@ -309,18 +284,6 @@ Object.assign(SMWind.prototype, {
 	glass_name: "glass of Space Mountain Wind",
 	glass_desc:
 	"Space Mountain Wind. As you know, there are no mountains in space, only wind.",
-});
-
-class DrGibb extends Consumable {} // /datum/reagent/consumable/dr_gibb
-module.exports.reagents.DrGibb = DrGibb;
-Object.assign(DrGibb.prototype, {
-	name: "Dr. Gibb",
-	description: "A delicious blend of 42 different flavours.",
-	color: [0.06, 0.13, 0],
-	taste_description: "cherry soda",
-	glass_icon_state: "dr_gibb_glass",
-	glass_name: "glass of Dr. Gibb",
-	glass_desc: "Dr. Gibb. Not as dangerous as the glass_name might imply.",
 });
 
 class SpaceUp extends Consumable {} // /datum/reagent/consumable/space_up

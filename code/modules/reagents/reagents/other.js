@@ -5,15 +5,6 @@ const { Reagent } = require("../reagent.js");
 const { Synaptizine, Omnizine } = require("./medicine.js").reagents;
 module.exports.reagents = {};
 
-class FlightPotion extends Reagent {} // /datum/reagent/flightpotion
-module.exports.reagents.FlightPotion = FlightPotion;
-Object.assign(FlightPotion.prototype, {
-	name: "Flight Potion",
-	description: "Strange mutagenic compound of unknown origins.",
-	reagent_state: "liquid",
-	color: [1, 0.92, 0.92],
-});
-
 class Toxin extends Reagent {} // /datum/reagent/toxin
 module.exports.reagents.Toxin = Toxin;
 Object.assign(Toxin.prototype, {
@@ -23,18 +14,6 @@ Object.assign(Toxin.prototype, {
 	taste_description: "bitterness",
 	taste_mult: 1.2,
 	toxpwr: 1.5,
-});
-
-class LeaperVenom extends Toxin {} // /datum/reagent/toxin/leaper_venom
-module.exports.reagents.LeaperVenom = LeaperVenom;
-Object.assign(LeaperVenom.prototype, {
-	name: "Leaper venom",
-	description:
-	"A toxin spat out by leapers that, while harmless in small doses, quickly creates a toxic reaction if too much is in the body.",
-	color: [0.5, 0.12, 0.16],
-	toxpwr: 0,
-	taste_description: "french cuisine",
-	taste_mult: 1.3,
 });
 
 class Consumable extends Reagent {} // /datum/reagent/consumable
@@ -58,24 +37,6 @@ Object.assign(Blood.prototype, {
 	glass_name: "glass of tomato juice",
 	glass_desc: "Are you sure this is tomato juice?",
 	shot_glass_icon_state: "shotglassred",
-});
-
-class LiquidGibs extends Reagent {} // /datum/reagent/liquidgibs
-module.exports.reagents.LiquidGibs = LiquidGibs;
-Object.assign(LiquidGibs.prototype, {
-	name: "Liquid gibs",
-	color: [1, 0.6, 0.4],
-	description: "You don't even want to think about what's in here.",
-	taste_description: "gross iron",
-	shot_glass_icon_state: "shotglassred",
-});
-
-class Vaccine extends Reagent {} // /datum/reagent/vaccine
-module.exports.reagents.Vaccine = Vaccine;
-Object.assign(Vaccine.prototype, {
-	name: "Vaccine",
-	color: [0.78, 0.06, 0.25],
-	taste_description: "slime",
 });
 
 class Water extends Reagent {} // /datum/reagent/water

@@ -12,6 +12,7 @@ Object.assign(Ethanol.prototype, {
 	nutriment_factor: 0,
 	taste_description: "alcohol",
 	boozepwr: 65,
+	subtype: "ethanol",
 });
 
 class Beer extends Ethanol {} // /datum/reagent/consumable/ethanol/beer
@@ -65,8 +66,7 @@ Object.assign(Whiskey.prototype, {
 	taste_description: "molasses",
 	glass_icon_state: "whiskeyglass",
 	glass_name: "glass of whiskey",
-	glass_desc:
-	"The silky, smokey whiskey goodness inside the glass makes the drink look very classy.",
+	glass_desc: "The silky, smokey whiskey goodness inside the glass makes the drink look very classy.",
 	shot_glass_icon_state: "shotglassbrown",
 });
 
@@ -81,8 +81,7 @@ Object.assign(ThirteenLoko.prototype, {
 	taste_description: "jitters and death",
 	glass_icon_state: "thirteen_loko_glass",
 	glass_name: "glass of Thirteen Loko",
-	glass_desc:
-	"This is a glass of Thirteen Loko, it appears to be of the highest quality. The drink, not the glass.",
+	glass_desc: "This is a glass of Thirteen Loko, it appears to be of the highest quality. The drink, not the glass.",
 });
 
 class Vodka extends Ethanol {} // /datum/reagent/consumable/ethanol/vodka
@@ -110,8 +109,7 @@ Object.assign(Bilk.prototype, {
 	taste_description: "desperation and lactate",
 	glass_icon_state: "glass_brown",
 	glass_name: "glass of bilk",
-	glass_desc:
-	"A brew of milk and beer. For those alcoholics who fear osteoporosis.",
+	glass_desc: "A brew of milk and beer. For those alcoholics who fear osteoporosis.",
 });
 
 class ThreeMileIslandIcedTea extends Ethanol {} // /datum/reagent/consumable/ethanol/threemileisland
@@ -480,20 +478,6 @@ Object.assign(ToxinsSpecial.prototype, {
 	shot_glass_icon_state: "toxinsspecialglass",
 });
 
-class BeepskySmash extends Ethanol {} // /datum/reagent/consumable/ethanol/beepsky_smash
-module.exports.reagents.BeepskySmash = BeepskySmash;
-Object.assign(BeepskySmash.prototype, {
-	name: "Beepsky Smash",
-	description: "Drink this and prepare for the LAW.",
-	color: [0.4, 0.26, 0],
-	boozepwr: 90,
-	metabolization_rate: 0.8,
-	taste_description: "JUSTICE",
-	glass_icon_state: "beepskysmashglass",
-	glass_name: "Beepsky Smash",
-	glass_desc: "Heavy, hot and strong. Just like the Iron fist of the LAW.",
-});
-
 class IrishCream extends Ethanol {} // /datum/reagent/consumable/ethanol/irish_cream
 module.exports.reagents.IrishCream = IrishCream;
 Object.assign(IrishCream.prototype, {
@@ -758,19 +742,6 @@ Object.assign(BahamaMama.prototype, {
 	glass_desc: "Tropical cocktail.",
 });
 
-class Singulo extends Ethanol {} // /datum/reagent/consumable/ethanol/singulo
-module.exports.reagents.Singulo = Singulo;
-Object.assign(Singulo.prototype, {
-	name: "Singulo",
-	description: "A blue-space beverage!",
-	color: [0.18, 0.4, 0.44],
-	boozepwr: 35,
-	taste_description: "concentrated matter",
-	glass_icon_state: "singulo",
-	glass_name: "Singulo",
-	glass_desc: "A blue-space beverage.",
-});
-
 class Sbiten extends Ethanol {} // /datum/reagent/consumable/ethanol/sbiten
 module.exports.reagents.Sbiten = Sbiten;
 Object.assign(Sbiten.prototype, {
@@ -877,45 +848,6 @@ Object.assign(AlliesCocktail.prototype, {
 	glass_desc: "A drink made from your allies.",
 });
 
-class AcidSpit extends Ethanol {} // /datum/reagent/consumable/ethanol/acid_spit
-module.exports.reagents.AcidSpit = AcidSpit;
-Object.assign(AcidSpit.prototype, {
-	name: "Acid Spit",
-	description: "A drink for the daring, can be deadly if incorrectly prepared!",
-	color: [0.21, 0.31, 0],
-	boozepwr: 80,
-	taste_description: "stomach acid",
-	glass_icon_state: "acidspitglass",
-	glass_name: "Acid Spit",
-	glass_desc: "A drink from Nanotrasen. Made from live aliens.",
-});
-
-class Amasec extends Ethanol {} // /datum/reagent/consumable/ethanol/amasec
-module.exports.reagents.Amasec = Amasec;
-Object.assign(Amasec.prototype, {
-	name: "Amasec",
-	description: "Official drink of the Nanotrasen Gun-Club!",
-	color: [0.4, 0.26, 0],
-	boozepwr: 35,
-	taste_description: "dark and metallic",
-	glass_icon_state: "amasecglass",
-	glass_name: "Amasec",
-	glass_desc: "Always handy before COMBAT!!!",
-});
-
-class ChangelingSting extends Ethanol {} // /datum/reagent/consumable/ethanol/changelingsting
-module.exports.reagents.ChangelingSting = ChangelingSting;
-Object.assign(ChangelingSting.prototype, {
-	name: "Changeling Sting",
-	description: "You take a tiny sip and feel a burning sensation...",
-	color: [0.18, 0.4, 0.44],
-	boozepwr: 95,
-	taste_description: "your brain coming out your nose",
-	glass_icon_state: "changelingsting",
-	glass_name: "Changeling Sting",
-	glass_desc: "A stingy drink.",
-});
-
 class IrishCarBomb extends Ethanol {} // /datum/reagent/consumable/ethanol/irishcarbomb
 module.exports.reagents.IrishCarBomb = IrishCarBomb;
 Object.assign(IrishCarBomb.prototype, {
@@ -927,76 +859,6 @@ Object.assign(IrishCarBomb.prototype, {
 	glass_icon_state: "irishcarbomb",
 	glass_name: "Irish Car Bomb",
 	glass_desc: "An Irish car bomb.",
-});
-
-class SyndicateBomb extends Ethanol {} // /datum/reagent/consumable/ethanol/syndicatebomb
-module.exports.reagents.SyndicateBomb = SyndicateBomb;
-Object.assign(SyndicateBomb.prototype, {
-	name: "Syndicate Bomb",
-	description: "Tastes like terrorism!",
-	color: [0.18, 0.4, 0.44],
-	boozepwr: 90,
-	taste_description: "purified antagonism",
-	glass_icon_state: "syndicatebomb",
-	glass_name: "Syndicate Bomb",
-	glass_desc: "A syndicate bomb.",
-});
-
-class ErikaSurprise extends Ethanol {} // /datum/reagent/consumable/ethanol/erikasurprise
-module.exports.reagents.ErikaSurprise = ErikaSurprise;
-Object.assign(ErikaSurprise.prototype, {
-	name: "Erika Surprise",
-	description: "The surprise is, it's green!",
-	color: [0.18, 0.4, 0.44],
-	boozepwr: 35,
-	taste_description: "tartness and bananas",
-	glass_icon_state: "erikasurprise",
-	glass_name: "Erika Surprise",
-	glass_desc: "The surprise is, it's green!",
-});
-
-class DriestMartini extends Ethanol {} // /datum/reagent/consumable/ethanol/driestmartini
-module.exports.reagents.DriestMartini = DriestMartini;
-Object.assign(DriestMartini.prototype, {
-	name: "Driest Martini",
-	description:
-	"Only for the experienced. You think you see sand floating in the glass.",
-	nutriment_factor: 0.5,
-	color: [0.18, 0.4, 0.44],
-	boozepwr: 65,
-	taste_description: "a beach",
-	glass_icon_state: "driestmartiniglass",
-	glass_name: "Driest Martini",
-	glass_desc:
-	"Only for the experienced. You think you see sand floating in the glass.",
-});
-
-class BananaHonk extends Ethanol {} // /datum/reagent/consumable/ethanol/bananahonk
-module.exports.reagents.BananaHonk = BananaHonk;
-Object.assign(BananaHonk.prototype, {
-	name: "Banana Honk",
-	description: "A drink from Clown Heaven.",
-	nutriment_factor: 0.5,
-	color: [1, 1, 0.57],
-	boozepwr: 60,
-	taste_description: "a bad joke",
-	glass_icon_state: "bananahonkglass",
-	glass_name: "Banana Honk",
-	glass_desc: "A drink from Clown Heaven.",
-});
-
-class Silencer extends Ethanol {} // /datum/reagent/consumable/ethanol/silencer
-module.exports.reagents.Silencer = Silencer;
-Object.assign(Silencer.prototype, {
-	name: "Silencer",
-	description: "A drink from Mime Heaven.",
-	nutriment_factor: 0.5,
-	color: [0.4, 0.26, 0],
-	boozepwr: 59,
-	taste_description: "a pencil eraser",
-	glass_icon_state: "silencerglass",
-	glass_name: "Silencer",
-	glass_desc: "A drink from Mime Heaven.",
 });
 
 class DrunkenBlumpkin extends Ethanol {} // /datum/reagent/consumable/ethanol/drunkenblumpkin
@@ -1041,21 +903,6 @@ Object.assign(HardCider.prototype, {
 	shot_glass_icon_state: "shotglassbrown",
 });
 
-class FetchingFizz extends Ethanol {} // /datum/reagent/consumable/ethanol/fetching_fizz
-module.exports.reagents.FetchingFizz = FetchingFizz;
-Object.assign(FetchingFizz.prototype, {
-	name: "Fetching Fizz",
-	description:
-	"Whiskey sour/iron/uranium mixture resulting in a highly magnetic slurry. Mild alcohol content.",
-	color: [1, 0.36, 0.06],
-	boozepwr: 10,
-	metabolization_rate: 0.05,
-	taste_description: "charged metal",
-	glass_icon_state: "fetching_fizz",
-	glass_name: "Fetching Fizz",
-	glass_desc:
-	"Induces magnetism in the imbiber. Started as a barroom prank but evolved to become popular with miners and scrappers. Metallic aftertaste.",
-});
 
 class HeartyPunch extends Ethanol {} // /datum/reagent/consumable/ethanol/hearty_punch
 module.exports.reagents.HeartyPunch = HeartyPunch;
@@ -1073,20 +920,6 @@ Object.assign(HeartyPunch.prototype, {
 	"Aromatic beverage served piping hot. According to folk tales it can almost wake the dead.",
 });
 
-class BacchusBlessing extends Ethanol {} // /datum/reagent/consumable/ethanol/bacchus_blessing
-module.exports.reagents.BacchusBlessing = BacchusBlessing;
-Object.assign(BacchusBlessing.prototype, {
-	name: "Bacchus' Blessing",
-	description: "Unidentifiable mixture. Unmeasurably high alcohol content.",
-	color: [0.2, 0.07, 0.01],
-	boozepwr: 300,
-	taste_description: "a wall of bricks",
-	glass_icon_state: "glass_brown2",
-	glass_name: "Bacchus' Blessing",
-	glass_desc:
-	"You didn't think it was possible for a liquid to be so utterly revolting. Are you sure about this...?",
-});
-
 class AtomicBomb extends Ethanol {} // /datum/reagent/consumable/ethanol/atomicbomb
 module.exports.reagents.AtomicBomb = AtomicBomb;
 Object.assign(AtomicBomb.prototype, {
@@ -1101,21 +934,6 @@ Object.assign(AtomicBomb.prototype, {
 	"Nanotrasen cannot take legal responsibility for your actions after imbibing.",
 });
 
-class PanGalacticGargleBlaster extends Ethanol {} // /datum/reagent/consumable/ethanol/gargle_blaster
-module.exports.reagents.PanGalacticGargleBlaster = PanGalacticGargleBlaster;
-Object.assign(PanGalacticGargleBlaster.prototype, {
-	name: "Pan-Galactic Gargle Blaster",
-	description: "Whoah, this stuff looks volatile!",
-	color: [0.4, 0.26, 0],
-	boozepwr: 0,
-	taste_description:
-	"your brains smashed out by a lemon wrapped around a gold brick",
-	glass_icon_state: "gargleblasterglass",
-	glass_name: "Pan-Galactic Gargle Blaster",
-	glass_desc:
-	"Like having your brain smashed out by a slice of lemon wrapped around a large gold brick.",
-});
-
 class Neurotoxin extends Ethanol {} // /datum/reagent/consumable/ethanol/neurotoxin
 module.exports.reagents.Neurotoxin = Neurotoxin;
 Object.assign(Neurotoxin.prototype, {
@@ -1128,21 +946,6 @@ Object.assign(Neurotoxin.prototype, {
 	glass_icon_state: "neurotoxinglass",
 	glass_name: "Neurotoxin",
 	glass_desc: "A drink that is guaranteed to knock you silly.",
-});
-
-class HippiesDelight extends Ethanol {} // /datum/reagent/consumable/ethanol/hippies_delight
-module.exports.reagents.HippiesDelight = HippiesDelight;
-Object.assign(HippiesDelight.prototype, {
-	name: "Hippie's Delight",
-	description: "You just don't get it maaaan.",
-	color: [0.4, 0.26, 0],
-	nutriment_factor: 0,
-	boozepwr: 0,
-	metabolization_rate: 0.1,
-	taste_description: "giving peace a chance",
-	glass_icon_state: "hippiesdelightglass",
-	glass_name: "Hippie's Delight",
-	glass_desc: "A drink enjoyed by people during the 1960's.",
 });
 
 class Eggnog extends Ethanol {} // /datum/reagent/consumable/ethanol/eggnog
