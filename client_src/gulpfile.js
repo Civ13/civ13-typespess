@@ -23,7 +23,7 @@ function bundle() {
 		.pipe(buffer())
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(sourcemaps.write("./"))
-		.pipe(gulp.dest("../res"));
+		.pipe(gulp.dest("../resources"));
 }
 
 gulp.task("default", function () {return bundle();});

@@ -13,7 +13,7 @@ const server = new Typespess();
 global.server = server; // So the debugger can access it. No, you are not allowed to use it in your code.
 // I should be able to remove this line with *nothing* breaking (except the ability to use the debugger)
 global.require = require;
-server.resRoot = "./res/";
+server.resRoot = "./resources/";
 
 server.config = read_config("config.cson");
 

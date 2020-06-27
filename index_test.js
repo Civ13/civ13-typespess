@@ -8,7 +8,7 @@ console.log("Loading game...");
 
 const server = new Typespess();
 global.require = require;
-server.resRoot = "./res/";
+server.resRoot = "./resources/";
 
 server.config = read_config("config.cson");
 
