@@ -2,7 +2,6 @@ const {
 	Component,
 	Sound,
 	Atom,
-	to_chat,
 } = require("./../../../code/game/server.js");
 const NewPlayerPanel = require("./new_player_panel.js");
 const _ = require("underscore");
