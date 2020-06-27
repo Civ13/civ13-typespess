@@ -1,0 +1,77 @@
+Charcoal:
+	type: "reaction"
+	results: { Charcoal: 2 }
+	required_reagents: { Ash: 1, TableSalt: 1 }
+	mix_message: "The mixture yields a fine black powder."
+	min_temp: 380
+
+SalineGlucoseSolution:
+	type: "reaction"
+	results: { SalineGlucoseSolution: 3 }
+	required_reagents: { TableSalt: 1, Water: 1, Sugar: 1 }
+
+PotassiumIodide:
+	type: "reaction"
+	results: { PotassiumIodide: 2 }
+	required_reagents: { Potassium: 1, Iodine: 1 }
+
+
+PenteticAcid:
+	type: "reaction"
+	results: { PenteticAcid: 6 }
+	required_reagents: {
+		WeldingFuel: 1
+		Chlorine: 1
+		Ammonia: 1
+		Formaldehyde: 1
+		Sodium: 1
+		Cyanide: 1
+	}
+
+SalicyclicAcid:
+	type: "reaction"
+	results: { SalicyclicAcid: 5 }
+	required_reagents: { Sodium: 1, Phenol: 1, Carbon: 1, Oxygen: 1, SAcid: 1 }
+
+Ephedrine:
+	type: "reaction"
+	results: { Ephedrine: 4 }
+	required_reagents: { Sugar: 1, Oil: 1, Hydrogen: 1, Diethylamine: 1 }
+	mix_message: "The solution fizzes and gives off toxic fumes."
+
+
+Diphenhydramine:
+	type: "reaction"
+	results: { Diphenhydramine: 4 }
+	required_reagents: {
+		Oil: 1
+		Carbon: 1
+		Bromine: 1
+		Diethylamine: 1
+		Ethanol: 1
+	}
+	mix_message: "The mixture dries into a pale blue powder."
+
+
+Epinephrine:
+	type: "reaction"
+	results: { Epinephrine: 6 }
+	required_reagents: {
+		Phenol: 1
+		Acetone: 1
+		Diethylamine: 1
+		Oxygen: 1
+		Chlorine: 1
+		Hydrogen: 1
+	}
+
+AntiToxin:
+	type: "reaction"
+	results: { AntiToxin: 3 }
+	required_reagents: { Nitrogen: 1, Silicon: 1, Potassium: 1 }
+
+
+Tricordrazine:
+	type: "reaction"
+	results: { Tricordrazine: 3 }
+	required_reagents: { Bicaridine: 1, Kelotane: 1, AntiToxin: 1 }

@@ -360,11 +360,7 @@ add_items(require("./reagents/food.js"));
 add_items(require("./reagents/medicine.js"));
 add_items(require("./reagents/pyrotechnic.js"));
 add_items(require("./reagents/toxin.js"));
-add_items(require("./recipes/others.js"));
-add_items(require("./recipes/drugs.js"));
-add_items(require("./recipes/medicine.js"));
-add_items(require("./recipes/pyrotechnics.js"));
-add_items(require("./recipes/toxins.js"));
+add_items(require("./recipes/recipe_importer.js"));
 
 // Cache the reactions for the reagents
 
