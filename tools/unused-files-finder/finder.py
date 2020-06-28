@@ -10,13 +10,14 @@ with open("imglist.txt", "w") as writing:
 				filesp = file.replace("\n","") # removes the paragraph at the end of the string
 				if(file.endswith(".png") or file.endswith(".gif") or file.endswith(".jpg") or file.endswith(".ogg")):
 					# if it has one of the extensions, split it so we get the filename without dirs
-					if filesp.find("node_modules") == -1 and filesp.find("tools") == -1: #exclude the dependency folders
+					filesp = str(root)+"\\"+str(file) # get the absolute directory
+					if filesp.find("node_modules") == -1: #exclude the dependency folders
 						filesp = file.split("\\") # if it has one of the extensions, split it so we get the filename without dirs
 						writing.write(str(root)+"\\"+filesp[len(filesp)-1]+"\n") # return the last value of the splitted array and write to the file
 				#moving on to the code file listing...
-				elif(file.endswith(".js") or file.endswith(".ts") or file.endswith(".coffee")): #search code files
+				elif(file.endswith(".js") or file.endswith(".ts") or file.endswith(".coffee") or file.endswith(".atom")): #search code files
 					filesp = str(root)+"\\"+str(file) # get the absolute directory
-					if filesp.find("node_modules") == -1 and filesp.find("tools") == -1: #exclude the dependency folders
+					if filesp.find("node_modules") == -1: #exclude the dependency folders
 						writing2.write(filesp+"\n")
 writing.close()
 writing2.close()
@@ -29,16 +30,22 @@ with open("unused.txt","w") as unusedfile: # this is where we will list all the 
 		for imgline in reading3:
 			found = False
 			imgline_parsed = imgline.replace("\n","") # remove the paragraph
-			imgline_parsed = imgline_parsed.replace("\\","/")
-			imgline_parsed = imgline_parsed.replace("../../res/","")
+			imgline_parsed = imgline_parsed.replace('\\',"/")
+			imgline_parsed = imgline_parsed.replace("../../resources/","")
 			print("Checking {}".format(imgline_parsed))
 			with open("jslist.txt", "r") as reading:
 				for jsline in reading:
 					jsline_parsed = jsline.replace("\n","")
+					imgline_parsed2 = imgline_parsed.replace(".png","")
+					imgline_parsed2 = imgline_parsed2.replace(".jpg","")
+					imgline_parsed2 = imgline_parsed2.replace(".gif","")
+					imgline_parsed2 = imgline_parsed2.replace(".ogg","")
+					for x in range(0,10):
+						imgline_parsed2 = imgline_parsed2.replace(str(x),"")
 					with open(jsline_parsed, "r", encoding="utf-8") as reading2: # opening the files in jslist.txt...
 						print("    Checking in {}".format(jsline_parsed))
 						for line in reading2: # checking each line
-							if line.find(imgline_parsed) != -1: #if either of the img names found
+							if line.find(imgline_parsed) != -1 or line.find(imgline_parsed2) != -1: #if either of the img names found
 								found = True
 								print("        Found! {}".format(line)) # break out of the condition (no need to search the rest of the files)
 								break
