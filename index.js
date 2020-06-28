@@ -29,25 +29,13 @@ server.importModule(require("./code/game/mobs/living/living_defense.js"));
 server.importModule(require("./code/game/mobs/living/living.js"));
 server.importModule(require("./code/game/mobs/living/carbon/carbon.js"));
 server.importModule(require("./code/game/mobs/living/carbon/slip.js"));
-server.importModule(
-	require("./code/game/mobs/living/carbon/body_parts/body_parts.js")
-);
-server.importModule(
-	require("./code/game/mobs/living/carbon/body_parts/components.js")
-);
-server.importModule(
-	require("./code/game/mobs/living/carbon/body_parts/head.js")
-);
-server.importModule(
-	require("./code/game/mobs/living/carbon/body_parts/health_doll.js")
-);
-server.importModule(
-	require("./code/game/mobs/living/carbon/body_parts/zones.js")
-);
+server.importModule(require("./code/game/mobs/living/carbon/body_parts/body_parts.js"));
+server.importModule(require("./code/game/mobs/living/carbon/body_parts/components.js"));
+server.importModule(require("./code/game/mobs/living/carbon/body_parts/head.js"));
+server.importModule(require("./code/game/mobs/living/carbon/body_parts/health_doll.js"));
+server.importModule(require("./code/game/mobs/living/carbon/body_parts/zones.js"));
 server.importModule(require("./code/game/mobs/living/carbon/human/human.js"));
-server.importModule(
-	require("./code/game/mobs/living/carbon/human/human_parts.js")
-);
+server.importModule(require("./code/game/mobs/living/carbon/human/human_parts.js"));
 server.importModule(require("./code/game/mobs/living/carbon/organs/liver.js"));
 server.importModule(require("./code/game/mobs/living/carbon/organs/lungs.js"));
 server.importModule(require("./code/game/mobs/living/carbon/organs/organ.js"));
@@ -57,15 +45,9 @@ server.importModule(require("./code/game/components/objects/doors/door.js"));
 server.importModule(require("./code/game/components/objects/items/devices/flashlight.js"));
 server.importModule(require("./code/game/components/objects/items/devices/multitool.js"));
 server.importModule(require("./code/game/components/objects/items/devices/scanners.js"));
-server.importModule(
-	require("./code/game/components/objects/items/stacks/sheets/glass.js")
-);
-server.importModule(
-	require("./code/game/components/objects/items/stacks/sheets/sheet_types.js")
-);
-server.importModule(
-	require("./code/game/components/objects/items/stacks/tiles/tile_mineral.js")
-);
+server.importModule(require("./code/game/components/objects/items/stacks/sheets/glass.js"));
+server.importModule(require("./code/game/components/objects/items/stacks/sheets/sheet_types.js"));
+server.importModule(require("./code/game/components/objects/items/stacks/tiles/tile_mineral.js"));
 server.importModule(require("./code/game/components/objects/items/stacks/tiles/tile_types.js"));
 server.importModule(require("./code/game/components/objects/items/stacks/rods.js"));
 server.importModule(require("./code/game/components/objects/items/stacks/stack.js"));
@@ -120,27 +102,17 @@ server.importModule(require("./code/modules/power/controller.js"));
 server.importModule(require("./code/modules/power/lighting.js"));
 server.importModule(require("./code/modules/power/machine.js"));
 server.importModule(require("./code/modules/power/node.js"));
-server.importModule(
-	require("./code/modules/projectiles/ammunition/ammo_casings.js")
-);
+server.importModule(require("./code/modules/projectiles/ammunition/ammo_casings.js"));
 server.importModule(require("./code/modules/projectiles/ammunition/energy.js"));
-server.importModule(
-	require("./code/modules/projectiles/boxes_magazines/ammo_boxes.js")
-);
-server.importModule(
-	require("./code/modules/projectiles/boxes_magazines/external_mag.js")
-);
-server.importModule(
-	require("./code/modules/projectiles/guns/ballistic/pistol.js")
-);
+server.importModule(require("./code/modules/projectiles/boxes_magazines/ammo_boxes.js"));
+server.importModule(require("./code/modules/projectiles/boxes_magazines/external_mag.js"));
+server.importModule(require("./code/modules/projectiles/guns/ballistic/pistol.js"));
 server.importModule(require("./code/modules/projectiles/guns/energy/laser.js"));
 server.importModule(require("./code/modules/projectiles/guns/energy/stun.js"));
 server.importModule(require("./code/modules/projectiles/guns/ballistic.js"));
 server.importModule(require("./code/modules/projectiles/guns/energy.js"));
 server.importModule(require("./code/modules/projectiles/projectile/beam.js"));
-server.importModule(
-	require("./code/modules/projectiles/projectile/bullets.js")
-);
+server.importModule(require("./code/modules/projectiles/projectile/bullets.js"));
 server.importModule(require("./code/modules/projectiles/projectile/energy.js"));
 server.importModule(require("./code/modules/projectiles/ammunition.js"));
 server.importModule(require("./code/modules/projectiles/box_magazine.js"));
@@ -149,10 +121,7 @@ server.importModule(require("./code/modules/projectiles/projectile.js"));
 server.importModule(require("./code/modules/atoms/reagents/containers/open.js"));
 server.importModule(require("./code/modules/atoms/reagents/containers/pill.js"));
 server.importModule(require("./code/modules/atoms/reagents/containers/spray.js"));
-server.importModule(
-	require("./code/modules/atoms/reagents/machinery/chem_dispenser.js")
-);
-
+server.importModule(require("./code/modules/atoms/reagents/machinery/chem_dispenser.js"));
 server.importModule(require("./code/modules/reagents/holder.js"));
 server.importModule(require("./code/modules/smoothing/smoothing.js"));
 server.importModule(require("./code/modules/speech/speech.js"));
@@ -179,8 +148,7 @@ if (global.is_bs_editor_env) {
 	const map = server_config.maps.current_map;
 	console.log("Loading map " + map + "...");
 	server.station_dim = new Typespess.Dimension(server);
-	server.instance_map_sync(
-		JSON.parse(fs.readFileSync("maps/" + map + ".bsmap", "utf8")),
+	server.instance_map_sync(	JSON.parse(fs.readFileSync("maps/" + map + ".bsmap", "utf8")),
 		0,
 		0,
 		0,
@@ -205,16 +173,11 @@ if (global.is_bs_editor_env) {
 	if (server_config.gh_login.enabled) {
 		const authorization =
 			"Basic " +
-			Buffer.from(
-				`${server_config.gh_login.client_id}:${server_config.gh_login.client_secret}`
+			Buffer.from(			`${server_config.gh_login.client_id}:${server_config.gh_login.client_secret}`
 			).toString("base64");
 		const invalid_tokens = new Set();
 		server.handle_login = function (ws) {
-			ws.send(
-				JSON.stringify({
-					login_type: "github",
-					client_id: server_config.gh_login.client_id,
-				})
+			ws.send(JSON.stringify({login_type: "github",client_id: server_config.gh_login.client_id,})
 			);
 			let id = null;
 			let name = null;
@@ -223,48 +186,41 @@ if (global.is_bs_editor_env) {
 				const obj = JSON.parse(msg);
 				if (obj.access_token) {
 					obj.access_token = "" + obj.access_token;
-					const req = https.request(
-						{
-							hostname: "api.github.com",
-							path: `/applications/${
-								server_config.gh_login.client_id
-							}/tokens/${querystring.escape(obj.access_token)}`,
-							method: "GET",
-							headers: {
-								"User-Agent": server_config.gh_login.user_agent,
-								Authorization: authorization,
-							},
+					const req = https.request(					{
+						hostname: "api.github.com",
+						path: `/applications/${
+							server_config.gh_login.client_id
+						}/tokens/${querystring.escape(obj.access_token)}`,
+						method: "GET",
+						headers: {
+							"User-Agent": server_config.gh_login.user_agent,
+							Authorization: authorization,
 						},
-						(res) => {
-							res.setEncoding("utf8");
-							let data = "";
-							res.on("data", (chunk) => {
-								data += chunk;
-							});
-							res.on("end", () => {
-								const obj2 = JSON.parse(data);
-								if (
-									!obj2.user ||
-									!obj2.scopes ||
-									!obj2.scopes.includes("user:email")
-								) {
-									ws.send(JSON.stringify({ valid: false }));
-								} else {
-									name = obj2.user.login;
-									id = obj2.user.id;
-									token = obj.access_token;
-									ws.send(
-										JSON.stringify({
-											valid: true,
-											logged_in_as: obj2.user.login,
-											autojoin:
-												server.dc_mobs[id] != null ||
-												server.clients[id] != null,
-										})
-									);
-								}
-							});
-						}
+					},
+					(res) => {
+						res.setEncoding("utf8");
+						let data = "";
+						res.on("data", (chunk) => {
+							data += chunk;
+						});
+						res.on("end", () => {
+							const obj2 = JSON.parse(data);
+							if (!obj2.user || !obj2.scopes || !obj2.scopes.includes("user:email")
+							) {
+								ws.send(JSON.stringify({ valid: false }));
+							} else {
+								name = obj2.user.login;
+								id = obj2.user.id;
+								token = obj.access_token;
+								ws.send(JSON.stringify({
+									valid: true,
+									logged_in_as: obj2.user.login,
+									autojoin: server.dc_mobs[id] != null || server.clients[id] != null,
+								})
+								);
+							}
+						});
+					}
 					);
 					req.on("error", (err) => {
 						ws.send(JSON.stringify({ valid: false }));
@@ -309,45 +265,41 @@ if (global.is_bs_editor_env) {
 		const done = finalhandler(req, res);
 		const url_obj = url.parse(req.url, true);
 		if (url_obj.pathname == "/gh-oauth" && server_config.gh_login.enabled) {
-			const req2 = https.request(
-				{
-					hostname: "github.com",
-					path: "/login/oauth/access_token",
-					method: "POST",
-					headers: { "User-Agent": server_config.gh_login.user_agent },
-				},
-				(res2) => {
-					res2.setEncoding("utf8");
-					let data = "";
-					res2.on("data", (chunk) => {
-						data += chunk;
-					});
-					res2.on("end", () => {
-						const obj = querystring.parse(data);
-						if (!obj.access_token) {
-							console.error(obj);
-							return done();
-						}
-						res.writeHead(200, { "Content-Type": "text/html" });
-						res.write(
-							`<html><head><script>localStorage.setItem("gh_access_token", ${JSON.stringify(
-								obj.access_token
-							)}); window.location.href="/";</script></head><body></body></html>`
-						);
-						res.end();
-					});
-				}
+			const req2 = https.request(			{
+				hostname: "github.com",
+				path: "/login/oauth/access_token",
+				method: "POST",
+				headers: { "User-Agent": server_config.gh_login.user_agent },
+			},
+			(res2) => {
+				res2.setEncoding("utf8");
+				let data = "";
+				res2.on("data", (chunk) => {
+					data += chunk;
+				});
+				res2.on("end", () => {
+					const obj = querystring.parse(data);
+					if (!obj.access_token) {
+						console.error(obj);
+						return done();
+					}
+					res.writeHead(200, { "Content-Type": "text/html" });
+					res.write(`<html><head><script>localStorage.setItem("gh_access_token", ${JSON.stringify(							obj.access_token
+					)}); window.location.href="/";</script></head><body></body></html>`
+					);
+					res.end();
+				});
+			}
 			);
 			req2.on("error", (err) => {
 				console.error(err);
 				done();
 			});
-			req2.write(
-				querystring.stringify({
-					client_id: server_config.gh_login.client_id,
-					client_secret: server_config.gh_login.client_secret,
-					code: url_obj.query.code,
-				})
+			req2.write(querystring.stringify({
+				client_id: server_config.gh_login.client_id,
+				client_secret: server_config.gh_login.client_secret,
+				code: url_obj.query.code,
+			})
 			);
 			req2.end();
 		} else if (url_obj.pathname == "/status") {
@@ -355,12 +307,11 @@ if (global.is_bs_editor_env) {
 			res.writeHead(200, { "Content-Type": "application/json" });
 			const clients = [...Object.keys(server.clients)];
 			const clients_by_name = [...Object.keys(server.clients_by_name)];
-			res.write(
-				JSON.stringify({
-					player_count: clients.length,
-					clients,
-					clients_by_name,
-				})
+			res.write(JSON.stringify({
+				player_count: clients.length,
+				clients,
+				clients_by_name,
+			})
 			);
 			res.end();
 		} else {

@@ -352,7 +352,7 @@ function add_items(mod) {
 
 // Import the reagents and recipes
 add_items(require("./reagents/other.js"));
-add_items(require("./reagents/alcohol.js"));
+add_items(require("./reagents/reagent_importer.js"));
 add_items(require("./reagents/drink.js"));
 add_items(require("./reagents/drug.js"));
 add_items(require("./reagents/food.js"));

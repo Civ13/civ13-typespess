@@ -1,0 +1,802 @@
+Ethanol:
+	name: "Ethanol"
+	description: "A well-known alcohol with a variety of applications."
+	color: [0.25, 0.25, 0.19]
+	nutriment_factor: 0
+	taste_description: "alcohol"
+	subtype: "ethanol"
+	boozepwr: 65
+
+Beer:
+	name: "Beer"
+	description: "An alcoholic beverage brewed since ancient times on Old Earth. Still popular today."
+	color: [0.4, 0.26, 0]
+	nutriment_factor: 0.5
+	subtype: "ethanol"
+	boozepwr: 25
+	taste_description: "piss water"
+	glass_name: "glass of beer"
+	glass_desc: "A freezing pint of beer."
+
+GreenBeer:
+	name: "Green Beer"
+	description: "An alcoholic beverage brewed since ancient times on Old Earth. This variety is dyed a festive green."
+	color: [0.66, 0.9, 0.11]
+	taste_description: "green piss water"
+	glass_icon_state: "greenbeerglass"
+	glass_name: "glass of green beer"
+	glass_desc: "A freezing pint of green beer. Festive."
+
+Kahlua:
+	name: "Kahlua"
+	description: "A widely known, Mexican coffee-flavoured liqueur. In production since 1936!"
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 45
+	glass_icon_state: "kahluaglass"
+	glass_name: "glass of RR Coffee Liquor"
+	glass_desc: "DAMN, THIS THING LOOKS ROBUST!"
+	shot_glass_icon_state: "shotglasscream"
+
+Whiskey:
+	name: "Whiskey"
+	description: "A superb and well-aged single-malt whiskey. Damn."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 75
+	taste_description: "molasses"
+	glass_icon_state: "whiskeyglass"
+	glass_name: "glass of whiskey"
+	glass_desc: "The silky, smokey whiskey goodness inside the glass makes the drink look very classy."
+	shot_glass_icon_state: "shotglassbrown"
+
+ThirteenLoko:
+	name: "Thirteen Loko"
+	description: "A potent mixture of caffeine and alcohol."
+	color: [0.06, 0.13, 0]
+	nutriment_factor: 0.5
+	subtype: "ethanol"
+	boozepwr: 80
+	taste_description: "jitters and death"
+	glass_icon_state: "thirteen_loko_glass"
+	glass_name: "glass of Thirteen Loko"
+	glass_desc: "This is a glass of Thirteen Loko, it appears to be of the highest quality. The drink, not the glass."
+
+
+Vodka:
+	name: "Vodka"
+	description: "Number one drink AND fueling choice for Russians worldwide."
+	color: [0, 0.39, 0.78]
+	subtype: "ethanol"
+	boozepwr: 65
+	taste_description: "grain alcohol"
+	glass_icon_state: "ginvodkaglass"
+	glass_name: "glass of vodka"
+	glass_desc: "The glass contain wodka. Xynta."
+	shot_glass_icon_state: "shotglassclear"
+
+
+Bilk:
+	name: "Bilk"
+	description: "This appears to be beer mixed with milk. Disgusting."
+	color: [0.54, 0.36, 0.3]
+	nutriment_factor: 1
+	subtype: "ethanol"
+	boozepwr: 15
+	taste_description: "desperation and lactate"
+	glass_icon_state: "glass_brown"
+	glass_name: "glass of bilk"
+	glass_desc: "A brew of milk and beer. For those alcoholics who fear osteoporosis."
+
+
+ThreeMileIslandIcedTea:
+	name: "Three Mile Island Iced Tea"
+	description: "Made for a woman, strong enough for a man."
+	color: [0.4, 0.39, 0.25]
+	subtype: "ethanol"
+	boozepwr: 10
+	taste_description: "dryness"
+	glass_icon_state: "threemileislandglass"
+	glass_name: "Three Mile Island Ice Tea"
+	glass_desc: "A glass of this is sure to prevent a meltdown."
+
+
+Gin:
+	name: "Gin"
+	description: "It's gin. In space. I say, good sir."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 45
+	taste_description: "an alcoholic christmas tree"
+	glass_icon_state: "ginvodkaglass"
+	glass_name: "glass of gin"
+	glass_desc: "A crystal clear glass of Griffeater gin."
+
+
+Rum:
+	name: "Rum"
+	description: "Yohoho and all that."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 60
+	taste_description: "spiked butterscotch"
+	glass_icon_state: "rumglass"
+	glass_name: "glass of rum"
+	glass_desc: "Now you want to Pray for a pirate suit, don't you?"
+	shot_glass_icon_state: "shotglassbrown"
+
+
+Tequila:
+	name: "Tequila"
+	description: "A strong and mildly flavoured, Mexican produced spirit. Feeling thirsty, hombre?"
+	color: [1, 1, 0.57]
+	subtype: "ethanol"
+	boozepwr: 70
+	taste_description: "paint stripper"
+	glass_icon_state: "tequilaglass"
+	glass_name: "glass of tequila"
+	glass_desc: "Now all that's missing is the weird colored shades!"
+	shot_glass_icon_state: "shotglassgold"
+
+
+Vermouth:
+	name: "Vermouth"
+	description: "You suddenly feel a craving for a martini..."
+	color: [0.57, 1, 0.57]
+	subtype: "ethanol"
+	boozepwr: 45
+	taste_description: "dry alcohol"
+	glass_icon_state: "vermouthglass"
+	glass_name: "glass of vermouth"
+	glass_desc: "You wonder why you're even drinking this straight."
+	shot_glass_icon_state: "shotglassclear"
+
+
+Wine:
+	name: "Wine"
+	description: "A premium alcoholic beverage made from distilled grape juice."
+	color: [0.49, 0.25, 0.26]
+	subtype: "ethanol"
+	boozepwr: 35
+	taste_description: "bitter sweetness"
+	glass_icon_state: "wineglass"
+	glass_name: "glass of wine"
+	glass_desc: "A very classy looking drink."
+	shot_glass_icon_state: "shotglassred"
+
+
+LizardWine:
+	name: "Lizard wine"
+	description: "An alcoholic beverage from Space China, made by infusing lizard tails in ethanol."
+	color: [0.49, 0.25, 0.26]
+	subtype: "ethanol"
+	boozepwr: 45
+	taste_description: "scaley sweetness"
+
+
+Grappa:
+	name: "Grappa"
+	description: "A fine Italian brandy, for when regular wine just isn't alcoholic enough for you."
+	color: [0.97, 0.92, 0.95]
+	subtype: "ethanol"
+	boozepwr: 45
+	taste_description: "classy bitter sweetness"
+	glass_icon_state: "grappa"
+	glass_name: "glass of grappa"
+	glass_desc: "A fine drink originally made to prevent waste by using the leftovers from winemaking."
+
+
+Cognac:
+	name: "Cognac"
+	description: "A sweet and strongly alcoholic drink, made after numerous distillations and years of maturing. Classy as fornication."
+	color: [0.67, 0.24, 0.02]
+	subtype: "ethanol"
+	boozepwr: 75
+	taste_description: "angry and irish"
+	glass_icon_state: "cognacglass"
+	glass_name: "glass of cognac"
+	glass_desc: "Damn, you feel like some kind of French aristocrat just by holding this."
+	shot_glass_icon_state: "shotglassbrown"
+
+
+Absinthe:
+	name: "Absinthe"
+	description: "A powerful alcoholic drink. Rumored to cause hallucinations but does not."
+	color: [0.04, 0.81, 0]
+	subtype: "ethanol"
+	boozepwr: 80
+	taste_description: "death and licorice"
+	glass_icon_state: "absinthe"
+	glass_name: "glass of absinthe"
+	glass_desc: "It's as strong as it smells."
+	shot_glass_icon_state: "shotglassgreen"
+
+
+Hooch:
+	name: "Hooch"
+	description: "Either someone's failure at cocktail making or attempt in alcohol production. In any case, do you really want to drink that?"
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 100
+	taste_description: "pure resignation"
+	glass_icon_state: "glass_brown2"
+	glass_name: "Hooch"
+	glass_desc: "You've really hit rock bottom now... your liver packed its bags and left last night."
+
+
+Ale:
+	name: "Ale"
+	description: "A dark alcoholic beverage made with malted barley and yeast."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 65
+	taste_description: "hearty barley ale"
+	glass_icon_state: "aleglass"
+	glass_name: "glass of ale"
+	glass_desc: "A freezing pint of delicious Ale."
+
+
+Goldschlager:
+	name: "Goldschlager"
+	description: "100 proof cinnamon schnapps, made for alcoholic teen girls on spring break."
+	color: [1, 1, 0.57]
+	subtype: "ethanol"
+	boozepwr: 25
+	taste_description: "burning cinnamon"
+	glass_icon_state: "goldschlagerglass"
+	glass_name: "glass of Goldschlager"
+	glass_desc: "100% proof that teen girls will drink anything with gold in it."
+	shot_glass_icon_state: "shotglassgold"
+
+
+Patron:
+	name: "Patron"
+	description: "Tequila with silver in it, a favorite of alcoholic women in the club scene."
+	color: [0.35, 0.35, 0.25]
+	subtype: "ethanol"
+	boozepwr: 60
+	taste_description: "metallic and expensive"
+	glass_icon_state: "patronglass"
+	glass_name: "glass of patron"
+	glass_desc: "Drinking patron in the bar, with all the subpar ladies."
+	shot_glass_icon_state: "shotglassclear"
+
+
+GinAndTonic:
+	name: "Gin and Tonic"
+	description: "An all time classic, mild cocktail."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 25
+	taste_description: "mild and tart"
+	glass_icon_state: "gintonicglass"
+	glass_name: "Gin and Tonic"
+	glass_desc: "A mild but still great cocktail. Drink up, like a true Englishman."
+
+
+CubaLibre:
+	name: "Cuba Libre"
+	description: "Rum, mixed with cola. Viva la revolucion."
+	color: [0.24, 0.11, 0]
+	subtype: "ethanol"
+	boozepwr: 50
+	taste_description: "cola"
+	glass_icon_state: "cubalibreglass"
+	glass_name: "Cuba Libre"
+	glass_desc: "A classic mix of rum and cola."
+
+
+WhiskeyCola:
+	name: "Whiskey Cola"
+	description: "Whiskey, mixed with cola. Surprisingly refreshing."
+	color: [0.24, 0.11, 0]
+	subtype: "ethanol"
+	boozepwr: 70
+	taste_description: "cola"
+	glass_icon_state: "whiskeycolaglass"
+	glass_name: "Whiskey Cola"
+	glass_desc: "An innocent-looking mixture of cola and Whiskey. Delicious."
+
+
+ClassicMartini:
+	name: "Classic Martini"
+	description: "Vermouth with Gin. Not quite how 007 enjoyed it, but still delicious."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 60
+	taste_description: "dry class"
+	glass_icon_state: "martiniglass"
+	glass_name: "Classic Martini"
+	glass_desc: "Damn, the bartender even stirred it, not shook it."
+
+
+VodkaMartini:
+	name: "Vodka Martini"
+	description: "Vodka with Gin. Not quite how 007 enjoyed it, but still delicious."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 65
+	taste_description: "shaken, not stirred"
+	glass_icon_state: "martiniglass"
+	glass_name: "Vodka martini"
+	glass_desc: "A bastardisation of the classic martini. Still great."
+
+
+WhiteRussian:
+	name: "White Russian"
+	description: "That's just, like, your opinion, man..."
+	color: [0.65, 0.51, 0.25]
+	subtype: "ethanol"
+	boozepwr: 50
+	taste_description: "bitter cream"
+	glass_icon_state: "whiterussianglass"
+	glass_name: "White Russian"
+	glass_desc: "A very nice looking drink. But that's just, like, your opinion, man."
+
+
+Screwdriver:
+	name: "Screwdriver"
+	description: "Vodka, mixed with plain ol' orange juice. The result is surprisingly delicious."
+	color: [0.65, 0.51, 0.06]
+	subtype: "ethanol"
+	boozepwr: 55
+	taste_description: "oranges"
+	glass_icon_state: "screwdriverglass"
+	glass_name: "Screwdriver"
+	glass_desc: "A simple, yet superb mixture of Vodka and orange juice. Just the thing for the tired engineer."
+
+
+Booger:
+	name: "Booger"
+	description: "Ewww..."
+	color: [0.55, 1, 0.55]
+	subtype: "ethanol"
+	boozepwr: 45
+	taste_description: "sweet 'n creamy"
+	glass_icon_state: "booger"
+	glass_name: "Booger"
+	glass_desc: "Ewww..."
+
+
+BloodyMary:
+	name: "Bloody Mary"
+	description: "A strange yet pleasurable mixture made of vodka, tomato and lime juice. Or at least you THINK the red stuff is tomato juice."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 55
+	taste_description: "tomatoes with a hint of lime"
+	glass_icon_state: "bloodymaryglass"
+	glass_name: "Bloody Mary"
+	glass_desc: "Tomato juice, mixed with Vodka and a lil' bit of lime. Tastes like liquid murder."
+
+
+BraveBull: 
+	name: "Brave Bull"
+	description: "It's just as effective as Dutch-Courage!"
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 80
+	taste_description: "alcoholic bravery"
+	glass_icon_state: "bravebullglass"
+	glass_name: "Brave Bull"
+	glass_desc: "Tequila and Coffee liqueur, brought together in a mouthwatering mixture. Drink up."
+
+
+TequilaSunrise:
+	name: "Tequila Sunrise"
+	description: "Tequila and orange juice. Much like a Screwdriver, only Mexican~"
+	color: [1, 0.89, 0.55]
+	subtype: "ethanol"
+	boozepwr: 45
+	taste_description: "oranges"
+	glass_icon_state: "tequilasunriseglass"
+	glass_name: "tequila Sunrise"
+	glass_desc: "Oh great, now you feel nostalgic about sunrises back on Terra..."
+
+
+ToxinsSpecial:
+	name: "Toxins Special"
+	description: "This thing is ON FIRE! CALL THE DAMN SHUTTLE!"
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 25
+	taste_description: "spicy toxins"
+	glass_icon_state: "toxinsspecialglass"
+	glass_name: "Toxins Special"
+	glass_desc: "Whoah, this thing is on FIRE!"
+	shot_glass_icon_state: "toxinsspecialglass"
+
+
+IrishCream:
+	name: "Irish Cream"
+	description: "Whiskey-imbued cream, what else would you expect from the Irish?"
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 70
+	taste_description: "creamy alcohol"
+	glass_icon_state: "irishcreamglass"
+	glass_name: "Irish Cream"
+	glass_desc: "It's cream, mixed with whiskey. What else would you expect from the Irish?"
+
+
+TheManlyDorf:
+	name: "The Manly Dorf"
+	description: "Beer and Ale, brought together in a delicious mix. Intended for true men only."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 100
+	taste_description: "hair on your chest and your chin"
+	glass_icon_state: "manlydorfglass"
+	glass_name: "The Manly Dorf"
+	glass_desc: "A manly concoction made from Ale and Beer. Intended for true men only."
+
+
+LongIslandIcedTea:
+	name: "Long Island Iced Tea"
+	description: "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 35
+	taste_description: "a mixture of cola and alcohol"
+	glass_icon_state: "longislandicedteaglass"
+	glass_name: "Long Island Iced Tea"
+	glass_desc: "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
+
+
+Moonshine:
+	name: "Moonshine"
+	description: "You've really hit rock bottom now... your liver packed its bags and left last night."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 95
+	taste_description: "bitterness"
+	glass_icon_state: "glass_clear"
+	glass_name: "Moonshine"
+	glass_desc: "You've really hit rock bottom now... your liver packed its bags and left last night."
+
+
+B52:
+	name: "B-52"
+	description: "Coffee, Irish Cream, and cognac. You will get bombed."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 85
+	taste_description: "angry and irish"
+	glass_icon_state: "b52glass"
+	glass_name: "B-52"
+	glass_desc: "Kahlua, Irish Cream, and cognac. You will get bombed."
+	shot_glass_icon_state: "b52glass"
+
+
+IrishCoffee:
+	name: "Irish Coffee"
+	description: "Coffee, and alcohol. More fun than a Mimosa to drink in the morning."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 35
+	taste_description: "giving up on the day"
+	glass_icon_state: "irishcoffeeglass"
+	glass_name: "Irish Coffee"
+	glass_desc: "Coffee and alcohol. More fun than a Mimosa to drink in the morning."
+
+
+Margarita:
+	name: "Margarita"
+	description: "On the rocks with salt on the rim. Arriba~!"
+	color: [0.55, 1, 0.55]
+	subtype: "ethanol"
+	boozepwr: 35
+	taste_description: "dry and salty"
+	glass_icon_state: "margaritaglass"
+	glass_name: "Margarita"
+	glass_desc: "On the rocks with salt on the rim. Arriba~!"
+
+
+BlackRussian:
+	name: "Black Russian"
+	description: "For the lactose-intolerant. Still as classy as a White Russian."
+	color: [0.21, 0, 0]
+	subtype: "ethanol"
+	boozepwr: 70
+	taste_description: "bitterness"
+	glass_icon_state: "blackrussianglass"
+	glass_name: "Black Russian"
+	glass_desc: "For the lactose-intolerant. Still as classy as a White Russian."
+
+Manhattan:
+	name: "Manhattan"
+	description: "The Detective's undercover drink of choice. He never could stomach gin..."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 30
+	taste_description: "mild dryness"
+	glass_icon_state: "manhattanglass"
+	glass_name: "Manhattan"
+	glass_desc: "The Detective's undercover drink of choice. He never could stomach gin..."
+
+
+ManhattanProject:
+	name: "Manhattan Project"
+	description: "A scientist's drink of choice, for pondering ways to blow up the station."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 45
+	taste_description: "death, the destroyer of worlds"
+	glass_icon_state: "proj_manhattanglass"
+	glass_name: "Manhattan Project"
+	glass_desc: "A scientist's drink of choice, for thinking how to blow up the station."
+
+
+WhiskeySoda:
+	name: "Whiskey Soda"
+	description: "For the more refined griffon."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 70
+	taste_description: "soda"
+	glass_icon_state: "whiskeysodaglass2"
+	glass_name: "Whiskey Soda"
+	glass_desc: "Ultimate refreshment."
+
+
+AntiFreeze:
+	name: "Anti-freeze"
+	description: "The ultimate refreshment. Not what it sounds like."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 35
+	taste_description: "Jack Frost's piss"
+	glass_icon_state: "antifreeze"
+	glass_name: "Anti-freeze"
+	glass_desc: "The ultimate refreshment."
+
+
+Barefoot:
+	name: "Barefoot"
+	description: "Barefoot and pregnant."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 45
+	taste_description: "creamy berries"
+	glass_icon_state: "b&p"
+	glass_name: "Barefoot"
+	glass_desc: "Barefoot and pregnant."
+
+
+SnowWhite:
+	name: "Snow White"
+	description: "A cold refreshment."
+	color: [1, 1, 1]
+	subtype: "ethanol"
+	boozepwr: 35
+	taste_description: "refreshing cold"
+	glass_icon_state: "snowwhite"
+	glass_name: "Snow White"
+	glass_desc: "A cold refreshment."
+
+
+DemonsBlood:
+	name: "Demon's Blood"
+	description: "AHHHH!!!!"
+	color: [0.51, 0, 0]
+	subtype: "ethanol"
+	boozepwr: 75
+	taste_description: "sweet tasting iron"
+	glass_icon_state: "demonsblood"
+	glass_name: "Demons Blood"
+	glass_desc: "Just looking at this thing makes the hair at the back of your neck stand up."
+
+
+DevilsKiss:
+	name: "Devil's Kiss"
+	description: "Creepy time!"
+	color: [0.65, 0.51, 0.06]
+	subtype: "ethanol"
+	boozepwr: 70
+	taste_description: "bitter iron"
+	glass_icon_state: "devilskiss"
+	glass_name: "Devils Kiss"
+	glass_desc: "Creepy time!"
+
+
+VodkaAndTonic:
+	name: "Vodka and Tonic"
+	description: "For when a gin and tonic isn't Russian enough."
+	color: [0, 0.39, 0.78]
+	subtype: "ethanol"
+	boozepwr: 70
+	taste_description: "tart bitterness"
+	glass_icon_state: "vodkatonicglass"
+	glass_name: "Vodka and Tonic"
+	glass_desc: "For when a gin and tonic isn't Russian enough."
+
+
+GinFizz:
+	name: "Gin Fizz"
+	description: "Refreshingly lemony, deliciously dry."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 45
+	taste_description: "dry, tart lemons"
+	glass_icon_state: "ginfizzglass"
+	glass_name: "Gin Fizz"
+	glass_desc: "Refreshingly lemony, deliciously dry."
+
+
+BahamaMama:
+	name: "Bahama Mama"
+	description: "Tropical cocktail."
+	color: [1, 0.5, 0.23]
+	subtype: "ethanol"
+	boozepwr: 35
+	taste_description: "lime and orange"
+	glass_icon_state: "bahama_mama"
+	glass_name: "Bahama Mama"
+	glass_desc: "Tropical cocktail."
+
+
+Sbiten:
+	name: "Sbiten"
+	description: "A spicy Vodka! Might be a little hot for the little guys!"
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 70
+	taste_description: "hot and spice"
+	glass_icon_state: "sbitenglass"
+	glass_name: "Sbiten"
+	glass_desc: "A spicy mix of Vodka and Spice. Very hot."
+
+
+RedMead:
+	name: "Red Mead"
+	description: "The true Viking drink! Even though it has a strange red color."
+	color: [0.78, 0.24, 0]
+	subtype: "ethanol"
+	boozepwr: 51
+	taste_description: "sweet and salty alcohol"
+	glass_icon_state: "red_meadglass"
+	glass_name: "Red Mead"
+	glass_desc: "A True Viking's Beverage, though its color is strange."
+
+
+Mead:
+	name: "Mead"
+	description: "A Viking drink, though a cheap one."
+	color: [0.4, 0.26, 0]
+	nutriment_factor: 0.5
+	subtype: "ethanol"
+	boozepwr: 50
+	taste_description: "sweet, sweet alcohol"
+	glass_icon_state: "meadglass"
+	glass_name: "Mead"
+	glass_desc: "A Viking's Beverage, though a cheap one."
+
+
+IcedBeer:
+	name: "Iced Beer"
+	description: "A beer which is so cold the air around it freezes."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 15
+	taste_description: "refreshingly cold"
+	glass_icon_state: "iced_beerglass"
+	glass_name: "Iced Beer"
+	glass_desc: "A beer so frosty, the air around it freezes."
+
+
+Grog:
+	name: "Grog"
+	description: "Watered down rum, Nanotrasen approves!"
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 1
+	taste_description: "a poor excuse for alcohol"
+	glass_icon_state: "grogglass"
+	glass_name: "Grog"
+	glass_desc: "A fine and cepa drink for Space."
+
+
+Aloe:
+	name: "Aloe"
+	description: "So very, very, very good."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 35
+	taste_description: "sweet 'n creamy"
+	glass_icon_state: "aloe"
+	glass_name: "Aloe"
+	glass_desc: "Very, very, very good."
+
+Andalusia:
+	name: "Andalusia"
+	description: "A nice, strangely named drink."
+	color: [0.4, 0.26, 0]
+	subtype: "ethanol"
+	boozepwr: 40
+	taste_description: "lemons"
+	glass_icon_state: "andalusia"
+	glass_name: "Andalusia"
+	glass_desc: "A nice, strangely named drink."
+
+IrishCarBomb:
+	name: "Irish Car Bomb"
+	description: "Mmm, tastes like chocolate cake..."
+	color: [0.18, 0.4, 0.44]
+	subtype: "ethanol"
+	boozepwr: 25
+	taste_description: "delicious anger"
+	glass_icon_state: "irishcarbomb"
+	glass_name: "Irish Car Bomb"
+	glass_desc: "An Irish car bomb."
+
+WhiskeySour:
+	name: "Whiskey Sour"
+	description: "Lemon juice/whiskey/sugar mixture. Moderate alcohol content."
+	color: [1, 0.79, 0.19]
+	subtype: "ethanol"
+	boozepwr: 35
+	taste_description: "sour lemons"
+	glass_icon_state: "whiskey_sour"
+	glass_name: "Whiskey Sour"
+	glass_desc: "Lemon juice mixed with whiskey and a dash of sugar. Surprisingly satisfying."
+
+HardCider:
+	name: "Hard Cider"
+	description: "Apple juice, for adults."
+	color: [0.8, 0.41, 0.22]
+	nutriment_factor: 0.5
+	subtype: "ethanol"
+	boozepwr: 25
+	taste_description: "apples"
+	glass_icon_state: "whiskeyglass"
+	glass_name: "Hard Cider"
+	glass_desc: "Tastes like autumn."
+	shot_glass_icon_state: "shotglassbrown"
+
+HeartyPunch:
+	name: "Hearty Punch"
+	description: "Brave bull/syndicate bomb/absinthe mixture resulting in an energizing beverage. Mild alcohol content."
+	color: [0.55, 0, 0]
+	subtype: "ethanol"
+	boozepwr: 10
+	metabolization_rate: 0.05
+	taste_description: "bravado in the face of disaster"
+	glass_icon_state: "hearty_punch"
+	glass_name: "Hearty Punch"
+	glass_desc: "Aromatic beverage served piping hot. According to folk tales it can almost wake the dead."
+
+
+AtomicBomb:
+	name: "Atomic Bomb"
+	description: "Nuclear proliferation never tasted so good."
+	color: [0.4, 0.39, 0]
+	subtype: "ethanol"
+	boozepwr: 0
+	taste_description: "da bomb"
+	glass_icon_state: "atomicbombglass"
+	glass_name: "Atomic Bomb"
+	glass_desc: "Nanotrasen cannot take legal responsibility for your actions after imbibing."
+
+Neurotoxin:
+	name: "Neurotoxin"
+	description: "A strong neurotoxin that puts the subject into a death-like state."
+	color: [0.18, 0.18, 0.38]
+	subtype: "ethanol"
+	boozepwr: 0
+	taste_description: "a numbing sensation"
+	glass_icon_state: "neurotoxinglass"
+	glass_name: "Neurotoxin"
+	glass_desc: "A drink that is guaranteed to knock you silly."
+
+Eggnog:
+	name: "Eggnog"
+	description: "For enjoying the most wonderful time of the year."
+	color: [0.99, 0.99, 0.78]
+	nutriment_factor: 1
+	subtype: "ethanol"
+	boozepwr: 1
+	taste_description: "custard and alcohol"
+	glass_icon_state: "glass_yellow"
+	glass_name: "Eggnog"
+	glass_desc: "For enjoying the most wonderful time of the year."
+
