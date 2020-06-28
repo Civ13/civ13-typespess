@@ -1,0 +1,53 @@
+flashlight:
+	components: ["Flashlight", "BeltItem"]
+	vars:
+		components:
+			Item:
+				inhand_icon_state: "flashlight"
+			
+			Examine:
+				desc: "A hand-held emergency light."
+			
+		
+		name: "flashlight"
+		icon_state: "flashlight"
+	
+	tree_paths: ["items/flashlight"]
+
+desk_lamp:
+	components: ["DeskLamp"]
+	tree_paths: ["items/flashlight/lamp"]
+
+desk_lamp_green:
+	components: ["DeskLamp"]
+	vars:
+		components:
+			Item:
+				inhand_icon_state: "lampgreen"
+			
+			Examine:
+				desc: "A classic green-shaded desk lamp."
+			
+		
+		icon_state: "lampgreen"
+	
+	tree_paths: ["items/flashlight/lamp/green"]
+
+desk_lamp_banana:
+	components: ["DeskLamp"]
+	vars:
+		components:
+			Item:
+				inhand_icon_state: "bananalamp"
+			
+			Examine:
+				desc: "Only a clown would think to make a ghetto banana-shaped lamp. Even has a goofy pullstring."
+			
+		
+		icon_state: "bananalamp"
+	
+	tree_paths: ["items/flashlight/lamp/banana"]
+
+sun:
+	components: ["Sun"]
+	tree_paths: ["items/flashlight/sun"]

@@ -4,7 +4,7 @@ const {
 	has_component,
 	make_watched_property,
 	chain_func,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 
 class ApcPowered extends Component {
 	constructor(atom, template) {
@@ -99,7 +99,7 @@ ApcPowered.template = {
 };
 
 class MachineTick extends Component {
-	process(/* dt */) {}
+	process(/* dt */) {return;}
 }
 
 module.exports.components = { MachineTick, ApcPowered };

@@ -3,7 +3,7 @@ const {
 	Component,
 	has_component,
 	make_watched_property,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 
 // heh this file is named node.js
 // pun was not intended

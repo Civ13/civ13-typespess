@@ -3,7 +3,7 @@ const {
 	Atom,
 	has_component,
 	to_chat,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 
 const _has_received_templates = Symbol("_has_received_templates");
 

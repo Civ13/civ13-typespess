@@ -9,12 +9,12 @@ const {
 	make_watched_property,
 	visible_message,
 	to_chat,
-} = require("./../../typespess/index.js");
+} = require("./../../code/game/server.js");
 const combat_defines = require("../defines/combat_defines.js");
 const EventEmitter = require("events");
 const StripPanel = require("./strip_panel.js");
 const _slots = Symbol("_slots");
-const { _slot } = require("../game/objects/items.js").symbols;
+const { _slot } = require("../game/components/objects/items.js").symbols;
 const _visible = Symbol("_can_see");
 const _item = Symbol("_item");
 const _active_hand = Symbol("_active_hand");
@@ -26,10 +26,6 @@ class MobInventory extends Component {
 		super(atom, template);
 
 		this.a.c.Mob.on("keydown", this.keydown.bind(this));
-		this.a.c.HasAccess.has_access = chain_func(
-			this.a.c.HasAccess.has_access,
-			this.has_access.bind(this)
-		);
 		this.a.on("mouse_dragged_to", this.mouse_dragged_to.bind(this));
 		if (has_component(this.a, "LivingMob")) {
 			this.a.c.LivingMob.identifiable = chain_func(
@@ -52,6 +48,7 @@ class MobInventory extends Component {
 				screen_loc_x: 7.5,
 				screen_loc_y: 0.15625,
 				layer: 30,
+				name: "left hand",
 			},
 			{
 				is_hand_slot: true,
@@ -71,6 +68,7 @@ class MobInventory extends Component {
 				screen_loc_x: 6.5,
 				screen_loc_y: 0.15625,
 				layer: 30,
+				name: "right hand",
 			},
 			{
 				is_hand_slot: true,
@@ -86,6 +84,7 @@ class MobInventory extends Component {
 		this.a.c.Eye.screen.swap_hands = new Atom(this.a.server, {
 			vars: {
 				icon: "icons/ui/screen_civ13/swap.png",
+				name: "swap hands",
 				screen_loc_x: 6.5,
 				screen_loc_y: 1.15625,
 				layer: 30,
@@ -100,6 +99,7 @@ class MobInventory extends Component {
 			vars: {
 				icon: "icons/ui/screen_civ13/act_equip.png",
 				icon_state: "act_equip",
+				name: "equipment",
 				screen_loc_x: 6.5,
 				screen_loc_y: 1.15625,
 				layer: 30,
@@ -114,6 +114,7 @@ class MobInventory extends Component {
 				screen_loc_x: 3.375,
 				screen_loc_y: 0.15625,
 				layer: 30,
+				name: "id",
 			},
 			{
 				clothing_slot: "IdSlotItem",
@@ -130,6 +131,7 @@ class MobInventory extends Component {
 				screen_loc_x: 4.4375,
 				screen_loc_y: 0.15625,
 				layer: 30,
+				name: "waist",
 			},
 			{
 				clothing_slot: "BeltItem",
@@ -147,6 +149,7 @@ class MobInventory extends Component {
 				screen_loc_x: 5.4375,
 				screen_loc_y: 0.15625,
 				layer: 30,
+				name: "back",
 			},
 			{
 				clothing_slot: "BackItem",
@@ -163,6 +166,7 @@ class MobInventory extends Component {
 				screen_loc_x: 8.5625,
 				screen_loc_y: 0.15625,
 				layer: 30,
+				name: "left pocket",
 			},
 			{
 				max_size: 2,
@@ -178,6 +182,7 @@ class MobInventory extends Component {
 				screen_loc_x: 9.625,
 				screen_loc_y: 0.15625,
 				layer: 30,
+				name: "right pocket",
 			},
 			{
 				max_size: 2,
@@ -193,6 +198,7 @@ class MobInventory extends Component {
 				screen_loc_x: 2.3125,
 				screen_loc_y: 0.15625,
 				layer: 30,
+				name: "suit storage",
 			},
 			{
 				worn_layer: 11,
@@ -207,6 +213,7 @@ class MobInventory extends Component {
 		this.a.c.Eye.screen.toggle_clothing = new Atom(this.a.server, {
 			vars: {
 				icon: "icons/ui/screen_civ13/toggle.png",
+				name: "toggle inventory",
 				screen_loc_x: 0.1875,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -235,6 +242,7 @@ class MobInventory extends Component {
 				screen_loc_x: 1.25,
 				screen_loc_y: 0.15625,
 				layer: 30,
+				name: "feet",
 			},
 			{
 				clothing_slot: "FootItem",
@@ -252,6 +260,7 @@ class MobInventory extends Component {
 				screen_loc_x: 0.1875,
 				screen_loc_y: 1.21875,
 				layer: 30,
+				name: "clothing",
 			},
 			{
 				clothing_slot: "UniformItem",
@@ -267,6 +276,7 @@ class MobInventory extends Component {
 				screen_loc_x: 1.25,
 				screen_loc_y: 1.21875,
 				layer: 30,
+				name: "suit",
 			},
 			{
 				clothing_slot: "SuitItem",
@@ -282,6 +292,7 @@ class MobInventory extends Component {
 				screen_loc_x: 2.3125,
 				screen_loc_y: 1.21875,
 				layer: 30,
+				name: "hands",
 			},
 			{
 				clothing_slot: "HandItem",
@@ -298,6 +309,7 @@ class MobInventory extends Component {
 				screen_loc_x: 1.25,
 				screen_loc_y: 2.28125,
 				layer: 30,
+				name: "face",
 			},
 			{
 				clothing_slot: "MaskItem",
@@ -314,6 +326,7 @@ class MobInventory extends Component {
 				screen_loc_x: 0.1875,
 				screen_loc_y: 2.28125,
 				layer: 30,
+				name: "neck",
 			},
 			{
 				clothing_slot: "NeckItem",
@@ -330,6 +343,7 @@ class MobInventory extends Component {
 				screen_loc_x: 0.1875,
 				screen_loc_y: 3.34375,
 				layer: 30,
+				name: "glasses",
 			},
 			{
 				clothing_slot: "EyeItem",
@@ -346,6 +360,7 @@ class MobInventory extends Component {
 				screen_loc_x: 2.3125,
 				screen_loc_y: 2.28125,
 				layer: 30,
+				name: "ears",
 			},
 			{
 				clothing_slot: "EarItem",
@@ -362,6 +377,7 @@ class MobInventory extends Component {
 				screen_loc_x: 1.25,
 				screen_loc_y: 3.34375,
 				layer: 30,
+				name: "head",
 			},
 			{
 				clothing_slot: "HeadItem",
@@ -377,6 +393,7 @@ class MobInventory extends Component {
 		this.a.c.Eye.screen.drop_item = new Atom(this.a.server, {
 			vars: {
 				icon: "icons/ui/screen_civ13/act_drop.png",
+				name: "drop",
 				screen_loc_x: 13.875,
 				screen_loc_y: 1.21875,
 				layer: 30,
@@ -389,6 +406,7 @@ class MobInventory extends Component {
 		this.a.c.Eye.screen.throw_item = new Atom(this.a.server, {
 			vars: {
 				icon: "icons/ui/screen_civ13/act_throw_off.png",
+				name: "throw",
 				screen_loc_x: 13.875,
 				screen_loc_y: 1.21875,
 				layer: 30,
@@ -402,6 +420,7 @@ class MobInventory extends Component {
 		this.a.c.Eye.screen.resist = new Atom(this.a.server, {
 			vars: {
 				icon: "icons/ui/screen_civ13/act_resist.png",
+				name: "resist",
 				screen_loc_x: 12.8125,
 				screen_loc_y: 1.21875,
 				layer: 30,
@@ -411,6 +430,7 @@ class MobInventory extends Component {
 		this.a.c.Eye.screen.act_intent = new Atom(this.a.server, {
 			vars: {
 				icon: "icons/ui/screen_civ13/help.png",
+				name: "intent",
 				screen_loc_x: 11.75,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -420,6 +440,7 @@ class MobInventory extends Component {
 		this.a.c.Eye.screen.health = new Atom(this.a.server, {
 			vars: {
 				icon: "icons/ui/screen_gen/health0.png",
+				name: "health",
 				screen_loc_x: 13.875,
 				screen_loc_y: 6.46875,
 				layer: 30,
@@ -427,10 +448,8 @@ class MobInventory extends Component {
 		});
 
 		this.on("handcuffed_changed", this.handcuffed_changed.bind(this));
-		this.on("internal_changed", this.internal_changed.bind(this));
 
 		make_watched_property(this, "handcuffed");
-		make_watched_property(this, "internal");
 	}
 
 	add_slot(id, appearance, props) {
@@ -450,7 +469,7 @@ class MobInventory extends Component {
 			this[_slots][this[_active_hand]].atom.overlays.hand_active = undefined;
 		var old_active_hand = this[_active_hand];
 		this[_active_hand] = value;
-		this[_slots][this[_active_hand]].atom.overlays.hand_active = "hand_active";
+		this[_slots][this[_active_hand]].atom.overlays.hand_active = {icon : "icons/ui/screen_civ13/hand_active.png"};
 		this.emit("active_hand_changed", old_active_hand, value);
 		this.emit(
 			"active_hand_item_changed",
@@ -519,9 +538,9 @@ class MobInventory extends Component {
 		val = !!val;
 		if (this[_throw_mode] == val) return;
 		this[_throw_mode] = val;
-		this.a.c.Eye.screen.throw_item.icon_state = val
-			? "act_throw_on"
-			: "act_throw_off";
+		this.a.c.Eye.screen.throw_item.icon = val
+			? "icons/ui/screen_civ13/act_throw_on.png"
+			: "icons/ui/screen_civ13/act_throw_off.png";
 	}
 
 	throw_item(target) {
@@ -618,9 +637,11 @@ class MobInventory extends Component {
 			};
 			// some interesting icon_state values you got there tg
 			this.slots.rhand.atom.overlays.handcuffed = {
+				name: "handcuffs",
 				icon: "icons/ui/screen_gen/markus.png",
 			};
 			this.slots.lhand.atom.overlays.handcuffed = {
+				name: "handcuffs",
 				icon: "icons/ui/screen_gen/gabrielle.png",
 			};
 			this.a.c.MobInteract.nointeract_counter++;
@@ -628,14 +649,6 @@ class MobInventory extends Component {
 		}
 	}
 
-	internal_changed(from, to) {
-		if (from && has_component(from, "Tank")) {
-			from.c.Tank.internal_toggle_action.bg_icon_state = "bg_default";
-		}
-		if (to && has_component(to, "Tank")) {
-			to.c.Tank.internal_toggle_action.bg_icon_state = "bg_default_on";
-		}
-	}
 
 	accident() {
 		for (let slot of Object.values(this.slots)) {
@@ -680,20 +693,6 @@ class MobInventory extends Component {
 		return set;
 	}
 
-	has_access(prev, access) {
-		if (prev()) return true;
-		for (let slotname of ["id", "lhand", "rhand"]) {
-			let slot = this.slots[slotname];
-			if (!slot) continue;
-			let slotitem = slot.item;
-			if (
-				!has_component(slotitem, "IdSlotItem") ||
-		!has_component(slotitem, "HasAccess")
-			)
-				continue;
-			if (slotitem.c.HasAccess.has_access(access)) return true;
-		}
-	}
 
 	mouse_dragged_to(e) {
 		let user = e.mob;
@@ -1099,8 +1098,8 @@ class Slot extends EventEmitter {
 	}
 }
 
-MobInventory.depends = ["Mob", "MobHud", "HasAccess"];
-MobInventory.loadBefore = ["Mob", "MobHud", "HasAccess", "LivingMob"];
+MobInventory.depends = ["Mob", "MobHud"];
+MobInventory.loadBefore = ["Mob", "MobHud", "LivingMob"];
 
 MobInventory.template = {
 	vars: {
@@ -1169,6 +1168,7 @@ class ProgressBar extends Component.Networked {
 ProgressBar.template = {
 	vars: {
 		icon: "icons/effects/progressbar.png",
+		name: "progress bar",
 		icon_state: "prog_bar_0",
 		layer: 50,
 	},

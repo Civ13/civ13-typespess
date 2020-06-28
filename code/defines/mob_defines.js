@@ -74,25 +74,6 @@ module.exports.DISGUST_LEVEL_DISGUSTED = 75;
 module.exports.DISGUST_LEVEL_VERYGROSS = 50;
 module.exports.DISGUST_LEVEL_GROSS = 25;
 
-//Slime evolution threshold. Controls how fast slimes can split/grow
-module.exports.SLIME_EVOLUTION_THRESHOLD = 10;
-
-//Slime commands defines
-module.exports.SLIME_FRIENDSHIP_FOLLOW = 3; //Min friendship to order it to follow
-module.exports.SLIME_FRIENDSHIP_STOPEAT = 5; //Min friendship to order it to stop eating someone
-module.exports.SLIME_FRIENDSHIP_STOPEAT_NOANGRY = 7; //Min friendship to order it to stop eating someone without it losing friendship
-module.exports.SLIME_FRIENDSHIP_STOPCHASE = 4; //Min friendship to order it to stop chasing someone (their target)
-module.exports.SLIME_FRIENDSHIP_STOPCHASE_NOANGRY = 6; //Min friendship to order it to stop chasing someone (their target) without it losing friendship
-module.exports.SLIME_FRIENDSHIP_STAY = 3; //Min friendship to order it to stay
-module.exports.SLIME_FRIENDSHIP_ATTACK = 8; //Min friendship to order it to attack
-
-//Sentience types, to prevent things like sentience potions from giving bosses sentience
-module.exports.SENTIENCE_ORGANIC = 1;
-module.exports.SENTIENCE_ARTIFICIAL = 2;
-module.exports.SENTIENCE_OTHER = 3;
-module.exports.SENTIENCE_MINEBOT = 4;
-module.exports.SENTIENCE_BOSS = 5;
-
 //Mob AI Status
 
 //Hostile simple animals
@@ -127,11 +108,6 @@ module.exports.FUZZY_CHANCE_HIGH = 85;
 module.exports.FUZZY_CHANCE_LOW = 50;
 module.exports.CHANCE_TALK = 1;
 //Traitor type defines
-module.exports.SNPC_BRUTE = 1;
-module.exports.SNPC_STEALTH = 2;
-module.exports.SNPC_MARTYR = 3;
-module.exports.SNPC_PSYCHO = 4;
-
 module.exports.TK_MAXRANGE = 15;
 
 module.exports.NO_SLIP_WHEN_WALKING = 1;
@@ -147,11 +123,6 @@ module.exports.INCORPOREAL_MOVE_BASIC = 1;
 module.exports.INCORPOREAL_MOVE_SHADOW = 2; // leaves a trail of shadows
 module.exports.INCORPOREAL_MOVE_JAUNT = 3; // is blocked by holy water/salt
 
-//Secbot and ED209 judgement criteria bitflag values
-module.exports.JUDGE_EMAGGED = 1;
-module.exports.JUDGE_IDCHECK = 2;
-module.exports.JUDGE_WEAPONCHECK = 4;
-module.exports.JUDGE_RECORDCHECK = 8;
 //ED209's ignore monkeys
 module.exports.JUDGE_IGNOREMONKEYS = 16;
 

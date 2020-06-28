@@ -1,6 +1,6 @@
 
 
-const { Component, Sound, Atom } = require("./../../../typespess/index.js");
+const { Component, Sound, Atom } = require("./../../../code/game/server.js");
 const pass_flags = require("../../defines/pass_flags.js");
 const sounds = require("../../defines/sounds.js");
 const layers = require("../../defines/layers.js");
@@ -21,7 +21,7 @@ class SparkEffect extends Component {
 		}, 2000);
 	}
 
-	moved() {}
+	moved() {return;}
 }
 
 SparkEffect.depends = ["LightSource"];

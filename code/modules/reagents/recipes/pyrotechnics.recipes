@@ -1,0 +1,39 @@
+Nitroglycerin:
+	type: "reaction"
+	results: { Nitroglycerin: 2 }
+	required_reagents: { Glycerol: 1, FAcid: 1, SAcid: 1 }
+	strengthdiv: 2
+
+BlackPowder:
+	type: "reaction"
+	results: { BlackPowder: 3 }
+	required_reagents: { Saltpetre: 1, Charcoal: 1, Sulfur: 1 }
+
+ChlorineTrifluoride:
+	type: "reaction"
+	results: { ChlorineTrifluoride: 4 }
+	required_reagents: { Chlorine: 1, Fluorine: 3 }
+	min_temp: 424
+
+FlashPowder:
+	type: "reaction"
+	results: { FlashPowder: 3 }
+	required_reagents: { Aluminium: 1, Potassium: 1, Sulfur: 1 }
+
+SmokePowder:
+	type: "reaction"
+	results: { SmokePowder: 3 }
+	required_reagents: { Potassium: 1, Sugar: 1, Phosphorus: 1 }
+
+Napalm:
+	type: "reaction"
+	results: { Napalm: 3 }
+	required_reagents: { Oil: 1, WeldingFuel: 1, Ethanol: 1 }
+
+NitrousOxide:
+	type: "reaction"
+	required_reagents: { NitrousOxide: 1 }
+	strengthdiv: 7
+	min_temp: 575
+	modifier: 1
+

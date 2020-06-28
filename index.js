@@ -4,7 +4,7 @@
 
 // BASED OFF OF tgstation COMMIT 910be9f4e29270e3a0a36ed8042310ed4bee1845
 
-const Typespess = require("./typespess/index.js");
+const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 
 console.log("Loading game...");
@@ -13,16 +13,15 @@ const server = new Typespess();
 global.server = server; // So the debugger can access it. No, you are not allowed to use it in your code.
 // I should be able to remove this line with *nothing* breaking (except the ability to use the debugger)
 global.require = require;
-server.resRoot = "./res/";
+server.resRoot = "./resources/";
 
-server.config = read_config("config.json");
+server.config = read_config("config.cson");
 
 server.importModule(require("./code/game/area/area_components.js"));
 server.importModule(require("./code/game/area/area.js"));
 server.importModule(require("./code/game/components/climbable.js"));
 server.importModule(require("./code/game/components/squeak.js"));
 server.importModule(require("./code/game/components/wires.js"));
-server.importModule(require("./code/game/machinery/recharger.js"));
 server.importModule(require("./code/game/mobs/mob_movement.js"));
 server.importModule(require("./code/game/mobs/new_player.js"));
 server.importModule(require("./code/game/mobs/dead/ghost.js"));
@@ -52,69 +51,51 @@ server.importModule(
 server.importModule(require("./code/game/mobs/living/carbon/organs/liver.js"));
 server.importModule(require("./code/game/mobs/living/carbon/organs/lungs.js"));
 server.importModule(require("./code/game/mobs/living/carbon/organs/organ.js"));
-server.importModule(require("./code/game/objects/cleanable/blood.js"));
-server.importModule(require("./code/game/objects/cleanable/cleanable.js"));
-server.importModule(require("./code/game/objects/doors/airlock_variants.js"));
-server.importModule(require("./code/game/objects/doors/airlock.js"));
-server.importModule(require("./code/game/objects/doors/door.js"));
-server.importModule(require("./code/game/objects/items/devices/flashlight.js"));
-server.importModule(require("./code/game/objects/items/devices/multitool.js"));
-server.importModule(require("./code/game/objects/items/devices/scanners.js"));
+server.importModule(require("./code/game/components/objects/cleanable/blood.js"));
+server.importModule(require("./code/game/components/objects/cleanable/cleanable.js"));
+server.importModule(require("./code/game/components/objects/doors/door.js"));
+server.importModule(require("./code/game/components/objects/items/devices/flashlight.js"));
+server.importModule(require("./code/game/components/objects/items/devices/multitool.js"));
+server.importModule(require("./code/game/components/objects/items/devices/scanners.js"));
 server.importModule(
-	require("./code/game/objects/items/stacks/sheets/glass.js")
+	require("./code/game/components/objects/items/stacks/sheets/glass.js")
 );
 server.importModule(
-	require("./code/game/objects/items/stacks/sheets/sheet_types.js")
+	require("./code/game/components/objects/items/stacks/sheets/sheet_types.js")
 );
 server.importModule(
-	require("./code/game/objects/items/stacks/tiles/tile_mineral.js")
+	require("./code/game/components/objects/items/stacks/tiles/tile_mineral.js")
 );
-server.importModule(
-	require("./code/game/objects/items/stacks/tiles/tile_types.js")
-);
-server.importModule(require("./code/game/objects/items/stacks/rods.js"));
-server.importModule(require("./code/game/objects/items/stacks/stack.js"));
-server.importModule(require("./code/game/objects/items/storage/backpack.js"));
-server.importModule(require("./code/game/objects/items/storage/belt.js"));
-server.importModule(require("./code/game/objects/items/storage/boxes.js"));
-server.importModule(require("./code/game/objects/items/storage/toolbox.js"));
-server.importModule(require("./code/game/objects/items/clothing.js"));
-server.importModule(require("./code/game/objects/items/emag.js"));
-server.importModule(require("./code/game/objects/items/handcuffs.js"));
-server.importModule(require("./code/game/objects/items/miscellaneous.js"));
-server.importModule(require("./code/game/objects/items/storage.js"));
-server.importModule(require("./code/game/objects/items/tools.js"));
-server.importModule(require("./code/game/objects/items/trash.js"));
-server.importModule(require("./code/game/objects/items/weaponry.js"));
-server.importModule(
-	require("./code/game/objects/structures/beds_chairs/chair.js")
-);
-server.importModule(
-	require("./code/game/objects/structures/crates_lockers/base.js")
-);
-server.importModule(
-	require("./code/game/objects/structures/crates_lockers/closets.js")
-);
-server.importModule(
-	require("./code/game/objects/structures/crates_lockers/closets/utility.js")
-);
-server.importModule(
-	require("./code/game/objects/structures/wall/reinf_walls.js")
-);
-server.importModule(require("./code/game/objects/structures/wall/walls.js"));
-server.importModule(require("./code/game/objects/structures/girders.js"));
-server.importModule(require("./code/game/objects/structures/grille.js"));
-server.importModule(require("./code/game/objects/structures/lattice.js"));
-server.importModule(require("./code/game/objects/structures/rack.js"));
-server.importModule(require("./code/game/objects/structures/table_frames.js"));
-server.importModule(require("./code/game/objects/structures/table.js"));
-server.importModule(require("./code/game/objects/structures/window.js"));
-server.importModule(require("./code/game/objects/structures/wild.js"));
-server.importModule(require("./code/game/objects/buckling.js"));
-server.importModule(require("./code/game/objects/destructible.js"));
-server.importModule(require("./code/game/objects/items.js"));
-server.importModule(require("./code/game/objects/objs.js"));
-server.importModule(require("./code/game/objects/puller.js"));
+server.importModule(require("./code/game/components/objects/items/stacks/tiles/tile_types.js"));
+server.importModule(require("./code/game/components/objects/items/stacks/rods.js"));
+server.importModule(require("./code/game/components/objects/items/stacks/stack.js"));
+server.importModule(require("./code/game/components/objects/items/storage/belt.js"));
+server.importModule(require("./code/game/components/objects/items/storage/boxes.js"));
+server.importModule(require("./code/game/components/objects/items/storage/toolbox.js"));
+server.importModule(require("./code/game/components/objects/items/clothing.js"));
+server.importModule(require("./code/game/components/objects/items/handcuffs.js"));
+server.importModule(require("./code/game/components/objects/items/storage.js"));
+server.importModule(require("./code/game/components/objects/items/tools.js"));
+server.importModule(require("./code/game/components/objects/items/weaponry.js"));
+server.importModule(require("./code/game/components/objects/structures/beds_chairs/chair.js"));
+server.importModule(require("./code/game/components/objects/structures/crates_lockers/base.js"));
+server.importModule(require("./code/game/components/objects/structures/crates_lockers/closets.js"));
+server.importModule(require("./code/game/components/objects/structures/crates_lockers/closets/utility.js"));
+server.importModule(require("./code/game/components/objects/structures/wall/reinf_walls.js"));
+server.importModule(require("./code/game/components/objects/structures/wall/walls.js"));
+server.importModule(require("./code/game/components/objects/structures/girders.js"));
+server.importModule(require("./code/game/components/objects/structures/grille.js"));
+server.importModule(require("./code/game/components/objects/structures/lattice.js"));
+server.importModule(require("./code/game/components/objects/structures/rack.js"));
+server.importModule(require("./code/game/components/objects/structures/table_frames.js"));
+server.importModule(require("./code/game/components/objects/structures/table.js"));
+server.importModule(require("./code/game/components/objects/structures/window.js"));
+server.importModule(require("./code/game/components/objects/structures/wild.js"));
+server.importModule(require("./code/game/components/objects/buckling.js"));
+server.importModule(require("./code/game/components/objects/destructible.js"));
+server.importModule(require("./code/game/components/objects/items.js"));
+server.importModule(require("./code/game/components/objects/objs.js"));
+server.importModule(require("./code/game/components/objects/puller.js"));
 server.importModule(require("./code/game/turfs/floor_base.js"));
 server.importModule(require("./code/game/turfs/floor.js"));
 server.importModule(require("./code/game/placeholders.js"));
@@ -122,47 +103,23 @@ server.importModule(require("./code/game/ticker.js"));
 server.importModule(require("./code/modules/admin/holder.js"));
 server.importModule(require("./code/modules/admin/menu.js"));
 server.importModule(require("./code/modules/client/verbs.js"));
-server.importModule(require("./code/modules/clothing/gloves/_gloves.js"));
-server.importModule(require("./code/modules/clothing/gloves/color.js"));
-server.importModule(require("./code/modules/clothing/head/_head.js"));
-server.importModule(require("./code/modules/clothing/head/jobs.js"));
-server.importModule(require("./code/modules/clothing/masks/_masks.js"));
-server.importModule(require("./code/modules/clothing/masks/breath.js"));
-server.importModule(require("./code/modules/clothing/under/jobs/civilian.js"));
-server.importModule(
-	require("./code/modules/clothing/under/jobs/engineering.js")
-);
-server.importModule(require("./code/modules/clothing/under/nomads.js"));
-server.importModule(require("./code/modules/clothing/under/jobs/medsci.js"));
-server.importModule(require("./code/modules/clothing/under/jobs/security.js"));
-server.importModule(require("./code/modules/clothing/under/_under.js"));
-server.importModule(require("./code/modules/clothing/under/color.js"));
-server.importModule(require("./code/modules/clothing/under/miscellaneous.js"));
-server.importModule(require("./code/modules/clothing/under/pants.js"));
-server.importModule(require("./code/modules/clothing/under/shorts.js"));
-server.importModule(require("./code/modules/clothing/under/syndicate.js"));
-server.importModule(require("./code/modules/clothing/under/trek.js"));
-server.importModule(require("./code/modules/clothing/suits/_suits.js"));
-server.importModule(require("./code/modules/clothing/suits/armor.js"));
-server.importModule(require("./code/modules/clothing/suits/jobs.js"));
-server.importModule(require("./code/modules/clothing/suits/labcoat.js"));
-server.importModule(require("./code/modules/clothing/shoes/_shoes.js"));
-server.importModule(require("./code/modules/clothing/shoes/colour.js"));
-server.importModule(require("./code/modules/clothing/shoes/misc.js"));
+server.importModule(require("./code/modules/atoms/objects/clothing/gloves/_gloves.js"));
+server.importModule(require("./code/modules/atoms/objects/clothing/head/_head.js"));
+server.importModule(require("./code/modules/atoms/objects/clothing/masks/_masks.js"));
+server.importModule(require("./code/game/importer.js"));
+server.importModule(require("./code/modules/atoms/objects/clothing/under/_under.js"));
+server.importModule(require("./code/modules/atoms/objects/clothing/suits/_suits.js"));
+server.importModule(require("./code/modules/atoms/objects/clothing/shoes/_shoes.js"));
 server.importModule(require("./code/modules/effect_system/sparks.js"));
-server.importModule(require("./code/modules/janitorial/mop.js"));
-server.importModule(require("./code/modules/jobs/access.js"));
+server.importModule(require("./code/modules/atoms/objects/janitorial/mop.js"));
 server.importModule(require("./code/modules/jobs/controller.js"));
-server.importModule(require("./code/modules/jobs/id.js"));
 server.importModule(require("./code/modules/jobs/landmark.js"));
-server.importModule(require("./code/modules/power/apc.js"));
 server.importModule(require("./code/modules/power/cable.js"));
 server.importModule(require("./code/modules/power/cell.js"));
 server.importModule(require("./code/modules/power/controller.js"));
 server.importModule(require("./code/modules/power/lighting.js"));
 server.importModule(require("./code/modules/power/machine.js"));
 server.importModule(require("./code/modules/power/node.js"));
-server.importModule(require("./code/modules/power/smes.js"));
 server.importModule(
 	require("./code/modules/projectiles/ammunition/ammo_casings.js")
 );
@@ -189,17 +146,14 @@ server.importModule(require("./code/modules/projectiles/ammunition.js"));
 server.importModule(require("./code/modules/projectiles/box_magazine.js"));
 server.importModule(require("./code/modules/projectiles/gun.js"));
 server.importModule(require("./code/modules/projectiles/projectile.js"));
-server.importModule(require("./code/modules/reagents/containers/open.js"));
-server.importModule(require("./code/modules/reagents/containers/pill.js"));
-server.importModule(require("./code/modules/reagents/containers/spray.js"));
+server.importModule(require("./code/modules/atoms/reagents/containers/open.js"));
+server.importModule(require("./code/modules/atoms/reagents/containers/pill.js"));
+server.importModule(require("./code/modules/atoms/reagents/containers/spray.js"));
 server.importModule(
-	require("./code/modules/reagents/machinery/chem_dispenser.js")
+	require("./code/modules/atoms/reagents/machinery/chem_dispenser.js")
 );
-server.importModule(
-	require("./code/modules/reagents/machinery/chem_heater.js")
-);
+
 server.importModule(require("./code/modules/reagents/holder.js"));
-server.importModule(require("./code/modules/shuttle/shuttle.js"));
 server.importModule(require("./code/modules/smoothing/smoothing.js"));
 server.importModule(require("./code/modules/speech/speech.js"));
 server.importModule(require("./code/onclick/action.js"));
@@ -221,7 +175,7 @@ if (global.is_bs_editor_env) {
 	const url = require("url");
 	const querystring = require("querystring");
 
-	const server_config = read_config("server.json");
+	const server_config = read_config("server.cson");
 	const map = server_config.maps.current_map;
 	console.log("Loading map " + map + "...");
 	server.station_dim = new Typespess.Dimension(server);

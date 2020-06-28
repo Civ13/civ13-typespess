@@ -6,7 +6,7 @@ const {
 	chain_func,
 	to_chat,
 	format_html,
-} = require("./../../../../../../typespess/index.js");
+} = require("./../../../../../../code/game/server.js");
 const layers = require("../../../../../defines/layers.js");
 const combat_defines = require("../../../../../defines/combat_defines.js");
 const { random_zone, parse_zone } = require("./helpers.js");
@@ -307,7 +307,7 @@ class BodyPart extends Component {
 		return "#ffffff";
 	}
 
-	apply_prefs(/*prefs*/) {}
+	apply_prefs(/*prefs*/) {return;}
 
 	multiply_damage(type, amount) {
 		return amount;

@@ -1,7 +1,7 @@
 const {
 	Component,
 	has_component,
-} = require("./../../../../../../typespess/index.js");
+} = require("./../../../../../../code/game/server.js");
 
 class Organ extends Component {
 	constructor(atom, template) {
@@ -9,7 +9,7 @@ class Organ extends Component {
 		this.mob = null;
 	}
 
-	do_life() {}
+	do_life() {return;}
 
 	insert(mob) {
 		if (!has_component(mob, "CarbonMob")) return false;

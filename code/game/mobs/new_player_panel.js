@@ -1,4 +1,4 @@
-const { Atom, Panel, to_chat } = require("./../../../typespess/index.js");
+const { Atom, Panel, to_chat } = require("./../../../code/game/server.js");
 
 const LatejoinPanel = require("./latejoin_panel");
 const PreferencesPanel = require("../../modules/client/preferences_panel.js");
@@ -7,8 +7,8 @@ class NewPlayerPanel extends Panel {
 	constructor(client) {
 		super(client, {
 			width: 200,
-			height: 300,
-			title: "New Player Options",
+			height: 230,
+			title: "Welcome!",
 			can_close: false,
 		});
 		this.on("message", this.message_handler.bind(this));

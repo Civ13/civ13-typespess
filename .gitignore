@@ -1,9 +1,6 @@
-res/client.js.map
-res/client.js
-res/client.css
+resources/client.js.map
+resources/client.js
 
-config/*.cson
-config/*.json
 config/*.txt
 
 .vscode/

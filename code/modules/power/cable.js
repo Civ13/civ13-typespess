@@ -6,10 +6,9 @@ const {
 	has_component,
 	chain_func,
 	dir_to,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 const layers = require("../../defines/layers.js");
 const _ = require("underscore");
-const Powernet = require("./powernet.js");
 const { display_watts } = require("./helpers.js");
 
 const cable_colors = {
@@ -141,13 +140,7 @@ class Cable extends Component {
 					if (!cables_to_recalculate.length) return; // Nice, we're done here.
 				}
 			}
-			// Alrighty, we've done the whole thing without loops.
-			// Let's make a new powernet now.
-			let new_powernet = new Powernet(this.a.server.power_controller);
-			for (let cable of connected) {
-				new_powernet.cables.add(cable);
-				for (let node of cable.c.Cable.nodes) new_powernet.nodes.add(node);
-			}
+
 		}
 	}
 
@@ -182,10 +175,6 @@ class Cable extends Component {
 				crosser.c.PowerNode.cable = this.a;
 			}
 		}
-		if (!new_powernet)
-			new_powernet = new Powernet(this.a.server.power_controller);
-		new_powernet.cables.add(this.a);
-		for (let node of this.nodes) new_powernet.nodes.add(node);
 	}
 
 	does_connect_to(other) {

@@ -1,11 +1,11 @@
-const { Panel } = require("./../../../typespess/index.js");
+const { Panel } = require("./../../../code/game/server.js");
 
 class LatejoinPanel extends Panel {
 	constructor(client) {
 		super(client, {
 			width: 660,
 			height: 500,
-			title: "Late Join",
+			title: "Roles",
 			can_close: true,
 		});
 		this.on("message", this.message_handler.bind(this));

@@ -22,7 +22,7 @@ class PanelManager extends EventEmitter {
 	handle_message(obj) {
 		if (obj.create) {
 			for (let id in obj.create) {
-				if (!obj.create.hasOwnProperty(id)) continue;
+				if (!Object.prototype.hasOwnProperty.call(obj.create,id)) continue;
 				if (this.panels[id])
 					console.warn(
 						`The server tried to open a panel with the same ID ${id} twice! ${JSON.stringify(

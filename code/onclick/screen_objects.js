@@ -1,4 +1,4 @@
-const { Component } = require("./../../typespess/index.js");
+const { Component } = require("./../../code/game/server.js");
 
 class ZoneSel extends Component {
 	constructor(atom, template) {
@@ -52,7 +52,7 @@ class ZoneSel extends Component {
 
 	update_selected() {
 		this.a.overlays.selecting = {
-			icon: `icons/ui/screen_gen${this.mob.c.MobInteract.zone_sel}.png`
+			icon: `icons/ui/screen_gen/${this.mob.c.MobInteract.zone_sel}.png`
 		};
 	}
 }

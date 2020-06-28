@@ -6,7 +6,7 @@ const {
 	has_component,
 	audible_message,
 	to_chat,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 
 class Reagent extends EventEmitter {
 	constructor() {
@@ -15,6 +15,8 @@ class Reagent extends EventEmitter {
 		this.holder = null;
 		this.overdosing = false;
 		this.time_in_mob = 0;
+		this.boozepwr = 0;
+		this.subtype = "reagent";
 	}
 	add(amount, { reagent, temp } = {}) {
 		if (temp == null && (reagent == null || reagent.holder == null)) {

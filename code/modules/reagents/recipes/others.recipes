@@ -1,0 +1,154 @@
+Soysauce:
+	type: "reaction"
+	results: { Soysauce: 5 },
+	required_reagents: { SoyMilk: 4, SAcid: 1 },
+
+
+CornSyrup:
+	type: "reaction"
+	results: { CornSyrup: 5 },
+	required_reagents: { CornStarch: 1, SAcid: 1 },
+	min_temp: 374,
+
+HotRamen:
+	type: "reaction"
+	results: { HotRamen: 3 },
+	required_reagents: { Water: 1, DryRamen: 3 },
+
+Dough:
+	type: "reaction"
+	required_reagents: { Water: 10, Flour: 15 },
+	mix_message: "The ingredients form a dough.",
+
+
+CakeBatter:
+	type: "reaction"
+	required_reagents: { EggYolk: 15, Flour: 15, Sugar: 5 },
+	mix_message: "The ingredients form a cake batter.",
+
+RiceWater:
+	type: "reaction"
+	required_reagents: { Rice: 10, Water: 10 },
+	mix_message: "The rice absorbs the water.",
+
+
+SpaceLube:
+	type: "reaction"
+	results: { SpaceLube: 4 },
+	required_reagents: { Water: 1, Silicon: 1, Oxygen: 1 },
+
+
+SprayTan:
+	type: "reaction"
+	results: { SprayTan: 2 },
+	required_reagents: { OrangeJuice: 1, Oil: 1 },
+
+
+SprayTan2:
+	type: "reaction"
+	results: { SprayTan: 2 },
+	required_reagents: { OrangeJuice: 1, CornOil: 1 },
+
+
+Glycerol:
+	type: "reaction"
+	results: { Glycerol: 1 },
+	required_reagents: { CornOil: 3, SAcid: 1 },
+
+
+TableSalt:
+	type: "reaction"
+	results: { TableSalt: 3 },
+	required_reagents: { Water: 1, Sodium: 1, Chlorine: 1 },
+
+CondensedCapsaicin:
+	type: "reaction"
+	results: { CondensedCapsaicin: 5 },
+	required_reagents: { CapsaicinOil: 1, Ethanol: 5 },
+
+CarbonDioxide:
+	type: "reaction"
+	results: { CarbonDioxide: 3 },
+	required_reagents: { Carbon: 1, Oxygen: 2 },
+	min_temp: 777,
+
+
+NitrousOxide:
+	type: "reaction"
+	results: { NitrousOxide: 5 },
+	required_reagents: { Ammonia: 2, Nitrogen: 1, Oxygen: 2 },
+	min_temp: 525,
+
+FoamingAgent:
+	type: "reaction"
+	results: { FoamingAgent: 1 },
+	required_reagents: { Lithium: 1, Hydrogen: 1 },
+
+recipe:
+	type: "reaction"
+	results: { Ammonia: 3 },
+	required_reagents: { Hydrogen: 3, Nitrogen: 1 },
+
+
+Diethylamine:
+	type: "reaction"
+	results: { Diethylamine: 2 },
+	required_reagents: { Ammonia: 1, Ethanol: 1 },
+
+
+SpaceCleaner:
+	type: "reaction"
+	results: { SpaceCleaner: 2 },
+	required_reagents: { Ammonia: 1, Water: 1 },
+
+Acetone:
+	type: "reaction"
+	results: { Acetone: 3 },
+	required_reagents: { Oil: 1, WeldingFuel: 1, Oxygen: 1 },
+
+Oil:
+	type: "reaction"
+	results: { Oil: 3 },
+	required_reagents: { WeldingFuel: 1, Carbon: 1, Hydrogen: 1 },
+
+
+Phenol:
+	type: "reaction"
+	results: { Phenol: 3 },
+	required_reagents: { Water: 1, Chlorine: 1, Oil: 1 },
+
+
+Ash:
+	type: "reaction"
+	results: { Ash: 1 }
+	required_reagents: { Oil: 1 }
+	min_temp: 480,
+
+
+Saltpetre:
+	type: "reaction"
+	results: { Saltpetre: 3 }
+	required_reagents: { Potassium: 1, Nitrogen: 1, Oxygen: 3 }
+
+
+Lye:
+	type: "reaction"
+	results: { Lye: 3 }
+	required_reagents: { Sodium: 1, Hydrogen: 1, Oxygen: 1 }
+
+Lye2:
+	type: "reaction"
+	results: { Lye: 2 }
+	required_reagents: { Ash: 1, Water: 1 }
+
+
+ChocolatePudding:
+	type: "reaction"
+	results: { ChocolatePudding: 20 }
+	required_reagents: { CocoPowder: 5, Milk: 5, EggYolk: 5 }
+
+
+VanillaPudding:
+	type: "reaction"
+	results: { VanillaPudding: 20 }
+	required_reagents: { VanillaPowder: 5, Milk: 5, EggYolk: 5 }

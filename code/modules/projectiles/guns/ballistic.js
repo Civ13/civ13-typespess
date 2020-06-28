@@ -6,7 +6,7 @@ const {
 	has_component,
 	chain_func,
 	to_chat,
-} = require("./../../../../typespess/index.js");
+} = require("./../../../../code/game/server.js");
 
 class BallisticGun extends Component {
 	constructor(atom, template) {

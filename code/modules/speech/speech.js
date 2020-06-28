@@ -5,7 +5,7 @@ const {
 	format_html,
 	audible_message,
 	to_chat,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 
 class SpeechEmitter extends Component {
 	constructor(atom, template) {

@@ -1,4 +1,4 @@
-const { Component, chain_func } = require("./../../../typespess/index.js");
+const { Component, chain_func } = require("./../../../code/game/server.js");
 
 class MobMovement extends Component {
 	constructor(atom, template) {

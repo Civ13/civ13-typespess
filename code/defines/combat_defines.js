@@ -131,22 +131,9 @@ module.exports = {
 	IS_SHARP: 1,
 	IS_SHARP_ACCURATE: 2,
 
-	//His Grace.
-	HIS_GRACE_SATIATED: 0, //He hungers not. If bloodthirst is set to this, His Grace is asleep.
-	HIS_GRACE_PECKISH: 20, //Slightly hungry.
-	HIS_GRACE_HUNGRY: 60, //Getting closer. Increases damage up to a minimum of 20.
-	HIS_GRACE_FAMISHED: 100, //Dangerous. Increases damage up to a minimum of 25 and cannot be dropped.
-	HIS_GRACE_STARVING: 120, //Incredibly close to breaking loose. Increases damage up to a minimum of 30.
-	HIS_GRACE_CONSUME_OWNER: 140, //His Grace consumes His owner at this point and becomes aggressive.
-	HIS_GRACE_FALL_ASLEEP: 160, //If it reaches this point, He falls asleep and resets.
-
-	HIS_GRACE_FORCE_BONUS: 4, //How much force is gained per kill.
-
 	EXPLODE_NONE: 0, //Don't even ask me why we need this.
 	EXPLODE_DEVASTATE: 1,
 	EXPLODE_HEAVY: 2,
 	EXPLODE_LIGHT: 3,
 
-	EMP_HEAVY: 1,
-	EMP_LIGHT: 2,
 };

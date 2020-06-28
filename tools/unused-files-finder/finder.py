@@ -1,7 +1,5 @@
 import os
 import sys
-from pathlib import Path
-from shutil import copyfile
 
 path ="..\\..\\" # gets the base folder to search in
 print("Listing files...")

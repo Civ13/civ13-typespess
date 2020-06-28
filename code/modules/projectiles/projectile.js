@@ -6,7 +6,7 @@ const {
 	has_component,
 	to_chat,
 	visible_message,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 const pass_flags = require("../../defines/pass_flags.js");
 const combat_defines = require("../../defines/combat_defines.js");
 const {

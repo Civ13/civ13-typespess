@@ -1,4 +1,4 @@
-const { Panel } = require("./../../../typespess/index.js");
+const { Panel } = require("./../../../code/game/server.js");
 
 const CharacterPreferences = require("./character.js");
 const sprite_accessories = require("../../game/mobs/living/carbon/human/sprite_accessories.js");

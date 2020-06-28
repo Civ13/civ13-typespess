@@ -5,7 +5,7 @@ const {
 	Panel,
 	has_component,
 	make_watched_property,
-} = require("./../../../typespess/index.js");
+} = require("./../../../code/game/server.js");
 const _ = require("underscore");
 
 class MachineWires extends Component {

@@ -5,7 +5,7 @@ const {
 	make_watched_property,
 	chain_func,
 	to_chat,
-} = require("./../../../../typespess/index.js");
+} = require("./../../../../code/game/server.js");
 
 class EnergyGun extends Component {
 	constructor(atom, template) {
@@ -154,23 +154,7 @@ class EnergyGun extends Component {
 		}
 		return true;
 	}
-	recharge(recharger, dt) {
-		let recharge_coeff = recharger.c.Recharger.recharge_coeff;
-		if (this.cell.c.PowerCell.charge < this.cell.c.PowerCell.max_charge) {
-			// fun fact rechargers multiply your energy by like a thousand.
-			// not very realistic but meh, I'll keep it over from byond tg
-			let diff = Math.min(
-				this.cell.c.PowerCell.max_charge - this.cell.c.PowerCell.charge,
-				this.cell.c.PowerCell.charge_rate * recharge_coeff * dt,
-				recharger.c.ApcPowered.get_available_power()
-			);
-			diff = this.cell.c.PowerCell.give(diff);
-			recharger.c.ApcPowered.use_power(diff);
-			return true;
-		} else {
-			return false;
-		}
-	}
+
 }
 
 EnergyGun.loadBefore = ["Gun", "Rechargeable"];

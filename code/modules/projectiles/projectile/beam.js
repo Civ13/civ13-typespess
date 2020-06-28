@@ -1,4 +1,4 @@
-const { Component } = require("./../../../../typespess/index.js");
+const { Component } = require("./../../../../code/game/server.js");
 
 const pass_flags = require("../../../defines/pass_flags.js");
 const lighting = require("../../../defines/lighting.js");

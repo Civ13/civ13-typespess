@@ -1,0 +1,337 @@
+
+Goldschlager:
+	type: "reaction"
+	results: { Goldschlager: 10 }
+	required_reagents: { Vodka: 10, Gold: 1 }
+
+
+Patron:
+	type: "reaction"
+	results: { Patron: 10 }
+	required_reagents: { Tequila: 10, Silver: 1 }
+
+
+recipe:
+	type: "reaction"
+	results: { Bilk: 2 }
+	required_reagents: { Milk: 1, Beer: 1 }
+
+
+IcedTea:
+	type: "reaction"
+	results: { IcedTea: 4 }
+	required_reagents: { Ice: 1, Tea: 3 }
+
+
+IcedCoffee:
+	type: "reaction"
+	results: { IcedCoffee: 4 }
+	required_reagents: { Ice: 1, Coffee: 3 }
+
+
+NukaCola:
+	type: "reaction"
+	results: { NukaCola: 6 }
+	required_reagents: { Uranium: 1, Cola: 6 }
+
+
+Moonshine:
+	type: "reaction"
+	results: { Moonshine: 10 }
+	required_reagents: { Nutriment: 5, Sugar: 5 }
+	required_catalysts: { UniversalEnzyme: 5 }
+
+
+Wine:
+	type: "reaction"
+	results: { Wine: 10 }
+	required_reagents: { GrapeJuice: 10 }
+	required_catalysts: { UniversalEnzyme: 5 }
+
+
+Beer:
+	type: "reaction"
+	results: { Beer: 10 }
+	required_reagents: { Flour: 10 }
+	required_catalysts: { UniversalEnzyme: 5 }
+
+
+Vodka:
+	type: "reaction"
+	results: { Vodka: 10 }
+	required_reagents: { PotatoJuice: 10 }
+	required_catalysts: { UniversalEnzyme: 5 }
+
+
+Kahlua:
+	type: "reaction"
+	results: { Kahlua: 5 }
+	required_reagents: { Coffee: 5, Sugar: 5 }
+	required_catalysts: { UniversalEnzyme: 5 }
+
+
+GinAndTonic:
+	type: "reaction"
+	results: { GinAndTonic: 3 }
+	required_reagents: { Gin: 2, TonicWater: 1 }
+
+
+CubaLibre:
+	type: "reaction"
+	results: { CubaLibre: 3 }
+	required_reagents: { Rum: 2, Cola: 1 }
+
+
+ClassicMartini:
+	type: "reaction"
+	results: { ClassicMartini: 3 }
+	required_reagents: { Gin: 2, Vermouth: 1 }
+
+
+VodkaMartini:
+	type: "reaction"
+	results: { VodkaMartini: 3 }
+	required_reagents: { Vodka: 2, Vermouth: 1 }
+
+
+WhiteRussian:
+	type: "reaction"
+	results: { WhiteRussian: 5 }
+	required_reagents: { BlackRussian: 3, Cream: 2 }
+
+
+WhiskeyCola:
+	type: "reaction"
+	results: { WhiskeyCola: 3 }
+	required_reagents: { Whiskey: 2, Cola: 1 }
+
+
+ScrewDriver:
+	type: "reaction"
+	results: { Screwdriver: 3 }
+	required_reagents: { Vodka: 2, OrangeJuice: 1 }
+
+
+BloodyMary:
+	type: "reaction"
+	results: { BloodyMary: 4 }
+	required_reagents: { Vodka: 1, TomatoJuice: 2, LimeJuice: 1 }
+
+
+BraveBull:
+	type: "reaction"
+	results: { BraveBull: 3 }
+	required_reagents: { Tequila: 2, Kahlua: 1 }
+
+
+TequilaSunrise:
+	type: "reaction"
+	results: { TequilaSunrise: 3 }
+	required_reagents: { Tequila: 2, OrangeJuice: 1 }
+
+IrishCream:
+	type: "reaction"
+	results: { IrishCream: 3 }
+	required_reagents: { Whiskey: 2, Cream: 1 }
+
+TheManlyDorf:
+	type: "reaction"
+	results: { TheManlyDorf: 3 }
+	required_reagents: { Beer: 1, Ale: 2 }
+
+Hooch:
+	type: "reaction"
+	results: { Hooch: 3 }
+	required_reagents: { Ethanol: 2, WeldingFuel: 1 }
+	required_catalysts: { UniversalEnzyme: 1 }
+
+IrishCoffee:
+	type: "reaction"
+	results: { IrishCoffee: 2 }
+	required_reagents: { IrishCream: 1, Coffee: 1 }
+
+B52:
+	type: "reaction"
+	results: { B52: 3 }
+	required_reagents: { IrishCream: 1, Kahlua: 1, Cognac: 1 }
+
+AtomicBomb:
+	type: "reaction"
+	results: { AtomicBomb: 10 }
+	required_reagents: { B52: 10, Uranium: 1 }
+
+Margarita:
+	type: "reaction"
+	results: { Margarita: 3 }
+	required_reagents: { Tequila: 2, LimeJuice: 1 }
+
+LongIslandIcedTea:
+	type: "reaction"
+	results: { LongIslandIcedTea: 4 }
+	required_reagents: { Vodka: 1, Gin: 1, Tequila: 1, CubaLibre: 1 }
+
+
+ThreeMileIslandIcedTea:
+	type: "reaction"
+	results: { ThreeMileIslandIcedTea: 10 }
+	required_reagents: { LongIslandIcedTea: 10, Uranium: 1 }
+
+
+WhiskeySoda:
+	type: "reaction"
+	results: { WhiskeySoda: 3 }
+	required_reagents: { Whiskey: 2, SodaWater: 1 }
+
+
+BlackRussian:
+	type: "reaction"
+	results: { BlackRussian: 5 }
+	required_reagents: { Vodka: 3, Kahlua: 2 }
+
+
+Manhattan:
+	type: "reaction"
+	results: { Manhattan: 3 }
+	required_reagents: { Whiskey: 2, Vermouth: 1 }
+
+
+ManhattanProject:
+	type: "reaction"
+	results: { ManhattanProject: 10 }
+	required_reagents: { Manhattan: 10, Uranium: 1 }
+
+
+VodkaAndTonic:
+	type: "reaction"
+	results: { VodkaAndTonic: 3 }
+	required_reagents: { Vodka: 2, TonicWater: 1 }
+
+
+GinFizz:
+	type: "reaction"
+	results: { GinFizz: 4 }
+	required_reagents: { Gin: 2, SodaWater: 1, LimeJuice: 1 }
+
+
+BahamaMama:
+	type: "reaction"
+	results: { BahamaMama: 6 }
+	required_reagents: { Rum: 2, OrangeJuice: 2, LimeJuice: 1, Ice: 1 }
+
+
+RedMead:
+	type: "reaction"
+	results: { RedMead: 2 }
+	required_reagents: { Blood: 1, Mead: 1 }
+
+
+Mead:
+	type: "reaction"
+	results: { Mead: 2 }
+	required_reagents: { Honey: 2 }
+	required_catalysts: { UniversalEnzyme: 5 }
+
+
+IcedBeer:
+	type: "reaction"
+	results: { IcedBeer: 6 }
+	required_reagents: { Beer: 5, Ice: 1 }
+
+
+Grog:
+	type: "reaction"
+	results: { Grog: 2 }
+	required_reagents: { Rum: 1, Water: 1 }
+
+
+SoyLatte:
+	type: "reaction"
+	results: { SoyLatte: 2 }
+	required_reagents: { Coffee: 1, SoyMilk: 1 }
+
+
+CafeLatte:
+	type: "reaction"
+	results: { CafeLatte: 2 }
+	required_reagents: { Coffee: 1, Milk: 1 }
+
+Andalusia:
+	type: "reaction"
+	results: { Andalusia: 3 }
+	required_reagents: { Rum: 1, Whiskey: 1, LemonJuice: 1 }
+
+SnowWhite:
+	type: "reaction"
+	results: { SnowWhite: 2 }
+	required_reagents: { Beer: 1, LemonLime: 1 }
+
+IrishCarBomb:
+	type: "reaction"
+	results: { IrishCarBomb: 2 }
+	required_reagents: { Ale: 1, IrishCream: 1 }
+
+ThirteenLoko:
+	type: "reaction"
+	results: { ThirteenLoko: 3 }
+	required_reagents: { Vodka: 1, Coffee: 1, LimeJuice: 1 }
+
+PumpkinLatte:
+	type: "reaction"
+	results: { PumpkinLatte: 15 }
+	required_reagents: { PumpkinJuice: 5, Coffee: 5, Cream: 5 }
+
+TripleCitrus:
+	type: "reaction"
+	results: { TripleCitrus: 5 }
+	required_reagents: { LemonJuice: 1, LimeJuice: 1, OrangeJuice: 1 }
+
+
+GrapeSoda:
+	type: "reaction"
+	results: { GrapeSoda: 2 }
+	required_reagents: { GrapeJuice: 1, SodaWater: 1 }
+
+
+Grappa:
+	type: "reaction"
+	results: { Grappa: 10 }
+	required_reagents: { Wine: 10 }
+	required_catalysts: { UniversalEnzyme: 5 }
+
+
+WhiskeySour:
+	type: "reaction"
+	results: { WhiskeySour: 3 }
+	required_reagents: { Whiskey: 1, LemonJuice: 1, Sugar: 1 }
+	mix_message: "The mixture darkens to a rich gold hue.",
+	mix_sound: null,
+
+
+ChocolateMilk:
+	type: "reaction"
+	results: { ChocolateMilk: 2 }
+	required_reagents: { Milk: 1, CocoPowder: 1 }
+	mix_message: "The color changes as the mixture blends smoothly.",
+
+
+Eggnog:
+	type: "reaction"
+	results: { Eggnog: 15 }
+	required_reagents: { Rum: 5, Cream: 5, EggYolk: 5 }
+
+HotChocolate:
+	type: "reaction"
+	results: { HotChocolate: 5 }
+	required_reagents: { Water: 5, CocoPowder: 1 }
+
+
+Coffee:
+	type: "reaction"
+	results: { Coffee: 5 }
+	required_reagents: { CoffeeGrounds: 1, Water: 5 }
+
+
+Tea:
+	type: "reaction"
+	results: { Tea: 5 }
+	required_reagents: { GroundTeaLeaves: 1, Water: 5 }

@@ -3,7 +3,7 @@
 const { Reagent } = require("../reagent.js");
 const { atmos_defines } = require("../../../defines/atmos_defines.js");
 const { combat_defines } = require("../../../defines/combat_defines.js");
-const { to_chat } = require("./../../../../typespess/index.js");
+const { to_chat } = require("./../../../../code/game/server.js");
 module.exports.reagents = {};
 
 class Medicine extends Reagent {} // /datum/reagent/medicine
@@ -318,7 +318,7 @@ class SalineGlucoseSolution extends Medicine {
 			to_chat`<span class='warning'>You feel salty.</span>`(this.holder);
 			this.holder.add("TableSalt", 1);
 			this.holder.c.ReagentHolder.remove(this.constructor.name, 0.5);
-		} else if (Math.random() < 0.03) {
+		} else if (Math.random() < 0.06) {
 			to_chat`<span class='warning'>You feel sweet.</span>`(this.holder);
 			this.holder.add("Sugar", 1);
 			this.holder.c.ReagentHolder.remove(this.constructor.name, 0.5);
