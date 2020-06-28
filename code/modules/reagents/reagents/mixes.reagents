@@ -1,0 +1,81 @@
+
+Lye:
+	name: "Lye"
+	description: "Also known as sodium hydroxide. As a profession making this is somewhat underwhelming."
+	reagent_state: "liquid"
+	color: [1, 1, 0.84]
+	taste_description: "acid"
+	subtype: "chemical"
+
+DryingAgent:
+	name: "Drying agent"
+	description: "A desiccant. Can be used to dry things."
+	reagent_state: "liquid"
+	color: [0.65, 0.06, 1]
+	taste_description: "dryness"
+	subtype: "chemical"
+
+PlasticPolymers:
+	name: "plastic polymers"
+	description: "the petroleum based components of plastic."
+	color: [0.97, 0.93, 0.93]
+	taste_description: "plastic"
+	subtype: "chemical"
+
+Acetone:
+	name: "Acetone"
+	description: "A slick, slightly carcinogenic liquid. Has a multitude of mundane uses in everyday life."
+	reagent_state: "liquid"
+	color: [0.78, 0.65, 0.86]
+	taste_description: "acid"
+	subtype: "chemical"
+
+Phenol:
+	subtype: "chemical"
+	name: "Phenol"
+	description: "An aromatic ring of carbon with a hydroxyl group. A useful precursor to some medicines, but has no healing properties on its own."
+	reagent_state: "liquid"
+	color: [0.78, 0.65, 0.86]
+	taste_description: "acid"
+
+Ammonia:
+	subtype: "chemical"
+	name: "Ammonia"
+	description: "A caustic substance commonly used in fertilizer or household cleaners."
+	reagent_state: "gas"
+	color: [0.25, 0.25, 0.19]
+	taste_description: "mordant"
+
+Diethylamine:
+	subtype: "chemical"
+	name: "Diethylamine"
+	description: "A secondary amine, mildly corrosive."
+	color: [0.38, 0.25, 0.19]
+	taste_description: "iron"
+
+CarbonDioxide:
+	subtype: "chemical"
+	name: "Carbon Dioxide"
+	reagent_state: "gas"
+	description: "A gas commonly produced by burning carbon fuels. You're constantly producing this in your lungs."
+	color: [0.69, 0.69, 0.69]
+	taste_description: "something unknowable"
+
+NitrousOxide:
+	subtype: "chemical"
+	name: "Nitrous Oxide"
+	description: "A potent oxidizer used as fuel in rockets and as an anaesthetic during surgery."
+	reagent_state: "liquid"
+	metabolization_rate: 0.75
+	color: [0.5, 0.5, 0.5]
+	taste_description: "sweetness"
+
+Nitryl:
+	subtype: "chemical"
+	name: "Nitryl"
+	description: "A highly reactive gas that makes you feel faster"
+	reagent_state: "gas"
+	metabolization_rate: 0.5
+	color: [0.42, 0.26, 0.15]
+	taste_description: "burning"
+

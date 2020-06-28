@@ -1,0 +1,94 @@
+Water:
+	name: "Water"
+	description: "An ubiquitous chemical substance that is composed of hydrogen and oxygen."
+	color: [0.67, 0.67, 0.67, 0.47]
+	taste_description: "water"
+	cooling_temperature: 2
+	glass_icon_state: "glass_clear"
+	glass_name: "glass of Water"
+	glass_desc: "The father of all refreshments."
+	shot_glass_icon_state: "shotglassclear"
+	subtype: "chemical"
+
+WeldingFuel:
+	name: "Welding fuel"
+	description: "Required for welders. Flamable."
+	color: [0.4, 0, 0]
+	taste_description: "gross metal"
+	glass_icon_state: "dr_gibb_glass"
+	glass_name: "glass of welder fuel"
+	glass_desc: "Unless you're an industrial tool, this is probably not safe for consumption."
+	subtype: "flammable"
+
+Glycerol:
+	subtype: "chemical"
+	name: "Glycerol"
+	description: "Glycerol is a simple polyol compound. Glycerol is sweet-tasting and of low toxicity."
+	color: [0.5, 0.5, 0.5]
+	taste_description: "sweetness"
+
+Sterilizine:
+	subtype: "chemical"
+	name: "Sterilizine"
+	description: "Sterilizes wounds in preparation for surgery."
+	color: [0.78, 0.65, 0.86]
+	taste_description: "bitterness"
+
+EZClean:
+	subtype: "chemical"
+	name: "EZ Clean"
+	description: "A powerful, acidic cleaner sold by Waffle Co. Affects organic matter while leaving other objects unaffected."
+	metabolization_rate: 0.75
+	taste_description: "acid"
+	color: [0.67, 0.67, 0.67, 0.47]
+
+Fluorosurfactant:
+	subtype: "chemical"
+	name: "Fluorosurfactant"
+	description: "A perfluoronated sulfonic acid that forms a foam when mixed with water."
+	color: [0.62, 0.42, 0.22]
+	taste_description: "metal"
+
+FoamingAgent:
+	subtype: "chemical"
+	name: "Foaming agent"
+	description: "An agent that yields metallic foam when mixed with light metal and a strong acid."
+	reagent_state: "solid"
+	color: [0.4, 0.29, 0.39]
+	taste_description: "metal"
+
+Oil:
+	subtype: "flammable"
+	name: "Oil"
+	description: "Burns in a small smoky fire, mostly used to get Ash."
+	reagent_state: "liquid"
+	color: [0.78, 0.65, 0.86]
+	taste_description: "oil"
+
+Ash:
+	name: "Ash"
+	description: "Supposedly phoenixes rise from these, but you've never seen it."
+	reagent_state: "liquid"
+	color: [0.78, 0.65, 0.86]
+	taste_description: "ash"
+	subtype: "chemical"
+
+Saltpetre:
+	name: "Saltpetre"
+	description: "Volatile. Controversial. Third Thing."
+	reagent_state: "liquid"
+	color: [0.38, 0.65, 0.52]
+	taste_description: "cool salt"
+	subtype: "chemical"
+
+Blood:
+	name: "Blood"
+	color: [0.78, 0, 0]
+	metabolization_rate: 5
+	taste_description: "iron"
+	taste_mult: 1.3
+	glass_icon_state: "glass_red"
+	glass_name: "glass of tomato juice"
+	glass_desc: "Are you sure this is tomato juice?"
+	shot_glass_icon_state: "shotglassred"
+	subtype: "chemical"
