@@ -6,6 +6,7 @@ const {
 } = require("./../../../code/game/server.js");
 
 const _temperature = Symbol("_temperature");
+const { Reagent } = require("./reagent.js");
 
 let reagent_types = {};
 let reagent_reactions = [];
@@ -61,7 +62,9 @@ class ReagentHolder extends Component {
 
 	assume_reagent(reagent_name) {
 		if (!this.reagents.has(reagent_name)) {
-			let reagent = new reagent_types[reagent_name]();
+			let reagent = new Reagent();
+			for(var i in reagent_types[reagent_name]) {
+				if (reagent_types[reagent_name][i] && reagent[i]) {reagent[i] = reagent_types[reagent_name][i];}}
 			reagent.holder = this.a;
 			this.reagents.set(reagent_name, reagent);
 		}
@@ -337,8 +340,7 @@ ReagentHolder.template = {
 
 function add_items(mod) {
 	if (mod.reagents) {
-		for (let key of mod.reagents) {
-			//console.log(key);
+		for (let key in mod.reagents) {
 			if (reagent_types[key])
 				throw new Error(`Reagent meta '${key}' defined more than once!`);
 			reagent_types[key] = mod.reagents[key];

@@ -1,5 +1,3 @@
-
-
 class AdminHolder {
 	constructor(client) {
 		client.holder = this;

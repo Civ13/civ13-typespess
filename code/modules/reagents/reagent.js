@@ -15,6 +15,24 @@ class Reagent extends EventEmitter {
 		this.holder = null;
 		this.overdosing = false;
 		this.time_in_mob = 0;
+		this.name = "Reagent";
+		this.description = "";
+		this.taste_description = "metaphorical salt";
+		this.taste_mult = 1;
+		this.glass_name = "glass off ...what?";
+		this.glass_desc = "You can't really tell what this is.";
+		this.glass_icon_state = null;
+		this.shot_glass_icon_state = null;
+		this.reagent_state = "liquid";
+		this.color = [0, 0, 0];
+		this.can_synth = true;
+		this.metabolization_rate = 0.2;
+		this.overdose_threshold = 0;
+		this.addiction_threshold = 0;
+		this.nutriment_factor = 0;
+		this.boozepwr = 0;
+		this.toxpwr = 0;
+		this.subtype = "chemical";
 	}
 	add(amount, { reagent, temp } = {}) {
 		if (temp == null && (reagent == null || reagent.holder == null)) {
@@ -101,26 +119,6 @@ class Reagent extends EventEmitter {
 	}
 	reaction_turf() {return;}
 }
-Object.assign(Reagent.prototype, {
-	name: "Reagent",
-	description: "",
-	taste_description: "metaphorical salt",
-	taste_mult: 1,
-	glass_name: "glass off ...what?",
-	glass_desc: "You can't really tell what this is.",
-	glass_icon_state: null,
-	shot_glass_icon_state: null,
-	reagent_state: "liquid",
-	color: [0, 0, 0],
-	can_synth: true,
-	metabolization_rate: 0.2,
-	overdose_threshold: 0,
-	addiction_threshold: 0,
-	nutriment_factor: 0,
-	boozepwr: 0,
-	toxpwr: 0,
-	subtype: "chemical",
-});
 
 class ReagentReaction {
 	constructor(obj) {

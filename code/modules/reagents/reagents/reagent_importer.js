@@ -42,13 +42,13 @@ for (const f of traverseDir("./code/")) {
 	if (getFileExtension(f) == "reagents") {
 		const nrea = CSON.parse(fs.readFileSync(f, "utf8"));
 		for(var j in nrea) {
-			var nrea_new = new Reagent;
-			if (j.subtype == "drug") {
+			var nrea_new = new Reagent();
+			if (j == "subtype" && nrea[j] == "drug") {
 				nrea_new.name = "Drug";
 				nrea_new.metabolization_rate = 0.25;
 				nrea_new.taste_description = "bitterness";
 			}
-			else if (j.subtype == "toxin") {
+			else if (j == "subtype" && nrea[j] == "toxin") {
 				nrea_new.name = "Toxin";
 				nrea_new.description = "A toxic chemical.";
 				nrea_new.color = [0.81, 0.21, 0];
@@ -60,8 +60,8 @@ for (const f of traverseDir("./code/")) {
 				nrea_new.taste_mult = 4; 
 				nrea_new.nutriment_factor = 0.5;
 			}
-			for(var i in j) {
-				if (nrea_new[i] && j[i]) {nrea_new[i] =j[i];}
+			for(var i in nrea_new) {
+				if (nrea_new[i] && nrea[j][i]) {nrea_new[i] = nrea[j][i];}
 			}
 			module.exports.reagents.push(nrea_new);
 		}

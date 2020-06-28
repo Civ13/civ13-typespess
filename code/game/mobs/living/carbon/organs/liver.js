@@ -5,7 +5,6 @@ const {
 	to_chat,
 } = require("./../../../../../../code/game/server.js");
 
-const { reagent_types } = require("../../../../../modules/reagents/holder.js");
 const _ = require("underscore");
 
 class OrganLiver extends Component {
@@ -28,13 +27,13 @@ class OrganLiver extends Component {
 		if (this.filter_toxins) {
 			let toxamount = 0;
 			for (let reagent of owner.c.ReagentHolder.reagents.values()) {
-				if (reagent instanceof reagent_types.Toxin) {
+				if (reagent.subtype == "toxin") {
 					toxamount += reagent.volume;
 				}
 			}
 			if (toxamount < this.tox_tolerance && toxamount > 0) {
 				for (let reagent of [...owner.c.ReagentHolder.reagents.values()]) {
-					if (reagent instanceof reagent_types.Toxin) {
+					if (reagent.subtype == "toxin") {
 						reagent.remove(reagent.volume);
 					}
 				}
