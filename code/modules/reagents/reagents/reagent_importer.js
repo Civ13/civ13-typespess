@@ -3,7 +3,6 @@ const {readdirSync, statSync } = require ("fs");
 const fs = require("fs");
 const CSON = require("cson");
 
-const { Consumable } = require("./other.js");
 const { Reagent } = require("../reagent.js");
 
 module.exports.reagents = [];
@@ -42,15 +41,29 @@ const traverseDir = (dir) =>
 for (const f of traverseDir("./code/")) {
 	if (getFileExtension(f) == "reagents") {
 		const nrea = CSON.parse(fs.readFileSync(f, "utf8"));
-		var nrea_parsed = [];
-		for(var i in nrea)
-			nrea_parsed.push(i);
-		var nrea_new;
-		if (nrea_parsed.subtype == "drug" || nrea_parsed.subtype == "flammable" || nrea_parsed.subtype == "flash" || nrea_parsed.subtype == "smoke" || nrea_parsed.subtype == "explosive")
-		{nrea_new = new Reagent;}
-		else
-		{nrea_new = new Consumable;}
-		Object.assign(nrea_new,nrea_parsed);
-		module.exports.reagents.push(nrea_new);
+		for(var j in nrea) {
+			var nrea_new = new Reagent;
+			if (j.subtype == "drug") {
+				nrea_new.name = "Drug";
+				nrea_new.metabolization_rate = 0.25;
+				nrea_new.taste_description = "bitterness";
+			}
+			else if (j.subtype == "toxin") {
+				nrea_new.name = "Toxin";
+				nrea_new.description = "A toxic chemical.";
+				nrea_new.color = [0.81, 0.21, 0];
+				nrea_new.taste_description = "bitterness";
+				nrea_new.taste_mult = 1.2;
+				nrea_new.toxpwr = 1.5;
+			}
+			else {
+				nrea_new.taste_mult = 4; 
+				nrea_new.nutriment_factor = 0.5;
+			}
+			for(var i in j) {
+				if (nrea_new[i] && j[i]) {nrea_new[i] =j[i];}
+			}
+			module.exports.reagents.push(nrea_new);
+		}
 	}
 }
