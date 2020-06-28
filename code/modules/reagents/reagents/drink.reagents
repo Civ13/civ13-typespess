@@ -1,0 +1,395 @@
+OrangeJuice:
+	name: "Orange Juice"
+	description: "Both delicious AND rich in Vitamin C, what more do you need?"
+	color: [0.91, 0.51, 0.03]
+	taste_description: "oranges"
+	glass_icon_state: "glass_orange"
+	glass_name: "glass of orange juice"
+	glass_desc: "Vitamins! Yay!"
+	subtype: "food"
+
+TomatoJuice:
+	name: "Tomato Juice"
+	description: "Tomatoes made into juice. What a waste of big, juicy tomatoes, huh?"
+	color: [0.45, 0.06, 0.03]
+	taste_description: "tomatoes"
+	glass_icon_state: "glass_red"
+	glass_name: "glass of tomato juice"
+	glass_desc: "Are you sure this is tomato juice?"
+	subtype: "food"
+
+LimeJuice:
+	name: "Lime Juice"
+	description: "The sweet-sour juice of limes."
+	color: [0.21, 0.37, 0.19]
+	taste_description: "unbearable sourness"
+	glass_icon_state: "glass_green"
+	glass_name: "glass of lime juice"
+	glass_desc: "A glass of sweet-sour lime juice."
+	subtype: "food"
+
+CarrotJuice:
+	subtype: "food"
+	name: "Carrot Juice"
+	description: "It is just like a carrot but without crunching."
+	color: [0.59, 0.22, 0]
+	taste_description: "carrots"
+	glass_icon_state: "carrotjuice"
+	glass_name: "glass of carrot juice"
+	glass_desc: "It's just like a carrot but without crunching."
+
+
+BerryJuice:
+	subtype: "food"
+	name: "Berry Juice"
+	description: "A delicious blend of several different kinds of berries."
+	color: [0.53, 0.2, 0.2]
+	taste_description: "berries"
+	glass_icon_state: "berryjuice"
+	glass_name: "glass of berry juice"
+	glass_desc: "Berry juice. Or maybe it's jam. Who cares?"
+
+
+AppleJuice:
+	subtype: "food"
+	name: "Apple Juice"
+	description: "The sweet juice of an apple, fit for all ages."
+	color: [0.93, 1, 0.34]
+	taste_description: "apples"
+
+
+PoisonBerryJuice:
+	subtype: "food"
+	name: "Poison Berry Juice"
+	description: "A tasty juice blended from various kinds of very deadly and toxic berries."
+	color: [0.53, 0.2, 0.33]
+	taste_description: "berries"
+	glass_icon_state: "poisonberryjuice"
+	glass_name: "glass of berry juice"
+	glass_desc: "Berry juice. Or maybe it's poison. Who cares?"
+
+
+WatermelonJuice:
+	subtype: "food"
+	name: "Watermelon Juice"
+	description: "Delicious juice made from watermelon."
+	color: [0.53, 0.2, 0.2]
+	taste_description: "juicy watermelon"
+	glass_icon_state: "glass_red"
+	glass_name: "glass of watermelon juice"
+	glass_desc: "A glass of watermelon juice."
+
+
+LemonJuice:
+	subtype: "food"
+	name: "Lemon Juice"
+	description: "This juice is VERY sour."
+	color: [0.53, 0.2, 0.2]
+	taste_description: "sourness"
+	glass_icon_state: "lemonglass"
+	glass_name: "glass of lemon juice"
+	glass_desc: "Sour..."
+
+
+BananaJuice:
+	subtype: "food"
+	name: "Banana Juice"
+	description: "The raw essence of a banana. HONK"
+	color: [0.53, 0.2, 0.2]
+	taste_description: "banana"
+	glass_icon_state: "banana"
+	glass_name: "glass of banana juice"
+	glass_desc: "The raw essence of a banana. HONK."
+
+
+Nothing:
+	subtype: "food"
+	name: "Nothing"
+	description: "Absolutely nothing."
+	taste_description: "nothing"
+	glass_icon_state: "nothing"
+	glass_name: "Nothing"
+	glass_desc: "Absolutely nothing."
+	shot_glass_icon_state: "shotglass"
+
+
+PotatoJuice:
+	subtype: "food"
+	name: "Potato Juice"
+	description: "Juice of the potato. Bleh."
+	nutriment_factor: 1
+	color: [0.19, 0.13, 0]
+	taste_description: "irish sadness"
+	glass_icon_state: "glass_brown"
+	glass_name: "glass of potato juice"
+	glass_desc: "Bleh..."
+
+
+GrapeJuice:
+	subtype: "food"
+	name: "Grape Juice"
+	description: "The juice of a bunch of grapes. Guaranteed non-alcoholic."
+	color: [0.16, 0, 0.16]
+	taste_description: "grape soda"
+
+
+Milk:
+	subtype: "food"
+	name: "Milk"
+	description: "An opaque white liquid produced by the mammary glands of mammals."
+	color: [0.87, 0.87, 0.87]
+	taste_description: "milk"
+	glass_icon_state: "glass_white"
+	glass_name: "glass of milk"
+	glass_desc: "White and nutritious goodness!"
+
+
+SoyMilk:
+	subtype: "food"
+	name: "Soy Milk"
+	description: "An opaque white liquid made from soybeans."
+	color: [0.87, 0.87, 0.78]
+	taste_description: "soy milk"
+	glass_icon_state: "glass_white"
+	glass_name: "glass of soy milk"
+	glass_desc: "White and nutritious soy goodness!"
+
+
+Cream:
+	subtype: "food"
+	name: "Cream"
+	description: "The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?"
+	color: [0.87, 0.84, 0.69]
+	taste_description: "creamy milk"
+	glass_icon_state: "glass_white"
+	glass_name: "glass of cream"
+	glass_desc: "Ewwww..."
+
+
+Coffee:
+	subtype: "food"
+	name: "Coffee"
+	description: "Coffee is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant."
+	color: [0.28, 0.13, 0]
+	nutriment_factor: 0
+	overdose_threshold: 80
+	taste_description: "bitterness"
+	glass_icon_state: "glass_brown"
+	glass_name: "glass of coffee"
+	glass_desc: "Don't drop it, or you'll send scalding liquid and glass shards everywhere."
+
+
+Tea:
+	subtype: "food"
+	name: "Tea"
+	description: "Tasty black tea, it has antioxidants, it's good for you!"
+	color: [0.06, 0.06, 0]
+	nutriment_factor: 0
+	taste_description: "tart black tea"
+	glass_icon_state: "teaglass"
+	glass_name: "glass of tea"
+	glass_desc: "Drinking it from here would not seem right."
+
+
+IcedCoffee:
+	subtype: "food"
+	name: "Iced Coffee"
+	description: "Coffee and ice, refreshing and cool."
+	color: [0.06, 0.16, 0.22]
+	nutriment_factor: 0
+	taste_description: "bitter coldness"
+	glass_icon_state: "icedcoffeeglass"
+	glass_name: "Iced Coffee"
+	glass_desc: "A drink to perk you up and refresh you!"
+
+
+IcedTea:
+	subtype: "food"
+	name: "Iced Tea"
+	description: "No relation to a certain rap artist/actor."
+	color: [0.06, 0.25, 0.22]
+	nutriment_factor: 0
+	taste_description: "sweet tea"
+	glass_icon_state: "icedteaglass"
+	glass_name: "Iced Tea"
+	glass_desc: "All natural, antioxidant-rich flavour sensation."
+
+
+Cola:
+	subtype: "food"
+	name: "Cola"
+	description: "A refreshing beverage."
+	color: [0.06, 0.03, 0]
+	taste_description: "cola"
+	glass_icon_state: "glass_brown"
+	glass_name: "glass of space Cola"
+	glass_desc: "A glass of refreshing Space Cola."
+
+
+NukaCola:
+	subtype: "food"
+	name: "Nuka Cola"
+	description: "Cola, cola never changes."
+	color: [0.06, 0.03, 0]
+	taste_description: "the future"
+	glass_icon_state: "nuka_colaglass"
+	glass_name: "Nuka Cola"
+	glass_desc: "Don't cry, Don't raise your eye, It's only nuclear wasteland."
+
+
+SMWind:
+	subtype: "food"
+	name: "SM Wind"
+	description: "Blows right through you like a space wind."
+	color: [0.06, 0.13, 0]
+	taste_description: "sweet citrus soda"
+	glass_icon_state: "Space_mountain_wind_glass"
+	glass_name: "glass of Space Mountain Wind"
+	glass_desc: "Space Mountain Wind. As you know, there are no mountains in space, only wind."
+
+
+SpaceUp:
+	subtype: "food"
+	name: "Space-Up"
+	description: "Tastes like a hull breach in your mouth."
+	color: [0, 1, 0]
+	taste_description: "cherry soda"
+	glass_icon_state: "space-up_glass"
+	glass_name: "glass of Space-up"
+	glass_desc: "Space-up. It helps you keep your cool."
+
+
+LemonLime:
+	subtype: "food"
+	name: "Lemon Lime"
+	description: "A tangy substance made of 0.5% natural citrus!"
+	color: [0.55, 1, 0]
+	taste_description: "tangy lime and lemon soda"
+	glass_icon_state: "glass_yellow"
+	glass_name: "glass of Lemon-Lime"
+	glass_desc: "You're pretty certain a real fruit has never actually touched this."
+
+SodaWater:
+	subtype: "food"
+	name: "Soda Water"
+	description: "A can of club soda. Why not make a scotch and soda?"
+	color: [0.38, 0.58, 0.58]
+	taste_description: "carbonated water"
+	glass_icon_state: "glass_clear"
+	glass_name: "glass of Soda Water"
+	glass_desc: "Soda water. Why not make a scotch and soda?"
+
+
+TonicWater:
+	subtype: "food"
+	name: "Tonic Water"
+	description: "It tastes strange but at least the quinine keeps the Space Malaria at bay."
+	color: [0, 0.39, 0.78]
+	taste_description: "tart and fresh"
+	glass_icon_state: "glass_clear"
+	glass_name: "glass of Tonic Water"
+	glass_desc: "Quinine tastes funny, but at least it'll keep that Space Malaria away."
+
+
+Ice:
+	subtype: "food"
+	name: "Ice"
+	description: "Frozen water, your dentist wouldn't like you chewing this."
+	reagent_state: "solid"
+	color: [0.38, 0.58, 0.58]
+	taste_description: "ice"
+	glass_icon_state: "iceglass"
+	glass_name: "glass of ice"
+	glass_desc: "Generally, you're supposed to put something else in there too..."
+
+
+SoyLatte:
+	subtype: "food"
+	name: "Soy Latte"
+	description: "A nice and tasty beverage while you are reading your hippie books."
+	color: [0.4, 0.26, 0]
+	taste_description: "creamy coffee"
+	glass_icon_state: "soy_latte"
+	glass_name: "Soy Latte"
+	glass_desc: "A nice and refreshing beverage while you're reading."
+
+
+CafeLatte:
+	subtype: "food"
+	name: "Cafe Latte"
+	description: "A nice, strong and tasty beverage while you are reading."
+	color: [0.4, 0.26, 0]
+	taste_description: "bitter cream"
+	glass_icon_state: "cafe_latte"
+	glass_name: "Cafe Latte"
+	glass_desc: "A nice, strong and refreshing beverage while you're reading."
+
+ChocolatePudding:
+	subtype: "food"
+	name: "Chocolate Pudding"
+	description: "A great dessert for chocolate lovers."
+	color: [0.5, 0, 0]
+	nutriment_factor: 2
+	taste_description: "sweet chocolate"
+	glass_icon_state: "chocolatepudding"
+	glass_name: "Chocolate Pudding"
+	glass_desc: "Tasty."
+
+
+VanillaPudding:
+	subtype: "food"
+	name: "Vanilla Pudding"
+	description: "A great dessert for vanilla lovers."
+	color: [0.98, 0.98, 0.82]
+	nutriment_factor: 2
+	taste_description: "sweet vanilla"
+	glass_icon_state: "vanillapudding"
+	glass_name: "Vanilla Pudding"
+	glass_desc: "Tasty."
+
+PumpkinLatte:
+	subtype: "food"
+	name: "Pumpkin Latte"
+	description: "A mix of pumpkin juice and coffee."
+	color: [0.96, 0.64, 0.38]
+	nutriment_factor: 1.5
+	taste_description: "creamy pumpkin"
+	glass_icon_state: "pumpkin_latte"
+	glass_name: "Pumpkin Latte"
+	glass_desc: "A mix of coffee and pumpkin juice."
+
+PumpkinJuice:
+	subtype: "food"
+	name: "Pumpkin Juice"
+	description: "Juiced from real pumpkin."
+	color: [1, 0.65, 0]
+	taste_description: "pumpkin"
+
+TripleCitrus:
+	subtype: "food"
+	name: "Triple Citrus"
+	description: "A solution."
+	color: [0.78, 0.65, 0.86]
+	taste_description: "extreme bitterness"
+	glass_icon_state: "triplecitrus"
+	glass_name: "glass of triple citrus"
+	glass_desc: "A mixture of citrus juices. Tangy, yet smooth."
+
+
+GrapeSoda:
+	subtype: "food"
+	name: "Grape soda"
+	description: "Beloved of children and teetotalers."
+	color: [0.9, 0.8, 1]
+	taste_description: "grape soda"
+	glass_name: "glass of grape juice"
+	glass_desc: "It's grape (soda)!"
+
+
+ChocolateMilk:
+	subtype: "food"
+	name: "Chocolate Milk"
+	description: "Milk for cool kids."
+	color: [0.49, 0.31, 0.16]
+	taste_description: "chocolate milk"
+

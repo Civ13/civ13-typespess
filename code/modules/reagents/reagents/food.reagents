@@ -1,0 +1,228 @@
+
+Nutriment:
+	name: "Nutriment"
+	description: "All the vitamins, minerals, and carbohydrates the body needs in pure form."
+	reagent_state: "solid"
+	nutriment_factor: 7.5
+	color: [0.4, 0.26, 0.19]
+	brute_heal: 1
+	burn_heal: 0
+	subtype: "food"
+
+
+Vitamin:
+	name: "Vitamin"
+	description: "All the best vitamins, minerals, and carbohydrates the body needs in pure form."
+	brute_heal: 1
+	burn_heal: 1
+	subtype: "food"
+
+
+Sugar:
+	name: "Sugar"
+	description: "The organic compound commonly known as table sugar and sometimes called saccharose. This white, odorless, crystalline powder has a pleasing, sweet taste."
+	reagent_state: "solid"
+	color: [1, 1, 1]
+	taste_mult: 1.5
+	nutriment_factor: 5
+	metabolization_rate: 1
+	overdose_threshold: 200
+	taste_description: "sweetness"
+	subtype: "food"
+
+Soysauce:
+	name: "Soysauce"
+	description: "A salty sauce made from the soy plant."
+	nutriment_factor: 1
+	color: [0.47, 0.14, 0]
+	taste_description: "umami"
+	subtype: "food"
+
+
+Ketchup:
+	name: "Ketchup"
+	description: "Ketchup, catsup, whatever. It's tomato paste."
+	nutriment_factor: 2.5
+	color: [0.45, 0.06, 0.03]
+	taste_description: "ketchup"
+	subtype: "food"
+
+
+CapsaicinOil:
+	name: "Capsaicin Oil"
+	description: "This is what makes chilis hot."
+	color: [0.7, 0.06, 0.03]
+	taste_description: "hot peppers"
+	taste_mult: 1.5
+	subtype: "food"
+
+
+FrostOil:
+	name: "Frost Oil"
+	description: "A special oil that noticably chills the body. Extracted from Icepeppers and slimes."
+	color: [0.55, 0.65, 0.91]
+	taste_description: "mint"
+	subtype: "food"
+
+
+CondensedCapsaicin:
+	name: "Condensed Capsaicin"
+	description: "A chemical agent used for self-defense and in police work."
+	color: [0.7, 0.06, 0.03]
+	taste_description: "scorching agony"
+	subtype: "food"
+
+
+TableSalt:
+	name: "Table Salt"
+	description: "A salt made of sodium chloride. Commonly used to season food."
+	reagent_state: "solid"
+	color: [1, 1, 1]
+	taste_description: "salt"
+	subtype: "food"
+
+
+BlackPepper:
+	name: "Black Pepper"
+	description: "A powder ground from peppercorns. *AAAACHOOO*"
+	reagent_state: "solid"
+	taste_description: "pepper"
+	subtype: "food"
+
+
+CocoPowder:
+	name: "Coco Powder"
+	description: "A fatty, bitter paste made from coco beans."
+	reagent_state: "solid"
+	nutriment_factor: 2.5
+	color: [0.19, 0.13, 0]
+	taste_description: "bitterness"
+	subtype: "food"
+
+
+HotChocolate:
+	name: "Hot Chocolate"
+	description: "Made with love! And coco beans."
+	nutriment_factor: 1.5
+	color: [0.25, 0.19, 0.06]
+	taste_description: "creamy chocolate"
+	glass_icon_state: "chocolateglass"
+	glass_name: "glass of chocolate"
+	glass_desc: "Tasty."
+	subtype: "food"
+
+
+CornOil:
+	name: "Corn Oil"
+	description: "An oil derived from various types of corn."
+	nutriment_factor: 10
+	color: [0.19, 0.13, 0]
+	taste_description: "slime"
+	subtype: "food"
+
+
+UniversalEnzyme:
+	name: "Universal Enzyme"
+	description: "A universal enzyme used in the preperation of certain chemicals and foods."
+	color: [0.21, 0.37, 0.19]
+	taste_description: "sweetness"
+	subtype: "food"
+
+
+DryRamen:
+	name: "Dry Ramen"
+	description: "Space age food, since August 25, 1958. Contains dried noodles, vegetables, and chemicals that boil in contact with water."
+	reagent_state: "solid"
+	color: [0.19, 0.13, 0]
+	taste_description: "dry and cheap noodles"
+	subtype: "food"
+
+
+HotRamen:
+	name: "Hot Ramen"
+	description: "The noodles are boiled, the flavors are artificial, just like being back in school."
+	nutriment_factor: 2.5
+	color: [0.19, 0.13, 0]
+	taste_description: "wet and cheap noodles"
+	subtype: "food"
+
+
+HellRamen:
+	name: "Hell Ramen"
+	description: "The noodles are boiled, the flavors are artificial, just like being back in school."
+	nutriment_factor: 2.5
+	color: [0.19, 0.13, 0]
+	taste_description: "wet and cheap noodles on fire"
+	subtype: "food"
+
+
+Flour:
+	name: "Flour"
+	description: "This is what you rub all over yourself to pretend to be a ghost."
+	reagent_state: "solid"
+	color: [1, 1, 1]
+	taste_description: "chalky wheat"
+	subtype: "food"
+
+
+Rice:
+	name: "Rice"
+	description: "tiny nutritious grains"
+	reagent_state: "solid"
+	nutriment_factor: 1.5
+	color: [1, 1, 1]
+	taste_description: "rice"
+	subtype: "food"
+
+
+VanillaPowder:
+	name: "Vanilla Powder"
+	description: "A fatty, bitter paste made from vanilla pods."
+	reagent_state: "solid"
+	nutriment_factor: 2.5
+	color: [1, 0.98, 0.8]
+	taste_description: "vanilla"
+	subtype: "food"
+
+
+EggYolk:
+	name: "Egg Yolk"
+	description: "It's full of protein."
+	color: [1, 0.71, 0]
+	taste_description: "egg"
+	subtype: "food"
+
+
+CornStarch:
+	name: "Corn Starch"
+	description: "A slippery solution."
+	color: [0.78, 0.65, 0.86]
+	taste_description: "slime"
+	subtype: "food"
+
+
+CornSyrup:
+	name: "Corn Syrup"
+	description: "Decays into sugar."
+	color: [0.78, 0.65, 0.86]
+	metabolization_rate: 1.5
+	taste_description: "sweet slime"
+	subtype: "food"
+
+
+Honey:
+	name: "honey"
+	description: "Sweet sweet honey, decays into sugar and has natural healing properties."
+	color: [0.83, 0.64, 0.03]
+	nutriment_factor: 7.5
+	metabolization_rate: 0.5
+	taste_description: "sweetness"
+	subtype: "food"
+
+
+Mayonnaise:
+	name: "Mayonnaise"
+	description: "An white and oily mixture of mixed egg yolks."
+	color: [0.87, 0.87, 0.87]
+	taste_description: "mayonnaise"
+	subtype: "food"

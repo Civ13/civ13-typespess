@@ -1,0 +1,83 @@
+
+SpaceDrugs:
+	name: "Space drugs"
+	description: "An illegal chemical compound used as drug."
+	color: [0.38, 0.65, 0.52]
+	metabolization_rate: 0.25
+	overdose_threshold: 30
+	subtype: "drug"
+
+
+Nicotine:
+	name: "Nicotine"
+	description: "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage."
+	reagent_state: "liquid"
+	color: [0.38, 0.65, 0.52]
+	metabolization_rate: 0.25
+	addiction_threshold: 30
+	taste_description: "smoke"
+	subtype: "drug"
+
+
+Menthol:
+	name: "Menthol"
+	description: "Tastes naturally minty, and imparts a very mild numbing sensation."
+	taste_description: "mint"
+	reagent_state: "liquid"
+	color: [0.5, 0.69, 0.61]
+	metabolization_rate: 0.25
+	subtype: "drug"
+
+
+Crank:
+	name: "Crank"
+	description: "Reduces stun times by about 200%. If overdosed or addicted it will deal significant Toxin, Brute and Brain damage."
+	reagent_state: "liquid"
+	color: [0.98, 0, 0.78]
+	overdose_threshold: 20
+	addiction_threshold: 10
+	metabolization_rate: 0.25
+	subtype: "drug"
+
+
+Krokodil:
+	name: "Krokodil"
+	description: "Cools and calms you down. If overdosed it will deal significant Brain and Toxin damage. If addicted it will begin to deal fatal amounts of Brute damage as the subject's skin falls off."
+	reagent_state: "liquid"
+	color: [0, 0.39, 0.71]
+	overdose_threshold: 20
+	addiction_threshold: 15
+	metabolization_rate: 0.25
+	subtype: "drug"
+
+
+Methamphetamine:
+	name: "Methamphetamine"
+	description: "Reduces stun times by about 300%, speeds the user up, and allows the user to quickly recover stamina while dealing a small amount of Brain damage. If overdosed the subject will move randomly, laugh randomly, drop items and suffer from Toxin and Brain damage. If addicted the subject will constantly jitter and drool, before becoming dizzy and losing motor control and eventually suffer heavy toxin damage."
+	reagent_state: "liquid"
+	color: [0.98, 0.98, 0.98]
+	overdose_threshold: 20
+	addiction_threshold: 10
+	metabolization_rate: 0.375
+	subtype: "drug"
+
+
+BathSalts:
+	name: "Bath Salts"
+	description: "Makes you nearly impervious to stuns and grants a stamina regeneration buff, but you will be a nearly uncontrollable tramp-bearded raving lunatic."
+	reagent_state: "liquid"
+	color: [0.98, 0.98, 0.98]
+	overdose_threshold: 20
+	addiction_threshold: 10
+	taste_description: "salt"
+	metabolization_rate: 0.25
+	subtype: "drug"
+
+
+MushroomHallucinogen:
+	name: "Mushroom Hallucinogen",
+	description: "A strong hallucinogenic drug derived from certain species of mushroom.",
+	color: [0.91, 0, 0.91],
+	metabolization_rate: 0.1,
+	taste_description: "mushroom",
+	subtype: "drug"

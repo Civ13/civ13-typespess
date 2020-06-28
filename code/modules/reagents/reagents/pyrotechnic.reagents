@@ -1,0 +1,49 @@
+Nitroglycerin:
+	name: "Nitroglycerin"
+	description: "Nitroglycerin is a heavy, colorless, oily, explosive liquid obtained by nitrating glycerol."
+	color: [0.5, 0.5, 0.5]
+	taste_description: "oil"
+	subtype: "explosive"
+
+ChlorineTrifluoride:
+	name: "Chlorine Trifluoride"
+	description: "Makes a temporary 3x3 fireball when it comes into existence, so be careful when mixing. ClF3 applied to a surface burns things that wouldn't otherwise burn, sometimes through the very floors of the station and exposing it to the vacuum of space."
+	reagent_state: "liquid"
+	color: [1, 0.78, 0.78]
+	metabolization_rate: 4
+	taste_description: "burning"
+	subtype: "flammable"
+
+BlackPowder:
+	name: "Black Powder"
+	description: "Explodes. Violently."
+	reagent_state: "liquid"
+	color: [0, 0, 0]
+	metabolization_rate: 0.05
+	taste_description: "salt"
+	subtype: "explosive"
+
+
+FlashPowder:
+	name: "Flash Powder"
+	description: "Makes a very bright flash."
+	reagent_state: "liquid"
+	color: [0.78, 0.78, 0.78]
+	taste_description: "salt"
+	subtype: "flash"
+
+SmokePowder:
+	name: "Smoke Powder"
+	description: "Makes a large cloud of smoke that can carry reagents."
+	reagent_state: "liquid"
+	color: [0.78, 0.78, 0.78]
+	taste_description: "smoke"
+	subtype: "smoke"
+
+Napalm:
+	name: "Napalm"
+	description: "Very flammable."
+	reagent_state: "liquid"
+	color: [0.98, 0, 0.69]
+	taste_description: "burning"
+	subtype: "flammable"
