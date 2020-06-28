@@ -579,6 +579,7 @@ module.exports.components = {
 	MetalSheet,
 	WoodSheet,
 	ClothSheet,
+	StrawSheet,
 	CardboardSheet,
 	BoneSheet,
 	PlasticSheet,

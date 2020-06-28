@@ -176,17 +176,17 @@
   color: #ff5050;
 }
 #chatwindow .info {
-  color: #0000cc;
+  color: #3333c5;
 }
 #chatwindow .notice {
-  color: #000099;
+  color: #D6D694;
 }
 #chatwindow .boldnotice {
-  color: #000099;
+  color: #ff5050;
   font-weight: bold;
 }
 #chatwindow .adminnotice {
-  color: #0000ff;
+  color: #ff5050;
 }
 #chatwindow .adminhelp {
   color: #ff0000;
