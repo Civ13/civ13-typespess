@@ -337,7 +337,8 @@ ReagentHolder.template = {
 
 function add_items(mod) {
 	if (mod.reagents) {
-		for (let key of Object.keys(mod.reagents)) {
+		for (let key of mod.reagents) {
+			console.log(key);
 			if (reagent_types[key])
 				throw new Error(`Reagent meta '${key}' defined more than once!`);
 			reagent_types[key] = mod.reagents[key];
@@ -351,14 +352,7 @@ function add_items(mod) {
 }
 
 // Import the reagents and recipes
-add_items(require("./reagents/other.js"));
 add_items(require("./reagents/reagent_importer.js"));
-add_items(require("./reagents/drink.js"));
-add_items(require("./reagents/drug.js"));
-add_items(require("./reagents/food.js"));
-add_items(require("./reagents/medicine.js"));
-add_items(require("./reagents/pyrotechnic.js"));
-add_items(require("./reagents/toxin.js"));
 add_items(require("./recipes/recipe_importer.js"));
 
 // Cache the reactions for the reagents
