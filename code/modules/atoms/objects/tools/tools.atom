@@ -67,3 +67,7 @@ mini_welding_tool:
 multitool:
     components: ["Multitool"]
     tree_paths: ["/items/tools/multitool"]
+
+hatchet:
+    components: ["Axe"]
+    tree_paths: ["items/tools/hatchet"]
