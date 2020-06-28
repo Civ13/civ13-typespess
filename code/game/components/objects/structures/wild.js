@@ -89,7 +89,7 @@ Wild.template = {
 		components: {
 			Wild: {
 				slicing_duration: 10000,
-				sheet_type: "wood",
+				sheet_type: "wood_sheet",
 				sheet_amount: 7,
 			},
 			Tangible: {
@@ -123,7 +123,7 @@ module.exports.templates = {
 				},
 				Wild: {
 					slicing_duration: 7000,
-					sheet_type: "straw",
+					sheet_type: "straw_sheet",
 					sheet_amount: 1,
 				},
 			}
@@ -219,7 +219,7 @@ module.exports.templates = {
 				},
 				Wild: {
 					slicing_duration: 7000,
-					sheet_type: "straw",
+					sheet_type: "straw_sheet",
 					sheet_amount: 1,
 				},
 			}
