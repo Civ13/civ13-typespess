@@ -148,6 +148,46 @@ Wirecutters.template = {
 	},
 };
 
+class Axe extends Component {
+	constructor(atom, template) {
+		super(atom, template);
+	}
+}
+
+Axe.depends = ["Tool"];
+Axe.loadBefore = ["Tool"];
+
+Axe.template = {
+	vars: {
+		components: {
+			Wirecutters: {
+				random_color: true,
+			},
+			Tool: {
+				usesound: "sound/items/wood_cutting.ogg",
+			},
+			Item: {
+				force: 12,
+				throw_speed: 3,
+				throw_range: 6,
+				attack_verb: ["slashed", "bashed"],
+				size: 2,
+				hitsound: "sound/effects/generic_hit.ogg",
+			},
+			Examine: {
+				desc: "This cuts trees.",
+			},
+		},
+		icon: "icons/obj/items_and_weapons.png",
+		icon_state: "axe0",
+		name: "hatchet",
+	},
+	can_use(prev, tool) {
+		if (!prev()) return false;
+		if (tool != "Axe") return true;
+	}
+};
+
 class Crowbar extends Component {
 	constructor(atom, template) {
 		super(atom, template);
@@ -323,4 +363,5 @@ module.exports.components = {
 	Wirecutters,
 	Crowbar,
 	WeldingTool,
+	Axe,
 };

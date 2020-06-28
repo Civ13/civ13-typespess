@@ -5,7 +5,6 @@
 const layers = require("../../../../defines/layers.js");
 const {
 	Component,
-	Sound,
 	has_component,
 	Atom,
 	chain_func,
@@ -44,23 +43,14 @@ class Wild extends Component {
 		if (has_component(item, "Tool")) {
 			if (item.c.Tool.can_use("Axe", user)) {
 				item.c.Tool.used("Axe");
-				to_chat`<span class='notice'>You begin chopping down the ${this.name}...</span>`(
-					user
-				);
+				to_chat`<span class='notice'>You begin chopping down the ${this.name}...</span>`(user);
 				user.c.MobInventory.do_after({
 					delay: this.slicing_duration * item.c.Tool.toolspeed,
 					target: this.a,
 				}).then((success) => {
 					if (!success) return;
-					new Sound(this.a.server, {
-						path: "sound/items/welder.ogg",
-						volume: 1,
-						vary: true,
-					}).emit_from(this.a);
 					this.a.c.Destructible.deconstruct(true);
-					to_chat`<span class='notice'>You chop down the ${this.name}!</span>`(
-						user
-					);
+					to_chat`<span class='notice'>You chop down the ${this.name}!</span>`(user);
 				});
 				return true;
 			}
