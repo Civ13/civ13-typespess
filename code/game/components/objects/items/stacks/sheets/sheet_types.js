@@ -122,49 +122,6 @@ MetalSheet.template = {
 	},
 };
 
-class PlasteelSheet extends Component {
-	constructor(atom, template) {
-		super(atom, template);
-	}
-}
-
-PlasteelSheet.depends = ["Stack"];
-PlasteelSheet.loadBefore = ["Stack"];
-
-PlasteelSheet.template = {
-	vars: {
-		components: {
-			Stack: {
-				full_size: 3,
-				singular_name: "plasteel sheet",
-				merge_type: "PlasteelSheet",
-				novariants: false,
-			},
-			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/misc/sheets_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/misc/sheets_righthand.png",
-				force: 5,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
-				inhand_icon_state: "sheet-metal",
-			},
-			Tangible: {
-				throw_force: 10,
-				throw_speed: 1,
-				throw_range: 3,
-			},
-		},
-		name: "plasteel metal",
-		desc: "This sheet is an alloy of iron and plasma.",
-		icon_state: "sheet-plasteel",
-	},
-};
-
 class WoodSheet extends Component {
 	constructor(atom, template) {
 		super(atom, template);
@@ -241,6 +198,46 @@ WoodSheet.template = {
 	},
 };
 
+class StrawSheet extends Component {
+	constructor(atom, template) {
+		super(atom, template);
+	}
+}
+
+StrawSheet.depends = ["Stack"];
+StrawSheet.loadBefore = ["Stack"];
+
+StrawSheet.template = {
+	vars: {
+		components: {
+			Stack: {
+				full_size: 3,
+				singular_name: "straw bale",
+				merge_type: "StrawSheet",
+				novariants: true,
+				recipes: [
+
+				],
+			},
+			Item: {
+				//Wood apparently has no inhands.
+				force: 1,
+				attack_verb: [
+					"flailed",
+					"battered",
+				],
+			},
+			Tangible: {
+				throw_force: 3,
+				throw_speed: 3,
+				throw_range: 4,
+			},
+		},
+		name: "straw bale",
+		desc: "A bale of straw.",
+		icon_state: "sandbags",
+	},
+};
 class ClothSheet extends Component {
 	constructor(atom, template) {
 		super(atom, template);
@@ -484,19 +481,7 @@ module.exports.templates = {
 		],
 		tree_paths: ["items/stack/sheet/metal"],
 	},
-	plasteel_sheet: {
-		components: ["PlasteelSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/plasteel"],
-	},
+
 	wood_sheet: {
 		components: ["WoodSheet"],
 		variants: [
@@ -509,6 +494,19 @@ module.exports.templates = {
 			},
 		],
 		tree_paths: ["items/stack/sheet/mineral/wood"],
+	},
+	straw_sheet: {
+		components: ["StrawSheet"],
+		variants: [
+			{
+				type: "single",
+				var_path: ["components", "Stack", "amount"],
+				values: [1, 5, 10, 20, 30, 40, 50],
+				label: true,
+				orientation: "vertical",
+			},
+		],
+		tree_paths: ["items/stack/sheet/mineral/straw"],
 	},
 	cloth_sheet: {
 		components: ["ClothSheet"],
@@ -579,7 +577,6 @@ module.exports.templates = {
 
 module.exports.components = {
 	MetalSheet,
-	PlasteelSheet,
 	WoodSheet,
 	ClothSheet,
 	CardboardSheet,
