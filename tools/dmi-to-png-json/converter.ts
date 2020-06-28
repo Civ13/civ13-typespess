@@ -1,74 +1,83 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use strict";
-let StreamPng = require("streampng");
-let zlib = require("zlib");
+const fs = require("fs");
+const StreamPng = require("streampng");
+const zlib = require("zlib");
 
+const files = fs.readdirSync("./in/");
+const dmifiles : Array<string> = [];
 const dirOrder = [2, 1, 4, 8, 6, 10, 5, 9];
 
-module.exports = async function read_icon(blob) {
-	if(!blob) throw new Error("null blob");
-	let data = await new Promise((resolve) => {
-		let file_reader = new FileReader();
-		file_reader.addEventListener("loadend", () => {
-			resolve(file_reader.result);
+files.forEach((file: string) => { 
+	if (file.search(".dmi") != -1) {
+		console.log("Found "+file);
+		dmifiles.push(file);
+		const metadata = read_icon("./in/"+file);
+		const jsonContent = JSON.stringify(metadata);
+		fs.writeFile(`${file}.json`, jsonContent, "utf8", function (err: unknown) {
+			if (err) {
+				console.log("An error occured while writing JSON Object to File.");
+				return console.log(err);
+			}
+		
+			console.log("JSON file has been saved.");
 		});
-		file_reader.readAsArrayBuffer(blob);
-	});
-	let img_blob = new Blob([blob], {type:"image/png"});
-	let image = document.createElement("img");
+	}
+}); 
 
-	let image_load_promise = new Promise((resolve, reject) => {
-		image.onload = resolve;
-		image.onerror = reject;
-	});
+async function read_icon (blob: string) {
+	const img_blob = new Blob([blob], {type:"image/png"});
+	const image = document.createElement("img");
+
 	const obj = {image, icon_states: new Map(), icon_states_movement: new Map(), width:0,height:0};
 	image.src = URL.createObjectURL(img_blob);
 
 	try {
-		let png = new StreamPng(new Buffer(data));
-		let [IHDR, zTXt] = await new Promise((resolve, reject) => {
-			png.on("error", (err) => {
+		const png = new StreamPng(new Buffer(img_blob));
+		const [IHDR, zTXt] = await new Promise((resolve, reject) => {
+			png.on("error", (err: any) => {
 				reject(err);
 			});
-			let IHDR;
-			let zTXt;
-			png.on("IHDR", (chunk) => {
+			let IHDR: any;
+			let zTXt: any;
+			png.on("IHDR", (chunk: unknown) => {
 				IHDR = chunk;
 				if(zTXt) {
 					resolve([IHDR,zTXt]);
 				}
 			});
-			png.on("zTXt", (chunk) => {
+			png.on("zTXt", (chunk: unknown) => {
 				zTXt = chunk;
 				if(IHDR) {
 					resolve([IHDR,zTXt]);
 				}
 			});
-			png.on("tEXt", (chunk) => {
+			png.on("tEXt", (chunk: unknown) => {
 				zTXt = chunk;
 				if(IHDR) {
 					resolve([IHDR,zTXt]);
 				}
 			});
 		});
-		let inflated = zTXt.text || await new Promise((resolve, reject) => {
-			zlib.inflate(zTXt.compressedText, (err, data) => {
+		const inflated = zTXt.text || await new Promise((resolve, reject) => {
+			zlib.inflate(zTXt.compressedText, (err: any, data: unknown) => {
 				if(err) reject(err);
 				resolve(data);
 			});
 		});
-		let desc = inflated.toString("ascii");
-		let split = desc.split("\n");
+		const desc = inflated.toString("ascii");
+		const split = desc.split("\n");
 		let iconWidth = 0;
 		let iconHeight = 0;
-		let parsedItems = [];
-		let parsing = null;
+		const parsedItems = [];
+		let parsing : Array<unknown> = [];
 		let totalFrames = 0;
 		for(let i = 0; i < split.length; i++) {
-			let regexResult = /\t?([a-zA-Z0-9]+) ?= ?"?([^\r\n"]+)/.exec(split[i]);
+			const regexResult = /\t?([a-zA-Z0-9]+) ?= ?"?([^\r\n"]+)/.exec(split[i]);
 			if(!regexResult)
 				continue;
-			let key = regexResult[1];
-			let val = regexResult[2];
+			const key = regexResult[1];
+			const val = regexResult[2];
 			if(key == "width") {
 				iconWidth = +val;
 			} else if(key == "height") {
@@ -88,7 +97,7 @@ module.exports = async function read_icon(blob) {
 			parsedItems.push(parsing);
 		}
 		for(let i = 0; i < parsedItems.length; i++) {
-			let item = parsedItems[i];
+			const item = parsedItems[i];
 			totalFrames += item.frames * item.dirs;
 			if(!item.delay) {
 				item.delay = [1];
@@ -106,23 +115,22 @@ module.exports = async function read_icon(blob) {
 		}
 		obj.width = iconWidth;
 		obj.height = iconHeight;
-		let cols = IHDR.width / iconWidth;
+		const cols = IHDR.width / iconWidth;
 		let iconIndex = 0;
 		for(let i = 0; i < parsedItems.length; i++) {
-			let item = parsedItems[i];
-			let outItem = {};
-			let name = item.state;
+			const item = parsedItems[i];
+			const outItem = {dir_count:1, width:32, height:32, dirs:[], tile_size:32};
+			const name = item.state;
 			outItem.dir_count = item.dirs;
 			outItem.width = iconWidth;
 			outItem.height = iconHeight;
-			let dirs = new Map();
+			const dirs = new Map();
 			for(let j = 0; j < item.dirs; j++) {
-				let dir = {};
-				let frames = [];
-				dir.frames = frames;
+				const dir = {frames:{ x: number; y: number; delay: number; }[],total_delay:0};
+				const frames: { x: number; y: number; delay: number; }[] = [];
 				let total_delay = 0;
 				for(let k = 0; k < item.frames; k++) {
-					let thisIconIndex = iconIndex + (k * item.dirs) + j;
+					const thisIconIndex = iconIndex + (k * item.dirs) + j;
 					frames.push({x:(thisIconIndex%cols)*iconWidth, y:Math.floor(thisIconIndex/cols)*iconHeight, delay: item.delay[k]});
 					total_delay += item.delay[k];
 				}
@@ -138,10 +146,9 @@ module.exports = async function read_icon(blob) {
 			}
 			iconIndex += item.dirs * item.frames;
 		}
-		await image_load_promise;
 	} finally {
 		URL.revokeObjectURL(image.src);
 	}
 	
 	return obj;
-};
+}
