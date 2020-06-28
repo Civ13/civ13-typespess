@@ -15,8 +15,6 @@ class Reagent extends EventEmitter {
 		this.holder = null;
 		this.overdosing = false;
 		this.time_in_mob = 0;
-		this.boozepwr = 0;
-		this.subtype = "reagent";
 	}
 	add(amount, { reagent, temp } = {}) {
 		if (temp == null && (reagent == null || reagent.holder == null)) {
@@ -118,6 +116,10 @@ Object.assign(Reagent.prototype, {
 	metabolization_rate: 0.2,
 	overdose_threshold: 0,
 	addiction_threshold: 0,
+	nutriment_factor: 0.5,
+	boozepwr: 0,
+	toxpwr: 0,
+	subtype: "chemical",
 });
 
 class ReagentReaction {
