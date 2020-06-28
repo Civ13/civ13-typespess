@@ -6,7 +6,6 @@ Toxin:
 	taste_mult: 1.2
 	toxpwr: 1.5
 	subtype: "toxin"
-
 Amatoxin:
 	subtype: "toxin"
 	name: "Amatoxin"
@@ -14,7 +13,6 @@ Amatoxin:
 	color: [0.47, 0.14, 0]
 	toxpwr: 2.5
 	taste_description: "mushroom"
-
 
 Lexorin:
 	subtype: "toxin"
@@ -24,7 +22,6 @@ Lexorin:
 	toxpwr: 0
 	taste_description: "acid"
 
-
 MindbreakerToxin:
 	subtype: "toxin"
 	name: "Mindbreaker Toxin"
@@ -32,17 +29,14 @@ MindbreakerToxin:
 	color: [0.7, 0.06, 0.03]
 	toxpwr: 0
 	taste_description: "sourness"
-
 ChloralHydrate:
 	subtype: "toxin"
 	name: "Chloral Hydrate"
-	description:
-	"A powerful sedative that induces confusion and drowsiness before putting its target to sleep."
+	description: "A powerful sedative that induces confusion and drowsiness before putting its target to sleep."
 	reagent_state: "solid"
 	color: [0, 0, 0.4]
 	toxpwr: 0
 	metabolization_rate: 0.75
-
 
 CoffeeGrounds:
 	subtype: "toxin"
@@ -52,7 +46,6 @@ CoffeeGrounds:
 	color: [0.36, 0.18, 0.05]
 	toxpwr: 0.5
 
-
 GroundTeaLeaves:
 	subtype: "toxin"
 	name: "Ground Tea Leaves"
@@ -60,104 +53,85 @@ GroundTeaLeaves:
 	reagent_state: "solid"
 	color: [0.5, 0.52, 0]
 	toxpwr: 0.5
-
 Polonium:
 	subtype: "toxin"
 	name: "Polonium"
-	description:
-	"An extremely radioactive material in liquid form. Ingestion results in fatal irradiation."
+	description: "An extremely radioactive material in liquid form. Ingestion results in fatal irradiation."
 	reagent_state: "liquid"
 	color: [0.47, 0.47, 0.47]
 	metabolization_rate: 0.0625
 	toxpwr: 0
 
-
 Histamine:
 	subtype: "toxin"
 	name: "Histamine"
-	description:
-	"Histamine's effects become more dangerous depending on the dosage amount. They range from mildly annoying to incredibly lethal."
+	description: "Histamine's effects become more dangerous depending on the dosage amount. They range from mildly annoying to incredibly lethal."
 	reagent_state: "liquid"
 	color: [0.98, 0.39, 0.39]
 	metabolization_rate: 0.125
 	overdose_threshold: 30
 	toxpwr: 0
 
-
 Formaldehyde:
 	subtype: "toxin"
 	name: "Formaldehyde"
-	description:
-	"Formaldehyde, on its own, is a fairly weak toxin. It contains trace amounts of Histamine, very rarely making it decay into Histamine.."
+	description: "Formaldehyde, on its own, is a fairly weak toxin. It contains trace amounts of Histamine, very rarely making it decay into Histamine.."
 	reagent_state: "liquid"
 	color: [0.71, 0, 0.29]
 	metabolization_rate: 0.25
 	toxpwr: 1
 
-
 Venom:
 	subtype: "toxin"
 	name: "Venom"
-	description:
-	"An exotic poison extracted from highly toxic fauna. Causes scaling amounts of toxin damage and bruising depending and dosage. Often decays into Histamine."
+	description: "An exotic poison extracted from highly toxic fauna. Causes scaling amounts of toxin damage and bruising depending and dosage. Often decays into Histamine."
 	reagent_state: "liquid"
 	color: [0.94, 1, 0.94]
 	metabolization_rate: 0.125
 	toxpwr: 0
-
 Cyanide:
 	subtype: "toxin"
 	name: "Cyanide"
-	description:
-	"An infamous poison known for its use in assassination. Causes small amounts of toxin damage with a small chance of oxygen damage or a stun."
+	description: "An infamous poison known for its use in assassination. Causes small amounts of toxin damage with a small chance of oxygen damage or a stun."
 	reagent_state: "liquid"
 	color: [0, 0.71, 1]
 	metabolization_rate: 0.0625
 	toxpwr: 1.25
 
-
 BadFood:
 	subtype: "toxin"
 	name: "Bad Food"
-	description:
-	"The result of some abomination of cookery, food so bad it's toxic."
+	description: "The result of some abomination of cookery, food so bad it's toxic."
 	reagent_state: "liquid"
 	color: [0.84, 0.84, 0.85]
 	metabolization_rate: 0.125
 	toxpwr: 0.5
 	taste_description: "bad cooking"
-
 SodiumThiopental:
 	subtype: "toxin"
 	name: "Sodium Thiopental"
-	description:
-	"Sodium Thiopental induces heavy weakness in its target as well as unconsciousness."
+	description: "Sodium Thiopental induces heavy weakness in its target as well as unconsciousness."
 	reagent_state: "liquid"
 	color: [0.39, 0.59, 0.98]
 	metabolization_rate: 0.375
 	toxpwr: 0
-
 Curare:
 	subtype: "toxin"
 	name: "Curare"
-	description:
-	"Causes slight toxin damage followed by chain-stunning and oxygen damage."
+	description: "Causes slight toxin damage followed by chain-stunning and oxygen damage."
 	reagent_state: "liquid"
 	color: [0.1, 0.1, 0.1]
 	metabolization_rate: 0.0625
 	toxpwr: 1
 
-
 Heparin:
 	subtype: "toxin"
 	name: "Heparin"
-	description:
-	"A powerful anticoagulant. Victims will bleed uncontrollably and suffer scaling bruising."
+	description: "A powerful anticoagulant. Victims will bleed uncontrollably and suffer scaling bruising."
 	reagent_state: "liquid"
 	color: [0.78, 0.78, 0.78]
 	metabolization_rate: 0.1
 	toxpwr: 0
-
 SAcid:
 	subtype: "toxin"
 	name: "Sulphuric acid"
@@ -167,13 +141,10 @@ SAcid:
 	acidpwr: 10
 	taste_description: "acid"
 
-
 FAcid:
 	subtype: "toxin"
 	name: "Fluorosulfuric acid"
-	description:
-	"Fluorosulfuric acid is an extremely corrosive chemical substance."
+	description: "Fluorosulfuric acid is an extremely corrosive chemical substance."
 	color: [0.31, 0.31, 1]
 	toxpwr: 2
 	acidpwr: 42.0
-

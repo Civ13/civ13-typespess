@@ -6,7 +6,6 @@ Ethanol:
 	taste_description: "alcohol"
 	subtype: "ethanol"
 	boozepwr: 65
-
 Beer:
 	name: "Beer"
 	description: "An alcoholic beverage brewed since ancient times on Old Earth. Still popular today."
@@ -17,7 +16,6 @@ Beer:
 	taste_description: "piss water"
 	glass_name: "glass of beer"
 	glass_desc: "A freezing pint of beer."
-
 GreenBeer:
 	name: "Green Beer"
 	description: "An alcoholic beverage brewed since ancient times on Old Earth. This variety is dyed a festive green."
@@ -26,7 +24,6 @@ GreenBeer:
 	glass_icon_state: "greenbeerglass"
 	glass_name: "glass of green beer"
 	glass_desc: "A freezing pint of green beer. Festive."
-
 Kahlua:
 	name: "Kahlua"
 	description: "A widely known, Mexican coffee-flavoured liqueur. In production since 1936!"
@@ -37,7 +34,6 @@ Kahlua:
 	glass_name: "glass of RR Coffee Liquor"
 	glass_desc: "DAMN, THIS THING LOOKS ROBUST!"
 	shot_glass_icon_state: "shotglasscream"
-
 Whiskey:
 	name: "Whiskey"
 	description: "A superb and well-aged single-malt whiskey. Damn."
@@ -49,7 +45,6 @@ Whiskey:
 	glass_name: "glass of whiskey"
 	glass_desc: "The silky, smokey whiskey goodness inside the glass makes the drink look very classy."
 	shot_glass_icon_state: "shotglassbrown"
-
 ThirteenLoko:
 	name: "Thirteen Loko"
 	description: "A potent mixture of caffeine and alcohol."
@@ -61,7 +56,6 @@ ThirteenLoko:
 	glass_icon_state: "thirteen_loko_glass"
 	glass_name: "glass of Thirteen Loko"
 	glass_desc: "This is a glass of Thirteen Loko, it appears to be of the highest quality. The drink, not the glass."
-
 
 Vodka:
 	name: "Vodka"
@@ -75,7 +69,6 @@ Vodka:
 	glass_desc: "The glass contain wodka. Xynta."
 	shot_glass_icon_state: "shotglassclear"
 
-
 Bilk:
 	name: "Bilk"
 	description: "This appears to be beer mixed with milk. Disgusting."
@@ -88,7 +81,6 @@ Bilk:
 	glass_name: "glass of bilk"
 	glass_desc: "A brew of milk and beer. For those alcoholics who fear osteoporosis."
 
-
 ThreeMileIslandIcedTea:
 	name: "Three Mile Island Iced Tea"
 	description: "Made for a woman, strong enough for a man."
@@ -100,7 +92,6 @@ ThreeMileIslandIcedTea:
 	glass_name: "Three Mile Island Ice Tea"
 	glass_desc: "A glass of this is sure to prevent a meltdown."
 
-
 Gin:
 	name: "Gin"
 	description: "It's gin. In space. I say, good sir."
@@ -111,7 +102,6 @@ Gin:
 	glass_icon_state: "ginvodkaglass"
 	glass_name: "glass of gin"
 	glass_desc: "A crystal clear glass of Griffeater gin."
-
 
 Rum:
 	name: "Rum"
@@ -125,7 +115,6 @@ Rum:
 	glass_desc: "Now you want to Pray for a pirate suit, don't you?"
 	shot_glass_icon_state: "shotglassbrown"
 
-
 Tequila:
 	name: "Tequila"
 	description: "A strong and mildly flavoured, Mexican produced spirit. Feeling thirsty, hombre?"
@@ -137,7 +126,6 @@ Tequila:
 	glass_name: "glass of tequila"
 	glass_desc: "Now all that's missing is the weird colored shades!"
 	shot_glass_icon_state: "shotglassgold"
-
 
 Vermouth:
 	name: "Vermouth"
@@ -151,7 +139,6 @@ Vermouth:
 	glass_desc: "You wonder why you're even drinking this straight."
 	shot_glass_icon_state: "shotglassclear"
 
-
 Wine:
 	name: "Wine"
 	description: "A premium alcoholic beverage made from distilled grape juice."
@@ -164,7 +151,6 @@ Wine:
 	glass_desc: "A very classy looking drink."
 	shot_glass_icon_state: "shotglassred"
 
-
 LizardWine:
 	name: "Lizard wine"
 	description: "An alcoholic beverage from Space China, made by infusing lizard tails in ethanol."
@@ -172,7 +158,6 @@ LizardWine:
 	subtype: "ethanol"
 	boozepwr: 45
 	taste_description: "scaley sweetness"
-
 
 Grappa:
 	name: "Grappa"
@@ -184,7 +169,6 @@ Grappa:
 	glass_icon_state: "grappa"
 	glass_name: "glass of grappa"
 	glass_desc: "A fine drink originally made to prevent waste by using the leftovers from winemaking."
-
 
 Cognac:
 	name: "Cognac"
@@ -198,7 +182,6 @@ Cognac:
 	glass_desc: "Damn, you feel like some kind of French aristocrat just by holding this."
 	shot_glass_icon_state: "shotglassbrown"
 
-
 Absinthe:
 	name: "Absinthe"
 	description: "A powerful alcoholic drink. Rumored to cause hallucinations but does not."
@@ -211,7 +194,6 @@ Absinthe:
 	glass_desc: "It's as strong as it smells."
 	shot_glass_icon_state: "shotglassgreen"
 
-
 Hooch:
 	name: "Hooch"
 	description: "Either someone's failure at cocktail making or attempt in alcohol production. In any case, do you really want to drink that?"
@@ -223,7 +205,6 @@ Hooch:
 	glass_name: "Hooch"
 	glass_desc: "You've really hit rock bottom now... your liver packed its bags and left last night."
 
-
 Ale:
 	name: "Ale"
 	description: "A dark alcoholic beverage made with malted barley and yeast."
@@ -234,7 +215,6 @@ Ale:
 	glass_icon_state: "aleglass"
 	glass_name: "glass of ale"
 	glass_desc: "A freezing pint of delicious Ale."
-
 
 Goldschlager:
 	name: "Goldschlager"
@@ -248,7 +228,6 @@ Goldschlager:
 	glass_desc: "100% proof that teen girls will drink anything with gold in it."
 	shot_glass_icon_state: "shotglassgold"
 
-
 Patron:
 	name: "Patron"
 	description: "Tequila with silver in it, a favorite of alcoholic women in the club scene."
@@ -261,7 +240,6 @@ Patron:
 	glass_desc: "Drinking patron in the bar, with all the subpar ladies."
 	shot_glass_icon_state: "shotglassclear"
 
-
 GinAndTonic:
 	name: "Gin and Tonic"
 	description: "An all time classic, mild cocktail."
@@ -272,7 +250,6 @@ GinAndTonic:
 	glass_icon_state: "gintonicglass"
 	glass_name: "Gin and Tonic"
 	glass_desc: "A mild but still great cocktail. Drink up, like a true Englishman."
-
 
 CubaLibre:
 	name: "Cuba Libre"
@@ -285,7 +262,6 @@ CubaLibre:
 	glass_name: "Cuba Libre"
 	glass_desc: "A classic mix of rum and cola."
 
-
 WhiskeyCola:
 	name: "Whiskey Cola"
 	description: "Whiskey, mixed with cola. Surprisingly refreshing."
@@ -296,7 +272,6 @@ WhiskeyCola:
 	glass_icon_state: "whiskeycolaglass"
 	glass_name: "Whiskey Cola"
 	glass_desc: "An innocent-looking mixture of cola and Whiskey. Delicious."
-
 
 ClassicMartini:
 	name: "Classic Martini"
@@ -309,7 +284,6 @@ ClassicMartini:
 	glass_name: "Classic Martini"
 	glass_desc: "Damn, the bartender even stirred it, not shook it."
 
-
 VodkaMartini:
 	name: "Vodka Martini"
 	description: "Vodka with Gin. Not quite how 007 enjoyed it, but still delicious."
@@ -320,7 +294,6 @@ VodkaMartini:
 	glass_icon_state: "martiniglass"
 	glass_name: "Vodka martini"
 	glass_desc: "A bastardisation of the classic martini. Still great."
-
 
 WhiteRussian:
 	name: "White Russian"
@@ -333,7 +306,6 @@ WhiteRussian:
 	glass_name: "White Russian"
 	glass_desc: "A very nice looking drink. But that's just, like, your opinion, man."
 
-
 Screwdriver:
 	name: "Screwdriver"
 	description: "Vodka, mixed with plain ol' orange juice. The result is surprisingly delicious."
@@ -344,7 +316,6 @@ Screwdriver:
 	glass_icon_state: "screwdriverglass"
 	glass_name: "Screwdriver"
 	glass_desc: "A simple, yet superb mixture of Vodka and orange juice. Just the thing for the tired engineer."
-
 
 Booger:
 	name: "Booger"
@@ -357,7 +328,6 @@ Booger:
 	glass_name: "Booger"
 	glass_desc: "Ewww..."
 
-
 BloodyMary:
 	name: "Bloody Mary"
 	description: "A strange yet pleasurable mixture made of vodka, tomato and lime juice. Or at least you THINK the red stuff is tomato juice."
@@ -368,7 +338,6 @@ BloodyMary:
 	glass_icon_state: "bloodymaryglass"
 	glass_name: "Bloody Mary"
 	glass_desc: "Tomato juice, mixed with Vodka and a lil' bit of lime. Tastes like liquid murder."
-
 
 BraveBull: 
 	name: "Brave Bull"
@@ -381,7 +350,6 @@ BraveBull:
 	glass_name: "Brave Bull"
 	glass_desc: "Tequila and Coffee liqueur, brought together in a mouthwatering mixture. Drink up."
 
-
 TequilaSunrise:
 	name: "Tequila Sunrise"
 	description: "Tequila and orange juice. Much like a Screwdriver, only Mexican~"
@@ -392,7 +360,6 @@ TequilaSunrise:
 	glass_icon_state: "tequilasunriseglass"
 	glass_name: "tequila Sunrise"
 	glass_desc: "Oh great, now you feel nostalgic about sunrises back on Terra..."
-
 
 ToxinsSpecial:
 	name: "Toxins Special"
@@ -406,7 +373,6 @@ ToxinsSpecial:
 	glass_desc: "Whoah, this thing is on FIRE!"
 	shot_glass_icon_state: "toxinsspecialglass"
 
-
 IrishCream:
 	name: "Irish Cream"
 	description: "Whiskey-imbued cream, what else would you expect from the Irish?"
@@ -417,7 +383,6 @@ IrishCream:
 	glass_icon_state: "irishcreamglass"
 	glass_name: "Irish Cream"
 	glass_desc: "It's cream, mixed with whiskey. What else would you expect from the Irish?"
-
 
 TheManlyDorf:
 	name: "The Manly Dorf"
@@ -430,7 +395,6 @@ TheManlyDorf:
 	glass_name: "The Manly Dorf"
 	glass_desc: "A manly concoction made from Ale and Beer. Intended for true men only."
 
-
 LongIslandIcedTea:
 	name: "Long Island Iced Tea"
 	description: "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
@@ -442,7 +406,6 @@ LongIslandIcedTea:
 	glass_name: "Long Island Iced Tea"
 	glass_desc: "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
 
-
 Moonshine:
 	name: "Moonshine"
 	description: "You've really hit rock bottom now... your liver packed its bags and left last night."
@@ -453,7 +416,6 @@ Moonshine:
 	glass_icon_state: "glass_clear"
 	glass_name: "Moonshine"
 	glass_desc: "You've really hit rock bottom now... your liver packed its bags and left last night."
-
 
 B52:
 	name: "B-52"
@@ -467,7 +429,6 @@ B52:
 	glass_desc: "Kahlua, Irish Cream, and cognac. You will get bombed."
 	shot_glass_icon_state: "b52glass"
 
-
 IrishCoffee:
 	name: "Irish Coffee"
 	description: "Coffee, and alcohol. More fun than a Mimosa to drink in the morning."
@@ -478,7 +439,6 @@ IrishCoffee:
 	glass_icon_state: "irishcoffeeglass"
 	glass_name: "Irish Coffee"
 	glass_desc: "Coffee and alcohol. More fun than a Mimosa to drink in the morning."
-
 
 Margarita:
 	name: "Margarita"
@@ -491,7 +451,6 @@ Margarita:
 	glass_name: "Margarita"
 	glass_desc: "On the rocks with salt on the rim. Arriba~!"
 
-
 BlackRussian:
 	name: "Black Russian"
 	description: "For the lactose-intolerant. Still as classy as a White Russian."
@@ -502,7 +461,6 @@ BlackRussian:
 	glass_icon_state: "blackrussianglass"
 	glass_name: "Black Russian"
 	glass_desc: "For the lactose-intolerant. Still as classy as a White Russian."
-
 Manhattan:
 	name: "Manhattan"
 	description: "The Detective's undercover drink of choice. He never could stomach gin..."
@@ -513,7 +471,6 @@ Manhattan:
 	glass_icon_state: "manhattanglass"
 	glass_name: "Manhattan"
 	glass_desc: "The Detective's undercover drink of choice. He never could stomach gin..."
-
 
 ManhattanProject:
 	name: "Manhattan Project"
@@ -526,7 +483,6 @@ ManhattanProject:
 	glass_name: "Manhattan Project"
 	glass_desc: "A scientist's drink of choice, for thinking how to blow up the station."
 
-
 WhiskeySoda:
 	name: "Whiskey Soda"
 	description: "For the more refined griffon."
@@ -537,7 +493,6 @@ WhiskeySoda:
 	glass_icon_state: "whiskeysodaglass2"
 	glass_name: "Whiskey Soda"
 	glass_desc: "Ultimate refreshment."
-
 
 AntiFreeze:
 	name: "Anti-freeze"
@@ -550,7 +505,6 @@ AntiFreeze:
 	glass_name: "Anti-freeze"
 	glass_desc: "The ultimate refreshment."
 
-
 Barefoot:
 	name: "Barefoot"
 	description: "Barefoot and pregnant."
@@ -561,7 +515,6 @@ Barefoot:
 	glass_icon_state: "b&p"
 	glass_name: "Barefoot"
 	glass_desc: "Barefoot and pregnant."
-
 
 SnowWhite:
 	name: "Snow White"
@@ -574,7 +527,6 @@ SnowWhite:
 	glass_name: "Snow White"
 	glass_desc: "A cold refreshment."
 
-
 DemonsBlood:
 	name: "Demon's Blood"
 	description: "AHHHH!!!!"
@@ -585,7 +537,6 @@ DemonsBlood:
 	glass_icon_state: "demonsblood"
 	glass_name: "Demons Blood"
 	glass_desc: "Just looking at this thing makes the hair at the back of your neck stand up."
-
 
 DevilsKiss:
 	name: "Devil's Kiss"
@@ -598,7 +549,6 @@ DevilsKiss:
 	glass_name: "Devils Kiss"
 	glass_desc: "Creepy time!"
 
-
 VodkaAndTonic:
 	name: "Vodka and Tonic"
 	description: "For when a gin and tonic isn't Russian enough."
@@ -609,7 +559,6 @@ VodkaAndTonic:
 	glass_icon_state: "vodkatonicglass"
 	glass_name: "Vodka and Tonic"
 	glass_desc: "For when a gin and tonic isn't Russian enough."
-
 
 GinFizz:
 	name: "Gin Fizz"
@@ -622,7 +571,6 @@ GinFizz:
 	glass_name: "Gin Fizz"
 	glass_desc: "Refreshingly lemony, deliciously dry."
 
-
 BahamaMama:
 	name: "Bahama Mama"
 	description: "Tropical cocktail."
@@ -633,7 +581,6 @@ BahamaMama:
 	glass_icon_state: "bahama_mama"
 	glass_name: "Bahama Mama"
 	glass_desc: "Tropical cocktail."
-
 
 Sbiten:
 	name: "Sbiten"
@@ -646,7 +593,6 @@ Sbiten:
 	glass_name: "Sbiten"
 	glass_desc: "A spicy mix of Vodka and Spice. Very hot."
 
-
 RedMead:
 	name: "Red Mead"
 	description: "The true Viking drink! Even though it has a strange red color."
@@ -657,7 +603,6 @@ RedMead:
 	glass_icon_state: "red_meadglass"
 	glass_name: "Red Mead"
 	glass_desc: "A True Viking's Beverage, though its color is strange."
-
 
 Mead:
 	name: "Mead"
@@ -671,7 +616,6 @@ Mead:
 	glass_name: "Mead"
 	glass_desc: "A Viking's Beverage, though a cheap one."
 
-
 IcedBeer:
 	name: "Iced Beer"
 	description: "A beer which is so cold the air around it freezes."
@@ -682,7 +626,6 @@ IcedBeer:
 	glass_icon_state: "iced_beerglass"
 	glass_name: "Iced Beer"
 	glass_desc: "A beer so frosty, the air around it freezes."
-
 
 Grog:
 	name: "Grog"
@@ -695,7 +638,6 @@ Grog:
 	glass_name: "Grog"
 	glass_desc: "A fine and cepa drink for Space."
 
-
 Aloe:
 	name: "Aloe"
 	description: "So very, very, very good."
@@ -706,7 +648,6 @@ Aloe:
 	glass_icon_state: "aloe"
 	glass_name: "Aloe"
 	glass_desc: "Very, very, very good."
-
 Andalusia:
 	name: "Andalusia"
 	description: "A nice, strangely named drink."
@@ -717,7 +658,6 @@ Andalusia:
 	glass_icon_state: "andalusia"
 	glass_name: "Andalusia"
 	glass_desc: "A nice, strangely named drink."
-
 IrishCarBomb:
 	name: "Irish Car Bomb"
 	description: "Mmm, tastes like chocolate cake..."
@@ -728,7 +668,6 @@ IrishCarBomb:
 	glass_icon_state: "irishcarbomb"
 	glass_name: "Irish Car Bomb"
 	glass_desc: "An Irish car bomb."
-
 WhiskeySour:
 	name: "Whiskey Sour"
 	description: "Lemon juice/whiskey/sugar mixture. Moderate alcohol content."
@@ -739,7 +678,6 @@ WhiskeySour:
 	glass_icon_state: "whiskey_sour"
 	glass_name: "Whiskey Sour"
 	glass_desc: "Lemon juice mixed with whiskey and a dash of sugar. Surprisingly satisfying."
-
 HardCider:
 	name: "Hard Cider"
 	description: "Apple juice, for adults."
@@ -752,7 +690,6 @@ HardCider:
 	glass_name: "Hard Cider"
 	glass_desc: "Tastes like autumn."
 	shot_glass_icon_state: "shotglassbrown"
-
 HeartyPunch:
 	name: "Hearty Punch"
 	description: "Brave bull/syndicate bomb/absinthe mixture resulting in an energizing beverage. Mild alcohol content."
@@ -765,7 +702,6 @@ HeartyPunch:
 	glass_name: "Hearty Punch"
 	glass_desc: "Aromatic beverage served piping hot. According to folk tales it can almost wake the dead."
 
-
 AtomicBomb:
 	name: "Atomic Bomb"
 	description: "Nuclear proliferation never tasted so good."
@@ -776,7 +712,6 @@ AtomicBomb:
 	glass_icon_state: "atomicbombglass"
 	glass_name: "Atomic Bomb"
 	glass_desc: "Nanotrasen cannot take legal responsibility for your actions after imbibing."
-
 Neurotoxin:
 	name: "Neurotoxin"
 	description: "A strong neurotoxin that puts the subject into a death-like state."
@@ -787,7 +722,6 @@ Neurotoxin:
 	glass_icon_state: "neurotoxinglass"
 	glass_name: "Neurotoxin"
 	glass_desc: "A drink that is guaranteed to knock you silly."
-
 Eggnog:
 	name: "Eggnog"
 	description: "For enjoying the most wonderful time of the year."
@@ -799,4 +733,3 @@ Eggnog:
 	glass_icon_state: "glass_yellow"
 	glass_name: "Eggnog"
 	glass_desc: "For enjoying the most wonderful time of the year."
-

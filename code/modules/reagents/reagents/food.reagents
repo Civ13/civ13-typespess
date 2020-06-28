@@ -9,14 +9,12 @@ Nutriment:
 	burn_heal: 0
 	subtype: "food"
 
-
 Vitamin:
 	name: "Vitamin"
 	description: "All the best vitamins, minerals, and carbohydrates the body needs in pure form."
 	brute_heal: 1
 	burn_heal: 1
 	subtype: "food"
-
 
 Sugar:
 	name: "Sugar"
@@ -29,7 +27,6 @@ Sugar:
 	overdose_threshold: 200
 	taste_description: "sweetness"
 	subtype: "food"
-
 Soysauce:
 	name: "Soysauce"
 	description: "A salty sauce made from the soy plant."
@@ -37,7 +34,6 @@ Soysauce:
 	color: [0.47, 0.14, 0]
 	taste_description: "umami"
 	subtype: "food"
-
 
 Ketchup:
 	name: "Ketchup"
@@ -47,7 +43,6 @@ Ketchup:
 	taste_description: "ketchup"
 	subtype: "food"
 
-
 CapsaicinOil:
 	name: "Capsaicin Oil"
 	description: "This is what makes chilis hot."
@@ -56,7 +51,6 @@ CapsaicinOil:
 	taste_mult: 1.5
 	subtype: "food"
 
-
 FrostOil:
 	name: "Frost Oil"
 	description: "A special oil that noticably chills the body. Extracted from Icepeppers and slimes."
@@ -64,14 +58,12 @@ FrostOil:
 	taste_description: "mint"
 	subtype: "food"
 
-
 CondensedCapsaicin:
 	name: "Condensed Capsaicin"
 	description: "A chemical agent used for self-defense and in police work."
 	color: [0.7, 0.06, 0.03]
 	taste_description: "scorching agony"
 	subtype: "food"
-
 
 TableSalt:
 	name: "Table Salt"
@@ -81,14 +73,12 @@ TableSalt:
 	taste_description: "salt"
 	subtype: "food"
 
-
 BlackPepper:
 	name: "Black Pepper"
 	description: "A powder ground from peppercorns. *AAAACHOOO*"
 	reagent_state: "solid"
 	taste_description: "pepper"
 	subtype: "food"
-
 
 CocoPowder:
 	name: "Coco Powder"
@@ -98,7 +88,6 @@ CocoPowder:
 	color: [0.19, 0.13, 0]
 	taste_description: "bitterness"
 	subtype: "food"
-
 
 HotChocolate:
 	name: "Hot Chocolate"
@@ -111,7 +100,6 @@ HotChocolate:
 	glass_desc: "Tasty."
 	subtype: "food"
 
-
 CornOil:
 	name: "Corn Oil"
 	description: "An oil derived from various types of corn."
@@ -120,14 +108,12 @@ CornOil:
 	taste_description: "slime"
 	subtype: "food"
 
-
 UniversalEnzyme:
 	name: "Universal Enzyme"
 	description: "A universal enzyme used in the preperation of certain chemicals and foods."
 	color: [0.21, 0.37, 0.19]
 	taste_description: "sweetness"
 	subtype: "food"
-
 
 DryRamen:
 	name: "Dry Ramen"
@@ -137,7 +123,6 @@ DryRamen:
 	taste_description: "dry and cheap noodles"
 	subtype: "food"
 
-
 HotRamen:
 	name: "Hot Ramen"
 	description: "The noodles are boiled, the flavors are artificial, just like being back in school."
@@ -145,7 +130,6 @@ HotRamen:
 	color: [0.19, 0.13, 0]
 	taste_description: "wet and cheap noodles"
 	subtype: "food"
-
 
 HellRamen:
 	name: "Hell Ramen"
@@ -155,7 +139,6 @@ HellRamen:
 	taste_description: "wet and cheap noodles on fire"
 	subtype: "food"
 
-
 Flour:
 	name: "Flour"
 	description: "This is what you rub all over yourself to pretend to be a ghost."
@@ -163,7 +146,6 @@ Flour:
 	color: [1, 1, 1]
 	taste_description: "chalky wheat"
 	subtype: "food"
-
 
 Rice:
 	name: "Rice"
@@ -174,7 +156,6 @@ Rice:
 	taste_description: "rice"
 	subtype: "food"
 
-
 VanillaPowder:
 	name: "Vanilla Powder"
 	description: "A fatty, bitter paste made from vanilla pods."
@@ -184,7 +165,6 @@ VanillaPowder:
 	taste_description: "vanilla"
 	subtype: "food"
 
-
 EggYolk:
 	name: "Egg Yolk"
 	description: "It's full of protein."
@@ -192,14 +172,12 @@ EggYolk:
 	taste_description: "egg"
 	subtype: "food"
 
-
 CornStarch:
 	name: "Corn Starch"
 	description: "A slippery solution."
 	color: [0.78, 0.65, 0.86]
 	taste_description: "slime"
 	subtype: "food"
-
 
 CornSyrup:
 	name: "Corn Syrup"
@@ -209,7 +187,6 @@ CornSyrup:
 	taste_description: "sweet slime"
 	subtype: "food"
 
-
 Honey:
 	name: "honey"
 	description: "Sweet sweet honey, decays into sugar and has natural healing properties."
@@ -218,7 +195,6 @@ Honey:
 	metabolization_rate: 0.5
 	taste_description: "sweetness"
 	subtype: "food"
-
 
 Mayonnaise:
 	name: "Mayonnaise"

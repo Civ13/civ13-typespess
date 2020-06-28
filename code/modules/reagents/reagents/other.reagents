@@ -10,7 +10,6 @@ Blood:
 	shot_glass_icon_state: "shotglassred"
 	subtype: "chemical"
 
-
 Water:
 	name: "Water"
 	description: "An ubiquitous chemical substance that is composed of hydrogen and oxygen."
@@ -40,7 +39,6 @@ SpaceLube:
 	taste_description: "cherry"
 	subtype: "chemical"
 
-
 SprayTan:
 	name: "Spray Tan"
 	description: "A substance applied to the skin to darken the skin."
@@ -58,7 +56,6 @@ Oxygen:
 	color: [0.5, 0.5, 0.5]
 	taste_mult: 0
 
-
 Copper:
 	subtype: "chemical"
 	name: "Copper"
@@ -66,7 +63,6 @@ Copper:
 	reagent_state: "solid"
 	color: [0.43, 0.23, 0.03]
 	taste_description: "metal"
-
 
 Nitrogen:
 	subtype: "chemical"
@@ -76,7 +72,6 @@ Nitrogen:
 	color: [0.5, 0.5, 0.5]
 	taste_mult: 0
 
-
 Hydrogen:
 	subtype: "chemical"
 	name: "Hydrogen"
@@ -84,7 +79,6 @@ Hydrogen:
 	reagent_state: "gas"
 	color: [0.5, 0.5, 0.5]
 	taste_mult: 0
-
 
 Potassium:
 	subtype: "chemical"
@@ -94,14 +88,12 @@ Potassium:
 	color: [0.63, 0.63, 0.63]
 	taste_description: "sweetness"
 
-
 Mercury:
 	subtype: "chemical"
 	name: "Mercury"
 	description: "A curious metal that's a liquid at room temperature. Neurodegenerative and very bad for the mind."
 	color: [0.28, 0.28, 0.28]
 	taste_mult: 0
-
 
 Sulfur:
 	subtype: "chemical"
@@ -111,7 +103,6 @@ Sulfur:
 	color: [0.75, 0.55, 0]
 	taste_description: "rotten eggs"
 
-
 Carbon:
 	subtype: "chemical"
 	name: "Carbon"
@@ -119,7 +110,6 @@ Carbon:
 	reagent_state: "solid"
 	color: [0.11, 0.07, 0]
 	taste_description: "sour chalk"
-
 
 Chlorine:
 	subtype: "chemical"
@@ -129,7 +119,6 @@ Chlorine:
 	color: [0.5, 0.5, 0.5]
 	taste_description: "chlorine"
 
-
 Fluorine:
 	subtype: "chemical"
 	name: "Fluorine"
@@ -137,7 +126,6 @@ Fluorine:
 	reagent_state: "gas"
 	color: [0.5, 0.5, 0.5]
 	taste_description: "acid"
-
 
 Sodium:
 	subtype: "chemical"
@@ -147,7 +135,6 @@ Sodium:
 	color: [0.5, 0.5, 0.5]
 	taste_description: "salty metal"
 
-
 Phosphorus:
 	subtype: "chemical"
 	name: "Phosphorus"
@@ -155,7 +142,6 @@ Phosphorus:
 	reagent_state: "solid"
 	color: [0.51, 0.16, 0.16]
 	taste_description: "vinegar"
-
 
 Lithium:
 	subtype: "chemical"
@@ -165,14 +151,12 @@ Lithium:
 	color: [0.5, 0.5, 0.5]
 	taste_description: "metal"
 
-
 Glycerol:
 	subtype: "chemical"
 	name: "Glycerol"
 	description: "Glycerol is a simple polyol compound. Glycerol is sweet-tasting and of low toxicity."
 	color: [0.5, 0.5, 0.5]
 	taste_description: "sweetness"
-
 
 Radium:
 	subtype: "chemical"
@@ -182,13 +166,11 @@ Radium:
 	color: [0.78, 0.78, 0.78]
 	taste_description: "the colour blue and regret"
 
-
 SpaceCleaner:
 	subtype: "chemical"
 	description: "A compound used to clean things. Now with 50% more sodium hypochlorite!"
 	color: [0.65, 0.94, 0.93]
 	taste_description: "sourness"
-
 
 Sterilizine:
 	subtype: "chemical"
@@ -196,7 +178,6 @@ Sterilizine:
 	description: "Sterilizes wounds in preparation for surgery."
 	color: [0.78, 0.65, 0.86]
 	taste_description: "bitterness"
-
 
 Iron:
 	subtype: "chemical"
@@ -206,7 +187,6 @@ Iron:
 	taste_description: "iron"
 	color: [0.78, 0.65, 0.86]
 
-
 Gold:
 	subtype: "chemical"
 	name: "Gold"
@@ -215,7 +195,6 @@ Gold:
 	color: [0.97, 0.77, 0.19]
 	taste_description: "expensive metal"
 
-
 Silver:
 	subtype: "chemical"
 	name: "Silver"
@@ -223,7 +202,6 @@ Silver:
 	reagent_state: "solid"
 	color: [0.82, 0.82, 0.82]
 	taste_description: "expensive yet reasonable metal"
-
 
 Uranium:
 	subtype: "chemical"
@@ -241,7 +219,6 @@ Aluminium:
 	color: [0.66, 0.66, 0.66]
 	taste_description: "metal"
 
-
 Silicon:
 	subtype: "chemical"
 	name: "Silicon"
@@ -249,7 +226,6 @@ Silicon:
 	reagent_state: "solid"
 	color: [0.66, 0.66, 0.66]
 	taste_mult: 0
-
 
 EZClean:
 	subtype: "chemical"
@@ -265,7 +241,6 @@ Fluorosurfactant:
 	color: [0.62, 0.42, 0.22]
 	taste_description: "metal"
 
-
 FoamingAgent:
 	subtype: "chemical"
 	name: "Foaming agent"
@@ -273,7 +248,6 @@ FoamingAgent:
 	reagent_state: "solid"
 	color: [0.4, 0.29, 0.39]
 	taste_description: "metal"
-
 
 Ammonia:
 	subtype: "chemical"
@@ -283,14 +257,12 @@ Ammonia:
 	color: [0.25, 0.25, 0.19]
 	taste_description: "mordant"
 
-
 Diethylamine:
 	subtype: "chemical"
 	name: "Diethylamine"
 	description: "A secondary amine, mildly corrosive."
 	color: [0.38, 0.25, 0.19]
 	taste_description: "iron"
-
 
 CarbonDioxide:
 	subtype: "chemical"
@@ -299,7 +271,6 @@ CarbonDioxide:
 	description: "A gas commonly produced by burning carbon fuels. You're constantly producing this in your lungs."
 	color: [0.69, 0.69, 0.69]
 	taste_description: "something unknowable"
-
 
 NitrousOxide:
 	subtype: "chemical"
@@ -310,10 +281,7 @@ NitrousOxide:
 	color: [0.5, 0.5, 0.5]
 	taste_description: "sweetness"
 
-
-Nitryl extends Reagent {} // /datum/reagent/nitryl
-module.exports.reagents.Nitryl = Nitryl;
-Object.assign(Nitryl.prototype, {
+Nitryl:
 	name: "Nitryl"
 	description: "A highly reactive gas that makes you feel faster"
 	reagent_state: "gas"
@@ -345,7 +313,6 @@ Bromine:
 	color: [0.78, 0.65, 0.86]
 	taste_description: "chemicals"
 
-
 Phenol:
 	subtype: "chemical"
 	name: "Phenol"
@@ -354,7 +321,6 @@ Phenol:
 	color: [0.78, 0.65, 0.86]
 	taste_description: "acid"
 
-
 Ash:
 	name: "Ash"
 	description: "Supposedly phoenixes rise from these, but you've never seen it."
@@ -362,7 +328,6 @@ Ash:
 	color: [0.78, 0.65, 0.86]
 	taste_description: "ash"
 	subtype = "chemical"
-
 
 Acetone:
 	name: "Acetone"
@@ -380,7 +345,6 @@ Saltpetre:
 	taste_description: "cool salt"
 	subtype = "chemical"
 
-
 Lye:
 	name: "Lye"
 	description: "Also known as sodium hydroxide. As a profession making this is somewhat underwhelming."
@@ -388,7 +352,6 @@ Lye:
 	color: [1, 1, 0.84]
 	taste_description: "acid"
 	subtype = "chemical"
-
 
 DryingAgent:
 	name: "Drying agent"

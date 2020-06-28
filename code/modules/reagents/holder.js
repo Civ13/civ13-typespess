@@ -338,7 +338,7 @@ ReagentHolder.template = {
 function add_items(mod) {
 	if (mod.reagents) {
 		for (let key of mod.reagents) {
-			console.log(key);
+			//console.log(key);
 			if (reagent_types[key])
 				throw new Error(`Reagent meta '${key}' defined more than once!`);
 			reagent_types[key] = mod.reagents[key];

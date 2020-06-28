@@ -7,7 +7,6 @@ OrangeJuice:
 	glass_name: "glass of orange juice"
 	glass_desc: "Vitamins! Yay!"
 	subtype: "food"
-
 TomatoJuice:
 	name: "Tomato Juice"
 	description: "Tomatoes made into juice. What a waste of big, juicy tomatoes, huh?"
@@ -17,7 +16,6 @@ TomatoJuice:
 	glass_name: "glass of tomato juice"
 	glass_desc: "Are you sure this is tomato juice?"
 	subtype: "food"
-
 LimeJuice:
 	name: "Lime Juice"
 	description: "The sweet-sour juice of limes."
@@ -27,7 +25,6 @@ LimeJuice:
 	glass_name: "glass of lime juice"
 	glass_desc: "A glass of sweet-sour lime juice."
 	subtype: "food"
-
 CarrotJuice:
 	subtype: "food"
 	name: "Carrot Juice"
@@ -37,7 +34,6 @@ CarrotJuice:
 	glass_icon_state: "carrotjuice"
 	glass_name: "glass of carrot juice"
 	glass_desc: "It's just like a carrot but without crunching."
-
 
 BerryJuice:
 	subtype: "food"
@@ -49,14 +45,12 @@ BerryJuice:
 	glass_name: "glass of berry juice"
 	glass_desc: "Berry juice. Or maybe it's jam. Who cares?"
 
-
 AppleJuice:
 	subtype: "food"
 	name: "Apple Juice"
 	description: "The sweet juice of an apple, fit for all ages."
 	color: [0.93, 1, 0.34]
 	taste_description: "apples"
-
 
 PoisonBerryJuice:
 	subtype: "food"
@@ -68,7 +62,6 @@ PoisonBerryJuice:
 	glass_name: "glass of berry juice"
 	glass_desc: "Berry juice. Or maybe it's poison. Who cares?"
 
-
 WatermelonJuice:
 	subtype: "food"
 	name: "Watermelon Juice"
@@ -78,7 +71,6 @@ WatermelonJuice:
 	glass_icon_state: "glass_red"
 	glass_name: "glass of watermelon juice"
 	glass_desc: "A glass of watermelon juice."
-
 
 LemonJuice:
 	subtype: "food"
@@ -90,7 +82,6 @@ LemonJuice:
 	glass_name: "glass of lemon juice"
 	glass_desc: "Sour..."
 
-
 BananaJuice:
 	subtype: "food"
 	name: "Banana Juice"
@@ -101,7 +92,6 @@ BananaJuice:
 	glass_name: "glass of banana juice"
 	glass_desc: "The raw essence of a banana. HONK."
 
-
 Nothing:
 	subtype: "food"
 	name: "Nothing"
@@ -111,7 +101,6 @@ Nothing:
 	glass_name: "Nothing"
 	glass_desc: "Absolutely nothing."
 	shot_glass_icon_state: "shotglass"
-
 
 PotatoJuice:
 	subtype: "food"
@@ -124,14 +113,12 @@ PotatoJuice:
 	glass_name: "glass of potato juice"
 	glass_desc: "Bleh..."
 
-
 GrapeJuice:
 	subtype: "food"
 	name: "Grape Juice"
 	description: "The juice of a bunch of grapes. Guaranteed non-alcoholic."
 	color: [0.16, 0, 0.16]
 	taste_description: "grape soda"
-
 
 Milk:
 	subtype: "food"
@@ -143,7 +130,6 @@ Milk:
 	glass_name: "glass of milk"
 	glass_desc: "White and nutritious goodness!"
 
-
 SoyMilk:
 	subtype: "food"
 	name: "Soy Milk"
@@ -154,7 +140,6 @@ SoyMilk:
 	glass_name: "glass of soy milk"
 	glass_desc: "White and nutritious soy goodness!"
 
-
 Cream:
 	subtype: "food"
 	name: "Cream"
@@ -164,7 +149,6 @@ Cream:
 	glass_icon_state: "glass_white"
 	glass_name: "glass of cream"
 	glass_desc: "Ewwww..."
-
 
 Coffee:
 	subtype: "food"
@@ -178,7 +162,6 @@ Coffee:
 	glass_name: "glass of coffee"
 	glass_desc: "Don't drop it, or you'll send scalding liquid and glass shards everywhere."
 
-
 Tea:
 	subtype: "food"
 	name: "Tea"
@@ -189,7 +172,6 @@ Tea:
 	glass_icon_state: "teaglass"
 	glass_name: "glass of tea"
 	glass_desc: "Drinking it from here would not seem right."
-
 
 IcedCoffee:
 	subtype: "food"
@@ -202,7 +184,6 @@ IcedCoffee:
 	glass_name: "Iced Coffee"
 	glass_desc: "A drink to perk you up and refresh you!"
 
-
 IcedTea:
 	subtype: "food"
 	name: "Iced Tea"
@@ -214,7 +195,6 @@ IcedTea:
 	glass_name: "Iced Tea"
 	glass_desc: "All natural, antioxidant-rich flavour sensation."
 
-
 Cola:
 	subtype: "food"
 	name: "Cola"
@@ -224,7 +204,6 @@ Cola:
 	glass_icon_state: "glass_brown"
 	glass_name: "glass of space Cola"
 	glass_desc: "A glass of refreshing Space Cola."
-
 
 NukaCola:
 	subtype: "food"
@@ -236,7 +215,6 @@ NukaCola:
 	glass_name: "Nuka Cola"
 	glass_desc: "Don't cry, Don't raise your eye, It's only nuclear wasteland."
 
-
 SMWind:
 	subtype: "food"
 	name: "SM Wind"
@@ -246,7 +224,6 @@ SMWind:
 	glass_icon_state: "Space_mountain_wind_glass"
 	glass_name: "glass of Space Mountain Wind"
 	glass_desc: "Space Mountain Wind. As you know, there are no mountains in space, only wind."
-
 
 SpaceUp:
 	subtype: "food"
@@ -258,7 +235,6 @@ SpaceUp:
 	glass_name: "glass of Space-up"
 	glass_desc: "Space-up. It helps you keep your cool."
 
-
 LemonLime:
 	subtype: "food"
 	name: "Lemon Lime"
@@ -268,7 +244,6 @@ LemonLime:
 	glass_icon_state: "glass_yellow"
 	glass_name: "glass of Lemon-Lime"
 	glass_desc: "You're pretty certain a real fruit has never actually touched this."
-
 SodaWater:
 	subtype: "food"
 	name: "Soda Water"
@@ -279,7 +254,6 @@ SodaWater:
 	glass_name: "glass of Soda Water"
 	glass_desc: "Soda water. Why not make a scotch and soda?"
 
-
 TonicWater:
 	subtype: "food"
 	name: "Tonic Water"
@@ -289,7 +263,6 @@ TonicWater:
 	glass_icon_state: "glass_clear"
 	glass_name: "glass of Tonic Water"
 	glass_desc: "Quinine tastes funny, but at least it'll keep that Space Malaria away."
-
 
 Ice:
 	subtype: "food"
@@ -302,7 +275,6 @@ Ice:
 	glass_name: "glass of ice"
 	glass_desc: "Generally, you're supposed to put something else in there too..."
 
-
 SoyLatte:
 	subtype: "food"
 	name: "Soy Latte"
@@ -313,7 +285,6 @@ SoyLatte:
 	glass_name: "Soy Latte"
 	glass_desc: "A nice and refreshing beverage while you're reading."
 
-
 CafeLatte:
 	subtype: "food"
 	name: "Cafe Latte"
@@ -323,7 +294,6 @@ CafeLatte:
 	glass_icon_state: "cafe_latte"
 	glass_name: "Cafe Latte"
 	glass_desc: "A nice, strong and refreshing beverage while you're reading."
-
 ChocolatePudding:
 	subtype: "food"
 	name: "Chocolate Pudding"
@@ -335,7 +305,6 @@ ChocolatePudding:
 	glass_name: "Chocolate Pudding"
 	glass_desc: "Tasty."
 
-
 VanillaPudding:
 	subtype: "food"
 	name: "Vanilla Pudding"
@@ -346,7 +315,6 @@ VanillaPudding:
 	glass_icon_state: "vanillapudding"
 	glass_name: "Vanilla Pudding"
 	glass_desc: "Tasty."
-
 PumpkinLatte:
 	subtype: "food"
 	name: "Pumpkin Latte"
@@ -357,14 +325,12 @@ PumpkinLatte:
 	glass_icon_state: "pumpkin_latte"
 	glass_name: "Pumpkin Latte"
 	glass_desc: "A mix of coffee and pumpkin juice."
-
 PumpkinJuice:
 	subtype: "food"
 	name: "Pumpkin Juice"
 	description: "Juiced from real pumpkin."
 	color: [1, 0.65, 0]
 	taste_description: "pumpkin"
-
 TripleCitrus:
 	subtype: "food"
 	name: "Triple Citrus"
@@ -375,7 +341,6 @@ TripleCitrus:
 	glass_name: "glass of triple citrus"
 	glass_desc: "A mixture of citrus juices. Tangy, yet smooth."
 
-
 GrapeSoda:
 	subtype: "food"
 	name: "Grape soda"
@@ -385,11 +350,9 @@ GrapeSoda:
 	glass_name: "glass of grape juice"
 	glass_desc: "It's grape (soda)!"
 
-
 ChocolateMilk:
 	subtype: "food"
 	name: "Chocolate Milk"
 	description: "Milk for cool kids."
 	color: [0.49, 0.31, 0.16]
 	taste_description: "chocolate milk"
-

@@ -23,7 +23,6 @@ BlackPowder:
 	taste_description: "salt"
 	subtype: "explosive"
 
-
 FlashPowder:
 	name: "Flash Powder"
 	description: "Makes a very bright flash."

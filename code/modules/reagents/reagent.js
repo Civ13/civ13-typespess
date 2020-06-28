@@ -116,7 +116,7 @@ Object.assign(Reagent.prototype, {
 	metabolization_rate: 0.2,
 	overdose_threshold: 0,
 	addiction_threshold: 0,
-	nutriment_factor: 0.5,
+	nutriment_factor: 0,
 	boozepwr: 0,
 	toxpwr: 0,
 	subtype: "chemical",
