@@ -74,9 +74,6 @@ class Wall extends Component {
 	deconstruct(prev) {
 		if (!this.a.loc) return;
 		if (!this.a.c.Destructible.no_deconstruct) {
-			let girder = new Atom(this.a.server, this.girder_type);
-			girder.loc = this.a.loc;
-
 			let sheets = new Atom(this.a.server, this.sheet_type);
 			sheets.c.Stack.amount = this.sheet_amount;
 			sheets.loc = this.a.fine_loc;
@@ -93,10 +90,6 @@ class Wall extends Component {
 				let sheets = new Atom(this.a.server, this.sheet_type);
 				sheets.c.Stack.amount = this.sheet_amount;
 				sheets.loc = this.a.fine_loc;
-				if (this.girder_type) {
-					sheets = new Atom(this.a.server, "metal_sheet");
-					sheets.loc = this.a.fine_loc;
-				}
 				this.a.destroy();
 			}
 		} else if (severity == 3) {
@@ -121,7 +114,6 @@ Wall.template = {
 				slicing_duration: 10000,
 				sheet_type: "metal_sheet",
 				sheet_amount: 2,
-				girder_type: "girder",
 				hardness: 0.4,
 			},
 			Tangible: {

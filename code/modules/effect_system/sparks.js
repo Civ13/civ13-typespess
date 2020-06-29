@@ -38,7 +38,7 @@ SparkEffect.template = {
 		},
 		icon: "icons/effects/effects.png",
 		icon_state: "sparks",
-		let_pass_flags: pass_flags.PASSTABLE | pass_flags.PASSGRILLE,
+		let_pass_flags: pass_flags.PASSTABLE,
 		name: "sparks",
 		layer: layers.OBJ_LAYER,
 	},

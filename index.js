@@ -62,11 +62,7 @@ server.importModule(require("./code/game/components/objects/structures/beds_chai
 server.importModule(require("./code/game/components/objects/structures/crates_lockers/base.js"));
 server.importModule(require("./code/game/components/objects/structures/crates_lockers/closets.js"));
 server.importModule(require("./code/game/components/objects/structures/crates_lockers/closets/utility.js"));
-server.importModule(require("./code/game/components/objects/structures/wall/reinf_walls.js"));
 server.importModule(require("./code/game/components/objects/structures/wall/walls.js"));
-server.importModule(require("./code/game/components/objects/structures/girders.js"));
-server.importModule(require("./code/game/components/objects/structures/grille.js"));
-server.importModule(require("./code/game/components/objects/structures/lattice.js"));
 server.importModule(require("./code/game/components/objects/structures/rack.js"));
 server.importModule(require("./code/game/components/objects/structures/table_frames.js"));
 server.importModule(require("./code/game/components/objects/structures/table.js"));

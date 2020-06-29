@@ -55,7 +55,7 @@ class SprayBottle extends Component {
 				},
 				name: "chemicals",
 				icon: "icons/obj/chempuff.png",
-				pass_flags: pass_flags.PASSTABLE | pass_flags.PASSGRILLE,
+				pass_flags: pass_flags.PASSTABLE,
 				layer: 5,
 			},
 		});
