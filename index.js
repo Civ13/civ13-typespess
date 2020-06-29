@@ -47,7 +47,6 @@ server.importModule(require("./code/game/components/objects/items/devices/multit
 server.importModule(require("./code/game/components/objects/items/devices/scanners.js"));
 server.importModule(require("./code/game/components/objects/items/stacks/sheets/glass.js"));
 server.importModule(require("./code/game/components/objects/items/stacks/sheets/sheet_types.js"));
-server.importModule(require("./code/game/components/objects/items/stacks/tiles/tile_mineral.js"));
 server.importModule(require("./code/game/components/objects/items/stacks/tiles/tile_types.js"));
 server.importModule(require("./code/game/components/objects/items/stacks/rods.js"));
 server.importModule(require("./code/game/components/objects/items/stacks/stack.js"));
@@ -351,4 +350,10 @@ if (global.is_bs_editor_env) {
 
 	server.startServer({ websocket: { server: http_server } });
 	console.log("Server started.");
+
+	//this signals the continuous integration program to exit.
+	const args = process.argv;
+	if (args[2] == "test") {
+		console.log("test passed.");
+		process.exit(0);}
 }

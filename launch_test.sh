@@ -6,4 +6,4 @@ cd -
 cd client_src
 gulp
 cd -
-npx ts-node index_test.js
+npx ts-node index.js test
