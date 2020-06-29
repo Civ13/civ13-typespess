@@ -17,6 +17,7 @@ let nomad_outfit = new JobType.Outfit({
 	jobtype: module.exports.jobs.nomad,
 	slots: {
 		iclothing: "loincloth",
+		rhand: "hatchet"
 	},
 });
 module.exports.jobs.nomad.outfit = nomad_outfit;

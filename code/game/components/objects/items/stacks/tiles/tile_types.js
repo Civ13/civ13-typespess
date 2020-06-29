@@ -1,10 +1,7 @@
 
 const {
 	Component,
-	Sound,
-	Atom,
 	chain_func,
-	has_component,
 } = require("./../../../../../../../code/game/server.js");
 
 class StackTile extends Component {
@@ -24,7 +21,7 @@ class StackTile extends Component {
 		);
 	}
 
-	pre_attack(prev, target) {
+	pre_attack(prev) {
 		return prev();
 	}
 }
