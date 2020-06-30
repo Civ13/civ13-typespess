@@ -9,6 +9,41 @@ const {
 const StackCraftPanel = require("./stack_craft_panel.js");
 
 const _amount = Symbol("_amount");
+const { join } = require ("path");
+const {readdirSync, statSync } = require ("fs");
+const fs = require("fs");
+const CSON = require("cson");
+
+function getFileExtension(filename) {
+	var a = filename.split(".");
+	if( a.length === 1 || ( a[0] === "" && a.length === 2 ) ) {
+		return "";
+	}
+	return a.pop().toLowerCase();
+}
+
+const unfold = (f, initState) =>
+	f ( (value, nextState) => [ value, ...unfold (f, nextState) ]
+		, () => []
+		, initState
+	);
+
+const None = Symbol ();
+
+const relativePaths = (path = ".") =>
+	readdirSync (path) .map (p => join (path, p));
+
+const traverseDir = (dir) =>
+	unfold( (next, done, [ path = None, ...rest ]) =>
+		path === None
+			? done ()
+			: next ( path
+				, statSync (path) .isDirectory ()
+					? relativePaths (path) .concat (rest)
+					: rest
+			),
+	relativePaths (dir)
+	);
 
 class Stack extends Component {
 	constructor(atom, template) {
@@ -174,8 +209,19 @@ class Stack extends Component {
 	can_user_read_panel(user) {
 		return this.a.c.Item.slot && this.a.c.Item.slot.mob == user;
 	}
+	import_recipes(material) {
+		var recList = [];
+		for (const f of traverseDir("./code/modules/crafting/")) {
+			if (getFileExtension(f) == "crafting" && f.search(material) != -1) {
+				const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
+				for(var i in nrec) {recList.push(nrec[i]);}}
+		}
+		this.recipes = recList;
 
+	}
 	update_recipes() {
+		this.import_recipes(this.material);
+
 		for (let i = 0; i < this.recipes.length; i++) {
 			let recipe = this.recipes[i];
 			var build_limit = recipe.cost <= this.amount ? 1 : 0;
@@ -246,6 +292,7 @@ Stack.template = {
 				novariants: true,
 				singular_name: null,
 				recipes: [],
+				material: "wood",
 			},
 		},
 	},

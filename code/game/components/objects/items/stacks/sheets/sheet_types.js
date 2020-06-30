@@ -1,21 +1,3 @@
-
-
-/* Diffrent misc types of sheets
- * Contains:
- * Metal
- * Plasteel
- * Wood
- * Cloth
- * Cardboard
- * Plastic
- * Paper Frames
- * Bone
- * TODO: Runed Metal (cult)
- * TODO: Brass (clockwork cult)
- */
-
-//TODO: Most of the recipe items
-
 const { Component } = require("./../../../../../../../code/game/server.js");
 
 class MetalSheet extends Component {
@@ -23,7 +5,6 @@ class MetalSheet extends Component {
 		super(atom, template);
 	}
 }
-
 MetalSheet.depends = ["Stack"];
 MetalSheet.loadBefore = ["Stack"];
 
@@ -35,67 +16,8 @@ MetalSheet.template = {
 				singular_name: "metal sheet",
 				merge_type: "MetalSheet",
 				novariants: false,
-				recipes: [
-					{
-						name: "closet",
-						template_name: "closet",
-						cost: 2,
-						time: 1500,
-						cant_cross: ["Closet"],
-						on_floor: true,
-					},
-					{
-						name: "floor tiles",
-						template_name: "plasteel_tile",
-						cost: 1,
-						res_amount: 4,
-						time: 2000,
-					},
-					{
-						name: "metal rods",
-						template_name: "stack_rods",
-						cost: 1,
-						res_amount: 2,
-						time: 6000,
-					},
-					{
-						name: "wall girders",
-						template_name: "girder",
-						cost: 2,
-						time: 4000,
-						cant_cross: ["Girder"],
-						on_floor: true,
-					},
-					{
-						name: "stool",
-						template_name: "stool",
-						cost: 1,
-						cant_cross: ["Chair"],
-						on_floor: true,
-					},
-					{
-						name: "bar stool",
-						template_name: "bar_stool",
-						cost: 1,
-						cant_cross: ["Chair"],
-						on_floor: true,
-					},
-					{
-						name: "chair",
-						template_name: "chair",
-						cost: 1,
-						cant_cross: ["Chair"],
-						on_floor: true,
-					},
-					{
-						name: "swivel chair",
-						template_name: "office_chair_dark",
-						cost: 5,
-						cant_cross: ["Chair"],
-						on_floor: true,
-					},
-					{ name: "rack parts", template_name: "rack_parts", cost: 2 },
-				],
+				recipes: [],
+				material: "metal",
 			},
 			Item: {
 				inhand_lhand_icon: "icons/mob/inhands/misc/sheets_lefthand.png",
@@ -139,41 +61,8 @@ WoodSheet.template = {
 				singular_name: "wooden plank",
 				merge_type: "WoodSheet",
 				novariants: true,
-				recipes: [
-					{
-						name: "wood floor tiles",
-						template_name: "wood_tile",
-						cost: 1,
-						res_amount: 4,
-						time: 2000,
-					},
-					{
-						name: "baseball bat",
-						template_name: "baseball_bat",
-						cost: 5,
-						time: 1500,
-					},
-					{
-						name: "wood table frame",
-						template_name: "wood_table_frame",
-						cost: 2,
-						time: 10000,
-					},
-					{
-						name: "wooden chair",
-						template_name: "wooden_chair",
-						cost: 3,
-						cant_cross: ["Chair"],
-						on_floor: true,
-					},
-					{
-						name: "winged wooden chair",
-						template_name: "wooden_chair_wings",
-						cost: 3,
-						cant_cross: ["Chair"],
-						on_floor: true,
-					},
-				],
+				recipes: [],
+				material: "wood",
 			},
 			Item: {
 				//Wood apparently has no inhands.
@@ -215,9 +104,8 @@ StrawSheet.template = {
 				singular_name: "straw bale",
 				merge_type: "StrawSheet",
 				novariants: true,
-				recipes: [
-
-				],
+				recipes: [],
+				material: "straw",
 			},
 			Item: {
 				//Wood apparently has no inhands.
@@ -255,22 +143,8 @@ ClothSheet.template = {
 				singular_name: "cloth",
 				merge_type: "ClothSheet",
 				novariants: false,
-				recipes: [
-					//Cloth recipes had no times but that seemed silly so I added some
-					{
-						name: "grey jumpsuit",
-						template_name: "jumpsuit_grey",
-						cost: 3,
-						time: 10000,
-					},
-					{
-						name: "black shoes",
-						template_name: "shoes_black",
-						cost: 2,
-						time: 6000,
-					},
-					{ name: "backpack", template_name: "backpack", cost: 4, time: 8000 },
-				],
+				recipes: [],
+				material: "cloth",
 			},
 			Item: {
 				//No inhands for cloth either
@@ -312,10 +186,8 @@ CardboardSheet.template = {
 				singular_name: "cardboard",
 				merge_type: "CardboardSheet",
 				novariants: true,
-				recipes: [
-					//Cardboard recipes had no times but that seemed silly so I added some
-					{ name: "box", template_name: "box", cost: 3, time: 2000 },
-				],
+				recipes: [],
+				material: "cardboard",
 			},
 			Item: {
 				inhand_lhand_icon: "icons/mob/inhands/misc/sheets_lefthand.png",
@@ -360,6 +232,7 @@ BoneSheet.template = {
 				merge_type: "BoneSheet",
 				novariants: false,
 				icon: "icons/obj/mining.png",
+				material: "bone",
 			},
 			Item: {
 				//No inhands for bone either
@@ -401,6 +274,7 @@ PlasticSheet.template = {
 				singular_name: "plastic",
 				merge_type: "PlasticSheet",
 				novariants: false,
+				material: "plastic",
 			},
 			Item: {
 				//No inhands for plastic either?
@@ -420,8 +294,7 @@ PlasticSheet.template = {
 			},
 		},
 		name: "plastic",
-		desc:
-	"Compress dinosaur over millions of years, then refine, split and mold, and voila! You have plastic.",
+		desc: "Compress dinosaur over millions of years, then refine, split and mold, and voila! You have plastic.",
 		icon_state: "sheet-plastic",
 	},
 };
@@ -443,6 +316,7 @@ PaperframeSheet.template = {
 				singular_name: "paper frame",
 				merge_type: "PaperframeSheet",
 				novariants: false,
+				material: "paper",
 			},
 			Item: {
 				//No inhands for paperframes either?
@@ -464,114 +338,6 @@ PaperframeSheet.template = {
 		name: "paper frames",
 		desc: "A thin wooden frame with paper attached.",
 		icon_state: "sheet-paper",
-	},
-};
-
-module.exports.templates = {
-	metal_sheet: {
-		components: ["MetalSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/metal"],
-	},
-
-	wood_sheet: {
-		components: ["WoodSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/mineral/wood"],
-	},
-	straw_sheet: {
-		components: ["StrawSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/mineral/straw"],
-	},
-	cloth_sheet: {
-		components: ["ClothSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/cloth"],
-	},
-	cardboard_sheet: {
-		components: ["CardboardSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/cardboard"],
-	},
-	bone_sheet: {
-		components: ["BoneSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/bone"],
-	},
-	plastic_sheet: {
-		components: ["PlasticSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/plastic"],
-	},
-	paperframe_sheet: {
-		components: ["PaperframeSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/paperframes"],
 	},
 };
 

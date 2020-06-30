@@ -1,0 +1,19 @@
+
+{
+    name: "grey jumpsuit"
+    template_name: "jumpsuit_grey"
+    cost: 3
+    time: 10000
+}
+{
+    name: "black shoes"
+    template_name: "shoes_black"
+    cost: 2
+    time: 6000
+}
+{
+    name: "backpack"
+    template_name: "backpack"
+    cost: 4
+    time: 8000
+}

@@ -1,0 +1,88 @@
+metal_sheet: 
+	components: ["MetalSheet"]
+	variants: [
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+	]
+	tree_paths: ["items/stack/sheet/metal"]
+
+
+wood_sheet: 
+	components: ["WoodSheet"]
+	variants: [
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+	]
+	tree_paths: ["items/stack/sheet/mineral/wood"]
+
+straw_sheet: 
+	components: ["StrawSheet"]
+	variants: [
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+	]
+	tree_paths: ["items/stack/sheet/mineral/straw"]
+
+cloth_sheet: 
+	components: ["ClothSheet"]
+	variants: [
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+	]
+	tree_paths: ["items/stack/sheet/cloth"]
+
+cardboard_sheet: 
+	components: ["CardboardSheet"]
+	variants: [
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+	]
+	tree_paths: ["items/stack/sheet/cardboard"]
+
+bone_sheet: 
+	components: ["BoneSheet"]
+	variants: [
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+	]
+	tree_paths: ["items/stack/sheet/bone"]
+
+plastic_sheet: 
+	components: ["PlasticSheet"]
+	variants: [
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+	]
+	tree_paths: ["items/stack/sheet/plastic"]
+
+paperframe_sheet: 
+	components: ["PaperframeSheet"]
+	variants: [
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+	]
+	tree_paths: ["items/stack/sheet/paperframes"]

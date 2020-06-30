@@ -1,0 +1,5 @@
+cardboard_box:
+    name: "box"
+    template_name: "box"
+    cost: 3
+    time: 2000
