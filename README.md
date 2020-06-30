@@ -20,9 +20,9 @@ Whenever you update to the latest code, run `setup.bat` (or `setup.sh`) again af
 
 ## Running
 
-Run `launch.bat` in the civ13-typespess folder. To join the server connect to `localhost:1713` using a web browser.
+Run `launch_server.bat` or  `launch_server.sh` in the civ13-typespess folder. To join the server connect to `localhost:1713` using a web browser.
 
-You can also use `update_and_launch.bat` to automatically update the dependencies and launch the game on the browser.
+You can also use `launch_client.bat` to automatically update the dependencies and launch the game on the browser (Windows only).
 
 ## Licenses
 
