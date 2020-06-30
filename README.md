@@ -1,14 +1,17 @@
-# Civ13 TypeSpess - A SS13 remake adaptation
+# Civ13 TypeSpess
+
+![](https://i.imgur.com/napac0L.png)
 
 ![CircleCI](https://img.shields.io/circleci/build/github/Civ13/civ13-typespess)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f6b220214aca435c9942bc5cb205d239)](https://app.codacy.com/gh/Civ13/civ13-typespess?utm_source=github.com&utm_medium=referral&utm_content=Civ13/civ13-typespess&utm_campaign=Badge_Grade_Dashboard)
+
 ![GitHub top language](https://img.shields.io/github/languages/top/civ13/civ13-typespess)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/civ13/civ13-typespess)
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13-typespess)
 
-Welcome! This is an attempt at creating an SS13 remake using typescript and javascript.
+Welcome! This is an attempt at creating a Civ13 remake using typescript and javascript.
 
-Check the original Civ13 here: https://github.com/civ13/civ13.
+Check the original Civ13 that uses BYOND and SS13 code here: https://github.com/civ13/civ13.
 
 ## Installing
 
