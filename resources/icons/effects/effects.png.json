@@ -160,8 +160,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shieldsparkles": {
     "dir_count": 4,
@@ -304,8 +304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smoke": {
     "dir_count": 4,
@@ -408,8 +408,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mustard": {
     "dir_count": 4,
@@ -512,8 +512,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "extinguish": {
     "dir_count": 8,
@@ -712,8 +712,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ion_fade": {
     "dir_count": 4,
@@ -796,8 +796,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ion_trails": {
     "dir_count": 4,
@@ -840,8 +840,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "empdisable": {
     "dir_count": 4,
@@ -944,8 +944,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "emppulse": {
     "dir_count": 1,
@@ -996,8 +996,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "greenshatter": {
     "dir_count": 1,
@@ -1033,8 +1033,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "greenshatter2": {
     "dir_count": 1,
@@ -1070,8 +1070,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blueshatter": {
     "dir_count": 1,
@@ -1102,8 +1102,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blueshatter2": {
     "dir_count": 1,
@@ -1134,8 +1134,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "light": {
     "dir_count": 1,
@@ -1151,8 +1151,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "explosionOLD": {
     "dir_count": 1,
@@ -1233,8 +1233,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nothing": {
     "dir_count": 1,
@@ -1250,8 +1250,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "explosion": {
     "dir_count": 1,
@@ -1307,8 +1307,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "thermite": {
     "dir_count": 1,
@@ -1324,8 +1324,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mfoam": {
     "dir_count": 1,
@@ -1341,8 +1341,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mfoam-disolve": {
     "dir_count": 1,
@@ -1383,8 +1383,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "metalfoam": {
     "dir_count": 1,
@@ -1400,8 +1400,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ironfoam": {
     "dir_count": 1,
@@ -1417,8 +1417,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "greenglow": {
     "dir_count": 1,
@@ -1434,8 +1434,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "explosion_particle": {
     "dir_count": 8,
@@ -1634,8 +1634,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shieldwall": {
     "dir_count": 8,
@@ -1794,8 +1794,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "test": {
     "dir_count": 8,
@@ -1954,8 +1954,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dirt": {
     "dir_count": 1,
@@ -1971,8 +1971,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flour": {
     "dir_count": 1,
@@ -1988,8 +1988,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cobweb1": {
     "dir_count": 1,
@@ -2075,8 +2075,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cobweb2": {
     "dir_count": 1,
@@ -2262,8 +2262,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickyweb1": {
     "dir_count": 1,
@@ -2279,8 +2279,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickyweb2": {
     "dir_count": 1,
@@ -2296,8 +2296,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cocoon_large1": {
     "dir_count": 1,
@@ -2313,8 +2313,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cocoon_large2": {
     "dir_count": 1,
@@ -2330,8 +2330,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cocoon_large3": {
     "dir_count": 1,
@@ -2347,8 +2347,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cocoon1": {
     "dir_count": 1,
@@ -2364,8 +2364,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cocoon2": {
     "dir_count": 1,
@@ -2381,8 +2381,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cocoon3": {
     "dir_count": 1,
@@ -2398,8 +2398,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spidereggUnused": {
     "dir_count": 1,
@@ -2415,8 +2415,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "eggs": {
     "dir_count": 1,
@@ -2432,8 +2432,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spiderling": {
     "dir_count": 1,
@@ -2449,8 +2449,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energynet": {
     "dir_count": 1,
@@ -2481,8 +2481,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "electricity": {
     "dir_count": 1,
@@ -2553,8 +2553,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "electricity2": {
     "dir_count": 1,
@@ -2625,8 +2625,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "anom": {
     "dir_count": 1,
@@ -2677,8 +2677,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bhole2": {
     "dir_count": 1,
@@ -2849,8 +2849,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bhole3": {
     "dir_count": 1,
@@ -2881,8 +2881,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wave1": {
     "dir_count": 1,
@@ -2913,8 +2913,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wave2": {
     "dir_count": 1,
@@ -2965,8 +2965,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wave3": {
     "dir_count": 1,
@@ -3012,8 +3012,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wave4": {
     "dir_count": 1,
@@ -3044,8 +3044,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "scanline": {
     "dir_count": 1,
@@ -3136,8 +3136,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shield-old": {
     "dir_count": 1,
@@ -3183,8 +3183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shield": {
     "dir_count": 1,
@@ -3240,8 +3240,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m_shield": {
     "dir_count": 1,
@@ -3292,8 +3292,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shield1": {
     "dir_count": 1,
@@ -3339,8 +3339,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shield2": {
     "dir_count": 1,
@@ -3386,8 +3386,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "at_shield1": {
     "dir_count": 1,
@@ -3433,8 +3433,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "at_shield2": {
     "dir_count": 1,
@@ -3480,8 +3480,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "scorch": {
     "dir_count": 4,
@@ -3524,8 +3524,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "light_scorch": {
     "dir_count": 1,
@@ -3541,8 +3541,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dent": {
     "dir_count": 1,
@@ -3558,8 +3558,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bhole": {
     "dir_count": 1,
@@ -3575,8 +3575,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "frozen_smoke_capsule": {
     "dir_count": 1,
@@ -3592,8 +3592,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medi_holo": {
     "dir_count": 1,
@@ -3644,8 +3644,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chronofield": {
     "dir_count": 1,
@@ -3671,8 +3671,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "static_base": {
     "dir_count": 1,
@@ -3713,8 +3713,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "static": {
     "dir_count": 4,
@@ -3857,8 +3857,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blank_base": {
     "dir_count": 1,
@@ -3874,8 +3874,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blank": {
     "dir_count": 4,
@@ -3918,8 +3918,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dragnetfield": {
     "dir_count": 1,
@@ -3945,8 +3945,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shreds": {
     "dir_count": 1,
@@ -3962,8 +3962,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blip": {
     "dir_count": 1,
@@ -4004,8 +4004,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "purplesparkles": {
     "dir_count": 4,
@@ -4148,8 +4148,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "purplecrack": {
     "dir_count": 1,
@@ -4175,8 +4175,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "phasein": {
     "dir_count": 1,
@@ -4242,8 +4242,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "phaseout": {
     "dir_count": 1,
@@ -4309,8 +4309,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "foam": {
     "dir_count": 1,
@@ -4326,8 +4326,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "foam-disolve": {
     "dir_count": 1,
@@ -4368,8 +4368,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blob_attack": {
     "dir_count": 4,
@@ -4632,8 +4632,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shield-red": {
     "dir_count": 1,
@@ -4679,8 +4679,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holosign": {
     "dir_count": 1,
@@ -4751,8 +4751,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holosign_sec": {
     "dir_count": 1,
@@ -4783,8 +4783,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holosign_engi": {
     "dir_count": 1,
@@ -4815,8 +4815,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "heal": {
     "dir_count": 1,
@@ -4897,8 +4897,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shield-grey": {
     "dir_count": 1,
@@ -4944,8 +4944,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shield-flash": {
     "dir_count": 4,
@@ -5148,8 +5148,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "barriershimmer": {
     "dir_count": 1,
@@ -5200,8 +5200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "legiondoor": {
     "dir_count": 1,
@@ -5217,8 +5217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "molten": {
     "dir_count": 1,
@@ -5234,8 +5234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "big_molten": {
     "dir_count": 1,
@@ -5251,8 +5251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "acid": {
     "dir_count": 1,
@@ -5293,8 +5293,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tendril_bite": {
     "dir_count": 1,
@@ -5385,8 +5385,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperwiz_poof": {
     "dir_count": 1,
@@ -5437,8 +5437,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paper_scatter": {
     "dir_count": 1,
@@ -5474,8 +5474,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "revenantEctoplasm": {
     "dir_count": 1,
@@ -5491,8 +5491,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hierophant_blast": {
     "dir_count": 4,
@@ -5795,8 +5795,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hierophant_squares": {
     "dir_count": 4,
@@ -5919,8 +5919,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lavastaff_warn": {
     "dir_count": 1,
@@ -5936,8 +5936,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firing_effect": {
     "dir_count": 4,
@@ -6000,8 +6000,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "impact_bullet": {
     "dir_count": 1,
@@ -6037,8 +6037,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firing_effect_energy": {
     "dir_count": 4,
@@ -6101,8 +6101,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "impact_energy": {
     "dir_count": 1,
@@ -6143,8 +6143,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "impact_laser": {
     "dir_count": 1,
@@ -6175,8 +6175,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "impact_laser_green": {
     "dir_count": 1,
@@ -6207,8 +6207,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "impact_laser_blue": {
     "dir_count": 1,
@@ -6239,8 +6239,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "impact_laser_purple": {
     "dir_count": 1,
@@ -6271,8 +6271,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smash": {
     "dir_count": 1,
@@ -6298,8 +6298,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "punch": {
     "dir_count": 1,
@@ -6335,8 +6335,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bite": {
     "dir_count": 1,
@@ -6367,8 +6367,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "claw": {
     "dir_count": 1,
@@ -6399,8 +6399,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "boop": {
     "dir_count": 1,
@@ -6431,8 +6431,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mech_fire": {
     "dir_count": 1,
@@ -6463,8 +6463,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mech_toxin": {
     "dir_count": 1,
@@ -6490,8 +6490,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kick": {
     "dir_count": 1,
@@ -6522,8 +6522,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "disarm": {
     "dir_count": 1,
@@ -6559,8 +6559,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ion_fade_flight": {
     "dir_count": 4,
@@ -6643,8 +6643,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ion_trails_flight": {
     "dir_count": 4,
@@ -6687,8 +6687,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tailsweep": {
     "dir_count": 8,
@@ -6847,8 +6847,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "impact_laser_wall": {
     "dir_count": 1,
@@ -6914,8 +6914,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "forcefield": {
     "dir_count": 1,
@@ -6936,8 +6936,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medi_holo_no_anim": {
     "dir_count": 1,
@@ -6953,8 +6953,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "atmos_resin": {
     "dir_count": 1,
@@ -6970,8 +6970,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holo_fan": {
     "dir_count": 1,
@@ -7002,8 +7002,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holo_firelock": {
     "dir_count": 1,
@@ -7054,8 +7054,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "miner_death": {
     "dir_count": 4,
@@ -7098,8 +7098,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "curse": {
     "dir_count": 4,
@@ -7282,8 +7282,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cursehand0": {
     "dir_count": 4,
@@ -7606,8 +7606,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cursehand1": {
     "dir_count": 4,
@@ -7930,8 +7930,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "curseblob": {
     "dir_count": 4,
@@ -8194,8 +8194,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bullet_hole": {
     "dir_count": 1,
@@ -8211,7 +8211,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

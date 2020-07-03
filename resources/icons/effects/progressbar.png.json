@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_5": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_10": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_15": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_20": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_25": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_30": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_35": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_40": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_45": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_50": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_55": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_60": {
     "dir_count": 1,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_65": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_70": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_75": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_80": {
     "dir_count": 1,
@@ -285,8 +285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_85": {
     "dir_count": 1,
@@ -302,8 +302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_90": {
     "dir_count": 1,
@@ -319,8 +319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_95": {
     "dir_count": 1,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prog_bar_100": {
     "dir_count": 1,
@@ -353,7 +353,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

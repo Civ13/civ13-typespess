@@ -23,8 +23,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "orbit_anim": {
     "dir_count": 1,
@@ -70,8 +70,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teleport_anim": {
     "dir_count": 1,
@@ -112,8 +112,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reenter_corpse_anim": {
     "dir_count": 1,
@@ -154,8 +154,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jumptomob": {
     "dir_count": 1,
@@ -171,8 +171,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "orbit": {
     "dir_count": 1,
@@ -188,8 +188,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teleport": {
     "dir_count": 1,
@@ -205,8 +205,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reenter_corpse": {
     "dir_count": 1,
@@ -222,8 +222,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pai": {
     "dir_count": 1,
@@ -239,7 +239,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

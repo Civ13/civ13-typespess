@@ -41,7 +41,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "spearglass0": {
     "dir_count": 4,
@@ -85,7 +85,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "spearglass1": {
     "dir_count": 4,
@@ -129,7 +129,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "spearbomb0": {
     "dir_count": 4,
@@ -173,7 +173,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "spearbomb1": {
     "dir_count": 4,
@@ -217,7 +217,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "pitchfork0": {
     "dir_count": 4,
@@ -261,7 +261,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "pitchfork1": {
     "dir_count": 4,
@@ -305,7 +305,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "bone_spear0": {
     "dir_count": 4,
@@ -349,7 +349,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "bone_spear1": {
     "dir_count": 4,
@@ -393,7 +393,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "scythe1": {
     "dir_count": 4,
@@ -437,6 +437,6 @@
         ]
       }
     },
-    "tile_size": 32
+    
   }
 }

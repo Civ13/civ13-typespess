@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "roman_shield": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "eshield0": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "eshield1": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teleriot0": {
     "dir_count": 4,
@@ -216,8 +216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teleriot1": {
     "dir_count": 4,
@@ -260,8 +260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flashshield": {
     "dir_count": 4,
@@ -304,8 +304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flashshield_flash": {
     "dir_count": 4,
@@ -388,8 +388,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "buckler": {
     "dir_count": 4,
@@ -432,7 +432,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

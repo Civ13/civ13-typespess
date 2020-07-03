@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mwo": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mw1": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mw0": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mw-o": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mwb": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mwbloody": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mwbloody0": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mwbloodyo": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mwbloody1": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spike": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spikebloodyalien": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spikebloodymonkey": {
     "dir_count": 1,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rolling_pin": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spoon": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fork": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "knife": {
     "dir_count": 1,
@@ -285,8 +285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cleaver": {
     "dir_count": 1,
@@ -302,8 +302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grinder": {
     "dir_count": 1,
@@ -319,8 +319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grbloody": {
     "dir_count": 1,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grjam": {
     "dir_count": 1,
@@ -353,8 +353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gruse": {
     "dir_count": 1,
@@ -370,8 +370,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gridle": {
     "dir_count": 1,
@@ -387,8 +387,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fridge": {
     "dir_count": 1,
@@ -404,8 +404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fridgeopen": {
     "dir_count": 1,
@@ -421,8 +421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fridgeg": {
     "dir_count": 1,
@@ -438,8 +438,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fridger": {
     "dir_count": 1,
@@ -455,8 +455,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "processor": {
     "dir_count": 1,
@@ -472,8 +472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "processor1": {
     "dir_count": 1,
@@ -494,8 +494,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "forkloaded": {
     "dir_count": 1,
@@ -511,8 +511,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_d": {
     "dir_count": 1,
@@ -528,8 +528,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_e": {
     "dir_count": 1,
@@ -545,8 +545,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_jug_e": {
     "dir_count": 1,
@@ -562,8 +562,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_h": {
     "dir_count": 1,
@@ -579,8 +579,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_f": {
     "dir_count": 1,
@@ -596,8 +596,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_jug_h": {
     "dir_count": 1,
@@ -613,8 +613,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_jug_f": {
     "dir_count": 1,
@@ -630,8 +630,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_h_tan": {
     "dir_count": 1,
@@ -647,8 +647,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_f_tan": {
     "dir_count": 1,
@@ -664,8 +664,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_jug_h_tan": {
     "dir_count": 1,
@@ -681,8 +681,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_jug_f_tan": {
     "dir_count": 1,
@@ -698,8 +698,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_jug_f_red": {
     "dir_count": 1,
@@ -715,8 +715,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_h_red": {
     "dir_count": 1,
@@ -732,8 +732,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_f_red": {
     "dir_count": 1,
@@ -749,8 +749,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blender_jug_h_red": {
     "dir_count": 1,
@@ -766,8 +766,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "juicer0": {
     "dir_count": 1,
@@ -783,8 +783,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "juicer1": {
     "dir_count": 1,
@@ -800,8 +800,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "butch": {
     "dir_count": 1,
@@ -817,8 +817,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "butchblood": {
     "dir_count": 1,
@@ -834,8 +834,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icecream_vat": {
     "dir_count": 1,
@@ -851,8 +851,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icecream_cone_waffle": {
     "dir_count": 1,
@@ -868,8 +868,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icecream_cone_chocolate": {
     "dir_count": 1,
@@ -885,8 +885,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icecream_vanilla": {
     "dir_count": 1,
@@ -902,8 +902,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icecream_strawberry": {
     "dir_count": 1,
@@ -919,8 +919,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icecream_blue": {
     "dir_count": 1,
@@ -936,8 +936,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icecream_chocolate": {
     "dir_count": 1,
@@ -953,8 +953,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icecream_mob": {
     "dir_count": 1,
@@ -970,8 +970,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "foodcart": {
     "dir_count": 1,
@@ -987,8 +987,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spikebloodybear": {
     "dir_count": 1,
@@ -1004,8 +1004,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grinder_open": {
     "dir_count": 1,
@@ -1021,8 +1021,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spikebloodycorgi": {
     "dir_count": 1,
@@ -1038,8 +1038,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spikeframe": {
     "dir_count": 1,
@@ -1055,8 +1055,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "carrotshiv": {
     "dir_count": 1,
@@ -1072,8 +1072,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "survivalknife": {
     "dir_count": 1,
@@ -1089,8 +1089,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone_dagger": {
     "dir_count": 1,
@@ -1106,8 +1106,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sharpener": {
     "dir_count": 1,
@@ -1123,8 +1123,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fryer_off": {
     "dir_count": 1,
@@ -1140,8 +1140,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fryer_on": {
     "dir_count": 1,
@@ -1172,8 +1172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cult_sharpener": {
     "dir_count": 1,
@@ -1239,8 +1239,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cult_sharpener_used": {
     "dir_count": 1,
@@ -1256,8 +1256,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "buckknife": {
     "dir_count": 1,
@@ -1273,7 +1273,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

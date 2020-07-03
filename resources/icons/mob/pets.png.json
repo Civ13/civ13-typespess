@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "petcollar-overlay": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lisatag": {
     "dir_count": 4,
@@ -74,8 +74,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lisacollar": {
     "dir_count": 4,
@@ -118,8 +118,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lisa_deadtag": {
     "dir_count": 1,
@@ -135,8 +135,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lisa_deadcollar": {
     "dir_count": 1,
@@ -152,8 +152,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "puppytag": {
     "dir_count": 4,
@@ -196,8 +196,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "puppycollar": {
     "dir_count": 4,
@@ -240,8 +240,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "puppy_deadtag": {
     "dir_count": 1,
@@ -257,8 +257,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "puppy_deadcollar": {
     "dir_count": 1,
@@ -274,8 +274,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cattag": {
     "dir_count": 4,
@@ -318,8 +318,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "catcollar": {
     "dir_count": 4,
@@ -362,8 +362,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat_deadtag": {
     "dir_count": 1,
@@ -379,8 +379,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat_deadcollar": {
     "dir_count": 1,
@@ -396,8 +396,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kittentag": {
     "dir_count": 4,
@@ -440,8 +440,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kittencollar": {
     "dir_count": 4,
@@ -484,8 +484,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kitten_deadtag": {
     "dir_count": 1,
@@ -501,8 +501,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kitten_deadcollar": {
     "dir_count": 1,
@@ -518,8 +518,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pugtag": {
     "dir_count": 4,
@@ -562,8 +562,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pugcollar": {
     "dir_count": 4,
@@ -606,8 +606,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pug_deadtag": {
     "dir_count": 1,
@@ -623,8 +623,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pug_deadcollar": {
     "dir_count": 1,
@@ -640,8 +640,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "foxtag": {
     "dir_count": 4,
@@ -684,8 +684,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "foxcollar": {
     "dir_count": 4,
@@ -728,8 +728,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fox_deadtag": {
     "dir_count": 1,
@@ -745,8 +745,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fox_deadcollar": {
     "dir_count": 1,
@@ -762,8 +762,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "corgi": {
     "dir_count": 4,
@@ -806,8 +806,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "corgi_dead": {
     "dir_count": 1,
@@ -823,8 +823,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "corgi_shaved": {
     "dir_count": 4,
@@ -867,8 +867,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "corgi_shaved_dead": {
     "dir_count": 1,
@@ -884,8 +884,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lisa": {
     "dir_count": 4,
@@ -928,8 +928,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lisa_dead": {
     "dir_count": 1,
@@ -945,8 +945,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lisa_shaved": {
     "dir_count": 4,
@@ -989,8 +989,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lisa_shaved_dead": {
     "dir_count": 1,
@@ -1006,8 +1006,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "puppy": {
     "dir_count": 4,
@@ -1050,8 +1050,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "puppy_dead": {
     "dir_count": 1,
@@ -1067,8 +1067,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "puppy_shaved": {
     "dir_count": 4,
@@ -1111,8 +1111,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "puppy_shaved_dead": {
     "dir_count": 1,
@@ -1128,8 +1128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pug": {
     "dir_count": 4,
@@ -1172,8 +1172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pug_dead": {
     "dir_count": 1,
@@ -1189,8 +1189,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fox": {
     "dir_count": 4,
@@ -1233,8 +1233,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fox_dead": {
     "dir_count": 1,
@@ -1250,8 +1250,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat": {
     "dir_count": 4,
@@ -1294,8 +1294,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat_dead": {
     "dir_count": 1,
@@ -1311,8 +1311,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat_rest": {
     "dir_count": 1,
@@ -1343,8 +1343,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat_sit": {
     "dir_count": 1,
@@ -1360,8 +1360,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat2": {
     "dir_count": 4,
@@ -1404,8 +1404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat2_dead": {
     "dir_count": 1,
@@ -1421,8 +1421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat2_rest": {
     "dir_count": 1,
@@ -1453,8 +1453,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cat2_sit": {
     "dir_count": 1,
@@ -1470,8 +1470,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cak": {
     "dir_count": 4,
@@ -1514,8 +1514,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cak_dead": {
     "dir_count": 1,
@@ -1531,8 +1531,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cak_rest": {
     "dir_count": 1,
@@ -1548,8 +1548,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cak_sit": {
     "dir_count": 1,
@@ -1565,8 +1565,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kitten": {
     "dir_count": 4,
@@ -1609,8 +1609,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kitten_dead": {
     "dir_count": 1,
@@ -1626,8 +1626,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kitten_rest": {
     "dir_count": 1,
@@ -1658,8 +1658,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kitten_sit": {
     "dir_count": 1,
@@ -1675,8 +1675,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "void_puppy": {
     "dir_count": 4,
@@ -1719,8 +1719,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "void_puppy_dead": {
     "dir_count": 1,
@@ -1736,8 +1736,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecat": {
     "dir_count": 4,
@@ -1780,8 +1780,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecat_dead": {
     "dir_count": 1,
@@ -1797,8 +1797,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecat_rest": {
     "dir_count": 1,
@@ -1829,8 +1829,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecat_sit": {
     "dir_count": 1,
@@ -1846,8 +1846,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "old_corgi": {
     "dir_count": 4,
@@ -1890,8 +1890,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "old_corgi_movement": {
     "dir_count": 4,
@@ -1954,8 +1954,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "old_corgi_shaved": {
     "dir_count": 4,
@@ -1998,8 +1998,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "old_corgi_shaved_movement": {
     "dir_count": 4,
@@ -2062,8 +2062,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "old_corgi_dead": {
     "dir_count": 1,
@@ -2079,8 +2079,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "old_corgi_shaved_dead": {
     "dir_count": 1,
@@ -2096,8 +2096,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "original": {
     "dir_count": 4,
@@ -2140,8 +2140,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "original_sit": {
     "dir_count": 1,
@@ -2157,8 +2157,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "original_rest": {
     "dir_count": 1,
@@ -2174,8 +2174,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "original_dead": {
     "dir_count": 1,
@@ -2191,8 +2191,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sloth": {
     "dir_count": 4,
@@ -2235,8 +2235,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sloth_dead": {
     "dir_count": 1,
@@ -2252,8 +2252,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cool_sloth": {
     "dir_count": 4,
@@ -2296,8 +2296,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cool_sloth_dead": {
     "dir_count": 1,
@@ -2313,8 +2313,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "narsian": {
     "dir_count": 4,
@@ -2357,8 +2357,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "narsian_dead": {
     "dir_count": 1,
@@ -2374,7 +2374,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

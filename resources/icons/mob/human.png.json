@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ghost": {
     "dir_count": 4,
@@ -57,8 +57,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "body_cloaked": {
     "dir_count": 4,
@@ -221,8 +221,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "electrocuted_generic": {
     "dir_count": 4,
@@ -305,8 +305,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "electrocuted_base": {
     "dir_count": 4,
@@ -389,8 +389,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "husk": {
     "dir_count": 4,
@@ -433,8 +433,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "skeleton": {
     "dir_count": 4,
@@ -477,8 +477,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "zombie": {
     "dir_count": 4,
@@ -521,7 +521,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

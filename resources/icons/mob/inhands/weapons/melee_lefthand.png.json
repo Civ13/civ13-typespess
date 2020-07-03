@@ -41,7 +41,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "baseball_bat": {
     "dir_count": 4,
@@ -85,7 +85,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "baseball_bat_metal": {
     "dir_count": 4,
@@ -129,7 +129,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "stick": {
     "dir_count": 4,
@@ -173,7 +173,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "chain": {
     "dir_count": 4,
@@ -437,7 +437,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "nullrod": {
     "dir_count": 4,
@@ -481,7 +481,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "powerfist": {
     "dir_count": 4,
@@ -525,7 +525,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "prod": {
     "dir_count": 4,
@@ -569,7 +569,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "shard-glass": {
     "dir_count": 4,
@@ -613,6 +613,6 @@
         ]
       }
     },
-    "tile_size": 32
+    
   }
 }

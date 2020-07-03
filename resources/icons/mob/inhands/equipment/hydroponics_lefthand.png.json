@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spraycan": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultivator": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spade": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hatchet": {
     "dir_count": 4,
@@ -216,7 +216,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

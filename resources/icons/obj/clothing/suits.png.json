@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bomb": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "detective-armor": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "heavy": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swat": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deathsquad": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spaceold": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "space": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-green": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-green-dark": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-orange": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-blue": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-black": {
     "dir_count": 1,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-black-green": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-black-blue": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-black-med": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-black-orange": {
     "dir_count": 1,
@@ -285,8 +285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-black-red": {
     "dir_count": 1,
@@ -302,8 +302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate-black-engie": {
     "dir_count": 1,
@@ -319,8 +319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "void": {
     "dir_count": 1,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bio": {
     "dir_count": 1,
@@ -353,8 +353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bio_general": {
     "dir_count": 1,
@@ -370,8 +370,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bio_virology": {
     "dir_count": 1,
@@ -387,8 +387,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bio_security": {
     "dir_count": 1,
@@ -404,8 +404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bio_janitor": {
     "dir_count": 1,
@@ -421,8 +421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bio_scientist": {
     "dir_count": 1,
@@ -438,8 +438,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bombsuit": {
     "dir_count": 1,
@@ -455,8 +455,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bombsuit_white": {
     "dir_count": 1,
@@ -472,8 +472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bombsuit_sec": {
     "dir_count": 1,
@@ -489,8 +489,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rad": {
     "dir_count": 1,
@@ -506,8 +506,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "detective": {
     "dir_count": 1,
@@ -523,8 +523,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat": {
     "dir_count": 1,
@@ -540,8 +540,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate": {
     "dir_count": 1,
@@ -557,8 +557,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "apron": {
     "dir_count": 1,
@@ -574,8 +574,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chef": {
     "dir_count": 1,
@@ -591,8 +591,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chef_t": {
     "dir_count": 1,
@@ -608,8 +608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "santa": {
     "dir_count": 1,
@@ -625,8 +625,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "death": {
     "dir_count": 1,
@@ -642,8 +642,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tdgreen": {
     "dir_count": 1,
@@ -659,8 +659,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tdred": {
     "dir_count": 1,
@@ -676,8 +676,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "straight_jacket": {
     "dir_count": 1,
@@ -693,8 +693,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "centcom": {
     "dir_count": 1,
@@ -710,8 +710,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldcaparmor": {
     "dir_count": 1,
@@ -727,8 +727,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "caparmor": {
     "dir_count": 1,
@@ -744,8 +744,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "judge": {
     "dir_count": 1,
@@ -761,8 +761,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pirate": {
     "dir_count": 1,
@@ -778,8 +778,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plaguedoctor": {
     "dir_count": 1,
@@ -795,8 +795,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hos": {
     "dir_count": 1,
@@ -812,8 +812,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hostrench": {
     "dir_count": 1,
@@ -829,8 +829,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_cmo": {
     "dir_count": 1,
@@ -846,8 +846,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wizard-fake": {
     "dir_count": 1,
@@ -863,8 +863,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wizard": {
     "dir_count": 1,
@@ -880,8 +880,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "yellowwizard": {
     "dir_count": 1,
@@ -897,8 +897,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "redwizard": {
     "dir_count": 1,
@@ -914,8 +914,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "s-ninja": {
     "dir_count": 1,
@@ -931,8 +931,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "s-ninjan": {
     "dir_count": 1,
@@ -948,8 +948,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "s-ninjanf": {
     "dir_count": 1,
@@ -965,8 +965,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "s-ninjak": {
     "dir_count": 1,
@@ -982,8 +982,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "s-ninjakf": {
     "dir_count": 1,
@@ -999,8 +999,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hazard": {
     "dir_count": 1,
@@ -1016,8 +1016,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firesuit": {
     "dir_count": 1,
@@ -1033,8 +1033,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labgreen": {
     "dir_count": 1,
@@ -1050,8 +1050,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "surgical": {
     "dir_count": 1,
@@ -1067,8 +1067,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bombsuitsec_old": {
     "dir_count": 1,
@@ -1084,8 +1084,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "marisa": {
     "dir_count": 1,
@@ -1101,8 +1101,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "captunic": {
     "dir_count": 1,
@@ -1118,8 +1118,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nun": {
     "dir_count": 1,
@@ -1135,8 +1135,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chaplain_hoodie": {
     "dir_count": 1,
@@ -1152,8 +1152,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chaplain_hoodie_t": {
     "dir_count": 1,
@@ -1169,8 +1169,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "imperium_monk": {
     "dir_count": 1,
@@ -1186,8 +1186,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "suitjacket_blue": {
     "dir_count": 1,
@@ -1203,8 +1203,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "suitjacket_blue_t": {
     "dir_count": 1,
@@ -1220,8 +1220,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_t": {
     "dir_count": 1,
@@ -1237,8 +1237,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_cmo_t": {
     "dir_count": 1,
@@ -1254,8 +1254,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bearhide": {
     "dir_count": 1,
@@ -1271,8 +1271,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bearhide_space": {
     "dir_count": 1,
@@ -1288,8 +1288,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "riot": {
     "dir_count": 1,
@@ -1305,8 +1305,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_gen": {
     "dir_count": 1,
@@ -1322,8 +1322,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_gen_t": {
     "dir_count": 1,
@@ -1339,8 +1339,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_vir": {
     "dir_count": 1,
@@ -1356,8 +1356,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_vir_t": {
     "dir_count": 1,
@@ -1373,8 +1373,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_chem": {
     "dir_count": 1,
@@ -1390,8 +1390,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_chem_t": {
     "dir_count": 1,
@@ -1407,8 +1407,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_tox": {
     "dir_count": 1,
@@ -1424,8 +1424,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_tox_t": {
     "dir_count": 1,
@@ -1441,8 +1441,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labgreen_t": {
     "dir_count": 1,
@@ -1458,8 +1458,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chickensuit": {
     "dir_count": 1,
@@ -1475,8 +1475,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holidaypriest": {
     "dir_count": 1,
@@ -1492,8 +1492,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "apronchef": {
     "dir_count": 1,
@@ -1509,8 +1509,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkeysuit": {
     "dir_count": 1,
@@ -1526,8 +1526,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultrobes": {
     "dir_count": 1,
@@ -1543,8 +1543,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultrobes_t": {
     "dir_count": 1,
@@ -1560,8 +1560,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bio_cmo": {
     "dir_count": 1,
@@ -1577,8 +1577,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hastur": {
     "dir_count": 1,
@@ -1594,8 +1594,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "suitjacket_purp": {
     "dir_count": 1,
@@ -1611,8 +1611,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "suitjacket_purp_t": {
     "dir_count": 1,
@@ -1628,8 +1628,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hgpirate": {
     "dir_count": 4,
@@ -1672,8 +1672,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reactive": {
     "dir_count": 1,
@@ -1689,8 +1689,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reactiveoff": {
     "dir_count": 1,
@@ -1706,8 +1706,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "justice": {
     "dir_count": 1,
@@ -1723,8 +1723,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "magusred": {
     "dir_count": 1,
@@ -1740,8 +1740,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "magusblue": {
     "dir_count": 1,
@@ -1757,8 +1757,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cardborg": {
     "dir_count": 1,
@@ -1774,8 +1774,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ianshirt": {
     "dir_count": 1,
@@ -1791,8 +1791,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bluetag": {
     "dir_count": 1,
@@ -1808,8 +1808,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "redtag": {
     "dir_count": 1,
@@ -1825,8 +1825,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engspace_suit": {
     "dir_count": 1,
@@ -1842,8 +1842,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cespace_suit": {
     "dir_count": 1,
@@ -1859,8 +1859,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-white": {
     "dir_count": 1,
@@ -1876,8 +1876,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-engineering": {
     "dir_count": 1,
@@ -1893,8 +1893,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-mining": {
     "dir_count": 1,
@@ -1910,8 +1910,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit1-syndi": {
     "dir_count": 1,
@@ -1927,8 +1927,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit0-syndi": {
     "dir_count": 1,
@@ -1944,8 +1944,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-wiz": {
     "dir_count": 1,
@@ -1961,8 +1961,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-hos": {
     "dir_count": 1,
@@ -1978,8 +1978,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-ancient": {
     "dir_count": 1,
@@ -1995,8 +1995,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "overalls": {
     "dir_count": 1,
@@ -2012,8 +2012,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cult_armor": {
     "dir_count": 1,
@@ -2029,8 +2029,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cult_armor_t": {
     "dir_count": 1,
@@ -2046,8 +2046,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultrobesalt": {
     "dir_count": 1,
@@ -2063,8 +2063,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hosbluejacket": {
     "dir_count": 1,
@@ -2080,8 +2080,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hostanjacket": {
     "dir_count": 1,
@@ -2097,8 +2097,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "officerbluejacket": {
     "dir_count": 1,
@@ -2114,8 +2114,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "officertanjacket": {
     "dir_count": 1,
@@ -2131,8 +2131,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wardenbluejacket": {
     "dir_count": 1,
@@ -2148,8 +2148,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wardentanjacket": {
     "dir_count": 1,
@@ -2165,8 +2165,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armor_reflec": {
     "dir_count": 1,
@@ -2182,8 +2182,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-medical": {
     "dir_count": 1,
@@ -2199,8 +2199,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "xenos": {
     "dir_count": 1,
@@ -2216,8 +2216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "capcarapace": {
     "dir_count": 1,
@@ -2233,8 +2233,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-atmospherics": {
     "dir_count": 1,
@@ -2250,8 +2250,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nerdshirt": {
     "dir_count": 1,
@@ -2267,8 +2267,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "classicponcho": {
     "dir_count": 1,
@@ -2284,8 +2284,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "greenponcho": {
     "dir_count": 1,
@@ -2301,8 +2301,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "redponcho": {
     "dir_count": 1,
@@ -2318,8 +2318,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ponchoshame": {
     "dir_count": 1,
@@ -2335,8 +2335,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "suitjacket_black": {
     "dir_count": 1,
@@ -2352,8 +2352,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "suitjacket_black_t": {
     "dir_count": 1,
@@ -2369,8 +2369,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "greydet": {
     "dir_count": 1,
@@ -2386,8 +2386,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bomberjacket": {
     "dir_count": 1,
@@ -2403,8 +2403,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_emt_t": {
     "dir_count": 1,
@@ -2420,8 +2420,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "labcoat_emt": {
     "dir_count": 1,
@@ -2437,8 +2437,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "atmos_firesuit": {
     "dir_count": 1,
@@ -2454,8 +2454,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatcaptain": {
     "dir_count": 1,
@@ -2471,8 +2471,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatcaptain_t": {
     "dir_count": 1,
@@ -2488,8 +2488,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatcargo": {
     "dir_count": 1,
@@ -2505,8 +2505,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatcargo_t": {
     "dir_count": 1,
@@ -2522,8 +2522,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatengineer": {
     "dir_count": 1,
@@ -2539,8 +2539,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatengineer_t": {
     "dir_count": 1,
@@ -2556,8 +2556,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatatmos": {
     "dir_count": 1,
@@ -2573,8 +2573,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatatmos_t": {
     "dir_count": 1,
@@ -2590,8 +2590,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatwinter": {
     "dir_count": 1,
@@ -2607,8 +2607,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatwinter_t": {
     "dir_count": 1,
@@ -2624,8 +2624,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coathydro": {
     "dir_count": 1,
@@ -2641,8 +2641,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coathydro_t": {
     "dir_count": 1,
@@ -2658,8 +2658,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatmedical": {
     "dir_count": 1,
@@ -2675,8 +2675,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatmedical_t": {
     "dir_count": 1,
@@ -2692,8 +2692,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatminer": {
     "dir_count": 1,
@@ -2709,8 +2709,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatminer_t": {
     "dir_count": 1,
@@ -2726,8 +2726,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatscience": {
     "dir_count": 1,
@@ -2743,8 +2743,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatscience_t": {
     "dir_count": 1,
@@ -2760,8 +2760,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatsecurity": {
     "dir_count": 1,
@@ -2777,8 +2777,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coatsecurity_t": {
     "dir_count": 1,
@@ -2794,8 +2794,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armor": {
     "dir_count": 1,
@@ -2811,8 +2811,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armoralt": {
     "dir_count": 1,
@@ -2828,8 +2828,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "warden_alt": {
     "dir_count": 1,
@@ -2845,8 +2845,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bulletproof": {
     "dir_count": 1,
@@ -2862,8 +2862,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "warden_jacket": {
     "dir_count": 1,
@@ -2879,8 +2879,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ert_command": {
     "dir_count": 1,
@@ -2896,8 +2896,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ert_security": {
     "dir_count": 1,
@@ -2913,8 +2913,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ert_medical": {
     "dir_count": 1,
@@ -2930,8 +2930,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ert_engineer": {
     "dir_count": 1,
@@ -2947,8 +2947,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chronosuit": {
     "dir_count": 1,
@@ -2964,8 +2964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-sec": {
     "dir_count": 1,
@@ -2981,8 +2981,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "owl_wings": {
     "dir_count": 1,
@@ -2998,8 +2998,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "owl_wings_t": {
     "dir_count": 1,
@@ -3015,8 +3015,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "griffin_wings": {
     "dir_count": 1,
@@ -3032,8 +3032,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "griffin_wings_t": {
     "dir_count": 1,
@@ -3049,8 +3049,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit1-owl": {
     "dir_count": 1,
@@ -3066,8 +3066,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit0-owl": {
     "dir_count": 1,
@@ -3083,8 +3083,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "freedom": {
     "dir_count": 1,
@@ -3100,8 +3100,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "white_dress": {
     "dir_count": 1,
@@ -3117,8 +3117,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bunnysuit": {
     "dir_count": 1,
@@ -3134,8 +3134,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmaman_suit": {
     "dir_count": 1,
@@ -3151,8 +3151,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blackwizard": {
     "dir_count": 1,
@@ -3168,8 +3168,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leatherjacket": {
     "dir_count": 1,
@@ -3185,8 +3185,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leathercoat": {
     "dir_count": 1,
@@ -3202,8 +3202,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leathercoat-sec": {
     "dir_count": 1,
@@ -3219,8 +3219,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "puffervest": {
     "dir_count": 1,
@@ -3236,8 +3236,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pufferjacket": {
     "dir_count": 1,
@@ -3253,8 +3253,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "militaryjacket": {
     "dir_count": 1,
@@ -3270,8 +3270,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "carp_suit": {
     "dir_count": 1,
@@ -3287,8 +3287,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "carp_casual": {
     "dir_count": 1,
@@ -3304,8 +3304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "carp_casual_t": {
     "dir_count": 1,
@@ -3321,8 +3321,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ian": {
     "dir_count": 1,
@@ -3338,8 +3338,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ian_t": {
     "dir_count": 1,
@@ -3355,8 +3355,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "capformal": {
     "dir_count": 1,
@@ -3372,8 +3372,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-rd": {
     "dir_count": 1,
@@ -3389,8 +3389,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shadowling": {
     "dir_count": 1,
@@ -3406,8 +3406,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crusader": {
     "dir_count": 1,
@@ -3423,8 +3423,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crusader-red": {
     "dir_count": 1,
@@ -3440,8 +3440,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crusader-blue": {
     "dir_count": 1,
@@ -3457,8 +3457,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   " ": {
     "dir_count": 1,
@@ -3474,8 +3474,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "knight_grey": {
     "dir_count": 1,
@@ -3491,8 +3491,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "knight_red": {
     "dir_count": 1,
@@ -3508,8 +3508,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "knight_blue": {
     "dir_count": 1,
@@ -3525,8 +3525,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kight_yellow": {
     "dir_count": 1,
@@ -3542,8 +3542,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "knight_green": {
     "dir_count": 1,
@@ -3559,8 +3559,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "knight_templar": {
     "dir_count": 1,
@@ -3576,8 +3576,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "snowman": {
     "dir_count": 1,
@@ -3593,8 +3593,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit0-syndielite": {
     "dir_count": 1,
@@ -3610,8 +3610,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit1-syndielite": {
     "dir_count": 1,
@@ -3627,8 +3627,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-inq": {
     "dir_count": 1,
@@ -3644,8 +3644,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lingspacesuit": {
     "dir_count": 1,
@@ -3661,8 +3661,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lingspacesuit_t": {
     "dir_count": 1,
@@ -3678,8 +3678,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "beekeeper": {
     "dir_count": 1,
@@ -3695,8 +3695,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "explorer": {
     "dir_count": 1,
@@ -3712,8 +3712,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "explorer_t": {
     "dir_count": 1,
@@ -3729,8 +3729,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-beserker": {
     "dir_count": 1,
@@ -3746,8 +3746,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bedsheet": {
     "dir_count": 1,
@@ -3763,8 +3763,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "golclo": {
     "dir_count": 1,
@@ -3780,8 +3780,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "golclo_t": {
     "dir_count": 1,
@@ -3797,8 +3797,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bonearmor": {
     "dir_count": 1,
@@ -3814,8 +3814,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dragon": {
     "dir_count": 1,
@@ -3831,8 +3831,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dragon_t": {
     "dir_count": 1,
@@ -3848,8 +3848,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "letterman_red": {
     "dir_count": 1,
@@ -3865,8 +3865,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "letterman_n": {
     "dir_count": 1,
@@ -3882,8 +3882,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "letterman": {
     "dir_count": 1,
@@ -3899,8 +3899,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "letterman_s": {
     "dir_count": 1,
@@ -3916,8 +3916,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blueshift": {
     "dir_count": 1,
@@ -3933,8 +3933,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hardsuit-clown": {
     "dir_count": 1,
@@ -3950,8 +3950,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "battlemage": {
     "dir_count": 1,
@@ -3967,8 +3967,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "vapeshirt": {
     "dir_count": 1,
@@ -3984,8 +3984,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bee": {
     "dir_count": 1,
@@ -4001,8 +4001,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bee_t": {
     "dir_count": 1,
@@ -4018,8 +4018,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flightsuit": {
     "dir_count": 1,
@@ -4035,8 +4035,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flighthelmet": {
     "dir_count": 1,
@@ -4052,8 +4052,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "witchhunter": {
     "dir_count": 1,
@@ -4069,8 +4069,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "studentuni": {
     "dir_count": 1,
@@ -4086,8 +4086,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "curator": {
     "dir_count": 1,
@@ -4103,8 +4103,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goliath_cloak": {
     "dir_count": 1,
@@ -4120,8 +4120,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goliath_cloak_t": {
     "dir_count": 1,
@@ -4137,8 +4137,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "uegarmor": {
     "dir_count": 1,
@@ -4154,8 +4154,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndievest": {
     "dir_count": 1,
@@ -4171,8 +4171,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rig-old": {
     "dir_count": 1,
@@ -4188,8 +4188,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "draculacoat": {
     "dir_count": 1,
@@ -4205,8 +4205,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "drfreeze_coat": {
     "dir_count": 1,
@@ -4222,8 +4222,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gothcoat": {
     "dir_count": 1,
@@ -4239,8 +4239,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pharoah": {
     "dir_count": 1,
@@ -4256,8 +4256,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hostile_env": {
     "dir_count": 1,
@@ -4273,7 +4273,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

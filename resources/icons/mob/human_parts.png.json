@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "husk_chest": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "husk_head": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "husk_r_arm": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "husk_l_arm": {
     "dir_count": 4,
@@ -216,8 +216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "husk_r_leg": {
     "dir_count": 4,
@@ -260,8 +260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "husk_l_leg": {
     "dir_count": 4,
@@ -304,8 +304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fly_chest_m": {
     "dir_count": 4,
@@ -348,8 +348,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fly_head_m": {
     "dir_count": 4,
@@ -392,8 +392,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fly_r_arm": {
     "dir_count": 4,
@@ -436,8 +436,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fly_l_arm": {
     "dir_count": 4,
@@ -480,8 +480,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fly_r_leg": {
     "dir_count": 4,
@@ -524,8 +524,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fly_l_leg": {
     "dir_count": 4,
@@ -568,8 +568,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fly_chest_f": {
     "dir_count": 4,
@@ -612,8 +612,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fly_head_f": {
     "dir_count": 4,
@@ -656,8 +656,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "skeleton_r_arm": {
     "dir_count": 4,
@@ -700,8 +700,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "skeleton_l_arm": {
     "dir_count": 4,
@@ -744,8 +744,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "skeleton_r_leg": {
     "dir_count": 4,
@@ -788,8 +788,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "skeleton_l_leg": {
     "dir_count": 4,
@@ -832,8 +832,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "skeleton_head": {
     "dir_count": 4,
@@ -876,8 +876,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "skeleton_chest": {
     "dir_count": 4,
@@ -920,8 +920,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "zombie_chest": {
     "dir_count": 4,
@@ -964,8 +964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "zombie_head": {
     "dir_count": 4,
@@ -1008,8 +1008,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "zombie_r_arm": {
     "dir_count": 4,
@@ -1052,8 +1052,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "zombie_l_arm": {
     "dir_count": 4,
@@ -1096,8 +1096,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "zombie_r_leg": {
     "dir_count": 4,
@@ -1140,8 +1140,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "zombie_l_leg": {
     "dir_count": 4,
@@ -1184,8 +1184,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "abductor_chest": {
     "dir_count": 4,
@@ -1228,8 +1228,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "abductor_head": {
     "dir_count": 4,
@@ -1272,8 +1272,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "abductor_l_leg": {
     "dir_count": 4,
@@ -1316,8 +1316,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "abductor_r_leg": {
     "dir_count": 4,
@@ -1360,8 +1360,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "abductor_r_arm": {
     "dir_count": 4,
@@ -1404,8 +1404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "abductor_l_arm": {
     "dir_count": 4,
@@ -1448,8 +1448,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shadow_chest": {
     "dir_count": 4,
@@ -1492,8 +1492,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shadow_head": {
     "dir_count": 4,
@@ -1536,8 +1536,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shadow_r_arm": {
     "dir_count": 4,
@@ -1580,8 +1580,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shadow_l_arm": {
     "dir_count": 4,
@@ -1624,8 +1624,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shadow_r_leg": {
     "dir_count": 4,
@@ -1668,8 +1668,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shadow_l_leg": {
     "dir_count": 4,
@@ -1712,8 +1712,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_chest": {
     "dir_count": 4,
@@ -1756,8 +1756,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_head": {
     "dir_count": 4,
@@ -1800,8 +1800,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_arm": {
     "dir_count": 4,
@@ -1844,8 +1844,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_arm": {
     "dir_count": 4,
@@ -1888,8 +1888,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_leg": {
     "dir_count": 4,
@@ -1932,8 +1932,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_leg": {
     "dir_count": 4,
@@ -1976,8 +1976,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmaman_head": {
     "dir_count": 4,
@@ -2020,8 +2020,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmaman_chest": {
     "dir_count": 4,
@@ -2064,8 +2064,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmaman_r_arm": {
     "dir_count": 4,
@@ -2108,8 +2108,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmaman_l_arm": {
     "dir_count": 4,
@@ -2152,8 +2152,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmaman_r_leg": {
     "dir_count": 4,
@@ -2196,8 +2196,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmaman_l_leg": {
     "dir_count": 4,
@@ -2240,8 +2240,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "agent_chest": {
     "dir_count": 4,
@@ -2284,8 +2284,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "agent_head": {
     "dir_count": 4,
@@ -2328,8 +2328,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "agent_r_arm": {
     "dir_count": 4,
@@ -2372,8 +2372,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "agent_l_arm": {
     "dir_count": 4,
@@ -2416,8 +2416,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "agent_r_leg": {
     "dir_count": 4,
@@ -2460,8 +2460,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "agent_l_leg": {
     "dir_count": 4,
@@ -2504,8 +2504,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "default_human_r_leg": {
     "dir_count": 4,
@@ -2548,8 +2548,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "default_human_r_arm": {
     "dir_count": 4,
@@ -2592,8 +2592,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "default_human_head": {
     "dir_count": 4,
@@ -2636,8 +2636,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "default_human_chest": {
     "dir_count": 4,
@@ -2680,8 +2680,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "default_human_l_leg": {
     "dir_count": 4,
@@ -2724,8 +2724,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "default_human_l_arm": {
     "dir_count": 4,
@@ -2768,8 +2768,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultgolem_chest": {
     "dir_count": 4,
@@ -2812,8 +2812,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultgolem_head": {
     "dir_count": 4,
@@ -2856,8 +2856,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultgolem_r_arm": {
     "dir_count": 4,
@@ -2900,8 +2900,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultgolem_l_arm": {
     "dir_count": 4,
@@ -2944,8 +2944,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultgolem_r_leg": {
     "dir_count": 4,
@@ -2988,8 +2988,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultgolem_l_leg": {
     "dir_count": 4,
@@ -3032,8 +3032,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clothgolem_chest": {
     "dir_count": 4,
@@ -3076,8 +3076,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clothgolem_head": {
     "dir_count": 4,
@@ -3120,8 +3120,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clothgolem_r_arm": {
     "dir_count": 4,
@@ -3164,8 +3164,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clothgolem_l_arm": {
     "dir_count": 4,
@@ -3208,8 +3208,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clothgolem_r_leg": {
     "dir_count": 4,
@@ -3252,8 +3252,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clothgolem_l_leg": {
     "dir_count": 4,
@@ -3296,8 +3296,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockgolem_head": {
     "dir_count": 4,
@@ -3340,8 +3340,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockgolem_chest": {
     "dir_count": 4,
@@ -3384,8 +3384,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockgolem_r_arm": {
     "dir_count": 4,
@@ -3428,8 +3428,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockgolem_l_arm": {
     "dir_count": 4,
@@ -3472,8 +3472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockgolem_l_leg": {
     "dir_count": 4,
@@ -3516,8 +3516,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockgolem_r_leg": {
     "dir_count": 4,
@@ -3560,8 +3560,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockgolem_dead": {
     "dir_count": 1,
@@ -3577,7 +3577,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

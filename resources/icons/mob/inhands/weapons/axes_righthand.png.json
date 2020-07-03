@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "axe1": {
     "dir_count": 4,
@@ -104,8 +104,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireaxe0": {
     "dir_count": 4,
@@ -148,8 +148,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireaxe1": {
     "dir_count": 4,
@@ -192,8 +192,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone_axe0": {
     "dir_count": 4,
@@ -236,8 +236,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone_axe1": {
     "dir_count": 4,
@@ -280,7 +280,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

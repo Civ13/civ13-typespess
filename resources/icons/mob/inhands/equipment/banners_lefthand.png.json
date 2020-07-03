@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "banner": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "banner-blue": {
     "dir_count": 4,
@@ -128,7 +128,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

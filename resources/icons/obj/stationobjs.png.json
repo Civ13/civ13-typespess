@@ -23,8 +23,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "igniter0": {
     "dir_count": 1,
@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mass_driver": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mass_driver1": {
     "dir_count": 4,
@@ -208,8 +208,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sec_lock": {
     "dir_count": 1,
@@ -225,8 +225,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nuclearbomb_off": {
     "dir_count": 1,
@@ -242,8 +242,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nuclearbomb_on": {
     "dir_count": 1,
@@ -259,8 +259,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nuclearbomb_active": {
     "dir_count": 1,
@@ -281,8 +281,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nuclearbomb_exploding": {
     "dir_count": 1,
@@ -303,8 +303,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doorctrl": {
     "dir_count": 1,
@@ -320,8 +320,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doorctrl1": {
     "dir_count": 1,
@@ -347,8 +347,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doorctrl-denied": {
     "dir_count": 1,
@@ -369,8 +369,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doorctrl-p": {
     "dir_count": 1,
@@ -386,8 +386,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "launcher": {
     "dir_count": 1,
@@ -403,8 +403,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "launcher1": {
     "dir_count": 1,
@@ -420,8 +420,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "launcher-denied": {
     "dir_count": 1,
@@ -442,8 +442,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "launcher-p": {
     "dir_count": 1,
@@ -459,8 +459,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "button-open": {
     "dir_count": 1,
@@ -476,8 +476,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "button-board": {
     "dir_count": 1,
@@ -493,8 +493,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "button-device": {
     "dir_count": 1,
@@ -510,8 +510,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gsensor1": {
     "dir_count": 1,
@@ -527,8 +527,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gsensor0": {
     "dir_count": 1,
@@ -544,8 +544,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control": {
     "dir_count": 1,
@@ -566,8 +566,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control1": {
     "dir_count": 1,
@@ -588,8 +588,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control0": {
     "dir_count": 1,
@@ -610,8 +610,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control-nopower": {
     "dir_count": 1,
@@ -627,8 +627,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control-o2": {
     "dir_count": 1,
@@ -644,8 +644,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control-n2": {
     "dir_count": 1,
@@ -661,8 +661,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control-co2": {
     "dir_count": 1,
@@ -678,8 +678,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control-tox": {
     "dir_count": 1,
@@ -695,8 +695,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control10": {
     "dir_count": 1,
@@ -712,8 +712,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control00": {
     "dir_count": 1,
@@ -729,8 +729,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control-unlocked": {
     "dir_count": 1,
@@ -761,8 +761,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter_control-wirecut": {
     "dir_count": 1,
@@ -793,8 +793,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "telescreen": {
     "dir_count": 4,
@@ -837,8 +837,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "telescreenb": {
     "dir_count": 4,
@@ -881,8 +881,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mflash1": {
     "dir_count": 1,
@@ -903,8 +903,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mflash_flash": {
     "dir_count": 1,
@@ -930,8 +930,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mflash1-p": {
     "dir_count": 1,
@@ -947,8 +947,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mflash_frame": {
     "dir_count": 1,
@@ -964,8 +964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wooden_tv_unpowered": {
     "dir_count": 1,
@@ -981,8 +981,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wooden_tv": {
     "dir_count": 1,
@@ -998,8 +998,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wooden_tv_broken": {
     "dir_count": 1,
@@ -1015,8 +1015,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pflash1": {
     "dir_count": 1,
@@ -1032,8 +1032,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pflash_flash": {
     "dir_count": 1,
@@ -1059,8 +1059,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pflash1-p": {
     "dir_count": 1,
@@ -1076,8 +1076,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pflash-s": {
     "dir_count": 1,
@@ -1093,8 +1093,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nboard00": {
     "dir_count": 4,
@@ -1137,8 +1137,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nboard01": {
     "dir_count": 4,
@@ -1181,8 +1181,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nboard02": {
     "dir_count": 4,
@@ -1225,8 +1225,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nboard03": {
     "dir_count": 4,
@@ -1269,8 +1269,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nboard04": {
     "dir_count": 4,
@@ -1313,8 +1313,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nboard05": {
     "dir_count": 4,
@@ -1357,8 +1357,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deskclutter": {
     "dir_count": 1,
@@ -1374,8 +1374,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasticflaps": {
     "dir_count": 1,
@@ -1391,8 +1391,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morgue1": {
     "dir_count": 1,
@@ -1408,8 +1408,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morgue0": {
     "dir_count": 1,
@@ -1425,8 +1425,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morguet": {
     "dir_count": 1,
@@ -1442,8 +1442,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crema1": {
     "dir_count": 1,
@@ -1459,8 +1459,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crema2": {
     "dir_count": 1,
@@ -1476,8 +1476,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crema0": {
     "dir_count": 1,
@@ -1493,8 +1493,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cremat": {
     "dir_count": 1,
@@ -1510,8 +1510,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crema_active": {
     "dir_count": 1,
@@ -1527,8 +1527,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morgue2": {
     "dir_count": 1,
@@ -1544,8 +1544,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morgue3": {
     "dir_count": 1,
@@ -1561,8 +1561,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morgue4": {
     "dir_count": 1,
@@ -1578,8 +1578,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "migniter": {
     "dir_count": 1,
@@ -1595,8 +1595,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "migniter-p": {
     "dir_count": 1,
@@ -1612,8 +1612,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "migniter-d": {
     "dir_count": 1,
@@ -1629,8 +1629,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "migniter-b": {
     "dir_count": 1,
@@ -1646,8 +1646,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "migniter-spark": {
     "dir_count": 1,
@@ -1678,8 +1678,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portal": {
     "dir_count": 1,
@@ -1760,8 +1760,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portal1": {
     "dir_count": 1,
@@ -1842,8 +1842,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glassbox0": {
     "dir_count": 1,
@@ -1859,8 +1859,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glassboxb0": {
     "dir_count": 1,
@@ -1876,8 +1876,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doortimer0": {
     "dir_count": 1,
@@ -1893,8 +1893,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doortimer2": {
     "dir_count": 1,
@@ -1915,8 +1915,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doortimer-p": {
     "dir_count": 1,
@@ -1932,8 +1932,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doortimer1": {
     "dir_count": 1,
@@ -1954,8 +1954,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doortimer-b": {
     "dir_count": 1,
@@ -1971,8 +1971,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holopad0": {
     "dir_count": 1,
@@ -1988,8 +1988,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holopad1": {
     "dir_count": 1,
@@ -2040,8 +2040,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Shield_Gen": {
     "dir_count": 1,
@@ -2057,8 +2057,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Shield_Gen +a": {
     "dir_count": 1,
@@ -2084,8 +2084,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "showcase_1": {
     "dir_count": 1,
@@ -2101,8 +2101,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "showcase_2": {
     "dir_count": 1,
@@ -2123,8 +2123,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "showcase_3": {
     "dir_count": 1,
@@ -2145,8 +2145,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "showcase_4": {
     "dir_count": 1,
@@ -2162,8 +2162,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "showcase_5": {
     "dir_count": 1,
@@ -2179,8 +2179,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "signpost": {
     "dir_count": 1,
@@ -2196,8 +2196,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "minibar": {
     "dir_count": 1,
@@ -2213,8 +2213,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "minibar_left": {
     "dir_count": 1,
@@ -2230,8 +2230,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "minibar_right": {
     "dir_count": 1,
@@ -2247,8 +2247,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dresser": {
     "dir_count": 1,
@@ -2264,8 +2264,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holopad_open": {
     "dir_count": 1,
@@ -2281,8 +2281,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glassbox_open": {
     "dir_count": 1,
@@ -2298,8 +2298,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glassbox_chassis": {
     "dir_count": 1,
@@ -2315,8 +2315,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "soapstone_message": {
     "dir_count": 1,
@@ -2332,8 +2332,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "recharger0": {
     "dir_count": 1,
@@ -2354,8 +2354,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "recharger1": {
     "dir_count": 1,
@@ -2406,8 +2406,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "recharger2": {
     "dir_count": 1,
@@ -2428,8 +2428,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "recharger3": {
     "dir_count": 1,
@@ -2450,8 +2450,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rechargeroff": {
     "dir_count": 1,
@@ -2467,8 +2467,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rechargeropen": {
     "dir_count": 1,
@@ -2484,8 +2484,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mechfab1": {
     "dir_count": 1,
@@ -2501,8 +2501,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mechfab2": {
     "dir_count": 1,
@@ -2558,8 +2558,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mechfab3": {
     "dir_count": 1,
@@ -2680,8 +2680,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "autolathe": {
     "dir_count": 1,
@@ -2697,8 +2697,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "autolathe_n": {
     "dir_count": 1,
@@ -2754,8 +2754,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "autolathe_t": {
     "dir_count": 1,
@@ -2771,8 +2771,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "autolathe_r": {
     "dir_count": 1,
@@ -2828,8 +2828,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "autolathe_o": {
     "dir_count": 1,
@@ -2885,8 +2885,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pipe_d": {
     "dir_count": 1,
@@ -2902,8 +2902,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pipe_d_l": {
     "dir_count": 1,
@@ -2994,8 +2994,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blackbox": {
     "dir_count": 1,
@@ -3041,7 +3041,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

@@ -60,8 +60,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l_windoor_assembly01": {
     "dir_count": 4,
@@ -104,8 +104,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "left": {
     "dir_count": 4,
@@ -148,8 +148,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftclosing": {
     "dir_count": 4,
@@ -312,8 +312,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftopen": {
     "dir_count": 4,
@@ -356,8 +356,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftopening": {
     "dir_count": 4,
@@ -520,8 +520,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftdeny": {
     "dir_count": 4,
@@ -604,8 +604,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftspark": {
     "dir_count": 4,
@@ -748,8 +748,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "r_windoor_assembly02": {
     "dir_count": 4,
@@ -812,8 +812,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "r_windoor_assembly01": {
     "dir_count": 4,
@@ -856,8 +856,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "right": {
     "dir_count": 4,
@@ -900,8 +900,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightclosing": {
     "dir_count": 4,
@@ -1064,8 +1064,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightopen": {
     "dir_count": 4,
@@ -1108,8 +1108,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightopening": {
     "dir_count": 4,
@@ -1272,8 +1272,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightdeny": {
     "dir_count": 4,
@@ -1356,8 +1356,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightspark": {
     "dir_count": 4,
@@ -1500,8 +1500,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l_secure_windoor_assembly02": {
     "dir_count": 4,
@@ -1584,8 +1584,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l_secure_windoor_assembly01": {
     "dir_count": 4,
@@ -1628,8 +1628,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftsecure": {
     "dir_count": 4,
@@ -1672,8 +1672,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftsecureclosing": {
     "dir_count": 4,
@@ -1836,8 +1836,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftsecureopen": {
     "dir_count": 4,
@@ -1880,8 +1880,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftsecureopening": {
     "dir_count": 4,
@@ -2044,8 +2044,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftsecuredeny": {
     "dir_count": 4,
@@ -2128,8 +2128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leftsecurespark": {
     "dir_count": 4,
@@ -2272,8 +2272,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "r_secure_windoor_assembly02": {
     "dir_count": 4,
@@ -2356,8 +2356,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "r_secure_windoor_assembly01": {
     "dir_count": 4,
@@ -2400,8 +2400,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightsecure": {
     "dir_count": 4,
@@ -2444,8 +2444,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightsecureclosing": {
     "dir_count": 4,
@@ -2608,8 +2608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightsecureopen": {
     "dir_count": 4,
@@ -2652,8 +2652,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightsecureopening": {
     "dir_count": 4,
@@ -2816,8 +2816,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightsecuredeny": {
     "dir_count": 4,
@@ -2900,8 +2900,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rightsecurespark": {
     "dir_count": 4,
@@ -3044,8 +3044,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockwork": {
     "dir_count": 4,
@@ -3088,8 +3088,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockworkopening": {
     "dir_count": 4,
@@ -3272,8 +3272,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockworkopen": {
     "dir_count": 4,
@@ -3316,8 +3316,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockworkclosing": {
     "dir_count": 4,
@@ -3500,8 +3500,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockworkdeny": {
     "dir_count": 4,
@@ -3584,8 +3584,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockworkspark": {
     "dir_count": 4,
@@ -3708,7 +3708,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

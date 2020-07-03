@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "riveted": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rockvault": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sandstonevault": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alienvault": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron0": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron1": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron2": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron3": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron4": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron5": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron6": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron7": {
     "dir_count": 1,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron8": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron9": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron10": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron11": {
     "dir_count": 1,
@@ -285,8 +285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron12": {
     "dir_count": 1,
@@ -302,8 +302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron13": {
     "dir_count": 1,
@@ -319,8 +319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron14": {
     "dir_count": 1,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iron15": {
     "dir_count": 1,
@@ -353,8 +353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fakewindows": {
     "dir_count": 8,
@@ -433,8 +433,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fakewindows2": {
     "dir_count": 8,
@@ -513,8 +513,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rock_labor": {
     "dir_count": 1,
@@ -530,8 +530,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rock_lowchance": {
     "dir_count": 1,
@@ -547,8 +547,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rock_nochance": {
     "dir_count": 1,
@@ -564,8 +564,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien1": {
     "dir_count": 1,
@@ -581,8 +581,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien2": {
     "dir_count": 1,
@@ -598,8 +598,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien3": {
     "dir_count": 1,
@@ -615,8 +615,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien4": {
     "dir_count": 1,
@@ -632,8 +632,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien5": {
     "dir_count": 1,
@@ -649,8 +649,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien6": {
     "dir_count": 1,
@@ -666,8 +666,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien7": {
     "dir_count": 1,
@@ -683,8 +683,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien8": {
     "dir_count": 1,
@@ -700,8 +700,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien9": {
     "dir_count": 1,
@@ -717,8 +717,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien10": {
     "dir_count": 1,
@@ -734,8 +734,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien11": {
     "dir_count": 1,
@@ -751,8 +751,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien12": {
     "dir_count": 1,
@@ -768,8 +768,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien13": {
     "dir_count": 1,
@@ -785,8 +785,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien14": {
     "dir_count": 1,
@@ -802,8 +802,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien15": {
     "dir_count": 1,
@@ -819,8 +819,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien16": {
     "dir_count": 1,
@@ -836,8 +836,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien17": {
     "dir_count": 1,
@@ -853,8 +853,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien18": {
     "dir_count": 1,
@@ -870,8 +870,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien19": {
     "dir_count": 1,
@@ -887,8 +887,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien20": {
     "dir_count": 1,
@@ -904,8 +904,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien21": {
     "dir_count": 1,
@@ -921,8 +921,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien22": {
     "dir_count": 1,
@@ -938,8 +938,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien23": {
     "dir_count": 1,
@@ -955,8 +955,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien24": {
     "dir_count": 1,
@@ -972,8 +972,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iced": {
     "dir_count": 1,
@@ -989,8 +989,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "snowrock": {
     "dir_count": 1,
@@ -1006,8 +1006,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icerock": {
     "dir_count": 1,
@@ -1023,8 +1023,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wall3": {
     "dir_count": 8,
@@ -1103,8 +1103,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "4 dir": {
     "dir_count": 4,
@@ -1147,8 +1147,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sign": {
     "dir_count": 1,
@@ -1164,8 +1164,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "diagonal": {
     "dir_count": 8,
@@ -1244,8 +1244,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "floor": {
     "dir_count": 1,
@@ -1261,8 +1261,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockwork_wall": {
     "dir_count": 1,
@@ -1278,8 +1278,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "necro": {
     "dir_count": 1,
@@ -1295,8 +1295,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperwall": {
     "dir_count": 1,
@@ -1312,8 +1312,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reebe": {
     "dir_count": 1,
@@ -1329,7 +1329,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

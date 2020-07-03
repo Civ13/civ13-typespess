@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "silver": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gold": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasma": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cargoband": {
     "dir_count": 4,
@@ -216,8 +216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engieband": {
     "dir_count": 4,
@@ -260,8 +260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rndband": {
     "dir_count": 4,
@@ -304,8 +304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medblueband": {
     "dir_count": 4,
@@ -348,8 +348,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medband": {
     "dir_count": 4,
@@ -392,8 +392,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "redband": {
     "dir_count": 4,
@@ -436,8 +436,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "talisman": {
     "dir_count": 4,
@@ -480,8 +480,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hydroband": {
     "dir_count": 4,
@@ -524,8 +524,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "waistcoat": {
     "dir_count": 4,
@@ -568,8 +568,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "webbing": {
     "dir_count": 4,
@@ -612,8 +612,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "vest_brown": {
     "dir_count": 4,
@@ -656,8 +656,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "vest_black": {
     "dir_count": 4,
@@ -700,8 +700,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holster": {
     "dir_count": 4,
@@ -744,8 +744,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armor_sinew": {
     "dir_count": 4,
@@ -788,8 +788,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armor_alien": {
     "dir_count": 4,
@@ -832,8 +832,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lawyerbadge": {
     "dir_count": 4,
@@ -876,8 +876,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "skull": {
     "dir_count": 4,
@@ -920,8 +920,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pocketprotector": {
     "dir_count": 4,
@@ -964,8 +964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "maidapron": {
     "dir_count": 4,
@@ -1008,8 +1008,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cargo": {
     "dir_count": 1,
@@ -1025,7 +1025,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

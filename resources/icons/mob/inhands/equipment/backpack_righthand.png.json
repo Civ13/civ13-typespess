@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "securitypack": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "captainpack": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medicalpack": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engiepack": {
     "dir_count": 4,
@@ -216,8 +216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clownpack": {
     "dir_count": 4,
@@ -260,8 +260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftbag": {
     "dir_count": 4,
@@ -304,8 +304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel": {
     "dir_count": 4,
@@ -348,8 +348,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-syndiemed": {
     "dir_count": 4,
@@ -392,8 +392,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-captain": {
     "dir_count": 4,
@@ -436,8 +436,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-sec": {
     "dir_count": 4,
@@ -480,8 +480,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-eng": {
     "dir_count": 4,
@@ -524,8 +524,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-clown": {
     "dir_count": 4,
@@ -568,8 +568,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-med": {
     "dir_count": 4,
@@ -612,8 +612,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-syndieammo": {
     "dir_count": 4,
@@ -656,8 +656,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-drone": {
     "dir_count": 4,
@@ -700,8 +700,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holdingpack": {
     "dir_count": 4,
@@ -864,7 +864,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

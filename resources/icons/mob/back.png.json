@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "electropack1": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "backpack": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oxygen": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oxygen_f": {
     "dir_count": 4,
@@ -216,8 +216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oxygen_fr": {
     "dir_count": 4,
@@ -260,8 +260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "air": {
     "dir_count": 4,
@@ -304,8 +304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "anesthetic": {
     "dir_count": 4,
@@ -348,8 +348,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack": {
     "dir_count": 4,
@@ -392,8 +392,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-on": {
     "dir_count": 4,
@@ -456,8 +456,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-black": {
     "dir_count": 4,
@@ -500,8 +500,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-black-on": {
     "dir_count": 4,
@@ -564,8 +564,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-captain": {
     "dir_count": 4,
@@ -608,8 +608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-captain-on": {
     "dir_count": 4,
@@ -672,8 +672,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-mini": {
     "dir_count": 4,
@@ -716,8 +716,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-mini-on": {
     "dir_count": 4,
@@ -800,8 +800,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-mining": {
     "dir_count": 4,
@@ -844,8 +844,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-mining-on": {
     "dir_count": 4,
@@ -908,8 +908,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-void": {
     "dir_count": 4,
@@ -952,8 +952,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-void-on": {
     "dir_count": 4,
@@ -1016,8 +1016,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "witch": {
     "dir_count": 1,
@@ -1033,8 +1033,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clownpack": {
     "dir_count": 4,
@@ -1077,8 +1077,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medicalpack": {
     "dir_count": 4,
@@ -1121,8 +1121,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "securitypack": {
     "dir_count": 4,
@@ -1165,8 +1165,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "captainpack": {
     "dir_count": 4,
@@ -1209,8 +1209,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holdingpack": {
     "dir_count": 4,
@@ -1373,8 +1373,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brokenpack": {
     "dir_count": 4,
@@ -1417,8 +1417,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engiepackOLD": {
     "dir_count": 4,
@@ -1461,8 +1461,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engiepack": {
     "dir_count": 4,
@@ -1505,8 +1505,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel": {
     "dir_count": 4,
@@ -1549,8 +1549,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireaxe0": {
     "dir_count": 4,
@@ -1593,8 +1593,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bandolier": {
     "dir_count": 4,
@@ -1637,8 +1637,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultpack": {
     "dir_count": 4,
@@ -1681,8 +1681,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "staffofchange": {
     "dir_count": 4,
@@ -1725,8 +1725,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftbag0": {
     "dir_count": 4,
@@ -1769,8 +1769,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftbag1": {
     "dir_count": 4,
@@ -1813,8 +1813,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftbag2": {
     "dir_count": 4,
@@ -1857,8 +1857,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotgun": {
     "dir_count": 4,
@@ -1901,8 +1901,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "riotshotgun": {
     "dir_count": 4,
@@ -1945,8 +1945,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cshotgun": {
     "dir_count": 4,
@@ -1989,8 +1989,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun": {
     "dir_count": 4,
@@ -2033,8 +2033,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "welderpack": {
     "dir_count": 4,
@@ -2077,8 +2077,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-eng": {
     "dir_count": 4,
@@ -2121,8 +2121,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-med": {
     "dir_count": 4,
@@ -2165,8 +2165,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-chem": {
     "dir_count": 4,
@@ -2209,8 +2209,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-gen": {
     "dir_count": 4,
@@ -2253,8 +2253,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-tox": {
     "dir_count": 4,
@@ -2297,8 +2297,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-vir": {
     "dir_count": 4,
@@ -2341,8 +2341,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-sec": {
     "dir_count": 4,
@@ -2385,8 +2385,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-cap": {
     "dir_count": 4,
@@ -2429,8 +2429,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-norm": {
     "dir_count": 4,
@@ -2473,8 +2473,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-flat": {
     "dir_count": 4,
@@ -2517,8 +2517,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-hyd": {
     "dir_count": 4,
@@ -2561,8 +2561,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "katana": {
     "dir_count": 4,
@@ -2605,8 +2605,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "scythe0": {
     "dir_count": 4,
@@ -2649,8 +2649,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "staffofanimation": {
     "dir_count": 4,
@@ -2693,8 +2693,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mjollnir0": {
     "dir_count": 4,
@@ -2737,8 +2737,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spearglass0": {
     "dir_count": 4,
@@ -2781,8 +2781,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "waterbackpack": {
     "dir_count": 4,
@@ -2825,8 +2825,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "staffofhealing": {
     "dir_count": 4,
@@ -2869,8 +2869,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "roman_shield": {
     "dir_count": 4,
@@ -2913,8 +2913,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "waterbackpackjani": {
     "dir_count": 4,
@@ -2957,8 +2957,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "waterbackpackatmos": {
     "dir_count": 4,
@@ -3001,8 +3001,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mimepack": {
     "dir_count": 4,
@@ -3045,8 +3045,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "riot": {
     "dir_count": 4,
@@ -3089,8 +3089,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "staffofchaos": {
     "dir_count": 4,
@@ -3133,8 +3133,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "staffofdoor": {
     "dir_count": 4,
@@ -3177,8 +3177,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle0": {
     "dir_count": 4,
@@ -3221,8 +3221,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle25": {
     "dir_count": 4,
@@ -3265,8 +3265,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle50": {
     "dir_count": 4,
@@ -3309,8 +3309,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle75": {
     "dir_count": 4,
@@ -3353,8 +3353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle100": {
     "dir_count": 4,
@@ -3397,8 +3397,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle": {
     "dir_count": 4,
@@ -3441,8 +3441,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lasercannon0": {
     "dir_count": 4,
@@ -3485,8 +3485,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lasercannon25": {
     "dir_count": 4,
@@ -3529,8 +3529,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lasercannon50": {
     "dir_count": 4,
@@ -3573,8 +3573,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lasercannon75": {
     "dir_count": 4,
@@ -3617,8 +3617,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lasercannon100": {
     "dir_count": 4,
@@ -3661,8 +3661,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse0": {
     "dir_count": 4,
@@ -3725,8 +3725,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse25": {
     "dir_count": 4,
@@ -3769,8 +3769,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse50": {
     "dir_count": 4,
@@ -3813,8 +3813,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse75": {
     "dir_count": 4,
@@ -3857,8 +3857,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse100": {
     "dir_count": 4,
@@ -3901,8 +3901,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teleriot1": {
     "dir_count": 4,
@@ -3945,8 +3945,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ishotgunsling": {
     "dir_count": 4,
@@ -3989,8 +3989,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "defibunit": {
     "dir_count": 4,
@@ -4033,8 +4033,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chronobackpack": {
     "dir_count": 4,
@@ -4117,8 +4117,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel": {
     "dir_count": 4,
@@ -4161,8 +4161,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-syndie": {
     "dir_count": 4,
@@ -4205,8 +4205,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-syndiemed": {
     "dir_count": 4,
@@ -4249,8 +4249,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-captain": {
     "dir_count": 4,
@@ -4293,8 +4293,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-sec": {
     "dir_count": 4,
@@ -4337,8 +4337,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-med": {
     "dir_count": 4,
@@ -4381,8 +4381,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-eng": {
     "dir_count": 4,
@@ -4425,8 +4425,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-clown": {
     "dir_count": 4,
@@ -4469,8 +4469,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-syndieammo": {
     "dir_count": 4,
@@ -4513,8 +4513,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-drone": {
     "dir_count": 4,
@@ -4557,8 +4557,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "botpack": {
     "dir_count": 4,
@@ -4601,8 +4601,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chempack": {
     "dir_count": 4,
@@ -4645,8 +4645,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "genepack": {
     "dir_count": 4,
@@ -4689,8 +4689,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toxpack": {
     "dir_count": 4,
@@ -4733,8 +4733,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "viropack": {
     "dir_count": 4,
@@ -4777,8 +4777,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-d": {
     "dir_count": 4,
@@ -4821,8 +4821,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-l": {
     "dir_count": 4,
@@ -4865,8 +4865,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-p": {
     "dir_count": 4,
@@ -4909,8 +4909,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-g": {
     "dir_count": 4,
@@ -4953,8 +4953,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-f": {
     "dir_count": 4,
@@ -4997,8 +4997,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheetUSA": {
     "dir_count": 4,
@@ -5041,8 +5041,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energy_katana": {
     "dir_count": 4,
@@ -5085,8 +5085,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmaman_tank": {
     "dir_count": 4,
@@ -5129,8 +5129,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "claymore": {
     "dir_count": 4,
@@ -5173,8 +5173,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spearbomb0": {
     "dir_count": 4,
@@ -5217,8 +5217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bannerpack": {
     "dir_count": 4,
@@ -5261,8 +5261,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bannerpack-red": {
     "dir_count": 4,
@@ -5305,8 +5305,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bannerpack-blue": {
     "dir_count": 4,
@@ -5349,8 +5349,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sniper": {
     "dir_count": 4,
@@ -5393,8 +5393,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sniper-mag": {
     "dir_count": 4,
@@ -5437,8 +5437,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chembackpack": {
     "dir_count": 4,
@@ -5481,8 +5481,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "buckler": {
     "dir_count": 4,
@@ -5525,8 +5525,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pickaxe": {
     "dir_count": 8,
@@ -5605,8 +5605,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spickaxe": {
     "dir_count": 8,
@@ -5685,8 +5685,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dpickaxe": {
     "dir_count": 8,
@@ -5765,8 +5765,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holstered": {
     "dir_count": 4,
@@ -5809,8 +5809,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "notholstered": {
     "dir_count": 4,
@@ -5853,8 +5853,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "staffofstorms": {
     "dir_count": 4,
@@ -5897,8 +5897,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "honker": {
     "dir_count": 4,
@@ -5941,8 +5941,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hfrequency0": {
     "dir_count": 4,
@@ -5985,8 +5985,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone_axe0": {
     "dir_count": 4,
@@ -6029,8 +6029,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone_spear0": {
     "dir_count": 4,
@@ -6073,8 +6073,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-explorer": {
     "dir_count": 4,
@@ -6117,8 +6117,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "explorerpack": {
     "dir_count": 4,
@@ -6161,8 +6161,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "talking_sword": {
     "dir_count": 4,
@@ -6205,8 +6205,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rainbowbpack": {
     "dir_count": 4,
@@ -6249,8 +6249,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spellblade": {
     "dir_count": 4,
@@ -6413,8 +6413,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mining_hammer1": {
     "dir_count": 4,
@@ -6457,8 +6457,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "quiver": {
     "dir_count": 4,
@@ -6501,8 +6501,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hierophant_club": {
     "dir_count": 4,
@@ -6545,8 +6545,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hierophant_club_beacon": {
     "dir_count": 4,
@@ -6589,8 +6589,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hierophant_club_ready": {
     "dir_count": 4,
@@ -6693,8 +6693,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hierophant_club_ready_beacon": {
     "dir_count": 4,
@@ -6797,8 +6797,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stunprod": {
     "dir_count": 4,
@@ -6841,8 +6841,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stunprod_nocell": {
     "dir_count": 4,
@@ -6885,8 +6885,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stunprod_active": {
     "dir_count": 4,
@@ -6929,8 +6929,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "quiver_hardlight": {
     "dir_count": 4,
@@ -6973,8 +6973,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flightpack_on": {
     "dir_count": 4,
@@ -7077,8 +7077,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flightpack_boost": {
     "dir_count": 4,
@@ -7181,8 +7181,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flightpack_off": {
     "dir_count": 4,
@@ -7225,8 +7225,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flashshield": {
     "dir_count": 4,
@@ -7269,8 +7269,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flashshield_flash": {
     "dir_count": 4,
@@ -7313,8 +7313,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sky_bulge0": {
     "dir_count": 4,
@@ -7357,8 +7357,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mjollnir1": {
     "dir_count": 4,
@@ -7401,8 +7401,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spearglass1": {
     "dir_count": 4,
@@ -7445,8 +7445,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spearbomb1": {
     "dir_count": 4,
@@ -7489,8 +7489,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hfrequency1": {
     "dir_count": 4,
@@ -7533,8 +7533,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone_axe1": {
     "dir_count": 4,
@@ -7577,8 +7577,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone_spear1": {
     "dir_count": 4,
@@ -7621,8 +7621,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sky_bulge1": {
     "dir_count": 4,
@@ -7665,8 +7665,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-sec": {
     "dir_count": 4,
@@ -7709,8 +7709,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jetpack-sec-on": {
     "dir_count": 4,
@@ -7773,8 +7773,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bostaff0": {
     "dir_count": 4,
@@ -7817,7 +7817,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

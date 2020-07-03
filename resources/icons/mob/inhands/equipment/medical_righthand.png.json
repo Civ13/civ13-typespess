@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firstaid-ointment": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firstaid-toxin": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firstaid-o2": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firstaid-brute": {
     "dir_count": 4,
@@ -216,8 +216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "healthanalyzer": {
     "dir_count": 4,
@@ -260,8 +260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ointment": {
     "dir_count": 4,
@@ -304,8 +304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brutepack": {
     "dir_count": 4,
@@ -348,8 +348,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pill": {
     "dir_count": 4,
@@ -392,8 +392,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringe_0": {
     "dir_count": 4,
@@ -436,8 +436,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringe_1": {
     "dir_count": 4,
@@ -480,8 +480,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringe_5": {
     "dir_count": 4,
@@ -524,8 +524,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringe_10": {
     "dir_count": 4,
@@ -568,8 +568,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringe_15": {
     "dir_count": 4,
@@ -612,8 +612,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringe_kit": {
     "dir_count": 4,
@@ -656,8 +656,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "scalpel": {
     "dir_count": 4,
@@ -700,8 +700,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hypo": {
     "dir_count": 4,
@@ -744,8 +744,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medipen": {
     "dir_count": 4,
@@ -788,8 +788,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "defibunit": {
     "dir_count": 4,
@@ -832,8 +832,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "defibpaddles0": {
     "dir_count": 4,
@@ -876,8 +876,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "defibpaddles1": {
     "dir_count": 4,
@@ -920,8 +920,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saw": {
     "dir_count": 4,
@@ -964,8 +964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dnainjector": {
     "dir_count": 4,
@@ -1008,8 +1008,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "implantcase": {
     "dir_count": 4,
@@ -1052,8 +1052,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "contsolid": {
     "dir_count": 4,
@@ -1096,8 +1096,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "contvapour": {
     "dir_count": 4,
@@ -1140,7 +1140,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

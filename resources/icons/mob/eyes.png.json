@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sun_thin": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "meson": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "thermal": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "material": {
     "dir_count": 4,
@@ -216,8 +216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blindfold": {
     "dir_count": 4,
@@ -260,8 +260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monocle_old": {
     "dir_count": 4,
@@ -304,8 +304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "eyepatch": {
     "dir_count": 4,
@@ -348,8 +348,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "thermoncle": {
     "dir_count": 4,
@@ -392,8 +392,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "laforge": {
     "dir_count": 4,
@@ -436,8 +436,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gglasses_thin": {
     "dir_count": 4,
@@ -480,8 +480,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "night": {
     "dir_count": 4,
@@ -544,8 +544,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sun": {
     "dir_count": 4,
@@ -588,8 +588,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "healthhud": {
     "dir_count": 4,
@@ -632,8 +632,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "securityhud": {
     "dir_count": 4,
@@ -676,8 +676,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monocle": {
     "dir_count": 4,
@@ -720,8 +720,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sunhudsec": {
     "dir_count": 4,
@@ -764,8 +764,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "purple": {
     "dir_count": 4,
@@ -808,8 +808,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "thermalimplants": {
     "dir_count": 4,
@@ -852,8 +852,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jensenshades": {
     "dir_count": 4,
@@ -896,8 +896,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bigsunglasses": {
     "dir_count": 4,
@@ -940,8 +940,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "welding-g": {
     "dir_count": 4,
@@ -984,8 +984,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "welding-gup": {
     "dir_count": 4,
@@ -1028,8 +1028,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "healthhudnight": {
     "dir_count": 4,
@@ -1092,8 +1092,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "securityhudnight": {
     "dir_count": 4,
@@ -1156,8 +1156,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hudpatch": {
     "dir_count": 4,
@@ -1200,8 +1200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nvgmeson": {
     "dir_count": 4,
@@ -1344,8 +1344,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cold": {
     "dir_count": 4,
@@ -1388,8 +1388,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "heat": {
     "dir_count": 4,
@@ -1432,8 +1432,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "garb": {
     "dir_count": 4,
@@ -1476,8 +1476,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gars": {
     "dir_count": 4,
@@ -1520,8 +1520,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "supergarb": {
     "dir_count": 4,
@@ -1564,8 +1564,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "supergars": {
     "dir_count": 4,
@@ -1608,8 +1608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gar": {
     "dir_count": 4,
@@ -1652,8 +1652,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "garm": {
     "dir_count": 4,
@@ -1696,8 +1696,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "supergar": {
     "dir_count": 4,
@@ -1740,8 +1740,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "diagnostichudnight": {
     "dir_count": 4,
@@ -1804,8 +1804,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "diagnostichud": {
     "dir_count": 4,
@@ -1848,8 +1848,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wraith_specs": {
     "dir_count": 4,
@@ -1892,8 +1892,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wraith_specsup": {
     "dir_count": 4,
@@ -1936,8 +1936,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "judicial_visor_0": {
     "dir_count": 4,
@@ -1980,8 +1980,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "judicial_visor_1": {
     "dir_count": 4,
@@ -2024,8 +2024,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "godeye": {
     "dir_count": 4,
@@ -2368,8 +2368,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doublegodeye": {
     "dir_count": 4,
@@ -2712,8 +2712,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "orangeglasses": {
     "dir_count": 4,
@@ -2756,8 +2756,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glasses": {
     "dir_count": 4,
@@ -2800,8 +2800,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hipster_glasses": {
     "dir_count": 4,
@@ -2844,8 +2844,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medsechud": {
     "dir_count": 4,
@@ -2908,8 +2908,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "redglasses": {
     "dir_count": 4,
@@ -3012,8 +3012,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sunhudmed": {
     "dir_count": 4,
@@ -3056,8 +3056,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jamjar_glasses": {
     "dir_count": 4,
@@ -3100,8 +3100,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trayson-": {
     "dir_count": 4,
@@ -3144,8 +3144,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trayson-meson": {
     "dir_count": 4,
@@ -3188,8 +3188,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trayson-t-ray": {
     "dir_count": 4,
@@ -3232,8 +3232,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trayson-radiation": {
     "dir_count": 4,
@@ -3276,7 +3276,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

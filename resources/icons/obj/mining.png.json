@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "orebox": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bin": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bin_partial": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bin_full": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deploycrate": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rail": {
     "dir_count": 8,
@@ -178,8 +178,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rail_intersection": {
     "dir_count": 8,
@@ -258,8 +258,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rail_intersection_NSE": {
     "dir_count": 8,
@@ -338,8 +338,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rail_intersection_SEW": {
     "dir_count": 8,
@@ -418,8 +418,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rail_intersection_NSW": {
     "dir_count": 8,
@@ -498,8 +498,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rail_intersection_NEW": {
     "dir_count": 8,
@@ -578,8 +578,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gigadrill_mov": {
     "dir_count": 4,
@@ -682,8 +682,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gigadrill": {
     "dir_count": 4,
@@ -726,8 +726,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   " ": {
     "dir_count": 1,
@@ -743,8 +743,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Adamantine ore": {
     "dir_count": 1,
@@ -760,8 +760,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Clown ore": {
     "dir_count": 1,
@@ -777,8 +777,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Diamond ore": {
     "dir_count": 1,
@@ -794,8 +794,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Glass ore": {
     "dir_count": 1,
@@ -811,8 +811,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Gold ore": {
     "dir_count": 1,
@@ -828,8 +828,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Iron ore": {
     "dir_count": 1,
@@ -845,8 +845,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ore": {
     "dir_count": 1,
@@ -862,8 +862,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Plasma ore": {
     "dir_count": 1,
@@ -879,8 +879,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Silver ore": {
     "dir_count": 1,
@@ -896,8 +896,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "slag": {
     "dir_count": 1,
@@ -913,8 +913,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Uranium ore": {
     "dir_count": 1,
@@ -930,8 +930,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Green lump": {
     "dir_count": 1,
@@ -947,8 +947,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Phazon": {
     "dir_count": 1,
@@ -964,8 +964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-sandstone": {
     "dir_count": 1,
@@ -981,8 +981,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-sandstone_2": {
     "dir_count": 1,
@@ -998,8 +998,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-sandstone_3": {
     "dir_count": 1,
@@ -1015,8 +1015,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-diamond": {
     "dir_count": 1,
@@ -1032,8 +1032,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-gold": {
     "dir_count": 1,
@@ -1049,8 +1049,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-gold_2": {
     "dir_count": 1,
@@ -1066,8 +1066,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-gold_3": {
     "dir_count": 1,
@@ -1083,8 +1083,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-uranium": {
     "dir_count": 1,
@@ -1100,8 +1100,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plasma": {
     "dir_count": 1,
@@ -1117,8 +1117,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plasma_2": {
     "dir_count": 1,
@@ -1134,8 +1134,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plasma_3": {
     "dir_count": 1,
@@ -1151,8 +1151,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-silver": {
     "dir_count": 1,
@@ -1168,8 +1168,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-silver_2": {
     "dir_count": 1,
@@ -1185,8 +1185,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-silver_3": {
     "dir_count": 1,
@@ -1202,8 +1202,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-adamantine": {
     "dir_count": 1,
@@ -1219,8 +1219,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-adamantine_2": {
     "dir_count": 1,
@@ -1236,8 +1236,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-adamantine_3": {
     "dir_count": 1,
@@ -1253,8 +1253,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-clown": {
     "dir_count": 1,
@@ -1270,8 +1270,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-mythril": {
     "dir_count": 1,
@@ -1287,8 +1287,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheetsnatcher": {
     "dir_count": 1,
@@ -1304,8 +1304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Gibtonite ore": {
     "dir_count": 1,
@@ -1321,8 +1321,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Gibtonite active": {
     "dir_count": 1,
@@ -1353,8 +1353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Gibtonite ore 2": {
     "dir_count": 1,
@@ -1400,8 +1400,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Gibtonite ore 3": {
     "dir_count": 1,
@@ -1432,8 +1432,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Gibtonite_igniter": {
     "dir_count": 1,
@@ -1449,8 +1449,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "xeno_warning": {
     "dir_count": 1,
@@ -1466,8 +1466,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel_bspace": {
     "dir_count": 1,
@@ -1503,8 +1503,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pickaxe": {
     "dir_count": 1,
@@ -1520,8 +1520,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spickaxe": {
     "dir_count": 1,
@@ -1537,8 +1537,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dpickaxe": {
     "dir_count": 1,
@@ -1554,8 +1554,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gpickaxe": {
     "dir_count": 1,
@@ -1571,8 +1571,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "upickaxe": {
     "dir_count": 1,
@@ -1588,8 +1588,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ppickaxe": {
     "dir_count": 1,
@@ -1605,8 +1605,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "jackhammer": {
     "dir_count": 1,
@@ -1622,8 +1622,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "handdrill": {
     "dir_count": 1,
@@ -1639,8 +1639,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "diamonddrill": {
     "dir_count": 1,
@@ -1656,8 +1656,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Jaunter": {
     "dir_count": 1,
@@ -1688,8 +1688,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "resonator": {
     "dir_count": 1,
@@ -1705,8 +1705,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "resonator_u": {
     "dir_count": 1,
@@ -1722,8 +1722,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mining_voucher": {
     "dir_count": 1,
@@ -1739,8 +1739,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goliath_hide": {
     "dir_count": 1,
@@ -1756,8 +1756,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goliath_hide_2": {
     "dir_count": 1,
@@ -1773,8 +1773,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goliath_hide_3": {
     "dir_count": 1,
@@ -1790,8 +1790,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shovel": {
     "dir_count": 1,
@@ -1807,8 +1807,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spade": {
     "dir_count": 1,
@@ -1824,8 +1824,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bar-gibtonite": {
     "dir_count": 1,
@@ -1841,8 +1841,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bar-igniter": {
     "dir_count": 1,
@@ -1858,8 +1858,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bar-wire": {
     "dir_count": 1,
@@ -1875,8 +1875,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-snow": {
     "dir_count": 1,
@@ -1892,8 +1892,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-snow_2": {
     "dir_count": 1,
@@ -1909,8 +1909,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-snow_3": {
     "dir_count": 1,
@@ -1926,8 +1926,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "capsule": {
     "dir_count": 1,
@@ -1943,8 +1943,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "volcanic_sand": {
     "dir_count": 1,
@@ -1960,8 +1960,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sinew": {
     "dir_count": 1,
@@ -1977,8 +1977,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone": {
     "dir_count": 1,
@@ -1994,8 +1994,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone_2": {
     "dir_count": 1,
@@ -2011,8 +2011,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bone_3": {
     "dir_count": 1,
@@ -2028,8 +2028,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sinewcuff": {
     "dir_count": 1,
@@ -2045,8 +2045,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "skull": {
     "dir_count": 1,
@@ -2062,8 +2062,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dragon_hide": {
     "dir_count": 1,
@@ -2079,8 +2079,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dragon_hide_2": {
     "dir_count": 1,
@@ -2096,8 +2096,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dragon_hide_3": {
     "dir_count": 1,
@@ -2113,8 +2113,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-titanium": {
     "dir_count": 1,
@@ -2130,8 +2130,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-titanium_2": {
     "dir_count": 1,
@@ -2147,8 +2147,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-titanium_3": {
     "dir_count": 1,
@@ -2164,8 +2164,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plastitanium": {
     "dir_count": 1,
@@ -2181,8 +2181,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plastitanium_2": {
     "dir_count": 1,
@@ -2198,8 +2198,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plastitanium_3": {
     "dir_count": 1,
@@ -2215,8 +2215,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Titanium ore": {
     "dir_count": 1,
@@ -2232,8 +2232,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "minipick": {
     "dir_count": 1,
@@ -2249,8 +2249,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mining_hammer1": {
     "dir_count": 1,
@@ -2266,8 +2266,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mining_hammer1_uncharged": {
     "dir_count": 1,
@@ -2283,8 +2283,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goliath_saddle": {
     "dir_count": 1,
@@ -2300,8 +2300,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "construction_drone_off": {
     "dir_count": 4,
@@ -2364,8 +2364,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "construction_drone": {
     "dir_count": 4,
@@ -2428,8 +2428,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "construction_drone_movement": {
     "dir_count": 4,
@@ -2532,7 +2532,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

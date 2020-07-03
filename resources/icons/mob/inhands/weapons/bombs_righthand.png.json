@@ -41,7 +41,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "ttv": {
     "dir_count": 4,
@@ -85,7 +85,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "plastic-explosive": {
     "dir_count": 4,
@@ -129,7 +129,7 @@
         ]
       }
     },
-    "tile_size": 32
+    
   },
   "plasticx4": {
     "dir_count": 4,
@@ -173,6 +173,6 @@
         ]
       }
     },
-    "tile_size": 32
+    
   }
 }

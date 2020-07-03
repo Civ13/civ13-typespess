@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leatherloincloth2": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leatherloincloth3": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "leatherloincloth4": {
     "dir_count": 4,
@@ -172,7 +172,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

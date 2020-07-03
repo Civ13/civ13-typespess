@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hierophant_club_beacon": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hierophant_club_ready": {
     "dir_count": 4,
@@ -188,8 +188,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hierophant_club_ready_beacon": {
     "dir_count": 4,
@@ -292,8 +292,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cleaving_saw": {
     "dir_count": 4,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cleaving_saw_open": {
     "dir_count": 4,
@@ -380,8 +380,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultblade": {
     "dir_count": 4,
@@ -484,8 +484,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultblade_down": {
     "dir_count": 4,
@@ -588,8 +588,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultbastard": {
     "dir_count": 4,
@@ -692,7 +692,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

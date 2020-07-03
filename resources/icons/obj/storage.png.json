@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "box": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alienbox": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hugbox": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "secbox": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndiebox": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clownbox": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "writing": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "writing_syndie": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "heart": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mousetrap": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glasses": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "donk_kit": {
     "dir_count": 1,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flashbang": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "handcuff": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringe": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "latex": {
     "dir_count": 1,
@@ -285,8 +285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sterile": {
     "dir_count": 1,
@@ -302,8 +302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "implant": {
     "dir_count": 1,
@@ -319,8 +319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "beaker": {
     "dir_count": 1,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bodybags": {
     "dir_count": 1,
@@ -353,8 +353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pillbox": {
     "dir_count": 1,
@@ -370,8 +370,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "disk_kit": {
     "dir_count": 1,
@@ -387,8 +387,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "light": {
     "dir_count": 1,
@@ -404,8 +404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lighttube": {
     "dir_count": 1,
@@ -421,8 +421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lightmixed": {
     "dir_count": 1,
@@ -438,8 +438,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "id": {
     "dir_count": 1,
@@ -455,8 +455,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pda": {
     "dir_count": 1,
@@ -472,8 +472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fruit": {
     "dir_count": 1,
@@ -489,8 +489,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "briefcase": {
     "dir_count": 1,
@@ -506,8 +506,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "idOld": {
     "dir_count": 1,
@@ -523,8 +523,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firstaid": {
     "dir_count": 1,
@@ -540,8 +540,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brute": {
     "dir_count": 1,
@@ -557,8 +557,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brute2": {
     "dir_count": 1,
@@ -574,8 +574,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ointment": {
     "dir_count": 1,
@@ -591,8 +591,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firefirstaid": {
     "dir_count": 1,
@@ -608,8 +608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "antitoxin": {
     "dir_count": 1,
@@ -625,8 +625,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "antitoxfirstaid": {
     "dir_count": 1,
@@ -642,8 +642,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "antitoxfirstaid2": {
     "dir_count": 1,
@@ -659,8 +659,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "antitoxfirstaid3": {
     "dir_count": 1,
@@ -676,8 +676,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "radfirstaid": {
     "dir_count": 1,
@@ -693,8 +693,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "radfirstaid2": {
     "dir_count": 1,
@@ -710,8 +710,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "radfirstaid3": {
     "dir_count": 1,
@@ -727,8 +727,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "purplefirstaid": {
     "dir_count": 1,
@@ -744,8 +744,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "o2": {
     "dir_count": 1,
@@ -761,8 +761,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bezerk": {
     "dir_count": 1,
@@ -778,8 +778,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "secure": {
     "dir_count": 1,
@@ -795,8 +795,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "safe": {
     "dir_count": 1,
@@ -812,8 +812,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "safe0": {
     "dir_count": 1,
@@ -829,8 +829,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "safeb": {
     "dir_count": 1,
@@ -851,8 +851,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "safespark": {
     "dir_count": 1,
@@ -883,8 +883,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clownpack": {
     "dir_count": 1,
@@ -900,8 +900,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medicalpack": {
     "dir_count": 1,
@@ -917,8 +917,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "securitypack": {
     "dir_count": 1,
@@ -934,8 +934,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "captainpack": {
     "dir_count": 1,
@@ -951,8 +951,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "moneybag": {
     "dir_count": 1,
@@ -968,8 +968,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deliverycrate": {
     "dir_count": 1,
@@ -985,8 +985,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deliverycloset": {
     "dir_count": 1,
@@ -1002,8 +1002,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deliverypackage5": {
     "dir_count": 1,
@@ -1019,8 +1019,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deliverypackage4": {
     "dir_count": 1,
@@ -1036,8 +1036,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deliverypackage3": {
     "dir_count": 1,
@@ -1053,8 +1053,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deliverypackage2": {
     "dir_count": 1,
@@ -1070,8 +1070,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deliverypackage1": {
     "dir_count": 1,
@@ -1087,8 +1087,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deliverybox": {
     "dir_count": 1,
@@ -1104,8 +1104,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftdeliverybox": {
     "dir_count": 1,
@@ -1121,8 +1121,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftdeliverycrate": {
     "dir_count": 1,
@@ -1138,8 +1138,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftdeliverycloset": {
     "dir_count": 1,
@@ -1155,8 +1155,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftdeliverypackage5": {
     "dir_count": 1,
@@ -1172,8 +1172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftdeliverypackage4": {
     "dir_count": 1,
@@ -1189,8 +1189,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftdeliverypackage3": {
     "dir_count": 1,
@@ -1206,8 +1206,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftdeliverypackage2": {
     "dir_count": 1,
@@ -1223,8 +1223,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftdeliverypackage1": {
     "dir_count": 1,
@@ -1240,8 +1240,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holdingpack": {
     "dir_count": 1,
@@ -1282,8 +1282,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brokenpack": {
     "dir_count": 1,
@@ -1299,8 +1299,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engiepack": {
     "dir_count": 1,
@@ -1316,8 +1316,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel": {
     "dir_count": 1,
@@ -1333,8 +1333,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trashbag_empty": {
     "dir_count": 1,
@@ -1350,8 +1350,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trashbag_small": {
     "dir_count": 1,
@@ -1367,8 +1367,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trashbag_mid": {
     "dir_count": 1,
@@ -1384,8 +1384,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trashbag_full": {
     "dir_count": 1,
@@ -1401,8 +1401,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lockbox+l": {
     "dir_count": 1,
@@ -1418,8 +1418,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lockbox": {
     "dir_count": 1,
@@ -1435,8 +1435,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lockbox+b": {
     "dir_count": 1,
@@ -1452,8 +1452,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cultpack": {
     "dir_count": 1,
@@ -1469,8 +1469,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trashbag": {
     "dir_count": 1,
@@ -1486,8 +1486,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftbag0": {
     "dir_count": 1,
@@ -1503,8 +1503,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftbag1": {
     "dir_count": 1,
@@ -1520,8 +1520,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "giftbag2": {
     "dir_count": 1,
@@ -1537,8 +1537,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wallet": {
     "dir_count": 1,
@@ -1554,8 +1554,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wallet_id": {
     "dir_count": 1,
@@ -1571,8 +1571,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wallet_gold": {
     "dir_count": 1,
@@ -1588,8 +1588,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wallet_silver": {
     "dir_count": 1,
@@ -1605,8 +1605,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wallet_centcom": {
     "dir_count": 1,
@@ -1622,8 +1622,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wallet_orange": {
     "dir_count": 1,
@@ -1639,8 +1639,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "evidence": {
     "dir_count": 1,
@@ -1656,8 +1656,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "evidenceobj": {
     "dir_count": 1,
@@ -1673,8 +1673,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medbriefcase": {
     "dir_count": 1,
@@ -1690,8 +1690,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "welderpack": {
     "dir_count": 1,
@@ -1707,8 +1707,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-eng": {
     "dir_count": 1,
@@ -1724,8 +1724,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-med": {
     "dir_count": 1,
@@ -1741,8 +1741,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-chem": {
     "dir_count": 1,
@@ -1758,8 +1758,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-gen": {
     "dir_count": 1,
@@ -1775,8 +1775,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-tox": {
     "dir_count": 1,
@@ -1792,8 +1792,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-vir": {
     "dir_count": 1,
@@ -1809,8 +1809,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-sec": {
     "dir_count": 1,
@@ -1826,8 +1826,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-cap": {
     "dir_count": 1,
@@ -1843,8 +1843,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-hyd": {
     "dir_count": 1,
@@ -1860,8 +1860,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-norm": {
     "dir_count": 1,
@@ -1877,8 +1877,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-flat": {
     "dir_count": 1,
@@ -1894,8 +1894,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-flat2": {
     "dir_count": 1,
@@ -1911,8 +1911,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "circuit": {
     "dir_count": 1,
@@ -1928,8 +1928,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medalbox+l": {
     "dir_count": 1,
@@ -1945,8 +1945,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medalbox": {
     "dir_count": 1,
@@ -1962,8 +1962,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medalboxopen": {
     "dir_count": 1,
@@ -1979,8 +1979,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medalboxopen+b": {
     "dir_count": 1,
@@ -1996,8 +1996,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medalbox+b": {
     "dir_count": 1,
@@ -2013,8 +2013,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medal-gold": {
     "dir_count": 1,
@@ -2030,8 +2030,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medal-plasma": {
     "dir_count": 1,
@@ -2047,8 +2047,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medal-silver": {
     "dir_count": 1,
@@ -2064,8 +2064,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medal": {
     "dir_count": 1,
@@ -2081,8 +2081,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "RPED": {
     "dir_count": 1,
@@ -2098,8 +2098,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mimepack": {
     "dir_count": 1,
@@ -2115,8 +2115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel": {
     "dir_count": 1,
@@ -2132,8 +2132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-syndie": {
     "dir_count": 1,
@@ -2149,8 +2149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-syndiemed": {
     "dir_count": 1,
@@ -2166,8 +2166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-syndieammo": {
     "dir_count": 1,
@@ -2183,8 +2183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-captain": {
     "dir_count": 1,
@@ -2200,8 +2200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-sec": {
     "dir_count": 1,
@@ -2217,8 +2217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-med": {
     "dir_count": 1,
@@ -2234,8 +2234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-eng": {
     "dir_count": 1,
@@ -2251,8 +2251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-clown": {
     "dir_count": 1,
@@ -2268,8 +2268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "duffel-drone": {
     "dir_count": 1,
@@ -2285,8 +2285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "botpack": {
     "dir_count": 1,
@@ -2302,8 +2302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chempack": {
     "dir_count": 1,
@@ -2319,8 +2319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "genepack": {
     "dir_count": 1,
@@ -2336,8 +2336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toxpack": {
     "dir_count": 1,
@@ -2353,8 +2353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "viropack": {
     "dir_count": 1,
@@ -2370,8 +2370,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "BS_RPED": {
     "dir_count": 1,
@@ -2422,8 +2422,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cyber_implants": {
     "dir_count": 1,
@@ -2439,8 +2439,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rubbershot_box": {
     "dir_count": 1,
@@ -2456,8 +2456,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lethalshot_box": {
     "dir_count": 1,
@@ -2473,8 +2473,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bannerpack": {
     "dir_count": 1,
@@ -2490,8 +2490,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bannerpack-red": {
     "dir_count": 1,
@@ -2507,8 +2507,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bannerpack-blue": {
     "dir_count": 1,
@@ -2524,8 +2524,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bible": {
     "dir_count": 1,
@@ -2541,8 +2541,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "koran": {
     "dir_count": 1,
@@ -2558,8 +2558,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "scrapbook": {
     "dir_count": 1,
@@ -2575,8 +2575,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "creeper": {
     "dir_count": 1,
@@ -2592,8 +2592,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "white": {
     "dir_count": 1,
@@ -2609,8 +2609,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holylight": {
     "dir_count": 1,
@@ -2626,8 +2626,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "atheist": {
     "dir_count": 1,
@@ -2643,8 +2643,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tome": {
     "dir_count": 1,
@@ -2660,8 +2660,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kingyellow": {
     "dir_count": 1,
@@ -2677,8 +2677,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ithaqua": {
     "dir_count": 1,
@@ -2694,8 +2694,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "scientology": {
     "dir_count": 1,
@@ -2736,8 +2736,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "melted": {
     "dir_count": 1,
@@ -2753,8 +2753,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "necronomicon": {
     "dir_count": 1,
@@ -2770,8 +2770,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "burning": {
     "dir_count": 1,
@@ -2807,8 +2807,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "honk1": {
     "dir_count": 1,
@@ -2824,8 +2824,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "honk2": {
     "dir_count": 1,
@@ -2841,8 +2841,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_None": {
     "dir_count": 1,
@@ -2858,8 +2858,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_None_closed": {
     "dir_count": 1,
@@ -2875,8 +2875,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_NanotrasenStandard": {
     "dir_count": 1,
@@ -2892,8 +2892,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_NanotrasenStandard_closed": {
     "dir_count": 1,
@@ -2909,8 +2909,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_SyndiSnacks": {
     "dir_count": 1,
@@ -2926,8 +2926,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_SyndiSnacks_closed": {
     "dir_count": 1,
@@ -2943,8 +2943,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_Heart": {
     "dir_count": 1,
@@ -2960,8 +2960,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_Heart_closed": {
     "dir_count": 1,
@@ -2977,8 +2977,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_SmileyFace": {
     "dir_count": 1,
@@ -2994,8 +2994,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperbag_SmileyFace_closed": {
     "dir_count": 1,
@@ -3011,8 +3011,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "satchel-explorer": {
     "dir_count": 1,
@@ -3028,8 +3028,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "explorerpack": {
     "dir_count": 1,
@@ -3045,8 +3045,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brassbox": {
     "dir_count": 1,
@@ -3062,8 +3062,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "quiver": {
     "dir_count": 1,
@@ -3079,8 +3079,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hlquiver0": {
     "dir_count": 1,
@@ -3096,8 +3096,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hlquiver1": {
     "dir_count": 1,
@@ -3113,8 +3113,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hlquiver2": {
     "dir_count": 1,
@@ -3130,8 +3130,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hlquiver3": {
     "dir_count": 1,
@@ -3147,8 +3147,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toolbox_red_old": {
     "dir_count": 1,
@@ -3164,8 +3164,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toolbox_blue_old": {
     "dir_count": 1,
@@ -3181,8 +3181,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gold": {
     "dir_count": 1,
@@ -3283,8 +3283,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicate": {
     "dir_count": 1,
@@ -3300,8 +3300,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "red": {
     "dir_count": 1,
@@ -3317,8 +3317,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "yellow": {
     "dir_count": 1,
@@ -3334,8 +3334,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blue": {
     "dir_count": 1,
@@ -3351,8 +3351,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "green": {
     "dir_count": 1,
@@ -3368,8 +3368,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "single_latch": {
     "dir_count": 1,
@@ -3385,8 +3385,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "double_latch": {
     "dir_count": 1,
@@ -3402,8 +3402,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "triple_latch": {
     "dir_count": 1,
@@ -3419,8 +3419,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkeycubebox": {
     "dir_count": 1,
@@ -3436,8 +3436,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ebook": {
     "dir_count": 1,
@@ -3453,7 +3453,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

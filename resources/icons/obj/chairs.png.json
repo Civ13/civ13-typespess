@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chair": {
     "dir_count": 4,
@@ -57,8 +57,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "echair0": {
     "dir_count": 4,
@@ -101,8 +101,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "echair1": {
     "dir_count": 4,
@@ -145,8 +145,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "echair_over": {
     "dir_count": 4,
@@ -189,8 +189,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "echair_shock": {
     "dir_count": 4,
@@ -333,8 +333,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "officechair_white": {
     "dir_count": 4,
@@ -377,8 +377,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "officechair_dark": {
     "dir_count": 4,
@@ -421,8 +421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wooden_chair": {
     "dir_count": 4,
@@ -465,8 +465,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wooden_chair_toppled": {
     "dir_count": 4,
@@ -509,8 +509,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wooden_chair_wings": {
     "dir_count": 4,
@@ -553,8 +553,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wooden_chair_wings_toppled": {
     "dir_count": 4,
@@ -597,8 +597,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "comfychair": {
     "dir_count": 4,
@@ -641,8 +641,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "comfychair_armrest": {
     "dir_count": 4,
@@ -685,8 +685,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chair_toppled": {
     "dir_count": 4,
@@ -729,8 +729,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stool_toppled": {
     "dir_count": 4,
@@ -773,8 +773,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chairold": {
     "dir_count": 4,
@@ -817,8 +817,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bar": {
     "dir_count": 1,
@@ -834,8 +834,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bar_toppled": {
     "dir_count": 4,
@@ -878,8 +878,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chair_hades": {
     "dir_count": 1,
@@ -895,8 +895,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chair_hades_slide": {
     "dir_count": 1,
@@ -987,8 +987,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brass_chair": {
     "dir_count": 4,
@@ -1031,7 +1031,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

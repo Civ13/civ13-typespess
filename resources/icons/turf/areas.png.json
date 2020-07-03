@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bridge": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "meeting": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bridge_hallway": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "unknown": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engine": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "SolarcontrolFP": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "SolarcontrolAS": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "SolarcontrolAP": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "panelsFS": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "panelsFP": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "panelsAS": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "panelsAP": {
     "dir_count": 1,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "SolarcontrolFS": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "prototype_engine": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engine_control": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engine_monitoring": {
     "dir_count": 1,
@@ -285,8 +285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teleporter": {
     "dir_count": 1,
@@ -302,8 +302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chapel": {
     "dir_count": 1,
@@ -319,8 +319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chapeloffice": {
     "dir_count": 1,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engine_storage": {
     "dir_count": 1,
@@ -353,8 +353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engine_hallway": {
     "dir_count": 1,
@@ -370,8 +370,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "yellow": {
     "dir_count": 1,
@@ -387,8 +387,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ass_line": {
     "dir_count": 1,
@@ -404,8 +404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "green": {
     "dir_count": 1,
@@ -421,8 +421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "security": {
     "dir_count": 1,
@@ -438,8 +438,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sec_prison": {
     "dir_count": 1,
@@ -455,8 +455,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sec_hos": {
     "dir_count": 1,
@@ -472,8 +472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "security_sub": {
     "dir_count": 1,
@@ -489,8 +489,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toxlab": {
     "dir_count": 1,
@@ -506,8 +506,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toxstorage": {
     "dir_count": 1,
@@ -523,8 +523,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toxtest": {
     "dir_count": 1,
@@ -540,8 +540,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toxmisc": {
     "dir_count": 1,
@@ -557,8 +557,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chem": {
     "dir_count": 1,
@@ -574,8 +574,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "decontamination": {
     "dir_count": 1,
@@ -591,8 +591,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crew_quarters": {
     "dir_count": 1,
@@ -608,8 +608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medresearch": {
     "dir_count": 1,
@@ -625,8 +625,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mechbay": {
     "dir_count": 1,
@@ -642,8 +642,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morgue": {
     "dir_count": 1,
@@ -659,8 +659,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "storage": {
     "dir_count": 1,
@@ -676,8 +676,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "storage_wing": {
     "dir_count": 1,
@@ -693,8 +693,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shuttle": {
     "dir_count": 1,
@@ -710,8 +710,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "exit": {
     "dir_count": 1,
@@ -727,8 +727,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "start": {
     "dir_count": 1,
@@ -744,8 +744,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dk_yellow": {
     "dir_count": 1,
@@ -761,8 +761,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "purple": {
     "dir_count": 1,
@@ -778,8 +778,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bar": {
     "dir_count": 1,
@@ -795,8 +795,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cafeteria": {
     "dir_count": 1,
@@ -812,8 +812,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "conference": {
     "dir_count": 1,
@@ -829,8 +829,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "restrooms": {
     "dir_count": 1,
@@ -846,8 +846,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "observatory": {
     "dir_count": 1,
@@ -863,8 +863,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "atmos": {
     "dir_count": 1,
@@ -880,8 +880,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shuttle2": {
     "dir_count": 1,
@@ -897,8 +897,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shuttle3": {
     "dir_count": 1,
@@ -914,8 +914,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brig": {
     "dir_count": 1,
@@ -931,8 +931,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armory": {
     "dir_count": 1,
@@ -948,8 +948,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "captain": {
     "dir_count": 1,
@@ -965,8 +965,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "courtroom": {
     "dir_count": 1,
@@ -982,8 +982,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ai_upload": {
     "dir_count": 1,
@@ -999,8 +999,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ai_foyer": {
     "dir_count": 1,
@@ -1016,8 +1016,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ai_chamber": {
     "dir_count": 1,
@@ -1033,8 +1033,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "detective": {
     "dir_count": 1,
@@ -1050,8 +1050,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "checkpoint1": {
     "dir_count": 1,
@@ -1067,8 +1067,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "eva": {
     "dir_count": 1,
@@ -1084,8 +1084,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kitchen": {
     "dir_count": 1,
@@ -1101,8 +1101,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medbay": {
     "dir_count": 1,
@@ -1118,8 +1118,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medbay2": {
     "dir_count": 1,
@@ -1135,8 +1135,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medbay3": {
     "dir_count": 1,
@@ -1152,8 +1152,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "primarystorage": {
     "dir_count": 1,
@@ -1169,8 +1169,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "panelsS": {
     "dir_count": 1,
@@ -1186,8 +1186,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "panelsP": {
     "dir_count": 1,
@@ -1203,8 +1203,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "SolarcontrolS": {
     "dir_count": 1,
@@ -1220,8 +1220,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "SolarcontrolP": {
     "dir_count": 1,
@@ -1237,8 +1237,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "construction": {
     "dir_count": 1,
@@ -1254,8 +1254,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "auxstorage": {
     "dir_count": 1,
@@ -1271,8 +1271,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "emergencystorage": {
     "dir_count": 1,
@@ -1288,8 +1288,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "locker": {
     "dir_count": 1,
@@ -1305,8 +1305,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fitness": {
     "dir_count": 1,
@@ -1322,8 +1322,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "head_quarters": {
     "dir_count": 1,
@@ -1339,8 +1339,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "maintcentral": {
     "dir_count": 1,
@@ -1356,8 +1356,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fsmaint": {
     "dir_count": 1,
@@ -1373,8 +1373,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fmaint": {
     "dir_count": 1,
@@ -1390,8 +1390,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fmaint_2": {
     "dir_count": 1,
@@ -1407,8 +1407,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fpmaint": {
     "dir_count": 1,
@@ -1424,8 +1424,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pmaint": {
     "dir_count": 1,
@@ -1441,8 +1441,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "apmaint": {
     "dir_count": 1,
@@ -1458,8 +1458,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smaint": {
     "dir_count": 1,
@@ -1475,8 +1475,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "amaint": {
     "dir_count": 1,
@@ -1492,8 +1492,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "amaint_2": {
     "dir_count": 1,
@@ -1509,8 +1509,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "asmaint": {
     "dir_count": 1,
@@ -1526,8 +1526,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morgue_maint": {
     "dir_count": 1,
@@ -1543,8 +1543,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "medbay_maint": {
     "dir_count": 1,
@@ -1560,8 +1560,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hallC": {
     "dir_count": 1,
@@ -1577,8 +1577,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hallF": {
     "dir_count": 1,
@@ -1594,8 +1594,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hallS": {
     "dir_count": 1,
@@ -1611,8 +1611,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hallA": {
     "dir_count": 1,
@@ -1628,8 +1628,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hallP": {
     "dir_count": 1,
@@ -1645,8 +1645,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hallFP": {
     "dir_count": 1,
@@ -1662,8 +1662,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hallAS": {
     "dir_count": 1,
@@ -1679,8 +1679,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hallAP": {
     "dir_count": 1,
@@ -1696,8 +1696,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hallFS": {
     "dir_count": 1,
@@ -1713,8 +1713,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "escape": {
     "dir_count": 1,
@@ -1730,8 +1730,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "entry": {
     "dir_count": 1,
@@ -1747,8 +1747,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "escape_lounge": {
     "dir_count": 1,
@@ -1764,8 +1764,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hall_service": {
     "dir_count": 1,
@@ -1781,8 +1781,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "quart": {
     "dir_count": 1,
@@ -1798,8 +1798,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "quartoffice": {
     "dir_count": 1,
@@ -1815,8 +1815,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "quartstorage": {
     "dir_count": 1,
@@ -1832,8 +1832,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cargo_bay": {
     "dir_count": 1,
@@ -1849,8 +1849,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cargo_delivery": {
     "dir_count": 1,
@@ -1866,8 +1866,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cargo_warehouse": {
     "dir_count": 1,
@@ -1883,8 +1883,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "janitor": {
     "dir_count": 1,
@@ -1900,8 +1900,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ai": {
     "dir_count": 1,
@@ -1917,8 +1917,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "disposal": {
     "dir_count": 1,
@@ -1934,8 +1934,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mining": {
     "dir_count": 1,
@@ -1951,8 +1951,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mining_production": {
     "dir_count": 1,
@@ -1968,8 +1968,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mining_eva": {
     "dir_count": 1,
@@ -1985,8 +1985,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mining_living": {
     "dir_count": 1,
@@ -2002,8 +2002,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "explored": {
     "dir_count": 1,
@@ -2019,8 +2019,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "unexplored": {
     "dir_count": 1,
@@ -2036,8 +2036,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "danger": {
     "dir_count": 1,
@@ -2053,8 +2053,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cave": {
     "dir_count": 1,
@@ -2070,8 +2070,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hydro": {
     "dir_count": 1,
@@ -2087,8 +2087,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "library": {
     "dir_count": 1,
@@ -2104,8 +2104,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "law": {
     "dir_count": 1,
@@ -2121,8 +2121,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toxmix": {
     "dir_count": 1,
@@ -2138,8 +2138,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shuttlegrn": {
     "dir_count": 1,
@@ -2155,8 +2155,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shuttlegrn2": {
     "dir_count": 1,
@@ -2172,8 +2172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shuttlered": {
     "dir_count": 1,
@@ -2189,8 +2189,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shuttlered2": {
     "dir_count": 1,
@@ -2206,8 +2206,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nuke_storage": {
     "dir_count": 1,
@@ -2223,8 +2223,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "virology": {
     "dir_count": 1,
@@ -2240,8 +2240,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "CMO": {
     "dir_count": 1,
@@ -2257,8 +2257,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Warden": {
     "dir_count": 1,
@@ -2274,8 +2274,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "panelsA": {
     "dir_count": 1,
@@ -2291,8 +2291,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Sleep": {
     "dir_count": 1,
@@ -2308,8 +2308,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "SolarcontrolA": {
     "dir_count": 1,
@@ -2325,8 +2325,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toilet": {
     "dir_count": 1,
@@ -2342,8 +2342,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "DJ": {
     "dir_count": 1,
@@ -2359,8 +2359,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "showroom": {
     "dir_count": 1,
@@ -2376,8 +2376,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Theatre": {
     "dir_count": 1,
@@ -2393,8 +2393,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "exam_room": {
     "dir_count": 1,
@@ -2410,8 +2410,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "surgery": {
     "dir_count": 1,
@@ -2427,8 +2427,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "genetics": {
     "dir_count": 1,
@@ -2444,8 +2444,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cloning": {
     "dir_count": 1,
@@ -2461,8 +2461,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "server": {
     "dir_count": 1,
@@ -2478,8 +2478,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engine_smes": {
     "dir_count": 1,
@@ -2495,8 +2495,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "thunder": {
     "dir_count": 1,
@@ -2512,8 +2512,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "centcom": {
     "dir_count": 1,
@@ -2529,8 +2529,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cryo": {
     "dir_count": 1,
@@ -2546,8 +2546,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "patients": {
     "dir_count": 1,
@@ -2563,8 +2563,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndie-ship": {
     "dir_count": 1,
@@ -2580,8 +2580,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndie-control": {
     "dir_count": 1,
@@ -2597,8 +2597,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndie-elite": {
     "dir_count": 1,
@@ -2614,8 +2614,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firingrange": {
     "dir_count": 1,
@@ -2631,8 +2631,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tcomsatcham": {
     "dir_count": 1,
@@ -2648,8 +2648,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tcomsatentrance": {
     "dir_count": 1,
@@ -2665,8 +2665,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tcomsatlob": {
     "dir_count": 1,
@@ -2682,8 +2682,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tcomsatstore": {
     "dir_count": 1,
@@ -2699,8 +2699,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tcomsateast": {
     "dir_count": 1,
@@ -2716,8 +2716,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tcomsatwest": {
     "dir_count": 1,
@@ -2733,8 +2733,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tcomsatcomp": {
     "dir_count": 1,
@@ -2750,8 +2750,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tcomsatlounge": {
     "dir_count": 1,
@@ -2767,8 +2767,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Holodeck": {
     "dir_count": 1,
@@ -2784,8 +2784,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "away": {
     "dir_count": 1,
@@ -2801,8 +2801,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "away1": {
     "dir_count": 1,
@@ -2818,8 +2818,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "away2": {
     "dir_count": 1,
@@ -2835,8 +2835,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "away3": {
     "dir_count": 1,
@@ -2852,8 +2852,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "away4": {
     "dir_count": 1,
@@ -2869,8 +2869,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "red2": {
     "dir_count": 1,
@@ -2886,8 +2886,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blue2": {
     "dir_count": 1,
@@ -2903,8 +2903,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blue-red2": {
     "dir_count": 1,
@@ -2920,8 +2920,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blue-red-d": {
     "dir_count": 1,
@@ -2937,8 +2937,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blue-red": {
     "dir_count": 1,
@@ -2959,8 +2959,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "invi": {
     "dir_count": 1,
@@ -2976,8 +2976,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blueold": {
     "dir_count": 1,
@@ -2998,8 +2998,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "red": {
     "dir_count": 1,
@@ -3030,8 +3030,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dark": {
     "dir_count": 1,
@@ -3047,8 +3047,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dark160": {
     "dir_count": 1,
@@ -3064,8 +3064,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dark128": {
     "dir_count": 1,
@@ -3081,8 +3081,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "party": {
     "dir_count": 1,
@@ -3133,8 +3133,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blue": {
     "dir_count": 1,
@@ -3165,8 +3165,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bluenew": {
     "dir_count": 1,
@@ -3187,8 +3187,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "north": {
     "dir_count": 1,
@@ -3204,8 +3204,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "northeast": {
     "dir_count": 1,
@@ -3221,8 +3221,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "northwest": {
     "dir_count": 1,
@@ -3238,8 +3238,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "south": {
     "dir_count": 1,
@@ -3255,8 +3255,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "southeast": {
     "dir_count": 1,
@@ -3272,8 +3272,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "southwest": {
     "dir_count": 1,
@@ -3289,8 +3289,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "east": {
     "dir_count": 1,
@@ -3306,8 +3306,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "west": {
     "dir_count": 1,
@@ -3323,8 +3323,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "telesci": {
     "dir_count": 1,
@@ -3340,8 +3340,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "space": {
     "dir_count": 1,
@@ -3357,8 +3357,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "space_near": {
     "dir_count": 1,
@@ -3374,8 +3374,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent1": {
     "dir_count": 1,
@@ -3391,8 +3391,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent2": {
     "dir_count": 1,
@@ -3408,8 +3408,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent3": {
     "dir_count": 1,
@@ -3425,8 +3425,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent4": {
     "dir_count": 1,
@@ -3442,8 +3442,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent5": {
     "dir_count": 1,
@@ -3459,8 +3459,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent6": {
     "dir_count": 1,
@@ -3476,8 +3476,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent7": {
     "dir_count": 1,
@@ -3493,8 +3493,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent8": {
     "dir_count": 1,
@@ -3510,8 +3510,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent9": {
     "dir_count": 1,
@@ -3527,8 +3527,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent10": {
     "dir_count": 1,
@@ -3544,8 +3544,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent11": {
     "dir_count": 1,
@@ -3561,8 +3561,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent12": {
     "dir_count": 1,
@@ -3578,8 +3578,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent13": {
     "dir_count": 1,
@@ -3595,8 +3595,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent14": {
     "dir_count": 1,
@@ -3612,8 +3612,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent15": {
     "dir_count": 1,
@@ -3629,8 +3629,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent16": {
     "dir_count": 1,
@@ -3646,8 +3646,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent17": {
     "dir_count": 1,
@@ -3663,8 +3663,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent18": {
     "dir_count": 1,
@@ -3680,8 +3680,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent19": {
     "dir_count": 1,
@@ -3697,8 +3697,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent20": {
     "dir_count": 1,
@@ -3714,8 +3714,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent21": {
     "dir_count": 1,
@@ -3731,8 +3731,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent22": {
     "dir_count": 1,
@@ -3748,8 +3748,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent23": {
     "dir_count": 1,
@@ -3765,8 +3765,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent24": {
     "dir_count": 1,
@@ -3782,8 +3782,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent25": {
     "dir_count": 1,
@@ -3799,8 +3799,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent26": {
     "dir_count": 1,
@@ -3816,8 +3816,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent27": {
     "dir_count": 1,
@@ -3833,8 +3833,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent28": {
     "dir_count": 1,
@@ -3850,8 +3850,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent29": {
     "dir_count": 1,
@@ -3867,8 +3867,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "spacecontent30": {
     "dir_count": 1,
@@ -3884,8 +3884,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent1": {
     "dir_count": 1,
@@ -3901,8 +3901,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent2": {
     "dir_count": 1,
@@ -3918,8 +3918,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent3": {
     "dir_count": 1,
@@ -3935,8 +3935,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent4": {
     "dir_count": 1,
@@ -3952,8 +3952,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent5": {
     "dir_count": 1,
@@ -3969,8 +3969,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent6": {
     "dir_count": 1,
@@ -3986,8 +3986,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent7": {
     "dir_count": 1,
@@ -4003,8 +4003,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent8": {
     "dir_count": 1,
@@ -4020,8 +4020,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent9": {
     "dir_count": 1,
@@ -4037,8 +4037,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent10": {
     "dir_count": 1,
@@ -4054,8 +4054,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent11": {
     "dir_count": 1,
@@ -4071,8 +4071,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent12": {
     "dir_count": 1,
@@ -4088,8 +4088,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent13": {
     "dir_count": 1,
@@ -4105,8 +4105,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent14": {
     "dir_count": 1,
@@ -4122,8 +4122,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent15": {
     "dir_count": 1,
@@ -4139,8 +4139,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent16": {
     "dir_count": 1,
@@ -4156,8 +4156,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent17": {
     "dir_count": 1,
@@ -4173,8 +4173,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent18": {
     "dir_count": 1,
@@ -4190,8 +4190,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent19": {
     "dir_count": 1,
@@ -4207,8 +4207,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent20": {
     "dir_count": 1,
@@ -4224,8 +4224,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent21": {
     "dir_count": 1,
@@ -4241,8 +4241,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent22": {
     "dir_count": 1,
@@ -4258,8 +4258,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent23": {
     "dir_count": 1,
@@ -4275,8 +4275,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent24": {
     "dir_count": 1,
@@ -4292,8 +4292,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent25": {
     "dir_count": 1,
@@ -4309,8 +4309,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent26": {
     "dir_count": 1,
@@ -4326,8 +4326,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent27": {
     "dir_count": 1,
@@ -4343,8 +4343,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent28": {
     "dir_count": 1,
@@ -4360,8 +4360,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent29": {
     "dir_count": 1,
@@ -4377,8 +4377,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "awaycontent30": {
     "dir_count": 1,
@@ -4394,8 +4394,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engine_sm": {
     "dir_count": 1,
@@ -4411,8 +4411,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "xenomaint": {
     "dir_count": 1,
@@ -4428,8 +4428,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "execution_room": {
     "dir_count": 1,
@@ -4445,8 +4445,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "garden": {
     "dir_count": 1,
@@ -4462,8 +4462,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ce_office": {
     "dir_count": 1,
@@ -4479,8 +4479,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ce_private": {
     "dir_count": 1,
@@ -4496,8 +4496,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cmo_office": {
     "dir_count": 1,
@@ -4513,8 +4513,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cmo_private": {
     "dir_count": 1,
@@ -4530,8 +4530,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hop_office": {
     "dir_count": 1,
@@ -4547,8 +4547,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hop_private": {
     "dir_count": 1,
@@ -4564,8 +4564,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hos_office": {
     "dir_count": 1,
@@ -4581,8 +4581,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hos_private": {
     "dir_count": 1,
@@ -4598,8 +4598,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rd_office": {
     "dir_count": 1,
@@ -4615,8 +4615,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rd_private": {
     "dir_count": 1,
@@ -4632,8 +4632,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grav_gen": {
     "dir_count": 1,
@@ -4649,8 +4649,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engi_storage": {
     "dir_count": 1,
@@ -4666,8 +4666,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "transit_tube": {
     "dir_count": 1,
@@ -4683,8 +4683,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "engine_foyer": {
     "dir_count": 1,
@@ -4700,8 +4700,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "atmos_engine": {
     "dir_count": 1,
@@ -4717,8 +4717,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "abandoned_garden": {
     "dir_count": 1,
@@ -4734,8 +4734,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "origin_marker": {
     "dir_count": 1,
@@ -4751,7 +4751,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

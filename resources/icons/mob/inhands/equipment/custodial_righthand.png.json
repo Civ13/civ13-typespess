@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mop": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bucket": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "caution": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "trashbag": {
     "dir_count": 4,
@@ -216,8 +216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smmop": {
     "dir_count": 4,
@@ -280,8 +280,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advmop": {
     "dir_count": 4,
@@ -324,7 +324,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

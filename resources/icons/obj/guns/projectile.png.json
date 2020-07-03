@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mateba": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "detective": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "detective_panther": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "detective_leopard": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "detective_gold": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "detective_peacemaker": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotgun": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cshotgun": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cshotgunc": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "riotshotgun": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "riotshotgun-sawn": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun": {
     "dir_count": 1,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-sawn": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saber": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saber-e": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saber-21": {
     "dir_count": 1,
@@ -285,8 +285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saber-21-e": {
     "dir_count": 1,
@@ -302,8 +302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saber-suppressed": {
     "dir_count": 1,
@@ -319,8 +319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saber-e-suppressed": {
     "dir_count": 1,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saber-21-suppressed": {
     "dir_count": 1,
@@ -353,8 +353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saber-21-e-suppressed": {
     "dir_count": 1,
@@ -370,8 +370,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chemsprayer": {
     "dir_count": 1,
@@ -387,8 +387,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r": {
     "dir_count": 1,
@@ -404,8 +404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-e": {
     "dir_count": 1,
@@ -421,8 +421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-24": {
     "dir_count": 1,
@@ -438,8 +438,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-20": {
     "dir_count": 1,
@@ -455,8 +455,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-16": {
     "dir_count": 1,
@@ -472,8 +472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-12": {
     "dir_count": 1,
@@ -489,8 +489,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-8": {
     "dir_count": 1,
@@ -506,8 +506,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-4": {
     "dir_count": 1,
@@ -523,8 +523,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-0": {
     "dir_count": 1,
@@ -540,8 +540,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-0-e": {
     "dir_count": 1,
@@ -557,8 +557,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-suppressed": {
     "dir_count": 1,
@@ -574,8 +574,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-e-suppressed": {
     "dir_count": 1,
@@ -591,8 +591,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-24-suppressed": {
     "dir_count": 1,
@@ -608,8 +608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-20-suppressed": {
     "dir_count": 1,
@@ -625,8 +625,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-16-suppressed": {
     "dir_count": 1,
@@ -642,8 +642,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-12-suppressed": {
     "dir_count": 1,
@@ -659,8 +659,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-8-suppressed": {
     "dir_count": 1,
@@ -676,8 +676,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-4-suppressed": {
     "dir_count": 1,
@@ -693,8 +693,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-0-suppressed": {
     "dir_count": 1,
@@ -710,8 +710,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r-0-e-suppressed": {
     "dir_count": 1,
@@ -727,8 +727,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "riotgun": {
     "dir_count": 1,
@@ -744,8 +744,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gyropistol": {
     "dir_count": 1,
@@ -761,8 +761,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gyropistolloaded": {
     "dir_count": 1,
@@ -778,8 +778,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6closed-empty": {
     "dir_count": 1,
@@ -795,8 +795,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6closed100": {
     "dir_count": 1,
@@ -812,8 +812,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6closed75": {
     "dir_count": 1,
@@ -829,8 +829,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6closed50": {
     "dir_count": 1,
@@ -846,8 +846,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6closed25": {
     "dir_count": 1,
@@ -863,8 +863,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6closed0": {
     "dir_count": 1,
@@ -880,8 +880,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6open-empty": {
     "dir_count": 1,
@@ -897,8 +897,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6open100": {
     "dir_count": 1,
@@ -914,8 +914,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6open75": {
     "dir_count": 1,
@@ -931,8 +931,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6open50": {
     "dir_count": 1,
@@ -948,8 +948,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6open25": {
     "dir_count": 1,
@@ -965,8 +965,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6open0": {
     "dir_count": 1,
@@ -982,8 +982,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pistol": {
     "dir_count": 1,
@@ -999,8 +999,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pistol-e": {
     "dir_count": 1,
@@ -1016,8 +1016,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pistol-suppressed": {
     "dir_count": 1,
@@ -1033,8 +1033,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pistol-e-suppressed": {
     "dir_count": 1,
@@ -1050,8 +1050,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "suppressor": {
     "dir_count": 1,
@@ -1067,8 +1067,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tommygun-50": {
     "dir_count": 1,
@@ -1084,8 +1084,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tommygun-50-e": {
     "dir_count": 1,
@@ -1101,8 +1101,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tommygun": {
     "dir_count": 1,
@@ -1118,8 +1118,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tommygun-e": {
     "dir_count": 1,
@@ -1135,8 +1135,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bulldog": {
     "dir_count": 1,
@@ -1152,8 +1152,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bulldog-e": {
     "dir_count": 1,
@@ -1174,8 +1174,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m12gb-8": {
     "dir_count": 1,
@@ -1191,8 +1191,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m12gb-0": {
     "dir_count": 1,
@@ -1208,8 +1208,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m12gs-8": {
     "dir_count": 1,
@@ -1225,8 +1225,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m12gs-0": {
     "dir_count": 1,
@@ -1242,8 +1242,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m12gbc-8": {
     "dir_count": 1,
@@ -1259,8 +1259,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m12gbc-0": {
     "dir_count": 1,
@@ -1276,8 +1276,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ishotgun-sawn": {
     "dir_count": 1,
@@ -1293,8 +1293,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ishotgun": {
     "dir_count": 1,
@@ -1310,8 +1310,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ishotgunsling": {
     "dir_count": 1,
@@ -1327,8 +1327,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m1911": {
     "dir_count": 1,
@@ -1344,8 +1344,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m1911-e": {
     "dir_count": 1,
@@ -1361,8 +1361,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sabersemi": {
     "dir_count": 1,
@@ -1378,8 +1378,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "saberburst": {
     "dir_count": 1,
@@ -1395,8 +1395,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20rsemi": {
     "dir_count": 1,
@@ -1412,8 +1412,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20rburst": {
     "dir_count": 1,
@@ -1429,8 +1429,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tommygunsemi": {
     "dir_count": 1,
@@ -1446,8 +1446,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tommygunburst": {
     "dir_count": 1,
@@ -1463,8 +1463,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bulldogsemi": {
     "dir_count": 1,
@@ -1480,8 +1480,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bulldogburst": {
     "dir_count": 1,
@@ -1497,8 +1497,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m90-e": {
     "dir_count": 1,
@@ -1519,8 +1519,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m90": {
     "dir_count": 1,
@@ -1536,8 +1536,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m90semi": {
     "dir_count": 1,
@@ -1553,8 +1553,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m90burst": {
     "dir_count": 1,
@@ -1570,8 +1570,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m90gren": {
     "dir_count": 1,
@@ -1587,8 +1587,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "moistnugget": {
     "dir_count": 1,
@@ -1604,8 +1604,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "speargun": {
     "dir_count": 1,
@@ -1621,8 +1621,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringegun": {
     "dir_count": 1,
@@ -1638,8 +1638,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rapidsyringegun": {
     "dir_count": 1,
@@ -1655,8 +1655,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-d": {
     "dir_count": 1,
@@ -1672,8 +1672,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-f": {
     "dir_count": 1,
@@ -1689,8 +1689,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-g": {
     "dir_count": 1,
@@ -1706,8 +1706,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-l": {
     "dir_count": 1,
@@ -1723,8 +1723,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-p": {
     "dir_count": 1,
@@ -1740,8 +1740,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-d-sawn": {
     "dir_count": 1,
@@ -1757,8 +1757,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-f-sawn": {
     "dir_count": 1,
@@ -1774,8 +1774,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-g-sawn": {
     "dir_count": 1,
@@ -1791,8 +1791,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-l-sawn": {
     "dir_count": 1,
@@ -1808,8 +1808,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dshotgun-p-sawn": {
     "dir_count": 1,
@@ -1825,8 +1825,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "arg-e": {
     "dir_count": 1,
@@ -1842,8 +1842,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "arg-30": {
     "dir_count": 1,
@@ -1859,8 +1859,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "arg-30-e": {
     "dir_count": 1,
@@ -1876,8 +1876,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "arg": {
     "dir_count": 1,
@@ -1893,8 +1893,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mini-uzi-e": {
     "dir_count": 1,
@@ -1910,8 +1910,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mini-uzi": {
     "dir_count": 1,
@@ -1927,8 +1927,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mini-uzi-32-e": {
     "dir_count": 1,
@@ -1944,8 +1944,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mini-uzi-32": {
     "dir_count": 1,
@@ -1961,8 +1961,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mini-uz-e-suppressed": {
     "dir_count": 1,
@@ -1978,8 +1978,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mini-uzi-suppressed": {
     "dir_count": 1,
@@ -1995,8 +1995,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mini-uzi-32-e-suppressed": {
     "dir_count": 1,
@@ -2012,8 +2012,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mini-uzi-32-suppressed": {
     "dir_count": 1,
@@ -2029,8 +2029,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m12gt-8": {
     "dir_count": 1,
@@ -2046,8 +2046,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m12gt-0": {
     "dir_count": 1,
@@ -2063,8 +2063,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle": {
     "dir_count": 1,
@@ -2085,8 +2085,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle-e": {
     "dir_count": 1,
@@ -2107,8 +2107,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle-32": {
     "dir_count": 1,
@@ -2129,8 +2129,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle-32-e": {
     "dir_count": 1,
@@ -2151,8 +2151,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle-20": {
     "dir_count": 1,
@@ -2173,8 +2173,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle-16": {
     "dir_count": 1,
@@ -2195,8 +2195,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle-12": {
     "dir_count": 1,
@@ -2217,8 +2217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle-8": {
     "dir_count": 1,
@@ -2239,8 +2239,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle-4": {
     "dir_count": 1,
@@ -2261,8 +2261,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "oldrifle-0": {
     "dir_count": 1,
@@ -2283,8 +2283,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringe_pistol": {
     "dir_count": 1,
@@ -2300,8 +2300,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wt550": {
     "dir_count": 1,
@@ -2322,8 +2322,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wt550-20": {
     "dir_count": 1,
@@ -2344,8 +2344,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wt550-16": {
     "dir_count": 1,
@@ -2366,8 +2366,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wt550-12": {
     "dir_count": 1,
@@ -2388,8 +2388,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wt550-8": {
     "dir_count": 1,
@@ -2410,8 +2410,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wt550-4": {
     "dir_count": 1,
@@ -2432,8 +2432,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wt550-0": {
     "dir_count": 1,
@@ -2454,8 +2454,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "secpistol": {
     "dir_count": 1,
@@ -2471,8 +2471,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sniper": {
     "dir_count": 1,
@@ -2488,8 +2488,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sniper-mag": {
     "dir_count": 1,
@@ -2505,8 +2505,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goldrevolver": {
     "dir_count": 1,
@@ -2522,8 +2522,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nagant": {
     "dir_count": 1,
@@ -2539,8 +2539,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nagant-suppressed": {
     "dir_count": 1,
@@ -2556,8 +2556,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "aps": {
     "dir_count": 1,
@@ -2573,8 +2573,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "aps-e": {
     "dir_count": 1,
@@ -2590,8 +2590,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cycler": {
     "dir_count": 1,
@@ -2607,8 +2607,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flatgun": {
     "dir_count": 1,
@@ -2624,8 +2624,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bow_unloaded": {
     "dir_count": 1,
@@ -2641,8 +2641,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bow_loaded": {
     "dir_count": 1,
@@ -2658,8 +2658,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bow_firing": {
     "dir_count": 1,
@@ -2675,8 +2675,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bow_hardlight_unloaded": {
     "dir_count": 1,
@@ -2692,8 +2692,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bow_hardlight_loaded": {
     "dir_count": 1,
@@ -2709,8 +2709,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bow_hardlight_firing": {
     "dir_count": 1,
@@ -2726,8 +2726,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "arcane_barrage": {
     "dir_count": 1,
@@ -2743,8 +2743,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rocketlauncher": {
     "dir_count": 1,
@@ -2760,8 +2760,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rocketlauncher-1": {
     "dir_count": 1,
@@ -2777,8 +2777,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rocketlauncher-0": {
     "dir_count": 1,
@@ -2794,8 +2794,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deagle_magazine": {
     "dir_count": 1,
@@ -2811,8 +2811,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deagle": {
     "dir_count": 1,
@@ -2828,8 +2828,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deagle-e": {
     "dir_count": 1,
@@ -2845,8 +2845,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deagleg": {
     "dir_count": 1,
@@ -2862,8 +2862,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deagleg-e": {
     "dir_count": 1,
@@ -2879,8 +2879,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deaglecamo": {
     "dir_count": 1,
@@ -2896,8 +2896,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deaglecamo-e": {
     "dir_count": 1,
@@ -2913,8 +2913,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "surplus": {
     "dir_count": 1,
@@ -2930,8 +2930,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "surplus-e": {
     "dir_count": 1,
@@ -2947,8 +2947,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "empty_blastcannon": {
     "dir_count": 1,
@@ -2964,8 +2964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "loaded_blastcannon": {
     "dir_count": 1,
@@ -2981,7 +2981,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

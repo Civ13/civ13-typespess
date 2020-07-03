@@ -80,8 +80,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ratvarian_spear": {
     "dir_count": 4,
@@ -124,8 +124,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clockwork_slab": {
     "dir_count": 4,
@@ -168,8 +168,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "slab_overlay_template": {
     "dir_count": 4,
@@ -212,8 +212,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "slab_geis": {
     "dir_count": 4,
@@ -256,8 +256,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "slab_compromise": {
     "dir_count": 4,
@@ -300,8 +300,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "slab_volt": {
     "dir_count": 4,
@@ -344,7 +344,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

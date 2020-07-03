@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireplace_fire0": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireplace_fire1": {
     "dir_count": 4,
@@ -168,8 +168,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireplace_fire2": {
     "dir_count": 4,
@@ -252,8 +252,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireplace_fire3": {
     "dir_count": 4,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireplace_fire4": {
     "dir_count": 4,
@@ -420,8 +420,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireplace_glow": {
     "dir_count": 4,
@@ -484,8 +484,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firepit-active": {
     "dir_count": 1,
@@ -511,8 +511,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "firepit": {
     "dir_count": 1,
@@ -528,7 +528,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

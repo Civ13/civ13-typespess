@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_grey": {
     "dir_count": 4,
@@ -84,8 +84,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_green": {
     "dir_count": 4,
@@ -128,8 +128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_blue": {
     "dir_count": 4,
@@ -172,8 +172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_black": {
     "dir_count": 4,
@@ -216,8 +216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_mankini": {
     "dir_count": 4,
@@ -260,8 +260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_hearts": {
     "dir_count": 4,
@@ -304,8 +304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_blackalt": {
     "dir_count": 4,
@@ -348,8 +348,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_greyalt": {
     "dir_count": 4,
@@ -392,8 +392,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_stripe": {
     "dir_count": 4,
@@ -436,8 +436,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_kinky": {
     "dir_count": 4,
@@ -480,8 +480,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_red": {
     "dir_count": 4,
@@ -524,8 +524,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_red": {
     "dir_count": 4,
@@ -568,8 +568,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_white": {
     "dir_count": 4,
@@ -612,8 +612,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_whitealt": {
     "dir_count": 4,
@@ -656,8 +656,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_yellow": {
     "dir_count": 4,
@@ -700,8 +700,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_blue": {
     "dir_count": 4,
@@ -744,8 +744,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_black": {
     "dir_count": 4,
@@ -788,8 +788,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_blackalt": {
     "dir_count": 4,
@@ -832,8 +832,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_thong": {
     "dir_count": 4,
@@ -876,8 +876,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_babydoll": {
     "dir_count": 4,
@@ -920,8 +920,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_babyblue": {
     "dir_count": 4,
@@ -964,8 +964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_green": {
     "dir_count": 4,
@@ -1008,8 +1008,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_pink": {
     "dir_count": 4,
@@ -1052,8 +1052,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_kinky": {
     "dir_count": 4,
@@ -1096,8 +1096,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tank_midriff": {
     "dir_count": 4,
@@ -1140,8 +1140,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_neko_white": {
     "dir_count": 4,
@@ -1184,8 +1184,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_neko_black": {
     "dir_count": 4,
@@ -1228,8 +1228,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_white": {
     "dir_count": 4,
@@ -1272,8 +1272,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tank_white": {
     "dir_count": 4,
@@ -1316,8 +1316,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_black": {
     "dir_count": 4,
@@ -1360,8 +1360,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tank_black": {
     "dir_count": 4,
@@ -1404,8 +1404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_grey": {
     "dir_count": 4,
@@ -1448,8 +1448,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tank_grey": {
     "dir_count": 4,
@@ -1492,8 +1492,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lover": {
     "dir_count": 4,
@@ -1536,8 +1536,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ian": {
     "dir_count": 4,
@@ -1580,8 +1580,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "uk": {
     "dir_count": 4,
@@ -1624,8 +1624,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ilovent": {
     "dir_count": 4,
@@ -1668,8 +1668,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "peace": {
     "dir_count": 4,
@@ -1712,8 +1712,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "band": {
     "dir_count": 4,
@@ -1756,8 +1756,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pogoman": {
     "dir_count": 4,
@@ -1800,8 +1800,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "matroska": {
     "dir_count": 4,
@@ -1844,8 +1844,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whiteshortsleeve": {
     "dir_count": 4,
@@ -1888,8 +1888,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "purpleshortsleeve": {
     "dir_count": 4,
@@ -1932,8 +1932,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blueshortsleeve": {
     "dir_count": 4,
@@ -1976,8 +1976,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "greenshortsleeve": {
     "dir_count": 4,
@@ -2020,8 +2020,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blackshortsleeve": {
     "dir_count": 4,
@@ -2064,8 +2064,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blueshirt": {
     "dir_count": 4,
@@ -2108,8 +2108,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "redshirt": {
     "dir_count": 4,
@@ -2152,8 +2152,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "yellowshirt": {
     "dir_count": 4,
@@ -2196,8 +2196,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "greenshirt": {
     "dir_count": 4,
@@ -2240,8 +2240,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bluepolo": {
     "dir_count": 4,
@@ -2284,8 +2284,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "redpolo": {
     "dir_count": 4,
@@ -2328,8 +2328,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whitepolo": {
     "dir_count": 4,
@@ -2372,8 +2372,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grayyellowpolo": {
     "dir_count": 4,
@@ -2416,8 +2416,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "redtop": {
     "dir_count": 4,
@@ -2460,8 +2460,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whitetop": {
     "dir_count": 4,
@@ -2504,8 +2504,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "greenshirtsport": {
     "dir_count": 4,
@@ -2548,8 +2548,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "redshirtsport": {
     "dir_count": 4,
@@ -2592,8 +2592,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blueshirtsport": {
     "dir_count": 4,
@@ -2636,8 +2636,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_ss13": {
     "dir_count": 4,
@@ -2680,8 +2680,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tank_fire": {
     "dir_count": 4,
@@ -2724,8 +2724,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_question": {
     "dir_count": 4,
@@ -2768,8 +2768,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_skull": {
     "dir_count": 4,
@@ -2812,8 +2812,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_commie": {
     "dir_count": 4,
@@ -2856,8 +2856,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_nano": {
     "dir_count": 4,
@@ -2900,8 +2900,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_stripes": {
     "dir_count": 4,
@@ -2944,8 +2944,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_blue": {
     "dir_count": 4,
@@ -2988,8 +2988,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_red": {
     "dir_count": 4,
@@ -3032,8 +3032,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tank_red": {
     "dir_count": 4,
@@ -3076,8 +3076,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_green": {
     "dir_count": 4,
@@ -3120,8 +3120,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_meat": {
     "dir_count": 4,
@@ -3164,8 +3164,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_tiedye": {
     "dir_count": 4,
@@ -3208,8 +3208,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_redjersey": {
     "dir_count": 4,
@@ -3252,8 +3252,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_bluejersey": {
     "dir_count": 4,
@@ -3296,8 +3296,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tank_stripes": {
     "dir_count": 4,
@@ -3340,8 +3340,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_alien": {
     "dir_count": 4,
@@ -3384,8 +3384,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_clown": {
     "dir_count": 4,
@@ -3428,8 +3428,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "white_norm": {
     "dir_count": 4,
@@ -3472,8 +3472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "white_short": {
     "dir_count": 4,
@@ -3516,8 +3516,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "white_knee": {
     "dir_count": 4,
@@ -3560,8 +3560,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "white_thigh": {
     "dir_count": 4,
@@ -3604,8 +3604,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "black_norm": {
     "dir_count": 4,
@@ -3648,8 +3648,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "black_short": {
     "dir_count": 4,
@@ -3692,8 +3692,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "black_knee": {
     "dir_count": 4,
@@ -3736,8 +3736,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "black_thigh": {
     "dir_count": 4,
@@ -3780,8 +3780,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "thin_knee": {
     "dir_count": 4,
@@ -3824,8 +3824,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "thin_thigh": {
     "dir_count": 4,
@@ -3868,8 +3868,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pantyhose": {
     "dir_count": 4,
@@ -3912,8 +3912,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rainbow_knee": {
     "dir_count": 4,
@@ -3956,8 +3956,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rainbow_thigh": {
     "dir_count": 4,
@@ -4000,8 +4000,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "striped_knee": {
     "dir_count": 4,
@@ -4044,8 +4044,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "striped_thigh": {
     "dir_count": 4,
@@ -4088,8 +4088,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shirt_assblastusa": {
     "dir_count": 4,
@@ -4132,8 +4132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "assblastusa_knee": {
     "dir_count": 4,
@@ -4176,8 +4176,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "assblastusa_thigh": {
     "dir_count": 4,
@@ -4220,8 +4220,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_assblastusa": {
     "dir_count": 4,
@@ -4264,8 +4264,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "uk_knee": {
     "dir_count": 4,
@@ -4308,8 +4308,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "uk_thigh": {
     "dir_count": 4,
@@ -4352,8 +4352,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "commie_knee": {
     "dir_count": 4,
@@ -4396,8 +4396,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "commie_thigh": {
     "dir_count": 4,
@@ -4440,8 +4440,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_uk": {
     "dir_count": 4,
@@ -4484,8 +4484,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "male_commie": {
     "dir_count": 4,
@@ -4528,8 +4528,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_assblastusa": {
     "dir_count": 4,
@@ -4572,8 +4572,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_commie": {
     "dir_count": 4,
@@ -4616,8 +4616,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "female_uk": {
     "dir_count": 4,
@@ -4660,8 +4660,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sports_bra": {
     "dir_count": 4,
@@ -4704,8 +4704,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sports_bra_alt": {
     "dir_count": 4,
@@ -4748,7 +4748,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

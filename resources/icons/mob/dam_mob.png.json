@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blank2": {
     "dir_count": 1,
@@ -57,8 +57,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_chest_01": {
     "dir_count": 4,
@@ -101,8 +101,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_head_01": {
     "dir_count": 4,
@@ -145,8 +145,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_arm_01": {
     "dir_count": 4,
@@ -189,8 +189,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_arm_01": {
     "dir_count": 4,
@@ -233,8 +233,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_leg_01": {
     "dir_count": 4,
@@ -277,8 +277,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_leg_01": {
     "dir_count": 4,
@@ -321,8 +321,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_chest_02": {
     "dir_count": 4,
@@ -365,8 +365,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_head_02": {
     "dir_count": 4,
@@ -409,8 +409,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_arm_02": {
     "dir_count": 4,
@@ -453,8 +453,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_arm_02": {
     "dir_count": 4,
@@ -497,8 +497,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_leg_02": {
     "dir_count": 4,
@@ -541,8 +541,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_leg_02": {
     "dir_count": 4,
@@ -585,8 +585,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_chest_03": {
     "dir_count": 4,
@@ -629,8 +629,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_head_03": {
     "dir_count": 4,
@@ -673,8 +673,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_arm_03": {
     "dir_count": 4,
@@ -717,8 +717,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_arm_03": {
     "dir_count": 4,
@@ -761,8 +761,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_leg_03": {
     "dir_count": 4,
@@ -805,8 +805,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_leg_03": {
     "dir_count": 4,
@@ -849,8 +849,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_chest_10": {
     "dir_count": 4,
@@ -893,8 +893,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_head_10": {
     "dir_count": 4,
@@ -937,8 +937,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_arm_10": {
     "dir_count": 4,
@@ -981,8 +981,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_arm_10": {
     "dir_count": 4,
@@ -1025,8 +1025,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_leg_10": {
     "dir_count": 4,
@@ -1069,8 +1069,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_leg_10": {
     "dir_count": 4,
@@ -1113,8 +1113,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_chest_20": {
     "dir_count": 4,
@@ -1157,8 +1157,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_head_20": {
     "dir_count": 4,
@@ -1201,8 +1201,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_arm_20": {
     "dir_count": 4,
@@ -1245,8 +1245,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_arm_20": {
     "dir_count": 4,
@@ -1289,8 +1289,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_leg_20": {
     "dir_count": 4,
@@ -1333,8 +1333,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_leg_20": {
     "dir_count": 4,
@@ -1377,8 +1377,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_chest_30": {
     "dir_count": 4,
@@ -1421,8 +1421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_head_30": {
     "dir_count": 4,
@@ -1465,8 +1465,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_arm_30": {
     "dir_count": 4,
@@ -1509,8 +1509,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_arm_30": {
     "dir_count": 4,
@@ -1553,8 +1553,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_r_leg_30": {
     "dir_count": 4,
@@ -1597,8 +1597,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "human_l_leg_30": {
     "dir_count": 4,
@@ -1641,8 +1641,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_chest_01": {
     "dir_count": 4,
@@ -1685,8 +1685,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_head_01": {
     "dir_count": 4,
@@ -1729,8 +1729,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_arm_01": {
     "dir_count": 4,
@@ -1773,8 +1773,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_arm_01": {
     "dir_count": 4,
@@ -1817,8 +1817,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_leg_01": {
     "dir_count": 4,
@@ -1861,8 +1861,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_leg_01": {
     "dir_count": 4,
@@ -1905,8 +1905,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_chest_02": {
     "dir_count": 4,
@@ -1949,8 +1949,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_head_02": {
     "dir_count": 4,
@@ -1993,8 +1993,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_arm_02": {
     "dir_count": 4,
@@ -2037,8 +2037,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_arm_02": {
     "dir_count": 4,
@@ -2081,8 +2081,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_leg_02": {
     "dir_count": 4,
@@ -2125,8 +2125,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_leg_02": {
     "dir_count": 4,
@@ -2169,8 +2169,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_chest_03": {
     "dir_count": 4,
@@ -2213,8 +2213,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_head_03": {
     "dir_count": 4,
@@ -2257,8 +2257,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_arm_03": {
     "dir_count": 4,
@@ -2301,8 +2301,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_arm_03": {
     "dir_count": 4,
@@ -2345,8 +2345,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_leg_03": {
     "dir_count": 4,
@@ -2389,8 +2389,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_leg_03": {
     "dir_count": 4,
@@ -2433,8 +2433,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_chest_10": {
     "dir_count": 4,
@@ -2477,8 +2477,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_head_10": {
     "dir_count": 4,
@@ -2521,8 +2521,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_arm_10": {
     "dir_count": 4,
@@ -2565,8 +2565,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_arm_10": {
     "dir_count": 4,
@@ -2609,8 +2609,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_leg_10": {
     "dir_count": 4,
@@ -2653,8 +2653,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_leg_10": {
     "dir_count": 4,
@@ -2697,8 +2697,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_chest_20": {
     "dir_count": 4,
@@ -2741,8 +2741,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_head_20": {
     "dir_count": 4,
@@ -2785,8 +2785,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_arm_20": {
     "dir_count": 4,
@@ -2829,8 +2829,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_arm_20": {
     "dir_count": 4,
@@ -2873,8 +2873,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_leg_20": {
     "dir_count": 4,
@@ -2917,8 +2917,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_leg_20": {
     "dir_count": 4,
@@ -2961,8 +2961,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_chest_30": {
     "dir_count": 4,
@@ -3005,8 +3005,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_head_30": {
     "dir_count": 4,
@@ -3049,8 +3049,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_arm_30": {
     "dir_count": 4,
@@ -3093,8 +3093,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_arm_30": {
     "dir_count": 4,
@@ -3137,8 +3137,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_r_leg_30": {
     "dir_count": 4,
@@ -3181,8 +3181,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "synth_l_leg_30": {
     "dir_count": 4,
@@ -3225,8 +3225,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_chest_01": {
     "dir_count": 4,
@@ -3269,8 +3269,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_head_01": {
     "dir_count": 4,
@@ -3313,8 +3313,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_arm_01": {
     "dir_count": 4,
@@ -3357,8 +3357,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_arm_01": {
     "dir_count": 4,
@@ -3401,8 +3401,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_leg_01": {
     "dir_count": 4,
@@ -3445,8 +3445,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_leg_01": {
     "dir_count": 4,
@@ -3489,8 +3489,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_chest_02": {
     "dir_count": 4,
@@ -3533,8 +3533,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_head_02": {
     "dir_count": 4,
@@ -3577,8 +3577,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_arm_02": {
     "dir_count": 4,
@@ -3621,8 +3621,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_arm_02": {
     "dir_count": 4,
@@ -3665,8 +3665,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_leg_02": {
     "dir_count": 4,
@@ -3709,8 +3709,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_leg_02": {
     "dir_count": 4,
@@ -3753,8 +3753,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_chest_03": {
     "dir_count": 4,
@@ -3797,8 +3797,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_head_03": {
     "dir_count": 4,
@@ -3841,8 +3841,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_arm_03": {
     "dir_count": 4,
@@ -3885,8 +3885,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_arm_03": {
     "dir_count": 4,
@@ -3929,8 +3929,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_leg_03": {
     "dir_count": 4,
@@ -3973,8 +3973,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_leg_03": {
     "dir_count": 4,
@@ -4017,8 +4017,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_chest_10": {
     "dir_count": 4,
@@ -4061,8 +4061,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_head_10": {
     "dir_count": 4,
@@ -4105,8 +4105,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_arm_10": {
     "dir_count": 4,
@@ -4149,8 +4149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_arm_10": {
     "dir_count": 4,
@@ -4193,8 +4193,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_leg_10": {
     "dir_count": 4,
@@ -4237,8 +4237,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_leg_10": {
     "dir_count": 4,
@@ -4281,8 +4281,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_chest_20": {
     "dir_count": 4,
@@ -4325,8 +4325,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_head_20": {
     "dir_count": 4,
@@ -4369,8 +4369,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_arm_20": {
     "dir_count": 4,
@@ -4413,8 +4413,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_arm_20": {
     "dir_count": 4,
@@ -4457,8 +4457,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_leg_20": {
     "dir_count": 4,
@@ -4501,8 +4501,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_leg_20": {
     "dir_count": 4,
@@ -4545,8 +4545,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_chest_30": {
     "dir_count": 4,
@@ -4589,8 +4589,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_head_30": {
     "dir_count": 4,
@@ -4633,8 +4633,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_arm_30": {
     "dir_count": 4,
@@ -4677,8 +4677,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_arm_30": {
     "dir_count": 4,
@@ -4721,8 +4721,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_r_leg_30": {
     "dir_count": 4,
@@ -4765,8 +4765,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "monkey_l_leg_30": {
     "dir_count": 4,
@@ -4809,8 +4809,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_chest_01": {
     "dir_count": 4,
@@ -4853,8 +4853,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_head_01": {
     "dir_count": 4,
@@ -4897,8 +4897,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_arm_01": {
     "dir_count": 4,
@@ -4941,8 +4941,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_arm_01": {
     "dir_count": 4,
@@ -4985,8 +4985,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_leg_01": {
     "dir_count": 4,
@@ -5029,8 +5029,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_leg_01": {
     "dir_count": 4,
@@ -5073,8 +5073,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_chest_02": {
     "dir_count": 4,
@@ -5117,8 +5117,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_head_02": {
     "dir_count": 4,
@@ -5161,8 +5161,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_arm_02": {
     "dir_count": 4,
@@ -5205,8 +5205,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_arm_02": {
     "dir_count": 4,
@@ -5249,8 +5249,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_leg_02": {
     "dir_count": 4,
@@ -5293,8 +5293,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_leg_02": {
     "dir_count": 4,
@@ -5337,8 +5337,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_chest_03": {
     "dir_count": 4,
@@ -5381,8 +5381,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_head_03": {
     "dir_count": 4,
@@ -5425,8 +5425,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_arm_03": {
     "dir_count": 4,
@@ -5469,8 +5469,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_arm_03": {
     "dir_count": 4,
@@ -5513,8 +5513,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_leg_03": {
     "dir_count": 4,
@@ -5557,8 +5557,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_leg_03": {
     "dir_count": 4,
@@ -5601,8 +5601,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_chest_10": {
     "dir_count": 4,
@@ -5645,8 +5645,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_head_10": {
     "dir_count": 4,
@@ -5689,8 +5689,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_arm_10": {
     "dir_count": 4,
@@ -5733,8 +5733,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_arm_10": {
     "dir_count": 4,
@@ -5777,8 +5777,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_leg_10": {
     "dir_count": 4,
@@ -5821,8 +5821,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_leg_10": {
     "dir_count": 4,
@@ -5865,8 +5865,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_chest_20": {
     "dir_count": 4,
@@ -5909,8 +5909,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_head_20": {
     "dir_count": 4,
@@ -5953,8 +5953,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_arm_20": {
     "dir_count": 4,
@@ -5997,8 +5997,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_arm_20": {
     "dir_count": 4,
@@ -6041,8 +6041,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_leg_20": {
     "dir_count": 4,
@@ -6085,8 +6085,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_leg_20": {
     "dir_count": 4,
@@ -6129,8 +6129,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_chest_30": {
     "dir_count": 4,
@@ -6173,8 +6173,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_head_30": {
     "dir_count": 4,
@@ -6217,8 +6217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_arm_30": {
     "dir_count": 4,
@@ -6261,8 +6261,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_arm_30": {
     "dir_count": 4,
@@ -6305,8 +6305,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_r_leg_30": {
     "dir_count": 4,
@@ -6349,8 +6349,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "robotic_l_leg_30": {
     "dir_count": 4,
@@ -6393,7 +6393,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

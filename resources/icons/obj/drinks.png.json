@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotglass": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "beer": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alebottle": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rumbottle": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whiskeybottle": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "vodkabottle": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ginbottle": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cognacbottle": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goldschlagerbottle": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "patronbottle": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "orangejuice": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "limejuice": {
     "dir_count": 1,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cream": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tomatojuice": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_empty": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_clear": {
     "dir_count": 1,
@@ -285,8 +285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_white": {
     "dir_count": 1,
@@ -302,8 +302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_yellow": {
     "dir_count": 1,
@@ -319,8 +319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_brown": {
     "dir_count": 1,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gintonicglass": {
     "dir_count": 1,
@@ -353,8 +353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whiskeyglass": {
     "dir_count": 1,
@@ -370,8 +370,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ginvodkaglass": {
     "dir_count": 1,
@@ -387,8 +387,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tequilaglass": {
     "dir_count": 1,
@@ -404,8 +404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rumglass": {
     "dir_count": 1,
@@ -421,8 +421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kahluaglass": {
     "dir_count": 1,
@@ -438,8 +438,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wineglass": {
     "dir_count": 1,
@@ -455,8 +455,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cognacglass": {
     "dir_count": 1,
@@ -472,8 +472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cubalibreglass": {
     "dir_count": 1,
@@ -489,8 +489,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "beepskysmashglass": {
     "dir_count": 1,
@@ -521,8 +521,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "manlydorfglass": {
     "dir_count": 1,
@@ -538,8 +538,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "martiniglass": {
     "dir_count": 1,
@@ -555,8 +555,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "driestmartiniglass": {
     "dir_count": 1,
@@ -572,8 +572,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goldschlagerglass": {
     "dir_count": 1,
@@ -589,8 +589,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "patronglass": {
     "dir_count": 1,
@@ -606,8 +606,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whiskeycolaglass": {
     "dir_count": 1,
@@ -623,8 +623,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "irishcreamglass": {
     "dir_count": 1,
@@ -640,8 +640,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tequilasunriseglass": {
     "dir_count": 1,
@@ -657,8 +657,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "screwdriverglass": {
     "dir_count": 1,
@@ -674,8 +674,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bloodymaryglass": {
     "dir_count": 1,
@@ -691,8 +691,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bravebullglass": {
     "dir_count": 1,
@@ -708,8 +708,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whiterussianglass": {
     "dir_count": 1,
@@ -725,8 +725,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gargleblasterglass": {
     "dir_count": 1,
@@ -752,8 +752,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "doctorsdelightglass": {
     "dir_count": 1,
@@ -834,8 +834,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "aleglass": {
     "dir_count": 1,
@@ -851,8 +851,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "beerglass": {
     "dir_count": 1,
@@ -868,8 +868,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "greenbeerglass": {
     "dir_count": 1,
@@ -885,8 +885,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "toxinsspecialglass": {
     "dir_count": 1,
@@ -922,8 +922,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "vermouthglass": {
     "dir_count": 1,
@@ -939,8 +939,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_green": {
     "dir_count": 1,
@@ -956,8 +956,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_orange": {
     "dir_count": 1,
@@ -973,8 +973,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_red": {
     "dir_count": 1,
@@ -990,8 +990,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "vodkatonicglass": {
     "dir_count": 1,
@@ -1007,8 +1007,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "manhattanglass": {
     "dir_count": 1,
@@ -1024,8 +1024,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "proj_manhattanglass": {
     "dir_count": 1,
@@ -1056,8 +1056,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ginfizzglass": {
     "dir_count": 1,
@@ -1073,8 +1073,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "longislandicedteaglass": {
     "dir_count": 1,
@@ -1090,8 +1090,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "threemileislandglass": {
     "dir_count": 1,
@@ -1122,8 +1122,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "margaritaglass": {
     "dir_count": 1,
@@ -1139,8 +1139,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "irishcoffeeglass": {
     "dir_count": 1,
@@ -1156,8 +1156,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "b52glass": {
     "dir_count": 1,
@@ -1173,8 +1173,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "atomicbombglass": {
     "dir_count": 1,
@@ -1205,8 +1205,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whiskeysodaglass": {
     "dir_count": 1,
@@ -1222,8 +1222,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whiskeysodaglass2": {
     "dir_count": 1,
@@ -1239,8 +1239,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_brown2": {
     "dir_count": 1,
@@ -1256,8 +1256,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blackrussianglass": {
     "dir_count": 1,
@@ -1273,8 +1273,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Space_mountain_wind_glass": {
     "dir_count": 1,
@@ -1290,8 +1290,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "thirteen_loko_glass": {
     "dir_count": 1,
@@ -1307,8 +1307,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dr_gibb_glass": {
     "dir_count": 1,
@@ -1324,8 +1324,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "space-up_glass": {
     "dir_count": 1,
@@ -1341,8 +1341,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mojito": {
     "dir_count": 1,
@@ -1358,8 +1358,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hell": {
     "dir_count": 1,
@@ -1400,8 +1400,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "berryjuice": {
     "dir_count": 1,
@@ -1417,8 +1417,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bahama_mama": {
     "dir_count": 1,
@@ -1434,8 +1434,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "banana": {
     "dir_count": 1,
@@ -1451,8 +1451,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "carrotjuice": {
     "dir_count": 1,
@@ -1468,8 +1468,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sodawater": {
     "dir_count": 1,
@@ -1485,8 +1485,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tonic": {
     "dir_count": 1,
@@ -1502,8 +1502,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cola": {
     "dir_count": 1,
@@ -1519,8 +1519,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "purple_can": {
     "dir_count": 1,
@@ -1536,8 +1536,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ice_tea_can": {
     "dir_count": 1,
@@ -1553,8 +1553,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energy_drink": {
     "dir_count": 1,
@@ -1570,8 +1570,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "thirteen_loko": {
     "dir_count": 1,
@@ -1587,8 +1587,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "space_mountain_wind": {
     "dir_count": 1,
@@ -1604,8 +1604,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dr_gibb": {
     "dir_count": 1,
@@ -1621,8 +1621,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "starkist": {
     "dir_count": 1,
@@ -1638,8 +1638,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "space-up": {
     "dir_count": 1,
@@ -1655,8 +1655,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lemon-lime": {
     "dir_count": 1,
@@ -1672,8 +1672,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shamblers": {
     "dir_count": 1,
@@ -1689,8 +1689,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "air": {
     "dir_count": 1,
@@ -1706,8 +1706,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "milk": {
     "dir_count": 1,
@@ -1723,8 +1723,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "soymilk": {
     "dir_count": 1,
@@ -1740,8 +1740,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coffee": {
     "dir_count": 1,
@@ -1757,8 +1757,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tea": {
     "dir_count": 1,
@@ -1774,8 +1774,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "water": {
     "dir_count": 1,
@@ -1791,8 +1791,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "water_cup": {
     "dir_count": 1,
@@ -1808,8 +1808,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "water_cup_e": {
     "dir_count": 1,
@@ -1825,8 +1825,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flask": {
     "dir_count": 1,
@@ -1842,8 +1842,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "britcup": {
     "dir_count": 1,
@@ -1859,8 +1859,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ramen": {
     "dir_count": 1,
@@ -1876,8 +1876,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sbitenglass": {
     "dir_count": 1,
@@ -1893,8 +1893,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "red_meadglass": {
     "dir_count": 1,
@@ -1910,8 +1910,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "meadglass": {
     "dir_count": 1,
@@ -1927,8 +1927,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iced_beerglass": {
     "dir_count": 1,
@@ -1944,8 +1944,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grogglass": {
     "dir_count": 1,
@@ -1961,8 +1961,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nuka_colaglass": {
     "dir_count": 1,
@@ -1993,8 +1993,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "soy_latte": {
     "dir_count": 1,
@@ -2010,8 +2010,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cafe_latte": {
     "dir_count": 1,
@@ -2027,8 +2027,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "acidspitglass": {
     "dir_count": 1,
@@ -2054,8 +2054,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "amasecglass": {
     "dir_count": 1,
@@ -2071,8 +2071,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "neurotoxinglass": {
     "dir_count": 1,
@@ -2113,8 +2113,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hippiesdelightglass": {
     "dir_count": 1,
@@ -2130,8 +2130,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bananahonkglass": {
     "dir_count": 1,
@@ -2147,8 +2147,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "golden_cup": {
     "dir_count": 1,
@@ -2164,8 +2164,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "singulo": {
     "dir_count": 1,
@@ -2236,8 +2236,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chocolateglass": {
     "dir_count": 1,
@@ -2253,8 +2253,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lemonglass": {
     "dir_count": 1,
@@ -2270,8 +2270,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "poisonberryjuice": {
     "dir_count": 1,
@@ -2287,8 +2287,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "silencerglass": {
     "dir_count": 1,
@@ -2304,8 +2304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bottleofnothing": {
     "dir_count": 1,
@@ -2321,8 +2321,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nothing": {
     "dir_count": 1,
@@ -2338,8 +2338,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holyflask": {
     "dir_count": 1,
@@ -2355,8 +2355,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "aloe": {
     "dir_count": 1,
@@ -2372,8 +2372,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "andalusia": {
     "dir_count": 1,
@@ -2389,8 +2389,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alliescocktail": {
     "dir_count": 1,
@@ -2406,8 +2406,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "snowwhite": {
     "dir_count": 1,
@@ -2423,8 +2423,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "antifreeze": {
     "dir_count": 1,
@@ -2440,8 +2440,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "b&p": {
     "dir_count": 1,
@@ -2457,8 +2457,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "demonsblood": {
     "dir_count": 1,
@@ -2499,8 +2499,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "booger": {
     "dir_count": 1,
@@ -2516,8 +2516,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "devilskiss": {
     "dir_count": 1,
@@ -2533,8 +2533,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "changelingsting": {
     "dir_count": 1,
@@ -2570,8 +2570,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "irishcarbomb": {
     "dir_count": 1,
@@ -2587,8 +2587,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syndicatebomb": {
     "dir_count": 1,
@@ -2604,8 +2604,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "erikasurprise": {
     "dir_count": 1,
@@ -2621,8 +2621,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "vermouthbottle": {
     "dir_count": 1,
@@ -2638,8 +2638,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kahluabottle": {
     "dir_count": 1,
@@ -2655,8 +2655,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tequilabottle": {
     "dir_count": 1,
@@ -2672,8 +2672,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "winebottle": {
     "dir_count": 1,
@@ -2689,8 +2689,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "iceglass": {
     "dir_count": 1,
@@ -2706,8 +2706,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icedcoffeeglass": {
     "dir_count": 1,
@@ -2723,8 +2723,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "broken": {
     "dir_count": 1,
@@ -2740,8 +2740,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "broken_bottle": {
     "dir_count": 1,
@@ -2757,8 +2757,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icedteaglass": {
     "dir_count": 1,
@@ -2774,8 +2774,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teaglass": {
     "dir_count": 1,
@@ -2791,8 +2791,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "detflask": {
     "dir_count": 1,
@@ -2808,8 +2808,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotglassclear": {
     "dir_count": 1,
@@ -2825,8 +2825,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotglassbrown": {
     "dir_count": 1,
@@ -2842,8 +2842,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotglassgold": {
     "dir_count": 1,
@@ -2859,8 +2859,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotglasscream": {
     "dir_count": 1,
@@ -2876,8 +2876,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "badminka": {
     "dir_count": 1,
@@ -2893,8 +2893,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chocolatepudding": {
     "dir_count": 1,
@@ -2910,8 +2910,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "vanillapudding": {
     "dir_count": 1,
@@ -2927,8 +2927,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bluecherryshake": {
     "dir_count": 1,
@@ -2944,8 +2944,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cherryshake": {
     "dir_count": 1,
@@ -2961,8 +2961,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "drunkenblumpkin": {
     "dir_count": 1,
@@ -2978,8 +2978,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pumpkin_latte": {
     "dir_count": 1,
@@ -2995,8 +2995,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gibbfloats": {
     "dir_count": 1,
@@ -3012,8 +3012,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glassoverlay": {
     "dir_count": 1,
@@ -3029,8 +3029,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tea_empty": {
     "dir_count": 1,
@@ -3046,8 +3046,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotglassred": {
     "dir_count": 1,
@@ -3063,8 +3063,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "silver_cup": {
     "dir_count": 1,
@@ -3080,8 +3080,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bronze_cup": {
     "dir_count": 1,
@@ -3097,8 +3097,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pewter_cup": {
     "dir_count": 1,
@@ -3114,8 +3114,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fetching_fizz": {
     "dir_count": 1,
@@ -3131,8 +3131,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "whiskey_sour": {
     "dir_count": 1,
@@ -3148,8 +3148,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "absinthe": {
     "dir_count": 1,
@@ -3165,8 +3165,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hearty_punch": {
     "dir_count": 1,
@@ -3182,8 +3182,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "absinthepremium": {
     "dir_count": 1,
@@ -3199,8 +3199,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flask_gold": {
     "dir_count": 1,
@@ -3216,8 +3216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "arnold_palmer": {
     "dir_count": 1,
@@ -3233,8 +3233,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotglassgreen": {
     "dir_count": 1,
@@ -3250,8 +3250,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "absinthebottle": {
     "dir_count": 1,
@@ -3267,8 +3267,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lizardwine": {
     "dir_count": 1,
@@ -3284,8 +3284,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hcider": {
     "dir_count": 1,
@@ -3301,8 +3301,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "laughter": {
     "dir_count": 1,
@@ -3318,8 +3318,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "triplecitrus": {
     "dir_count": 1,
@@ -3335,8 +3335,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "juicebox": {
     "dir_count": 1,
@@ -3352,8 +3352,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "milkbox": {
     "dir_count": 1,
@@ -3369,8 +3369,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "orangebox": {
     "dir_count": 1,
@@ -3386,8 +3386,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grapebox": {
     "dir_count": 1,
@@ -3403,8 +3403,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chocolatebox": {
     "dir_count": 1,
@@ -3420,8 +3420,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grappa": {
     "dir_count": 1,
@@ -3437,8 +3437,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grappabottle": {
     "dir_count": 1,
@@ -3454,8 +3454,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nog2": {
     "dir_count": 1,
@@ -3471,8 +3471,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotglassoverlay": {
     "dir_count": 1,
@@ -3488,8 +3488,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "largebottle": {
     "dir_count": 1,
@@ -3505,8 +3505,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smallbottle": {
     "dir_count": 1,
@@ -3522,7 +3522,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

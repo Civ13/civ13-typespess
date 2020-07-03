@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-metal_2": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-metal": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plasteel_3": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plasteel_2": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plasteel": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-glass_3": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-glass_2": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-glass": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-rglass_3": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-rglass_2": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-rglass": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-prglass_3": {
     "dir_count": 1,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-prglass_2": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-prglass": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plastic_3": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plastic_2": {
     "dir_count": 1,
@@ -285,8 +285,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-plastic": {
     "dir_count": 1,
@@ -302,8 +302,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-brass_3": {
     "dir_count": 1,
@@ -319,8 +319,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-brass_2": {
     "dir_count": 1,
@@ -336,8 +336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-brass": {
     "dir_count": 1,
@@ -353,8 +353,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-paper_3": {
     "dir_count": 1,
@@ -370,8 +370,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-paper_2": {
     "dir_count": 1,
@@ -387,8 +387,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-paper": {
     "dir_count": 1,
@@ -404,8 +404,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-pglass_3": {
     "dir_count": 1,
@@ -421,8 +421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-pglass_2": {
     "dir_count": 1,
@@ -438,8 +438,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-pglass": {
     "dir_count": 1,
@@ -455,8 +455,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rods": {
     "dir_count": 1,
@@ -472,8 +472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rods-5": {
     "dir_count": 1,
@@ -489,8 +489,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rods-4": {
     "dir_count": 1,
@@ -506,8 +506,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rods-3": {
     "dir_count": 1,
@@ -523,8 +523,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rods-2": {
     "dir_count": 1,
@@ -540,8 +540,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rods-1": {
     "dir_count": 1,
@@ -557,8 +557,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-runed": {
     "dir_count": 1,
@@ -624,8 +624,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-wood": {
     "dir_count": 1,
@@ -641,8 +641,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-card": {
     "dir_count": 1,
@@ -658,8 +658,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sandbags": {
     "dir_count": 1,
@@ -675,8 +675,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-wetleather_3": {
     "dir_count": 1,
@@ -692,8 +692,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-wetleather_2": {
     "dir_count": 1,
@@ -709,8 +709,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-wetleather": {
     "dir_count": 1,
@@ -726,8 +726,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-leather_3": {
     "dir_count": 1,
@@ -743,8 +743,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-leather_2": {
     "dir_count": 1,
@@ -760,8 +760,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-leather": {
     "dir_count": 1,
@@ -777,8 +777,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-hairlesshide_3": {
     "dir_count": 1,
@@ -794,8 +794,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-hairlesshide_2": {
     "dir_count": 1,
@@ -811,8 +811,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-hairlesshide": {
     "dir_count": 1,
@@ -828,8 +828,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-hide_3": {
     "dir_count": 1,
@@ -845,8 +845,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-hide_2": {
     "dir_count": 1,
@@ -862,8 +862,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-hide": {
     "dir_count": 1,
@@ -879,8 +879,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-cloth_3": {
     "dir_count": 1,
@@ -896,8 +896,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-cloth_2": {
     "dir_count": 1,
@@ -913,8 +913,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-cloth": {
     "dir_count": 1,
@@ -930,8 +930,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gauze_3": {
     "dir_count": 1,
@@ -947,8 +947,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gauze_2": {
     "dir_count": 1,
@@ -964,8 +964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gauze": {
     "dir_count": 1,
@@ -981,8 +981,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brutepack_3": {
     "dir_count": 1,
@@ -998,8 +998,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brutepack_2": {
     "dir_count": 1,
@@ -1015,8 +1015,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brutepack": {
     "dir_count": 1,
@@ -1032,8 +1032,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ointment_3": {
     "dir_count": 1,
@@ -1049,8 +1049,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ointment_2": {
     "dir_count": 1,
@@ -1066,8 +1066,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ointment": {
     "dir_count": 1,
@@ -1083,8 +1083,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-greatergem": {
     "dir_count": 1,
@@ -1100,8 +1100,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-lessergem": {
     "dir_count": 1,
@@ -1117,8 +1117,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wrap_paper": {
     "dir_count": 1,
@@ -1134,8 +1134,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deliveryPaper": {
     "dir_count": 1,
@@ -1151,8 +1151,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c_tube": {
     "dir_count": 1,
@@ -1168,8 +1168,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-xeno": {
     "dir_count": 1,
@@ -1185,8 +1185,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-cat": {
     "dir_count": 1,
@@ -1202,8 +1202,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-monkey": {
     "dir_count": 1,
@@ -1219,8 +1219,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-lizard": {
     "dir_count": 1,
@@ -1236,8 +1236,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-corgi": {
     "dir_count": 1,
@@ -1253,8 +1253,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sheet-gondola": {
     "dir_count": 1,
@@ -1270,7 +1270,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

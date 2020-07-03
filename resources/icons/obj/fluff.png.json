@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paper": {
     "dir_count": 8,
@@ -93,8 +93,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "papercorner": {
     "dir_count": 4,
@@ -137,8 +137,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "paperstack": {
     "dir_count": 8,
@@ -217,8 +217,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "painting1": {
     "dir_count": 1,
@@ -234,8 +234,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "painting2": {
     "dir_count": 1,
@@ -251,8 +251,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "painting3": {
     "dir_count": 1,
@@ -268,8 +268,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "painting4": {
     "dir_count": 1,
@@ -285,7 +285,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

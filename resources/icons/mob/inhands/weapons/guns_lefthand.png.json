@@ -60,8 +60,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advtaserstun1": {
     "dir_count": 4,
@@ -104,8 +104,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advtaserstun2": {
     "dir_count": 4,
@@ -148,8 +148,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advtaserstun3": {
     "dir_count": 4,
@@ -192,8 +192,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advtaserstun4": {
     "dir_count": 4,
@@ -236,8 +236,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advtaserdisable0": {
     "dir_count": 4,
@@ -300,8 +300,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advtaserdisable1": {
     "dir_count": 4,
@@ -344,8 +344,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advtaserdisable2": {
     "dir_count": 4,
@@ -388,8 +388,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advtaserdisable3": {
     "dir_count": 4,
@@ -432,8 +432,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "advtaserdisable4": {
     "dir_count": 4,
@@ -476,8 +476,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "c20r": {
     "dir_count": 4,
@@ -520,8 +520,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bulldog": {
     "dir_count": 4,
@@ -564,8 +564,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chronogun": {
     "dir_count": 4,
@@ -608,8 +608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crossbow": {
     "dir_count": 4,
@@ -652,8 +652,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "deagleg": {
     "dir_count": 4,
@@ -696,8 +696,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "disabler0": {
     "dir_count": 4,
@@ -740,8 +740,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "disabler1": {
     "dir_count": 4,
@@ -784,8 +784,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "disabler2": {
     "dir_count": 4,
@@ -828,8 +828,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "disabler3": {
     "dir_count": 4,
@@ -872,8 +872,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "disabler4": {
     "dir_count": 4,
@@ -916,8 +916,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle0": {
     "dir_count": 4,
@@ -980,8 +980,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle1": {
     "dir_count": 4,
@@ -1024,8 +1024,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle2": {
     "dir_count": 4,
@@ -1068,8 +1068,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle3": {
     "dir_count": 4,
@@ -1112,8 +1112,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ionrifle4": {
     "dir_count": 4,
@@ -1156,8 +1156,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gun": {
     "dir_count": 4,
@@ -1200,8 +1200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energykill0": {
     "dir_count": 4,
@@ -1264,8 +1264,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energykill1": {
     "dir_count": 4,
@@ -1308,8 +1308,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energykill2": {
     "dir_count": 4,
@@ -1352,8 +1352,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energykill3": {
     "dir_count": 4,
@@ -1396,8 +1396,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energykill4": {
     "dir_count": 4,
@@ -1440,8 +1440,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energydisable4": {
     "dir_count": 4,
@@ -1484,8 +1484,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energydisable3": {
     "dir_count": 4,
@@ -1528,8 +1528,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energydisable2": {
     "dir_count": 4,
@@ -1572,8 +1572,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energydisable1": {
     "dir_count": 4,
@@ -1616,8 +1616,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energydisable0": {
     "dir_count": 4,
@@ -1680,8 +1680,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energystun4": {
     "dir_count": 4,
@@ -1724,8 +1724,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energystun3": {
     "dir_count": 4,
@@ -1768,8 +1768,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energystun2": {
     "dir_count": 4,
@@ -1812,8 +1812,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energystun1": {
     "dir_count": 4,
@@ -1856,8 +1856,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energystun0": {
     "dir_count": 4,
@@ -1920,8 +1920,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kineticgun": {
     "dir_count": 4,
@@ -1964,8 +1964,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wormhole_projector1": {
     "dir_count": 4,
@@ -2008,8 +2008,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytackill0": {
     "dir_count": 4,
@@ -2072,8 +2072,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytackill1": {
     "dir_count": 4,
@@ -2116,8 +2116,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytackill2": {
     "dir_count": 4,
@@ -2160,8 +2160,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytackill3": {
     "dir_count": 4,
@@ -2204,8 +2204,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytackill4": {
     "dir_count": 4,
@@ -2248,8 +2248,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacdisable4": {
     "dir_count": 4,
@@ -2292,8 +2292,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacdisable3": {
     "dir_count": 4,
@@ -2336,8 +2336,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacdisable2": {
     "dir_count": 4,
@@ -2380,8 +2380,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacdisable1": {
     "dir_count": 4,
@@ -2424,8 +2424,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacdisable0": {
     "dir_count": 4,
@@ -2488,8 +2488,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacstun4": {
     "dir_count": 4,
@@ -2532,8 +2532,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacstun3": {
     "dir_count": 4,
@@ -2576,8 +2576,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacstun2": {
     "dir_count": 4,
@@ -2620,8 +2620,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacstun1": {
     "dir_count": 4,
@@ -2664,8 +2664,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "energytacstun0": {
     "dir_count": 4,
@@ -2728,8 +2728,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wormhole_projector2": {
     "dir_count": 4,
@@ -2772,8 +2772,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "taser0": {
     "dir_count": 4,
@@ -2836,8 +2836,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "taser1": {
     "dir_count": 4,
@@ -2880,8 +2880,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "taser2": {
     "dir_count": 4,
@@ -2924,8 +2924,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "taser3": {
     "dir_count": 4,
@@ -2968,8 +2968,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "taser4": {
     "dir_count": 4,
@@ -3012,8 +3012,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "syringegun": {
     "dir_count": 4,
@@ -3056,8 +3056,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "speargun": {
     "dir_count": 4,
@@ -3100,8 +3100,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "shotgun": {
     "dir_count": 4,
@@ -3144,8 +3144,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "riotgun": {
     "dir_count": 4,
@@ -3188,8 +3188,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nucgun": {
     "dir_count": 4,
@@ -3232,8 +3232,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "moistnugget": {
     "dir_count": 4,
@@ -3276,8 +3276,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "m90": {
     "dir_count": 4,
@@ -3320,8 +3320,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "laser": {
     "dir_count": 4,
@@ -3364,8 +3364,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6closedmag": {
     "dir_count": 4,
@@ -3408,8 +3408,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6openmag": {
     "dir_count": 4,
@@ -3452,8 +3452,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6closednomag": {
     "dir_count": 4,
@@ -3496,8 +3496,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "l6opennomag": {
     "dir_count": 4,
@@ -3540,8 +3540,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "caplaser": {
     "dir_count": 4,
@@ -3584,8 +3584,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulseDESTROY0": {
     "dir_count": 4,
@@ -3648,8 +3648,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulseDESTROY1": {
     "dir_count": 4,
@@ -3692,8 +3692,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulseDESTROY2": {
     "dir_count": 4,
@@ -3736,8 +3736,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulseDESTROY3": {
     "dir_count": 4,
@@ -3780,8 +3780,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulseDESTROY4": {
     "dir_count": 4,
@@ -3824,8 +3824,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsestun0": {
     "dir_count": 4,
@@ -3888,8 +3888,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsestun1": {
     "dir_count": 4,
@@ -3932,8 +3932,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsestun2": {
     "dir_count": 4,
@@ -3976,8 +3976,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsestun3": {
     "dir_count": 4,
@@ -4020,8 +4020,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsestun4": {
     "dir_count": 4,
@@ -4064,8 +4064,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsekill0": {
     "dir_count": 4,
@@ -4128,8 +4128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsekill1": {
     "dir_count": 4,
@@ -4172,8 +4172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsekill2": {
     "dir_count": 4,
@@ -4216,8 +4216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsekill3": {
     "dir_count": 4,
@@ -4260,8 +4260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulsekill4": {
     "dir_count": 4,
@@ -4304,8 +4304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbineDESTROY0": {
     "dir_count": 4,
@@ -4368,8 +4368,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbineDESTROY1": {
     "dir_count": 4,
@@ -4412,8 +4412,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbineDESTROY2": {
     "dir_count": 4,
@@ -4456,8 +4456,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbineDESTROY3": {
     "dir_count": 4,
@@ -4500,8 +4500,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbineDESTROY4": {
     "dir_count": 4,
@@ -4544,8 +4544,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinestun0": {
     "dir_count": 4,
@@ -4608,8 +4608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinestun1": {
     "dir_count": 4,
@@ -4652,8 +4652,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinestun2": {
     "dir_count": 4,
@@ -4696,8 +4696,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinestun3": {
     "dir_count": 4,
@@ -4740,8 +4740,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinestun4": {
     "dir_count": 4,
@@ -4784,8 +4784,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinekill0": {
     "dir_count": 4,
@@ -4848,8 +4848,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinekill1": {
     "dir_count": 4,
@@ -4892,8 +4892,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinekill2": {
     "dir_count": 4,
@@ -4936,8 +4936,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinekill3": {
     "dir_count": 4,
@@ -4980,8 +4980,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pulse_carbinekill4": {
     "dir_count": 4,
@@ -5024,8 +5024,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ioncarbine0": {
     "dir_count": 4,
@@ -5088,8 +5088,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ioncarbine1": {
     "dir_count": 4,
@@ -5132,8 +5132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ioncarbine2": {
     "dir_count": 4,
@@ -5176,8 +5176,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ioncarbine3": {
     "dir_count": 4,
@@ -5220,8 +5220,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ioncarbine4": {
     "dir_count": 4,
@@ -5264,8 +5264,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "turretlaser": {
     "dir_count": 4,
@@ -5308,8 +5308,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserstun4": {
     "dir_count": 4,
@@ -5352,8 +5352,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserstun3": {
     "dir_count": 4,
@@ -5396,8 +5396,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserstun2": {
     "dir_count": 4,
@@ -5440,8 +5440,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserstun1": {
     "dir_count": 4,
@@ -5484,8 +5484,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserstun0": {
     "dir_count": 4,
@@ -5528,8 +5528,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserkill4": {
     "dir_count": 4,
@@ -5572,8 +5572,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserkill3": {
     "dir_count": 4,
@@ -5616,8 +5616,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserkill2": {
     "dir_count": 4,
@@ -5660,8 +5660,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserkill1": {
     "dir_count": 4,
@@ -5704,8 +5704,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserkill0": {
     "dir_count": 4,
@@ -5748,8 +5748,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserdisable4": {
     "dir_count": 4,
@@ -5792,8 +5792,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserdisable3": {
     "dir_count": 4,
@@ -5836,8 +5836,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserdisable2": {
     "dir_count": 4,
@@ -5880,8 +5880,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserdisable1": {
     "dir_count": 4,
@@ -5924,8 +5924,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hoslaserdisable0": {
     "dir_count": 4,
@@ -5968,8 +5968,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmacutter": {
     "dir_count": 4,
@@ -6012,8 +6012,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alienpistol": {
     "dir_count": 4,
@@ -6056,8 +6056,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "arg": {
     "dir_count": 4,
@@ -6100,8 +6100,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sniper": {
     "dir_count": 4,
@@ -6144,8 +6144,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannonstun0": {
     "dir_count": 4,
@@ -6208,8 +6208,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannonstun1": {
     "dir_count": 4,
@@ -6252,8 +6252,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannonstun2": {
     "dir_count": 4,
@@ -6296,8 +6296,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannonstun3": {
     "dir_count": 4,
@@ -6340,8 +6340,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannonstun4": {
     "dir_count": 4,
@@ -6384,8 +6384,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannondisable0": {
     "dir_count": 4,
@@ -6448,8 +6448,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannondisable1": {
     "dir_count": 4,
@@ -6492,8 +6492,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannondisable2": {
     "dir_count": 4,
@@ -6536,8 +6536,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannondisable3": {
     "dir_count": 4,
@@ -6580,8 +6580,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannondisable4": {
     "dir_count": 4,
@@ -6624,8 +6624,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armcannonlase": {
     "dir_count": 4,
@@ -6668,8 +6668,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "instagibblue": {
     "dir_count": 4,
@@ -6712,8 +6712,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "instagibred": {
     "dir_count": 4,
@@ -6756,8 +6756,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "instagib": {
     "dir_count": 4,
@@ -6800,8 +6800,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "xray0": {
     "dir_count": 4,
@@ -6864,8 +6864,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "xray1": {
     "dir_count": 4,
@@ -6908,8 +6908,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "xray2": {
     "dir_count": 4,
@@ -6952,8 +6952,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "xray3": {
     "dir_count": 4,
@@ -6996,8 +6996,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "xray4": {
     "dir_count": 4,
@@ -7040,8 +7040,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "minigun": {
     "dir_count": 4,
@@ -7084,8 +7084,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tesla": {
     "dir_count": 4,
@@ -7128,8 +7128,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "gravity_gun": {
     "dir_count": 4,
@@ -7172,8 +7172,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bow": {
     "dir_count": 4,
@@ -7216,8 +7216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bow_hardlight": {
     "dir_count": 4,
@@ -7260,8 +7260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "arcane_barrage": {
     "dir_count": 4,
@@ -7344,8 +7344,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rocketlauncher": {
     "dir_count": 4,
@@ -7388,8 +7388,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "blastcannon_empty": {
     "dir_count": 4,
@@ -7432,8 +7432,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "esniper": {
     "dir_count": 4,
@@ -7476,8 +7476,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserstun4": {
     "dir_count": 4,
@@ -7520,8 +7520,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserstun3": {
     "dir_count": 4,
@@ -7564,8 +7564,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserstun2": {
     "dir_count": 4,
@@ -7608,8 +7608,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserstun1": {
     "dir_count": 4,
@@ -7652,8 +7652,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserstun0": {
     "dir_count": 4,
@@ -7716,8 +7716,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserkill0": {
     "dir_count": 4,
@@ -7780,8 +7780,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserkill1": {
     "dir_count": 4,
@@ -7824,8 +7824,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserkill2": {
     "dir_count": 4,
@@ -7868,8 +7868,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserkill3": {
     "dir_count": 4,
@@ -7912,8 +7912,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "protolaserkill4": {
     "dir_count": 4,
@@ -7956,8 +7956,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chemsprayer": {
     "dir_count": 4,
@@ -8000,8 +8000,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "dragnet": {
     "dir_count": 4,
@@ -8044,7 +8044,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

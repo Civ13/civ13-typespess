@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cow_dead": {
     "dir_count": 1,
@@ -57,8 +57,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cow_gib": {
     "dir_count": 1,
@@ -129,8 +129,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "carp": {
     "dir_count": 4,
@@ -213,8 +213,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "carp_dead": {
     "dir_count": 1,
@@ -230,8 +230,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "carp_gib": {
     "dir_count": 1,
@@ -292,8 +292,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "magicarp": {
     "dir_count": 4,
@@ -376,8 +376,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "magicarp_dead": {
     "dir_count": 1,
@@ -393,8 +393,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "magicarp_gib": {
     "dir_count": 1,
@@ -455,8 +455,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "holocarp": {
     "dir_count": 4,
@@ -779,8 +779,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chicken_brown": {
     "dir_count": 4,
@@ -823,8 +823,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chicken_black": {
     "dir_count": 4,
@@ -867,8 +867,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chicken_white": {
     "dir_count": 4,
@@ -911,8 +911,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chicken_brown_dead": {
     "dir_count": 1,
@@ -928,8 +928,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chicken_black_dead": {
     "dir_count": 1,
@@ -945,8 +945,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chicken_white_dead": {
     "dir_count": 1,
@@ -962,8 +962,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chick": {
     "dir_count": 4,
@@ -1006,8 +1006,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chick_dead": {
     "dir_count": 1,
@@ -1023,8 +1023,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chick_gib": {
     "dir_count": 1,
@@ -1115,8 +1115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lizard": {
     "dir_count": 4,
@@ -1159,8 +1159,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lizard_dead": {
     "dir_count": 1,
@@ -1176,8 +1176,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lizard_gib": {
     "dir_count": 1,
@@ -1243,8 +1243,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brownbear": {
     "dir_count": 4,
@@ -1287,8 +1287,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brownbear_dead": {
     "dir_count": 1,
@@ -1304,8 +1304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brownbear_gib": {
     "dir_count": 1,
@@ -1391,8 +1391,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bearfloor": {
     "dir_count": 4,
@@ -1435,8 +1435,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bear": {
     "dir_count": 4,
@@ -1479,8 +1479,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bear_dead": {
     "dir_count": 1,
@@ -1496,8 +1496,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bear_gib": {
     "dir_count": 1,
@@ -1583,8 +1583,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "snowbear": {
     "dir_count": 4,
@@ -1627,8 +1627,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "snowbear_dead": {
     "dir_count": 1,
@@ -1644,8 +1644,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tomato": {
     "dir_count": 4,
@@ -1688,8 +1688,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tomato_dead": {
     "dir_count": 1,
@@ -1705,8 +1705,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "guard": {
     "dir_count": 4,
@@ -1749,8 +1749,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "guard_dead": {
     "dir_count": 1,
@@ -1766,8 +1766,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hunter": {
     "dir_count": 4,
@@ -1810,8 +1810,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hunter_dead": {
     "dir_count": 1,
@@ -1827,8 +1827,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nurse": {
     "dir_count": 4,
@@ -1871,8 +1871,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "nurse_dead": {
     "dir_count": 1,
@@ -1888,8 +1888,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tarantula": {
     "dir_count": 4,
@@ -1932,8 +1932,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tarantula_dead": {
     "dir_count": 1,
@@ -1949,8 +1949,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "viper": {
     "dir_count": 4,
@@ -1993,8 +1993,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "viper_dead": {
     "dir_count": 1,
@@ -2010,8 +2010,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "midwife": {
     "dir_count": 4,
@@ -2054,8 +2054,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "midwife_dead": {
     "dir_count": 1,
@@ -2071,8 +2071,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mushroom": {
     "dir_count": 4,
@@ -2155,8 +2155,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mouse_brown": {
     "dir_count": 4,
@@ -2199,8 +2199,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mouse_brown_dead": {
     "dir_count": 1,
@@ -2216,8 +2216,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mouse_brown_splat": {
     "dir_count": 1,
@@ -2233,8 +2233,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mouse_gray": {
     "dir_count": 4,
@@ -2277,8 +2277,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mouse_gray_dead": {
     "dir_count": 1,
@@ -2294,8 +2294,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mouse_gray_splat": {
     "dir_count": 1,
@@ -2311,8 +2311,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mouse_white": {
     "dir_count": 4,
@@ -2355,8 +2355,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mouse_white_dead": {
     "dir_count": 1,
@@ -2372,8 +2372,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mouse_white_splat": {
     "dir_count": 1,
@@ -2389,8 +2389,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goat": {
     "dir_count": 4,
@@ -2433,8 +2433,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "goat_dead": {
     "dir_count": 1,
@@ -2450,8 +2450,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "parrot_fly": {
     "dir_count": 4,
@@ -2714,8 +2714,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "parrot_sit": {
     "dir_count": 4,
@@ -2758,8 +2758,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "parrot_dead": {
     "dir_count": 1,
@@ -2775,8 +2775,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "faithless": {
     "dir_count": 4,
@@ -2819,8 +2819,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "faithless_dead": {
     "dir_count": 1,
@@ -2836,8 +2836,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "forgotten": {
     "dir_count": 4,
@@ -2880,8 +2880,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "forgotten_dead": {
     "dir_count": 1,
@@ -2897,8 +2897,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "viscerator": {
     "dir_count": 1,
@@ -2934,8 +2934,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "viscerator_attack": {
     "dir_count": 1,
@@ -2966,8 +2966,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "otherthing": {
     "dir_count": 4,
@@ -3070,8 +3070,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "otherthing-dead": {
     "dir_count": 4,
@@ -3114,8 +3114,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "heart": {
     "dir_count": 1,
@@ -3166,8 +3166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bat": {
     "dir_count": 4,
@@ -3270,8 +3270,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bat_dead": {
     "dir_count": 1,
@@ -3287,8 +3287,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mushroom_cap_dead": {
     "dir_count": 1,
@@ -3304,8 +3304,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mushroom_cap": {
     "dir_count": 4,
@@ -3388,8 +3388,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mushroom_color": {
     "dir_count": 4,
@@ -3472,8 +3472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mushroom_dead": {
     "dir_count": 1,
@@ -3489,8 +3489,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "eyeball": {
     "dir_count": 4,
@@ -3533,8 +3533,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bee_1": {
     "dir_count": 1,
@@ -3590,8 +3590,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bee_2": {
     "dir_count": 1,
@@ -3647,8 +3647,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bee_3": {
     "dir_count": 1,
@@ -3704,8 +3704,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bee_4": {
     "dir_count": 1,
@@ -3761,8 +3761,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "butterfly": {
     "dir_count": 4,
@@ -3865,8 +3865,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "butterfly_dead": {
     "dir_count": 1,
@@ -3882,8 +3882,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "headcrab": {
     "dir_count": 4,
@@ -3926,8 +3926,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "headcrab_dead": {
     "dir_count": 1,
@@ -3943,8 +3943,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "carp_swell": {
     "dir_count": 1,
@@ -3990,8 +3990,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morph": {
     "dir_count": 1,
@@ -4017,8 +4017,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "morph_dead": {
     "dir_count": 1,
@@ -4034,8 +4034,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "venus_human_trap": {
     "dir_count": 4,
@@ -4078,8 +4078,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cockroach": {
     "dir_count": 4,
@@ -4142,8 +4142,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "old_dead": {
     "dir_count": 1,
@@ -4159,8 +4159,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "old": {
     "dir_count": 1,
@@ -4176,8 +4176,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickman": {
     "dir_count": 1,
@@ -4198,8 +4198,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickman_movement": {
     "dir_count": 1,
@@ -4220,8 +4220,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickman_dead": {
     "dir_count": 1,
@@ -4237,8 +4237,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickmanranged": {
     "dir_count": 1,
@@ -4259,8 +4259,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickmanranged_movement": {
     "dir_count": 1,
@@ -4281,8 +4281,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickdog": {
     "dir_count": 1,
@@ -4303,8 +4303,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickdog_movement": {
     "dir_count": 1,
@@ -4325,8 +4325,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "stickdog_dead": {
     "dir_count": 1,
@@ -4342,8 +4342,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "combatbear": {
     "dir_count": 4,
@@ -4386,8 +4386,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "combatbear_dead": {
     "dir_count": 1,
@@ -4403,8 +4403,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "armor_bear": {
     "dir_count": 4,
@@ -4447,8 +4447,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "lightgeist": {
     "dir_count": 4,
@@ -4591,8 +4591,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "frog": {
     "dir_count": 4,
@@ -4635,8 +4635,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "frog_dead": {
     "dir_count": 1,
@@ -4652,8 +4652,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rare_frog": {
     "dir_count": 4,
@@ -4696,8 +4696,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rare_frog_dead": {
     "dir_count": 1,
@@ -4713,8 +4713,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flan0": {
     "dir_count": 4,
@@ -4757,8 +4757,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flan1": {
     "dir_count": 4,
@@ -4801,8 +4801,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireflan0": {
     "dir_count": 4,
@@ -4845,8 +4845,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireflan1": {
     "dir_count": 4,
@@ -4889,8 +4889,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "flan_dead": {
     "dir_count": 1,
@@ -4906,8 +4906,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fireflan_dead": {
     "dir_count": 1,
@@ -4923,8 +4923,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crab": {
     "dir_count": 4,
@@ -4967,8 +4967,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crab_dead": {
     "dir_count": 1,
@@ -4984,8 +4984,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "evilcrab": {
     "dir_count": 4,
@@ -5028,8 +5028,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "evilcrab_dead": {
     "dir_count": 1,
@@ -5045,8 +5045,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "evilkreb": {
     "dir_count": 1,
@@ -5062,8 +5062,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "evilkreb_dead": {
     "dir_count": 1,
@@ -5079,8 +5079,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kreb": {
     "dir_count": 1,
@@ -5096,8 +5096,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "kreb_dead": {
     "dir_count": 1,
@@ -5113,8 +5113,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clock_hawk_fly": {
     "dir_count": 4,
@@ -5377,8 +5377,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "clock_hawk_sit": {
     "dir_count": 4,
@@ -5421,7 +5421,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

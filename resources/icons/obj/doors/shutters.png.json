@@ -48,8 +48,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "opening": {
     "dir_count": 1,
@@ -100,8 +100,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "open": {
     "dir_count": 1,
@@ -117,8 +117,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "closed": {
     "dir_count": 1,
@@ -134,7 +134,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

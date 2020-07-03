@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   " ": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "displaced": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reinforced": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "melted": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grille": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brokengrille": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "latticefull": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "catwalkfull": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window": {
     "dir_count": 8,
@@ -229,8 +229,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow": {
     "dir_count": 8,
@@ -309,8 +309,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow": {
     "dir_count": 8,
@@ -389,8 +389,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindowold": {
     "dir_count": 8,
@@ -469,8 +469,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fwindow": {
     "dir_count": 8,
@@ -549,8 +549,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "unwall": {
     "dir_count": 1,
@@ -576,8 +576,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ungirder": {
     "dir_count": 1,
@@ -613,8 +613,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "unr_girder": {
     "dir_count": 1,
@@ -640,8 +640,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "r_girder": {
     "dir_count": 1,
@@ -657,8 +657,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table_dir": {
     "dir_count": 8,
@@ -737,8 +737,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table": {
     "dir_count": 1,
@@ -754,8 +754,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table_1tilethick": {
     "dir_count": 8,
@@ -834,8 +834,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table_1tileendtable": {
     "dir_count": 4,
@@ -878,8 +878,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table_middle": {
     "dir_count": 1,
@@ -895,8 +895,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table_dir2": {
     "dir_count": 4,
@@ -939,8 +939,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table_dir3": {
     "dir_count": 8,
@@ -1019,8 +1019,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "woodenbarricade": {
     "dir_count": 1,
@@ -1036,8 +1036,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reinftable": {
     "dir_count": 1,
@@ -1053,8 +1053,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reinftable_dir": {
     "dir_count": 8,
@@ -1133,8 +1133,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reinftable_1tilethick": {
     "dir_count": 8,
@@ -1213,8 +1213,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reinftable_1tileendtable": {
     "dir_count": 4,
@@ -1257,8 +1257,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reinftable_middle": {
     "dir_count": 1,
@@ -1274,8 +1274,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reinftable_dir2": {
     "dir_count": 4,
@@ -1318,8 +1318,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reinftable_dir3": {
     "dir_count": 8,
@@ -1398,8 +1398,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table_horizontal": {
     "dir_count": 4,
@@ -1442,8 +1442,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table_vertical": {
     "dir_count": 4,
@@ -1486,8 +1486,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ladder00": {
     "dir_count": 1,
@@ -1503,8 +1503,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ladder10": {
     "dir_count": 1,
@@ -1520,8 +1520,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ladder01": {
     "dir_count": 1,
@@ -1537,8 +1537,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ladder11": {
     "dir_count": 1,
@@ -1554,8 +1554,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "woodtable": {
     "dir_count": 1,
@@ -1571,8 +1571,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "woodtable_dir": {
     "dir_count": 8,
@@ -1651,8 +1651,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "woodtable_1tilethick": {
     "dir_count": 8,
@@ -1731,8 +1731,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "woodtable_1tileendtable": {
     "dir_count": 4,
@@ -1775,8 +1775,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "woodtable_middle": {
     "dir_count": 1,
@@ -1792,8 +1792,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "woodtable_dir2": {
     "dir_count": 4,
@@ -1836,8 +1836,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "woodtable_dir3": {
     "dir_count": 8,
@@ -1916,8 +1916,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "safe": {
     "dir_count": 1,
@@ -1933,8 +1933,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "safe-open": {
     "dir_count": 1,
@@ -1950,8 +1950,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "floorsafe": {
     "dir_count": 1,
@@ -1967,8 +1967,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "floorsafe-open": {
     "dir_count": 1,
@@ -1984,8 +1984,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "linenbin-full": {
     "dir_count": 1,
@@ -2001,8 +2001,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "linenbin-half": {
     "dir_count": 1,
@@ -2018,8 +2018,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "linenbin-empty": {
     "dir_count": 1,
@@ -2035,8 +2035,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pokertable": {
     "dir_count": 1,
@@ -2052,8 +2052,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pokertable_dir": {
     "dir_count": 8,
@@ -2132,8 +2132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pokertable_1tilethick": {
     "dir_count": 8,
@@ -2212,8 +2212,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pokertable_1tileendtable": {
     "dir_count": 4,
@@ -2256,8 +2256,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pokertable_middle": {
     "dir_count": 1,
@@ -2273,8 +2273,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pokertable_dir2": {
     "dir_count": 4,
@@ -2317,8 +2317,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "pokertable_dir3": {
     "dir_count": 8,
@@ -2397,8 +2397,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_table_dir": {
     "dir_count": 8,
@@ -2477,8 +2477,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_table": {
     "dir_count": 1,
@@ -2494,8 +2494,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_table_1tilethick": {
     "dir_count": 8,
@@ -2574,8 +2574,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_table_1tileendtable": {
     "dir_count": 4,
@@ -2618,8 +2618,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_table_middle": {
     "dir_count": 1,
@@ -2635,8 +2635,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_table_dir2": {
     "dir_count": 4,
@@ -2679,8 +2679,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "glass_table_dir3": {
     "dir_count": 8,
@@ -2759,8 +2759,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "table_frame": {
     "dir_count": 1,
@@ -2776,8 +2776,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wood_frame": {
     "dir_count": 1,
@@ -2793,8 +2793,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alien_frame": {
     "dir_count": 1,
@@ -2810,8 +2810,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brass_frame": {
     "dir_count": 1,
@@ -2827,8 +2827,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow1": {
     "dir_count": 1,
@@ -2844,8 +2844,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow2": {
     "dir_count": 1,
@@ -2861,8 +2861,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow3": {
     "dir_count": 1,
@@ -2878,8 +2878,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow4": {
     "dir_count": 1,
@@ -2895,8 +2895,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow5": {
     "dir_count": 1,
@@ -2912,8 +2912,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow6": {
     "dir_count": 1,
@@ -2929,8 +2929,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow7": {
     "dir_count": 1,
@@ -2946,8 +2946,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow8": {
     "dir_count": 1,
@@ -2963,8 +2963,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow9": {
     "dir_count": 1,
@@ -2980,8 +2980,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow10": {
     "dir_count": 1,
@@ -2997,8 +2997,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow11": {
     "dir_count": 1,
@@ -3014,8 +3014,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow12": {
     "dir_count": 1,
@@ -3031,8 +3031,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow13": {
     "dir_count": 1,
@@ -3048,8 +3048,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow14": {
     "dir_count": 1,
@@ -3065,8 +3065,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow15": {
     "dir_count": 1,
@@ -3082,8 +3082,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow0": {
     "dir_count": 1,
@@ -3099,8 +3099,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "swindow": {
     "dir_count": 1,
@@ -3116,8 +3116,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window0": {
     "dir_count": 1,
@@ -3133,8 +3133,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window1": {
     "dir_count": 1,
@@ -3150,8 +3150,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window2": {
     "dir_count": 1,
@@ -3167,8 +3167,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window3": {
     "dir_count": 1,
@@ -3184,8 +3184,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window4": {
     "dir_count": 1,
@@ -3201,8 +3201,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window5": {
     "dir_count": 1,
@@ -3218,8 +3218,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window6": {
     "dir_count": 1,
@@ -3235,8 +3235,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window7": {
     "dir_count": 1,
@@ -3252,8 +3252,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window8": {
     "dir_count": 1,
@@ -3269,8 +3269,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window9": {
     "dir_count": 1,
@@ -3286,8 +3286,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window10": {
     "dir_count": 1,
@@ -3303,8 +3303,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window11": {
     "dir_count": 1,
@@ -3320,8 +3320,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window12": {
     "dir_count": 1,
@@ -3337,8 +3337,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window13": {
     "dir_count": 1,
@@ -3354,8 +3354,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window14": {
     "dir_count": 1,
@@ -3371,8 +3371,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "window15": {
     "dir_count": 1,
@@ -3388,8 +3388,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow0": {
     "dir_count": 1,
@@ -3405,8 +3405,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow1": {
     "dir_count": 1,
@@ -3422,8 +3422,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow2": {
     "dir_count": 1,
@@ -3439,8 +3439,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow3": {
     "dir_count": 1,
@@ -3456,8 +3456,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow4": {
     "dir_count": 1,
@@ -3473,8 +3473,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow5": {
     "dir_count": 1,
@@ -3490,8 +3490,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow6": {
     "dir_count": 1,
@@ -3507,8 +3507,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow7": {
     "dir_count": 1,
@@ -3524,8 +3524,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow8": {
     "dir_count": 1,
@@ -3541,8 +3541,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow9": {
     "dir_count": 1,
@@ -3558,8 +3558,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow10": {
     "dir_count": 1,
@@ -3575,8 +3575,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow11": {
     "dir_count": 1,
@@ -3592,8 +3592,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow12": {
     "dir_count": 1,
@@ -3609,8 +3609,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow13": {
     "dir_count": 1,
@@ -3626,8 +3626,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow14": {
     "dir_count": 1,
@@ -3643,8 +3643,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rwindow15": {
     "dir_count": 1,
@@ -3660,8 +3660,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow0": {
     "dir_count": 1,
@@ -3677,8 +3677,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow1": {
     "dir_count": 1,
@@ -3694,8 +3694,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow2": {
     "dir_count": 1,
@@ -3711,8 +3711,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow3": {
     "dir_count": 1,
@@ -3728,8 +3728,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow4": {
     "dir_count": 1,
@@ -3745,8 +3745,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow5": {
     "dir_count": 1,
@@ -3762,8 +3762,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow6": {
     "dir_count": 1,
@@ -3779,8 +3779,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow7": {
     "dir_count": 1,
@@ -3796,8 +3796,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow8": {
     "dir_count": 1,
@@ -3813,8 +3813,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow9": {
     "dir_count": 1,
@@ -3830,8 +3830,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow10": {
     "dir_count": 1,
@@ -3847,8 +3847,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow11": {
     "dir_count": 1,
@@ -3864,8 +3864,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow12": {
     "dir_count": 1,
@@ -3881,8 +3881,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow13": {
     "dir_count": 1,
@@ -3898,8 +3898,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow14": {
     "dir_count": 1,
@@ -3915,8 +3915,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "twindow15": {
     "dir_count": 1,
@@ -3932,8 +3932,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "damage25": {
     "dir_count": 1,
@@ -3949,8 +3949,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "damage50": {
     "dir_count": 1,
@@ -3966,8 +3966,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "damage75": {
     "dir_count": 1,
@@ -3983,8 +3983,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alientable": {
     "dir_count": 1,
@@ -4000,8 +4000,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "alientable_1tileendtable": {
     "dir_count": 4,
@@ -4044,8 +4044,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reflector_base": {
     "dir_count": 1,
@@ -4061,8 +4061,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reflector_map": {
     "dir_count": 8,
@@ -4141,8 +4141,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reflector": {
     "dir_count": 1,
@@ -4158,8 +4158,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reflector_double": {
     "dir_count": 1,
@@ -4175,8 +4175,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "reflector_box": {
     "dir_count": 1,
@@ -4192,8 +4192,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ratvargrille": {
     "dir_count": 1,
@@ -4209,8 +4209,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "brokenratvargrille": {
     "dir_count": 1,
@@ -4226,8 +4226,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "speaking_tile": {
     "dir_count": 1,
@@ -4243,8 +4243,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "fancy_table": {
     "dir_count": 1,
@@ -4260,8 +4260,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow0": {
     "dir_count": 1,
@@ -4277,8 +4277,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow1": {
     "dir_count": 1,
@@ -4294,8 +4294,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow2": {
     "dir_count": 1,
@@ -4311,8 +4311,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow3": {
     "dir_count": 1,
@@ -4328,8 +4328,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow4": {
     "dir_count": 1,
@@ -4345,8 +4345,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow5": {
     "dir_count": 1,
@@ -4362,8 +4362,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow6": {
     "dir_count": 1,
@@ -4379,8 +4379,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow7": {
     "dir_count": 1,
@@ -4396,8 +4396,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow8": {
     "dir_count": 1,
@@ -4413,8 +4413,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow9": {
     "dir_count": 1,
@@ -4430,8 +4430,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow10": {
     "dir_count": 1,
@@ -4447,8 +4447,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow11": {
     "dir_count": 1,
@@ -4464,8 +4464,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow12": {
     "dir_count": 1,
@@ -4481,8 +4481,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow13": {
     "dir_count": 1,
@@ -4498,8 +4498,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow14": {
     "dir_count": 1,
@@ -4515,8 +4515,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow15": {
     "dir_count": 1,
@@ -4532,8 +4532,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow0": {
     "dir_count": 1,
@@ -4549,8 +4549,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow1": {
     "dir_count": 1,
@@ -4566,8 +4566,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow2": {
     "dir_count": 1,
@@ -4583,8 +4583,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow3": {
     "dir_count": 1,
@@ -4600,8 +4600,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow4": {
     "dir_count": 1,
@@ -4617,8 +4617,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow5": {
     "dir_count": 1,
@@ -4634,8 +4634,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow6": {
     "dir_count": 1,
@@ -4651,8 +4651,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow7": {
     "dir_count": 1,
@@ -4668,8 +4668,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow8": {
     "dir_count": 1,
@@ -4685,8 +4685,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow9": {
     "dir_count": 1,
@@ -4702,8 +4702,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow10": {
     "dir_count": 1,
@@ -4719,8 +4719,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow11": {
     "dir_count": 1,
@@ -4736,8 +4736,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow12": {
     "dir_count": 1,
@@ -4753,8 +4753,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow13": {
     "dir_count": 1,
@@ -4770,8 +4770,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow14": {
     "dir_count": 1,
@@ -4787,8 +4787,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow15": {
     "dir_count": 1,
@@ -4804,8 +4804,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmawindow": {
     "dir_count": 8,
@@ -4884,8 +4884,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "plasmarwindow": {
     "dir_count": 8,
@@ -4964,7 +4964,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

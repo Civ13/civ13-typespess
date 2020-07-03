@@ -120,8 +120,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Standing": {
     "dir_count": 4,
@@ -224,8 +224,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "Monkey_burning": {
     "dir_count": 4,
@@ -328,7 +328,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }

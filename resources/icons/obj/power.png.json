@@ -13,8 +13,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "light0": {
     "dir_count": 1,
@@ -30,8 +30,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "light-p": {
     "dir_count": 1,
@@ -47,8 +47,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cell": {
     "dir_count": 1,
@@ -64,8 +64,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hcell": {
     "dir_count": 1,
@@ -81,8 +81,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "h+cell": {
     "dir_count": 1,
@@ -98,8 +98,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "scell": {
     "dir_count": 1,
@@ -115,8 +115,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "hpcell": {
     "dir_count": 1,
@@ -132,8 +132,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "icell": {
     "dir_count": 1,
@@ -149,8 +149,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "bscell": {
     "dir_count": 1,
@@ -166,8 +166,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cell-o1": {
     "dir_count": 1,
@@ -183,8 +183,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "cell-o2": {
     "dir_count": 1,
@@ -200,8 +200,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "term": {
     "dir_count": 4,
@@ -244,8 +244,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "term-f": {
     "dir_count": 4,
@@ -288,8 +288,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coil": {
     "dir_count": 1,
@@ -305,8 +305,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coil2": {
     "dir_count": 1,
@@ -322,8 +322,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "coil1": {
     "dir_count": 1,
@@ -339,8 +339,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wire": {
     "dir_count": 1,
@@ -356,8 +356,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wire2": {
     "dir_count": 1,
@@ -373,8 +373,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "wire1": {
     "dir_count": 1,
@@ -390,8 +390,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "solar_panel": {
     "dir_count": 8,
@@ -470,8 +470,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "solar_panel-b": {
     "dir_count": 1,
@@ -487,8 +487,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "sp_base": {
     "dir_count": 1,
@@ -504,8 +504,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ccharger": {
     "dir_count": 1,
@@ -521,8 +521,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ccharger-on": {
     "dir_count": 1,
@@ -538,8 +538,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ccharger-o0": {
     "dir_count": 1,
@@ -560,8 +560,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ccharger-o1": {
     "dir_count": 1,
@@ -582,8 +582,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ccharger-o2": {
     "dir_count": 1,
@@ -604,8 +604,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ccharger-o3": {
     "dir_count": 1,
@@ -626,8 +626,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "ccharger-o4": {
     "dir_count": 1,
@@ -648,8 +648,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg": {
     "dir_count": 1,
@@ -665,8 +665,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op1": {
     "dir_count": 1,
@@ -682,8 +682,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op2": {
     "dir_count": 1,
@@ -699,8 +699,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op3": {
     "dir_count": 1,
@@ -716,8 +716,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op4": {
     "dir_count": 1,
@@ -733,8 +733,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op5": {
     "dir_count": 1,
@@ -750,8 +750,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op6": {
     "dir_count": 1,
@@ -767,8 +767,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-broken": {
     "dir_count": 1,
@@ -784,8 +784,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op7": {
     "dir_count": 1,
@@ -801,8 +801,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op8": {
     "dir_count": 1,
@@ -818,8 +818,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op9": {
     "dir_count": 1,
@@ -835,8 +835,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op10": {
     "dir_count": 1,
@@ -852,8 +852,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-op11": {
     "dir_count": 1,
@@ -869,8 +869,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-oc00": {
     "dir_count": 1,
@@ -886,8 +886,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-oc10": {
     "dir_count": 1,
@@ -908,8 +908,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-oc01": {
     "dir_count": 1,
@@ -930,8 +930,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "teg-oc11": {
     "dir_count": 1,
@@ -952,8 +952,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "crema_switch": {
     "dir_count": 1,
@@ -969,8 +969,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portgen0legacy": {
     "dir_count": 1,
@@ -986,8 +986,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portgen1legacy": {
     "dir_count": 1,
@@ -1003,8 +1003,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portgen2legacy": {
     "dir_count": 1,
@@ -1020,8 +1020,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "filter": {
     "dir_count": 1,
@@ -1037,8 +1037,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tank": {
     "dir_count": 1,
@@ -1054,8 +1054,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "tracker": {
     "dir_count": 8,
@@ -1134,8 +1134,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rtg": {
     "dir_count": 1,
@@ -1151,8 +1151,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "rtg-open": {
     "dir_count": 1,
@@ -1168,8 +1168,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "switch-dbl-down": {
     "dir_count": 1,
@@ -1185,8 +1185,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "switch-dbl-up": {
     "dir_count": 1,
@@ -1202,8 +1202,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "switch-down": {
     "dir_count": 1,
@@ -1219,8 +1219,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "switch-up": {
     "dir_count": 1,
@@ -1236,8 +1236,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes": {
     "dir_count": 1,
@@ -1253,8 +1253,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-og1": {
     "dir_count": 1,
@@ -1275,8 +1275,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-og2": {
     "dir_count": 1,
@@ -1292,8 +1292,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-og3": {
     "dir_count": 1,
@@ -1309,8 +1309,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-og4": {
     "dir_count": 1,
@@ -1326,8 +1326,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-og5": {
     "dir_count": 1,
@@ -1343,8 +1343,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-op0": {
     "dir_count": 1,
@@ -1360,8 +1360,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-op1": {
     "dir_count": 1,
@@ -1377,8 +1377,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-oc1": {
     "dir_count": 1,
@@ -1399,8 +1399,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-oc0": {
     "dir_count": 1,
@@ -1421,8 +1421,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "smes-o": {
     "dir_count": 1,
@@ -1438,8 +1438,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "grown_wires": {
     "dir_count": 1,
@@ -1455,8 +1455,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portgen0_0": {
     "dir_count": 1,
@@ -1472,8 +1472,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portgen0_1": {
     "dir_count": 1,
@@ -1589,8 +1589,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portgen1_0": {
     "dir_count": 1,
@@ -1606,8 +1606,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portgen1_1": {
     "dir_count": 1,
@@ -1723,8 +1723,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portgen2_0": {
     "dir_count": 1,
@@ -1740,8 +1740,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "portgen2_1": {
     "dir_count": 1,
@@ -1857,8 +1857,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "apc0": {
     "dir_count": 1,
@@ -1875,7 +1875,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco3-1": {
@@ -1918,7 +1918,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco3-0": {
@@ -1941,7 +1941,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco3-2": {
@@ -1964,7 +1964,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apc-spark": {
@@ -2012,7 +2012,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apcewires": {
@@ -2030,7 +2030,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apcemag": {
@@ -2053,7 +2053,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apc1": {
@@ -2071,7 +2071,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apc1-b-nocover": {
@@ -2089,7 +2089,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apc1-nocover": {
@@ -2107,7 +2107,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apc2": {
@@ -2125,7 +2125,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apc2-b-nocover": {
@@ -2143,7 +2143,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apc2-nocover": {
@@ -2161,7 +2161,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apc-b": {
@@ -2179,7 +2179,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apcmaint": {
@@ -2197,7 +2197,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apcox-0": {
@@ -2215,7 +2215,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apcox-1": {
@@ -2233,7 +2233,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco0-0": {
@@ -2251,7 +2251,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco0-1": {
@@ -2269,7 +2269,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco0-2": {
@@ -2287,7 +2287,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco0-3": {
@@ -2305,7 +2305,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco1-0": {
@@ -2323,7 +2323,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco1-1": {
@@ -2341,7 +2341,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco1-2": {
@@ -2359,7 +2359,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco1-3": {
@@ -2377,7 +2377,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco2-0": {
@@ -2395,7 +2395,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco2-1": {
@@ -2413,7 +2413,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco2-2": {
@@ -2431,7 +2431,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   },
   "apco2-3": {
@@ -2449,7 +2449,7 @@
         ]
       }
     },
-    "tile_size": 32,
+    ,
     "directional_offset": 24
   }
 }

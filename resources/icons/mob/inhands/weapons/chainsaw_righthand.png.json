@@ -40,8 +40,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "chainsaw_on": {
     "dir_count": 4,
@@ -104,8 +104,8 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   },
   "mounted_chainsaw": {
     "dir_count": 4,
@@ -148,7 +148,7 @@
           }
         ]
       }
-    },
-    "tile_size": 32
+    }
+    
   }
 }
