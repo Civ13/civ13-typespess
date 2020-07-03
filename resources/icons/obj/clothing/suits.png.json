@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "bomb": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "detective-armor": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "heavy": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "swat": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "deathsquad": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "spaceold": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "space": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "syndicate-green": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "syndicate-green-dark": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "syndicate-orange": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "syndicate-blue": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "syndicate-black": {
     "dir_count": 1,
@@ -218,7 +206,6 @@
         ]
       }
     }
-    
   },
   "syndicate-black-green": {
     "dir_count": 1,
@@ -235,7 +222,6 @@
         ]
       }
     }
-    
   },
   "syndicate-black-blue": {
     "dir_count": 1,
@@ -252,7 +238,6 @@
         ]
       }
     }
-    
   },
   "syndicate-black-med": {
     "dir_count": 1,
@@ -269,7 +254,6 @@
         ]
       }
     }
-    
   },
   "syndicate-black-orange": {
     "dir_count": 1,
@@ -286,7 +270,6 @@
         ]
       }
     }
-    
   },
   "syndicate-black-red": {
     "dir_count": 1,
@@ -303,7 +286,6 @@
         ]
       }
     }
-    
   },
   "syndicate-black-engie": {
     "dir_count": 1,
@@ -320,7 +302,6 @@
         ]
       }
     }
-    
   },
   "void": {
     "dir_count": 1,
@@ -337,7 +318,6 @@
         ]
       }
     }
-    
   },
   "bio": {
     "dir_count": 1,
@@ -354,7 +334,6 @@
         ]
       }
     }
-    
   },
   "bio_general": {
     "dir_count": 1,
@@ -371,7 +350,6 @@
         ]
       }
     }
-    
   },
   "bio_virology": {
     "dir_count": 1,
@@ -388,7 +366,6 @@
         ]
       }
     }
-    
   },
   "bio_security": {
     "dir_count": 1,
@@ -405,7 +382,6 @@
         ]
       }
     }
-    
   },
   "bio_janitor": {
     "dir_count": 1,
@@ -422,7 +398,6 @@
         ]
       }
     }
-    
   },
   "bio_scientist": {
     "dir_count": 1,
@@ -439,7 +414,6 @@
         ]
       }
     }
-    
   },
   "bombsuit": {
     "dir_count": 1,
@@ -456,7 +430,6 @@
         ]
       }
     }
-    
   },
   "bombsuit_white": {
     "dir_count": 1,
@@ -473,7 +446,6 @@
         ]
       }
     }
-    
   },
   "bombsuit_sec": {
     "dir_count": 1,
@@ -490,7 +462,6 @@
         ]
       }
     }
-    
   },
   "rad": {
     "dir_count": 1,
@@ -507,7 +478,6 @@
         ]
       }
     }
-    
   },
   "detective": {
     "dir_count": 1,
@@ -524,7 +494,6 @@
         ]
       }
     }
-    
   },
   "labcoat": {
     "dir_count": 1,
@@ -541,7 +510,6 @@
         ]
       }
     }
-    
   },
   "syndicate": {
     "dir_count": 1,
@@ -558,7 +526,6 @@
         ]
       }
     }
-    
   },
   "apron": {
     "dir_count": 1,
@@ -575,7 +542,6 @@
         ]
       }
     }
-    
   },
   "chef": {
     "dir_count": 1,
@@ -592,7 +558,6 @@
         ]
       }
     }
-    
   },
   "chef_t": {
     "dir_count": 1,
@@ -609,7 +574,6 @@
         ]
       }
     }
-    
   },
   "santa": {
     "dir_count": 1,
@@ -626,7 +590,6 @@
         ]
       }
     }
-    
   },
   "death": {
     "dir_count": 1,
@@ -643,7 +606,6 @@
         ]
       }
     }
-    
   },
   "tdgreen": {
     "dir_count": 1,
@@ -660,7 +622,6 @@
         ]
       }
     }
-    
   },
   "tdred": {
     "dir_count": 1,
@@ -677,7 +638,6 @@
         ]
       }
     }
-    
   },
   "straight_jacket": {
     "dir_count": 1,
@@ -694,7 +654,6 @@
         ]
       }
     }
-    
   },
   "centcom": {
     "dir_count": 1,
@@ -711,7 +670,6 @@
         ]
       }
     }
-    
   },
   "oldcaparmor": {
     "dir_count": 1,
@@ -728,7 +686,6 @@
         ]
       }
     }
-    
   },
   "caparmor": {
     "dir_count": 1,
@@ -745,7 +702,6 @@
         ]
       }
     }
-    
   },
   "judge": {
     "dir_count": 1,
@@ -762,7 +718,6 @@
         ]
       }
     }
-    
   },
   "pirate": {
     "dir_count": 1,
@@ -779,7 +734,6 @@
         ]
       }
     }
-    
   },
   "plaguedoctor": {
     "dir_count": 1,
@@ -796,7 +750,6 @@
         ]
       }
     }
-    
   },
   "hos": {
     "dir_count": 1,
@@ -813,7 +766,6 @@
         ]
       }
     }
-    
   },
   "hostrench": {
     "dir_count": 1,
@@ -830,7 +782,6 @@
         ]
       }
     }
-    
   },
   "labcoat_cmo": {
     "dir_count": 1,
@@ -847,7 +798,6 @@
         ]
       }
     }
-    
   },
   "wizard-fake": {
     "dir_count": 1,
@@ -864,7 +814,6 @@
         ]
       }
     }
-    
   },
   "wizard": {
     "dir_count": 1,
@@ -881,7 +830,6 @@
         ]
       }
     }
-    
   },
   "yellowwizard": {
     "dir_count": 1,
@@ -898,7 +846,6 @@
         ]
       }
     }
-    
   },
   "redwizard": {
     "dir_count": 1,
@@ -915,7 +862,6 @@
         ]
       }
     }
-    
   },
   "s-ninja": {
     "dir_count": 1,
@@ -932,7 +878,6 @@
         ]
       }
     }
-    
   },
   "s-ninjan": {
     "dir_count": 1,
@@ -949,7 +894,6 @@
         ]
       }
     }
-    
   },
   "s-ninjanf": {
     "dir_count": 1,
@@ -966,7 +910,6 @@
         ]
       }
     }
-    
   },
   "s-ninjak": {
     "dir_count": 1,
@@ -983,7 +926,6 @@
         ]
       }
     }
-    
   },
   "s-ninjakf": {
     "dir_count": 1,
@@ -1000,7 +942,6 @@
         ]
       }
     }
-    
   },
   "hazard": {
     "dir_count": 1,
@@ -1017,7 +958,6 @@
         ]
       }
     }
-    
   },
   "firesuit": {
     "dir_count": 1,
@@ -1034,7 +974,6 @@
         ]
       }
     }
-    
   },
   "labgreen": {
     "dir_count": 1,
@@ -1051,7 +990,6 @@
         ]
       }
     }
-    
   },
   "surgical": {
     "dir_count": 1,
@@ -1068,7 +1006,6 @@
         ]
       }
     }
-    
   },
   "bombsuitsec_old": {
     "dir_count": 1,
@@ -1085,7 +1022,6 @@
         ]
       }
     }
-    
   },
   "marisa": {
     "dir_count": 1,
@@ -1102,7 +1038,6 @@
         ]
       }
     }
-    
   },
   "captunic": {
     "dir_count": 1,
@@ -1119,7 +1054,6 @@
         ]
       }
     }
-    
   },
   "nun": {
     "dir_count": 1,
@@ -1136,7 +1070,6 @@
         ]
       }
     }
-    
   },
   "chaplain_hoodie": {
     "dir_count": 1,
@@ -1153,7 +1086,6 @@
         ]
       }
     }
-    
   },
   "chaplain_hoodie_t": {
     "dir_count": 1,
@@ -1170,7 +1102,6 @@
         ]
       }
     }
-    
   },
   "imperium_monk": {
     "dir_count": 1,
@@ -1187,7 +1118,6 @@
         ]
       }
     }
-    
   },
   "suitjacket_blue": {
     "dir_count": 1,
@@ -1204,7 +1134,6 @@
         ]
       }
     }
-    
   },
   "suitjacket_blue_t": {
     "dir_count": 1,
@@ -1221,7 +1150,6 @@
         ]
       }
     }
-    
   },
   "labcoat_t": {
     "dir_count": 1,
@@ -1238,7 +1166,6 @@
         ]
       }
     }
-    
   },
   "labcoat_cmo_t": {
     "dir_count": 1,
@@ -1255,7 +1182,6 @@
         ]
       }
     }
-    
   },
   "bearhide": {
     "dir_count": 1,
@@ -1272,7 +1198,6 @@
         ]
       }
     }
-    
   },
   "bearhide_space": {
     "dir_count": 1,
@@ -1289,7 +1214,6 @@
         ]
       }
     }
-    
   },
   "riot": {
     "dir_count": 1,
@@ -1306,7 +1230,6 @@
         ]
       }
     }
-    
   },
   "labcoat_gen": {
     "dir_count": 1,
@@ -1323,7 +1246,6 @@
         ]
       }
     }
-    
   },
   "labcoat_gen_t": {
     "dir_count": 1,
@@ -1340,7 +1262,6 @@
         ]
       }
     }
-    
   },
   "labcoat_vir": {
     "dir_count": 1,
@@ -1357,7 +1278,6 @@
         ]
       }
     }
-    
   },
   "labcoat_vir_t": {
     "dir_count": 1,
@@ -1374,7 +1294,6 @@
         ]
       }
     }
-    
   },
   "labcoat_chem": {
     "dir_count": 1,
@@ -1391,7 +1310,6 @@
         ]
       }
     }
-    
   },
   "labcoat_chem_t": {
     "dir_count": 1,
@@ -1408,7 +1326,6 @@
         ]
       }
     }
-    
   },
   "labcoat_tox": {
     "dir_count": 1,
@@ -1425,7 +1342,6 @@
         ]
       }
     }
-    
   },
   "labcoat_tox_t": {
     "dir_count": 1,
@@ -1442,7 +1358,6 @@
         ]
       }
     }
-    
   },
   "labgreen_t": {
     "dir_count": 1,
@@ -1459,7 +1374,6 @@
         ]
       }
     }
-    
   },
   "chickensuit": {
     "dir_count": 1,
@@ -1476,7 +1390,6 @@
         ]
       }
     }
-    
   },
   "holidaypriest": {
     "dir_count": 1,
@@ -1493,7 +1406,6 @@
         ]
       }
     }
-    
   },
   "apronchef": {
     "dir_count": 1,
@@ -1510,7 +1422,6 @@
         ]
       }
     }
-    
   },
   "monkeysuit": {
     "dir_count": 1,
@@ -1527,7 +1438,6 @@
         ]
       }
     }
-    
   },
   "cultrobes": {
     "dir_count": 1,
@@ -1544,7 +1454,6 @@
         ]
       }
     }
-    
   },
   "cultrobes_t": {
     "dir_count": 1,
@@ -1561,7 +1470,6 @@
         ]
       }
     }
-    
   },
   "bio_cmo": {
     "dir_count": 1,
@@ -1578,7 +1486,6 @@
         ]
       }
     }
-    
   },
   "hastur": {
     "dir_count": 1,
@@ -1595,7 +1502,6 @@
         ]
       }
     }
-    
   },
   "suitjacket_purp": {
     "dir_count": 1,
@@ -1612,7 +1518,6 @@
         ]
       }
     }
-    
   },
   "suitjacket_purp_t": {
     "dir_count": 1,
@@ -1629,7 +1534,6 @@
         ]
       }
     }
-    
   },
   "hgpirate": {
     "dir_count": 4,
@@ -1673,7 +1577,6 @@
         ]
       }
     }
-    
   },
   "reactive": {
     "dir_count": 1,
@@ -1690,7 +1593,6 @@
         ]
       }
     }
-    
   },
   "reactiveoff": {
     "dir_count": 1,
@@ -1707,7 +1609,6 @@
         ]
       }
     }
-    
   },
   "justice": {
     "dir_count": 1,
@@ -1724,7 +1625,6 @@
         ]
       }
     }
-    
   },
   "magusred": {
     "dir_count": 1,
@@ -1741,7 +1641,6 @@
         ]
       }
     }
-    
   },
   "magusblue": {
     "dir_count": 1,
@@ -1758,7 +1657,6 @@
         ]
       }
     }
-    
   },
   "cardborg": {
     "dir_count": 1,
@@ -1775,7 +1673,6 @@
         ]
       }
     }
-    
   },
   "ianshirt": {
     "dir_count": 1,
@@ -1792,7 +1689,6 @@
         ]
       }
     }
-    
   },
   "bluetag": {
     "dir_count": 1,
@@ -1809,7 +1705,6 @@
         ]
       }
     }
-    
   },
   "redtag": {
     "dir_count": 1,
@@ -1826,7 +1721,6 @@
         ]
       }
     }
-    
   },
   "engspace_suit": {
     "dir_count": 1,
@@ -1843,7 +1737,6 @@
         ]
       }
     }
-    
   },
   "cespace_suit": {
     "dir_count": 1,
@@ -1860,7 +1753,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-white": {
     "dir_count": 1,
@@ -1877,7 +1769,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-engineering": {
     "dir_count": 1,
@@ -1894,7 +1785,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-mining": {
     "dir_count": 1,
@@ -1911,7 +1801,6 @@
         ]
       }
     }
-    
   },
   "hardsuit1-syndi": {
     "dir_count": 1,
@@ -1928,7 +1817,6 @@
         ]
       }
     }
-    
   },
   "hardsuit0-syndi": {
     "dir_count": 1,
@@ -1945,7 +1833,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-wiz": {
     "dir_count": 1,
@@ -1962,7 +1849,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-hos": {
     "dir_count": 1,
@@ -1979,7 +1865,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-ancient": {
     "dir_count": 1,
@@ -1996,7 +1881,6 @@
         ]
       }
     }
-    
   },
   "overalls": {
     "dir_count": 1,
@@ -2013,7 +1897,6 @@
         ]
       }
     }
-    
   },
   "cult_armor": {
     "dir_count": 1,
@@ -2030,7 +1913,6 @@
         ]
       }
     }
-    
   },
   "cult_armor_t": {
     "dir_count": 1,
@@ -2047,7 +1929,6 @@
         ]
       }
     }
-    
   },
   "cultrobesalt": {
     "dir_count": 1,
@@ -2064,7 +1945,6 @@
         ]
       }
     }
-    
   },
   "hosbluejacket": {
     "dir_count": 1,
@@ -2081,7 +1961,6 @@
         ]
       }
     }
-    
   },
   "hostanjacket": {
     "dir_count": 1,
@@ -2098,7 +1977,6 @@
         ]
       }
     }
-    
   },
   "officerbluejacket": {
     "dir_count": 1,
@@ -2115,7 +1993,6 @@
         ]
       }
     }
-    
   },
   "officertanjacket": {
     "dir_count": 1,
@@ -2132,7 +2009,6 @@
         ]
       }
     }
-    
   },
   "wardenbluejacket": {
     "dir_count": 1,
@@ -2149,7 +2025,6 @@
         ]
       }
     }
-    
   },
   "wardentanjacket": {
     "dir_count": 1,
@@ -2166,7 +2041,6 @@
         ]
       }
     }
-    
   },
   "armor_reflec": {
     "dir_count": 1,
@@ -2183,7 +2057,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-medical": {
     "dir_count": 1,
@@ -2200,7 +2073,6 @@
         ]
       }
     }
-    
   },
   "xenos": {
     "dir_count": 1,
@@ -2217,7 +2089,6 @@
         ]
       }
     }
-    
   },
   "capcarapace": {
     "dir_count": 1,
@@ -2234,7 +2105,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-atmospherics": {
     "dir_count": 1,
@@ -2251,7 +2121,6 @@
         ]
       }
     }
-    
   },
   "nerdshirt": {
     "dir_count": 1,
@@ -2268,7 +2137,6 @@
         ]
       }
     }
-    
   },
   "classicponcho": {
     "dir_count": 1,
@@ -2285,7 +2153,6 @@
         ]
       }
     }
-    
   },
   "greenponcho": {
     "dir_count": 1,
@@ -2302,7 +2169,6 @@
         ]
       }
     }
-    
   },
   "redponcho": {
     "dir_count": 1,
@@ -2319,7 +2185,6 @@
         ]
       }
     }
-    
   },
   "ponchoshame": {
     "dir_count": 1,
@@ -2336,7 +2201,6 @@
         ]
       }
     }
-    
   },
   "suitjacket_black": {
     "dir_count": 1,
@@ -2353,7 +2217,6 @@
         ]
       }
     }
-    
   },
   "suitjacket_black_t": {
     "dir_count": 1,
@@ -2370,7 +2233,6 @@
         ]
       }
     }
-    
   },
   "greydet": {
     "dir_count": 1,
@@ -2387,7 +2249,6 @@
         ]
       }
     }
-    
   },
   "bomberjacket": {
     "dir_count": 1,
@@ -2404,7 +2265,6 @@
         ]
       }
     }
-    
   },
   "labcoat_emt_t": {
     "dir_count": 1,
@@ -2421,7 +2281,6 @@
         ]
       }
     }
-    
   },
   "labcoat_emt": {
     "dir_count": 1,
@@ -2438,7 +2297,6 @@
         ]
       }
     }
-    
   },
   "atmos_firesuit": {
     "dir_count": 1,
@@ -2455,7 +2313,6 @@
         ]
       }
     }
-    
   },
   "coatcaptain": {
     "dir_count": 1,
@@ -2472,7 +2329,6 @@
         ]
       }
     }
-    
   },
   "coatcaptain_t": {
     "dir_count": 1,
@@ -2489,7 +2345,6 @@
         ]
       }
     }
-    
   },
   "coatcargo": {
     "dir_count": 1,
@@ -2506,7 +2361,6 @@
         ]
       }
     }
-    
   },
   "coatcargo_t": {
     "dir_count": 1,
@@ -2523,7 +2377,6 @@
         ]
       }
     }
-    
   },
   "coatengineer": {
     "dir_count": 1,
@@ -2540,7 +2393,6 @@
         ]
       }
     }
-    
   },
   "coatengineer_t": {
     "dir_count": 1,
@@ -2557,7 +2409,6 @@
         ]
       }
     }
-    
   },
   "coatatmos": {
     "dir_count": 1,
@@ -2574,7 +2425,6 @@
         ]
       }
     }
-    
   },
   "coatatmos_t": {
     "dir_count": 1,
@@ -2591,7 +2441,6 @@
         ]
       }
     }
-    
   },
   "coatwinter": {
     "dir_count": 1,
@@ -2608,7 +2457,6 @@
         ]
       }
     }
-    
   },
   "coatwinter_t": {
     "dir_count": 1,
@@ -2625,7 +2473,6 @@
         ]
       }
     }
-    
   },
   "coathydro": {
     "dir_count": 1,
@@ -2642,7 +2489,6 @@
         ]
       }
     }
-    
   },
   "coathydro_t": {
     "dir_count": 1,
@@ -2659,7 +2505,6 @@
         ]
       }
     }
-    
   },
   "coatmedical": {
     "dir_count": 1,
@@ -2676,7 +2521,6 @@
         ]
       }
     }
-    
   },
   "coatmedical_t": {
     "dir_count": 1,
@@ -2693,7 +2537,6 @@
         ]
       }
     }
-    
   },
   "coatminer": {
     "dir_count": 1,
@@ -2710,7 +2553,6 @@
         ]
       }
     }
-    
   },
   "coatminer_t": {
     "dir_count": 1,
@@ -2727,7 +2569,6 @@
         ]
       }
     }
-    
   },
   "coatscience": {
     "dir_count": 1,
@@ -2744,7 +2585,6 @@
         ]
       }
     }
-    
   },
   "coatscience_t": {
     "dir_count": 1,
@@ -2761,7 +2601,6 @@
         ]
       }
     }
-    
   },
   "coatsecurity": {
     "dir_count": 1,
@@ -2778,7 +2617,6 @@
         ]
       }
     }
-    
   },
   "coatsecurity_t": {
     "dir_count": 1,
@@ -2795,7 +2633,6 @@
         ]
       }
     }
-    
   },
   "armor": {
     "dir_count": 1,
@@ -2812,7 +2649,6 @@
         ]
       }
     }
-    
   },
   "armoralt": {
     "dir_count": 1,
@@ -2829,7 +2665,6 @@
         ]
       }
     }
-    
   },
   "warden_alt": {
     "dir_count": 1,
@@ -2846,7 +2681,6 @@
         ]
       }
     }
-    
   },
   "bulletproof": {
     "dir_count": 1,
@@ -2863,7 +2697,6 @@
         ]
       }
     }
-    
   },
   "warden_jacket": {
     "dir_count": 1,
@@ -2880,7 +2713,6 @@
         ]
       }
     }
-    
   },
   "ert_command": {
     "dir_count": 1,
@@ -2897,7 +2729,6 @@
         ]
       }
     }
-    
   },
   "ert_security": {
     "dir_count": 1,
@@ -2914,7 +2745,6 @@
         ]
       }
     }
-    
   },
   "ert_medical": {
     "dir_count": 1,
@@ -2931,7 +2761,6 @@
         ]
       }
     }
-    
   },
   "ert_engineer": {
     "dir_count": 1,
@@ -2948,7 +2777,6 @@
         ]
       }
     }
-    
   },
   "chronosuit": {
     "dir_count": 1,
@@ -2965,7 +2793,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-sec": {
     "dir_count": 1,
@@ -2982,7 +2809,6 @@
         ]
       }
     }
-    
   },
   "owl_wings": {
     "dir_count": 1,
@@ -2999,7 +2825,6 @@
         ]
       }
     }
-    
   },
   "owl_wings_t": {
     "dir_count": 1,
@@ -3016,7 +2841,6 @@
         ]
       }
     }
-    
   },
   "griffin_wings": {
     "dir_count": 1,
@@ -3033,7 +2857,6 @@
         ]
       }
     }
-    
   },
   "griffin_wings_t": {
     "dir_count": 1,
@@ -3050,7 +2873,6 @@
         ]
       }
     }
-    
   },
   "hardsuit1-owl": {
     "dir_count": 1,
@@ -3067,7 +2889,6 @@
         ]
       }
     }
-    
   },
   "hardsuit0-owl": {
     "dir_count": 1,
@@ -3084,7 +2905,6 @@
         ]
       }
     }
-    
   },
   "freedom": {
     "dir_count": 1,
@@ -3101,7 +2921,6 @@
         ]
       }
     }
-    
   },
   "white_dress": {
     "dir_count": 1,
@@ -3118,7 +2937,6 @@
         ]
       }
     }
-    
   },
   "bunnysuit": {
     "dir_count": 1,
@@ -3135,7 +2953,6 @@
         ]
       }
     }
-    
   },
   "plasmaman_suit": {
     "dir_count": 1,
@@ -3152,7 +2969,6 @@
         ]
       }
     }
-    
   },
   "blackwizard": {
     "dir_count": 1,
@@ -3169,7 +2985,6 @@
         ]
       }
     }
-    
   },
   "leatherjacket": {
     "dir_count": 1,
@@ -3186,7 +3001,6 @@
         ]
       }
     }
-    
   },
   "leathercoat": {
     "dir_count": 1,
@@ -3203,7 +3017,6 @@
         ]
       }
     }
-    
   },
   "leathercoat-sec": {
     "dir_count": 1,
@@ -3220,7 +3033,6 @@
         ]
       }
     }
-    
   },
   "puffervest": {
     "dir_count": 1,
@@ -3237,7 +3049,6 @@
         ]
       }
     }
-    
   },
   "pufferjacket": {
     "dir_count": 1,
@@ -3254,7 +3065,6 @@
         ]
       }
     }
-    
   },
   "militaryjacket": {
     "dir_count": 1,
@@ -3271,7 +3081,6 @@
         ]
       }
     }
-    
   },
   "carp_suit": {
     "dir_count": 1,
@@ -3288,7 +3097,6 @@
         ]
       }
     }
-    
   },
   "carp_casual": {
     "dir_count": 1,
@@ -3305,7 +3113,6 @@
         ]
       }
     }
-    
   },
   "carp_casual_t": {
     "dir_count": 1,
@@ -3322,7 +3129,6 @@
         ]
       }
     }
-    
   },
   "ian": {
     "dir_count": 1,
@@ -3339,7 +3145,6 @@
         ]
       }
     }
-    
   },
   "ian_t": {
     "dir_count": 1,
@@ -3356,7 +3161,6 @@
         ]
       }
     }
-    
   },
   "capformal": {
     "dir_count": 1,
@@ -3373,7 +3177,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-rd": {
     "dir_count": 1,
@@ -3390,7 +3193,6 @@
         ]
       }
     }
-    
   },
   "shadowling": {
     "dir_count": 1,
@@ -3407,7 +3209,6 @@
         ]
       }
     }
-    
   },
   "crusader": {
     "dir_count": 1,
@@ -3424,7 +3225,6 @@
         ]
       }
     }
-    
   },
   "crusader-red": {
     "dir_count": 1,
@@ -3441,7 +3241,6 @@
         ]
       }
     }
-    
   },
   "crusader-blue": {
     "dir_count": 1,
@@ -3458,7 +3257,6 @@
         ]
       }
     }
-    
   },
   " ": {
     "dir_count": 1,
@@ -3475,7 +3273,6 @@
         ]
       }
     }
-    
   },
   "knight_grey": {
     "dir_count": 1,
@@ -3492,7 +3289,6 @@
         ]
       }
     }
-    
   },
   "knight_red": {
     "dir_count": 1,
@@ -3509,7 +3305,6 @@
         ]
       }
     }
-    
   },
   "knight_blue": {
     "dir_count": 1,
@@ -3526,7 +3321,6 @@
         ]
       }
     }
-    
   },
   "kight_yellow": {
     "dir_count": 1,
@@ -3543,7 +3337,6 @@
         ]
       }
     }
-    
   },
   "knight_green": {
     "dir_count": 1,
@@ -3560,7 +3353,6 @@
         ]
       }
     }
-    
   },
   "knight_templar": {
     "dir_count": 1,
@@ -3577,7 +3369,6 @@
         ]
       }
     }
-    
   },
   "snowman": {
     "dir_count": 1,
@@ -3594,7 +3385,6 @@
         ]
       }
     }
-    
   },
   "hardsuit0-syndielite": {
     "dir_count": 1,
@@ -3611,7 +3401,6 @@
         ]
       }
     }
-    
   },
   "hardsuit1-syndielite": {
     "dir_count": 1,
@@ -3628,7 +3417,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-inq": {
     "dir_count": 1,
@@ -3645,7 +3433,6 @@
         ]
       }
     }
-    
   },
   "lingspacesuit": {
     "dir_count": 1,
@@ -3662,7 +3449,6 @@
         ]
       }
     }
-    
   },
   "lingspacesuit_t": {
     "dir_count": 1,
@@ -3679,7 +3465,6 @@
         ]
       }
     }
-    
   },
   "beekeeper": {
     "dir_count": 1,
@@ -3696,7 +3481,6 @@
         ]
       }
     }
-    
   },
   "explorer": {
     "dir_count": 1,
@@ -3713,7 +3497,6 @@
         ]
       }
     }
-    
   },
   "explorer_t": {
     "dir_count": 1,
@@ -3730,7 +3513,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-beserker": {
     "dir_count": 1,
@@ -3747,7 +3529,6 @@
         ]
       }
     }
-    
   },
   "bedsheet": {
     "dir_count": 1,
@@ -3764,7 +3545,6 @@
         ]
       }
     }
-    
   },
   "golclo": {
     "dir_count": 1,
@@ -3781,7 +3561,6 @@
         ]
       }
     }
-    
   },
   "golclo_t": {
     "dir_count": 1,
@@ -3798,7 +3577,6 @@
         ]
       }
     }
-    
   },
   "bonearmor": {
     "dir_count": 1,
@@ -3815,7 +3593,6 @@
         ]
       }
     }
-    
   },
   "dragon": {
     "dir_count": 1,
@@ -3832,7 +3609,6 @@
         ]
       }
     }
-    
   },
   "dragon_t": {
     "dir_count": 1,
@@ -3849,7 +3625,6 @@
         ]
       }
     }
-    
   },
   "letterman_red": {
     "dir_count": 1,
@@ -3866,7 +3641,6 @@
         ]
       }
     }
-    
   },
   "letterman_n": {
     "dir_count": 1,
@@ -3883,7 +3657,6 @@
         ]
       }
     }
-    
   },
   "letterman": {
     "dir_count": 1,
@@ -3900,7 +3673,6 @@
         ]
       }
     }
-    
   },
   "letterman_s": {
     "dir_count": 1,
@@ -3917,7 +3689,6 @@
         ]
       }
     }
-    
   },
   "blueshift": {
     "dir_count": 1,
@@ -3934,7 +3705,6 @@
         ]
       }
     }
-    
   },
   "hardsuit-clown": {
     "dir_count": 1,
@@ -3951,7 +3721,6 @@
         ]
       }
     }
-    
   },
   "battlemage": {
     "dir_count": 1,
@@ -3968,7 +3737,6 @@
         ]
       }
     }
-    
   },
   "vapeshirt": {
     "dir_count": 1,
@@ -3985,7 +3753,6 @@
         ]
       }
     }
-    
   },
   "bee": {
     "dir_count": 1,
@@ -4002,7 +3769,6 @@
         ]
       }
     }
-    
   },
   "bee_t": {
     "dir_count": 1,
@@ -4019,7 +3785,6 @@
         ]
       }
     }
-    
   },
   "flightsuit": {
     "dir_count": 1,
@@ -4036,7 +3801,6 @@
         ]
       }
     }
-    
   },
   "flighthelmet": {
     "dir_count": 1,
@@ -4053,7 +3817,6 @@
         ]
       }
     }
-    
   },
   "witchhunter": {
     "dir_count": 1,
@@ -4070,7 +3833,6 @@
         ]
       }
     }
-    
   },
   "studentuni": {
     "dir_count": 1,
@@ -4087,7 +3849,6 @@
         ]
       }
     }
-    
   },
   "curator": {
     "dir_count": 1,
@@ -4104,7 +3865,6 @@
         ]
       }
     }
-    
   },
   "goliath_cloak": {
     "dir_count": 1,
@@ -4121,7 +3881,6 @@
         ]
       }
     }
-    
   },
   "goliath_cloak_t": {
     "dir_count": 1,
@@ -4138,7 +3897,6 @@
         ]
       }
     }
-    
   },
   "uegarmor": {
     "dir_count": 1,
@@ -4155,7 +3913,6 @@
         ]
       }
     }
-    
   },
   "syndievest": {
     "dir_count": 1,
@@ -4172,7 +3929,6 @@
         ]
       }
     }
-    
   },
   "rig-old": {
     "dir_count": 1,
@@ -4189,7 +3945,6 @@
         ]
       }
     }
-    
   },
   "draculacoat": {
     "dir_count": 1,
@@ -4206,7 +3961,6 @@
         ]
       }
     }
-    
   },
   "drfreeze_coat": {
     "dir_count": 1,
@@ -4223,7 +3977,6 @@
         ]
       }
     }
-    
   },
   "gothcoat": {
     "dir_count": 1,
@@ -4240,7 +3993,6 @@
         ]
       }
     }
-    
   },
   "pharoah": {
     "dir_count": 1,
@@ -4257,7 +4009,6 @@
         ]
       }
     }
-    
   },
   "hostile_env": {
     "dir_count": 1,

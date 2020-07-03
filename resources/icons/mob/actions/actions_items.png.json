@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "neckchop": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "legsweep": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "lungpunch": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "scan_mode": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "jetboot": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "flight": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "meson": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "vortex_recall": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "vortex_ff_on": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "vortex_ff_off": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "voice_of_god": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "rcl_rainbow": {
     "dir_count": 1,
@@ -218,7 +206,6 @@
         ]
       }
     }
-    
   },
   "zoom_mode": {
     "dir_count": 1,
@@ -235,7 +222,6 @@
         ]
       }
     }
-    
   },
   "sniper_zoom": {
     "dir_count": 1,

@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   " ": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "displaced": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "reinforced": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "melted": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "grille": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "brokengrille": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "latticefull": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "catwalkfull": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "window": {
     "dir_count": 8,
@@ -230,7 +221,6 @@
         ]
       }
     }
-    
   },
   "rwindow": {
     "dir_count": 8,
@@ -310,7 +300,6 @@
         ]
       }
     }
-    
   },
   "twindow": {
     "dir_count": 8,
@@ -390,7 +379,6 @@
         ]
       }
     }
-    
   },
   "twindowold": {
     "dir_count": 8,
@@ -470,7 +458,6 @@
         ]
       }
     }
-    
   },
   "fwindow": {
     "dir_count": 8,
@@ -550,7 +537,6 @@
         ]
       }
     }
-    
   },
   "unwall": {
     "dir_count": 1,
@@ -577,7 +563,6 @@
         ]
       }
     }
-    
   },
   "ungirder": {
     "dir_count": 1,
@@ -614,7 +599,6 @@
         ]
       }
     }
-    
   },
   "unr_girder": {
     "dir_count": 1,
@@ -641,7 +625,6 @@
         ]
       }
     }
-    
   },
   "r_girder": {
     "dir_count": 1,
@@ -658,7 +641,6 @@
         ]
       }
     }
-    
   },
   "table_dir": {
     "dir_count": 8,
@@ -738,7 +720,6 @@
         ]
       }
     }
-    
   },
   "table": {
     "dir_count": 1,
@@ -755,7 +736,6 @@
         ]
       }
     }
-    
   },
   "table_1tilethick": {
     "dir_count": 8,
@@ -835,7 +815,6 @@
         ]
       }
     }
-    
   },
   "table_1tileendtable": {
     "dir_count": 4,
@@ -879,7 +858,6 @@
         ]
       }
     }
-    
   },
   "table_middle": {
     "dir_count": 1,
@@ -896,7 +874,6 @@
         ]
       }
     }
-    
   },
   "table_dir2": {
     "dir_count": 4,
@@ -940,7 +917,6 @@
         ]
       }
     }
-    
   },
   "table_dir3": {
     "dir_count": 8,
@@ -1020,7 +996,6 @@
         ]
       }
     }
-    
   },
   "woodenbarricade": {
     "dir_count": 1,
@@ -1037,7 +1012,6 @@
         ]
       }
     }
-    
   },
   "reinftable": {
     "dir_count": 1,
@@ -1054,7 +1028,6 @@
         ]
       }
     }
-    
   },
   "reinftable_dir": {
     "dir_count": 8,
@@ -1134,7 +1107,6 @@
         ]
       }
     }
-    
   },
   "reinftable_1tilethick": {
     "dir_count": 8,
@@ -1214,7 +1186,6 @@
         ]
       }
     }
-    
   },
   "reinftable_1tileendtable": {
     "dir_count": 4,
@@ -1258,7 +1229,6 @@
         ]
       }
     }
-    
   },
   "reinftable_middle": {
     "dir_count": 1,
@@ -1275,7 +1245,6 @@
         ]
       }
     }
-    
   },
   "reinftable_dir2": {
     "dir_count": 4,
@@ -1319,7 +1288,6 @@
         ]
       }
     }
-    
   },
   "reinftable_dir3": {
     "dir_count": 8,
@@ -1399,7 +1367,6 @@
         ]
       }
     }
-    
   },
   "table_horizontal": {
     "dir_count": 4,
@@ -1443,7 +1410,6 @@
         ]
       }
     }
-    
   },
   "table_vertical": {
     "dir_count": 4,
@@ -1487,7 +1453,6 @@
         ]
       }
     }
-    
   },
   "ladder00": {
     "dir_count": 1,
@@ -1504,7 +1469,6 @@
         ]
       }
     }
-    
   },
   "ladder10": {
     "dir_count": 1,
@@ -1521,7 +1485,6 @@
         ]
       }
     }
-    
   },
   "ladder01": {
     "dir_count": 1,
@@ -1538,7 +1501,6 @@
         ]
       }
     }
-    
   },
   "ladder11": {
     "dir_count": 1,
@@ -1555,7 +1517,6 @@
         ]
       }
     }
-    
   },
   "woodtable": {
     "dir_count": 1,
@@ -1572,7 +1533,6 @@
         ]
       }
     }
-    
   },
   "woodtable_dir": {
     "dir_count": 8,
@@ -1652,7 +1612,6 @@
         ]
       }
     }
-    
   },
   "woodtable_1tilethick": {
     "dir_count": 8,
@@ -1732,7 +1691,6 @@
         ]
       }
     }
-    
   },
   "woodtable_1tileendtable": {
     "dir_count": 4,
@@ -1776,7 +1734,6 @@
         ]
       }
     }
-    
   },
   "woodtable_middle": {
     "dir_count": 1,
@@ -1793,7 +1750,6 @@
         ]
       }
     }
-    
   },
   "woodtable_dir2": {
     "dir_count": 4,
@@ -1837,7 +1793,6 @@
         ]
       }
     }
-    
   },
   "woodtable_dir3": {
     "dir_count": 8,
@@ -1917,7 +1872,6 @@
         ]
       }
     }
-    
   },
   "safe": {
     "dir_count": 1,
@@ -1934,7 +1888,6 @@
         ]
       }
     }
-    
   },
   "safe-open": {
     "dir_count": 1,
@@ -1951,7 +1904,6 @@
         ]
       }
     }
-    
   },
   "floorsafe": {
     "dir_count": 1,
@@ -1968,7 +1920,6 @@
         ]
       }
     }
-    
   },
   "floorsafe-open": {
     "dir_count": 1,
@@ -1985,7 +1936,6 @@
         ]
       }
     }
-    
   },
   "linenbin-full": {
     "dir_count": 1,
@@ -2002,7 +1952,6 @@
         ]
       }
     }
-    
   },
   "linenbin-half": {
     "dir_count": 1,
@@ -2019,7 +1968,6 @@
         ]
       }
     }
-    
   },
   "linenbin-empty": {
     "dir_count": 1,
@@ -2036,7 +1984,6 @@
         ]
       }
     }
-    
   },
   "pokertable": {
     "dir_count": 1,
@@ -2053,7 +2000,6 @@
         ]
       }
     }
-    
   },
   "pokertable_dir": {
     "dir_count": 8,
@@ -2133,7 +2079,6 @@
         ]
       }
     }
-    
   },
   "pokertable_1tilethick": {
     "dir_count": 8,
@@ -2213,7 +2158,6 @@
         ]
       }
     }
-    
   },
   "pokertable_1tileendtable": {
     "dir_count": 4,
@@ -2257,7 +2201,6 @@
         ]
       }
     }
-    
   },
   "pokertable_middle": {
     "dir_count": 1,
@@ -2274,7 +2217,6 @@
         ]
       }
     }
-    
   },
   "pokertable_dir2": {
     "dir_count": 4,
@@ -2318,7 +2260,6 @@
         ]
       }
     }
-    
   },
   "pokertable_dir3": {
     "dir_count": 8,
@@ -2398,7 +2339,6 @@
         ]
       }
     }
-    
   },
   "glass_table_dir": {
     "dir_count": 8,
@@ -2478,7 +2418,6 @@
         ]
       }
     }
-    
   },
   "glass_table": {
     "dir_count": 1,
@@ -2495,7 +2434,6 @@
         ]
       }
     }
-    
   },
   "glass_table_1tilethick": {
     "dir_count": 8,
@@ -2575,7 +2513,6 @@
         ]
       }
     }
-    
   },
   "glass_table_1tileendtable": {
     "dir_count": 4,
@@ -2619,7 +2556,6 @@
         ]
       }
     }
-    
   },
   "glass_table_middle": {
     "dir_count": 1,
@@ -2636,7 +2572,6 @@
         ]
       }
     }
-    
   },
   "glass_table_dir2": {
     "dir_count": 4,
@@ -2680,7 +2615,6 @@
         ]
       }
     }
-    
   },
   "glass_table_dir3": {
     "dir_count": 8,
@@ -2760,7 +2694,6 @@
         ]
       }
     }
-    
   },
   "table_frame": {
     "dir_count": 1,
@@ -2777,7 +2710,6 @@
         ]
       }
     }
-    
   },
   "wood_frame": {
     "dir_count": 1,
@@ -2794,7 +2726,6 @@
         ]
       }
     }
-    
   },
   "alien_frame": {
     "dir_count": 1,
@@ -2811,7 +2742,6 @@
         ]
       }
     }
-    
   },
   "brass_frame": {
     "dir_count": 1,
@@ -2828,7 +2758,6 @@
         ]
       }
     }
-    
   },
   "swindow1": {
     "dir_count": 1,
@@ -2845,7 +2774,6 @@
         ]
       }
     }
-    
   },
   "swindow2": {
     "dir_count": 1,
@@ -2862,7 +2790,6 @@
         ]
       }
     }
-    
   },
   "swindow3": {
     "dir_count": 1,
@@ -2879,7 +2806,6 @@
         ]
       }
     }
-    
   },
   "swindow4": {
     "dir_count": 1,
@@ -2896,7 +2822,6 @@
         ]
       }
     }
-    
   },
   "swindow5": {
     "dir_count": 1,
@@ -2913,7 +2838,6 @@
         ]
       }
     }
-    
   },
   "swindow6": {
     "dir_count": 1,
@@ -2930,7 +2854,6 @@
         ]
       }
     }
-    
   },
   "swindow7": {
     "dir_count": 1,
@@ -2947,7 +2870,6 @@
         ]
       }
     }
-    
   },
   "swindow8": {
     "dir_count": 1,
@@ -2964,7 +2886,6 @@
         ]
       }
     }
-    
   },
   "swindow9": {
     "dir_count": 1,
@@ -2981,7 +2902,6 @@
         ]
       }
     }
-    
   },
   "swindow10": {
     "dir_count": 1,
@@ -2998,7 +2918,6 @@
         ]
       }
     }
-    
   },
   "swindow11": {
     "dir_count": 1,
@@ -3015,7 +2934,6 @@
         ]
       }
     }
-    
   },
   "swindow12": {
     "dir_count": 1,
@@ -3032,7 +2950,6 @@
         ]
       }
     }
-    
   },
   "swindow13": {
     "dir_count": 1,
@@ -3049,7 +2966,6 @@
         ]
       }
     }
-    
   },
   "swindow14": {
     "dir_count": 1,
@@ -3066,7 +2982,6 @@
         ]
       }
     }
-    
   },
   "swindow15": {
     "dir_count": 1,
@@ -3083,7 +2998,6 @@
         ]
       }
     }
-    
   },
   "swindow0": {
     "dir_count": 1,
@@ -3100,7 +3014,6 @@
         ]
       }
     }
-    
   },
   "swindow": {
     "dir_count": 1,
@@ -3117,7 +3030,6 @@
         ]
       }
     }
-    
   },
   "window0": {
     "dir_count": 1,
@@ -3134,7 +3046,6 @@
         ]
       }
     }
-    
   },
   "window1": {
     "dir_count": 1,
@@ -3151,7 +3062,6 @@
         ]
       }
     }
-    
   },
   "window2": {
     "dir_count": 1,
@@ -3168,7 +3078,6 @@
         ]
       }
     }
-    
   },
   "window3": {
     "dir_count": 1,
@@ -3185,7 +3094,6 @@
         ]
       }
     }
-    
   },
   "window4": {
     "dir_count": 1,
@@ -3202,7 +3110,6 @@
         ]
       }
     }
-    
   },
   "window5": {
     "dir_count": 1,
@@ -3219,7 +3126,6 @@
         ]
       }
     }
-    
   },
   "window6": {
     "dir_count": 1,
@@ -3236,7 +3142,6 @@
         ]
       }
     }
-    
   },
   "window7": {
     "dir_count": 1,
@@ -3253,7 +3158,6 @@
         ]
       }
     }
-    
   },
   "window8": {
     "dir_count": 1,
@@ -3270,7 +3174,6 @@
         ]
       }
     }
-    
   },
   "window9": {
     "dir_count": 1,
@@ -3287,7 +3190,6 @@
         ]
       }
     }
-    
   },
   "window10": {
     "dir_count": 1,
@@ -3304,7 +3206,6 @@
         ]
       }
     }
-    
   },
   "window11": {
     "dir_count": 1,
@@ -3321,7 +3222,6 @@
         ]
       }
     }
-    
   },
   "window12": {
     "dir_count": 1,
@@ -3338,7 +3238,6 @@
         ]
       }
     }
-    
   },
   "window13": {
     "dir_count": 1,
@@ -3355,7 +3254,6 @@
         ]
       }
     }
-    
   },
   "window14": {
     "dir_count": 1,
@@ -3372,7 +3270,6 @@
         ]
       }
     }
-    
   },
   "window15": {
     "dir_count": 1,
@@ -3389,7 +3286,6 @@
         ]
       }
     }
-    
   },
   "rwindow0": {
     "dir_count": 1,
@@ -3406,7 +3302,6 @@
         ]
       }
     }
-    
   },
   "rwindow1": {
     "dir_count": 1,
@@ -3423,7 +3318,6 @@
         ]
       }
     }
-    
   },
   "rwindow2": {
     "dir_count": 1,
@@ -3440,7 +3334,6 @@
         ]
       }
     }
-    
   },
   "rwindow3": {
     "dir_count": 1,
@@ -3457,7 +3350,6 @@
         ]
       }
     }
-    
   },
   "rwindow4": {
     "dir_count": 1,
@@ -3474,7 +3366,6 @@
         ]
       }
     }
-    
   },
   "rwindow5": {
     "dir_count": 1,
@@ -3491,7 +3382,6 @@
         ]
       }
     }
-    
   },
   "rwindow6": {
     "dir_count": 1,
@@ -3508,7 +3398,6 @@
         ]
       }
     }
-    
   },
   "rwindow7": {
     "dir_count": 1,
@@ -3525,7 +3414,6 @@
         ]
       }
     }
-    
   },
   "rwindow8": {
     "dir_count": 1,
@@ -3542,7 +3430,6 @@
         ]
       }
     }
-    
   },
   "rwindow9": {
     "dir_count": 1,
@@ -3559,7 +3446,6 @@
         ]
       }
     }
-    
   },
   "rwindow10": {
     "dir_count": 1,
@@ -3576,7 +3462,6 @@
         ]
       }
     }
-    
   },
   "rwindow11": {
     "dir_count": 1,
@@ -3593,7 +3478,6 @@
         ]
       }
     }
-    
   },
   "rwindow12": {
     "dir_count": 1,
@@ -3610,7 +3494,6 @@
         ]
       }
     }
-    
   },
   "rwindow13": {
     "dir_count": 1,
@@ -3627,7 +3510,6 @@
         ]
       }
     }
-    
   },
   "rwindow14": {
     "dir_count": 1,
@@ -3644,7 +3526,6 @@
         ]
       }
     }
-    
   },
   "rwindow15": {
     "dir_count": 1,
@@ -3661,7 +3542,6 @@
         ]
       }
     }
-    
   },
   "twindow0": {
     "dir_count": 1,
@@ -3678,7 +3558,6 @@
         ]
       }
     }
-    
   },
   "twindow1": {
     "dir_count": 1,
@@ -3695,7 +3574,6 @@
         ]
       }
     }
-    
   },
   "twindow2": {
     "dir_count": 1,
@@ -3712,7 +3590,6 @@
         ]
       }
     }
-    
   },
   "twindow3": {
     "dir_count": 1,
@@ -3729,7 +3606,6 @@
         ]
       }
     }
-    
   },
   "twindow4": {
     "dir_count": 1,
@@ -3746,7 +3622,6 @@
         ]
       }
     }
-    
   },
   "twindow5": {
     "dir_count": 1,
@@ -3763,7 +3638,6 @@
         ]
       }
     }
-    
   },
   "twindow6": {
     "dir_count": 1,
@@ -3780,7 +3654,6 @@
         ]
       }
     }
-    
   },
   "twindow7": {
     "dir_count": 1,
@@ -3797,7 +3670,6 @@
         ]
       }
     }
-    
   },
   "twindow8": {
     "dir_count": 1,
@@ -3814,7 +3686,6 @@
         ]
       }
     }
-    
   },
   "twindow9": {
     "dir_count": 1,
@@ -3831,7 +3702,6 @@
         ]
       }
     }
-    
   },
   "twindow10": {
     "dir_count": 1,
@@ -3848,7 +3718,6 @@
         ]
       }
     }
-    
   },
   "twindow11": {
     "dir_count": 1,
@@ -3865,7 +3734,6 @@
         ]
       }
     }
-    
   },
   "twindow12": {
     "dir_count": 1,
@@ -3882,7 +3750,6 @@
         ]
       }
     }
-    
   },
   "twindow13": {
     "dir_count": 1,
@@ -3899,7 +3766,6 @@
         ]
       }
     }
-    
   },
   "twindow14": {
     "dir_count": 1,
@@ -3916,7 +3782,6 @@
         ]
       }
     }
-    
   },
   "twindow15": {
     "dir_count": 1,
@@ -3933,7 +3798,6 @@
         ]
       }
     }
-    
   },
   "damage25": {
     "dir_count": 1,
@@ -3950,7 +3814,6 @@
         ]
       }
     }
-    
   },
   "damage50": {
     "dir_count": 1,
@@ -3967,7 +3830,6 @@
         ]
       }
     }
-    
   },
   "damage75": {
     "dir_count": 1,
@@ -3984,7 +3846,6 @@
         ]
       }
     }
-    
   },
   "alientable": {
     "dir_count": 1,
@@ -4001,7 +3862,6 @@
         ]
       }
     }
-    
   },
   "alientable_1tileendtable": {
     "dir_count": 4,
@@ -4045,7 +3905,6 @@
         ]
       }
     }
-    
   },
   "reflector_base": {
     "dir_count": 1,
@@ -4062,7 +3921,6 @@
         ]
       }
     }
-    
   },
   "reflector_map": {
     "dir_count": 8,
@@ -4142,7 +4000,6 @@
         ]
       }
     }
-    
   },
   "reflector": {
     "dir_count": 1,
@@ -4159,7 +4016,6 @@
         ]
       }
     }
-    
   },
   "reflector_double": {
     "dir_count": 1,
@@ -4176,7 +4032,6 @@
         ]
       }
     }
-    
   },
   "reflector_box": {
     "dir_count": 1,
@@ -4193,7 +4048,6 @@
         ]
       }
     }
-    
   },
   "ratvargrille": {
     "dir_count": 1,
@@ -4210,7 +4064,6 @@
         ]
       }
     }
-    
   },
   "brokenratvargrille": {
     "dir_count": 1,
@@ -4227,7 +4080,6 @@
         ]
       }
     }
-    
   },
   "speaking_tile": {
     "dir_count": 1,
@@ -4244,7 +4096,6 @@
         ]
       }
     }
-    
   },
   "fancy_table": {
     "dir_count": 1,
@@ -4261,7 +4112,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow0": {
     "dir_count": 1,
@@ -4278,7 +4128,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow1": {
     "dir_count": 1,
@@ -4295,7 +4144,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow2": {
     "dir_count": 1,
@@ -4312,7 +4160,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow3": {
     "dir_count": 1,
@@ -4329,7 +4176,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow4": {
     "dir_count": 1,
@@ -4346,7 +4192,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow5": {
     "dir_count": 1,
@@ -4363,7 +4208,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow6": {
     "dir_count": 1,
@@ -4380,7 +4224,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow7": {
     "dir_count": 1,
@@ -4397,7 +4240,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow8": {
     "dir_count": 1,
@@ -4414,7 +4256,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow9": {
     "dir_count": 1,
@@ -4431,7 +4272,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow10": {
     "dir_count": 1,
@@ -4448,7 +4288,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow11": {
     "dir_count": 1,
@@ -4465,7 +4304,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow12": {
     "dir_count": 1,
@@ -4482,7 +4320,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow13": {
     "dir_count": 1,
@@ -4499,7 +4336,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow14": {
     "dir_count": 1,
@@ -4516,7 +4352,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow15": {
     "dir_count": 1,
@@ -4533,7 +4368,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow0": {
     "dir_count": 1,
@@ -4550,7 +4384,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow1": {
     "dir_count": 1,
@@ -4567,7 +4400,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow2": {
     "dir_count": 1,
@@ -4584,7 +4416,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow3": {
     "dir_count": 1,
@@ -4601,7 +4432,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow4": {
     "dir_count": 1,
@@ -4618,7 +4448,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow5": {
     "dir_count": 1,
@@ -4635,7 +4464,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow6": {
     "dir_count": 1,
@@ -4652,7 +4480,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow7": {
     "dir_count": 1,
@@ -4669,7 +4496,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow8": {
     "dir_count": 1,
@@ -4686,7 +4512,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow9": {
     "dir_count": 1,
@@ -4703,7 +4528,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow10": {
     "dir_count": 1,
@@ -4720,7 +4544,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow11": {
     "dir_count": 1,
@@ -4737,7 +4560,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow12": {
     "dir_count": 1,
@@ -4754,7 +4576,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow13": {
     "dir_count": 1,
@@ -4771,7 +4592,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow14": {
     "dir_count": 1,
@@ -4788,7 +4608,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow15": {
     "dir_count": 1,
@@ -4805,7 +4624,6 @@
         ]
       }
     }
-    
   },
   "plasmawindow": {
     "dir_count": 8,
@@ -4885,7 +4703,6 @@
         ]
       }
     }
-    
   },
   "plasmarwindow": {
     "dir_count": 8,

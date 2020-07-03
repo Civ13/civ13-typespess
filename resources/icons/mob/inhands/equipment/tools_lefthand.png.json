@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "rcd": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "rcdammo": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "analyzer": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "welder": {
     "dir_count": 4,
@@ -217,7 +213,6 @@
         ]
       }
     }
-    
   },
   "welder1": {
     "dir_count": 4,
@@ -281,7 +276,6 @@
         ]
       }
     }
-    
   },
   "upindwelder": {
     "dir_count": 4,
@@ -325,7 +319,6 @@
         ]
       }
     }
-    
   },
   "upindwelder1": {
     "dir_count": 4,
@@ -409,7 +402,6 @@
         ]
       }
     }
-    
   },
   "exwelder": {
     "dir_count": 4,
@@ -453,7 +445,6 @@
         ]
       }
     }
-    
   },
   "exwelder1": {
     "dir_count": 4,
@@ -537,7 +528,6 @@
         ]
       }
     }
-    
   },
   "brasswelder": {
     "dir_count": 4,
@@ -581,7 +571,6 @@
         ]
       }
     }
-    
   },
   "brasswelder1": {
     "dir_count": 4,
@@ -645,7 +634,6 @@
         ]
       }
     }
-    
   },
   "crowbar": {
     "dir_count": 4,
@@ -689,7 +677,6 @@
         ]
       }
     }
-    
   },
   "crowbar_red": {
     "dir_count": 4,
@@ -733,7 +720,6 @@
         ]
       }
     }
-    
   },
   "crowbar_brass": {
     "dir_count": 4,
@@ -777,7 +763,6 @@
         ]
       }
     }
-    
   },
   "screwdriver": {
     "dir_count": 4,
@@ -821,7 +806,6 @@
         ]
       }
     }
-    
   },
   "screwdriver_head": {
     "dir_count": 4,
@@ -865,7 +849,6 @@
         ]
       }
     }
-    
   },
   "screwdriver_nuke": {
     "dir_count": 4,
@@ -909,7 +892,6 @@
         ]
       }
     }
-    
   },
   "screwdriver_brass": {
     "dir_count": 4,
@@ -953,7 +935,6 @@
         ]
       }
     }
-    
   },
   "cutters_yellow": {
     "dir_count": 4,
@@ -997,7 +978,6 @@
         ]
       }
     }
-    
   },
   "cutters_red": {
     "dir_count": 4,
@@ -1041,7 +1021,6 @@
         ]
       }
     }
-    
   },
   "cutters_brass": {
     "dir_count": 4,
@@ -1085,7 +1064,6 @@
         ]
       }
     }
-    
   },
   "wrench": {
     "dir_count": 4,
@@ -1129,7 +1107,6 @@
         ]
       }
     }
-    
   },
   "wrench_medical": {
     "dir_count": 4,
@@ -1173,7 +1150,6 @@
         ]
       }
     }
-    
   },
   "wrench_brass": {
     "dir_count": 4,
@@ -1217,7 +1193,6 @@
         ]
       }
     }
-    
   },
   "coil_red": {
     "dir_count": 4,
@@ -1261,7 +1236,6 @@
         ]
       }
     }
-    
   },
   "coil_blue": {
     "dir_count": 4,
@@ -1305,7 +1279,6 @@
         ]
       }
     }
-    
   },
   "coil_yellow": {
     "dir_count": 4,
@@ -1349,7 +1322,6 @@
         ]
       }
     }
-    
   },
   "coil_green": {
     "dir_count": 4,
@@ -1393,7 +1365,6 @@
         ]
       }
     }
-    
   },
   "coil_pink": {
     "dir_count": 4,
@@ -1437,7 +1408,6 @@
         ]
       }
     }
-    
   },
   "coil_orange": {
     "dir_count": 4,
@@ -1481,7 +1451,6 @@
         ]
       }
     }
-    
   },
   "coil_cyan": {
     "dir_count": 4,
@@ -1525,7 +1494,6 @@
         ]
       }
     }
-    
   },
   "coil_white": {
     "dir_count": 4,
@@ -1569,7 +1537,6 @@
         ]
       }
     }
-    
   },
   "jawsoflife": {
     "dir_count": 4,
@@ -1613,7 +1580,6 @@
         ]
       }
     }
-    
   },
   "rld": {
     "dir_count": 4,
@@ -1657,7 +1623,6 @@
         ]
       }
     }
-    
   },
   "rld-5": {
     "dir_count": 4,
@@ -1701,7 +1666,6 @@
         ]
       }
     }
-    
   },
   "rld-4": {
     "dir_count": 4,
@@ -1745,7 +1709,6 @@
         ]
       }
     }
-    
   },
   "rld-3": {
     "dir_count": 4,
@@ -1789,7 +1752,6 @@
         ]
       }
     }
-    
   },
   "rld-2": {
     "dir_count": 4,
@@ -1833,7 +1795,6 @@
         ]
       }
     }
-    
   },
   "rld-1": {
     "dir_count": 4,
@@ -1877,7 +1838,6 @@
         ]
       }
     }
-    
   },
   "rld-0": {
     "dir_count": 4,
@@ -1921,7 +1881,6 @@
         ]
       }
     }
-    
   },
   "rld-empty": {
     "dir_count": 4,
@@ -1965,7 +1924,6 @@
         ]
       }
     }
-    
   },
   "inducer-engi": {
     "dir_count": 4,
@@ -2009,7 +1967,6 @@
         ]
       }
     }
-    
   },
   "inducer-sci": {
     "dir_count": 4,
@@ -2053,7 +2010,6 @@
         ]
       }
     }
-    
   },
   "drill": {
     "dir_count": 4,
@@ -2097,7 +2053,6 @@
         ]
       }
     }
-    
   },
   "rcl": {
     "dir_count": 4,
@@ -2141,7 +2096,6 @@
         ]
       }
     }
-    
   },
   "rcl-0": {
     "dir_count": 4,

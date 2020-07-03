@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "minimoog": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "minimoogbroken": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "pianobroken": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "violin": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "guitar": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "eguitar": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "golden_violin": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "synth": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "xylophone": {
     "dir_count": 4,
@@ -194,7 +185,6 @@
         ]
       }
     }
-    
   },
   "xylophone-broken": {
     "dir_count": 4,
@@ -238,7 +228,6 @@
         ]
       }
     }
-    
   },
   "accordion": {
     "dir_count": 1,
@@ -255,7 +244,6 @@
         ]
       }
     }
-    
   },
   "saxophone": {
     "dir_count": 1,
@@ -272,7 +260,6 @@
         ]
       }
     }
-    
   },
   "glockenspiel": {
     "dir_count": 1,
@@ -289,7 +276,6 @@
         ]
       }
     }
-    
   },
   "recorder": {
     "dir_count": 1,
@@ -306,7 +292,6 @@
         ]
       }
     }
-    
   },
   "trombone": {
     "dir_count": 1,
@@ -323,7 +308,6 @@
         ]
       }
     }
-    
   },
   "harmonica": {
     "dir_count": 1,
@@ -340,7 +324,6 @@
         ]
       }
     }
-    
   },
   "bike_horn": {
     "dir_count": 1,
@@ -357,7 +340,6 @@
         ]
       }
     }
-    
   },
   "trumpet": {
     "dir_count": 1,

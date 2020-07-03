@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "earmuffs": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "earset": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "sec_headset_alt": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "syndie_headset": {
     "dir_count": 4,
@@ -217,7 +213,6 @@
         ]
       }
     }
-    
   },
   "com_headset_alt": {
     "dir_count": 4,
@@ -261,7 +256,6 @@
         ]
       }
     }
-    
   },
   "cent_headset_alt": {
     "dir_count": 4,
@@ -305,7 +299,6 @@
         ]
       }
     }
-    
   },
   "med_headset_alt": {
     "dir_count": 4,
@@ -349,7 +342,6 @@
         ]
       }
     }
-    
   },
   "abductor_headset": {
     "dir_count": 4,
@@ -393,7 +385,6 @@
         ]
       }
     }
-    
   },
   "headphones_on": {
     "dir_count": 4,
@@ -557,7 +548,6 @@
         ]
       }
     }
-    
   },
   "headphones_off": {
     "dir_count": 4,

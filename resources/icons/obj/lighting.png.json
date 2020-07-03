@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "tube0": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "tube-empty": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "tube-burned": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "tube-broken": {
     "dir_count": 4,
@@ -217,7 +213,6 @@
         ]
       }
     }
-    
   },
   "bulb1": {
     "dir_count": 4,
@@ -261,7 +256,6 @@
         ]
       }
     }
-    
   },
   "bulb0": {
     "dir_count": 4,
@@ -305,7 +299,6 @@
         ]
       }
     }
-    
   },
   "bulb-broken": {
     "dir_count": 4,
@@ -349,7 +342,6 @@
         ]
       }
     }
-    
   },
   "bulb-empty": {
     "dir_count": 4,
@@ -393,7 +385,6 @@
         ]
       }
     }
-    
   },
   "bulb-burned": {
     "dir_count": 4,
@@ -437,7 +428,6 @@
         ]
       }
     }
-    
   },
   "ltube": {
     "dir_count": 1,
@@ -454,7 +444,6 @@
         ]
       }
     }
-    
   },
   "ltube-burned": {
     "dir_count": 1,
@@ -471,7 +460,6 @@
         ]
       }
     }
-    
   },
   "ltube-broken": {
     "dir_count": 1,
@@ -488,7 +476,6 @@
         ]
       }
     }
-    
   },
   "lbulb": {
     "dir_count": 1,
@@ -505,7 +492,6 @@
         ]
       }
     }
-    
   },
   "lbulb-burned": {
     "dir_count": 1,
@@ -522,7 +508,6 @@
         ]
       }
     }
-    
   },
   "lbulb-broken": {
     "dir_count": 1,
@@ -539,7 +524,6 @@
         ]
       }
     }
-    
   },
   "glowshroomf": {
     "dir_count": 1,
@@ -556,7 +540,6 @@
         ]
       }
     }
-    
   },
   "glowshroom1": {
     "dir_count": 4,
@@ -600,7 +583,6 @@
         ]
       }
     }
-    
   },
   "glowshroom2": {
     "dir_count": 4,
@@ -644,7 +626,6 @@
         ]
       }
     }
-    
   },
   "glowshroom3": {
     "dir_count": 4,
@@ -688,7 +669,6 @@
         ]
       }
     }
-    
   },
   "glowshroomfold": {
     "dir_count": 1,
@@ -705,7 +685,6 @@
         ]
       }
     }
-    
   },
   "floor1": {
     "dir_count": 1,
@@ -722,7 +701,6 @@
         ]
       }
     }
-    
   },
   "floor0": {
     "dir_count": 1,
@@ -739,7 +717,6 @@
         ]
       }
     }
-    
   },
   "floor-empty": {
     "dir_count": 1,
@@ -756,7 +733,6 @@
         ]
       }
     }
-    
   },
   "floor-burned": {
     "dir_count": 1,
@@ -773,7 +749,6 @@
         ]
       }
     }
-    
   },
   "floor-broken": {
     "dir_count": 1,
@@ -790,7 +765,6 @@
         ]
       }
     }
-    
   },
   "firelight1": {
     "dir_count": 4,
@@ -974,7 +948,6 @@
         ]
       }
     }
-    
   },
   "firelight0": {
     "dir_count": 4,
@@ -1018,7 +991,6 @@
         ]
       }
     }
-    
   },
   "firelight-broken": {
     "dir_count": 4,
@@ -1062,7 +1034,6 @@
         ]
       }
     }
-    
   },
   "flight": {
     "dir_count": 1,
@@ -1079,7 +1050,6 @@
         ]
       }
     }
-    
   },
   "flight-broken": {
     "dir_count": 1,
@@ -1096,7 +1066,6 @@
         ]
       }
     }
-    
   },
   "tube-construct-stage1": {
     "dir_count": 4,
@@ -1140,7 +1109,6 @@
         ]
       }
     }
-    
   },
   "bulb-construct-stage1": {
     "dir_count": 4,
@@ -1184,7 +1152,6 @@
         ]
       }
     }
-    
   },
   "tube-construct-stage2": {
     "dir_count": 4,
@@ -1228,7 +1195,6 @@
         ]
       }
     }
-    
   },
   "bulb-construct-stage2": {
     "dir_count": 4,
@@ -1272,7 +1238,6 @@
         ]
       }
     }
-    
   },
   "tube-construct-item": {
     "dir_count": 4,
@@ -1316,7 +1281,6 @@
         ]
       }
     }
-    
   },
   "bulb-construct-item": {
     "dir_count": 4,
@@ -1360,7 +1324,6 @@
         ]
       }
     }
-    
   },
   "flashlight": {
     "dir_count": 1,
@@ -1377,7 +1340,6 @@
         ]
       }
     }
-    
   },
   "flashlight-on": {
     "dir_count": 1,
@@ -1394,7 +1356,6 @@
         ]
       }
     }
-    
   },
   "lamp": {
     "dir_count": 1,
@@ -1411,7 +1372,6 @@
         ]
       }
     }
-    
   },
   "lamp-on": {
     "dir_count": 1,
@@ -1428,7 +1388,6 @@
         ]
       }
     }
-    
   },
   "lampgreen": {
     "dir_count": 1,
@@ -1445,7 +1404,6 @@
         ]
       }
     }
-    
   },
   "lampgreen-on": {
     "dir_count": 1,
@@ -1462,7 +1420,6 @@
         ]
       }
     }
-    
   },
   "lantern": {
     "dir_count": 1,
@@ -1479,7 +1436,6 @@
         ]
       }
     }
-    
   },
   "lantern-on": {
     "dir_count": 1,
@@ -1496,7 +1452,6 @@
         ]
       }
     }
-    
   },
   "flare-on": {
     "dir_count": 1,
@@ -1528,7 +1483,6 @@
         ]
       }
     }
-    
   },
   "flare-empty": {
     "dir_count": 1,
@@ -1545,7 +1499,6 @@
         ]
       }
     }
-    
   },
   "flare": {
     "dir_count": 1,
@@ -1562,7 +1515,6 @@
         ]
       }
     }
-    
   },
   "slime": {
     "dir_count": 1,
@@ -1579,7 +1531,6 @@
         ]
       }
     }
-    
   },
   "slime-on": {
     "dir_count": 1,
@@ -1596,7 +1547,6 @@
         ]
       }
     }
-    
   },
   "torch": {
     "dir_count": 1,
@@ -1613,7 +1563,6 @@
         ]
       }
     }
-    
   },
   "torch-on": {
     "dir_count": 1,
@@ -1640,7 +1589,6 @@
         ]
       }
     }
-    
   },
   "torch-empty": {
     "dir_count": 1,
@@ -1657,7 +1605,6 @@
         ]
       }
     }
-    
   },
   "penlight": {
     "dir_count": 1,
@@ -1674,7 +1621,6 @@
         ]
       }
     }
-    
   },
   "penlight-on": {
     "dir_count": 1,
@@ -1691,7 +1637,6 @@
         ]
       }
     }
-    
   },
   "bananalamp": {
     "dir_count": 1,
@@ -1708,7 +1653,6 @@
         ]
       }
     }
-    
   },
   "bananalamp-on": {
     "dir_count": 1,
@@ -1725,7 +1669,6 @@
         ]
       }
     }
-    
   },
   "seclite": {
     "dir_count": 1,
@@ -1742,7 +1685,6 @@
         ]
       }
     }
-    
   },
   "seclite-on": {
     "dir_count": 1,
@@ -1759,7 +1701,6 @@
         ]
       }
     }
-    
   },
   "bulb2": {
     "dir_count": 4,
@@ -1823,7 +1764,6 @@
         ]
       }
     }
-    
   },
   "tube2": {
     "dir_count": 4,
@@ -1887,7 +1827,6 @@
         ]
       }
     }
-    
   },
   "glowcapf": {
     "dir_count": 1,
@@ -1904,7 +1843,6 @@
         ]
       }
     }
-    
   },
   "glowcap1": {
     "dir_count": 4,
@@ -1948,7 +1886,6 @@
         ]
       }
     }
-    
   },
   "glowcap2": {
     "dir_count": 4,
@@ -1992,7 +1929,6 @@
         ]
       }
     }
-    
   },
   "glowcap3": {
     "dir_count": 4,
@@ -2036,7 +1972,6 @@
         ]
       }
     }
-    
   },
   "lantern-blue": {
     "dir_count": 1,
@@ -2053,7 +1988,6 @@
         ]
       }
     }
-    
   },
   "orb": {
     "dir_count": 1,
@@ -2105,7 +2039,6 @@
         ]
       }
     }
-    
   },
   "flashlight_eyes": {
     "dir_count": 1,
@@ -2122,7 +2055,6 @@
         ]
       }
     }
-    
   },
   "glowstick": {
     "dir_count": 1,
@@ -2139,7 +2071,6 @@
         ]
       }
     }
-    
   },
   "glowstick-empty": {
     "dir_count": 1,
@@ -2156,7 +2087,6 @@
         ]
       }
     }
-    
   },
   "glowstick-on": {
     "dir_count": 1,
@@ -2178,7 +2108,6 @@
         ]
       }
     }
-    
   },
   "glowstick-glow": {
     "dir_count": 1,
@@ -2195,7 +2124,6 @@
         ]
       }
     }
-    
   },
   "shadowshroomf": {
     "dir_count": 1,
@@ -2212,7 +2140,6 @@
         ]
       }
     }
-    
   },
   "shadowshroom1": {
     "dir_count": 4,
@@ -2256,7 +2183,6 @@
         ]
       }
     }
-    
   },
   "shadowshroom2": {
     "dir_count": 4,
@@ -2300,7 +2226,6 @@
         ]
       }
     }
-    
   },
   "shadowshroom3": {
     "dir_count": 4,
@@ -2344,7 +2269,6 @@
         ]
       }
     }
-    
   },
   "flashdark": {
     "dir_count": 1,
@@ -2361,7 +2285,6 @@
         ]
       }
     }
-    
   },
   "flashdark-on": {
     "dir_count": 1,
@@ -2378,7 +2301,6 @@
         ]
       }
     }
-    
   },
   "floodlight_on": {
     "dir_count": 1,
@@ -2395,7 +2317,6 @@
         ]
       }
     }
-    
   },
   "floodlight": {
     "dir_count": 1,
@@ -2412,7 +2333,6 @@
         ]
       }
     }
-    
   },
   "Floodlight Burned": {
     "dir_count": 1,
@@ -2429,7 +2349,6 @@
         ]
       }
     }
-    
   },
   "Floodlight Broken": {
     "dir_count": 1,
@@ -2446,7 +2365,6 @@
         ]
       }
     }
-    
   },
   "floodlight_c3": {
     "dir_count": 1,
@@ -2463,7 +2381,6 @@
         ]
       }
     }
-    
   },
   "floodlight_c1": {
     "dir_count": 1,
@@ -2480,7 +2397,6 @@
         ]
       }
     }
-    
   },
   "floodlight_c2": {
     "dir_count": 1,
@@ -2497,7 +2413,6 @@
         ]
       }
     }
-    
   },
   "disco1": {
     "dir_count": 1,
@@ -2569,7 +2484,6 @@
         ]
       }
     }
-    
   },
   "disco0": {
     "dir_count": 1,
@@ -2586,7 +2500,6 @@
         ]
       }
     }
-    
   },
   "disco-broken": {
     "dir_count": 1,
@@ -2603,7 +2516,6 @@
         ]
       }
     }
-    
   },
   "markerrandom": {
     "dir_count": 1,
@@ -2620,7 +2532,6 @@
         ]
       }
     }
-    
   },
   "markerburgundy-on": {
     "dir_count": 1,
@@ -2637,7 +2548,6 @@
         ]
       }
     }
-    
   },
   "markerburgundy": {
     "dir_count": 1,
@@ -2654,7 +2564,6 @@
         ]
       }
     }
-    
   },
   "markerbronze-on": {
     "dir_count": 1,
@@ -2671,7 +2580,6 @@
         ]
       }
     }
-    
   },
   "markerbronze": {
     "dir_count": 1,
@@ -2688,7 +2596,6 @@
         ]
       }
     }
-    
   },
   "markeryellow-on": {
     "dir_count": 1,
@@ -2705,7 +2612,6 @@
         ]
       }
     }
-    
   },
   "markeryellow": {
     "dir_count": 1,
@@ -2722,7 +2628,6 @@
         ]
       }
     }
-    
   },
   "markerlime-on": {
     "dir_count": 1,
@@ -2739,7 +2644,6 @@
         ]
       }
     }
-    
   },
   "markerlime": {
     "dir_count": 1,
@@ -2756,7 +2660,6 @@
         ]
       }
     }
-    
   },
   "markerolive-on": {
     "dir_count": 1,
@@ -2773,7 +2676,6 @@
         ]
       }
     }
-    
   },
   "markerolive": {
     "dir_count": 1,
@@ -2790,7 +2692,6 @@
         ]
       }
     }
-    
   },
   "markerjade-on": {
     "dir_count": 1,
@@ -2807,7 +2708,6 @@
         ]
       }
     }
-    
   },
   "markerjade": {
     "dir_count": 1,
@@ -2824,7 +2724,6 @@
         ]
       }
     }
-    
   },
   "markerteal-on": {
     "dir_count": 1,
@@ -2841,7 +2740,6 @@
         ]
       }
     }
-    
   },
   "markerteal": {
     "dir_count": 1,
@@ -2858,7 +2756,6 @@
         ]
       }
     }
-    
   },
   "markercerulean-on": {
     "dir_count": 1,
@@ -2875,7 +2772,6 @@
         ]
       }
     }
-    
   },
   "markercerulean": {
     "dir_count": 1,
@@ -2892,7 +2788,6 @@
         ]
       }
     }
-    
   },
   "markerindigo-on": {
     "dir_count": 1,
@@ -2909,7 +2804,6 @@
         ]
       }
     }
-    
   },
   "markerindigo": {
     "dir_count": 1,
@@ -2926,7 +2820,6 @@
         ]
       }
     }
-    
   },
   "markerpurple-on": {
     "dir_count": 1,
@@ -2943,7 +2836,6 @@
         ]
       }
     }
-    
   },
   "markerpurple": {
     "dir_count": 1,
@@ -2960,7 +2852,6 @@
         ]
       }
     }
-    
   },
   "markerviolet-on": {
     "dir_count": 1,
@@ -2977,7 +2868,6 @@
         ]
       }
     }
-    
   },
   "markerviolet": {
     "dir_count": 1,
@@ -2994,7 +2884,6 @@
         ]
       }
     }
-    
   },
   "markerfuchsia-on": {
     "dir_count": 1,
@@ -3011,7 +2900,6 @@
         ]
       }
     }
-    
   },
   "markerfuchsia": {
     "dir_count": 1,

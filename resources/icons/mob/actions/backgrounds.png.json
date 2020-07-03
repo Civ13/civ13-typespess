@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "bg_default_on": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "bg_mime": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "bg_spell": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "bg_alien": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "bg_revenant": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "bg_demon": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "bg_cult": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "bg_clock": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "bg_tech_blue": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "bg_tech_blue_on": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "bg_tech": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "bg_tech_on": {
     "dir_count": 1,

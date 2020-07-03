@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "human_r_arm": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "human_l_arm": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "human_r_leg": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "human_l_leg": {
     "dir_count": 4,
@@ -217,7 +213,6 @@
         ]
       }
     }
-    
   },
   "human_head_m": {
     "dir_count": 4,
@@ -261,7 +256,6 @@
         ]
       }
     }
-    
   },
   "human_head_f": {
     "dir_count": 4,
@@ -305,7 +299,6 @@
         ]
       }
     }
-    
   },
   "human_chest_m": {
     "dir_count": 4,
@@ -349,7 +342,6 @@
         ]
       }
     }
-    
   },
   "human_chest_f": {
     "dir_count": 4,
@@ -393,7 +385,6 @@
         ]
       }
     }
-    
   },
   "lizard_r_arm": {
     "dir_count": 4,
@@ -437,7 +428,6 @@
         ]
       }
     }
-    
   },
   "lizard_l_arm": {
     "dir_count": 4,
@@ -481,7 +471,6 @@
         ]
       }
     }
-    
   },
   "lizard_r_leg": {
     "dir_count": 4,
@@ -525,7 +514,6 @@
         ]
       }
     }
-    
   },
   "lizard_l_leg": {
     "dir_count": 4,
@@ -569,7 +557,6 @@
         ]
       }
     }
-    
   },
   "lizard_chest_m": {
     "dir_count": 4,
@@ -613,7 +600,6 @@
         ]
       }
     }
-    
   },
   "lizard_chest_f": {
     "dir_count": 4,
@@ -657,7 +643,6 @@
         ]
       }
     }
-    
   },
   "lizard_head_m": {
     "dir_count": 4,
@@ -701,7 +686,6 @@
         ]
       }
     }
-    
   },
   "lizard_head_f": {
     "dir_count": 4,
@@ -745,7 +729,6 @@
         ]
       }
     }
-    
   },
   "pod_chest_m": {
     "dir_count": 4,
@@ -789,7 +772,6 @@
         ]
       }
     }
-    
   },
   "pod_chest_f": {
     "dir_count": 4,
@@ -833,7 +815,6 @@
         ]
       }
     }
-    
   },
   "pod_head_m": {
     "dir_count": 4,
@@ -877,7 +858,6 @@
         ]
       }
     }
-    
   },
   "pod_head_f": {
     "dir_count": 4,
@@ -921,7 +901,6 @@
         ]
       }
     }
-    
   },
   "pod_r_arm": {
     "dir_count": 4,
@@ -965,7 +944,6 @@
         ]
       }
     }
-    
   },
   "pod_l_arm": {
     "dir_count": 4,
@@ -1009,7 +987,6 @@
         ]
       }
     }
-    
   },
   "pod_r_leg": {
     "dir_count": 4,
@@ -1053,7 +1030,6 @@
         ]
       }
     }
-    
   },
   "pod_l_leg": {
     "dir_count": 4,
@@ -1097,7 +1073,6 @@
         ]
       }
     }
-    
   },
   "plant_chest_m": {
     "dir_count": 4,
@@ -1141,7 +1116,6 @@
         ]
       }
     }
-    
   },
   "plant_chest_f": {
     "dir_count": 4,
@@ -1185,7 +1159,6 @@
         ]
       }
     }
-    
   },
   "plant_head_m": {
     "dir_count": 4,
@@ -1229,7 +1202,6 @@
         ]
       }
     }
-    
   },
   "plant_head_f": {
     "dir_count": 4,
@@ -1273,7 +1245,6 @@
         ]
       }
     }
-    
   },
   "plant_r_leg": {
     "dir_count": 4,
@@ -1317,7 +1288,6 @@
         ]
       }
     }
-    
   },
   "plant_l_leg": {
     "dir_count": 4,
@@ -1361,7 +1331,6 @@
         ]
       }
     }
-    
   },
   "plant_r_arm": {
     "dir_count": 4,
@@ -1405,7 +1374,6 @@
         ]
       }
     }
-    
   },
   "plant_l_arm": {
     "dir_count": 4,
@@ -1449,7 +1417,6 @@
         ]
       }
     }
-    
   },
   "jelly_chest_m": {
     "dir_count": 4,
@@ -1493,7 +1460,6 @@
         ]
       }
     }
-    
   },
   "jelly_chest_f": {
     "dir_count": 4,
@@ -1537,7 +1503,6 @@
         ]
       }
     }
-    
   },
   "jelly_head_m": {
     "dir_count": 4,
@@ -1581,7 +1546,6 @@
         ]
       }
     }
-    
   },
   "jelly_head_f": {
     "dir_count": 4,
@@ -1625,7 +1589,6 @@
         ]
       }
     }
-    
   },
   "jelly_r_arm": {
     "dir_count": 4,
@@ -1669,7 +1632,6 @@
         ]
       }
     }
-    
   },
   "jelly_l_arm": {
     "dir_count": 4,
@@ -1713,7 +1675,6 @@
         ]
       }
     }
-    
   },
   "jelly_r_leg": {
     "dir_count": 4,
@@ -1757,7 +1718,6 @@
         ]
       }
     }
-    
   },
   "jelly_l_leg": {
     "dir_count": 4,
@@ -1801,7 +1761,6 @@
         ]
       }
     }
-    
   },
   "slime_chest_m": {
     "dir_count": 4,
@@ -1845,7 +1804,6 @@
         ]
       }
     }
-    
   },
   "slime_chest_f": {
     "dir_count": 4,
@@ -1889,7 +1847,6 @@
         ]
       }
     }
-    
   },
   "slime_head_m": {
     "dir_count": 4,
@@ -1933,7 +1890,6 @@
         ]
       }
     }
-    
   },
   "slime_head_f": {
     "dir_count": 4,
@@ -1977,7 +1933,6 @@
         ]
       }
     }
-    
   },
   "slime_r_arm": {
     "dir_count": 4,
@@ -2021,7 +1976,6 @@
         ]
       }
     }
-    
   },
   "slime_l_arm": {
     "dir_count": 4,
@@ -2065,7 +2019,6 @@
         ]
       }
     }
-    
   },
   "slime_r_leg": {
     "dir_count": 4,
@@ -2109,7 +2062,6 @@
         ]
       }
     }
-    
   },
   "slime_l_leg": {
     "dir_count": 4,
@@ -2153,7 +2105,6 @@
         ]
       }
     }
-    
   },
   "golem_chest_m": {
     "dir_count": 4,
@@ -2197,7 +2148,6 @@
         ]
       }
     }
-    
   },
   "golem_chest_f": {
     "dir_count": 4,
@@ -2241,7 +2191,6 @@
         ]
       }
     }
-    
   },
   "golem_head_m": {
     "dir_count": 4,
@@ -2285,7 +2234,6 @@
         ]
       }
     }
-    
   },
   "golem_head_f": {
     "dir_count": 4,
@@ -2329,7 +2277,6 @@
         ]
       }
     }
-    
   },
   "golem_r_arm": {
     "dir_count": 4,
@@ -2373,7 +2320,6 @@
         ]
       }
     }
-    
   },
   "golem_l_arm": {
     "dir_count": 4,
@@ -2417,7 +2363,6 @@
         ]
       }
     }
-    
   },
   "golem_r_leg": {
     "dir_count": 4,
@@ -2461,7 +2406,6 @@
         ]
       }
     }
-    
   },
   "golem_l_leg": {
     "dir_count": 4,
@@ -2505,7 +2449,6 @@
         ]
       }
     }
-    
   },
   "digitigrade_1_r_leg": {
     "dir_count": 4,
@@ -2549,7 +2492,6 @@
         ]
       }
     }
-    
   },
   "digitigrade_1_l_leg": {
     "dir_count": 4,
@@ -2593,7 +2535,6 @@
         ]
       }
     }
-    
   },
   "digitigrade_2_r_leg": {
     "dir_count": 4,
@@ -2637,7 +2578,6 @@
         ]
       }
     }
-    
   },
   "digitigrade_2_l_leg": {
     "dir_count": 4,
@@ -2681,7 +2621,6 @@
         ]
       }
     }
-    
   },
   "plasmaman_head": {
     "dir_count": 4,
@@ -2725,7 +2664,6 @@
         ]
       }
     }
-    
   },
   "plasmaman_chest": {
     "dir_count": 4,
@@ -2769,7 +2707,6 @@
         ]
       }
     }
-    
   },
   "plasmaman_r_arm": {
     "dir_count": 4,
@@ -2813,7 +2750,6 @@
         ]
       }
     }
-    
   },
   "plasmaman_l_arm": {
     "dir_count": 4,
@@ -2857,7 +2793,6 @@
         ]
       }
     }
-    
   },
   "plasmaman_r_leg": {
     "dir_count": 4,
@@ -2901,7 +2836,6 @@
         ]
       }
     }
-    
   },
   "plasmaman_l_leg": {
     "dir_count": 4,

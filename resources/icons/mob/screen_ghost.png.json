@@ -24,7 +24,6 @@
         ]
       }
     }
-    
   },
   "orbit_anim": {
     "dir_count": 1,
@@ -71,7 +70,6 @@
         ]
       }
     }
-    
   },
   "teleport_anim": {
     "dir_count": 1,
@@ -113,7 +111,6 @@
         ]
       }
     }
-    
   },
   "reenter_corpse_anim": {
     "dir_count": 1,
@@ -155,7 +152,6 @@
         ]
       }
     }
-    
   },
   "jumptomob": {
     "dir_count": 1,
@@ -172,7 +168,6 @@
         ]
       }
     }
-    
   },
   "orbit": {
     "dir_count": 1,
@@ -189,7 +184,6 @@
         ]
       }
     }
-    
   },
   "teleport": {
     "dir_count": 1,
@@ -206,7 +200,6 @@
         ]
       }
     }
-    
   },
   "reenter_corpse": {
     "dir_count": 1,
@@ -223,7 +216,6 @@
         ]
       }
     }
-    
   },
   "pai": {
     "dir_count": 1,

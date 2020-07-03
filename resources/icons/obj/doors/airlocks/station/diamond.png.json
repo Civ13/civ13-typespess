@@ -13,8 +13,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "open": {
     "dir_count": 1,
@@ -30,8 +29,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "opening": {
     "dir_count": 1,
@@ -72,8 +70,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "closing": {
     "dir_count": 1,
@@ -114,8 +111,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "construction": {
     "dir_count": 1,
@@ -131,8 +127,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "fill_closed": {
     "dir_count": 1,
@@ -148,8 +143,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "fill_open": {
     "dir_count": 1,
@@ -165,8 +159,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "fill_opening": {
     "dir_count": 1,
@@ -207,8 +200,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "fill_closing": {
     "dir_count": 1,
@@ -249,8 +241,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "fill_construction": {
     "dir_count": 1,
@@ -266,7 +257,6 @@
           }
         ]
       }
-    },
-    
+    }
   }
 }

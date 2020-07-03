@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "cmo": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "prisoner": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "captain": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "engine": {
     "dir_count": 4,
@@ -217,7 +213,6 @@
         ]
       }
     }
-    
   },
   "atmos": {
     "dir_count": 4,
@@ -261,7 +256,6 @@
         ]
       }
     }
-    
   },
   "toxins": {
     "dir_count": 4,
@@ -305,7 +299,6 @@
         ]
       }
     }
-    
   },
   "chapblack": {
     "dir_count": 4,
@@ -349,7 +342,6 @@
         ]
       }
     }
-    
   },
   "genetics": {
     "dir_count": 4,
@@ -393,7 +385,6 @@
         ]
       }
     }
-    
   },
   "chemistry": {
     "dir_count": 4,
@@ -437,7 +428,6 @@
         ]
       }
     }
-    
   },
   "virology": {
     "dir_count": 4,
@@ -481,7 +471,6 @@
         ]
       }
     }
-    
   },
   "barman": {
     "dir_count": 4,
@@ -525,7 +514,6 @@
         ]
       }
     }
-    
   },
   "sl_suit": {
     "dir_count": 4,
@@ -569,7 +557,6 @@
         ]
       }
     }
-    
   },
   "detective": {
     "dir_count": 4,
@@ -613,7 +600,6 @@
         ]
       }
     }
-    
   },
   "clown": {
     "dir_count": 4,
@@ -657,7 +643,6 @@
         ]
       }
     }
-    
   },
   "janitor": {
     "dir_count": 4,
@@ -701,7 +686,6 @@
         ]
       }
     }
-    
   },
   "lawyer_black": {
     "dir_count": 4,
@@ -745,7 +729,6 @@
         ]
       }
     }
-    
   },
   "lawyer_red": {
     "dir_count": 4,
@@ -789,7 +772,6 @@
         ]
       }
     }
-    
   },
   "lawyer_blue": {
     "dir_count": 4,
@@ -833,7 +815,6 @@
         ]
       }
     }
-    
   },
   "psyche": {
     "dir_count": 4,
@@ -1017,7 +998,6 @@
         ]
       }
     }
-    
   },
   "chef": {
     "dir_count": 4,
@@ -1061,7 +1041,6 @@
         ]
       }
     }
-    
   },
   "blackshorts": {
     "dir_count": 4,
@@ -1105,7 +1084,6 @@
         ]
       }
     }
-    
   },
   "blueshorts": {
     "dir_count": 4,
@@ -1149,7 +1127,6 @@
         ]
       }
     }
-    
   },
   "greenshorts": {
     "dir_count": 4,
@@ -1193,7 +1170,6 @@
         ]
       }
     }
-    
   },
   "redshorts": {
     "dir_count": 4,
@@ -1237,7 +1213,6 @@
         ]
       }
     }
-    
   },
   "greyshorts": {
     "dir_count": 4,
@@ -1281,7 +1256,6 @@
         ]
       }
     }
-    
   },
   "purpleshorts": {
     "dir_count": 4,
@@ -1325,7 +1299,6 @@
         ]
       }
     }
-    
   },
   "blackshorts_l": {
     "dir_count": 4,
@@ -1369,7 +1342,6 @@
         ]
       }
     }
-    
   },
   "blueshorts_l": {
     "dir_count": 4,
@@ -1413,7 +1385,6 @@
         ]
       }
     }
-    
   },
   "greenshorts_l": {
     "dir_count": 4,
@@ -1457,7 +1428,6 @@
         ]
       }
     }
-    
   },
   "redshorts_l": {
     "dir_count": 4,
@@ -1501,7 +1471,6 @@
         ]
       }
     }
-    
   },
   "greyshorts_l": {
     "dir_count": 4,
@@ -1545,7 +1514,6 @@
         ]
       }
     }
-    
   },
   "purpleshorts_l": {
     "dir_count": 4,
@@ -1589,7 +1557,6 @@
         ]
       }
     }
-    
   },
   "qm": {
     "dir_count": 4,
@@ -1633,7 +1600,6 @@
         ]
       }
     }
-    
   },
   "director": {
     "dir_count": 4,
@@ -1677,7 +1643,6 @@
         ]
       }
     }
-    
   },
   "chief": {
     "dir_count": 4,
@@ -1721,7 +1686,6 @@
         ]
       }
     }
-    
   },
   "hydroponics": {
     "dir_count": 4,
@@ -1765,7 +1729,6 @@
         ]
       }
     }
-    
   },
   "green_suit": {
     "dir_count": 4,
@@ -1809,7 +1772,6 @@
         ]
       }
     }
-    
   },
   "red_suit": {
     "dir_count": 4,
@@ -1853,7 +1815,6 @@
         ]
       }
     }
-    
   },
   "teal_suit": {
     "dir_count": 4,
@@ -1897,7 +1858,6 @@
         ]
       }
     }
-    
   },
   "black_suit": {
     "dir_count": 4,
@@ -1941,7 +1901,6 @@
         ]
       }
     }
-    
   },
   "overalls": {
     "dir_count": 4,
@@ -1985,7 +1944,6 @@
         ]
       }
     }
-    
   },
   "tactifool": {
     "dir_count": 4,
@@ -2029,7 +1987,6 @@
         ]
       }
     }
-    
   },
   "pirate": {
     "dir_count": 4,
@@ -2073,7 +2030,6 @@
         ]
       }
     }
-    
   },
   "mime": {
     "dir_count": 4,
@@ -2117,7 +2073,6 @@
         ]
       }
     }
-    
   },
   "soviet": {
     "dir_count": 4,
@@ -2161,7 +2116,6 @@
         ]
       }
     }
-    
   },
   "centcom": {
     "dir_count": 4,
@@ -2205,7 +2159,6 @@
         ]
       }
     }
-    
   },
   "officer": {
     "dir_count": 4,
@@ -2249,7 +2202,6 @@
         ]
       }
     }
-    
   },
   "syndicate": {
     "dir_count": 4,
@@ -2293,7 +2245,6 @@
         ]
       }
     }
-    
   },
   "blackskirt": {
     "dir_count": 4,
@@ -2337,7 +2288,6 @@
         ]
       }
     }
-    
   },
   "miner": {
     "dir_count": 4,
@@ -2381,7 +2331,6 @@
         ]
       }
     }
-    
   },
   "robotics": {
     "dir_count": 4,
@@ -2425,7 +2374,6 @@
         ]
       }
     }
-    
   },
   "waiter": {
     "dir_count": 4,
@@ -2469,7 +2417,6 @@
         ]
       }
     }
-    
   },
   " ": {
     "dir_count": 1,
@@ -2486,7 +2433,6 @@
         ]
       }
     }
-    
   },
   "bluesuit": {
     "dir_count": 4,
@@ -2530,7 +2476,6 @@
         ]
       }
     }
-    
   },
   "kilt": {
     "dir_count": 4,
@@ -2574,7 +2519,6 @@
         ]
       }
     }
-    
   },
   "nursesuit": {
     "dir_count": 4,
@@ -2618,7 +2562,6 @@
         ]
       }
     }
-    
   },
   "sexyclown": {
     "dir_count": 4,
@@ -2662,7 +2605,6 @@
         ]
       }
     }
-    
   },
   "mailman": {
     "dir_count": 4,
@@ -2706,7 +2648,6 @@
         ]
       }
     }
-    
   },
   "vice": {
     "dir_count": 4,
@@ -2750,7 +2691,6 @@
         ]
       }
     }
-    
   },
   "sexymime": {
     "dir_count": 4,
@@ -2794,7 +2734,6 @@
         ]
       }
     }
-    
   },
   "white_suit": {
     "dir_count": 4,
@@ -2838,7 +2777,6 @@
         ]
       }
     }
-    
   },
   "cargotech": {
     "dir_count": 4,
@@ -2882,7 +2820,6 @@
         ]
       }
     }
-    
   },
   "cargotech_l": {
     "dir_count": 4,
@@ -2926,7 +2863,6 @@
         ]
       }
     }
-    
   },
   "cargotech_d": {
     "dir_count": 4,
@@ -2970,7 +2906,6 @@
         ]
       }
     }
-    
   },
   "lawyer_purp": {
     "dir_count": 4,
@@ -3014,7 +2949,6 @@
         ]
       }
     }
-    
   },
   "rainbow": {
     "dir_count": 4,
@@ -3058,7 +2992,6 @@
         ]
       }
     }
-    
   },
   "really_black_suit": {
     "dir_count": 4,
@@ -3102,7 +3035,6 @@
         ]
       }
     }
-    
   },
   "gladiator": {
     "dir_count": 4,
@@ -3146,7 +3078,6 @@
         ]
       }
     }
-    
   },
   "scrubsblue": {
     "dir_count": 4,
@@ -3190,7 +3121,6 @@
         ]
       }
     }
-    
   },
   "scrubsgreen": {
     "dir_count": 4,
@@ -3234,7 +3164,6 @@
         ]
       }
     }
-    
   },
   "scrubspurple": {
     "dir_count": 4,
@@ -3278,7 +3207,6 @@
         ]
       }
     }
-    
   },
   "black_suit_fem": {
     "dir_count": 4,
@@ -3322,7 +3250,6 @@
         ]
       }
     }
-    
   },
   "blue_pyjamas": {
     "dir_count": 4,
@@ -3366,7 +3293,6 @@
         ]
       }
     }
-    
   },
   "red_pyjamas": {
     "dir_count": 4,
@@ -3410,7 +3336,6 @@
         ]
       }
     }
-    
   },
   "hosblueclothes": {
     "dir_count": 4,
@@ -3454,7 +3379,6 @@
         ]
       }
     }
-    
   },
   "hostanclothes": {
     "dir_count": 4,
@@ -3498,7 +3422,6 @@
         ]
       }
     }
-    
   },
   "officerblueclothes": {
     "dir_count": 4,
@@ -3542,7 +3465,6 @@
         ]
       }
     }
-    
   },
   "officertanclothes": {
     "dir_count": 4,
@@ -3586,7 +3508,6 @@
         ]
       }
     }
-    
   },
   "wardenblueclothes": {
     "dir_count": 4,
@@ -3630,7 +3551,6 @@
         ]
       }
     }
-    
   },
   "wardentanclothes": {
     "dir_count": 4,
@@ -3674,7 +3594,6 @@
         ]
       }
     }
-    
   },
   "roman": {
     "dir_count": 4,
@@ -3718,7 +3637,6 @@
         ]
       }
     }
-    
   },
   "sundress": {
     "dir_count": 4,
@@ -3762,7 +3680,6 @@
         ]
       }
     }
-    
   },
   "golem": {
     "dir_count": 1,
@@ -3779,7 +3696,6 @@
         ]
       }
     }
-    
   },
   "female_full": {
     "dir_count": 4,
@@ -3823,7 +3739,6 @@
         ]
       }
     }
-    
   },
   "blacksuit": {
     "dir_count": 4,
@@ -3867,7 +3782,6 @@
         ]
       }
     }
-    
   },
   "captain_parade": {
     "dir_count": 4,
@@ -3911,7 +3825,6 @@
         ]
       }
     }
-    
   },
   "assistant_formal": {
     "dir_count": 4,
@@ -3955,7 +3868,6 @@
         ]
       }
     }
-    
   },
   "hos_parade_male": {
     "dir_count": 4,
@@ -3999,7 +3911,6 @@
         ]
       }
     }
-    
   },
   "hos_parade_fem": {
     "dir_count": 4,
@@ -4043,7 +3954,6 @@
         ]
       }
     }
-    
   },
   "charcoal_suit": {
     "dir_count": 4,
@@ -4087,7 +3997,6 @@
         ]
       }
     }
-    
   },
   "navy_suit": {
     "dir_count": 4,
@@ -4131,7 +4040,6 @@
         ]
       }
     }
-    
   },
   "burgundy_suit": {
     "dir_count": 4,
@@ -4175,7 +4083,6 @@
         ]
       }
     }
-    
   },
   "checkered_suit": {
     "dir_count": 4,
@@ -4219,7 +4126,6 @@
         ]
       }
     }
-    
   },
   "tan_suit": {
     "dir_count": 4,
@@ -4263,7 +4169,6 @@
         ]
       }
     }
-    
   },
   "hop": {
     "dir_count": 4,
@@ -4307,7 +4212,6 @@
         ]
       }
     }
-    
   },
   "barman_d": {
     "dir_count": 4,
@@ -4351,7 +4255,6 @@
         ]
       }
     }
-    
   },
   "blacksuit_d": {
     "dir_count": 4,
@@ -4395,7 +4298,6 @@
         ]
       }
     }
-    
   },
   "bluesuit_d": {
     "dir_count": 4,
@@ -4439,7 +4341,6 @@
         ]
       }
     }
-    
   },
   "detective_d": {
     "dir_count": 4,
@@ -4483,7 +4384,6 @@
         ]
       }
     }
-    
   },
   "hosblueclothes_d": {
     "dir_count": 4,
@@ -4527,7 +4427,6 @@
         ]
       }
     }
-    
   },
   "officerblueclothes_d": {
     "dir_count": 4,
@@ -4571,7 +4470,6 @@
         ]
       }
     }
-    
   },
   "wardenblueclothes_d": {
     "dir_count": 4,
@@ -4615,7 +4513,6 @@
         ]
       }
     }
-    
   },
   "lawyer_purp_d": {
     "dir_count": 4,
@@ -4659,7 +4556,6 @@
         ]
       }
     }
-    
   },
   "syndicate_d": {
     "dir_count": 4,
@@ -4703,7 +4599,6 @@
         ]
       }
     }
-    
   },
   "greydet": {
     "dir_count": 4,
@@ -4747,7 +4642,6 @@
         ]
       }
     }
-    
   },
   "greydet_d": {
     "dir_count": 4,
@@ -4791,7 +4685,6 @@
         ]
       }
     }
-    
   },
   "qm_d": {
     "dir_count": 4,
@@ -4835,7 +4728,6 @@
         ]
       }
     }
-    
   },
   "medical_d": {
     "dir_count": 4,
@@ -4879,7 +4771,6 @@
         ]
       }
     }
-    
   },
   "cmo_d": {
     "dir_count": 4,
@@ -4923,7 +4814,6 @@
         ]
       }
     }
-    
   },
   "OLDcargotech_d": {
     "dir_count": 4,
@@ -4967,7 +4857,6 @@
         ]
       }
     }
-    
   },
   "captain_d": {
     "dir_count": 4,
@@ -5011,7 +4900,6 @@
         ]
       }
     }
-    
   },
   "engine_d": {
     "dir_count": 4,
@@ -5055,7 +4943,6 @@
         ]
       }
     }
-    
   },
   "atmos_d": {
     "dir_count": 4,
@@ -5099,7 +4986,6 @@
         ]
       }
     }
-    
   },
   "hop_d": {
     "dir_count": 4,
@@ -5143,7 +5029,6 @@
         ]
       }
     }
-    
   },
   "toxins_d": {
     "dir_count": 4,
@@ -5187,7 +5072,6 @@
         ]
       }
     }
-    
   },
   "genetics_d": {
     "dir_count": 4,
@@ -5231,7 +5115,6 @@
         ]
       }
     }
-    
   },
   "chemistry_d": {
     "dir_count": 4,
@@ -5275,7 +5158,6 @@
         ]
       }
     }
-    
   },
   "virology_d": {
     "dir_count": 4,
@@ -5319,7 +5201,6 @@
         ]
       }
     }
-    
   },
   "janitor_d": {
     "dir_count": 4,
@@ -5363,7 +5244,6 @@
         ]
       }
     }
-    
   },
   "chief_d": {
     "dir_count": 4,
@@ -5407,7 +5287,6 @@
         ]
       }
     }
-    
   },
   "hydroponics_d": {
     "dir_count": 4,
@@ -5451,7 +5330,6 @@
         ]
       }
     }
-    
   },
   "miner_d": {
     "dir_count": 4,
@@ -5495,7 +5373,6 @@
         ]
       }
     }
-    
   },
   "robotics_d": {
     "dir_count": 4,
@@ -5539,7 +5416,6 @@
         ]
       }
     }
-    
   },
   "mailman_d": {
     "dir_count": 4,
@@ -5583,7 +5459,6 @@
         ]
       }
     }
-    
   },
   "mime_d": {
     "dir_count": 4,
@@ -5627,7 +5502,6 @@
         ]
       }
     }
-    
   },
   "chef_d": {
     "dir_count": 4,
@@ -5671,7 +5545,6 @@
         ]
       }
     }
-    
   },
   "overalls_d": {
     "dir_count": 4,
@@ -5715,7 +5588,6 @@
         ]
       }
     }
-    
   },
   "psyche_d": {
     "dir_count": 4,
@@ -5899,7 +5771,6 @@
         ]
       }
     }
-    
   },
   "tactifool_d": {
     "dir_count": 4,
@@ -5943,7 +5814,6 @@
         ]
       }
     }
-    
   },
   "orange_d": {
     "dir_count": 4,
@@ -5987,7 +5857,6 @@
         ]
       }
     }
-    
   },
   "prisoner_d": {
     "dir_count": 4,
@@ -6031,7 +5900,6 @@
         ]
       }
     }
-    
   },
   "rdwhimsy": {
     "dir_count": 4,
@@ -6075,7 +5943,6 @@
         ]
       }
     }
-    
   },
   "rdturtle": {
     "dir_count": 4,
@@ -6119,7 +5986,6 @@
         ]
       }
     }
-    
   },
   "rdwhimsy_d": {
     "dir_count": 4,
@@ -6163,7 +6029,6 @@
         ]
       }
     }
-    
   },
   "rdturtle_d": {
     "dir_count": 4,
@@ -6207,7 +6072,6 @@
         ]
       }
     }
-    
   },
   "jeansclassic": {
     "dir_count": 4,
@@ -6251,7 +6115,6 @@
         ]
       }
     }
-    
   },
   "jeansmustang": {
     "dir_count": 4,
@@ -6295,7 +6158,6 @@
         ]
       }
     }
-    
   },
   "jeansblack": {
     "dir_count": 4,
@@ -6339,7 +6201,6 @@
         ]
       }
     }
-    
   },
   "jeansyoungfolks": {
     "dir_count": 4,
@@ -6383,7 +6244,6 @@
         ]
       }
     }
-    
   },
   "whitepants": {
     "dir_count": 4,
@@ -6427,7 +6287,6 @@
         ]
       }
     }
-    
   },
   "redpants": {
     "dir_count": 4,
@@ -6471,7 +6330,6 @@
         ]
       }
     }
-    
   },
   "blackpants": {
     "dir_count": 4,
@@ -6515,7 +6373,6 @@
         ]
       }
     }
-    
   },
   "tanpants": {
     "dir_count": 4,
@@ -6559,7 +6416,6 @@
         ]
       }
     }
-    
   },
   "trackpants": {
     "dir_count": 4,
@@ -6603,7 +6459,6 @@
         ]
       }
     }
-    
   },
   "jeans": {
     "dir_count": 4,
@@ -6647,7 +6502,6 @@
         ]
       }
     }
-    
   },
   "khaki": {
     "dir_count": 4,
@@ -6691,7 +6545,6 @@
         ]
       }
     }
-    
   },
   "camopants": {
     "dir_count": 4,
@@ -6735,7 +6588,6 @@
         ]
       }
     }
-    
   },
   "black_tango": {
     "dir_count": 4,
@@ -6779,7 +6631,6 @@
         ]
       }
     }
-    
   },
   "red_evening_gown": {
     "dir_count": 4,
@@ -6823,7 +6674,6 @@
         ]
       }
     }
-    
   },
   "maid": {
     "dir_count": 4,
@@ -6867,7 +6717,6 @@
         ]
       }
     }
-    
   },
   "janimaid": {
     "dir_count": 4,
@@ -6911,7 +6760,6 @@
         ]
       }
     }
-    
   },
   "hosalt": {
     "dir_count": 4,
@@ -6955,7 +6803,6 @@
         ]
       }
     }
-    
   },
   "hosalt_d": {
     "dir_count": 4,
@@ -6999,7 +6846,6 @@
         ]
       }
     }
-    
   },
   "rsecurity": {
     "dir_count": 4,
@@ -7043,7 +6889,6 @@
         ]
       }
     }
-    
   },
   "rsecurity_d": {
     "dir_count": 4,
@@ -7087,7 +6932,6 @@
         ]
       }
     }
-    
   },
   "rhos": {
     "dir_count": 4,
@@ -7131,7 +6975,6 @@
         ]
       }
     }
-    
   },
   "rhos_d": {
     "dir_count": 4,
@@ -7175,7 +7018,6 @@
         ]
       }
     }
-    
   },
   "rwarden": {
     "dir_count": 4,
@@ -7219,7 +7061,6 @@
         ]
       }
     }
-    
   },
   "rwarden_d": {
     "dir_count": 4,
@@ -7263,7 +7104,6 @@
         ]
       }
     }
-    
   },
   "plaid_red": {
     "dir_count": 4,
@@ -7307,7 +7147,6 @@
         ]
       }
     }
-    
   },
   "plaid_red_d": {
     "dir_count": 4,
@@ -7351,7 +7190,6 @@
         ]
       }
     }
-    
   },
   "plaid_blue": {
     "dir_count": 4,
@@ -7395,7 +7233,6 @@
         ]
       }
     }
-    
   },
   "plaid_blue_d": {
     "dir_count": 4,
@@ -7439,7 +7276,6 @@
         ]
       }
     }
-    
   },
   "plaid_purple": {
     "dir_count": 4,
@@ -7483,7 +7319,6 @@
         ]
       }
     }
-    
   },
   "plaid_purple_d": {
     "dir_count": 4,
@@ -7527,7 +7362,6 @@
         ]
       }
     }
-    
   },
   "schoolgirl": {
     "dir_count": 4,
@@ -7571,7 +7405,6 @@
         ]
       }
     }
-    
   },
   "schoolgirlred": {
     "dir_count": 4,
@@ -7615,7 +7448,6 @@
         ]
       }
     }
-    
   },
   "schoolgirlgreen": {
     "dir_count": 4,
@@ -7659,7 +7491,6 @@
         ]
       }
     }
-    
   },
   "schoolgirlorange": {
     "dir_count": 4,
@@ -7703,7 +7534,6 @@
         ]
       }
     }
-    
   },
   "female_top": {
     "dir_count": 4,
@@ -7747,7 +7577,6 @@
         ]
       }
     }
-    
   },
   "owl": {
     "dir_count": 4,
@@ -7791,7 +7620,6 @@
         ]
       }
     }
-    
   },
   "griffin": {
     "dir_count": 4,
@@ -7835,7 +7663,6 @@
         ]
       }
     }
-    
   },
   "ek": {
     "dir_count": 4,
@@ -7879,7 +7706,6 @@
         ]
       }
     }
-    
   },
   "jester": {
     "dir_count": 4,
@@ -7923,7 +7749,6 @@
         ]
       }
     }
-    
   },
   "centcom_d": {
     "dir_count": 4,
@@ -7967,7 +7792,6 @@
         ]
       }
     }
-    
   },
   "officer_d": {
     "dir_count": 4,
@@ -8011,7 +7835,6 @@
         ]
       }
     }
-    
   },
   "striped_dress": {
     "dir_count": 4,
@@ -8055,7 +7878,6 @@
         ]
       }
     }
-    
   },
   "blueskirt": {
     "dir_count": 4,
@@ -8099,7 +7921,6 @@
         ]
       }
     }
-    
   },
   "redskirt": {
     "dir_count": 4,
@@ -8143,7 +7964,6 @@
         ]
       }
     }
-    
   },
   "sailor_dress": {
     "dir_count": 4,
@@ -8187,7 +8007,6 @@
         ]
       }
     }
-    
   },
   "plasmaman": {
     "dir_count": 4,
@@ -8231,7 +8050,6 @@
         ]
       }
     }
-    
   },
   "camogreen": {
     "dir_count": 4,
@@ -8275,7 +8093,6 @@
         ]
       }
     }
-    
   },
   "plaid_green": {
     "dir_count": 4,
@@ -8319,7 +8136,6 @@
         ]
       }
     }
-    
   },
   "plaid_green_d": {
     "dir_count": 4,
@@ -8363,7 +8179,6 @@
         ]
       }
     }
-    
   },
   "hos_d": {
     "dir_count": 4,
@@ -8407,7 +8222,6 @@
         ]
       }
     }
-    
   },
   "hos": {
     "dir_count": 4,
@@ -8451,7 +8265,6 @@
         ]
       }
     }
-    
   },
   "warden_d": {
     "dir_count": 4,
@@ -8495,7 +8308,6 @@
         ]
       }
     }
-    
   },
   "warden": {
     "dir_count": 4,
@@ -8539,7 +8351,6 @@
         ]
       }
     }
-    
   },
   "security": {
     "dir_count": 4,
@@ -8583,7 +8394,6 @@
         ]
       }
     }
-    
   },
   "security_d": {
     "dir_count": 4,
@@ -8627,7 +8437,6 @@
         ]
       }
     }
-    
   },
   "burial": {
     "dir_count": 4,
@@ -8671,7 +8480,6 @@
         ]
       }
     }
-    
   },
   "explorer": {
     "dir_count": 4,
@@ -8715,7 +8523,6 @@
         ]
       }
     }
-    
   },
   "blueshift": {
     "dir_count": 4,
@@ -8759,7 +8566,6 @@
         ]
       }
     }
-    
   },
   "trek_command": {
     "dir_count": 4,
@@ -8803,7 +8609,6 @@
         ]
       }
     }
-    
   },
   "trek_engsec": {
     "dir_count": 4,
@@ -8847,7 +8652,6 @@
         ]
       }
     }
-    
   },
   "trek_medsci": {
     "dir_count": 4,
@@ -8891,7 +8695,6 @@
         ]
       }
     }
-    
   },
   "trek_next_engsec": {
     "dir_count": 4,
@@ -8935,7 +8738,6 @@
         ]
       }
     }
-    
   },
   "trek_next_command": {
     "dir_count": 4,
@@ -8979,7 +8781,6 @@
         ]
       }
     }
-    
   },
   "trek_next_medsci": {
     "dir_count": 4,
@@ -9023,7 +8824,6 @@
         ]
       }
     }
-    
   },
   "trek_ent_command": {
     "dir_count": 4,
@@ -9067,7 +8867,6 @@
         ]
       }
     }
-    
   },
   "trek_ent_engsec": {
     "dir_count": 4,
@@ -9111,7 +8910,6 @@
         ]
       }
     }
-    
   },
   "trek_ent_medsci": {
     "dir_count": 4,
@@ -9155,7 +8953,6 @@
         ]
       }
     }
-    
   },
   "trek_Q": {
     "dir_count": 4,
@@ -9199,7 +8996,6 @@
         ]
       }
     }
-    
   },
   "darkholme": {
     "dir_count": 4,
@@ -9243,7 +9039,6 @@
         ]
       }
     }
-    
   },
   "purpleskirt": {
     "dir_count": 4,
@@ -9287,7 +9082,6 @@
         ]
       }
     }
-    
   },
   "geisha": {
     "dir_count": 4,
@@ -9331,7 +9125,6 @@
         ]
       }
     }
-    
   },
   "scratch": {
     "dir_count": 4,
@@ -9375,7 +9168,6 @@
         ]
       }
     }
-    
   },
   "curator": {
     "dir_count": 4,
@@ -9419,7 +9211,6 @@
         ]
       }
     }
-    
   },
   "villain": {
     "dir_count": 4,
@@ -9463,7 +9254,6 @@
         ]
       }
     }
-    
   },
   "ysing": {
     "dir_count": 4,
@@ -9507,7 +9297,6 @@
         ]
       }
     }
-    
   },
   "bsing": {
     "dir_count": 4,
@@ -9551,7 +9340,6 @@
         ]
       }
     }
-    
   },
   "sailor": {
     "dir_count": 4,
@@ -9595,7 +9383,6 @@
         ]
       }
     }
-    
   },
   "white": {
     "dir_count": 4,
@@ -9639,7 +9426,6 @@
         ]
       }
     }
-    
   },
   "white_d": {
     "dir_count": 4,
@@ -9683,7 +9469,6 @@
         ]
       }
     }
-    
   },
   "grey": {
     "dir_count": 4,
@@ -9727,7 +9512,6 @@
         ]
       }
     }
-    
   },
   "grey_d": {
     "dir_count": 4,
@@ -9771,7 +9555,6 @@
         ]
       }
     }
-    
   },
   "black": {
     "dir_count": 4,
@@ -9815,7 +9598,6 @@
         ]
       }
     }
-    
   },
   "black_d": {
     "dir_count": 4,
@@ -9859,7 +9641,6 @@
         ]
       }
     }
-    
   },
   "darkblue": {
     "dir_count": 4,
@@ -9903,7 +9684,6 @@
         ]
       }
     }
-    
   },
   "darkblue_d": {
     "dir_count": 4,
@@ -9947,7 +9727,6 @@
         ]
       }
     }
-    
   },
   "blue": {
     "dir_count": 4,
@@ -9991,7 +9770,6 @@
         ]
       }
     }
-    
   },
   "blue_d": {
     "dir_count": 4,
@@ -10035,7 +9813,6 @@
         ]
       }
     }
-    
   },
   "teal": {
     "dir_count": 4,
@@ -10079,7 +9856,6 @@
         ]
       }
     }
-    
   },
   "teal_d": {
     "dir_count": 4,
@@ -10123,7 +9899,6 @@
         ]
       }
     }
-    
   },
   "green": {
     "dir_count": 4,
@@ -10167,7 +9942,6 @@
         ]
       }
     }
-    
   },
   "green_d": {
     "dir_count": 4,
@@ -10211,7 +9985,6 @@
         ]
       }
     }
-    
   },
   "darkgreen": {
     "dir_count": 4,
@@ -10255,7 +10028,6 @@
         ]
       }
     }
-    
   },
   "darkgreen_d": {
     "dir_count": 4,
@@ -10299,7 +10071,6 @@
         ]
       }
     }
-    
   },
   "yellow": {
     "dir_count": 4,
@@ -10343,7 +10114,6 @@
         ]
       }
     }
-    
   },
   "yellow_d": {
     "dir_count": 4,
@@ -10387,7 +10157,6 @@
         ]
       }
     }
-    
   },
   "orange": {
     "dir_count": 4,
@@ -10431,7 +10200,6 @@
         ]
       }
     }
-    
   },
   "red": {
     "dir_count": 4,
@@ -10475,7 +10243,6 @@
         ]
       }
     }
-    
   },
   "red_d": {
     "dir_count": 4,
@@ -10519,7 +10286,6 @@
         ]
       }
     }
-    
   },
   "maroon": {
     "dir_count": 4,
@@ -10563,7 +10329,6 @@
         ]
       }
     }
-    
   },
   "maroon_d": {
     "dir_count": 4,
@@ -10607,7 +10372,6 @@
         ]
       }
     }
-    
   },
   "pink": {
     "dir_count": 4,
@@ -10651,7 +10415,6 @@
         ]
       }
     }
-    
   },
   "pink_d": {
     "dir_count": 4,
@@ -10695,7 +10458,6 @@
         ]
       }
     }
-    
   },
   "lightpurple": {
     "dir_count": 4,
@@ -10739,7 +10501,6 @@
         ]
       }
     }
-    
   },
   "lightpurple_d": {
     "dir_count": 4,
@@ -10783,7 +10544,6 @@
         ]
       }
     }
-    
   },
   "brown": {
     "dir_count": 4,
@@ -10827,7 +10587,6 @@
         ]
       }
     }
-    
   },
   "brown_d": {
     "dir_count": 4,
@@ -10871,7 +10630,6 @@
         ]
       }
     }
-    
   },
   "lightbrown": {
     "dir_count": 4,
@@ -10915,7 +10673,6 @@
         ]
       }
     }
-    
   },
   "lightbrown_d": {
     "dir_count": 4,
@@ -10959,7 +10716,6 @@
         ]
       }
     }
-    
   },
   "trak_suit": {
     "dir_count": 4,
@@ -11003,7 +10759,6 @@
         ]
       }
     }
-    
   },
   "syndicate_combat": {
     "dir_count": 4,
@@ -11047,7 +10802,6 @@
         ]
       }
     }
-    
   },
   "mummy": {
     "dir_count": 4,
@@ -11091,7 +10845,6 @@
         ]
       }
     }
-    
   },
   "scarecrow": {
     "dir_count": 4,
@@ -11135,7 +10888,6 @@
         ]
       }
     }
-    
   },
   "skeleton": {
     "dir_count": 4,
@@ -11179,7 +10931,6 @@
         ]
       }
     }
-    
   },
   "draculass": {
     "dir_count": 4,
@@ -11223,7 +10974,6 @@
         ]
       }
     }
-    
   },
   "lobster": {
     "dir_count": 4,
@@ -11267,7 +11017,6 @@
         ]
       }
     }
-    
   },
   "drfreeze": {
     "dir_count": 4,

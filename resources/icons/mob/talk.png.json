@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "default1": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "default2": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "alien0": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "alien1": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "alien2": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "alienroyal0": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "alienroyal1": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "alienroyal2": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "machine0": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "machine1": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "machine2": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "robot0": {
     "dir_count": 1,
@@ -218,7 +206,6 @@
         ]
       }
     }
-    
   },
   "robot1": {
     "dir_count": 1,
@@ -235,7 +222,6 @@
         ]
       }
     }
-    
   },
   "robot2": {
     "dir_count": 1,
@@ -252,7 +238,6 @@
         ]
       }
     }
-    
   },
   "syndibot0": {
     "dir_count": 1,
@@ -269,7 +254,6 @@
         ]
       }
     }
-    
   },
   "syndibot1": {
     "dir_count": 1,
@@ -286,7 +270,6 @@
         ]
       }
     }
-    
   },
   "syndibot2": {
     "dir_count": 1,
@@ -303,7 +286,6 @@
         ]
       }
     }
-    
   },
   "holo0": {
     "dir_count": 1,
@@ -320,7 +302,6 @@
         ]
       }
     }
-    
   },
   "holo1": {
     "dir_count": 1,
@@ -337,7 +318,6 @@
         ]
       }
     }
-    
   },
   "holo2": {
     "dir_count": 1,
@@ -354,7 +334,6 @@
         ]
       }
     }
-    
   },
   "guardian0": {
     "dir_count": 1,
@@ -371,7 +350,6 @@
         ]
       }
     }
-    
   },
   "guardian1": {
     "dir_count": 1,
@@ -388,7 +366,6 @@
         ]
       }
     }
-    
   },
   "guardian2": {
     "dir_count": 1,
@@ -405,7 +382,6 @@
         ]
       }
     }
-    
   },
   "blob0": {
     "dir_count": 1,
@@ -422,7 +398,6 @@
         ]
       }
     }
-    
   },
   "blob1": {
     "dir_count": 1,
@@ -439,7 +414,6 @@
         ]
       }
     }
-    
   },
   "blob2": {
     "dir_count": 1,
@@ -456,7 +430,6 @@
         ]
       }
     }
-    
   },
   "swarmer0": {
     "dir_count": 1,
@@ -473,7 +446,6 @@
         ]
       }
     }
-    
   },
   "swarmer1": {
     "dir_count": 1,
@@ -490,7 +462,6 @@
         ]
       }
     }
-    
   },
   "swarmer2": {
     "dir_count": 1,
@@ -507,7 +478,6 @@
         ]
       }
     }
-    
   },
   "slime0": {
     "dir_count": 1,
@@ -524,7 +494,6 @@
         ]
       }
     }
-    
   },
   "slime1": {
     "dir_count": 1,
@@ -541,7 +510,6 @@
         ]
       }
     }
-    
   },
   "slime2": {
     "dir_count": 1,
@@ -558,7 +526,6 @@
         ]
       }
     }
-    
   },
   "clock0": {
     "dir_count": 1,
@@ -575,7 +542,6 @@
         ]
       }
     }
-    
   },
   "clock1": {
     "dir_count": 1,
@@ -592,7 +558,6 @@
         ]
       }
     }
-    
   },
   "clock2": {
     "dir_count": 1,
@@ -609,7 +574,6 @@
         ]
       }
     }
-    
   },
   "lawyer0": {
     "dir_count": 1,
@@ -626,7 +590,6 @@
         ]
       }
     }
-    
   },
   "lawyer1": {
     "dir_count": 1,
@@ -643,7 +606,6 @@
         ]
       }
     }
-    
   },
   "lawyer2": {
     "dir_count": 1,

@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "ghost": {
     "dir_count": 4,
@@ -58,7 +57,6 @@
         ]
       }
     }
-    
   },
   "body_cloaked": {
     "dir_count": 4,
@@ -222,7 +220,6 @@
         ]
       }
     }
-    
   },
   "electrocuted_generic": {
     "dir_count": 4,
@@ -306,7 +303,6 @@
         ]
       }
     }
-    
   },
   "electrocuted_base": {
     "dir_count": 4,
@@ -390,7 +386,6 @@
         ]
       }
     }
-    
   },
   "husk": {
     "dir_count": 4,
@@ -434,7 +429,6 @@
         ]
       }
     }
-    
   },
   "skeleton": {
     "dir_count": 4,
@@ -478,7 +472,6 @@
         ]
       }
     }
-    
   },
   "zombie": {
     "dir_count": 4,

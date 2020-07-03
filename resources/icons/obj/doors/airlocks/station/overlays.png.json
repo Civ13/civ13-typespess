@@ -38,8 +38,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "lights_closing": {
     "dir_count": 1,
@@ -80,8 +79,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "lights_bolts_closed": {
     "dir_count": 1,
@@ -97,8 +95,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "lights_denied": {
     "dir_count": 1,
@@ -139,8 +136,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "sparks": {
     "dir_count": 1,
@@ -181,8 +177,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "lights_emergency_closed": {
     "dir_count": 1,
@@ -203,8 +198,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_closed": {
     "dir_count": 1,
@@ -220,8 +214,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_closed_protected": {
     "dir_count": 1,
@@ -237,8 +230,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_open": {
     "dir_count": 1,
@@ -254,8 +246,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_open_protected": {
     "dir_count": 1,
@@ -271,8 +262,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_opening": {
     "dir_count": 1,
@@ -313,8 +303,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_opening_protected": {
     "dir_count": 1,
@@ -355,8 +344,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_closing": {
     "dir_count": 1,
@@ -397,8 +385,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_closing_protected": {
     "dir_count": 1,
@@ -439,8 +426,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_c1": {
     "dir_count": 1,
@@ -456,8 +442,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_c2": {
     "dir_count": 1,
@@ -473,8 +458,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "panel_c3": {
     "dir_count": 1,
@@ -490,8 +474,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "welded": {
     "dir_count": 1,
@@ -507,8 +490,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "glass_closed": {
     "dir_count": 1,
@@ -524,8 +506,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "glass_open": {
     "dir_count": 1,
@@ -541,8 +522,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "glass_opening": {
     "dir_count": 1,
@@ -583,8 +563,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "glass_closing": {
     "dir_count": 1,
@@ -625,8 +604,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "glass_construction": {
     "dir_count": 1,
@@ -642,8 +620,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "sparks_damaged": {
     "dir_count": 1,
@@ -689,8 +666,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "sparks_open": {
     "dir_count": 1,
@@ -731,8 +707,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "sparks_broken": {
     "dir_count": 1,
@@ -773,8 +748,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "note": {
     "dir_count": 1,
@@ -790,8 +764,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "note_opening": {
     "dir_count": 1,
@@ -832,8 +805,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "note_open": {
     "dir_count": 1,
@@ -849,8 +821,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "note_closing": {
     "dir_count": 1,
@@ -891,8 +862,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "photo": {
     "dir_count": 1,
@@ -908,8 +878,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "photo_opening": {
     "dir_count": 1,
@@ -950,8 +919,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "photo_open": {
     "dir_count": 1,
@@ -967,8 +935,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "photo_closing": {
     "dir_count": 1,
@@ -1009,7 +976,6 @@
           }
         ]
       }
-    },
-    
+    }
   }
 }

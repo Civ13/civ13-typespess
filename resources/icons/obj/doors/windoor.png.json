@@ -61,7 +61,6 @@
         ]
       }
     }
-    
   },
   "l_windoor_assembly01": {
     "dir_count": 4,
@@ -105,7 +104,6 @@
         ]
       }
     }
-    
   },
   "left": {
     "dir_count": 4,
@@ -149,7 +147,6 @@
         ]
       }
     }
-    
   },
   "leftclosing": {
     "dir_count": 4,
@@ -313,7 +310,6 @@
         ]
       }
     }
-    
   },
   "leftopen": {
     "dir_count": 4,
@@ -357,7 +353,6 @@
         ]
       }
     }
-    
   },
   "leftopening": {
     "dir_count": 4,
@@ -521,7 +516,6 @@
         ]
       }
     }
-    
   },
   "leftdeny": {
     "dir_count": 4,
@@ -605,7 +599,6 @@
         ]
       }
     }
-    
   },
   "leftspark": {
     "dir_count": 4,
@@ -749,7 +742,6 @@
         ]
       }
     }
-    
   },
   "r_windoor_assembly02": {
     "dir_count": 4,
@@ -813,7 +805,6 @@
         ]
       }
     }
-    
   },
   "r_windoor_assembly01": {
     "dir_count": 4,
@@ -857,7 +848,6 @@
         ]
       }
     }
-    
   },
   "right": {
     "dir_count": 4,
@@ -901,7 +891,6 @@
         ]
       }
     }
-    
   },
   "rightclosing": {
     "dir_count": 4,
@@ -1065,7 +1054,6 @@
         ]
       }
     }
-    
   },
   "rightopen": {
     "dir_count": 4,
@@ -1109,7 +1097,6 @@
         ]
       }
     }
-    
   },
   "rightopening": {
     "dir_count": 4,
@@ -1273,7 +1260,6 @@
         ]
       }
     }
-    
   },
   "rightdeny": {
     "dir_count": 4,
@@ -1357,7 +1343,6 @@
         ]
       }
     }
-    
   },
   "rightspark": {
     "dir_count": 4,
@@ -1501,7 +1486,6 @@
         ]
       }
     }
-    
   },
   "l_secure_windoor_assembly02": {
     "dir_count": 4,
@@ -1585,7 +1569,6 @@
         ]
       }
     }
-    
   },
   "l_secure_windoor_assembly01": {
     "dir_count": 4,
@@ -1629,7 +1612,6 @@
         ]
       }
     }
-    
   },
   "leftsecure": {
     "dir_count": 4,
@@ -1673,7 +1655,6 @@
         ]
       }
     }
-    
   },
   "leftsecureclosing": {
     "dir_count": 4,
@@ -1837,7 +1818,6 @@
         ]
       }
     }
-    
   },
   "leftsecureopen": {
     "dir_count": 4,
@@ -1881,7 +1861,6 @@
         ]
       }
     }
-    
   },
   "leftsecureopening": {
     "dir_count": 4,
@@ -2045,7 +2024,6 @@
         ]
       }
     }
-    
   },
   "leftsecuredeny": {
     "dir_count": 4,
@@ -2129,7 +2107,6 @@
         ]
       }
     }
-    
   },
   "leftsecurespark": {
     "dir_count": 4,
@@ -2273,7 +2250,6 @@
         ]
       }
     }
-    
   },
   "r_secure_windoor_assembly02": {
     "dir_count": 4,
@@ -2357,7 +2333,6 @@
         ]
       }
     }
-    
   },
   "r_secure_windoor_assembly01": {
     "dir_count": 4,
@@ -2401,7 +2376,6 @@
         ]
       }
     }
-    
   },
   "rightsecure": {
     "dir_count": 4,
@@ -2445,7 +2419,6 @@
         ]
       }
     }
-    
   },
   "rightsecureclosing": {
     "dir_count": 4,
@@ -2609,7 +2582,6 @@
         ]
       }
     }
-    
   },
   "rightsecureopen": {
     "dir_count": 4,
@@ -2653,7 +2625,6 @@
         ]
       }
     }
-    
   },
   "rightsecureopening": {
     "dir_count": 4,
@@ -2817,7 +2788,6 @@
         ]
       }
     }
-    
   },
   "rightsecuredeny": {
     "dir_count": 4,
@@ -2901,7 +2871,6 @@
         ]
       }
     }
-    
   },
   "rightsecurespark": {
     "dir_count": 4,
@@ -3045,7 +3014,6 @@
         ]
       }
     }
-    
   },
   "clockwork": {
     "dir_count": 4,
@@ -3089,7 +3057,6 @@
         ]
       }
     }
-    
   },
   "clockworkopening": {
     "dir_count": 4,
@@ -3273,7 +3240,6 @@
         ]
       }
     }
-    
   },
   "clockworkopen": {
     "dir_count": 4,
@@ -3317,7 +3283,6 @@
         ]
       }
     }
-    
   },
   "clockworkclosing": {
     "dir_count": 4,
@@ -3501,7 +3466,6 @@
         ]
       }
     }
-    
   },
   "clockworkdeny": {
     "dir_count": 4,
@@ -3585,7 +3549,6 @@
         ]
       }
     }
-    
   },
   "clockworkspark": {
     "dir_count": 4,

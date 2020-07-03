@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "boots": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "chef": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "white": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "clown": {
     "dir_count": 4,
@@ -217,7 +213,6 @@
         ]
       }
     }
-    
   },
   "red": {
     "dir_count": 4,
@@ -261,7 +256,6 @@
         ]
       }
     }
-    
   },
   "wizard": {
     "dir_count": 4,
@@ -305,7 +299,6 @@
         ]
       }
     }
-    
   },
   "galoshes": {
     "dir_count": 4,
@@ -349,7 +342,6 @@
         ]
       }
     }
-    
   },
   "jackboots": {
     "dir_count": 4,
@@ -393,7 +385,6 @@
         ]
       }
     }
-    
   },
   "black": {
     "dir_count": 4,
@@ -437,7 +428,6 @@
         ]
       }
     }
-    
   },
   "brown": {
     "dir_count": 4,
@@ -481,7 +471,6 @@
         ]
       }
     }
-    
   },
   "orange": {
     "dir_count": 4,
@@ -525,7 +514,6 @@
         ]
       }
     }
-    
   },
   "orange1": {
     "dir_count": 4,
@@ -569,7 +557,6 @@
         ]
       }
     }
-    
   },
   "tourist": {
     "dir_count": 4,
@@ -613,7 +600,6 @@
         ]
       }
     }
-    
   },
   "cowboy": {
     "dir_count": 4,
@@ -657,7 +643,6 @@
         ]
       }
     }
-    
   },
   "magboots-old0": {
     "dir_count": 4,
@@ -701,7 +686,6 @@
         ]
       }
     }
-    
   },
   "magboots-old1": {
     "dir_count": 4,
@@ -745,7 +729,6 @@
         ]
       }
     }
-    
   },
   "blue": {
     "dir_count": 4,
@@ -789,7 +772,6 @@
         ]
       }
     }
-    
   },
   "green": {
     "dir_count": 4,
@@ -833,7 +815,6 @@
         ]
       }
     }
-    
   },
   "mime": {
     "dir_count": 4,
@@ -877,7 +858,6 @@
         ]
       }
     }
-    
   },
   "purple": {
     "dir_count": 4,
@@ -921,7 +901,6 @@
         ]
       }
     }
-    
   },
   "rain_bow": {
     "dir_count": 4,
@@ -965,7 +944,6 @@
         ]
       }
     }
-    
   },
   "yellow": {
     "dir_count": 4,
@@ -1009,7 +987,6 @@
         ]
       }
     }
-    
   },
   "cultalt": {
     "dir_count": 4,
@@ -1053,7 +1030,6 @@
         ]
       }
     }
-    
   },
   "cult": {
     "dir_count": 4,
@@ -1097,7 +1073,6 @@
         ]
       }
     }
-    
   },
   "laceups": {
     "dir_count": 4,
@@ -1141,7 +1116,6 @@
         ]
       }
     }
-    
   },
   "s-ninja": {
     "dir_count": 4,
@@ -1185,7 +1159,6 @@
         ]
       }
     }
-    
   },
   "roman": {
     "dir_count": 4,
@@ -1229,7 +1202,6 @@
         ]
       }
     }
-    
   },
   "magboots0": {
     "dir_count": 4,
@@ -1273,7 +1245,6 @@
         ]
       }
     }
-    
   },
   "magboots1": {
     "dir_count": 4,
@@ -1317,7 +1288,6 @@
         ]
       }
     }
-    
   },
   "advmag0": {
     "dir_count": 4,
@@ -1361,7 +1331,6 @@
         ]
       }
     }
-    
   },
   "advmag1": {
     "dir_count": 4,
@@ -1405,7 +1374,6 @@
         ]
       }
     }
-    
   },
   "syndiemag0": {
     "dir_count": 4,
@@ -1449,7 +1417,6 @@
         ]
       }
     }
-    
   },
   "syndiemag1": {
     "dir_count": 4,
@@ -1493,7 +1460,6 @@
         ]
       }
     }
-    
   },
   "clown_prototype_off": {
     "dir_count": 4,
@@ -1537,7 +1503,6 @@
         ]
       }
     }
-    
   },
   "clown_prototype_on": {
     "dir_count": 4,
@@ -1581,7 +1546,6 @@
         ]
       }
     }
-    
   },
   "winterboots": {
     "dir_count": 4,
@@ -1625,7 +1589,6 @@
         ]
       }
     }
-    
   },
   "workboots": {
     "dir_count": 4,
@@ -1669,7 +1632,6 @@
         ]
       }
     }
-    
   },
   "griffinboots": {
     "dir_count": 4,
@@ -1713,7 +1675,6 @@
         ]
       }
     }
-    
   },
   "galoshes_dry": {
     "dir_count": 4,
@@ -1757,7 +1718,6 @@
         ]
       }
     }
-    
   },
   "crusader": {
     "dir_count": 4,
@@ -1801,7 +1761,6 @@
         ]
       }
     }
-    
   },
   "crusader-red": {
     "dir_count": 4,
@@ -1845,7 +1804,6 @@
         ]
       }
     }
-    
   },
   "crusader-blue": {
     "dir_count": 4,
@@ -1889,7 +1847,6 @@
         ]
       }
     }
-    
   },
   "explorer": {
     "dir_count": 4,
@@ -1933,7 +1890,6 @@
         ]
       }
     }
-    
   },
   "clockwork_treads": {
     "dir_count": 4,
@@ -1977,7 +1933,6 @@
         ]
       }
     }
-    
   },
   "jetboots": {
     "dir_count": 4,
@@ -2021,7 +1976,6 @@
         ]
       }
     }
-    
   },
   "ysing": {
     "dir_count": 4,
@@ -2065,7 +2019,6 @@
         ]
       }
     }
-    
   },
   "bsing": {
     "dir_count": 4,
@@ -2109,7 +2062,6 @@
         ]
       }
     }
-    
   },
   "bling": {
     "dir_count": 4,
@@ -2153,7 +2105,6 @@
         ]
       }
     }
-    
   },
   "jester_shoes": {
     "dir_count": 4,

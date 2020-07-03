@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "gas_mask": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "medical": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "sterile": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "syndicate": {
     "dir_count": 4,
@@ -257,7 +253,6 @@
         ]
       }
     }
-    
   },
   "swat": {
     "dir_count": 4,
@@ -301,7 +296,6 @@
         ]
       }
     }
-    
   },
   "gas_alt": {
     "dir_count": 4,
@@ -345,7 +339,6 @@
         ]
       }
     }
-    
   },
   "gas_mining": {
     "dir_count": 4,
@@ -389,7 +382,6 @@
         ]
       }
     }
-    
   },
   "gas_mining_up": {
     "dir_count": 4,
@@ -433,7 +425,6 @@
         ]
       }
     }
-    
   },
   "owl": {
     "dir_count": 4,
@@ -477,7 +468,6 @@
         ]
       }
     }
-    
   },
   "clown": {
     "dir_count": 4,
@@ -521,7 +511,6 @@
         ]
       }
     }
-    
   },
   "death": {
     "dir_count": 4,
@@ -565,7 +554,6 @@
         ]
       }
     }
-    
   },
   "breath": {
     "dir_count": 4,
@@ -609,7 +597,6 @@
         ]
       }
     }
-    
   },
   "cigon": {
     "dir_count": 4,
@@ -793,7 +780,6 @@
         ]
       }
     }
-    
   },
   "cigoff": {
     "dir_count": 4,
@@ -837,7 +823,6 @@
         ]
       }
     }
-    
   },
   "cigaron": {
     "dir_count": 4,
@@ -1021,7 +1006,6 @@
         ]
       }
     }
-    
   },
   "cigar2on": {
     "dir_count": 4,
@@ -1205,7 +1189,6 @@
         ]
       }
     }
-    
   },
   "cigaroff": {
     "dir_count": 4,
@@ -1249,7 +1232,6 @@
         ]
       }
     }
-    
   },
   "cigar2off": {
     "dir_count": 4,
@@ -1293,7 +1275,6 @@
         ]
       }
     }
-    
   },
   "facehugger": {
     "dir_count": 4,
@@ -1337,7 +1318,6 @@
         ]
       }
     }
-    
   },
   "facehugger_inactive": {
     "dir_count": 4,
@@ -1381,7 +1361,6 @@
         ]
       }
     }
-    
   },
   "facehugger_dead": {
     "dir_count": 4,
@@ -1425,7 +1404,6 @@
         ]
       }
     }
-    
   },
   "facehugger_corgi": {
     "dir_count": 4,
@@ -1469,7 +1447,6 @@
         ]
       }
     }
-    
   },
   "facehugger_corgipuppy": {
     "dir_count": 4,
@@ -1513,7 +1490,6 @@
         ]
       }
     }
-    
   },
   "plaguedoctor": {
     "dir_count": 4,
@@ -1557,7 +1533,6 @@
         ]
       }
     }
-    
   },
   "mime": {
     "dir_count": 4,
@@ -1601,7 +1576,6 @@
         ]
       }
     }
-    
   },
   "s-ninja": {
     "dir_count": 4,
@@ -1645,7 +1619,6 @@
         ]
       }
     }
-    
   },
   "fake-moustache": {
     "dir_count": 4,
@@ -1689,7 +1662,6 @@
         ]
       }
     }
-    
   },
   "sexyclown": {
     "dir_count": 4,
@@ -1733,7 +1705,6 @@
         ]
       }
     }
-    
   },
   "pig": {
     "dir_count": 4,
@@ -1777,7 +1748,6 @@
         ]
       }
     }
-    
   },
   "horsehead": {
     "dir_count": 4,
@@ -1821,7 +1791,6 @@
         ]
       }
     }
-    
   },
   "monkeymask": {
     "dir_count": 4,
@@ -1865,7 +1834,6 @@
         ]
       }
     }
-    
   },
   "cowmask": {
     "dir_count": 4,
@@ -1909,7 +1877,6 @@
         ]
       }
     }
-    
   },
   "sexymime": {
     "dir_count": 4,
@@ -1953,7 +1920,6 @@
         ]
       }
     }
-    
   },
   "cobpipeon": {
     "dir_count": 4,
@@ -2137,7 +2103,6 @@
         ]
       }
     }
-    
   },
   "cobpipeoff": {
     "dir_count": 4,
@@ -2181,7 +2146,6 @@
         ]
       }
     }
-    
   },
   "balaclava": {
     "dir_count": 4,
@@ -2225,7 +2189,6 @@
         ]
       }
     }
-    
   },
   "luchador": {
     "dir_count": 4,
@@ -2269,7 +2232,6 @@
         ]
       }
     }
-    
   },
   "luchag": {
     "dir_count": 4,
@@ -2313,7 +2275,6 @@
         ]
       }
     }
-    
   },
   "luchar": {
     "dir_count": 4,
@@ -2357,7 +2318,6 @@
         ]
       }
     }
-    
   },
   "cobpipeon2": {
     "dir_count": 1,
@@ -2409,7 +2369,6 @@
         ]
       }
     }
-    
   },
   "weldingmask": {
     "dir_count": 4,
@@ -2453,7 +2412,6 @@
         ]
       }
     }
-    
   },
   "weldingmaskup": {
     "dir_count": 4,
@@ -2497,7 +2455,6 @@
         ]
       }
     }
-    
   },
   "pipeoff": {
     "dir_count": 4,
@@ -2541,7 +2498,6 @@
         ]
       }
     }
-    
   },
   "pipeon": {
     "dir_count": 4,
@@ -2725,7 +2681,6 @@
         ]
       }
     }
-    
   },
   "spliffon": {
     "dir_count": 4,
@@ -2909,7 +2864,6 @@
         ]
       }
     }
-    
   },
   "spliffoff": {
     "dir_count": 4,
@@ -2953,7 +2907,6 @@
         ]
       }
     }
-    
   },
   "joker": {
     "dir_count": 4,
@@ -2997,7 +2950,6 @@
         ]
       }
     }
-    
   },
   "rainbow": {
     "dir_count": 4,
@@ -3041,7 +2993,6 @@
         ]
       }
     }
-    
   },
   "balaclava_up": {
     "dir_count": 4,
@@ -3085,7 +3036,6 @@
         ]
       }
     }
-    
   },
   "breath_up": {
     "dir_count": 4,
@@ -3129,7 +3079,6 @@
         ]
       }
     }
-    
   },
   "medical_up": {
     "dir_count": 4,
@@ -3173,7 +3122,6 @@
         ]
       }
     }
-    
   },
   "sterile_up": {
     "dir_count": 4,
@@ -3217,7 +3165,6 @@
         ]
       }
     }
-    
   },
   "sechailer": {
     "dir_count": 4,
@@ -3261,7 +3208,6 @@
         ]
       }
     }
-    
   },
   "sechailer_up": {
     "dir_count": 4,
@@ -3305,7 +3251,6 @@
         ]
       }
     }
-    
   },
   "bandred_up": {
     "dir_count": 4,
@@ -3349,7 +3294,6 @@
         ]
       }
     }
-    
   },
   "bandred": {
     "dir_count": 4,
@@ -3393,7 +3337,6 @@
         ]
       }
     }
-    
   },
   "bandgold_up": {
     "dir_count": 4,
@@ -3437,7 +3380,6 @@
         ]
       }
     }
-    
   },
   "bandgold": {
     "dir_count": 4,
@@ -3481,7 +3423,6 @@
         ]
       }
     }
-    
   },
   "bandblue_up": {
     "dir_count": 4,
@@ -3525,7 +3466,6 @@
         ]
       }
     }
-    
   },
   "bandblue": {
     "dir_count": 4,
@@ -3569,7 +3509,6 @@
         ]
       }
     }
-    
   },
   "bandgreen_up": {
     "dir_count": 4,
@@ -3613,7 +3552,6 @@
         ]
       }
     }
-    
   },
   "bandgreen": {
     "dir_count": 4,
@@ -3657,7 +3595,6 @@
         ]
       }
     }
-    
   },
   "bandbotany_up": {
     "dir_count": 4,
@@ -3701,7 +3638,6 @@
         ]
       }
     }
-    
   },
   "bandbotany": {
     "dir_count": 4,
@@ -3745,7 +3681,6 @@
         ]
       }
     }
-    
   },
   "bandskull_up": {
     "dir_count": 4,
@@ -3789,7 +3724,6 @@
         ]
       }
     }
-    
   },
   "bandskull": {
     "dir_count": 4,
@@ -3833,7 +3767,6 @@
         ]
       }
     }
-    
   },
   "bandblack_up": {
     "dir_count": 4,
@@ -3877,7 +3810,6 @@
         ]
       }
     }
-    
   },
   "bandblack": {
     "dir_count": 4,
@@ -3921,7 +3853,6 @@
         ]
       }
     }
-    
   },
   "carp_mask": {
     "dir_count": 4,
@@ -3965,7 +3896,6 @@
         ]
       }
     }
-    
   },
   "scaredmime": {
     "dir_count": 4,
@@ -4009,7 +3939,6 @@
         ]
       }
     }
-    
   },
   "sadmime": {
     "dir_count": 4,
@@ -4053,7 +3982,6 @@
         ]
       }
     }
-    
   },
   "black_vape": {
     "dir_count": 4,
@@ -4237,7 +4165,6 @@
         ]
       }
     }
-    
   },
   "blue_vape": {
     "dir_count": 4,
@@ -4421,7 +4348,6 @@
         ]
       }
     }
-    
   },
   "green_vape": {
     "dir_count": 4,
@@ -4605,7 +4531,6 @@
         ]
       }
     }
-    
   },
   "orange_vape": {
     "dir_count": 4,
@@ -4789,7 +4714,6 @@
         ]
       }
     }
-    
   },
   "purple_vape": {
     "dir_count": 4,
@@ -4973,7 +4897,6 @@
         ]
       }
     }
-    
   },
   "red_vape": {
     "dir_count": 4,
@@ -5157,7 +5080,6 @@
         ]
       }
     }
-    
   },
   "white_vape": {
     "dir_count": 4,
@@ -5341,7 +5263,6 @@
         ]
       }
     }
-    
   },
   "yellow_vape": {
     "dir_count": 4,
@@ -5525,7 +5446,6 @@
         ]
       }
     }
-    
   },
   "joy": {
     "dir_count": 4,
@@ -5569,7 +5489,6 @@
         ]
       }
     }
-    
   },
   "rat": {
     "dir_count": 4,
@@ -5613,7 +5532,6 @@
         ]
       }
     }
-    
   },
   "fox": {
     "dir_count": 4,
@@ -5657,7 +5575,6 @@
         ]
       }
     }
-    
   },
   "bee": {
     "dir_count": 4,
@@ -5701,7 +5618,6 @@
         ]
       }
     }
-    
   },
   "bear": {
     "dir_count": 4,
@@ -5745,7 +5661,6 @@
         ]
       }
     }
-    
   },
   "bat": {
     "dir_count": 4,
@@ -5789,7 +5704,6 @@
         ]
       }
     }
-    
   },
   "raven": {
     "dir_count": 4,
@@ -5833,7 +5747,6 @@
         ]
       }
     }
-    
   },
   "jackal": {
     "dir_count": 4,
@@ -5877,7 +5790,6 @@
         ]
       }
     }
-    
   },
   "bumba": {
     "dir_count": 4,
@@ -5921,7 +5833,6 @@
         ]
       }
     }
-    
   },
   "tiki_eyebrow": {
     "dir_count": 4,
@@ -5965,7 +5876,6 @@
         ]
       }
     }
-    
   },
   "tiki_happy": {
     "dir_count": 4,
@@ -6009,7 +5919,6 @@
         ]
       }
     }
-    
   },
   "tiki_confused": {
     "dir_count": 4,
@@ -6053,7 +5962,6 @@
         ]
       }
     }
-    
   },
   "tiki_angry": {
     "dir_count": 4,
@@ -6097,7 +6005,6 @@
         ]
       }
     }
-    
   },
   "glass_pipe": {
     "dir_count": 4,
@@ -6341,7 +6248,6 @@
         ]
       }
     }
-    
   },
   "gskull": {
     "dir_count": 4,
@@ -6385,7 +6291,6 @@
         ]
       }
     }
-    
   },
   "mummy_mask": {
     "dir_count": 4,
@@ -6429,7 +6334,6 @@
         ]
       }
     }
-    
   },
   "scarecrow_sack": {
     "dir_count": 4,

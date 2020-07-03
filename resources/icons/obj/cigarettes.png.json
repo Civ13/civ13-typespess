@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "cig": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "cig_open": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "cig_empty": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "dromedary": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "dromedary_open": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "dromedary_empty": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "uplift": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "uplift_open": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "uplift_empty": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "carp": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "carp_open": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "carp_empty": {
     "dir_count": 1,
@@ -218,7 +206,6 @@
         ]
       }
     }
-    
   },
   "robust": {
     "dir_count": 1,
@@ -235,7 +222,6 @@
         ]
       }
     }
-    
   },
   "robust_open": {
     "dir_count": 1,
@@ -252,7 +238,6 @@
         ]
       }
     }
-    
   },
   "robust_empty": {
     "dir_count": 1,
@@ -269,7 +254,6 @@
         ]
       }
     }
-    
   },
   "syndie": {
     "dir_count": 1,
@@ -286,7 +270,6 @@
         ]
       }
     }
-    
   },
   "syndie_open": {
     "dir_count": 1,
@@ -303,7 +286,6 @@
         ]
       }
     }
-    
   },
   "syndie_empty": {
     "dir_count": 1,
@@ -320,7 +302,6 @@
         ]
       }
     }
-    
   },
   "midori": {
     "dir_count": 1,
@@ -337,7 +318,6 @@
         ]
       }
     }
-    
   },
   "midori_open": {
     "dir_count": 1,
@@ -354,7 +334,6 @@
         ]
       }
     }
-    
   },
   "midori_empty": {
     "dir_count": 1,
@@ -371,7 +350,6 @@
         ]
       }
     }
-    
   },
   "shadyjim": {
     "dir_count": 1,
@@ -388,7 +366,6 @@
         ]
       }
     }
-    
   },
   "shadyjim_open": {
     "dir_count": 1,
@@ -405,7 +382,6 @@
         ]
       }
     }
-    
   },
   "shadyjim_empty": {
     "dir_count": 1,
@@ -422,7 +398,6 @@
         ]
       }
     }
-    
   },
   "robustg": {
     "dir_count": 1,
@@ -439,7 +414,6 @@
         ]
       }
     }
-    
   },
   "robustg_open": {
     "dir_count": 1,
@@ -456,7 +430,6 @@
         ]
       }
     }
-    
   },
   "robustg_empty": {
     "dir_count": 1,
@@ -473,7 +446,6 @@
         ]
       }
     }
-    
   },
   "cigarcase_open": {
     "dir_count": 1,
@@ -490,7 +462,6 @@
         ]
       }
     }
-    
   },
   "cigarcase": {
     "dir_count": 1,
@@ -507,7 +478,6 @@
         ]
       }
     }
-    
   },
   "premium cigar": {
     "dir_count": 1,
@@ -524,7 +494,6 @@
         ]
       }
     }
-    
   },
   "cigar": {
     "dir_count": 1,
@@ -541,7 +510,6 @@
         ]
       }
     }
-    
   },
   "match_lit": {
     "dir_count": 1,
@@ -568,7 +536,6 @@
         ]
       }
     }
-    
   },
   "match_unlit": {
     "dir_count": 1,
@@ -585,7 +552,6 @@
         ]
       }
     }
-    
   },
   "match_burnt": {
     "dir_count": 1,
@@ -602,7 +568,6 @@
         ]
       }
     }
-    
   },
   "matchbox": {
     "dir_count": 1,
@@ -619,7 +584,6 @@
         ]
       }
     }
-    
   },
   "matchbox_almostfull": {
     "dir_count": 1,
@@ -636,7 +600,6 @@
         ]
       }
     }
-    
   },
   "matchbox_e": {
     "dir_count": 1,
@@ -653,7 +616,6 @@
         ]
       }
     }
-    
   },
   "matchbox_almostempty": {
     "dir_count": 1,
@@ -670,7 +632,6 @@
         ]
       }
     }
-    
   },
   "cig_paper": {
     "dir_count": 1,
@@ -687,7 +648,6 @@
         ]
       }
     }
-    
   },
   "cig_paper_pack_empty": {
     "dir_count": 1,
@@ -704,7 +664,6 @@
         ]
       }
     }
-    
   },
   "cig_paper_pack": {
     "dir_count": 1,
@@ -721,7 +680,6 @@
         ]
       }
     }
-    
   },
   "cig_filter": {
     "dir_count": 1,
@@ -738,7 +696,6 @@
         ]
       }
     }
-    
   },
   "lighter_base": {
     "dir_count": 1,
@@ -755,7 +712,6 @@
         ]
       }
     }
-    
   },
   "lighter_on": {
     "dir_count": 1,
@@ -772,7 +728,6 @@
         ]
       }
     }
-    
   },
   "lighter": {
     "dir_count": 1,
@@ -789,7 +744,6 @@
         ]
       }
     }
-    
   },
   "zippo": {
     "dir_count": 1,
@@ -806,7 +760,6 @@
         ]
       }
     }
-    
   },
   "zippo_on": {
     "dir_count": 1,
@@ -838,7 +791,6 @@
         ]
       }
     }
-    
   },
   "lighter_in": {
     "dir_count": 1,
@@ -855,7 +807,6 @@
         ]
       }
     }
-    
   },
   "zippo_in": {
     "dir_count": 1,

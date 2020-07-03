@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "stunbaton": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "stunbaton_active": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "stunbaton_nocell": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "screwdriver": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "screwdriver_head": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "screwdriver_nuke": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "screwdriver_brass": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "cutters_red": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "cutters_yellow": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "cutters_brass": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "crowbar": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "crowbar_large": {
     "dir_count": 1,
@@ -218,7 +206,6 @@
         ]
       }
     }
-    
   },
   "crowbar_red": {
     "dir_count": 1,
@@ -235,7 +222,6 @@
         ]
       }
     }
-    
   },
   "crowbar_brass": {
     "dir_count": 1,
@@ -252,7 +238,6 @@
         ]
       }
     }
-    
   },
   "wrench": {
     "dir_count": 1,
@@ -269,7 +254,6 @@
         ]
       }
     }
-    
   },
   "wrench_medical": {
     "dir_count": 1,
@@ -286,7 +270,6 @@
         ]
       }
     }
-    
   },
   "wrench_brass": {
     "dir_count": 1,
@@ -303,7 +286,6 @@
         ]
       }
     }
-    
   },
   "multitool": {
     "dir_count": 1,
@@ -320,7 +302,6 @@
         ]
       }
     }
-    
   },
   "multitool_yellow": {
     "dir_count": 1,
@@ -337,7 +318,6 @@
         ]
       }
     }
-    
   },
   "multitool_red": {
     "dir_count": 1,
@@ -354,7 +334,6 @@
         ]
       }
     }
-    
   },
   "drill_screw": {
     "dir_count": 1,
@@ -371,7 +350,6 @@
         ]
       }
     }
-    
   },
   "drill_bolt": {
     "dir_count": 1,
@@ -388,7 +366,6 @@
         ]
       }
     }
-    
   },
   "jaws_cutter": {
     "dir_count": 1,
@@ -405,7 +382,6 @@
         ]
       }
     }
-    
   },
   "jaws_pry": {
     "dir_count": 1,

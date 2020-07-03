@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "gun": {
     "dir_count": 4,
@@ -58,7 +57,6 @@
         ]
       }
     }
-    
   },
   "handcuff": {
     "dir_count": 4,
@@ -102,7 +100,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer": {
     "dir_count": 4,
@@ -146,7 +143,6 @@
         ]
       }
     }
-    
   },
   "electronic": {
     "dir_count": 4,
@@ -190,7 +186,6 @@
         ]
       }
     }
-    
   },
   "classic_baton": {
     "dir_count": 1,
@@ -207,7 +202,6 @@
         ]
       }
     }
-    
   },
   "pen": {
     "dir_count": 4,
@@ -251,7 +245,6 @@
         ]
       }
     }
-    
   },
   "gun_1": {
     "dir_count": 4,
@@ -295,7 +288,6 @@
         ]
       }
     }
-    
   },
   "gun_2": {
     "dir_count": 4,
@@ -339,7 +331,6 @@
         ]
       }
     }
-    
   },
   "gun_3": {
     "dir_count": 4,
@@ -383,7 +374,6 @@
         ]
       }
     }
-    
   },
   "handcuff_1": {
     "dir_count": 1,
@@ -400,7 +390,6 @@
         ]
       }
     }
-    
   },
   "handcuff_5": {
     "dir_count": 1,
@@ -417,7 +406,6 @@
         ]
       }
     }
-    
   },
   "handcuff_2": {
     "dir_count": 1,
@@ -434,7 +422,6 @@
         ]
       }
     }
-    
   },
   "handcuff_4": {
     "dir_count": 1,
@@ -451,7 +438,6 @@
         ]
       }
     }
-    
   },
   "handcuff_3": {
     "dir_count": 1,
@@ -468,7 +454,6 @@
         ]
       }
     }
-    
   },
   "electronic_1": {
     "dir_count": 1,
@@ -485,7 +470,6 @@
         ]
       }
     }
-    
   },
   "electronic_5": {
     "dir_count": 1,
@@ -502,7 +486,6 @@
         ]
       }
     }
-    
   },
   "electronic_2": {
     "dir_count": 1,
@@ -519,7 +502,6 @@
         ]
       }
     }
-    
   },
   "electronic_4": {
     "dir_count": 1,
@@ -536,7 +518,6 @@
         ]
       }
     }
-    
   },
   "electronic_3": {
     "dir_count": 1,
@@ -553,7 +534,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_1": {
     "dir_count": 1,
@@ -570,7 +550,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_5": {
     "dir_count": 1,
@@ -587,7 +566,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_2": {
     "dir_count": 1,
@@ -604,7 +582,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_4": {
     "dir_count": 1,
@@ -621,7 +598,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_3": {
     "dir_count": 1,
@@ -638,7 +614,6 @@
         ]
       }
     }
-    
   },
   "pen_1": {
     "dir_count": 1,
@@ -655,7 +630,6 @@
         ]
       }
     }
-    
   },
   "pen_5": {
     "dir_count": 1,
@@ -672,7 +646,6 @@
         ]
       }
     }
-    
   },
   "pen_2": {
     "dir_count": 1,
@@ -689,7 +662,6 @@
         ]
       }
     }
-    
   },
   "pen_4": {
     "dir_count": 1,
@@ -706,7 +678,6 @@
         ]
       }
     }
-    
   },
   "pen_3": {
     "dir_count": 1,
@@ -723,7 +694,6 @@
         ]
       }
     }
-    
   },
   "emergency": {
     "dir_count": 4,
@@ -767,7 +737,6 @@
         ]
       }
     }
-    
   },
   "emergency_engi": {
     "dir_count": 4,
@@ -811,7 +780,6 @@
         ]
       }
     }
-    
   },
   "utility": {
     "dir_count": 4,
@@ -855,7 +823,6 @@
         ]
       }
     }
-    
   },
   "injector": {
     "dir_count": 4,
@@ -899,7 +866,6 @@
         ]
       }
     }
-    
   },
   "suspenders": {
     "dir_count": 4,
@@ -943,7 +909,6 @@
         ]
       }
     }
-    
   },
   "baton": {
     "dir_count": 4,
@@ -987,7 +952,6 @@
         ]
       }
     }
-    
   },
   "dread_ipad": {
     "dir_count": 4,

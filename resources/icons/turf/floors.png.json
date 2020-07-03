@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "noop": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "floor": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "pp_overlay": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "white": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "plating": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "dark": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "bar": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "stage_bottom": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "stage_left": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "stage_bleft": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "stairs-old": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "stairs": {
     "dir_count": 1,
@@ -218,7 +206,6 @@
         ]
       }
     }
-    
   },
   "stairs-l": {
     "dir_count": 1,
@@ -235,7 +222,6 @@
         ]
       }
     }
-    
   },
   "stairs-m": {
     "dir_count": 1,
@@ -252,7 +238,6 @@
         ]
       }
     }
-    
   },
   "stairs-r": {
     "dir_count": 1,
@@ -269,7 +254,6 @@
         ]
       }
     }
-    
   },
   "cafeteria": {
     "dir_count": 1,
@@ -286,7 +270,6 @@
         ]
       }
     }
-    
   },
   "grimy": {
     "dir_count": 1,
@@ -303,7 +286,6 @@
         ]
       }
     }
-    
   },
   "red": {
     "dir_count": 8,
@@ -383,7 +365,6 @@
         ]
       }
     }
-    
   },
   "redcorner": {
     "dir_count": 4,
@@ -427,7 +408,6 @@
         ]
       }
     }
-    
   },
   "redfull": {
     "dir_count": 1,
@@ -444,7 +424,6 @@
         ]
       }
     }
-    
   },
   "whitered": {
     "dir_count": 8,
@@ -524,7 +503,6 @@
         ]
       }
     }
-    
   },
   "whiteredcorner": {
     "dir_count": 4,
@@ -568,7 +546,6 @@
         ]
       }
     }
-    
   },
   "whiteredfull": {
     "dir_count": 1,
@@ -585,7 +562,6 @@
         ]
       }
     }
-    
   },
   "blue": {
     "dir_count": 8,
@@ -665,7 +641,6 @@
         ]
       }
     }
-    
   },
   "bluecorner": {
     "dir_count": 4,
@@ -709,7 +684,6 @@
         ]
       }
     }
-    
   },
   "bluefull": {
     "dir_count": 1,
@@ -726,7 +700,6 @@
         ]
       }
     }
-    
   },
   "whiteblue": {
     "dir_count": 8,
@@ -806,7 +779,6 @@
         ]
       }
     }
-    
   },
   "whitebluecorner": {
     "dir_count": 4,
@@ -850,7 +822,6 @@
         ]
       }
     }
-    
   },
   "whitebluefull": {
     "dir_count": 1,
@@ -867,7 +838,6 @@
         ]
       }
     }
-    
   },
   "green": {
     "dir_count": 8,
@@ -947,7 +917,6 @@
         ]
       }
     }
-    
   },
   "greencorner": {
     "dir_count": 4,
@@ -991,7 +960,6 @@
         ]
       }
     }
-    
   },
   "greenfull": {
     "dir_count": 1,
@@ -1008,7 +976,6 @@
         ]
       }
     }
-    
   },
   "whitegreen": {
     "dir_count": 8,
@@ -1088,7 +1055,6 @@
         ]
       }
     }
-    
   },
   "whitegreencorner": {
     "dir_count": 4,
@@ -1132,7 +1098,6 @@
         ]
       }
     }
-    
   },
   "whitegreenfull": {
     "dir_count": 1,
@@ -1149,7 +1114,6 @@
         ]
       }
     }
-    
   },
   "yellowsiding": {
     "dir_count": 8,
@@ -1229,7 +1193,6 @@
         ]
       }
     }
-    
   },
   "yellowcornersiding": {
     "dir_count": 4,
@@ -1273,7 +1236,6 @@
         ]
       }
     }
-    
   },
   "yellow": {
     "dir_count": 8,
@@ -1353,7 +1315,6 @@
         ]
       }
     }
-    
   },
   "yellowcorner": {
     "dir_count": 4,
@@ -1397,7 +1358,6 @@
         ]
       }
     }
-    
   },
   "yellowfull": {
     "dir_count": 1,
@@ -1414,7 +1374,6 @@
         ]
       }
     }
-    
   },
   "whiteyellow": {
     "dir_count": 8,
@@ -1494,7 +1453,6 @@
         ]
       }
     }
-    
   },
   "whiteyellowcorner": {
     "dir_count": 4,
@@ -1538,7 +1496,6 @@
         ]
       }
     }
-    
   },
   "whiteyellowfull": {
     "dir_count": 1,
@@ -1555,7 +1512,6 @@
         ]
       }
     }
-    
   },
   "black": {
     "dir_count": 8,
@@ -1635,7 +1591,6 @@
         ]
       }
     }
-    
   },
   "chapel": {
     "dir_count": 8,
@@ -1715,7 +1670,6 @@
         ]
       }
     }
-    
   },
   "engine": {
     "dir_count": 1,
@@ -1732,7 +1686,6 @@
         ]
       }
     }
-    
   },
   "bcircuit": {
     "dir_count": 1,
@@ -1749,7 +1702,6 @@
         ]
       }
     }
-    
   },
   "bcircuitoff": {
     "dir_count": 1,
@@ -1766,7 +1718,6 @@
         ]
       }
     }
-    
   },
   "gcircuit": {
     "dir_count": 1,
@@ -1783,7 +1734,6 @@
         ]
       }
     }
-    
   },
   "gcircuitoff": {
     "dir_count": 1,
@@ -1800,7 +1750,6 @@
         ]
       }
     }
-    
   },
   "rcircuit": {
     "dir_count": 1,
@@ -1817,7 +1766,6 @@
         ]
       }
     }
-    
   },
   "rcircuitoff": {
     "dir_count": 1,
@@ -1834,7 +1782,6 @@
         ]
       }
     }
-    
   },
   "rcircuitanim": {
     "dir_count": 4,
@@ -1938,7 +1885,6 @@
         ]
       }
     }
-    
   },
   "gcircuitanim": {
     "dir_count": 1,
@@ -1970,7 +1916,6 @@
         ]
       }
     }
-    
   },
   "neutral": {
     "dir_count": 8,
@@ -2050,7 +1995,6 @@
         ]
       }
     }
-    
   },
   "neutralfull": {
     "dir_count": 1,
@@ -2067,7 +2011,6 @@
         ]
       }
     }
-    
   },
   "neutralcorner": {
     "dir_count": 4,
@@ -2111,7 +2054,6 @@
         ]
       }
     }
-    
   },
   "orange": {
     "dir_count": 8,
@@ -2191,7 +2133,6 @@
         ]
       }
     }
-    
   },
   "orangecorner": {
     "dir_count": 4,
@@ -2235,7 +2176,6 @@
         ]
       }
     }
-    
   },
   "orangefull": {
     "dir_count": 1,
@@ -2252,7 +2192,6 @@
         ]
       }
     }
-    
   },
   "whitehall": {
     "dir_count": 8,
@@ -2332,7 +2271,6 @@
         ]
       }
     }
-    
   },
   "whitecorner": {
     "dir_count": 4,
@@ -2376,7 +2314,6 @@
         ]
       }
     }
-    
   },
   "arrival": {
     "dir_count": 8,
@@ -2456,7 +2393,6 @@
         ]
       }
     }
-    
   },
   "arrivalcorner": {
     "dir_count": 4,
@@ -2500,7 +2436,6 @@
         ]
       }
     }
-    
   },
   "escape": {
     "dir_count": 8,
@@ -2580,7 +2515,6 @@
         ]
       }
     }
-    
   },
   "escapecorner": {
     "dir_count": 4,
@@ -2624,7 +2558,6 @@
         ]
       }
     }
-    
   },
   "pinkblack": {
     "dir_count": 1,
@@ -2641,7 +2574,6 @@
         ]
       }
     }
-    
   },
   "purple": {
     "dir_count": 8,
@@ -2721,7 +2653,6 @@
         ]
       }
     }
-    
   },
   "purplecorner": {
     "dir_count": 4,
@@ -2765,7 +2696,6 @@
         ]
       }
     }
-    
   },
   "purplefull": {
     "dir_count": 1,
@@ -2782,7 +2712,6 @@
         ]
       }
     }
-    
   },
   "whitepurple": {
     "dir_count": 8,
@@ -2862,7 +2791,6 @@
         ]
       }
     }
-    
   },
   "whitepurplecorner": {
     "dir_count": 4,
@@ -2906,7 +2834,6 @@
         ]
       }
     }
-    
   },
   "whitepurplefull": {
     "dir_count": 1,
@@ -2923,7 +2850,6 @@
         ]
       }
     }
-    
   },
   "cmo": {
     "dir_count": 1,
@@ -2940,7 +2866,6 @@
         ]
       }
     }
-    
   },
   "blackcorner": {
     "dir_count": 4,
@@ -2984,7 +2909,6 @@
         ]
       }
     }
-    
   },
   "caution": {
     "dir_count": 8,
@@ -3064,7 +2988,6 @@
         ]
       }
     }
-    
   },
   "cautioncorner": {
     "dir_count": 4,
@@ -3108,7 +3031,6 @@
         ]
       }
     }
-    
   },
   "grass": {
     "dir_count": 1,
@@ -3125,7 +3047,6 @@
         ]
       }
     }
-    
   },
   "floorgrime": {
     "dir_count": 1,
@@ -3142,7 +3063,6 @@
         ]
       }
     }
-    
   },
   "L1": {
     "dir_count": 1,
@@ -3159,7 +3079,6 @@
         ]
       }
     }
-    
   },
   "L2": {
     "dir_count": 1,
@@ -3176,7 +3095,6 @@
         ]
       }
     }
-    
   },
   "L3": {
     "dir_count": 1,
@@ -3193,7 +3111,6 @@
         ]
       }
     }
-    
   },
   "L4": {
     "dir_count": 1,
@@ -3210,7 +3127,6 @@
         ]
       }
     }
-    
   },
   "L5": {
     "dir_count": 1,
@@ -3227,7 +3143,6 @@
         ]
       }
     }
-    
   },
   "L6": {
     "dir_count": 1,
@@ -3244,7 +3159,6 @@
         ]
       }
     }
-    
   },
   "L7": {
     "dir_count": 1,
@@ -3261,7 +3175,6 @@
         ]
       }
     }
-    
   },
   "L8": {
     "dir_count": 1,
@@ -3278,7 +3191,6 @@
         ]
       }
     }
-    
   },
   "L9": {
     "dir_count": 1,
@@ -3295,7 +3207,6 @@
         ]
       }
     }
-    
   },
   "L10": {
     "dir_count": 1,
@@ -3312,7 +3223,6 @@
         ]
       }
     }
-    
   },
   "L11": {
     "dir_count": 1,
@@ -3329,7 +3239,6 @@
         ]
       }
     }
-    
   },
   "L12": {
     "dir_count": 1,
@@ -3346,7 +3255,6 @@
         ]
       }
     }
-    
   },
   "L13": {
     "dir_count": 1,
@@ -3363,7 +3271,6 @@
         ]
       }
     }
-    
   },
   "L14": {
     "dir_count": 1,
@@ -3380,7 +3287,6 @@
         ]
       }
     }
-    
   },
   "solarpanel": {
     "dir_count": 1,
@@ -3397,7 +3303,6 @@
         ]
       }
     }
-    
   },
   "freezerfloor": {
     "dir_count": 1,
@@ -3414,7 +3319,6 @@
         ]
       }
     }
-    
   },
   "damaged1": {
     "dir_count": 1,
@@ -3431,7 +3335,6 @@
         ]
       }
     }
-    
   },
   "damaged3": {
     "dir_count": 1,
@@ -3448,7 +3351,6 @@
         ]
       }
     }
-    
   },
   "damaged2": {
     "dir_count": 1,
@@ -3465,7 +3367,6 @@
         ]
       }
     }
-    
   },
   "panelscorched": {
     "dir_count": 1,
@@ -3482,7 +3383,6 @@
         ]
       }
     }
-    
   },
   "floorscorched1": {
     "dir_count": 1,
@@ -3499,7 +3399,6 @@
         ]
       }
     }
-    
   },
   "floorscorched2": {
     "dir_count": 1,
@@ -3516,7 +3415,6 @@
         ]
       }
     }
-    
   },
   "damaged4": {
     "dir_count": 1,
@@ -3533,7 +3431,6 @@
         ]
       }
     }
-    
   },
   "damaged5": {
     "dir_count": 1,
@@ -3550,7 +3447,6 @@
         ]
       }
     }
-    
   },
   "platingdmg1": {
     "dir_count": 1,
@@ -3567,7 +3463,6 @@
         ]
       }
     }
-    
   },
   "platingdmg2": {
     "dir_count": 1,
@@ -3584,7 +3479,6 @@
         ]
       }
     }
-    
   },
   "platingdmg3": {
     "dir_count": 1,
@@ -3601,7 +3495,6 @@
         ]
       }
     }
-    
   },
   "delivery": {
     "dir_count": 1,
@@ -3618,7 +3511,6 @@
         ]
       }
     }
-    
   },
   "bot": {
     "dir_count": 1,
@@ -3635,7 +3527,6 @@
         ]
       }
     }
-    
   },
   "derelict1": {
     "dir_count": 1,
@@ -3652,7 +3543,6 @@
         ]
       }
     }
-    
   },
   "derelict2": {
     "dir_count": 1,
@@ -3669,7 +3559,6 @@
         ]
       }
     }
-    
   },
   "derelict3": {
     "dir_count": 1,
@@ -3686,7 +3575,6 @@
         ]
       }
     }
-    
   },
   "derelict4": {
     "dir_count": 1,
@@ -3703,7 +3591,6 @@
         ]
       }
     }
-    
   },
   "derelict5": {
     "dir_count": 1,
@@ -3720,7 +3607,6 @@
         ]
       }
     }
-    
   },
   "derelict6": {
     "dir_count": 1,
@@ -3737,7 +3623,6 @@
         ]
       }
     }
-    
   },
   "derelict7": {
     "dir_count": 1,
@@ -3754,7 +3639,6 @@
         ]
       }
     }
-    
   },
   "derelict8": {
     "dir_count": 1,
@@ -3771,7 +3655,6 @@
         ]
       }
     }
-    
   },
   "derelict9": {
     "dir_count": 1,
@@ -3788,7 +3671,6 @@
         ]
       }
     }
-    
   },
   "derelict10": {
     "dir_count": 1,
@@ -3805,7 +3687,6 @@
         ]
       }
     }
-    
   },
   "derelict11": {
     "dir_count": 1,
@@ -3822,7 +3703,6 @@
         ]
       }
     }
-    
   },
   "derelict12": {
     "dir_count": 1,
@@ -3839,7 +3719,6 @@
         ]
       }
     }
-    
   },
   "derelict13": {
     "dir_count": 1,
@@ -3856,7 +3735,6 @@
         ]
       }
     }
-    
   },
   "derelict14": {
     "dir_count": 1,
@@ -3873,7 +3751,6 @@
         ]
       }
     }
-    
   },
   "derelict15": {
     "dir_count": 1,
@@ -3890,7 +3767,6 @@
         ]
       }
     }
-    
   },
   "derelict16": {
     "dir_count": 1,
@@ -3907,7 +3783,6 @@
         ]
       }
     }
-    
   },
   "asteroid": {
     "dir_count": 1,
@@ -3924,7 +3799,6 @@
         ]
       }
     }
-    
   },
   "asteroid_dug": {
     "dir_count": 1,
@@ -3941,7 +3815,6 @@
         ]
       }
     }
-    
   },
   "hydrofloor": {
     "dir_count": 1,
@@ -3958,7 +3831,6 @@
         ]
       }
     }
-    
   },
   "brownold": {
     "dir_count": 8,
@@ -4038,7 +3910,6 @@
         ]
       }
     }
-    
   },
   "browncornerold": {
     "dir_count": 4,
@@ -4082,7 +3953,6 @@
         ]
       }
     }
-    
   },
   "brown": {
     "dir_count": 8,
@@ -4162,7 +4032,6 @@
         ]
       }
     }
-    
   },
   "browncorner": {
     "dir_count": 4,
@@ -4206,7 +4075,6 @@
         ]
       }
     }
-    
   },
   "redyellow": {
     "dir_count": 8,
@@ -4286,7 +4154,6 @@
         ]
       }
     }
-    
   },
   "redyellowfull": {
     "dir_count": 1,
@@ -4303,7 +4170,6 @@
         ]
       }
     }
-    
   },
   "redblue": {
     "dir_count": 8,
@@ -4383,7 +4249,6 @@
         ]
       }
     }
-    
   },
   "bluered": {
     "dir_count": 8,
@@ -4463,7 +4328,6 @@
         ]
       }
     }
-    
   },
   "redbluefull": {
     "dir_count": 1,
@@ -4480,7 +4344,6 @@
         ]
       }
     }
-    
   },
   "redgreen": {
     "dir_count": 8,
@@ -4560,7 +4423,6 @@
         ]
       }
     }
-    
   },
   "redgreenfull": {
     "dir_count": 1,
@@ -4577,7 +4439,6 @@
         ]
       }
     }
-    
   },
   "greenyellow": {
     "dir_count": 8,
@@ -4657,7 +4518,6 @@
         ]
       }
     }
-    
   },
   "greenyellowfull": {
     "dir_count": 1,
@@ -4674,7 +4534,6 @@
         ]
       }
     }
-    
   },
   "greenblue": {
     "dir_count": 8,
@@ -4754,7 +4613,6 @@
         ]
       }
     }
-    
   },
   "greenbluefull": {
     "dir_count": 1,
@@ -4771,7 +4629,6 @@
         ]
       }
     }
-    
   },
   "blueyellow": {
     "dir_count": 8,
@@ -4851,7 +4708,6 @@
         ]
       }
     }
-    
   },
   "blueyellowfull": {
     "dir_count": 1,
@@ -4868,7 +4724,6 @@
         ]
       }
     }
-    
   },
   "showroomfloor": {
     "dir_count": 1,
@@ -4885,7 +4740,6 @@
         ]
       }
     }
-    
   },
   "podhatch": {
     "dir_count": 8,
@@ -4965,7 +4819,6 @@
         ]
       }
     }
-    
   },
   "podhatchcorner": {
     "dir_count": 4,
@@ -5009,7 +4862,6 @@
         ]
       }
     }
-    
   },
   "elevatorshaft": {
     "dir_count": 1,
@@ -5026,7 +4878,6 @@
         ]
       }
     }
-    
   },
   "vault": {
     "dir_count": 8,
@@ -5106,7 +4957,6 @@
         ]
       }
     }
-    
   },
   "loadingarea": {
     "dir_count": 4,
@@ -5150,7 +5000,6 @@
         ]
       }
     }
-    
   },
   "loadingareadirty1": {
     "dir_count": 4,
@@ -5194,7 +5043,6 @@
         ]
       }
     }
-    
   },
   "loadingareadirty2": {
     "dir_count": 4,
@@ -5238,7 +5086,6 @@
         ]
       }
     }
-    
   },
   "light_on_flicker1": {
     "dir_count": 1,
@@ -5330,7 +5177,6 @@
         ]
       }
     }
-    
   },
   "light_on_flicker2": {
     "dir_count": 1,
@@ -5422,7 +5268,6 @@
         ]
       }
     }
-    
   },
   "light_on_flicker3": {
     "dir_count": 1,
@@ -5514,7 +5359,6 @@
         ]
       }
     }
-    
   },
   "light_on_flicker4": {
     "dir_count": 1,
@@ -5606,7 +5450,6 @@
         ]
       }
     }
-    
   },
   "light_on_broken": {
     "dir_count": 1,
@@ -5698,7 +5541,6 @@
         ]
       }
     }
-    
   },
   "light_on": {
     "dir_count": 1,
@@ -5720,7 +5562,6 @@
         ]
       }
     }
-    
   },
   "light_off": {
     "dir_count": 1,
@@ -5737,7 +5578,6 @@
         ]
       }
     }
-    
   },
   "light_broken": {
     "dir_count": 1,
@@ -5754,7 +5594,6 @@
         ]
       }
     }
-    
   },
   "rockvault": {
     "dir_count": 1,
@@ -5771,7 +5610,6 @@
         ]
       }
     }
-    
   },
   "sandstonevault": {
     "dir_count": 1,
@@ -5788,7 +5626,6 @@
         ]
       }
     }
-    
   },
   "alienvault": {
     "dir_count": 1,
@@ -5805,7 +5642,6 @@
         ]
       }
     }
-    
   },
   "light_on-r": {
     "dir_count": 1,
@@ -5827,7 +5663,6 @@
         ]
       }
     }
-    
   },
   "light_on-g": {
     "dir_count": 1,
@@ -5849,7 +5684,6 @@
         ]
       }
     }
-    
   },
   "light_on-y": {
     "dir_count": 1,
@@ -5871,7 +5705,6 @@
         ]
       }
     }
-    
   },
   "light_on-b": {
     "dir_count": 1,
@@ -5893,7 +5726,6 @@
         ]
       }
     }
-    
   },
   "light_on-p": {
     "dir_count": 1,
@@ -5915,7 +5747,6 @@
         ]
       }
     }
-    
   },
   "light_on-w": {
     "dir_count": 1,
@@ -5937,7 +5768,6 @@
         ]
       }
     }
-    
   },
   "light_on-cycle_all": {
     "dir_count": 1,
@@ -6009,7 +5839,6 @@
         ]
       }
     }
-    
   },
   "light_on-dancefloor_A": {
     "dir_count": 1,
@@ -6141,7 +5970,6 @@
         ]
       }
     }
-    
   },
   "light_on-dancefloor_B": {
     "dir_count": 1,
@@ -6273,7 +6101,6 @@
         ]
       }
     }
-    
   },
   "wall_thermite": {
     "dir_count": 1,
@@ -6290,7 +6117,6 @@
         ]
       }
     }
-    
   },
   "asteroidplating": {
     "dir_count": 1,
@@ -6307,7 +6133,6 @@
         ]
       }
     }
-    
   },
   "asteroidfloor": {
     "dir_count": 1,
@@ -6324,7 +6149,6 @@
         ]
       }
     }
-    
   },
   "asteroidwarning": {
     "dir_count": 8,
@@ -6404,7 +6228,6 @@
         ]
       }
     }
-    
   },
   "barber": {
     "dir_count": 1,
@@ -6421,7 +6244,6 @@
         ]
       }
     }
-    
   },
   "cult": {
     "dir_count": 1,
@@ -6438,7 +6260,6 @@
         ]
       }
     }
-    
   },
   "cultdamage": {
     "dir_count": 1,
@@ -6455,7 +6276,6 @@
         ]
       }
     }
-    
   },
   "cultdamage2": {
     "dir_count": 1,
@@ -6472,7 +6292,6 @@
         ]
       }
     }
-    
   },
   "cultdamage3": {
     "dir_count": 1,
@@ -6489,7 +6308,6 @@
         ]
       }
     }
-    
   },
   "cultdamage4": {
     "dir_count": 1,
@@ -6506,7 +6324,6 @@
         ]
       }
     }
-    
   },
   "cultdamage5": {
     "dir_count": 1,
@@ -6523,7 +6340,6 @@
         ]
       }
     }
-    
   },
   "cultdamage6": {
     "dir_count": 1,
@@ -6540,7 +6356,6 @@
         ]
       }
     }
-    
   },
   "cultdamage7": {
     "dir_count": 1,
@@ -6557,7 +6372,6 @@
         ]
       }
     }
-    
   },
   "whitebot": {
     "dir_count": 1,
@@ -6574,7 +6388,6 @@
         ]
       }
     }
-    
   },
   "whitedelivery": {
     "dir_count": 1,
@@ -6591,7 +6404,6 @@
         ]
       }
     }
-    
   },
   "plaque": {
     "dir_count": 1,
@@ -6608,7 +6420,6 @@
         ]
       }
     }
-    
   },
   "wood": {
     "dir_count": 1,
@@ -6625,7 +6436,6 @@
         ]
       }
     }
-    
   },
   "wood-broken": {
     "dir_count": 1,
@@ -6642,7 +6452,6 @@
         ]
       }
     }
-    
   },
   "wood-broken2": {
     "dir_count": 1,
@@ -6659,7 +6468,6 @@
         ]
       }
     }
-    
   },
   "wood-broken3": {
     "dir_count": 1,
@@ -6676,7 +6484,6 @@
         ]
       }
     }
-    
   },
   "wood-broken4": {
     "dir_count": 1,
@@ -6693,7 +6500,6 @@
         ]
       }
     }
-    
   },
   "wood-broken5": {
     "dir_count": 1,
@@ -6710,7 +6516,6 @@
         ]
       }
     }
-    
   },
   "wood-broken6": {
     "dir_count": 1,
@@ -6727,7 +6532,6 @@
         ]
       }
     }
-    
   },
   "wood-broken7": {
     "dir_count": 1,
@@ -6744,7 +6548,6 @@
         ]
       }
     }
-    
   },
   "ironsand1": {
     "dir_count": 1,
@@ -6761,7 +6564,6 @@
         ]
       }
     }
-    
   },
   "ironsand2": {
     "dir_count": 1,
@@ -6778,7 +6580,6 @@
         ]
       }
     }
-    
   },
   "ironsand3": {
     "dir_count": 1,
@@ -6795,7 +6596,6 @@
         ]
       }
     }
-    
   },
   "ironsand4": {
     "dir_count": 1,
@@ -6812,7 +6612,6 @@
         ]
       }
     }
-    
   },
   "ironsand5": {
     "dir_count": 1,
@@ -6829,7 +6628,6 @@
         ]
       }
     }
-    
   },
   "ironsand6": {
     "dir_count": 1,
@@ -6846,7 +6644,6 @@
         ]
       }
     }
-    
   },
   "ironsand7": {
     "dir_count": 1,
@@ -6863,7 +6660,6 @@
         ]
       }
     }
-    
   },
   "ironsand8": {
     "dir_count": 1,
@@ -6880,7 +6676,6 @@
         ]
       }
     }
-    
   },
   "ironsand9": {
     "dir_count": 1,
@@ -6897,7 +6692,6 @@
         ]
       }
     }
-    
   },
   "ironsand10": {
     "dir_count": 1,
@@ -6914,7 +6708,6 @@
         ]
       }
     }
-    
   },
   "ironsand11": {
     "dir_count": 1,
@@ -6931,7 +6724,6 @@
         ]
       }
     }
-    
   },
   "ironsand12": {
     "dir_count": 1,
@@ -6948,7 +6740,6 @@
         ]
       }
     }
-    
   },
   "ironsand13": {
     "dir_count": 1,
@@ -6965,7 +6756,6 @@
         ]
       }
     }
-    
   },
   "ironsand14": {
     "dir_count": 1,
@@ -6982,7 +6772,6 @@
         ]
       }
     }
-    
   },
   "ironsand15": {
     "dir_count": 1,
@@ -6999,7 +6788,6 @@
         ]
       }
     }
-    
   },
   "recharge_floor": {
     "dir_count": 1,
@@ -7021,7 +6809,6 @@
         ]
       }
     }
-    
   },
   "recharge_floor_asteroid": {
     "dir_count": 1,
@@ -7043,7 +6830,6 @@
         ]
       }
     }
-    
   },
   "bananium": {
     "dir_count": 1,
@@ -7060,7 +6846,6 @@
         ]
       }
     }
-    
   },
   "bananium_dam": {
     "dir_count": 1,
@@ -7077,7 +6862,6 @@
         ]
       }
     }
-    
   },
   "darkpurple": {
     "dir_count": 8,
@@ -7157,7 +6941,6 @@
         ]
       }
     }
-    
   },
   "darkpurplecorners": {
     "dir_count": 4,
@@ -7201,7 +6984,6 @@
         ]
       }
     }
-    
   },
   "darkpurplefull": {
     "dir_count": 1,
@@ -7218,7 +7000,6 @@
         ]
       }
     }
-    
   },
   "darkred": {
     "dir_count": 8,
@@ -7298,7 +7079,6 @@
         ]
       }
     }
-    
   },
   "darkredcorners": {
     "dir_count": 4,
@@ -7342,7 +7122,6 @@
         ]
       }
     }
-    
   },
   "darkredfull": {
     "dir_count": 1,
@@ -7359,7 +7138,6 @@
         ]
       }
     }
-    
   },
   "darkblue": {
     "dir_count": 8,
@@ -7439,7 +7217,6 @@
         ]
       }
     }
-    
   },
   "darkbluecorners": {
     "dir_count": 4,
@@ -7483,7 +7260,6 @@
         ]
       }
     }
-    
   },
   "darkbluefull": {
     "dir_count": 1,
@@ -7500,7 +7276,6 @@
         ]
       }
     }
-    
   },
   "darkgreen": {
     "dir_count": 8,
@@ -7580,7 +7355,6 @@
         ]
       }
     }
-    
   },
   "darkgreencorners": {
     "dir_count": 4,
@@ -7624,7 +7398,6 @@
         ]
       }
     }
-    
   },
   "darkgreenfull": {
     "dir_count": 1,
@@ -7641,7 +7414,6 @@
         ]
       }
     }
-    
   },
   "darkyellow": {
     "dir_count": 8,
@@ -7721,7 +7493,6 @@
         ]
       }
     }
-    
   },
   "darkyellowcorners": {
     "dir_count": 4,
@@ -7765,7 +7536,6 @@
         ]
       }
     }
-    
   },
   "darkyellowfull": {
     "dir_count": 1,
@@ -7782,7 +7552,6 @@
         ]
       }
     }
-    
   },
   "darkbrown": {
     "dir_count": 8,
@@ -7862,7 +7631,6 @@
         ]
       }
     }
-    
   },
   "darkbrowncorners": {
     "dir_count": 4,
@@ -7906,7 +7674,6 @@
         ]
       }
     }
-    
   },
   "darkbrownfull": {
     "dir_count": 1,
@@ -7923,7 +7690,6 @@
         ]
       }
     }
-    
   },
   "noslip-damaged1": {
     "dir_count": 1,
@@ -7940,7 +7706,6 @@
         ]
       }
     }
-    
   },
   "noslip-damaged2": {
     "dir_count": 1,
@@ -7957,7 +7722,6 @@
         ]
       }
     }
-    
   },
   "noslip-damaged3": {
     "dir_count": 1,
@@ -7974,7 +7738,6 @@
         ]
       }
     }
-    
   },
   "noslip-scorched1": {
     "dir_count": 1,
@@ -7991,7 +7754,6 @@
         ]
       }
     }
-    
   },
   "noslip-scorched2": {
     "dir_count": 1,
@@ -8008,7 +7770,6 @@
         ]
       }
     }
-    
   },
   "noslip": {
     "dir_count": 1,
@@ -8025,7 +7786,6 @@
         ]
       }
     }
-    
   },
   "light_on-o": {
     "dir_count": 1,
@@ -8047,7 +7807,6 @@
         ]
       }
     }
-    
   },
   "light_on-s": {
     "dir_count": 1,
@@ -8129,7 +7888,6 @@
         ]
       }
     }
-    
   },
   "sand": {
     "dir_count": 1,
@@ -8146,7 +7904,6 @@
         ]
       }
     }
-    
   },
   "alienplating": {
     "dir_count": 1,
@@ -8163,7 +7920,6 @@
         ]
       }
     }
-    
   },
   "alienpod1": {
     "dir_count": 1,
@@ -8205,7 +7961,6 @@
         ]
       }
     }
-    
   },
   "alienpod2": {
     "dir_count": 1,
@@ -8247,7 +8002,6 @@
         ]
       }
     }
-    
   },
   "alienpod3": {
     "dir_count": 1,
@@ -8289,7 +8043,6 @@
         ]
       }
     }
-    
   },
   "alienpod4": {
     "dir_count": 1,
@@ -8331,7 +8084,6 @@
         ]
       }
     }
-    
   },
   "alienpod5": {
     "dir_count": 1,
@@ -8373,7 +8125,6 @@
         ]
       }
     }
-    
   },
   "alienpod6": {
     "dir_count": 1,
@@ -8415,7 +8166,6 @@
         ]
       }
     }
-    
   },
   "alienpod7": {
     "dir_count": 1,
@@ -8457,7 +8207,6 @@
         ]
       }
     }
-    
   },
   "alienpod8": {
     "dir_count": 1,
@@ -8499,7 +8248,6 @@
         ]
       }
     }
-    
   },
   "alienpod9": {
     "dir_count": 1,
@@ -8541,7 +8289,6 @@
         ]
       }
     }
-    
   },
   "bluespace": {
     "dir_count": 1,
@@ -8583,7 +8330,6 @@
         ]
       }
     }
-    
   },
   "sepia": {
     "dir_count": 1,
@@ -8600,7 +8346,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor": {
     "dir_count": 1,
@@ -8617,7 +8362,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor2": {
     "dir_count": 1,
@@ -8634,7 +8378,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor3": {
     "dir_count": 1,
@@ -8651,7 +8394,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor4": {
     "dir_count": 1,
@@ -8668,7 +8410,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor5": {
     "dir_count": 1,
@@ -8685,7 +8426,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor_dam": {
     "dir_count": 1,
@@ -8702,7 +8442,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor2_dam": {
     "dir_count": 1,
@@ -8719,7 +8458,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor3_dam": {
     "dir_count": 1,
@@ -8736,7 +8474,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor4_dam": {
     "dir_count": 1,
@@ -8753,7 +8490,6 @@
         ]
       }
     }
-    
   },
   "shuttlefloor5_dam": {
     "dir_count": 1,
@@ -8770,7 +8506,6 @@
         ]
       }
     }
-    
   },
   "basalt0": {
     "dir_count": 1,
@@ -8787,7 +8522,6 @@
         ]
       }
     }
-    
   },
   "basalt1": {
     "dir_count": 1,
@@ -8819,7 +8553,6 @@
         ]
       }
     }
-    
   },
   "basalt2": {
     "dir_count": 1,
@@ -8851,7 +8584,6 @@
         ]
       }
     }
-    
   },
   "basalt3": {
     "dir_count": 1,
@@ -8883,7 +8615,6 @@
         ]
       }
     }
-    
   },
   "basalt4": {
     "dir_count": 1,
@@ -8900,7 +8631,6 @@
         ]
       }
     }
-    
   },
   "basalt5": {
     "dir_count": 1,
@@ -8932,7 +8662,6 @@
         ]
       }
     }
-    
   },
   "basalt6": {
     "dir_count": 1,
@@ -8949,7 +8678,6 @@
         ]
       }
     }
-    
   },
   "basalt7": {
     "dir_count": 1,
@@ -8966,7 +8694,6 @@
         ]
       }
     }
-    
   },
   "basalt8": {
     "dir_count": 1,
@@ -8983,7 +8710,6 @@
         ]
       }
     }
-    
   },
   "basalt9": {
     "dir_count": 1,
@@ -9015,7 +8741,6 @@
         ]
       }
     }
-    
   },
   "basalt10": {
     "dir_count": 1,
@@ -9032,7 +8757,6 @@
         ]
       }
     }
-    
   },
   "basalt11": {
     "dir_count": 1,
@@ -9049,7 +8773,6 @@
         ]
       }
     }
-    
   },
   "basalt12": {
     "dir_count": 1,
@@ -9066,7 +8789,6 @@
         ]
       }
     }
-    
   },
   "lava": {
     "dir_count": 1,
@@ -9118,7 +8840,6 @@
         ]
       }
     }
-    
   },
   "asteroid0": {
     "dir_count": 1,
@@ -9135,7 +8856,6 @@
         ]
       }
     }
-    
   },
   "asteroid1": {
     "dir_count": 1,
@@ -9152,7 +8872,6 @@
         ]
       }
     }
-    
   },
   "asteroid2": {
     "dir_count": 1,
@@ -9169,7 +8888,6 @@
         ]
       }
     }
-    
   },
   "asteroid3": {
     "dir_count": 1,
@@ -9186,7 +8904,6 @@
         ]
       }
     }
-    
   },
   "asteroid4": {
     "dir_count": 1,
@@ -9203,7 +8920,6 @@
         ]
       }
     }
-    
   },
   "asteroid5": {
     "dir_count": 1,
@@ -9220,7 +8936,6 @@
         ]
       }
     }
-    
   },
   "asteroid6": {
     "dir_count": 1,
@@ -9237,7 +8952,6 @@
         ]
       }
     }
-    
   },
   "asteroid7": {
     "dir_count": 1,
@@ -9254,7 +8968,6 @@
         ]
       }
     }
-    
   },
   "asteroid8": {
     "dir_count": 1,
@@ -9271,7 +8984,6 @@
         ]
       }
     }
-    
   },
   "asteroid9": {
     "dir_count": 1,
@@ -9288,7 +9000,6 @@
         ]
       }
     }
-    
   },
   "asteroid10": {
     "dir_count": 1,
@@ -9305,7 +9016,6 @@
         ]
       }
     }
-    
   },
   "asteroid11": {
     "dir_count": 1,
@@ -9322,7 +9032,6 @@
         ]
       }
     }
-    
   },
   "asteroid12": {
     "dir_count": 1,
@@ -9339,7 +9048,6 @@
         ]
       }
     }
-    
   },
   "basalt_dug": {
     "dir_count": 1,
@@ -9356,7 +9064,6 @@
         ]
       }
     }
-    
   },
   "basalt": {
     "dir_count": 1,
@@ -9373,7 +9080,6 @@
         ]
       }
     }
-    
   },
   "bus": {
     "dir_count": 1,
@@ -9390,7 +9096,6 @@
         ]
       }
     }
-    
   },
   "podfloor": {
     "dir_count": 1,
@@ -9407,7 +9112,6 @@
         ]
       }
     }
-    
   },
   "podfloor_dark": {
     "dir_count": 1,
@@ -9424,7 +9128,6 @@
         ]
       }
     }
-    
   },
   "podfloor_light": {
     "dir_count": 1,
@@ -9441,7 +9144,6 @@
         ]
       }
     }
-    
   },
   "clockwork_floor": {
     "dir_count": 1,
@@ -9458,7 +9160,6 @@
         ]
       }
     }
-    
   },
   "necro1": {
     "dir_count": 1,
@@ -9475,7 +9176,6 @@
         ]
       }
     }
-    
   },
   "necro2": {
     "dir_count": 1,
@@ -9507,7 +9207,6 @@
         ]
       }
     }
-    
   },
   "necro3": {
     "dir_count": 1,
@@ -9549,7 +9248,6 @@
         ]
       }
     }
-    
   },
   "paperfloor": {
     "dir_count": 1,
@@ -9566,7 +9264,6 @@
         ]
       }
     }
-    
   },
   "hierophant1": {
     "dir_count": 1,
@@ -9583,7 +9280,6 @@
         ]
       }
     }
-    
   },
   "hierophant2": {
     "dir_count": 1,
@@ -9600,7 +9296,6 @@
         ]
       }
     }
-    
   },
   "gold": {
     "dir_count": 4,
@@ -9644,7 +9339,6 @@
         ]
       }
     }
-    
   },
   "gold_dam": {
     "dir_count": 1,
@@ -9661,7 +9355,6 @@
         ]
       }
     }
-    
   },
   "honk": {
     "dir_count": 1,
@@ -9678,7 +9371,6 @@
         ]
       }
     }
-    
   },
   "diamond": {
     "dir_count": 1,
@@ -9695,7 +9387,6 @@
         ]
       }
     }
-    
   },
   "diamond_dam": {
     "dir_count": 1,
@@ -9712,7 +9403,6 @@
         ]
       }
     }
-    
   },
   "plasma": {
     "dir_count": 1,
@@ -9729,7 +9419,6 @@
         ]
       }
     }
-    
   },
   "plasma_dam": {
     "dir_count": 1,
@@ -9746,7 +9435,6 @@
         ]
       }
     }
-    
   },
   "uranium": {
     "dir_count": 1,
@@ -9763,7 +9451,6 @@
         ]
       }
     }
-    
   },
   "uranium_dam": {
     "dir_count": 1,
@@ -9780,7 +9467,6 @@
         ]
       }
     }
-    
   },
   "silver": {
     "dir_count": 1,
@@ -9797,7 +9483,6 @@
         ]
       }
     }
-    
   },
   "silver_dam": {
     "dir_count": 1,
@@ -9814,7 +9499,6 @@
         ]
       }
     }
-    
   },
   "dirt_ploughed": {
     "dir_count": 1,
@@ -9831,7 +9515,6 @@
         ]
       }
     }
-    
   },
   "darksand": {
     "dir_count": 1,
@@ -9848,7 +9531,6 @@
         ]
       }
     }
-    
   },
   "riverwater": {
     "dir_count": 1,
@@ -9865,7 +9547,6 @@
         ]
       }
     }
-    
   },
   "dirt": {
     "dir_count": 1,
@@ -9882,7 +9563,6 @@
         ]
       }
     }
-    
   },
   "dark_dirt": {
     "dir_count": 1,
@@ -9899,7 +9579,6 @@
         ]
       }
     }
-    
   },
   "foam_plating": {
     "dir_count": 1,
@@ -9916,7 +9595,6 @@
         ]
       }
     }
-    
   },
   "reebe": {
     "dir_count": 1,
@@ -9933,7 +9611,6 @@
         ]
       }
     }
-    
   },
   "reebemap": {
     "dir_count": 1,
@@ -9950,7 +9627,6 @@
         ]
       }
     }
-    
   },
   "reebespawn": {
     "dir_count": 1,
@@ -9967,7 +9643,6 @@
         ]
       }
     }
-    
   },
   "reebelattice": {
     "dir_count": 1,
@@ -9984,7 +9659,6 @@
         ]
       }
     }
-    
   },
   "reebegame": {
     "dir_count": 1,

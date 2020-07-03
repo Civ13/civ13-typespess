@@ -40,8 +40,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "swordblue": {
     "dir_count": 4,
@@ -104,8 +103,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "swordred": {
     "dir_count": 4,
@@ -168,8 +166,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "swordgreen": {
     "dir_count": 4,
@@ -232,8 +229,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "swordpurple": {
     "dir_count": 4,
@@ -296,8 +292,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "swordrainbow": {
     "dir_count": 4,
@@ -560,8 +555,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "blade": {
     "dir_count": 4,
@@ -664,8 +658,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "cutlass0": {
     "dir_count": 4,
@@ -708,8 +701,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "cutlass1": {
     "dir_count": 4,
@@ -772,8 +764,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "swordchain": {
     "dir_count": 4,
@@ -816,8 +807,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "cultblade": {
     "dir_count": 4,
@@ -880,8 +870,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "sord": {
     "dir_count": 4,
@@ -924,8 +913,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "claymore": {
     "dir_count": 4,
@@ -968,8 +956,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "katana": {
     "dir_count": 4,
@@ -1012,8 +999,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "dualsaber0": {
     "dir_count": 4,
@@ -1056,8 +1042,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "dualsaberblue1": {
     "dir_count": 4,
@@ -1120,8 +1105,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "dualsaberred1": {
     "dir_count": 4,
@@ -1184,8 +1168,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "dualsabergreen1": {
     "dir_count": 4,
@@ -1248,8 +1231,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "dualsaberpurple1": {
     "dir_count": 4,
@@ -1312,8 +1294,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "dualsaberrainbow1": {
     "dir_count": 4,
@@ -1576,8 +1557,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "energy_katana": {
     "dir_count": 4,
@@ -1620,8 +1600,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "switchblade_ext": {
     "dir_count": 4,
@@ -1664,8 +1643,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "edagger": {
     "dir_count": 4,
@@ -1728,8 +1706,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "supermatter_sword": {
     "dir_count": 4,
@@ -1772,8 +1749,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "carrotshiv": {
     "dir_count": 4,
@@ -1816,8 +1792,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "chainswordoff": {
     "dir_count": 4,
@@ -1860,8 +1835,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "chainswordon": {
     "dir_count": 4,
@@ -1924,8 +1898,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "swordoff": {
     "dir_count": 4,
@@ -1968,8 +1941,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "swordon": {
     "dir_count": 4,
@@ -2012,8 +1984,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "crysknife": {
     "dir_count": 4,
@@ -2056,8 +2027,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hfrequency0": {
     "dir_count": 4,
@@ -2100,8 +2070,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hfrequency1": {
     "dir_count": 4,
@@ -2204,8 +2173,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "bone_dagger": {
     "dir_count": 4,
@@ -2248,8 +2216,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "multiverse": {
     "dir_count": 4,
@@ -2292,8 +2259,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "talking_sword": {
     "dir_count": 4,
@@ -2336,8 +2302,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "spectral": {
     "dir_count": 4,
@@ -2400,8 +2365,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "sabre": {
     "dir_count": 4,
@@ -2444,8 +2408,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "spellblade": {
     "dir_count": 4,
@@ -2608,8 +2571,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "lightblade": {
     "dir_count": 4,
@@ -2672,7 +2634,6 @@
           }
         ]
       }
-    },
-    
+    }
   }
 }

@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "folder_blue": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "folder_yellow": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "folder_white": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "folder": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "folder_syndie": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "folder_sred": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "folder_sblue": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "folder_paper": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "labeler0": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "labeler1": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "clipboard": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "clipboard_over": {
     "dir_count": 1,
@@ -218,7 +206,6 @@
         ]
       }
     }
-    
   },
   "clipboard_pen": {
     "dir_count": 1,
@@ -235,7 +222,6 @@
         ]
       }
     }
-    
   },
   "paper_plane": {
     "dir_count": 1,
@@ -252,7 +238,6 @@
         ]
       }
     }
-    
   },
   "paper_bin0": {
     "dir_count": 1,
@@ -269,7 +254,6 @@
         ]
       }
     }
-    
   },
   "paper_bin1": {
     "dir_count": 1,
@@ -286,7 +270,6 @@
         ]
       }
     }
-    
   },
   "paper": {
     "dir_count": 1,
@@ -303,7 +286,6 @@
         ]
       }
     }
-    
   },
   "paper_words": {
     "dir_count": 1,
@@ -320,7 +302,6 @@
         ]
       }
     }
-    
   },
   "paper_onfire": {
     "dir_count": 1,
@@ -347,7 +328,6 @@
         ]
       }
     }
-    
   },
   "paperslip": {
     "dir_count": 1,
@@ -364,7 +344,6 @@
         ]
       }
     }
-    
   },
   "paperslip_words": {
     "dir_count": 1,
@@ -381,7 +360,6 @@
         ]
       }
     }
-    
   },
   "alienpaper_words": {
     "dir_count": 1,
@@ -398,7 +376,6 @@
         ]
       }
     }
-    
   },
   "paper_talisman": {
     "dir_count": 1,
@@ -415,7 +392,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-qm": {
     "dir_count": 1,
@@ -432,7 +408,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-law": {
     "dir_count": 1,
@@ -449,7 +424,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-cap": {
     "dir_count": 1,
@@ -466,7 +440,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-hop": {
     "dir_count": 1,
@@ -483,7 +456,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-ce": {
     "dir_count": 1,
@@ -500,7 +472,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-hos": {
     "dir_count": 1,
@@ -517,7 +488,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-rd": {
     "dir_count": 1,
@@ -534,7 +504,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-clown": {
     "dir_count": 1,
@@ -551,7 +520,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-cmo": {
     "dir_count": 1,
@@ -568,7 +536,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-deny": {
     "dir_count": 1,
@@ -585,7 +552,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-ok": {
     "dir_count": 1,
@@ -602,7 +568,6 @@
         ]
       }
     }
-    
   },
   "paper_stamp-cent": {
     "dir_count": 1,
@@ -619,7 +584,6 @@
         ]
       }
     }
-    
   },
   "pen": {
     "dir_count": 1,
@@ -636,7 +600,6 @@
         ]
       }
     }
-    
   },
   "pen-fountain": {
     "dir_count": 1,
@@ -653,7 +616,6 @@
         ]
       }
     }
-    
   },
   "pen-fountain-o": {
     "dir_count": 1,
@@ -670,7 +632,6 @@
         ]
       }
     }
-    
   },
   "pen-fountain-g": {
     "dir_count": 1,
@@ -687,7 +648,6 @@
         ]
       }
     }
-    
   },
   "pen-fountain-r": {
     "dir_count": 1,
@@ -704,7 +664,6 @@
         ]
       }
     }
-    
   },
   "pen-fountain-b": {
     "dir_count": 1,
@@ -721,7 +680,6 @@
         ]
       }
     }
-    
   },
   "pen-fountain-cb": {
     "dir_count": 1,
@@ -738,7 +696,6 @@
         ]
       }
     }
-    
   },
   "pen_blink": {
     "dir_count": 1,
@@ -760,7 +717,6 @@
         ]
       }
     }
-    
   },
   "pen_blue": {
     "dir_count": 1,
@@ -777,7 +733,6 @@
         ]
       }
     }
-    
   },
   "pen_red": {
     "dir_count": 1,
@@ -794,7 +749,6 @@
         ]
       }
     }
-    
   },
   "stamp-hos": {
     "dir_count": 1,
@@ -811,7 +765,6 @@
         ]
       }
     }
-    
   },
   "stamp-hop": {
     "dir_count": 1,
@@ -828,7 +781,6 @@
         ]
       }
     }
-    
   },
   "stamp-cap": {
     "dir_count": 1,
@@ -845,7 +797,6 @@
         ]
       }
     }
-    
   },
   "stamp-qm": {
     "dir_count": 1,
@@ -862,7 +813,6 @@
         ]
       }
     }
-    
   },
   "stamp-law": {
     "dir_count": 1,
@@ -879,7 +829,6 @@
         ]
       }
     }
-    
   },
   "stamp-deny": {
     "dir_count": 1,
@@ -896,7 +845,6 @@
         ]
       }
     }
-    
   },
   "stamp-ok": {
     "dir_count": 1,
@@ -913,7 +861,6 @@
         ]
       }
     }
-    
   },
   "stamp-ce": {
     "dir_count": 1,
@@ -930,7 +877,6 @@
         ]
       }
     }
-    
   },
   "stamp-rd": {
     "dir_count": 1,
@@ -947,7 +893,6 @@
         ]
       }
     }
-    
   },
   "stamp-clown": {
     "dir_count": 1,
@@ -964,7 +909,6 @@
         ]
       }
     }
-    
   },
   "stamp-cmo": {
     "dir_count": 1,
@@ -981,7 +925,6 @@
         ]
       }
     }
-    
   },
   "stamp-cent": {
     "dir_count": 1,
@@ -998,7 +941,6 @@
         ]
       }
     }
-    
   },
   "filingcabinet": {
     "dir_count": 1,
@@ -1015,7 +957,6 @@
         ]
       }
     }
-    
   },
   "filingcabinet-open": {
     "dir_count": 1,
@@ -1032,7 +973,6 @@
         ]
       }
     }
-    
   },
   "chestdrawer": {
     "dir_count": 1,
@@ -1049,7 +989,6 @@
         ]
       }
     }
-    
   },
   "chestdrawer-open": {
     "dir_count": 1,
@@ -1066,7 +1005,6 @@
         ]
       }
     }
-    
   },
   "tallcabinet": {
     "dir_count": 1,
@@ -1083,7 +1021,6 @@
         ]
       }
     }
-    
   },
   "tallcabinet-open": {
     "dir_count": 1,
@@ -1100,7 +1037,6 @@
         ]
       }
     }
-    
   },
   "pamphlet": {
     "dir_count": 1,
@@ -1117,7 +1053,6 @@
         ]
       }
     }
-    
   },
   "newspaper": {
     "dir_count": 1,
@@ -1134,7 +1069,6 @@
         ]
       }
     }
-    
   },
   "scrap": {
     "dir_count": 1,
@@ -1151,7 +1085,6 @@
         ]
       }
     }
-    
   },
   "scrap_bloodied": {
     "dir_count": 1,
@@ -1168,7 +1101,6 @@
         ]
       }
     }
-    
   },
   "labeler_refill": {
     "dir_count": 1,
@@ -1185,7 +1117,6 @@
         ]
       }
     }
-    
   },
   "docs_generic": {
     "dir_count": 1,
@@ -1202,7 +1133,6 @@
         ]
       }
     }
-    
   },
   "docs_part": {
     "dir_count": 1,
@@ -1219,7 +1149,6 @@
         ]
       }
     }
-    
   },
   "docs_verified": {
     "dir_count": 1,
@@ -1236,7 +1165,6 @@
         ]
       }
     }
-    
   },
   "docs_red": {
     "dir_count": 1,
@@ -1253,7 +1181,6 @@
         ]
       }
     }
-    
   },
   "docs_blue": {
     "dir_count": 1,
@@ -1270,7 +1197,6 @@
         ]
       }
     }
-    
   },
   "edagger": {
     "dir_count": 1,
@@ -1292,7 +1218,6 @@
         ]
       }
     }
-    
   },
   "papercutter": {
     "dir_count": 1,
@@ -1309,7 +1234,6 @@
         ]
       }
     }
-    
   },
   "papercutter-cutter": {
     "dir_count": 1,
@@ -1326,7 +1250,6 @@
         ]
       }
     }
-    
   },
   "cutterblade": {
     "dir_count": 1,
@@ -1343,7 +1266,6 @@
         ]
       }
     }
-    
   },
   "paperplane": {
     "dir_count": 4,
@@ -1387,7 +1309,6 @@
         ]
       }
     }
-    
   },
   "paperplane_onfire": {
     "dir_count": 1,
@@ -1414,7 +1335,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-cap": {
     "dir_count": 4,
@@ -1458,7 +1378,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-hos": {
     "dir_count": 4,
@@ -1502,7 +1421,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-ce": {
     "dir_count": 4,
@@ -1546,7 +1464,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-cmo": {
     "dir_count": 4,
@@ -1590,7 +1507,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-clown": {
     "dir_count": 4,
@@ -1634,7 +1550,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-hop": {
     "dir_count": 4,
@@ -1678,7 +1593,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-rd": {
     "dir_count": 4,
@@ -1722,7 +1636,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-qm": {
     "dir_count": 4,
@@ -1766,7 +1679,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-cent": {
     "dir_count": 4,
@@ -1810,7 +1722,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-law": {
     "dir_count": 4,
@@ -1854,7 +1765,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-ok": {
     "dir_count": 4,
@@ -1898,7 +1808,6 @@
         ]
       }
     }
-    
   },
   "paperplane_stamp-deny": {
     "dir_count": 4,
@@ -1942,7 +1851,6 @@
         ]
       }
     }
-    
   },
   "employmentcabinet": {
     "dir_count": 1,
@@ -1959,7 +1867,6 @@
         ]
       }
     }
-    
   },
   "employmentcabinet-open": {
     "dir_count": 1,
@@ -1976,7 +1883,6 @@
         ]
       }
     }
-    
   },
   "oldpaper": {
     "dir_count": 1,
@@ -1993,7 +1899,6 @@
         ]
       }
     }
-    
   },
   "paper_binc": {
     "dir_count": 1,
@@ -2010,7 +1915,6 @@
         ]
       }
     }
-    
   },
   "paper_bundle": {
     "dir_count": 1,

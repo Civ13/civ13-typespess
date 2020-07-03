@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "secureb": {
     "dir_count": 1,
@@ -36,7 +35,6 @@
         ]
       }
     }
-    
   },
   "securespark": {
     "dir_count": 1,
@@ -68,7 +66,6 @@
         ]
       }
     }
-    
   },
   "securecrateemag": {
     "dir_count": 1,
@@ -85,7 +82,6 @@
         ]
       }
     }
-    
   },
   "securecratesparks": {
     "dir_count": 1,
@@ -127,7 +123,6 @@
         ]
       }
     }
-    
   },
   "securecrater": {
     "dir_count": 1,
@@ -144,7 +139,6 @@
         ]
       }
     }
-    
   },
   "securecrateg": {
     "dir_count": 1,
@@ -161,7 +155,6 @@
         ]
       }
     }
-    
   },
   "largebino": {
     "dir_count": 1,
@@ -178,7 +171,6 @@
         ]
       }
     }
-    
   },
   "largebing": {
     "dir_count": 1,
@@ -195,7 +187,6 @@
         ]
       }
     }
-    
   },
   "largebinr": {
     "dir_count": 1,
@@ -212,7 +203,6 @@
         ]
       }
     }
-    
   },
   "largebinemag": {
     "dir_count": 1,
@@ -229,7 +219,6 @@
         ]
       }
     }
-    
   },
   "largebinsparks": {
     "dir_count": 1,
@@ -266,7 +255,6 @@
         ]
       }
     }
-    
   },
   "crate": {
     "dir_count": 1,
@@ -283,7 +271,6 @@
         ]
       }
     }
-    
   },
   "crateopen": {
     "dir_count": 1,
@@ -300,7 +287,6 @@
         ]
       }
     }
-    
   },
   "medicalcrate": {
     "dir_count": 1,
@@ -317,7 +303,6 @@
         ]
       }
     }
-    
   },
   "medicalcrateopen": {
     "dir_count": 1,
@@ -334,7 +319,6 @@
         ]
       }
     }
-    
   },
   "radiation": {
     "dir_count": 1,
@@ -351,7 +335,6 @@
         ]
       }
     }
-    
   },
   "radiationopen": {
     "dir_count": 1,
@@ -368,7 +351,6 @@
         ]
       }
     }
-    
   },
   "engi_e_crate": {
     "dir_count": 1,
@@ -385,7 +367,6 @@
         ]
       }
     }
-    
   },
   "engi_e_crateopen": {
     "dir_count": 1,
@@ -402,7 +383,6 @@
         ]
       }
     }
-    
   },
   "engi_crate": {
     "dir_count": 1,
@@ -419,7 +399,6 @@
         ]
       }
     }
-    
   },
   "engi_crateopen": {
     "dir_count": 1,
@@ -436,7 +415,6 @@
         ]
       }
     }
-    
   },
   "engi_secure_crate": {
     "dir_count": 1,
@@ -453,7 +431,6 @@
         ]
       }
     }
-    
   },
   "engi_secure_crateopen": {
     "dir_count": 1,
@@ -470,7 +447,6 @@
         ]
       }
     }
-    
   },
   "secgearcrate": {
     "dir_count": 1,
@@ -487,7 +463,6 @@
         ]
       }
     }
-    
   },
   "secgearcrateopen": {
     "dir_count": 1,
@@ -504,7 +479,6 @@
         ]
       }
     }
-    
   },
   "o2crate": {
     "dir_count": 1,
@@ -521,7 +495,6 @@
         ]
       }
     }
-    
   },
   "o2crateopen": {
     "dir_count": 1,
@@ -538,7 +511,6 @@
         ]
       }
     }
-    
   },
   "securecrate": {
     "dir_count": 1,
@@ -555,7 +527,6 @@
         ]
       }
     }
-    
   },
   "securecrateopen": {
     "dir_count": 1,
@@ -572,7 +543,6 @@
         ]
       }
     }
-    
   },
   "freezer": {
     "dir_count": 1,
@@ -589,7 +559,6 @@
         ]
       }
     }
-    
   },
   "freezeropen": {
     "dir_count": 1,
@@ -606,7 +575,6 @@
         ]
       }
     }
-    
   },
   "weaponcrate": {
     "dir_count": 1,
@@ -623,7 +591,6 @@
         ]
       }
     }
-    
   },
   "weaponcrateopen": {
     "dir_count": 1,
@@ -640,7 +607,6 @@
         ]
       }
     }
-    
   },
   "plasmacrate": {
     "dir_count": 1,
@@ -657,7 +623,6 @@
         ]
       }
     }
-    
   },
   "plasmacrateopen": {
     "dir_count": 1,
@@ -674,7 +639,6 @@
         ]
       }
     }
-    
   },
   "hydrocrate": {
     "dir_count": 1,
@@ -691,7 +655,6 @@
         ]
       }
     }
-    
   },
   "hydrocrateopen": {
     "dir_count": 1,
@@ -708,7 +671,6 @@
         ]
       }
     }
-    
   },
   "hydrosecurecrate": {
     "dir_count": 1,
@@ -725,7 +687,6 @@
         ]
       }
     }
-    
   },
   "hydrosecurecrateopen": {
     "dir_count": 1,
@@ -742,7 +703,6 @@
         ]
       }
     }
-    
   },
   "miningcar": {
     "dir_count": 1,
@@ -759,7 +719,6 @@
         ]
       }
     }
-    
   },
   "miningcaropen": {
     "dir_count": 1,
@@ -776,7 +735,6 @@
         ]
       }
     }
-    
   },
   "trashcart": {
     "dir_count": 1,
@@ -793,7 +751,6 @@
         ]
       }
     }
-    
   },
   "trashcartopen": {
     "dir_count": 1,
@@ -810,7 +767,6 @@
         ]
       }
     }
-    
   },
   "trashcartweld": {
     "dir_count": 1,
@@ -827,7 +783,6 @@
         ]
       }
     }
-    
   },
   "largecrate": {
     "dir_count": 1,
@@ -844,7 +799,6 @@
         ]
       }
     }
-    
   },
   "largebins": {
     "dir_count": 1,
@@ -861,7 +815,6 @@
         ]
       }
     }
-    
   },
   "largebin": {
     "dir_count": 1,
@@ -878,7 +831,6 @@
         ]
       }
     }
-    
   },
   "largebinopenfs": {
     "dir_count": 1,
@@ -895,7 +847,6 @@
         ]
       }
     }
-    
   },
   "largebinopenf": {
     "dir_count": 1,
@@ -912,7 +863,6 @@
         ]
       }
     }
-    
   },
   "largebinopenb": {
     "dir_count": 1,
@@ -929,7 +879,6 @@
         ]
       }
     }
-    
   },
   "animate_largebins": {
     "dir_count": 1,
@@ -956,7 +905,6 @@
         ]
       }
     }
-    
   },
   "largebinsopen": {
     "dir_count": 1,
@@ -973,7 +921,6 @@
         ]
       }
     }
-    
   },
   "largebinopen": {
     "dir_count": 1,
@@ -990,7 +937,6 @@
         ]
       }
     }
-    
   },
   "manifest": {
     "dir_count": 1,
@@ -1007,7 +953,6 @@
         ]
       }
     }
-    
   },
   "crittercrate": {
     "dir_count": 1,
@@ -1024,7 +969,6 @@
         ]
       }
     }
-    
   },
   "crittercrate_door": {
     "dir_count": 1,
@@ -1041,7 +985,6 @@
         ]
       }
     }
-    
   },
   "crittercrate_door_open": {
     "dir_count": 1,
@@ -1058,7 +1001,6 @@
         ]
       }
     }
-    
   },
   "necrocrate": {
     "dir_count": 1,
@@ -1075,7 +1017,6 @@
         ]
       }
     }
-    
   },
   "necrocrateopen": {
     "dir_count": 1,
@@ -1092,7 +1033,6 @@
         ]
       }
     }
-    
   },
   "scicrate": {
     "dir_count": 1,
@@ -1109,7 +1049,6 @@
         ]
       }
     }
-    
   },
   "scicrateopen": {
     "dir_count": 1,
@@ -1126,7 +1065,6 @@
         ]
       }
     }
-    
   },
   "scisecurecrate": {
     "dir_count": 1,
@@ -1143,7 +1081,6 @@
         ]
       }
     }
-    
   },
   "scisecurecrateopen": {
     "dir_count": 1,
@@ -1160,7 +1097,6 @@
         ]
       }
     }
-    
   },
   "wooden": {
     "dir_count": 1,
@@ -1177,7 +1113,6 @@
         ]
       }
     }
-    
   },
   "woodenopen": {
     "dir_count": 1,

@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "silver": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "gold": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "plasma": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "cargoband": {
     "dir_count": 4,
@@ -217,7 +213,6 @@
         ]
       }
     }
-    
   },
   "engieband": {
     "dir_count": 4,
@@ -261,7 +256,6 @@
         ]
       }
     }
-    
   },
   "rndband": {
     "dir_count": 4,
@@ -305,7 +299,6 @@
         ]
       }
     }
-    
   },
   "medblueband": {
     "dir_count": 4,
@@ -349,7 +342,6 @@
         ]
       }
     }
-    
   },
   "medband": {
     "dir_count": 4,
@@ -393,7 +385,6 @@
         ]
       }
     }
-    
   },
   "redband": {
     "dir_count": 4,
@@ -437,7 +428,6 @@
         ]
       }
     }
-    
   },
   "talisman": {
     "dir_count": 4,
@@ -481,7 +471,6 @@
         ]
       }
     }
-    
   },
   "hydroband": {
     "dir_count": 4,
@@ -525,7 +514,6 @@
         ]
       }
     }
-    
   },
   "waistcoat": {
     "dir_count": 4,
@@ -569,7 +557,6 @@
         ]
       }
     }
-    
   },
   "webbing": {
     "dir_count": 4,
@@ -613,7 +600,6 @@
         ]
       }
     }
-    
   },
   "vest_brown": {
     "dir_count": 4,
@@ -657,7 +643,6 @@
         ]
       }
     }
-    
   },
   "vest_black": {
     "dir_count": 4,
@@ -701,7 +686,6 @@
         ]
       }
     }
-    
   },
   "holster": {
     "dir_count": 4,
@@ -745,7 +729,6 @@
         ]
       }
     }
-    
   },
   "armor_sinew": {
     "dir_count": 4,
@@ -789,7 +772,6 @@
         ]
       }
     }
-    
   },
   "armor_alien": {
     "dir_count": 4,
@@ -833,7 +815,6 @@
         ]
       }
     }
-    
   },
   "lawyerbadge": {
     "dir_count": 4,
@@ -877,7 +858,6 @@
         ]
       }
     }
-    
   },
   "skull": {
     "dir_count": 4,
@@ -921,7 +901,6 @@
         ]
       }
     }
-    
   },
   "pocketprotector": {
     "dir_count": 4,
@@ -965,7 +944,6 @@
         ]
       }
     }
-    
   },
   "maidapron": {
     "dir_count": 4,
@@ -1009,7 +987,6 @@
         ]
       }
     }
-    
   },
   "cargo": {
     "dir_count": 1,

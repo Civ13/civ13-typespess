@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "cautery": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "retractor": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "hemostat": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "bone setter": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "saw": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "esaw_0": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "esaw_1": {
     "dir_count": 1,
@@ -138,7 +131,6 @@
         ]
       }
     }
-    
   },
   "drill": {
     "dir_count": 1,
@@ -155,7 +147,6 @@
         ]
       }
     }
-    
   },
   "bone-gel": {
     "dir_count": 1,
@@ -172,7 +163,6 @@
         ]
       }
     }
-    
   },
   "surgical_drapes": {
     "dir_count": 1,
@@ -189,7 +179,6 @@
         ]
       }
     }
-    
   },
   "optable": {
     "dir_count": 1,
@@ -206,7 +195,6 @@
         ]
       }
     }
-    
   },
   "brain": {
     "dir_count": 1,
@@ -223,7 +211,6 @@
         ]
       }
     }
-    
   },
   "brain-x": {
     "dir_count": 1,
@@ -240,7 +227,6 @@
         ]
       }
     }
-    
   },
   "brain-x-d": {
     "dir_count": 1,
@@ -257,7 +243,6 @@
         ]
       }
     }
-    
   },
   "heart-off": {
     "dir_count": 1,
@@ -274,7 +259,6 @@
         ]
       }
     }
-    
   },
   "heart-on": {
     "dir_count": 1,
@@ -301,7 +285,6 @@
         ]
       }
     }
-    
   },
   "demon_heart-on": {
     "dir_count": 1,
@@ -328,7 +311,6 @@
         ]
       }
     }
-    
   },
   "demon_heart-off": {
     "dir_count": 1,
@@ -345,7 +327,6 @@
         ]
       }
     }
-    
   },
   "heart-x": {
     "dir_count": 1,
@@ -362,7 +343,6 @@
         ]
       }
     }
-    
   },
   "heart-c": {
     "dir_count": 1,
@@ -379,7 +359,6 @@
         ]
       }
     }
-    
   },
   "heart-c-on": {
     "dir_count": 1,
@@ -411,7 +390,6 @@
         ]
       }
     }
-    
   },
   "liver": {
     "dir_count": 1,
@@ -428,7 +406,6 @@
         ]
       }
     }
-    
   },
   "liver-x": {
     "dir_count": 1,
@@ -445,7 +422,6 @@
         ]
       }
     }
-    
   },
   "liver-c": {
     "dir_count": 1,
@@ -462,7 +438,6 @@
         ]
       }
     }
-    
   },
   "liver-c-u": {
     "dir_count": 1,
@@ -479,7 +454,6 @@
         ]
       }
     }
-    
   },
   "kidneys": {
     "dir_count": 1,
@@ -496,7 +470,6 @@
         ]
       }
     }
-    
   },
   "kidneys-x": {
     "dir_count": 1,
@@ -513,7 +486,6 @@
         ]
       }
     }
-    
   },
   "kidneys-c": {
     "dir_count": 1,
@@ -530,7 +502,6 @@
         ]
       }
     }
-    
   },
   "stomach": {
     "dir_count": 1,
@@ -547,7 +518,6 @@
         ]
       }
     }
-    
   },
   "stomach-x": {
     "dir_count": 1,
@@ -564,7 +534,6 @@
         ]
       }
     }
-    
   },
   "lungs": {
     "dir_count": 1,
@@ -581,7 +550,6 @@
         ]
       }
     }
-    
   },
   "lungs-x": {
     "dir_count": 1,
@@ -598,7 +566,6 @@
         ]
       }
     }
-    
   },
   "lungs-c": {
     "dir_count": 1,
@@ -615,7 +582,6 @@
         ]
       }
     }
-    
   },
   "lungs-c-u": {
     "dir_count": 1,
@@ -632,7 +598,6 @@
         ]
       }
     }
-    
   },
   "appendix": {
     "dir_count": 1,
@@ -649,7 +614,6 @@
         ]
       }
     }
-    
   },
   "appendixinflamed": {
     "dir_count": 1,
@@ -666,7 +630,6 @@
         ]
       }
     }
-    
   },
   "roro core": {
     "dir_count": 1,
@@ -683,7 +646,6 @@
         ]
       }
     }
-    
   },
   "roro core 2": {
     "dir_count": 1,
@@ -700,7 +662,6 @@
         ]
       }
     }
-    
   },
   "innards": {
     "dir_count": 1,
@@ -717,7 +678,6 @@
         ]
       }
     }
-    
   },
   "brain-old": {
     "dir_count": 1,
@@ -734,7 +694,6 @@
         ]
       }
     }
-    
   },
   "blacktumor": {
     "dir_count": 1,
@@ -751,7 +710,6 @@
         ]
       }
     }
-    
   },
   "toolkit_implant": {
     "dir_count": 1,
@@ -768,7 +726,6 @@
         ]
       }
     }
-    
   },
   "eye_implant": {
     "dir_count": 1,
@@ -785,7 +742,6 @@
         ]
       }
     }
-    
   },
   "eye_implant_overlay": {
     "dir_count": 1,
@@ -802,7 +758,6 @@
         ]
       }
     }
-    
   },
   "brain_implant": {
     "dir_count": 1,
@@ -819,7 +774,6 @@
         ]
       }
     }
-    
   },
   "brain_implant_overlay": {
     "dir_count": 1,
@@ -836,7 +790,6 @@
         ]
       }
     }
-    
   },
   "chest_implant": {
     "dir_count": 1,
@@ -853,7 +806,6 @@
         ]
       }
     }
-    
   },
   "chest_implant_overlay": {
     "dir_count": 1,
@@ -870,7 +822,6 @@
         ]
       }
     }
-    
   },
   "fugu_gland": {
     "dir_count": 1,
@@ -887,7 +838,6 @@
         ]
       }
     }
-    
   },
   "pheropod": {
     "dir_count": 1,
@@ -904,7 +854,6 @@
         ]
       }
     }
-    
   },
   "plasma_tiny": {
     "dir_count": 1,
@@ -921,7 +870,6 @@
         ]
       }
     }
-    
   },
   "plasma_small": {
     "dir_count": 1,
@@ -938,7 +886,6 @@
         ]
       }
     }
-    
   },
   "plasma": {
     "dir_count": 1,
@@ -955,7 +902,6 @@
         ]
       }
     }
-    
   },
   "plasma_large": {
     "dir_count": 1,
@@ -972,7 +918,6 @@
         ]
       }
     }
-    
   },
   "neurotox": {
     "dir_count": 1,
@@ -989,7 +934,6 @@
         ]
       }
     }
-    
   },
   "acid": {
     "dir_count": 1,
@@ -1006,7 +950,6 @@
         ]
       }
     }
-    
   },
   "hivenode": {
     "dir_count": 1,
@@ -1023,7 +966,6 @@
         ]
       }
     }
-    
   },
   "eggsac": {
     "dir_count": 1,
@@ -1040,7 +982,6 @@
         ]
       }
     }
-    
   },
   "ling_eyeshield": {
     "dir_count": 1,
@@ -1057,7 +998,6 @@
         ]
       }
     }
-    
   },
   "ling_thermal": {
     "dir_count": 1,
@@ -1074,7 +1014,6 @@
         ]
       }
     }
-    
   },
   "severedtail": {
     "dir_count": 1,
@@ -1091,7 +1030,6 @@
         ]
       }
     }
-    
   },
   "arm_laser": {
     "dir_count": 1,
@@ -1108,7 +1046,6 @@
         ]
       }
     }
-    
   },
   "arm_taser": {
     "dir_count": 1,
@@ -1125,7 +1062,6 @@
         ]
       }
     }
-    
   },
   "implant_mask": {
     "dir_count": 1,
@@ -1142,7 +1078,6 @@
         ]
       }
     }
-    
   },
   "imp_jetpack": {
     "dir_count": 1,
@@ -1159,7 +1094,6 @@
         ]
       }
     }
-    
   },
   "imp_jetpack-on": {
     "dir_count": 1,
@@ -1186,7 +1120,6 @@
         ]
       }
     }
-    
   },
   "implant-toolkit": {
     "dir_count": 1,
@@ -1203,7 +1136,6 @@
         ]
       }
     }
-    
   },
   "implant-power": {
     "dir_count": 1,
@@ -1220,7 +1152,6 @@
         ]
       }
     }
-    
   },
   "implant-nanites": {
     "dir_count": 1,
@@ -1237,7 +1168,6 @@
         ]
       }
     }
-    
   },
   "implant-filter": {
     "dir_count": 1,
@@ -1254,7 +1184,6 @@
         ]
       }
     }
-    
   },
   "implant-reinforcers": {
     "dir_count": 1,
@@ -1271,7 +1200,6 @@
         ]
       }
     }
-    
   },
   "implant-reinforcers2": {
     "dir_count": 1,
@@ -1288,7 +1216,6 @@
         ]
       }
     }
-    
   },
   "cursedheart-off": {
     "dir_count": 1,
@@ -1305,7 +1232,6 @@
         ]
       }
     }
-    
   },
   "cursedheart-on": {
     "dir_count": 1,
@@ -1332,7 +1258,6 @@
         ]
       }
     }
-    
   },
   "tonguenormal": {
     "dir_count": 1,
@@ -1349,7 +1274,6 @@
         ]
       }
     }
-    
   },
   "tonguelizard": {
     "dir_count": 1,
@@ -1366,7 +1290,6 @@
         ]
       }
     }
-    
   },
   "tonguefly": {
     "dir_count": 1,
@@ -1383,7 +1306,6 @@
         ]
       }
     }
-    
   },
   "tonguezombie": {
     "dir_count": 1,
@@ -1400,7 +1322,6 @@
         ]
       }
     }
-    
   },
   "tongueayylmao": {
     "dir_count": 1,
@@ -1417,7 +1338,6 @@
         ]
       }
     }
-    
   },
   "tonguexeno": {
     "dir_count": 1,
@@ -1434,7 +1354,6 @@
         ]
       }
     }
-    
   },
   "tonguebone": {
     "dir_count": 1,
@@ -1451,7 +1370,6 @@
         ]
       }
     }
-    
   },
   "tonguerobot": {
     "dir_count": 1,
@@ -1468,7 +1386,6 @@
         ]
       }
     }
-    
   },
   "legion_soul": {
     "dir_count": 1,
@@ -1505,7 +1422,6 @@
         ]
       }
     }
-    
   },
   "legion_soul_crackle": {
     "dir_count": 1,
@@ -1592,7 +1508,6 @@
         ]
       }
     }
-    
   },
   "legion_soul_inert": {
     "dir_count": 1,
@@ -1609,7 +1524,6 @@
         ]
       }
     }
-    
   },
   "voice_of_god": {
     "dir_count": 1,
@@ -1626,7 +1540,6 @@
         ]
       }
     }
-    
   },
   "eyeballs": {
     "dir_count": 1,
@@ -1643,7 +1556,6 @@
         ]
       }
     }
-    
   },
   "cybernetic_eyeballs": {
     "dir_count": 1,
@@ -1660,7 +1572,6 @@
         ]
       }
     }
-    
   },
   "ears": {
     "dir_count": 1,
@@ -1677,7 +1588,6 @@
         ]
       }
     }
-    
   },
   "lungs-plasma": {
     "dir_count": 1,
@@ -1694,7 +1604,6 @@
         ]
       }
     }
-    
   },
   "tongueplasma": {
     "dir_count": 1,
@@ -1711,7 +1620,6 @@
         ]
       }
     }
-    
   },
   "adamantine_resonator": {
     "dir_count": 1,
@@ -1728,7 +1636,6 @@
         ]
       }
     }
-    
   },
   "adamantine_cords": {
     "dir_count": 1,
@@ -1745,7 +1652,6 @@
         ]
       }
     }
-    
   },
   "burning_eyes": {
     "dir_count": 1,

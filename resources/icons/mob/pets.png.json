@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "petcollar-overlay": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "lisatag": {
     "dir_count": 4,
@@ -75,7 +73,6 @@
         ]
       }
     }
-    
   },
   "lisacollar": {
     "dir_count": 4,
@@ -119,7 +116,6 @@
         ]
       }
     }
-    
   },
   "lisa_deadtag": {
     "dir_count": 1,
@@ -136,7 +132,6 @@
         ]
       }
     }
-    
   },
   "lisa_deadcollar": {
     "dir_count": 1,
@@ -153,7 +148,6 @@
         ]
       }
     }
-    
   },
   "puppytag": {
     "dir_count": 4,
@@ -197,7 +191,6 @@
         ]
       }
     }
-    
   },
   "puppycollar": {
     "dir_count": 4,
@@ -241,7 +234,6 @@
         ]
       }
     }
-    
   },
   "puppy_deadtag": {
     "dir_count": 1,
@@ -258,7 +250,6 @@
         ]
       }
     }
-    
   },
   "puppy_deadcollar": {
     "dir_count": 1,
@@ -275,7 +266,6 @@
         ]
       }
     }
-    
   },
   "cattag": {
     "dir_count": 4,
@@ -319,7 +309,6 @@
         ]
       }
     }
-    
   },
   "catcollar": {
     "dir_count": 4,
@@ -363,7 +352,6 @@
         ]
       }
     }
-    
   },
   "cat_deadtag": {
     "dir_count": 1,
@@ -380,7 +368,6 @@
         ]
       }
     }
-    
   },
   "cat_deadcollar": {
     "dir_count": 1,
@@ -397,7 +384,6 @@
         ]
       }
     }
-    
   },
   "kittentag": {
     "dir_count": 4,
@@ -441,7 +427,6 @@
         ]
       }
     }
-    
   },
   "kittencollar": {
     "dir_count": 4,
@@ -485,7 +470,6 @@
         ]
       }
     }
-    
   },
   "kitten_deadtag": {
     "dir_count": 1,
@@ -502,7 +486,6 @@
         ]
       }
     }
-    
   },
   "kitten_deadcollar": {
     "dir_count": 1,
@@ -519,7 +502,6 @@
         ]
       }
     }
-    
   },
   "pugtag": {
     "dir_count": 4,
@@ -563,7 +545,6 @@
         ]
       }
     }
-    
   },
   "pugcollar": {
     "dir_count": 4,
@@ -607,7 +588,6 @@
         ]
       }
     }
-    
   },
   "pug_deadtag": {
     "dir_count": 1,
@@ -624,7 +604,6 @@
         ]
       }
     }
-    
   },
   "pug_deadcollar": {
     "dir_count": 1,
@@ -641,7 +620,6 @@
         ]
       }
     }
-    
   },
   "foxtag": {
     "dir_count": 4,
@@ -685,7 +663,6 @@
         ]
       }
     }
-    
   },
   "foxcollar": {
     "dir_count": 4,
@@ -729,7 +706,6 @@
         ]
       }
     }
-    
   },
   "fox_deadtag": {
     "dir_count": 1,
@@ -746,7 +722,6 @@
         ]
       }
     }
-    
   },
   "fox_deadcollar": {
     "dir_count": 1,
@@ -763,7 +738,6 @@
         ]
       }
     }
-    
   },
   "corgi": {
     "dir_count": 4,
@@ -807,7 +781,6 @@
         ]
       }
     }
-    
   },
   "corgi_dead": {
     "dir_count": 1,
@@ -824,7 +797,6 @@
         ]
       }
     }
-    
   },
   "corgi_shaved": {
     "dir_count": 4,
@@ -868,7 +840,6 @@
         ]
       }
     }
-    
   },
   "corgi_shaved_dead": {
     "dir_count": 1,
@@ -885,7 +856,6 @@
         ]
       }
     }
-    
   },
   "lisa": {
     "dir_count": 4,
@@ -929,7 +899,6 @@
         ]
       }
     }
-    
   },
   "lisa_dead": {
     "dir_count": 1,
@@ -946,7 +915,6 @@
         ]
       }
     }
-    
   },
   "lisa_shaved": {
     "dir_count": 4,
@@ -990,7 +958,6 @@
         ]
       }
     }
-    
   },
   "lisa_shaved_dead": {
     "dir_count": 1,
@@ -1007,7 +974,6 @@
         ]
       }
     }
-    
   },
   "puppy": {
     "dir_count": 4,
@@ -1051,7 +1017,6 @@
         ]
       }
     }
-    
   },
   "puppy_dead": {
     "dir_count": 1,
@@ -1068,7 +1033,6 @@
         ]
       }
     }
-    
   },
   "puppy_shaved": {
     "dir_count": 4,
@@ -1112,7 +1076,6 @@
         ]
       }
     }
-    
   },
   "puppy_shaved_dead": {
     "dir_count": 1,
@@ -1129,7 +1092,6 @@
         ]
       }
     }
-    
   },
   "pug": {
     "dir_count": 4,
@@ -1173,7 +1135,6 @@
         ]
       }
     }
-    
   },
   "pug_dead": {
     "dir_count": 1,
@@ -1190,7 +1151,6 @@
         ]
       }
     }
-    
   },
   "fox": {
     "dir_count": 4,
@@ -1234,7 +1194,6 @@
         ]
       }
     }
-    
   },
   "fox_dead": {
     "dir_count": 1,
@@ -1251,7 +1210,6 @@
         ]
       }
     }
-    
   },
   "cat": {
     "dir_count": 4,
@@ -1295,7 +1253,6 @@
         ]
       }
     }
-    
   },
   "cat_dead": {
     "dir_count": 1,
@@ -1312,7 +1269,6 @@
         ]
       }
     }
-    
   },
   "cat_rest": {
     "dir_count": 1,
@@ -1344,7 +1300,6 @@
         ]
       }
     }
-    
   },
   "cat_sit": {
     "dir_count": 1,
@@ -1361,7 +1316,6 @@
         ]
       }
     }
-    
   },
   "cat2": {
     "dir_count": 4,
@@ -1405,7 +1359,6 @@
         ]
       }
     }
-    
   },
   "cat2_dead": {
     "dir_count": 1,
@@ -1422,7 +1375,6 @@
         ]
       }
     }
-    
   },
   "cat2_rest": {
     "dir_count": 1,
@@ -1454,7 +1406,6 @@
         ]
       }
     }
-    
   },
   "cat2_sit": {
     "dir_count": 1,
@@ -1471,7 +1422,6 @@
         ]
       }
     }
-    
   },
   "cak": {
     "dir_count": 4,
@@ -1515,7 +1465,6 @@
         ]
       }
     }
-    
   },
   "cak_dead": {
     "dir_count": 1,
@@ -1532,7 +1481,6 @@
         ]
       }
     }
-    
   },
   "cak_rest": {
     "dir_count": 1,
@@ -1549,7 +1497,6 @@
         ]
       }
     }
-    
   },
   "cak_sit": {
     "dir_count": 1,
@@ -1566,7 +1513,6 @@
         ]
       }
     }
-    
   },
   "kitten": {
     "dir_count": 4,
@@ -1610,7 +1556,6 @@
         ]
       }
     }
-    
   },
   "kitten_dead": {
     "dir_count": 1,
@@ -1627,7 +1572,6 @@
         ]
       }
     }
-    
   },
   "kitten_rest": {
     "dir_count": 1,
@@ -1659,7 +1603,6 @@
         ]
       }
     }
-    
   },
   "kitten_sit": {
     "dir_count": 1,
@@ -1676,7 +1619,6 @@
         ]
       }
     }
-    
   },
   "void_puppy": {
     "dir_count": 4,
@@ -1720,7 +1662,6 @@
         ]
       }
     }
-    
   },
   "void_puppy_dead": {
     "dir_count": 1,
@@ -1737,7 +1678,6 @@
         ]
       }
     }
-    
   },
   "spacecat": {
     "dir_count": 4,
@@ -1781,7 +1721,6 @@
         ]
       }
     }
-    
   },
   "spacecat_dead": {
     "dir_count": 1,
@@ -1798,7 +1737,6 @@
         ]
       }
     }
-    
   },
   "spacecat_rest": {
     "dir_count": 1,
@@ -1830,7 +1768,6 @@
         ]
       }
     }
-    
   },
   "spacecat_sit": {
     "dir_count": 1,
@@ -1847,7 +1784,6 @@
         ]
       }
     }
-    
   },
   "old_corgi": {
     "dir_count": 4,
@@ -1891,7 +1827,6 @@
         ]
       }
     }
-    
   },
   "old_corgi_movement": {
     "dir_count": 4,
@@ -1955,7 +1890,6 @@
         ]
       }
     }
-    
   },
   "old_corgi_shaved": {
     "dir_count": 4,
@@ -1999,7 +1933,6 @@
         ]
       }
     }
-    
   },
   "old_corgi_shaved_movement": {
     "dir_count": 4,
@@ -2063,7 +1996,6 @@
         ]
       }
     }
-    
   },
   "old_corgi_dead": {
     "dir_count": 1,
@@ -2080,7 +2012,6 @@
         ]
       }
     }
-    
   },
   "old_corgi_shaved_dead": {
     "dir_count": 1,
@@ -2097,7 +2028,6 @@
         ]
       }
     }
-    
   },
   "original": {
     "dir_count": 4,
@@ -2141,7 +2071,6 @@
         ]
       }
     }
-    
   },
   "original_sit": {
     "dir_count": 1,
@@ -2158,7 +2087,6 @@
         ]
       }
     }
-    
   },
   "original_rest": {
     "dir_count": 1,
@@ -2175,7 +2103,6 @@
         ]
       }
     }
-    
   },
   "original_dead": {
     "dir_count": 1,
@@ -2192,7 +2119,6 @@
         ]
       }
     }
-    
   },
   "sloth": {
     "dir_count": 4,
@@ -2236,7 +2162,6 @@
         ]
       }
     }
-    
   },
   "sloth_dead": {
     "dir_count": 1,
@@ -2253,7 +2178,6 @@
         ]
       }
     }
-    
   },
   "cool_sloth": {
     "dir_count": 4,
@@ -2297,7 +2221,6 @@
         ]
       }
     }
-    
   },
   "cool_sloth_dead": {
     "dir_count": 1,
@@ -2314,7 +2237,6 @@
         ]
       }
     }
-    
   },
   "narsian": {
     "dir_count": 4,
@@ -2358,7 +2280,6 @@
         ]
       }
     }
-    
   },
   "narsian_dead": {
     "dir_count": 1,

@@ -161,7 +161,6 @@
         ]
       }
     }
-    
   },
   "shieldsparkles": {
     "dir_count": 4,
@@ -305,7 +304,6 @@
         ]
       }
     }
-    
   },
   "smoke": {
     "dir_count": 4,
@@ -409,7 +407,6 @@
         ]
       }
     }
-    
   },
   "mustard": {
     "dir_count": 4,
@@ -513,7 +510,6 @@
         ]
       }
     }
-    
   },
   "extinguish": {
     "dir_count": 8,
@@ -713,7 +709,6 @@
         ]
       }
     }
-    
   },
   "ion_fade": {
     "dir_count": 4,
@@ -797,7 +792,6 @@
         ]
       }
     }
-    
   },
   "ion_trails": {
     "dir_count": 4,
@@ -841,7 +835,6 @@
         ]
       }
     }
-    
   },
   "empdisable": {
     "dir_count": 4,
@@ -945,7 +938,6 @@
         ]
       }
     }
-    
   },
   "emppulse": {
     "dir_count": 1,
@@ -997,7 +989,6 @@
         ]
       }
     }
-    
   },
   "greenshatter": {
     "dir_count": 1,
@@ -1034,7 +1025,6 @@
         ]
       }
     }
-    
   },
   "greenshatter2": {
     "dir_count": 1,
@@ -1071,7 +1061,6 @@
         ]
       }
     }
-    
   },
   "blueshatter": {
     "dir_count": 1,
@@ -1103,7 +1092,6 @@
         ]
       }
     }
-    
   },
   "blueshatter2": {
     "dir_count": 1,
@@ -1135,7 +1123,6 @@
         ]
       }
     }
-    
   },
   "light": {
     "dir_count": 1,
@@ -1152,7 +1139,6 @@
         ]
       }
     }
-    
   },
   "explosionOLD": {
     "dir_count": 1,
@@ -1234,7 +1220,6 @@
         ]
       }
     }
-    
   },
   "nothing": {
     "dir_count": 1,
@@ -1251,7 +1236,6 @@
         ]
       }
     }
-    
   },
   "explosion": {
     "dir_count": 1,
@@ -1308,7 +1292,6 @@
         ]
       }
     }
-    
   },
   "thermite": {
     "dir_count": 1,
@@ -1325,7 +1308,6 @@
         ]
       }
     }
-    
   },
   "mfoam": {
     "dir_count": 1,
@@ -1342,7 +1324,6 @@
         ]
       }
     }
-    
   },
   "mfoam-disolve": {
     "dir_count": 1,
@@ -1384,7 +1365,6 @@
         ]
       }
     }
-    
   },
   "metalfoam": {
     "dir_count": 1,
@@ -1401,7 +1381,6 @@
         ]
       }
     }
-    
   },
   "ironfoam": {
     "dir_count": 1,
@@ -1418,7 +1397,6 @@
         ]
       }
     }
-    
   },
   "greenglow": {
     "dir_count": 1,
@@ -1435,7 +1413,6 @@
         ]
       }
     }
-    
   },
   "explosion_particle": {
     "dir_count": 8,
@@ -1635,7 +1612,6 @@
         ]
       }
     }
-    
   },
   "shieldwall": {
     "dir_count": 8,
@@ -1795,7 +1771,6 @@
         ]
       }
     }
-    
   },
   "test": {
     "dir_count": 8,
@@ -1955,7 +1930,6 @@
         ]
       }
     }
-    
   },
   "dirt": {
     "dir_count": 1,
@@ -1972,7 +1946,6 @@
         ]
       }
     }
-    
   },
   "flour": {
     "dir_count": 1,
@@ -1989,7 +1962,6 @@
         ]
       }
     }
-    
   },
   "cobweb1": {
     "dir_count": 1,
@@ -2076,7 +2048,6 @@
         ]
       }
     }
-    
   },
   "cobweb2": {
     "dir_count": 1,
@@ -2263,7 +2234,6 @@
         ]
       }
     }
-    
   },
   "stickyweb1": {
     "dir_count": 1,
@@ -2280,7 +2250,6 @@
         ]
       }
     }
-    
   },
   "stickyweb2": {
     "dir_count": 1,
@@ -2297,7 +2266,6 @@
         ]
       }
     }
-    
   },
   "cocoon_large1": {
     "dir_count": 1,
@@ -2314,7 +2282,6 @@
         ]
       }
     }
-    
   },
   "cocoon_large2": {
     "dir_count": 1,
@@ -2331,7 +2298,6 @@
         ]
       }
     }
-    
   },
   "cocoon_large3": {
     "dir_count": 1,
@@ -2348,7 +2314,6 @@
         ]
       }
     }
-    
   },
   "cocoon1": {
     "dir_count": 1,
@@ -2365,7 +2330,6 @@
         ]
       }
     }
-    
   },
   "cocoon2": {
     "dir_count": 1,
@@ -2382,7 +2346,6 @@
         ]
       }
     }
-    
   },
   "cocoon3": {
     "dir_count": 1,
@@ -2399,7 +2362,6 @@
         ]
       }
     }
-    
   },
   "spidereggUnused": {
     "dir_count": 1,
@@ -2416,7 +2378,6 @@
         ]
       }
     }
-    
   },
   "eggs": {
     "dir_count": 1,
@@ -2433,7 +2394,6 @@
         ]
       }
     }
-    
   },
   "spiderling": {
     "dir_count": 1,
@@ -2450,7 +2410,6 @@
         ]
       }
     }
-    
   },
   "energynet": {
     "dir_count": 1,
@@ -2482,7 +2441,6 @@
         ]
       }
     }
-    
   },
   "electricity": {
     "dir_count": 1,
@@ -2554,7 +2512,6 @@
         ]
       }
     }
-    
   },
   "electricity2": {
     "dir_count": 1,
@@ -2626,7 +2583,6 @@
         ]
       }
     }
-    
   },
   "anom": {
     "dir_count": 1,
@@ -2678,7 +2634,6 @@
         ]
       }
     }
-    
   },
   "bhole2": {
     "dir_count": 1,
@@ -2850,7 +2805,6 @@
         ]
       }
     }
-    
   },
   "bhole3": {
     "dir_count": 1,
@@ -2882,7 +2836,6 @@
         ]
       }
     }
-    
   },
   "wave1": {
     "dir_count": 1,
@@ -2914,7 +2867,6 @@
         ]
       }
     }
-    
   },
   "wave2": {
     "dir_count": 1,
@@ -2966,7 +2918,6 @@
         ]
       }
     }
-    
   },
   "wave3": {
     "dir_count": 1,
@@ -3013,7 +2964,6 @@
         ]
       }
     }
-    
   },
   "wave4": {
     "dir_count": 1,
@@ -3045,7 +2995,6 @@
         ]
       }
     }
-    
   },
   "scanline": {
     "dir_count": 1,
@@ -3137,7 +3086,6 @@
         ]
       }
     }
-    
   },
   "shield-old": {
     "dir_count": 1,
@@ -3184,7 +3132,6 @@
         ]
       }
     }
-    
   },
   "shield": {
     "dir_count": 1,
@@ -3241,7 +3188,6 @@
         ]
       }
     }
-    
   },
   "m_shield": {
     "dir_count": 1,
@@ -3293,7 +3239,6 @@
         ]
       }
     }
-    
   },
   "shield1": {
     "dir_count": 1,
@@ -3340,7 +3285,6 @@
         ]
       }
     }
-    
   },
   "shield2": {
     "dir_count": 1,
@@ -3387,7 +3331,6 @@
         ]
       }
     }
-    
   },
   "at_shield1": {
     "dir_count": 1,
@@ -3434,7 +3377,6 @@
         ]
       }
     }
-    
   },
   "at_shield2": {
     "dir_count": 1,
@@ -3481,7 +3423,6 @@
         ]
       }
     }
-    
   },
   "scorch": {
     "dir_count": 4,
@@ -3525,7 +3466,6 @@
         ]
       }
     }
-    
   },
   "light_scorch": {
     "dir_count": 1,
@@ -3542,7 +3482,6 @@
         ]
       }
     }
-    
   },
   "dent": {
     "dir_count": 1,
@@ -3559,7 +3498,6 @@
         ]
       }
     }
-    
   },
   "bhole": {
     "dir_count": 1,
@@ -3576,7 +3514,6 @@
         ]
       }
     }
-    
   },
   "frozen_smoke_capsule": {
     "dir_count": 1,
@@ -3593,7 +3530,6 @@
         ]
       }
     }
-    
   },
   "medi_holo": {
     "dir_count": 1,
@@ -3645,7 +3581,6 @@
         ]
       }
     }
-    
   },
   "chronofield": {
     "dir_count": 1,
@@ -3672,7 +3607,6 @@
         ]
       }
     }
-    
   },
   "static_base": {
     "dir_count": 1,
@@ -3714,7 +3648,6 @@
         ]
       }
     }
-    
   },
   "static": {
     "dir_count": 4,
@@ -3858,7 +3791,6 @@
         ]
       }
     }
-    
   },
   "blank_base": {
     "dir_count": 1,
@@ -3875,7 +3807,6 @@
         ]
       }
     }
-    
   },
   "blank": {
     "dir_count": 4,
@@ -3919,7 +3850,6 @@
         ]
       }
     }
-    
   },
   "dragnetfield": {
     "dir_count": 1,
@@ -3946,7 +3876,6 @@
         ]
       }
     }
-    
   },
   "shreds": {
     "dir_count": 1,
@@ -3963,7 +3892,6 @@
         ]
       }
     }
-    
   },
   "blip": {
     "dir_count": 1,
@@ -4005,7 +3933,6 @@
         ]
       }
     }
-    
   },
   "purplesparkles": {
     "dir_count": 4,
@@ -4149,7 +4076,6 @@
         ]
       }
     }
-    
   },
   "purplecrack": {
     "dir_count": 1,
@@ -4176,7 +4102,6 @@
         ]
       }
     }
-    
   },
   "phasein": {
     "dir_count": 1,
@@ -4243,7 +4168,6 @@
         ]
       }
     }
-    
   },
   "phaseout": {
     "dir_count": 1,
@@ -4310,7 +4234,6 @@
         ]
       }
     }
-    
   },
   "foam": {
     "dir_count": 1,
@@ -4327,7 +4250,6 @@
         ]
       }
     }
-    
   },
   "foam-disolve": {
     "dir_count": 1,
@@ -4369,7 +4291,6 @@
         ]
       }
     }
-    
   },
   "blob_attack": {
     "dir_count": 4,
@@ -4633,7 +4554,6 @@
         ]
       }
     }
-    
   },
   "shield-red": {
     "dir_count": 1,
@@ -4680,7 +4600,6 @@
         ]
       }
     }
-    
   },
   "holosign": {
     "dir_count": 1,
@@ -4752,7 +4671,6 @@
         ]
       }
     }
-    
   },
   "holosign_sec": {
     "dir_count": 1,
@@ -4784,7 +4702,6 @@
         ]
       }
     }
-    
   },
   "holosign_engi": {
     "dir_count": 1,
@@ -4816,7 +4733,6 @@
         ]
       }
     }
-    
   },
   "heal": {
     "dir_count": 1,
@@ -4898,7 +4814,6 @@
         ]
       }
     }
-    
   },
   "shield-grey": {
     "dir_count": 1,
@@ -4945,7 +4860,6 @@
         ]
       }
     }
-    
   },
   "shield-flash": {
     "dir_count": 4,
@@ -5149,7 +5063,6 @@
         ]
       }
     }
-    
   },
   "barriershimmer": {
     "dir_count": 1,
@@ -5201,7 +5114,6 @@
         ]
       }
     }
-    
   },
   "legiondoor": {
     "dir_count": 1,
@@ -5218,7 +5130,6 @@
         ]
       }
     }
-    
   },
   "molten": {
     "dir_count": 1,
@@ -5235,7 +5146,6 @@
         ]
       }
     }
-    
   },
   "big_molten": {
     "dir_count": 1,
@@ -5252,7 +5162,6 @@
         ]
       }
     }
-    
   },
   "acid": {
     "dir_count": 1,
@@ -5294,7 +5203,6 @@
         ]
       }
     }
-    
   },
   "tendril_bite": {
     "dir_count": 1,
@@ -5386,7 +5294,6 @@
         ]
       }
     }
-    
   },
   "paperwiz_poof": {
     "dir_count": 1,
@@ -5438,7 +5345,6 @@
         ]
       }
     }
-    
   },
   "paper_scatter": {
     "dir_count": 1,
@@ -5475,7 +5381,6 @@
         ]
       }
     }
-    
   },
   "revenantEctoplasm": {
     "dir_count": 1,
@@ -5492,7 +5397,6 @@
         ]
       }
     }
-    
   },
   "hierophant_blast": {
     "dir_count": 4,
@@ -5796,7 +5700,6 @@
         ]
       }
     }
-    
   },
   "hierophant_squares": {
     "dir_count": 4,
@@ -5920,7 +5823,6 @@
         ]
       }
     }
-    
   },
   "lavastaff_warn": {
     "dir_count": 1,
@@ -5937,7 +5839,6 @@
         ]
       }
     }
-    
   },
   "firing_effect": {
     "dir_count": 4,
@@ -6001,7 +5902,6 @@
         ]
       }
     }
-    
   },
   "impact_bullet": {
     "dir_count": 1,
@@ -6038,7 +5938,6 @@
         ]
       }
     }
-    
   },
   "firing_effect_energy": {
     "dir_count": 4,
@@ -6102,7 +6001,6 @@
         ]
       }
     }
-    
   },
   "impact_energy": {
     "dir_count": 1,
@@ -6144,7 +6042,6 @@
         ]
       }
     }
-    
   },
   "impact_laser": {
     "dir_count": 1,
@@ -6176,7 +6073,6 @@
         ]
       }
     }
-    
   },
   "impact_laser_green": {
     "dir_count": 1,
@@ -6208,7 +6104,6 @@
         ]
       }
     }
-    
   },
   "impact_laser_blue": {
     "dir_count": 1,
@@ -6240,7 +6135,6 @@
         ]
       }
     }
-    
   },
   "impact_laser_purple": {
     "dir_count": 1,
@@ -6272,7 +6166,6 @@
         ]
       }
     }
-    
   },
   "smash": {
     "dir_count": 1,
@@ -6299,7 +6192,6 @@
         ]
       }
     }
-    
   },
   "punch": {
     "dir_count": 1,
@@ -6336,7 +6228,6 @@
         ]
       }
     }
-    
   },
   "bite": {
     "dir_count": 1,
@@ -6368,7 +6259,6 @@
         ]
       }
     }
-    
   },
   "claw": {
     "dir_count": 1,
@@ -6400,7 +6290,6 @@
         ]
       }
     }
-    
   },
   "boop": {
     "dir_count": 1,
@@ -6432,7 +6321,6 @@
         ]
       }
     }
-    
   },
   "mech_fire": {
     "dir_count": 1,
@@ -6464,7 +6352,6 @@
         ]
       }
     }
-    
   },
   "mech_toxin": {
     "dir_count": 1,
@@ -6491,7 +6378,6 @@
         ]
       }
     }
-    
   },
   "kick": {
     "dir_count": 1,
@@ -6523,7 +6409,6 @@
         ]
       }
     }
-    
   },
   "disarm": {
     "dir_count": 1,
@@ -6560,7 +6445,6 @@
         ]
       }
     }
-    
   },
   "ion_fade_flight": {
     "dir_count": 4,
@@ -6644,7 +6528,6 @@
         ]
       }
     }
-    
   },
   "ion_trails_flight": {
     "dir_count": 4,
@@ -6688,7 +6571,6 @@
         ]
       }
     }
-    
   },
   "tailsweep": {
     "dir_count": 8,
@@ -6848,7 +6730,6 @@
         ]
       }
     }
-    
   },
   "impact_laser_wall": {
     "dir_count": 1,
@@ -6915,7 +6796,6 @@
         ]
       }
     }
-    
   },
   "forcefield": {
     "dir_count": 1,
@@ -6937,7 +6817,6 @@
         ]
       }
     }
-    
   },
   "medi_holo_no_anim": {
     "dir_count": 1,
@@ -6954,7 +6833,6 @@
         ]
       }
     }
-    
   },
   "atmos_resin": {
     "dir_count": 1,
@@ -6971,7 +6849,6 @@
         ]
       }
     }
-    
   },
   "holo_fan": {
     "dir_count": 1,
@@ -7003,7 +6880,6 @@
         ]
       }
     }
-    
   },
   "holo_firelock": {
     "dir_count": 1,
@@ -7055,7 +6931,6 @@
         ]
       }
     }
-    
   },
   "miner_death": {
     "dir_count": 4,
@@ -7099,7 +6974,6 @@
         ]
       }
     }
-    
   },
   "curse": {
     "dir_count": 4,
@@ -7283,7 +7157,6 @@
         ]
       }
     }
-    
   },
   "cursehand0": {
     "dir_count": 4,
@@ -7607,7 +7480,6 @@
         ]
       }
     }
-    
   },
   "cursehand1": {
     "dir_count": 4,
@@ -7931,7 +7803,6 @@
         ]
       }
     }
-    
   },
   "curseblob": {
     "dir_count": 4,
@@ -8195,7 +8066,6 @@
         ]
       }
     }
-    
   },
   "bullet_hole": {
     "dir_count": 1,

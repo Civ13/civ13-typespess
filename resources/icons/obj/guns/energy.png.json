@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "flight_on": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "taser": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "taser_charge": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "taser_empty": {
     "dir_count": 1,
@@ -87,7 +83,6 @@
         ]
       }
     }
-    
   },
   "retro": {
     "dir_count": 1,
@@ -104,7 +99,6 @@
         ]
       }
     }
-    
   },
   "retro_charge1": {
     "dir_count": 1,
@@ -121,7 +115,6 @@
         ]
       }
     }
-    
   },
   "retro_charge2": {
     "dir_count": 1,
@@ -138,7 +131,6 @@
         ]
       }
     }
-    
   },
   "retro_charge3": {
     "dir_count": 1,
@@ -155,7 +147,6 @@
         ]
       }
     }
-    
   },
   "retro_charge4": {
     "dir_count": 1,
@@ -172,7 +163,6 @@
         ]
       }
     }
-    
   },
   "retro_empty": {
     "dir_count": 1,
@@ -194,7 +184,6 @@
         ]
       }
     }
-    
   },
   "energy": {
     "dir_count": 1,
@@ -211,7 +200,6 @@
         ]
       }
     }
-    
   },
   "energy_kill": {
     "dir_count": 1,
@@ -228,7 +216,6 @@
         ]
       }
     }
-    
   },
   "energy_charge_kill": {
     "dir_count": 1,
@@ -245,7 +232,6 @@
         ]
       }
     }
-    
   },
   "energy_disable": {
     "dir_count": 1,
@@ -262,7 +248,6 @@
         ]
       }
     }
-    
   },
   "energy_charge_disable": {
     "dir_count": 1,
@@ -279,7 +264,6 @@
         ]
       }
     }
-    
   },
   "energy_stun": {
     "dir_count": 1,
@@ -296,7 +280,6 @@
         ]
       }
     }
-    
   },
   "energy_charge_stun": {
     "dir_count": 1,
@@ -313,7 +296,6 @@
         ]
       }
     }
-    
   },
   "energy_empty": {
     "dir_count": 1,
@@ -335,7 +317,6 @@
         ]
       }
     }
-    
   },
   "xray": {
     "dir_count": 1,
@@ -352,7 +333,6 @@
         ]
       }
     }
-    
   },
   "xray_charge": {
     "dir_count": 1,
@@ -369,7 +349,6 @@
         ]
       }
     }
-    
   },
   "xray_empty": {
     "dir_count": 1,
@@ -391,7 +370,6 @@
         ]
       }
     }
-    
   },
   "energytac": {
     "dir_count": 1,
@@ -408,7 +386,6 @@
         ]
       }
     }
-    
   },
   "energytac_kill": {
     "dir_count": 1,
@@ -425,7 +402,6 @@
         ]
       }
     }
-    
   },
   "energytac_charge_kill": {
     "dir_count": 1,
@@ -442,7 +418,6 @@
         ]
       }
     }
-    
   },
   "energytac_disable": {
     "dir_count": 1,
@@ -459,7 +434,6 @@
         ]
       }
     }
-    
   },
   "energytac_charge_disable": {
     "dir_count": 1,
@@ -476,7 +450,6 @@
         ]
       }
     }
-    
   },
   "energytac_stun": {
     "dir_count": 1,
@@ -493,7 +466,6 @@
         ]
       }
     }
-    
   },
   "energytac_charge_stun": {
     "dir_count": 1,
@@ -510,7 +482,6 @@
         ]
       }
     }
-    
   },
   "energytac_empty": {
     "dir_count": 1,
@@ -532,7 +503,6 @@
         ]
       }
     }
-    
   },
   "disabler": {
     "dir_count": 1,
@@ -549,7 +519,6 @@
         ]
       }
     }
-    
   },
   "disabler_charge": {
     "dir_count": 1,
@@ -566,7 +535,6 @@
         ]
       }
     }
-    
   },
   "disabler_empty": {
     "dir_count": 1,
@@ -588,7 +556,6 @@
         ]
       }
     }
-    
   },
   "caplaser": {
     "dir_count": 1,
@@ -605,7 +572,6 @@
         ]
       }
     }
-    
   },
   "caplaser_charge1": {
     "dir_count": 1,
@@ -622,7 +588,6 @@
         ]
       }
     }
-    
   },
   "caplaser_charge2": {
     "dir_count": 1,
@@ -639,7 +604,6 @@
         ]
       }
     }
-    
   },
   "caplaser_charge3": {
     "dir_count": 1,
@@ -656,7 +620,6 @@
         ]
       }
     }
-    
   },
   "caplaser_charge4": {
     "dir_count": 1,
@@ -673,7 +636,6 @@
         ]
       }
     }
-    
   },
   "caplaser_empty": {
     "dir_count": 1,
@@ -695,7 +657,6 @@
         ]
       }
     }
-    
   },
   "freezegun": {
     "dir_count": 1,
@@ -712,7 +673,6 @@
         ]
       }
     }
-    
   },
   "freezegun_charge": {
     "dir_count": 1,
@@ -729,7 +689,6 @@
         ]
       }
     }
-    
   },
   "freezegun_empty": {
     "dir_count": 1,
@@ -751,7 +710,6 @@
         ]
       }
     }
-    
   },
   "decloner": {
     "dir_count": 1,
@@ -768,7 +726,6 @@
         ]
       }
     }
-    
   },
   "decloner_charge": {
     "dir_count": 1,
@@ -785,7 +742,6 @@
         ]
       }
     }
-    
   },
   "decloner_spin": {
     "dir_count": 1,
@@ -817,7 +773,6 @@
         ]
       }
     }
-    
   },
   "decloner_empty": {
     "dir_count": 1,
@@ -839,7 +794,6 @@
         ]
       }
     }
-    
   },
   "lasercannon": {
     "dir_count": 1,
@@ -856,7 +810,6 @@
         ]
       }
     }
-    
   },
   "lasercannon_charge": {
     "dir_count": 1,
@@ -873,7 +826,6 @@
         ]
       }
     }
-    
   },
   "lasercannon_empty": {
     "dir_count": 1,
@@ -895,7 +847,6 @@
         ]
       }
     }
-    
   },
   "ionrifle": {
     "dir_count": 1,
@@ -912,7 +863,6 @@
         ]
       }
     }
-    
   },
   "ionrifle_charge": {
     "dir_count": 1,
@@ -929,7 +879,6 @@
         ]
       }
     }
-    
   },
   "ionrifle_empty": {
     "dir_count": 1,
@@ -951,7 +900,6 @@
         ]
       }
     }
-    
   },
   "pulse": {
     "dir_count": 1,
@@ -968,7 +916,6 @@
         ]
       }
     }
-    
   },
   "pulse_DESTORY": {
     "dir_count": 1,
@@ -985,7 +932,6 @@
         ]
       }
     }
-    
   },
   "pulse_charge_DESTROY": {
     "dir_count": 1,
@@ -1002,7 +948,6 @@
         ]
       }
     }
-    
   },
   "pulse_stun": {
     "dir_count": 1,
@@ -1019,7 +964,6 @@
         ]
       }
     }
-    
   },
   "pulse_charge_stun": {
     "dir_count": 1,
@@ -1036,7 +980,6 @@
         ]
       }
     }
-    
   },
   "pulse_kill": {
     "dir_count": 1,
@@ -1053,7 +996,6 @@
         ]
       }
     }
-    
   },
   "pulse_charge_kill": {
     "dir_count": 1,
@@ -1070,7 +1012,6 @@
         ]
       }
     }
-    
   },
   "pulse_empty": {
     "dir_count": 1,
@@ -1092,7 +1033,6 @@
         ]
       }
     }
-    
   },
   "laser": {
     "dir_count": 1,
@@ -1109,7 +1049,6 @@
         ]
       }
     }
-    
   },
   "laser_charge1": {
     "dir_count": 1,
@@ -1126,7 +1065,6 @@
         ]
       }
     }
-    
   },
   "laser_charge2": {
     "dir_count": 1,
@@ -1143,7 +1081,6 @@
         ]
       }
     }
-    
   },
   "laser_charge3": {
     "dir_count": 1,
@@ -1160,7 +1097,6 @@
         ]
       }
     }
-    
   },
   "laser_charge4": {
     "dir_count": 1,
@@ -1177,7 +1113,6 @@
         ]
       }
     }
-    
   },
   "laser_empty": {
     "dir_count": 1,
@@ -1199,7 +1134,6 @@
         ]
       }
     }
-    
   },
   "bluetag": {
     "dir_count": 1,
@@ -1216,7 +1150,6 @@
         ]
       }
     }
-    
   },
   "bluetag_charge1": {
     "dir_count": 1,
@@ -1233,7 +1166,6 @@
         ]
       }
     }
-    
   },
   "bluetag_charge2": {
     "dir_count": 1,
@@ -1250,7 +1182,6 @@
         ]
       }
     }
-    
   },
   "bluetag_charge3": {
     "dir_count": 1,
@@ -1267,7 +1198,6 @@
         ]
       }
     }
-    
   },
   "bluetag_charge4": {
     "dir_count": 1,
@@ -1284,7 +1214,6 @@
         ]
       }
     }
-    
   },
   "bluetag_empty": {
     "dir_count": 1,
@@ -1306,7 +1235,6 @@
         ]
       }
     }
-    
   },
   "redtag": {
     "dir_count": 1,
@@ -1323,7 +1251,6 @@
         ]
       }
     }
-    
   },
   "redtag_charge1": {
     "dir_count": 1,
@@ -1340,7 +1267,6 @@
         ]
       }
     }
-    
   },
   "redtag_charge2": {
     "dir_count": 1,
@@ -1357,7 +1283,6 @@
         ]
       }
     }
-    
   },
   "redtag_charge3": {
     "dir_count": 1,
@@ -1374,7 +1299,6 @@
         ]
       }
     }
-    
   },
   "redtag_charge4": {
     "dir_count": 1,
@@ -1391,7 +1315,6 @@
         ]
       }
     }
-    
   },
   "redtag_empty": {
     "dir_count": 1,
@@ -1413,7 +1336,6 @@
         ]
       }
     }
-    
   },
   "flora": {
     "dir_count": 1,
@@ -1430,7 +1352,6 @@
         ]
       }
     }
-    
   },
   "flora_yield": {
     "dir_count": 1,
@@ -1447,7 +1368,6 @@
         ]
       }
     }
-    
   },
   "flora_charge_yield": {
     "dir_count": 1,
@@ -1464,7 +1384,6 @@
         ]
       }
     }
-    
   },
   "flora_mutation": {
     "dir_count": 1,
@@ -1481,7 +1400,6 @@
         ]
       }
     }
-    
   },
   "flora_charge_mutation": {
     "dir_count": 1,
@@ -1498,7 +1416,6 @@
         ]
       }
     }
-    
   },
   "flora_empty": {
     "dir_count": 1,
@@ -1520,7 +1437,6 @@
         ]
       }
     }
-    
   },
   "advtaser": {
     "dir_count": 1,
@@ -1537,7 +1453,6 @@
         ]
       }
     }
-    
   },
   "advtaser_stun": {
     "dir_count": 1,
@@ -1554,7 +1469,6 @@
         ]
       }
     }
-    
   },
   "advtaser_charge_stun": {
     "dir_count": 1,
@@ -1571,7 +1485,6 @@
         ]
       }
     }
-    
   },
   "advtaser_disable": {
     "dir_count": 1,
@@ -1588,7 +1501,6 @@
         ]
       }
     }
-    
   },
   "advtaser_charge_disable": {
     "dir_count": 1,
@@ -1605,7 +1517,6 @@
         ]
       }
     }
-    
   },
   "advtaser_empty": {
     "dir_count": 1,
@@ -1627,7 +1538,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbine": {
     "dir_count": 1,
@@ -1644,7 +1554,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbine_DESTROY": {
     "dir_count": 1,
@@ -1661,7 +1570,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbine_charge_DESTROY": {
     "dir_count": 1,
@@ -1678,7 +1586,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbine_stun": {
     "dir_count": 1,
@@ -1695,7 +1602,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbine_charge_stun": {
     "dir_count": 1,
@@ -1712,7 +1618,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbine_kill": {
     "dir_count": 1,
@@ -1729,7 +1634,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbine_charge_kill": {
     "dir_count": 1,
@@ -1746,7 +1650,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbine_empty": {
     "dir_count": 1,
@@ -1768,7 +1671,6 @@
         ]
       }
     }
-    
   },
   "m1911": {
     "dir_count": 1,
@@ -1785,7 +1687,6 @@
         ]
       }
     }
-    
   },
   "m1911_charge": {
     "dir_count": 1,
@@ -1802,7 +1703,6 @@
         ]
       }
     }
-    
   },
   "m1911_empty": {
     "dir_count": 1,
@@ -1824,7 +1724,6 @@
         ]
       }
     }
-    
   },
   "pulse_pistol": {
     "dir_count": 1,
@@ -1841,7 +1740,6 @@
         ]
       }
     }
-    
   },
   "pulse_pistol_DESTROY": {
     "dir_count": 1,
@@ -1858,7 +1756,6 @@
         ]
       }
     }
-    
   },
   "pulse_pistol_charge_DESTROY": {
     "dir_count": 1,
@@ -1875,7 +1772,6 @@
         ]
       }
     }
-    
   },
   "pulse_pistol_stun": {
     "dir_count": 1,
@@ -1892,7 +1788,6 @@
         ]
       }
     }
-    
   },
   "pulse_pistol_charge_stun": {
     "dir_count": 1,
@@ -1909,7 +1804,6 @@
         ]
       }
     }
-    
   },
   "pulse_pistol_charge_kill": {
     "dir_count": 1,
@@ -1926,7 +1820,6 @@
         ]
       }
     }
-    
   },
   "pulse_pistol_kill": {
     "dir_count": 1,
@@ -1943,7 +1836,6 @@
         ]
       }
     }
-    
   },
   "pulse_pistol_empty": {
     "dir_count": 1,
@@ -1965,7 +1857,6 @@
         ]
       }
     }
-    
   },
   "ioncarbine": {
     "dir_count": 1,
@@ -1982,7 +1873,6 @@
         ]
       }
     }
-    
   },
   "ioncarbine_charge": {
     "dir_count": 1,
@@ -1999,7 +1889,6 @@
         ]
       }
     }
-    
   },
   "ioncarbine_empty": {
     "dir_count": 1,
@@ -2021,7 +1910,6 @@
         ]
       }
     }
-    
   },
   "stunrevolver": {
     "dir_count": 1,
@@ -2038,7 +1926,6 @@
         ]
       }
     }
-    
   },
   "stunrevolver_charge": {
     "dir_count": 1,
@@ -2055,7 +1942,6 @@
         ]
       }
     }
-    
   },
   "stunrevolver_empty": {
     "dir_count": 1,
@@ -2077,7 +1963,6 @@
         ]
       }
     }
-    
   },
   "hoslaser": {
     "dir_count": 1,
@@ -2094,7 +1979,6 @@
         ]
       }
     }
-    
   },
   "hoslaser_stun": {
     "dir_count": 1,
@@ -2111,7 +1995,6 @@
         ]
       }
     }
-    
   },
   "hoslaser_charge_stun": {
     "dir_count": 1,
@@ -2128,7 +2011,6 @@
         ]
       }
     }
-    
   },
   "hoslaser_kill": {
     "dir_count": 1,
@@ -2145,7 +2027,6 @@
         ]
       }
     }
-    
   },
   "hoslaser_charge_kill": {
     "dir_count": 1,
@@ -2162,7 +2043,6 @@
         ]
       }
     }
-    
   },
   "hoslaser_disable": {
     "dir_count": 1,
@@ -2179,7 +2059,6 @@
         ]
       }
     }
-    
   },
   "hoslaser_charge_disable": {
     "dir_count": 1,
@@ -2196,7 +2075,6 @@
         ]
       }
     }
-    
   },
   "hoslaser_empty": {
     "dir_count": 1,
@@ -2218,7 +2096,6 @@
         ]
       }
     }
-    
   },
   "dragnet": {
     "dir_count": 1,
@@ -2235,7 +2112,6 @@
         ]
       }
     }
-    
   },
   "dragnet_net": {
     "dir_count": 1,
@@ -2252,7 +2128,6 @@
         ]
       }
     }
-    
   },
   "dragnet_charge_net": {
     "dir_count": 1,
@@ -2269,7 +2144,6 @@
         ]
       }
     }
-    
   },
   "dragnet_snare": {
     "dir_count": 1,
@@ -2286,7 +2160,6 @@
         ]
       }
     }
-    
   },
   "dragnet_charge_snare": {
     "dir_count": 1,
@@ -2303,7 +2176,6 @@
         ]
       }
     }
-    
   },
   "dragnet_empty": {
     "dir_count": 1,
@@ -2325,7 +2197,6 @@
         ]
       }
     }
-    
   },
   "turretlaser": {
     "dir_count": 1,
@@ -2342,7 +2213,6 @@
         ]
       }
     }
-    
   },
   "turretlaser_stun": {
     "dir_count": 1,
@@ -2359,7 +2229,6 @@
         ]
       }
     }
-    
   },
   "turretlaser_charge_stun": {
     "dir_count": 1,
@@ -2376,7 +2245,6 @@
         ]
       }
     }
-    
   },
   "turretlaser_kill": {
     "dir_count": 1,
@@ -2393,7 +2261,6 @@
         ]
       }
     }
-    
   },
   "turretlaser_charge_kill": {
     "dir_count": 1,
@@ -2410,7 +2277,6 @@
         ]
       }
     }
-    
   },
   "turretlaser_empty": {
     "dir_count": 1,
@@ -2432,7 +2298,6 @@
         ]
       }
     }
-    
   },
   "nucgun": {
     "dir_count": 1,
@@ -2449,7 +2314,6 @@
         ]
       }
     }
-    
   },
   "nucgun_kill": {
     "dir_count": 1,
@@ -2466,7 +2330,6 @@
         ]
       }
     }
-    
   },
   "nucgun_charge_kill": {
     "dir_count": 1,
@@ -2483,7 +2346,6 @@
         ]
       }
     }
-    
   },
   "nucgun_disable": {
     "dir_count": 1,
@@ -2500,7 +2362,6 @@
         ]
       }
     }
-    
   },
   "nucgun_charge_disable": {
     "dir_count": 1,
@@ -2517,7 +2378,6 @@
         ]
       }
     }
-    
   },
   "nucgun_stun": {
     "dir_count": 1,
@@ -2534,7 +2394,6 @@
         ]
       }
     }
-    
   },
   "nucgun_charge_stun": {
     "dir_count": 1,
@@ -2551,7 +2410,6 @@
         ]
       }
     }
-    
   },
   "nucgun_empty": {
     "dir_count": 1,
@@ -2573,7 +2431,6 @@
         ]
       }
     }
-    
   },
   "nucgun_fail_0": {
     "dir_count": 1,
@@ -2610,7 +2467,6 @@
         ]
       }
     }
-    
   },
   "nucgun_fail_1": {
     "dir_count": 1,
@@ -2647,7 +2503,6 @@
         ]
       }
     }
-    
   },
   "nucgun_fail_2": {
     "dir_count": 1,
@@ -2684,7 +2539,6 @@
         ]
       }
     }
-    
   },
   "nucgun_fail_3": {
     "dir_count": 1,
@@ -2721,7 +2575,6 @@
         ]
       }
     }
-    
   },
   "crossbow": {
     "dir_count": 1,
@@ -2738,7 +2591,6 @@
         ]
       }
     }
-    
   },
   "crossbow_empty": {
     "dir_count": 1,
@@ -2755,7 +2607,6 @@
         ]
       }
     }
-    
   },
   "crossbow_halloween": {
     "dir_count": 1,
@@ -2772,7 +2623,6 @@
         ]
       }
     }
-    
   },
   "crossbow_halloween_empty": {
     "dir_count": 1,
@@ -2789,7 +2639,6 @@
         ]
       }
     }
-    
   },
   "crossbowlarge": {
     "dir_count": 1,
@@ -2806,7 +2655,6 @@
         ]
       }
     }
-    
   },
   "crossbowlarge_empty": {
     "dir_count": 1,
@@ -2823,7 +2671,6 @@
         ]
       }
     }
-    
   },
   "kineticgun": {
     "dir_count": 1,
@@ -2840,7 +2687,6 @@
         ]
       }
     }
-    
   },
   "kineticgun_empty": {
     "dir_count": 1,
@@ -2862,7 +2708,6 @@
         ]
       }
     }
-    
   },
   "kineticgun_u": {
     "dir_count": 1,
@@ -2879,7 +2724,6 @@
         ]
       }
     }
-    
   },
   "kineticgun_h": {
     "dir_count": 1,
@@ -2896,7 +2740,6 @@
         ]
       }
     }
-    
   },
   "wormhole_projector1": {
     "dir_count": 1,
@@ -2938,7 +2781,6 @@
         ]
       }
     }
-    
   },
   "wormhole_projector2": {
     "dir_count": 1,
@@ -2980,7 +2822,6 @@
         ]
       }
     }
-    
   },
   "plasmacutter": {
     "dir_count": 1,
@@ -2997,7 +2838,6 @@
         ]
       }
     }
-    
   },
   "adv_plasmacutter": {
     "dir_count": 1,
@@ -3014,7 +2854,6 @@
         ]
       }
     }
-    
   },
   "alienpistol": {
     "dir_count": 1,
@@ -3031,7 +2870,6 @@
         ]
       }
     }
-    
   },
   "alienpistol_charge": {
     "dir_count": 1,
@@ -3048,7 +2886,6 @@
         ]
       }
     }
-    
   },
   "alienpistol_empty": {
     "dir_count": 1,
@@ -3070,7 +2907,6 @@
         ]
       }
     }
-    
   },
   "instagib": {
     "dir_count": 1,
@@ -3087,7 +2923,6 @@
         ]
       }
     }
-    
   },
   "instagibblue": {
     "dir_count": 1,
@@ -3104,7 +2939,6 @@
         ]
       }
     }
-    
   },
   "instagibred": {
     "dir_count": 1,
@@ -3121,7 +2955,6 @@
         ]
       }
     }
-    
   },
   "export_cannon": {
     "dir_count": 1,
@@ -3138,7 +2971,6 @@
         ]
       }
     }
-    
   },
   "export_cannon_empty": {
     "dir_count": 1,
@@ -3155,7 +2987,6 @@
         ]
       }
     }
-    
   },
   "mini": {
     "dir_count": 1,
@@ -3172,7 +3003,6 @@
         ]
       }
     }
-    
   },
   "mini_empty": {
     "dir_count": 1,
@@ -3194,7 +3024,6 @@
         ]
       }
     }
-    
   },
   "mini-light": {
     "dir_count": 1,
@@ -3211,7 +3040,6 @@
         ]
       }
     }
-    
   },
   "mini_charge_disable": {
     "dir_count": 1,
@@ -3228,7 +3056,6 @@
         ]
       }
     }
-    
   },
   "mini_charge_stun": {
     "dir_count": 1,
@@ -3245,7 +3072,6 @@
         ]
       }
     }
-    
   },
   "mini_charge_kill": {
     "dir_count": 1,
@@ -3262,7 +3088,6 @@
         ]
       }
     }
-    
   },
   "tesla": {
     "dir_count": 1,
@@ -3279,7 +3104,6 @@
         ]
       }
     }
-    
   },
   "tesla_charge1": {
     "dir_count": 1,
@@ -3296,7 +3120,6 @@
         ]
       }
     }
-    
   },
   "tesla_charge2": {
     "dir_count": 1,
@@ -3313,7 +3136,6 @@
         ]
       }
     }
-    
   },
   "tesla_charge3": {
     "dir_count": 1,
@@ -3330,7 +3152,6 @@
         ]
       }
     }
-    
   },
   "tesla_charge4": {
     "dir_count": 1,
@@ -3347,7 +3168,6 @@
         ]
       }
     }
-    
   },
   "tesla_empty": {
     "dir_count": 1,
@@ -3369,7 +3189,6 @@
         ]
       }
     }
-    
   },
   "gravity_gun": {
     "dir_count": 1,
@@ -3401,7 +3220,6 @@
         ]
       }
     }
-    
   },
   "meteor_gun": {
     "dir_count": 1,
@@ -3418,7 +3236,6 @@
         ]
       }
     }
-    
   },
   "esniper_empty": {
     "dir_count": 1,
@@ -3440,7 +3257,6 @@
         ]
       }
     }
-    
   },
   "esniper": {
     "dir_count": 1,
@@ -3457,7 +3273,6 @@
         ]
       }
     }
-    
   },
   "esniper_charged": {
     "dir_count": 1,
@@ -3599,7 +3414,6 @@
         ]
       }
     }
-    
   },
   "protolaser": {
     "dir_count": 1,
@@ -3616,7 +3430,6 @@
         ]
       }
     }
-    
   },
   "protolaser_stun": {
     "dir_count": 1,
@@ -3633,7 +3446,6 @@
         ]
       }
     }
-    
   },
   "protolaser_charge_stun": {
     "dir_count": 1,
@@ -3650,7 +3462,6 @@
         ]
       }
     }
-    
   },
   "protolaser_kill": {
     "dir_count": 1,
@@ -3667,7 +3478,6 @@
         ]
       }
     }
-    
   },
   "protolaser_charge_kill": {
     "dir_count": 1,
@@ -3684,7 +3494,6 @@
         ]
       }
     }
-    
   },
   "protolaser_empty": {
     "dir_count": 1,

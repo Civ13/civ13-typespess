@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "hierophant_club_beacon": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "hierophant_club_ready": {
     "dir_count": 4,
@@ -189,7 +187,6 @@
         ]
       }
     }
-    
   },
   "hierophant_club_ready_beacon": {
     "dir_count": 4,
@@ -293,7 +290,6 @@
         ]
       }
     }
-    
   },
   "cleaving_saw": {
     "dir_count": 4,
@@ -337,7 +333,6 @@
         ]
       }
     }
-    
   },
   "cleaving_saw_open": {
     "dir_count": 4,
@@ -381,7 +376,6 @@
         ]
       }
     }
-    
   },
   "cultblade": {
     "dir_count": 4,
@@ -485,7 +479,6 @@
         ]
       }
     }
-    
   },
   "cultblade_down": {
     "dir_count": 4,
@@ -589,7 +582,6 @@
         ]
       }
     }
-    
   },
   "cultbastard": {
     "dir_count": 4,

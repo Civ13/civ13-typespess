@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "light0": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "light-p": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "cell": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "hcell": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "h+cell": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "scell": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "hpcell": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "icell": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "bscell": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "cell-o1": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "cell-o2": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "term": {
     "dir_count": 4,
@@ -245,7 +233,6 @@
         ]
       }
     }
-    
   },
   "term-f": {
     "dir_count": 4,
@@ -289,7 +276,6 @@
         ]
       }
     }
-    
   },
   "coil": {
     "dir_count": 1,
@@ -306,7 +292,6 @@
         ]
       }
     }
-    
   },
   "coil2": {
     "dir_count": 1,
@@ -323,7 +308,6 @@
         ]
       }
     }
-    
   },
   "coil1": {
     "dir_count": 1,
@@ -340,7 +324,6 @@
         ]
       }
     }
-    
   },
   "wire": {
     "dir_count": 1,
@@ -357,7 +340,6 @@
         ]
       }
     }
-    
   },
   "wire2": {
     "dir_count": 1,
@@ -374,7 +356,6 @@
         ]
       }
     }
-    
   },
   "wire1": {
     "dir_count": 1,
@@ -391,7 +372,6 @@
         ]
       }
     }
-    
   },
   "solar_panel": {
     "dir_count": 8,
@@ -471,7 +451,6 @@
         ]
       }
     }
-    
   },
   "solar_panel-b": {
     "dir_count": 1,
@@ -488,7 +467,6 @@
         ]
       }
     }
-    
   },
   "sp_base": {
     "dir_count": 1,
@@ -505,7 +483,6 @@
         ]
       }
     }
-    
   },
   "ccharger": {
     "dir_count": 1,
@@ -522,7 +499,6 @@
         ]
       }
     }
-    
   },
   "ccharger-on": {
     "dir_count": 1,
@@ -539,7 +515,6 @@
         ]
       }
     }
-    
   },
   "ccharger-o0": {
     "dir_count": 1,
@@ -561,7 +536,6 @@
         ]
       }
     }
-    
   },
   "ccharger-o1": {
     "dir_count": 1,
@@ -583,7 +557,6 @@
         ]
       }
     }
-    
   },
   "ccharger-o2": {
     "dir_count": 1,
@@ -605,7 +578,6 @@
         ]
       }
     }
-    
   },
   "ccharger-o3": {
     "dir_count": 1,
@@ -627,7 +599,6 @@
         ]
       }
     }
-    
   },
   "ccharger-o4": {
     "dir_count": 1,
@@ -649,7 +620,6 @@
         ]
       }
     }
-    
   },
   "teg": {
     "dir_count": 1,
@@ -666,7 +636,6 @@
         ]
       }
     }
-    
   },
   "teg-op1": {
     "dir_count": 1,
@@ -683,7 +652,6 @@
         ]
       }
     }
-    
   },
   "teg-op2": {
     "dir_count": 1,
@@ -700,7 +668,6 @@
         ]
       }
     }
-    
   },
   "teg-op3": {
     "dir_count": 1,
@@ -717,7 +684,6 @@
         ]
       }
     }
-    
   },
   "teg-op4": {
     "dir_count": 1,
@@ -734,7 +700,6 @@
         ]
       }
     }
-    
   },
   "teg-op5": {
     "dir_count": 1,
@@ -751,7 +716,6 @@
         ]
       }
     }
-    
   },
   "teg-op6": {
     "dir_count": 1,
@@ -768,7 +732,6 @@
         ]
       }
     }
-    
   },
   "teg-broken": {
     "dir_count": 1,
@@ -785,7 +748,6 @@
         ]
       }
     }
-    
   },
   "teg-op7": {
     "dir_count": 1,
@@ -802,7 +764,6 @@
         ]
       }
     }
-    
   },
   "teg-op8": {
     "dir_count": 1,
@@ -819,7 +780,6 @@
         ]
       }
     }
-    
   },
   "teg-op9": {
     "dir_count": 1,
@@ -836,7 +796,6 @@
         ]
       }
     }
-    
   },
   "teg-op10": {
     "dir_count": 1,
@@ -853,7 +812,6 @@
         ]
       }
     }
-    
   },
   "teg-op11": {
     "dir_count": 1,
@@ -870,7 +828,6 @@
         ]
       }
     }
-    
   },
   "teg-oc00": {
     "dir_count": 1,
@@ -887,7 +844,6 @@
         ]
       }
     }
-    
   },
   "teg-oc10": {
     "dir_count": 1,
@@ -909,7 +865,6 @@
         ]
       }
     }
-    
   },
   "teg-oc01": {
     "dir_count": 1,
@@ -931,7 +886,6 @@
         ]
       }
     }
-    
   },
   "teg-oc11": {
     "dir_count": 1,
@@ -953,7 +907,6 @@
         ]
       }
     }
-    
   },
   "crema_switch": {
     "dir_count": 1,
@@ -970,7 +923,6 @@
         ]
       }
     }
-    
   },
   "portgen0legacy": {
     "dir_count": 1,
@@ -987,7 +939,6 @@
         ]
       }
     }
-    
   },
   "portgen1legacy": {
     "dir_count": 1,
@@ -1004,7 +955,6 @@
         ]
       }
     }
-    
   },
   "portgen2legacy": {
     "dir_count": 1,
@@ -1021,7 +971,6 @@
         ]
       }
     }
-    
   },
   "filter": {
     "dir_count": 1,
@@ -1038,7 +987,6 @@
         ]
       }
     }
-    
   },
   "tank": {
     "dir_count": 1,
@@ -1055,7 +1003,6 @@
         ]
       }
     }
-    
   },
   "tracker": {
     "dir_count": 8,
@@ -1135,7 +1082,6 @@
         ]
       }
     }
-    
   },
   "rtg": {
     "dir_count": 1,
@@ -1152,7 +1098,6 @@
         ]
       }
     }
-    
   },
   "rtg-open": {
     "dir_count": 1,
@@ -1169,7 +1114,6 @@
         ]
       }
     }
-    
   },
   "switch-dbl-down": {
     "dir_count": 1,
@@ -1186,7 +1130,6 @@
         ]
       }
     }
-    
   },
   "switch-dbl-up": {
     "dir_count": 1,
@@ -1203,7 +1146,6 @@
         ]
       }
     }
-    
   },
   "switch-down": {
     "dir_count": 1,
@@ -1220,7 +1162,6 @@
         ]
       }
     }
-    
   },
   "switch-up": {
     "dir_count": 1,
@@ -1237,7 +1178,6 @@
         ]
       }
     }
-    
   },
   "smes": {
     "dir_count": 1,
@@ -1254,7 +1194,6 @@
         ]
       }
     }
-    
   },
   "smes-og1": {
     "dir_count": 1,
@@ -1276,7 +1215,6 @@
         ]
       }
     }
-    
   },
   "smes-og2": {
     "dir_count": 1,
@@ -1293,7 +1231,6 @@
         ]
       }
     }
-    
   },
   "smes-og3": {
     "dir_count": 1,
@@ -1310,7 +1247,6 @@
         ]
       }
     }
-    
   },
   "smes-og4": {
     "dir_count": 1,
@@ -1327,7 +1263,6 @@
         ]
       }
     }
-    
   },
   "smes-og5": {
     "dir_count": 1,
@@ -1344,7 +1279,6 @@
         ]
       }
     }
-    
   },
   "smes-op0": {
     "dir_count": 1,
@@ -1361,7 +1295,6 @@
         ]
       }
     }
-    
   },
   "smes-op1": {
     "dir_count": 1,
@@ -1378,7 +1311,6 @@
         ]
       }
     }
-    
   },
   "smes-oc1": {
     "dir_count": 1,
@@ -1400,7 +1332,6 @@
         ]
       }
     }
-    
   },
   "smes-oc0": {
     "dir_count": 1,
@@ -1422,7 +1353,6 @@
         ]
       }
     }
-    
   },
   "smes-o": {
     "dir_count": 1,
@@ -1439,7 +1369,6 @@
         ]
       }
     }
-    
   },
   "grown_wires": {
     "dir_count": 1,
@@ -1456,7 +1385,6 @@
         ]
       }
     }
-    
   },
   "portgen0_0": {
     "dir_count": 1,
@@ -1473,7 +1401,6 @@
         ]
       }
     }
-    
   },
   "portgen0_1": {
     "dir_count": 1,
@@ -1590,7 +1517,6 @@
         ]
       }
     }
-    
   },
   "portgen1_0": {
     "dir_count": 1,
@@ -1607,7 +1533,6 @@
         ]
       }
     }
-    
   },
   "portgen1_1": {
     "dir_count": 1,
@@ -1724,7 +1649,6 @@
         ]
       }
     }
-    
   },
   "portgen2_0": {
     "dir_count": 1,
@@ -1741,7 +1665,6 @@
         ]
       }
     }
-    
   },
   "portgen2_1": {
     "dir_count": 1,
@@ -1858,7 +1781,6 @@
         ]
       }
     }
-    
   },
   "apc0": {
     "dir_count": 1,
@@ -1875,7 +1797,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco3-1": {
@@ -1918,7 +1839,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco3-0": {
@@ -1941,7 +1861,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco3-2": {
@@ -1964,7 +1883,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apc-spark": {
@@ -2012,7 +1930,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apcewires": {
@@ -2030,7 +1947,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apcemag": {
@@ -2053,7 +1969,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apc1": {
@@ -2071,7 +1986,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apc1-b-nocover": {
@@ -2089,7 +2003,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apc1-nocover": {
@@ -2107,7 +2020,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apc2": {
@@ -2125,7 +2037,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apc2-b-nocover": {
@@ -2143,7 +2054,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apc2-nocover": {
@@ -2161,7 +2071,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apc-b": {
@@ -2179,7 +2088,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apcmaint": {
@@ -2197,7 +2105,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apcox-0": {
@@ -2215,7 +2122,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apcox-1": {
@@ -2233,7 +2139,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco0-0": {
@@ -2251,7 +2156,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco0-1": {
@@ -2269,7 +2173,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco0-2": {
@@ -2287,7 +2190,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco0-3": {
@@ -2305,7 +2207,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco1-0": {
@@ -2323,7 +2224,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco1-1": {
@@ -2341,7 +2241,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco1-2": {
@@ -2359,7 +2258,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco1-3": {
@@ -2377,7 +2275,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco2-0": {
@@ -2395,7 +2292,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco2-1": {
@@ -2413,7 +2309,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco2-2": {
@@ -2431,7 +2326,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   },
   "apco2-3": {
@@ -2449,7 +2343,6 @@
         ]
       }
     },
-    ,
     "directional_offset": 24
   }
 }

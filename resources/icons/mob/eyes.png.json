@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "sun_thin": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "meson": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "thermal": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "material": {
     "dir_count": 4,
@@ -217,7 +213,6 @@
         ]
       }
     }
-    
   },
   "blindfold": {
     "dir_count": 4,
@@ -261,7 +256,6 @@
         ]
       }
     }
-    
   },
   "monocle_old": {
     "dir_count": 4,
@@ -305,7 +299,6 @@
         ]
       }
     }
-    
   },
   "eyepatch": {
     "dir_count": 4,
@@ -349,7 +342,6 @@
         ]
       }
     }
-    
   },
   "thermoncle": {
     "dir_count": 4,
@@ -393,7 +385,6 @@
         ]
       }
     }
-    
   },
   "laforge": {
     "dir_count": 4,
@@ -437,7 +428,6 @@
         ]
       }
     }
-    
   },
   "gglasses_thin": {
     "dir_count": 4,
@@ -481,7 +471,6 @@
         ]
       }
     }
-    
   },
   "night": {
     "dir_count": 4,
@@ -545,7 +534,6 @@
         ]
       }
     }
-    
   },
   "sun": {
     "dir_count": 4,
@@ -589,7 +577,6 @@
         ]
       }
     }
-    
   },
   "healthhud": {
     "dir_count": 4,
@@ -633,7 +620,6 @@
         ]
       }
     }
-    
   },
   "securityhud": {
     "dir_count": 4,
@@ -677,7 +663,6 @@
         ]
       }
     }
-    
   },
   "monocle": {
     "dir_count": 4,
@@ -721,7 +706,6 @@
         ]
       }
     }
-    
   },
   "sunhudsec": {
     "dir_count": 4,
@@ -765,7 +749,6 @@
         ]
       }
     }
-    
   },
   "purple": {
     "dir_count": 4,
@@ -809,7 +792,6 @@
         ]
       }
     }
-    
   },
   "thermalimplants": {
     "dir_count": 4,
@@ -853,7 +835,6 @@
         ]
       }
     }
-    
   },
   "jensenshades": {
     "dir_count": 4,
@@ -897,7 +878,6 @@
         ]
       }
     }
-    
   },
   "bigsunglasses": {
     "dir_count": 4,
@@ -941,7 +921,6 @@
         ]
       }
     }
-    
   },
   "welding-g": {
     "dir_count": 4,
@@ -985,7 +964,6 @@
         ]
       }
     }
-    
   },
   "welding-gup": {
     "dir_count": 4,
@@ -1029,7 +1007,6 @@
         ]
       }
     }
-    
   },
   "healthhudnight": {
     "dir_count": 4,
@@ -1093,7 +1070,6 @@
         ]
       }
     }
-    
   },
   "securityhudnight": {
     "dir_count": 4,
@@ -1157,7 +1133,6 @@
         ]
       }
     }
-    
   },
   "hudpatch": {
     "dir_count": 4,
@@ -1201,7 +1176,6 @@
         ]
       }
     }
-    
   },
   "nvgmeson": {
     "dir_count": 4,
@@ -1345,7 +1319,6 @@
         ]
       }
     }
-    
   },
   "cold": {
     "dir_count": 4,
@@ -1389,7 +1362,6 @@
         ]
       }
     }
-    
   },
   "heat": {
     "dir_count": 4,
@@ -1433,7 +1405,6 @@
         ]
       }
     }
-    
   },
   "garb": {
     "dir_count": 4,
@@ -1477,7 +1448,6 @@
         ]
       }
     }
-    
   },
   "gars": {
     "dir_count": 4,
@@ -1521,7 +1491,6 @@
         ]
       }
     }
-    
   },
   "supergarb": {
     "dir_count": 4,
@@ -1565,7 +1534,6 @@
         ]
       }
     }
-    
   },
   "supergars": {
     "dir_count": 4,
@@ -1609,7 +1577,6 @@
         ]
       }
     }
-    
   },
   "gar": {
     "dir_count": 4,
@@ -1653,7 +1620,6 @@
         ]
       }
     }
-    
   },
   "garm": {
     "dir_count": 4,
@@ -1697,7 +1663,6 @@
         ]
       }
     }
-    
   },
   "supergar": {
     "dir_count": 4,
@@ -1741,7 +1706,6 @@
         ]
       }
     }
-    
   },
   "diagnostichudnight": {
     "dir_count": 4,
@@ -1805,7 +1769,6 @@
         ]
       }
     }
-    
   },
   "diagnostichud": {
     "dir_count": 4,
@@ -1849,7 +1812,6 @@
         ]
       }
     }
-    
   },
   "wraith_specs": {
     "dir_count": 4,
@@ -1893,7 +1855,6 @@
         ]
       }
     }
-    
   },
   "wraith_specsup": {
     "dir_count": 4,
@@ -1937,7 +1898,6 @@
         ]
       }
     }
-    
   },
   "judicial_visor_0": {
     "dir_count": 4,
@@ -1981,7 +1941,6 @@
         ]
       }
     }
-    
   },
   "judicial_visor_1": {
     "dir_count": 4,
@@ -2025,7 +1984,6 @@
         ]
       }
     }
-    
   },
   "godeye": {
     "dir_count": 4,
@@ -2369,7 +2327,6 @@
         ]
       }
     }
-    
   },
   "doublegodeye": {
     "dir_count": 4,
@@ -2713,7 +2670,6 @@
         ]
       }
     }
-    
   },
   "orangeglasses": {
     "dir_count": 4,
@@ -2757,7 +2713,6 @@
         ]
       }
     }
-    
   },
   "glasses": {
     "dir_count": 4,
@@ -2801,7 +2756,6 @@
         ]
       }
     }
-    
   },
   "hipster_glasses": {
     "dir_count": 4,
@@ -2845,7 +2799,6 @@
         ]
       }
     }
-    
   },
   "medsechud": {
     "dir_count": 4,
@@ -2909,7 +2862,6 @@
         ]
       }
     }
-    
   },
   "redglasses": {
     "dir_count": 4,
@@ -3013,7 +2965,6 @@
         ]
       }
     }
-    
   },
   "sunhudmed": {
     "dir_count": 4,
@@ -3057,7 +3008,6 @@
         ]
       }
     }
-    
   },
   "jamjar_glasses": {
     "dir_count": 4,
@@ -3101,7 +3051,6 @@
         ]
       }
     }
-    
   },
   "trayson-": {
     "dir_count": 4,
@@ -3145,7 +3094,6 @@
         ]
       }
     }
-    
   },
   "trayson-meson": {
     "dir_count": 4,
@@ -3189,7 +3137,6 @@
         ]
       }
     }
-    
   },
   "trayson-t-ray": {
     "dir_count": 4,
@@ -3233,7 +3180,6 @@
         ]
       }
     }
-    
   },
   "trayson-radiation": {
     "dir_count": 4,

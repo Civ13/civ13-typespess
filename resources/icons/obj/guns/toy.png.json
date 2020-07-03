@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "pistol": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "pistol-e": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "pistol-suppressed": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "pistol-e-suppressed": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "saber": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "saber-e": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "saber-20": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "saber-20-e": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "saber-suppressed": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "saber-e-suppressed": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "saber-20-suppressed": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "saber-20-e-suppressed": {
     "dir_count": 1,
@@ -218,7 +206,6 @@
         ]
       }
     }
-    
   },
   "c20r": {
     "dir_count": 1,
@@ -235,7 +222,6 @@
         ]
       }
     }
-    
   },
   "c20r-e": {
     "dir_count": 1,
@@ -252,7 +238,6 @@
         ]
       }
     }
-    
   },
   "c20r-20": {
     "dir_count": 1,
@@ -269,7 +254,6 @@
         ]
       }
     }
-    
   },
   "c20r-16": {
     "dir_count": 1,
@@ -286,7 +270,6 @@
         ]
       }
     }
-    
   },
   "c20r-12": {
     "dir_count": 1,
@@ -303,7 +286,6 @@
         ]
       }
     }
-    
   },
   "c20r-8": {
     "dir_count": 1,
@@ -320,7 +302,6 @@
         ]
       }
     }
-    
   },
   "c20r-4": {
     "dir_count": 1,
@@ -337,7 +318,6 @@
         ]
       }
     }
-    
   },
   "c20r-0": {
     "dir_count": 1,
@@ -354,7 +334,6 @@
         ]
       }
     }
-    
   },
   "c20r-0-e": {
     "dir_count": 1,
@@ -371,7 +350,6 @@
         ]
       }
     }
-    
   },
   "c20r-suppressed": {
     "dir_count": 1,
@@ -388,7 +366,6 @@
         ]
       }
     }
-    
   },
   "c20r-e-suppressed": {
     "dir_count": 1,
@@ -405,7 +382,6 @@
         ]
       }
     }
-    
   },
   "c20r-20-suppressed": {
     "dir_count": 1,
@@ -422,7 +398,6 @@
         ]
       }
     }
-    
   },
   "c20r-16-suppressed": {
     "dir_count": 1,
@@ -439,7 +414,6 @@
         ]
       }
     }
-    
   },
   "c20r-12-suppressed": {
     "dir_count": 1,
@@ -456,7 +430,6 @@
         ]
       }
     }
-    
   },
   "c20r-8-suppressed": {
     "dir_count": 1,
@@ -473,7 +446,6 @@
         ]
       }
     }
-    
   },
   "c20r-4-suppressed": {
     "dir_count": 1,
@@ -490,7 +462,6 @@
         ]
       }
     }
-    
   },
   "c20r-0-suppressed": {
     "dir_count": 1,
@@ -507,7 +478,6 @@
         ]
       }
     }
-    
   },
   "c20r-0-e-suppressed": {
     "dir_count": 1,
@@ -524,7 +494,6 @@
         ]
       }
     }
-    
   },
   "l6closed100": {
     "dir_count": 1,
@@ -541,7 +510,6 @@
         ]
       }
     }
-    
   },
   "l6closed75": {
     "dir_count": 1,
@@ -558,7 +526,6 @@
         ]
       }
     }
-    
   },
   "l6closed50": {
     "dir_count": 1,
@@ -575,7 +542,6 @@
         ]
       }
     }
-    
   },
   "l6closed25": {
     "dir_count": 1,
@@ -592,7 +558,6 @@
         ]
       }
     }
-    
   },
   "l6closed0": {
     "dir_count": 1,
@@ -609,7 +574,6 @@
         ]
       }
     }
-    
   },
   "l6closed-empty": {
     "dir_count": 1,
@@ -626,7 +590,6 @@
         ]
       }
     }
-    
   },
   "l6open-empty": {
     "dir_count": 1,
@@ -643,7 +606,6 @@
         ]
       }
     }
-    
   },
   "l6open100": {
     "dir_count": 1,
@@ -660,7 +622,6 @@
         ]
       }
     }
-    
   },
   "l6open75": {
     "dir_count": 1,
@@ -677,7 +638,6 @@
         ]
       }
     }
-    
   },
   "l6open50": {
     "dir_count": 1,
@@ -694,7 +654,6 @@
         ]
       }
     }
-    
   },
   "l6open25": {
     "dir_count": 1,
@@ -711,7 +670,6 @@
         ]
       }
     }
-    
   },
   "l6open0": {
     "dir_count": 1,
@@ -728,7 +686,6 @@
         ]
       }
     }
-    
   },
   "foamdart_proj": {
     "dir_count": 1,
@@ -745,7 +702,6 @@
         ]
       }
     }
-    
   },
   "foamdart_riot_proj": {
     "dir_count": 1,
@@ -762,7 +718,6 @@
         ]
       }
     }
-    
   },
   "foamdart_empty_proj": {
     "dir_count": 1,
@@ -779,7 +734,6 @@
         ]
       }
     }
-    
   },
   "foambox": {
     "dir_count": 1,
@@ -796,7 +750,6 @@
         ]
       }
     }
-    
   },
   "foambox_riot": {
     "dir_count": 1,
@@ -813,7 +766,6 @@
         ]
       }
     }
-    
   },
   "sabersemi": {
     "dir_count": 1,
@@ -830,7 +782,6 @@
         ]
       }
     }
-    
   },
   "saberburst": {
     "dir_count": 1,
@@ -847,7 +798,6 @@
         ]
       }
     }
-    
   },
   "c20rsemi": {
     "dir_count": 1,
@@ -864,7 +814,6 @@
         ]
       }
     }
-    
   },
   "c20rburst": {
     "dir_count": 1,
@@ -881,7 +830,6 @@
         ]
       }
     }
-    
   },
   "foamdart": {
     "dir_count": 4,
@@ -925,7 +873,6 @@
         ]
       }
     }
-    
   },
   "foamdart_riot": {
     "dir_count": 4,
@@ -969,7 +916,6 @@
         ]
       }
     }
-    
   },
   "foamdart_empty": {
     "dir_count": 4,

@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "advtaserstun0": {
     "dir_count": 4,
@@ -105,7 +104,6 @@
         ]
       }
     }
-    
   },
   "advtaserstun1": {
     "dir_count": 4,
@@ -149,7 +147,6 @@
         ]
       }
     }
-    
   },
   "advtaserstun2": {
     "dir_count": 4,
@@ -193,7 +190,6 @@
         ]
       }
     }
-    
   },
   "advtaserstun3": {
     "dir_count": 4,
@@ -237,7 +233,6 @@
         ]
       }
     }
-    
   },
   "advtaserstun4": {
     "dir_count": 4,
@@ -281,7 +276,6 @@
         ]
       }
     }
-    
   },
   "advtaserdisable0": {
     "dir_count": 4,
@@ -345,7 +339,6 @@
         ]
       }
     }
-    
   },
   "advtaserdisable1": {
     "dir_count": 4,
@@ -389,7 +382,6 @@
         ]
       }
     }
-    
   },
   "advtaserdisable2": {
     "dir_count": 4,
@@ -433,7 +425,6 @@
         ]
       }
     }
-    
   },
   "advtaserdisable3": {
     "dir_count": 4,
@@ -477,7 +468,6 @@
         ]
       }
     }
-    
   },
   "advtaserdisable4": {
     "dir_count": 4,
@@ -521,7 +511,6 @@
         ]
       }
     }
-    
   },
   "disabler0": {
     "dir_count": 4,
@@ -565,7 +554,6 @@
         ]
       }
     }
-    
   },
   "disabler1": {
     "dir_count": 4,
@@ -609,7 +597,6 @@
         ]
       }
     }
-    
   },
   "disabler2": {
     "dir_count": 4,
@@ -653,7 +640,6 @@
         ]
       }
     }
-    
   },
   "disabler3": {
     "dir_count": 4,
@@ -697,7 +683,6 @@
         ]
       }
     }
-    
   },
   "disabler4": {
     "dir_count": 4,
@@ -741,7 +726,6 @@
         ]
       }
     }
-    
   },
   "deagleg": {
     "dir_count": 4,
@@ -785,7 +769,6 @@
         ]
       }
     }
-    
   },
   "l6closedmag": {
     "dir_count": 4,
@@ -829,7 +812,6 @@
         ]
       }
     }
-    
   },
   "l6openmag": {
     "dir_count": 4,
@@ -873,7 +855,6 @@
         ]
       }
     }
-    
   },
   "l6closednomag": {
     "dir_count": 4,
@@ -917,7 +898,6 @@
         ]
       }
     }
-    
   },
   "l6opennomag": {
     "dir_count": 4,
@@ -961,7 +941,6 @@
         ]
       }
     }
-    
   },
   "chronogun": {
     "dir_count": 4,
@@ -1005,7 +984,6 @@
         ]
       }
     }
-    
   },
   "kineticgun": {
     "dir_count": 4,
@@ -1049,7 +1027,6 @@
         ]
       }
     }
-    
   },
   "moistnugget": {
     "dir_count": 4,
@@ -1093,7 +1070,6 @@
         ]
       }
     }
-    
   },
   "m90": {
     "dir_count": 4,
@@ -1137,7 +1113,6 @@
         ]
       }
     }
-    
   },
   "syringegun": {
     "dir_count": 4,
@@ -1181,7 +1156,6 @@
         ]
       }
     }
-    
   },
   "shotgun": {
     "dir_count": 4,
@@ -1225,7 +1199,6 @@
         ]
       }
     }
-    
   },
   "wormhole_projector1": {
     "dir_count": 4,
@@ -1269,7 +1242,6 @@
         ]
       }
     }
-    
   },
   "wormhole_projector2": {
     "dir_count": 4,
@@ -1313,7 +1285,6 @@
         ]
       }
     }
-    
   },
   "taser0": {
     "dir_count": 4,
@@ -1377,7 +1348,6 @@
         ]
       }
     }
-    
   },
   "taser1": {
     "dir_count": 4,
@@ -1421,7 +1391,6 @@
         ]
       }
     }
-    
   },
   "taser2": {
     "dir_count": 4,
@@ -1465,7 +1434,6 @@
         ]
       }
     }
-    
   },
   "taser3": {
     "dir_count": 4,
@@ -1509,7 +1477,6 @@
         ]
       }
     }
-    
   },
   "taser4": {
     "dir_count": 4,
@@ -1553,7 +1520,6 @@
         ]
       }
     }
-    
   },
   "bulldog": {
     "dir_count": 4,
@@ -1597,7 +1563,6 @@
         ]
       }
     }
-    
   },
   "c20r": {
     "dir_count": 4,
@@ -1641,7 +1606,6 @@
         ]
       }
     }
-    
   },
   "ionrifle4": {
     "dir_count": 4,
@@ -1685,7 +1649,6 @@
         ]
       }
     }
-    
   },
   "ionrifle3": {
     "dir_count": 4,
@@ -1729,7 +1692,6 @@
         ]
       }
     }
-    
   },
   "ionrifle2": {
     "dir_count": 4,
@@ -1773,7 +1735,6 @@
         ]
       }
     }
-    
   },
   "ionrifle1": {
     "dir_count": 4,
@@ -1817,7 +1778,6 @@
         ]
       }
     }
-    
   },
   "ionrifle0": {
     "dir_count": 4,
@@ -1881,7 +1841,6 @@
         ]
       }
     }
-    
   },
   "nucgun": {
     "dir_count": 4,
@@ -1925,7 +1884,6 @@
         ]
       }
     }
-    
   },
   "riotgun": {
     "dir_count": 4,
@@ -1969,7 +1927,6 @@
         ]
       }
     }
-    
   },
   "laser": {
     "dir_count": 4,
@@ -2013,7 +1970,6 @@
         ]
       }
     }
-    
   },
   "energykill0": {
     "dir_count": 4,
@@ -2077,7 +2033,6 @@
         ]
       }
     }
-    
   },
   "energykill1": {
     "dir_count": 4,
@@ -2121,7 +2076,6 @@
         ]
       }
     }
-    
   },
   "energykill2": {
     "dir_count": 4,
@@ -2165,7 +2119,6 @@
         ]
       }
     }
-    
   },
   "energykill3": {
     "dir_count": 4,
@@ -2209,7 +2162,6 @@
         ]
       }
     }
-    
   },
   "energykill4": {
     "dir_count": 4,
@@ -2253,7 +2205,6 @@
         ]
       }
     }
-    
   },
   "energydisable4": {
     "dir_count": 4,
@@ -2297,7 +2248,6 @@
         ]
       }
     }
-    
   },
   "energydisable3": {
     "dir_count": 4,
@@ -2341,7 +2291,6 @@
         ]
       }
     }
-    
   },
   "energydisable2": {
     "dir_count": 4,
@@ -2385,7 +2334,6 @@
         ]
       }
     }
-    
   },
   "energydisable1": {
     "dir_count": 4,
@@ -2429,7 +2377,6 @@
         ]
       }
     }
-    
   },
   "energydisable0": {
     "dir_count": 4,
@@ -2493,7 +2440,6 @@
         ]
       }
     }
-    
   },
   "energystun4": {
     "dir_count": 4,
@@ -2537,7 +2483,6 @@
         ]
       }
     }
-    
   },
   "energystun3": {
     "dir_count": 4,
@@ -2581,7 +2526,6 @@
         ]
       }
     }
-    
   },
   "energystun2": {
     "dir_count": 4,
@@ -2625,7 +2569,6 @@
         ]
       }
     }
-    
   },
   "energystun1": {
     "dir_count": 4,
@@ -2669,7 +2612,6 @@
         ]
       }
     }
-    
   },
   "energystun0": {
     "dir_count": 4,
@@ -2733,7 +2675,6 @@
         ]
       }
     }
-    
   },
   "crossbow": {
     "dir_count": 4,
@@ -2777,7 +2718,6 @@
         ]
       }
     }
-    
   },
   "gun": {
     "dir_count": 4,
@@ -2821,7 +2761,6 @@
         ]
       }
     }
-    
   },
   "energytackill0": {
     "dir_count": 4,
@@ -2885,7 +2824,6 @@
         ]
       }
     }
-    
   },
   "energytackill1": {
     "dir_count": 4,
@@ -2929,7 +2867,6 @@
         ]
       }
     }
-    
   },
   "energytackill2": {
     "dir_count": 4,
@@ -2973,7 +2910,6 @@
         ]
       }
     }
-    
   },
   "energytackill3": {
     "dir_count": 4,
@@ -3017,7 +2953,6 @@
         ]
       }
     }
-    
   },
   "energytackill4": {
     "dir_count": 4,
@@ -3061,7 +2996,6 @@
         ]
       }
     }
-    
   },
   "energytacdisable4": {
     "dir_count": 4,
@@ -3105,7 +3039,6 @@
         ]
       }
     }
-    
   },
   "energytacdisable3": {
     "dir_count": 4,
@@ -3149,7 +3082,6 @@
         ]
       }
     }
-    
   },
   "energytacdisable2": {
     "dir_count": 4,
@@ -3193,7 +3125,6 @@
         ]
       }
     }
-    
   },
   "energytacdisable1": {
     "dir_count": 4,
@@ -3237,7 +3168,6 @@
         ]
       }
     }
-    
   },
   "energytacdisable0": {
     "dir_count": 4,
@@ -3301,7 +3231,6 @@
         ]
       }
     }
-    
   },
   "energytacstun4": {
     "dir_count": 4,
@@ -3345,7 +3274,6 @@
         ]
       }
     }
-    
   },
   "energytacstun3": {
     "dir_count": 4,
@@ -3389,7 +3317,6 @@
         ]
       }
     }
-    
   },
   "energytacstun2": {
     "dir_count": 4,
@@ -3433,7 +3360,6 @@
         ]
       }
     }
-    
   },
   "energytacstun1": {
     "dir_count": 4,
@@ -3477,7 +3403,6 @@
         ]
       }
     }
-    
   },
   "energytacstun0": {
     "dir_count": 4,
@@ -3541,7 +3466,6 @@
         ]
       }
     }
-    
   },
   "caplaser": {
     "dir_count": 4,
@@ -3585,7 +3509,6 @@
         ]
       }
     }
-    
   },
   "pulseDESTROY0": {
     "dir_count": 4,
@@ -3649,7 +3572,6 @@
         ]
       }
     }
-    
   },
   "pulseDESTROY1": {
     "dir_count": 4,
@@ -3693,7 +3615,6 @@
         ]
       }
     }
-    
   },
   "pulseDESTROY2": {
     "dir_count": 4,
@@ -3737,7 +3658,6 @@
         ]
       }
     }
-    
   },
   "pulseDESTROY3": {
     "dir_count": 4,
@@ -3781,7 +3701,6 @@
         ]
       }
     }
-    
   },
   "pulseDESTROY4": {
     "dir_count": 4,
@@ -3825,7 +3744,6 @@
         ]
       }
     }
-    
   },
   "pulsestun0": {
     "dir_count": 4,
@@ -3889,7 +3807,6 @@
         ]
       }
     }
-    
   },
   "pulsestun1": {
     "dir_count": 4,
@@ -3933,7 +3850,6 @@
         ]
       }
     }
-    
   },
   "pulsestun2": {
     "dir_count": 4,
@@ -3977,7 +3893,6 @@
         ]
       }
     }
-    
   },
   "pulsestun3": {
     "dir_count": 4,
@@ -4021,7 +3936,6 @@
         ]
       }
     }
-    
   },
   "pulsestun4": {
     "dir_count": 4,
@@ -4065,7 +3979,6 @@
         ]
       }
     }
-    
   },
   "pulsekill0": {
     "dir_count": 4,
@@ -4129,7 +4042,6 @@
         ]
       }
     }
-    
   },
   "pulsekill1": {
     "dir_count": 4,
@@ -4173,7 +4085,6 @@
         ]
       }
     }
-    
   },
   "pulsekill2": {
     "dir_count": 4,
@@ -4217,7 +4128,6 @@
         ]
       }
     }
-    
   },
   "pulsekill3": {
     "dir_count": 4,
@@ -4261,7 +4171,6 @@
         ]
       }
     }
-    
   },
   "pulsekill4": {
     "dir_count": 4,
@@ -4305,7 +4214,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbineDESTROY0": {
     "dir_count": 4,
@@ -4369,7 +4277,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbineDESTROY1": {
     "dir_count": 4,
@@ -4413,7 +4320,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbineDESTROY2": {
     "dir_count": 4,
@@ -4457,7 +4363,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbineDESTROY3": {
     "dir_count": 4,
@@ -4501,7 +4406,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbineDESTROY4": {
     "dir_count": 4,
@@ -4545,7 +4449,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbinestun0": {
     "dir_count": 4,
@@ -4609,7 +4512,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbinestun1": {
     "dir_count": 4,
@@ -4653,7 +4555,6 @@
         ]
       }
     }
-    
   },
   "pulse_carbinestun2": {
     "dir_count": 4,
@@ -4696,8 +4597,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "pulse_carbinestun3": {
     "dir_count": 4,
@@ -4740,8 +4640,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "pulse_carbinestun4": {
     "dir_count": 4,
@@ -4784,8 +4683,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "pulse_carbinekill0": {
     "dir_count": 4,
@@ -4848,8 +4746,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "pulse_carbinekill1": {
     "dir_count": 4,
@@ -4892,8 +4789,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "pulse_carbinekill2": {
     "dir_count": 4,
@@ -4936,8 +4832,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "pulse_carbinekill3": {
     "dir_count": 4,
@@ -4980,8 +4875,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "pulse_carbinekill4": {
     "dir_count": 4,
@@ -5087,8 +4981,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "ioncarbine1": {
     "dir_count": 4,
@@ -5131,8 +5024,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "ioncarbine2": {
     "dir_count": 4,
@@ -5175,8 +5067,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "ioncarbine3": {
     "dir_count": 4,
@@ -5219,8 +5110,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "ioncarbine4": {
     "dir_count": 4,
@@ -5263,8 +5153,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "turretlaser": {
     "dir_count": 4,
@@ -5307,8 +5196,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserstun4": {
     "dir_count": 4,
@@ -5351,8 +5239,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserstun3": {
     "dir_count": 4,
@@ -5395,8 +5282,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserstun2": {
     "dir_count": 4,
@@ -5439,8 +5325,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserstun1": {
     "dir_count": 4,
@@ -5483,8 +5368,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserstun0": {
     "dir_count": 4,
@@ -5527,8 +5411,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserkill4": {
     "dir_count": 4,
@@ -5571,8 +5454,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserkill3": {
     "dir_count": 4,
@@ -5615,8 +5497,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserkill2": {
     "dir_count": 4,
@@ -5659,8 +5540,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserkill1": {
     "dir_count": 4,
@@ -5703,8 +5583,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserkill0": {
     "dir_count": 4,
@@ -5747,8 +5626,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserdisable4": {
     "dir_count": 4,
@@ -5791,8 +5669,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserdisable3": {
     "dir_count": 4,
@@ -5835,8 +5712,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserdisable2": {
     "dir_count": 4,
@@ -5879,8 +5755,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserdisable1": {
     "dir_count": 4,
@@ -5923,8 +5798,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "hoslaserdisable0": {
     "dir_count": 4,
@@ -5967,8 +5841,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "plasmacutter": {
     "dir_count": 4,
@@ -6011,8 +5884,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "alienpistol": {
     "dir_count": 4,
@@ -6055,8 +5927,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "arg": {
     "dir_count": 4,
@@ -6099,8 +5970,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "sniper": {
     "dir_count": 4,
@@ -6143,8 +6013,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannonstun0": {
     "dir_count": 4,
@@ -6207,8 +6076,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannonstun1": {
     "dir_count": 4,
@@ -6251,8 +6119,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannonstun2": {
     "dir_count": 4,
@@ -6295,8 +6162,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannonstun3": {
     "dir_count": 4,
@@ -6339,8 +6205,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannonstun4": {
     "dir_count": 4,
@@ -6383,8 +6248,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannondisable0": {
     "dir_count": 4,
@@ -6447,8 +6311,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannondisable1": {
     "dir_count": 4,
@@ -6491,8 +6354,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannondisable2": {
     "dir_count": 4,
@@ -6535,8 +6397,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannondisable3": {
     "dir_count": 4,
@@ -6579,8 +6440,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannondisable4": {
     "dir_count": 4,
@@ -6623,8 +6483,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "armcannonlase": {
     "dir_count": 4,
@@ -6667,8 +6526,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "instagibred": {
     "dir_count": 4,
@@ -6711,8 +6569,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "instagib": {
     "dir_count": 4,
@@ -6755,8 +6612,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "instagibblue": {
     "dir_count": 4,
@@ -6799,8 +6655,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "xray0": {
     "dir_count": 4,
@@ -6863,8 +6718,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "xray1": {
     "dir_count": 4,
@@ -6907,8 +6761,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "xray2": {
     "dir_count": 4,
@@ -6951,8 +6804,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "xray3": {
     "dir_count": 4,
@@ -6995,8 +6847,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "xray4": {
     "dir_count": 4,
@@ -7039,8 +6890,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "minigun": {
     "dir_count": 4,
@@ -7083,8 +6933,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "tesla": {
     "dir_count": 4,
@@ -7127,8 +6976,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "gravity_gun": {
     "dir_count": 4,
@@ -7171,8 +7019,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "bow": {
     "dir_count": 4,
@@ -7215,8 +7062,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "bow_hardlight": {
     "dir_count": 4,
@@ -7259,8 +7105,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "arcane_barrage": {
     "dir_count": 4,
@@ -7343,8 +7188,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "rocketlauncher": {
     "dir_count": 4,
@@ -7387,8 +7231,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "blastcannon_empty": {
     "dir_count": 4,
@@ -7431,8 +7274,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "esniper": {
     "dir_count": 4,
@@ -7475,8 +7317,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserstun4": {
     "dir_count": 4,
@@ -7519,8 +7360,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserstun3": {
     "dir_count": 4,
@@ -7563,8 +7403,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserstun2": {
     "dir_count": 4,
@@ -7607,8 +7446,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserstun1": {
     "dir_count": 4,
@@ -7651,8 +7489,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserstun0": {
     "dir_count": 4,
@@ -7715,8 +7552,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserkill0": {
     "dir_count": 4,
@@ -7779,8 +7615,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserkill1": {
     "dir_count": 4,
@@ -7823,8 +7658,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserkill2": {
     "dir_count": 4,
@@ -7867,8 +7701,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserkill3": {
     "dir_count": 4,
@@ -7911,8 +7744,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "protolaserkill4": {
     "dir_count": 4,
@@ -7955,8 +7787,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "chemsprayer": {
     "dir_count": 4,
@@ -7999,8 +7830,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "dragnet": {
     "dir_count": 4,
@@ -8043,7 +7873,6 @@
           }
         ]
       }
-    },
-    
+    }
   }
 }

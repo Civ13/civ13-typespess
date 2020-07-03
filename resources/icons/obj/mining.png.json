@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "orebox": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "bin": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "bin_partial": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "bin_full": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "deploycrate": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "rail": {
     "dir_count": 8,
@@ -179,7 +173,6 @@
         ]
       }
     }
-    
   },
   "rail_intersection": {
     "dir_count": 8,
@@ -259,7 +252,6 @@
         ]
       }
     }
-    
   },
   "rail_intersection_NSE": {
     "dir_count": 8,
@@ -339,7 +331,6 @@
         ]
       }
     }
-    
   },
   "rail_intersection_SEW": {
     "dir_count": 8,
@@ -419,7 +410,6 @@
         ]
       }
     }
-    
   },
   "rail_intersection_NSW": {
     "dir_count": 8,
@@ -499,7 +489,6 @@
         ]
       }
     }
-    
   },
   "rail_intersection_NEW": {
     "dir_count": 8,
@@ -579,7 +568,6 @@
         ]
       }
     }
-    
   },
   "gigadrill_mov": {
     "dir_count": 4,
@@ -683,7 +671,6 @@
         ]
       }
     }
-    
   },
   "gigadrill": {
     "dir_count": 4,
@@ -727,7 +714,6 @@
         ]
       }
     }
-    
   },
   " ": {
     "dir_count": 1,
@@ -744,7 +730,6 @@
         ]
       }
     }
-    
   },
   "Adamantine ore": {
     "dir_count": 1,
@@ -761,7 +746,6 @@
         ]
       }
     }
-    
   },
   "Clown ore": {
     "dir_count": 1,
@@ -778,7 +762,6 @@
         ]
       }
     }
-    
   },
   "Diamond ore": {
     "dir_count": 1,
@@ -795,7 +778,6 @@
         ]
       }
     }
-    
   },
   "Glass ore": {
     "dir_count": 1,
@@ -812,7 +794,6 @@
         ]
       }
     }
-    
   },
   "Gold ore": {
     "dir_count": 1,
@@ -829,7 +810,6 @@
         ]
       }
     }
-    
   },
   "Iron ore": {
     "dir_count": 1,
@@ -846,7 +826,6 @@
         ]
       }
     }
-    
   },
   "ore": {
     "dir_count": 1,
@@ -863,7 +842,6 @@
         ]
       }
     }
-    
   },
   "Plasma ore": {
     "dir_count": 1,
@@ -880,7 +858,6 @@
         ]
       }
     }
-    
   },
   "Silver ore": {
     "dir_count": 1,
@@ -897,7 +874,6 @@
         ]
       }
     }
-    
   },
   "slag": {
     "dir_count": 1,
@@ -914,7 +890,6 @@
         ]
       }
     }
-    
   },
   "Uranium ore": {
     "dir_count": 1,
@@ -931,7 +906,6 @@
         ]
       }
     }
-    
   },
   "Green lump": {
     "dir_count": 1,
@@ -948,7 +922,6 @@
         ]
       }
     }
-    
   },
   "Phazon": {
     "dir_count": 1,
@@ -965,7 +938,6 @@
         ]
       }
     }
-    
   },
   "sheet-sandstone": {
     "dir_count": 1,
@@ -982,7 +954,6 @@
         ]
       }
     }
-    
   },
   "sheet-sandstone_2": {
     "dir_count": 1,
@@ -999,7 +970,6 @@
         ]
       }
     }
-    
   },
   "sheet-sandstone_3": {
     "dir_count": 1,
@@ -1016,7 +986,6 @@
         ]
       }
     }
-    
   },
   "sheet-diamond": {
     "dir_count": 1,
@@ -1033,7 +1002,6 @@
         ]
       }
     }
-    
   },
   "sheet-gold": {
     "dir_count": 1,
@@ -1050,7 +1018,6 @@
         ]
       }
     }
-    
   },
   "sheet-gold_2": {
     "dir_count": 1,
@@ -1067,7 +1034,6 @@
         ]
       }
     }
-    
   },
   "sheet-gold_3": {
     "dir_count": 1,
@@ -1084,7 +1050,6 @@
         ]
       }
     }
-    
   },
   "sheet-uranium": {
     "dir_count": 1,
@@ -1101,7 +1066,6 @@
         ]
       }
     }
-    
   },
   "sheet-plasma": {
     "dir_count": 1,
@@ -1118,7 +1082,6 @@
         ]
       }
     }
-    
   },
   "sheet-plasma_2": {
     "dir_count": 1,
@@ -1135,7 +1098,6 @@
         ]
       }
     }
-    
   },
   "sheet-plasma_3": {
     "dir_count": 1,
@@ -1152,7 +1114,6 @@
         ]
       }
     }
-    
   },
   "sheet-silver": {
     "dir_count": 1,
@@ -1169,7 +1130,6 @@
         ]
       }
     }
-    
   },
   "sheet-silver_2": {
     "dir_count": 1,
@@ -1186,7 +1146,6 @@
         ]
       }
     }
-    
   },
   "sheet-silver_3": {
     "dir_count": 1,
@@ -1203,7 +1162,6 @@
         ]
       }
     }
-    
   },
   "sheet-adamantine": {
     "dir_count": 1,
@@ -1220,7 +1178,6 @@
         ]
       }
     }
-    
   },
   "sheet-adamantine_2": {
     "dir_count": 1,
@@ -1237,7 +1194,6 @@
         ]
       }
     }
-    
   },
   "sheet-adamantine_3": {
     "dir_count": 1,
@@ -1254,7 +1210,6 @@
         ]
       }
     }
-    
   },
   "sheet-clown": {
     "dir_count": 1,
@@ -1271,7 +1226,6 @@
         ]
       }
     }
-    
   },
   "sheet-mythril": {
     "dir_count": 1,
@@ -1288,7 +1242,6 @@
         ]
       }
     }
-    
   },
   "sheetsnatcher": {
     "dir_count": 1,
@@ -1305,7 +1258,6 @@
         ]
       }
     }
-    
   },
   "Gibtonite ore": {
     "dir_count": 1,
@@ -1322,7 +1274,6 @@
         ]
       }
     }
-    
   },
   "Gibtonite active": {
     "dir_count": 1,
@@ -1354,7 +1305,6 @@
         ]
       }
     }
-    
   },
   "Gibtonite ore 2": {
     "dir_count": 1,
@@ -1401,7 +1351,6 @@
         ]
       }
     }
-    
   },
   "Gibtonite ore 3": {
     "dir_count": 1,
@@ -1433,7 +1382,6 @@
         ]
       }
     }
-    
   },
   "Gibtonite_igniter": {
     "dir_count": 1,
@@ -1450,7 +1398,6 @@
         ]
       }
     }
-    
   },
   "xeno_warning": {
     "dir_count": 1,
@@ -1467,7 +1414,6 @@
         ]
       }
     }
-    
   },
   "satchel_bspace": {
     "dir_count": 1,
@@ -1504,7 +1450,6 @@
         ]
       }
     }
-    
   },
   "pickaxe": {
     "dir_count": 1,
@@ -1521,7 +1466,6 @@
         ]
       }
     }
-    
   },
   "spickaxe": {
     "dir_count": 1,
@@ -1538,7 +1482,6 @@
         ]
       }
     }
-    
   },
   "dpickaxe": {
     "dir_count": 1,
@@ -1555,7 +1498,6 @@
         ]
       }
     }
-    
   },
   "gpickaxe": {
     "dir_count": 1,
@@ -1572,7 +1514,6 @@
         ]
       }
     }
-    
   },
   "upickaxe": {
     "dir_count": 1,
@@ -1589,7 +1530,6 @@
         ]
       }
     }
-    
   },
   "ppickaxe": {
     "dir_count": 1,
@@ -1606,7 +1546,6 @@
         ]
       }
     }
-    
   },
   "jackhammer": {
     "dir_count": 1,
@@ -1623,7 +1562,6 @@
         ]
       }
     }
-    
   },
   "handdrill": {
     "dir_count": 1,
@@ -1640,7 +1578,6 @@
         ]
       }
     }
-    
   },
   "diamonddrill": {
     "dir_count": 1,
@@ -1657,7 +1594,6 @@
         ]
       }
     }
-    
   },
   "Jaunter": {
     "dir_count": 1,
@@ -1689,7 +1625,6 @@
         ]
       }
     }
-    
   },
   "resonator": {
     "dir_count": 1,
@@ -1706,7 +1641,6 @@
         ]
       }
     }
-    
   },
   "resonator_u": {
     "dir_count": 1,
@@ -1723,7 +1657,6 @@
         ]
       }
     }
-    
   },
   "mining_voucher": {
     "dir_count": 1,
@@ -1740,7 +1673,6 @@
         ]
       }
     }
-    
   },
   "goliath_hide": {
     "dir_count": 1,
@@ -1757,7 +1689,6 @@
         ]
       }
     }
-    
   },
   "goliath_hide_2": {
     "dir_count": 1,
@@ -1774,7 +1705,6 @@
         ]
       }
     }
-    
   },
   "goliath_hide_3": {
     "dir_count": 1,
@@ -1791,7 +1721,6 @@
         ]
       }
     }
-    
   },
   "shovel": {
     "dir_count": 1,
@@ -1808,7 +1737,6 @@
         ]
       }
     }
-    
   },
   "spade": {
     "dir_count": 1,
@@ -1825,7 +1753,6 @@
         ]
       }
     }
-    
   },
   "bar-gibtonite": {
     "dir_count": 1,
@@ -1842,7 +1769,6 @@
         ]
       }
     }
-    
   },
   "bar-igniter": {
     "dir_count": 1,
@@ -1859,7 +1785,6 @@
         ]
       }
     }
-    
   },
   "bar-wire": {
     "dir_count": 1,
@@ -1876,7 +1801,6 @@
         ]
       }
     }
-    
   },
   "sheet-snow": {
     "dir_count": 1,
@@ -1893,7 +1817,6 @@
         ]
       }
     }
-    
   },
   "sheet-snow_2": {
     "dir_count": 1,
@@ -1910,7 +1833,6 @@
         ]
       }
     }
-    
   },
   "sheet-snow_3": {
     "dir_count": 1,
@@ -1927,7 +1849,6 @@
         ]
       }
     }
-    
   },
   "capsule": {
     "dir_count": 1,
@@ -1944,7 +1865,6 @@
         ]
       }
     }
-    
   },
   "volcanic_sand": {
     "dir_count": 1,
@@ -1961,7 +1881,6 @@
         ]
       }
     }
-    
   },
   "sinew": {
     "dir_count": 1,
@@ -1978,7 +1897,6 @@
         ]
       }
     }
-    
   },
   "bone": {
     "dir_count": 1,
@@ -1995,7 +1913,6 @@
         ]
       }
     }
-    
   },
   "bone_2": {
     "dir_count": 1,
@@ -2012,7 +1929,6 @@
         ]
       }
     }
-    
   },
   "bone_3": {
     "dir_count": 1,
@@ -2029,7 +1945,6 @@
         ]
       }
     }
-    
   },
   "sinewcuff": {
     "dir_count": 1,
@@ -2046,7 +1961,6 @@
         ]
       }
     }
-    
   },
   "skull": {
     "dir_count": 1,
@@ -2063,7 +1977,6 @@
         ]
       }
     }
-    
   },
   "dragon_hide": {
     "dir_count": 1,
@@ -2080,7 +1993,6 @@
         ]
       }
     }
-    
   },
   "dragon_hide_2": {
     "dir_count": 1,
@@ -2097,7 +2009,6 @@
         ]
       }
     }
-    
   },
   "dragon_hide_3": {
     "dir_count": 1,
@@ -2114,7 +2025,6 @@
         ]
       }
     }
-    
   },
   "sheet-titanium": {
     "dir_count": 1,
@@ -2131,7 +2041,6 @@
         ]
       }
     }
-    
   },
   "sheet-titanium_2": {
     "dir_count": 1,
@@ -2148,7 +2057,6 @@
         ]
       }
     }
-    
   },
   "sheet-titanium_3": {
     "dir_count": 1,
@@ -2165,7 +2073,6 @@
         ]
       }
     }
-    
   },
   "sheet-plastitanium": {
     "dir_count": 1,
@@ -2182,7 +2089,6 @@
         ]
       }
     }
-    
   },
   "sheet-plastitanium_2": {
     "dir_count": 1,
@@ -2199,7 +2105,6 @@
         ]
       }
     }
-    
   },
   "sheet-plastitanium_3": {
     "dir_count": 1,
@@ -2216,7 +2121,6 @@
         ]
       }
     }
-    
   },
   "Titanium ore": {
     "dir_count": 1,
@@ -2233,7 +2137,6 @@
         ]
       }
     }
-    
   },
   "minipick": {
     "dir_count": 1,
@@ -2250,7 +2153,6 @@
         ]
       }
     }
-    
   },
   "mining_hammer1": {
     "dir_count": 1,
@@ -2267,7 +2169,6 @@
         ]
       }
     }
-    
   },
   "mining_hammer1_uncharged": {
     "dir_count": 1,
@@ -2284,7 +2185,6 @@
         ]
       }
     }
-    
   },
   "goliath_saddle": {
     "dir_count": 1,
@@ -2301,7 +2201,6 @@
         ]
       }
     }
-    
   },
   "construction_drone_off": {
     "dir_count": 4,
@@ -2365,7 +2264,6 @@
         ]
       }
     }
-    
   },
   "construction_drone": {
     "dir_count": 4,
@@ -2429,7 +2327,6 @@
         ]
       }
     }
-    
   },
   "construction_drone_movement": {
     "dir_count": 4,

@@ -40,8 +40,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "broom": {
     "dir_count": 4,
@@ -84,8 +83,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "staffofchange": {
     "dir_count": 4,
@@ -128,8 +126,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "staffofanimation": {
     "dir_count": 4,
@@ -172,8 +169,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "staffofhealing": {
     "dir_count": 4,
@@ -216,8 +212,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "staffofchaos": {
     "dir_count": 4,
@@ -260,8 +255,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "staffofdoor": {
     "dir_count": 4,
@@ -304,8 +298,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "godstaff-red": {
     "dir_count": 4,
@@ -348,8 +341,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "godstaff-blue": {
     "dir_count": 4,
@@ -392,8 +384,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "honker": {
     "dir_count": 4,
@@ -436,8 +427,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "staffofstorms": {
     "dir_count": 4,
@@ -480,8 +470,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "bostaff0": {
     "dir_count": 4,
@@ -524,8 +513,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "bostaff1": {
     "dir_count": 4,
@@ -568,8 +556,7 @@
           }
         ]
       }
-    },
-    
+    }
   },
   "pharoah_sceptre": {
     "dir_count": 4,
@@ -612,7 +599,6 @@
           }
         ]
       }
-    },
-    
+    }
   }
 }

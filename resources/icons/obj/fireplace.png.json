@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "fireplace_fire0": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "fireplace_fire1": {
     "dir_count": 4,
@@ -169,7 +167,6 @@
         ]
       }
     }
-    
   },
   "fireplace_fire2": {
     "dir_count": 4,
@@ -253,7 +250,6 @@
         ]
       }
     }
-    
   },
   "fireplace_fire3": {
     "dir_count": 4,
@@ -337,7 +333,6 @@
         ]
       }
     }
-    
   },
   "fireplace_fire4": {
     "dir_count": 4,
@@ -421,7 +416,6 @@
         ]
       }
     }
-    
   },
   "fireplace_glow": {
     "dir_count": 4,
@@ -485,7 +479,6 @@
         ]
       }
     }
-    
   },
   "firepit-active": {
     "dir_count": 1,
@@ -512,7 +505,6 @@
         ]
       }
     }
-    
   },
   "firepit": {
     "dir_count": 1,

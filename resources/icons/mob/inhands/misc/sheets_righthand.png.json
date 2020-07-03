@@ -41,7 +41,6 @@
         ]
       }
     }
-    
   },
   "sheet-metal": {
     "dir_count": 4,
@@ -85,7 +84,6 @@
         ]
       }
     }
-    
   },
   "sheet-rglass": {
     "dir_count": 4,
@@ -129,7 +127,6 @@
         ]
       }
     }
-    
   },
   "sheet-card": {
     "dir_count": 4,
@@ -173,7 +170,6 @@
         ]
       }
     }
-    
   },
   "tile": {
     "dir_count": 4,

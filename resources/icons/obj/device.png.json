@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "mining0": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "mining1": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "spectrometer": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "spectrometer_s": {
     "dir_count": 1,
@@ -92,7 +88,6 @@
         ]
       }
     }
-    
   },
   "adv_spectrometer": {
     "dir_count": 1,
@@ -109,7 +104,6 @@
         ]
       }
     }
-    
   },
   "adv_spectrometer_s": {
     "dir_count": 1,
@@ -136,7 +130,6 @@
         ]
       }
     }
-    
   },
   "health": {
     "dir_count": 1,
@@ -153,7 +146,6 @@
         ]
       }
     }
-    
   },
   "health1": {
     "dir_count": 1,
@@ -170,7 +162,6 @@
         ]
       }
     }
-    
   },
   "health_adv": {
     "dir_count": 1,
@@ -187,7 +178,6 @@
         ]
       }
     }
-    
   },
   "hydro": {
     "dir_count": 1,
@@ -204,7 +194,6 @@
         ]
       }
     }
-    
   },
   "locator": {
     "dir_count": 8,
@@ -284,7 +273,6 @@
         ]
       }
     }
-    
   },
   "shield0": {
     "dir_count": 1,
@@ -301,7 +289,6 @@
         ]
       }
     }
-    
   },
   "shield1": {
     "dir_count": 1,
@@ -338,7 +325,6 @@
         ]
       }
     }
-    
   },
   "hand_tele": {
     "dir_count": 1,
@@ -370,7 +356,6 @@
         ]
       }
     }
-    
   },
   "motion0": {
     "dir_count": 1,
@@ -387,7 +372,6 @@
         ]
       }
     }
-    
   },
   "motion1": {
     "dir_count": 1,
@@ -409,7 +393,6 @@
         ]
       }
     }
-    
   },
   "motion2": {
     "dir_count": 1,
@@ -431,7 +414,6 @@
         ]
       }
     }
-    
   },
   "motion3": {
     "dir_count": 1,
@@ -453,7 +435,6 @@
         ]
       }
     }
-    
   },
   "forensic0": {
     "dir_count": 1,
@@ -470,7 +451,6 @@
         ]
       }
     }
-    
   },
   "forensic1": {
     "dir_count": 1,
@@ -487,7 +467,6 @@
         ]
       }
     }
-    
   },
   "t-ray0": {
     "dir_count": 1,
@@ -504,7 +483,6 @@
         ]
       }
     }
-    
   },
   "t-ray1": {
     "dir_count": 1,
@@ -526,7 +504,6 @@
         ]
       }
     }
-    
   },
   "emp": {
     "dir_count": 1,
@@ -543,7 +520,6 @@
         ]
       }
     }
-    
   },
   "empar": {
     "dir_count": 1,
@@ -565,7 +541,6 @@
         ]
       }
     }
-    
   },
   "powersink0": {
     "dir_count": 1,
@@ -582,7 +557,6 @@
         ]
       }
     }
-    
   },
   "powersink1": {
     "dir_count": 1,
@@ -609,7 +583,6 @@
         ]
       }
     }
-    
   },
   "pinpointer": {
     "dir_count": 1,
@@ -626,7 +599,6 @@
         ]
       }
     }
-    
   },
   "pinpointer_syndicate": {
     "dir_count": 1,
@@ -643,7 +615,6 @@
         ]
       }
     }
-    
   },
   "pinpointer_crew": {
     "dir_count": 1,
@@ -660,7 +631,6 @@
         ]
       }
     }
-    
   },
   "pinonfar": {
     "dir_count": 8,
@@ -780,7 +750,6 @@
         ]
       }
     }
-    
   },
   "pinonmedium": {
     "dir_count": 8,
@@ -900,7 +869,6 @@
         ]
       }
     }
-    
   },
   "pinonclose": {
     "dir_count": 8,
@@ -1020,7 +988,6 @@
         ]
       }
     }
-    
   },
   "pinondirect": {
     "dir_count": 1,
@@ -1042,7 +1009,6 @@
         ]
       }
     }
-    
   },
   "pinonnull": {
     "dir_count": 1,
@@ -1064,7 +1030,6 @@
         ]
       }
     }
-    
   },
   "pinonalertnull": {
     "dir_count": 1,
@@ -1086,7 +1051,6 @@
         ]
       }
     }
-    
   },
   "pinonalert": {
     "dir_count": 8,
@@ -1206,7 +1170,6 @@
         ]
       }
     }
-    
   },
   "pinonalertdirect": {
     "dir_count": 1,
@@ -1228,7 +1191,6 @@
         ]
       }
     }
-    
   },
   "syndbeacon": {
     "dir_count": 1,
@@ -1245,7 +1207,6 @@
         ]
       }
     }
-    
   },
   "multitool": {
     "dir_count": 1,
@@ -1262,7 +1223,6 @@
         ]
       }
     }
-    
   },
   "tonercartridge": {
     "dir_count": 1,
@@ -1279,7 +1239,6 @@
         ]
       }
     }
-    
   },
   "batterer": {
     "dir_count": 1,
@@ -1296,7 +1255,6 @@
         ]
       }
     }
-    
   },
   "battererburnt": {
     "dir_count": 1,
@@ -1313,7 +1271,6 @@
         ]
       }
     }
-    
   },
   "taperecorder_idle": {
     "dir_count": 1,
@@ -1330,7 +1287,6 @@
         ]
       }
     }
-    
   },
   "taperecorder_recording": {
     "dir_count": 1,
@@ -1362,7 +1318,6 @@
         ]
       }
     }
-    
   },
   "taperecorder_playing": {
     "dir_count": 1,
@@ -1394,7 +1349,6 @@
         ]
       }
     }
-    
   },
   "taperecorder_empty": {
     "dir_count": 1,
@@ -1411,7 +1365,6 @@
         ]
       }
     }
-    
   },
   "tape_white": {
     "dir_count": 1,
@@ -1428,7 +1381,6 @@
         ]
       }
     }
-    
   },
   "tape_blue": {
     "dir_count": 1,
@@ -1445,7 +1397,6 @@
         ]
       }
     }
-    
   },
   "tape_red": {
     "dir_count": 1,
@@ -1462,7 +1413,6 @@
         ]
       }
     }
-    
   },
   "tape_yellow": {
     "dir_count": 1,
@@ -1479,7 +1429,6 @@
         ]
       }
     }
-    
   },
   "tape_purple": {
     "dir_count": 1,
@@ -1496,7 +1445,6 @@
         ]
       }
     }
-    
   },
   "ribbonoverlay": {
     "dir_count": 1,
@@ -1513,7 +1461,6 @@
         ]
       }
     }
-    
   },
   "mindflash": {
     "dir_count": 1,
@@ -1555,7 +1502,6 @@
         ]
       }
     }
-    
   },
   "mindflash2": {
     "dir_count": 1,
@@ -1582,7 +1528,6 @@
         ]
       }
     }
-    
   },
   "mindflash_burnt": {
     "dir_count": 1,
@@ -1599,7 +1544,6 @@
         ]
       }
     }
-    
   },
   "multitool_red": {
     "dir_count": 1,
@@ -1616,7 +1560,6 @@
         ]
       }
     }
-    
   },
   "pointer": {
     "dir_count": 1,
@@ -1633,7 +1576,6 @@
         ]
       }
     }
-    
   },
   "pointer_red_laser": {
     "dir_count": 1,
@@ -1650,7 +1592,6 @@
         ]
       }
     }
-    
   },
   "pointer_blue_laser": {
     "dir_count": 1,
@@ -1667,7 +1608,6 @@
         ]
       }
     }
-    
   },
   "pointer_green_laser": {
     "dir_count": 1,
@@ -1684,7 +1624,6 @@
         ]
       }
     }
-    
   },
   "pointer_purple_laser": {
     "dir_count": 1,
@@ -1701,7 +1640,6 @@
         ]
       }
     }
-    
   },
   "camera_bug": {
     "dir_count": 1,
@@ -1748,7 +1686,6 @@
         ]
       }
     }
-    
   },
   "memorizer": {
     "dir_count": 1,
@@ -1765,7 +1702,6 @@
         ]
       }
     }
-    
   },
   "memorizerburnt": {
     "dir_count": 1,
@@ -1782,7 +1718,6 @@
         ]
       }
     }
-    
   },
   "memorizer2": {
     "dir_count": 1,
@@ -1814,7 +1749,6 @@
         ]
       }
     }
-    
   },
   "gangtool-white": {
     "dir_count": 1,
@@ -1831,7 +1765,6 @@
         ]
       }
     }
-    
   },
   "gangtool-blue": {
     "dir_count": 1,
@@ -1848,7 +1781,6 @@
         ]
       }
     }
-    
   },
   "gangtool-red": {
     "dir_count": 1,
@@ -1865,7 +1797,6 @@
         ]
       }
     }
-    
   },
   "gangtool-orange": {
     "dir_count": 1,
@@ -1882,7 +1813,6 @@
         ]
       }
     }
-    
   },
   "gangtool-yellow": {
     "dir_count": 1,
@@ -1899,7 +1829,6 @@
         ]
       }
     }
-    
   },
   "gangtool-green": {
     "dir_count": 1,
@@ -1916,7 +1845,6 @@
         ]
       }
     }
-    
   },
   "gangtool-purple": {
     "dir_count": 1,
@@ -1933,7 +1861,6 @@
         ]
       }
     }
-    
   },
   "scanner": {
     "dir_count": 1,
@@ -1955,7 +1882,6 @@
         ]
       }
     }
-    
   },
   "firing_pin": {
     "dir_count": 1,
@@ -1972,7 +1898,6 @@
         ]
       }
     }
-    
   },
   "firing_pin_test": {
     "dir_count": 1,
@@ -1989,7 +1914,6 @@
         ]
       }
     }
-    
   },
   "firing_pin_loyalty": {
     "dir_count": 1,
@@ -2016,7 +1940,6 @@
         ]
       }
     }
-    
   },
   "firing_pin_pindi": {
     "dir_count": 1,
@@ -2033,7 +1956,6 @@
         ]
       }
     }
-    
   },
   "firing_pin_red": {
     "dir_count": 1,
@@ -2050,7 +1972,6 @@
         ]
       }
     }
-    
   },
   "firing_pin_blue": {
     "dir_count": 1,
@@ -2067,7 +1988,6 @@
         ]
       }
     }
-    
   },
   "firing_pin_dna": {
     "dir_count": 1,
@@ -2084,7 +2004,6 @@
         ]
       }
     }
-    
   },
   "firing_pin_ayy": {
     "dir_count": 1,
@@ -2101,7 +2020,6 @@
         ]
       }
     }
-    
   },
   "megaphone": {
     "dir_count": 1,
@@ -2118,7 +2036,6 @@
         ]
       }
     }
-    
   },
   "megaphone-sec": {
     "dir_count": 1,
@@ -2135,7 +2052,6 @@
         ]
       }
     }
-    
   },
   "megaphone-cargo": {
     "dir_count": 1,
@@ -2152,7 +2068,6 @@
         ]
       }
     }
-    
   },
   "megaphone-command": {
     "dir_count": 1,
@@ -2169,7 +2084,6 @@
         ]
       }
     }
-    
   },
   "forensicnew": {
     "dir_count": 1,
@@ -2191,7 +2105,6 @@
         ]
       }
     }
-    
   },
   "cargotagger": {
     "dir_count": 1,
@@ -2208,7 +2121,6 @@
         ]
       }
     }
-    
   },
   "export_scanner": {
     "dir_count": 1,
@@ -2225,7 +2137,6 @@
         ]
       }
     }
-    
   },
   "doorCharge": {
     "dir_count": 1,
@@ -2242,7 +2153,6 @@
         ]
       }
     }
-    
   },
   "geiger_off": {
     "dir_count": 1,
@@ -2259,7 +2169,6 @@
         ]
       }
     }
-    
   },
   "geiger_on_1": {
     "dir_count": 1,
@@ -2276,7 +2185,6 @@
         ]
       }
     }
-    
   },
   "geiger_on_2": {
     "dir_count": 1,
@@ -2293,7 +2201,6 @@
         ]
       }
     }
-    
   },
   "geiger_on_3": {
     "dir_count": 1,
@@ -2310,7 +2217,6 @@
         ]
       }
     }
-    
   },
   "geiger_on_4": {
     "dir_count": 1,
@@ -2327,7 +2233,6 @@
         ]
       }
     }
-    
   },
   "geiger_on_5": {
     "dir_count": 1,
@@ -2349,7 +2254,6 @@
         ]
       }
     }
-    
   },
   "geiger_on_emag": {
     "dir_count": 1,
@@ -2401,7 +2305,6 @@
         ]
       }
     }
-    
   },
   "plasmarefill": {
     "dir_count": 1,
@@ -2418,7 +2321,6 @@
         ]
       }
     }
-    
   },
   "bluebeacon": {
     "dir_count": 1,
@@ -2435,7 +2337,6 @@
         ]
       }
     }
-    
   },
   "autoimplanter": {
     "dir_count": 1,
@@ -2452,7 +2353,6 @@
         ]
       }
     }
-    
   },
   "signmaker": {
     "dir_count": 1,
@@ -2484,7 +2384,6 @@
         ]
       }
     }
-    
   },
   "signmaker_sec": {
     "dir_count": 1,
@@ -2516,7 +2415,6 @@
         ]
       }
     }
-    
   },
   "signmaker_engi": {
     "dir_count": 1,
@@ -2548,7 +2446,6 @@
         ]
       }
     }
-    
   },
   "megaphone-clown": {
     "dir_count": 1,
@@ -2565,7 +2462,6 @@
         ]
       }
     }
-    
   },
   "multitool_yellow": {
     "dir_count": 1,
@@ -2582,7 +2478,6 @@
         ]
       }
     }
-    
   },
   "flightpack_off": {
     "dir_count": 1,
@@ -2599,7 +2494,6 @@
         ]
       }
     }
-    
   },
   "flightpack_on": {
     "dir_count": 1,
@@ -2631,7 +2525,6 @@
         ]
       }
     }
-    
   },
   "flightpack_boost": {
     "dir_count": 1,
@@ -2658,7 +2551,6 @@
         ]
       }
     }
-    
   },
   "ai-slipper0": {
     "dir_count": 1,
@@ -2675,7 +2567,6 @@
         ]
       }
     }
-    
   },
   "pressureplate": {
     "dir_count": 1,
@@ -2692,7 +2583,6 @@
         ]
       }
     }
-    
   },
   "ai-slipper1": {
     "dir_count": 1,
@@ -2734,7 +2624,6 @@
         ]
       }
     }
-    
   },
   "jammer": {
     "dir_count": 1,

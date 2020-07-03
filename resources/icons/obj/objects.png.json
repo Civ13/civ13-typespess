@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "launcheract": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "anom": {
     "dir_count": 1,
@@ -83,7 +81,6 @@
         ]
       }
     }
-    
   },
   "shards": {
     "dir_count": 1,
@@ -100,7 +97,6 @@
         ]
       }
     }
-    
   },
   "bhole2": {
     "dir_count": 1,
@@ -272,7 +268,6 @@
         ]
       }
     }
-    
   },
   "shieldon": {
     "dir_count": 1,
@@ -304,7 +299,6 @@
         ]
       }
     }
-    
   },
   "shieldoff": {
     "dir_count": 1,
@@ -321,7 +315,6 @@
         ]
       }
     }
-    
   },
   "shieldonbr": {
     "dir_count": 1,
@@ -378,7 +371,6 @@
         ]
       }
     }
-    
   },
   "shieldoffbr": {
     "dir_count": 1,
@@ -400,7 +392,6 @@
         ]
       }
     }
-    
   },
   "oldshieldon": {
     "dir_count": 1,
@@ -432,7 +423,6 @@
         ]
       }
     }
-    
   },
   "oldshieldoff": {
     "dir_count": 1,
@@ -449,7 +439,6 @@
         ]
       }
     }
-    
   },
   "oldshieldonbr": {
     "dir_count": 1,
@@ -491,7 +480,6 @@
         ]
       }
     }
-    
   },
   "oldshieldoffbr": {
     "dir_count": 1,
@@ -508,7 +496,6 @@
         ]
       }
     }
-    
   },
   "ash": {
     "dir_count": 1,
@@ -525,7 +512,6 @@
         ]
       }
     }
-    
   },
   "beer": {
     "dir_count": 1,
@@ -542,7 +528,6 @@
         ]
       }
     }
-    
   },
   "virus_food": {
     "dir_count": 1,
@@ -559,7 +544,6 @@
         ]
       }
     }
-    
   },
   "pepper": {
     "dir_count": 1,
@@ -576,7 +560,6 @@
         ]
       }
     }
-    
   },
   "bed": {
     "dir_count": 1,
@@ -593,7 +576,6 @@
         ]
       }
     }
-    
   },
   "abed": {
     "dir_count": 1,
@@ -610,7 +592,6 @@
         ]
       }
     }
-    
   },
   "beertankTEMP": {
     "dir_count": 1,
@@ -627,7 +608,6 @@
         ]
       }
     }
-    
   },
   "navbeacon0": {
     "dir_count": 1,
@@ -644,7 +624,6 @@
         ]
       }
     }
-    
   },
   "navbeacon0-f": {
     "dir_count": 1,
@@ -661,7 +640,6 @@
         ]
       }
     }
-    
   },
   "navbeacon1": {
     "dir_count": 1,
@@ -678,7 +656,6 @@
         ]
       }
     }
-    
   },
   "navbeacon1-f": {
     "dir_count": 1,
@@ -695,7 +672,6 @@
         ]
       }
     }
-    
   },
   "floor_magnet": {
     "dir_count": 1,
@@ -727,7 +703,6 @@
         ]
       }
     }
-    
   },
   "floor_magnet0": {
     "dir_count": 1,
@@ -744,7 +719,6 @@
         ]
       }
     }
-    
   },
   "floor_magnet0-f": {
     "dir_count": 1,
@@ -761,7 +735,6 @@
         ]
       }
     }
-    
   },
   "floor_beacon": {
     "dir_count": 1,
@@ -798,7 +771,6 @@
         ]
       }
     }
-    
   },
   "floor_beaconf": {
     "dir_count": 1,
@@ -815,7 +787,6 @@
         ]
       }
     }
-    
   },
   "boxingbell": {
     "dir_count": 4,
@@ -859,7 +830,6 @@
         ]
       }
     }
-    
   },
   "servicebell": {
     "dir_count": 1,
@@ -876,7 +846,6 @@
         ]
       }
     }
-    
   },
   "pews": {
     "dir_count": 8,
@@ -956,7 +925,6 @@
         ]
       }
     }
-    
   },
   "spirit_board": {
     "dir_count": 1,
@@ -973,7 +941,6 @@
         ]
       }
     }
-    
   },
   "barrier0": {
     "dir_count": 1,
@@ -990,7 +957,6 @@
         ]
       }
     }
-    
   },
   "barrier1": {
     "dir_count": 1,
@@ -1027,7 +993,6 @@
         ]
       }
     }
-    
   },
   "immrod": {
     "dir_count": 4,
@@ -1071,7 +1036,6 @@
         ]
       }
     }
-    
   },
   "effigy": {
     "dir_count": 1,
@@ -1108,7 +1072,6 @@
         ]
       }
     }
-    
   },
   "hivebot_fab": {
     "dir_count": 1,
@@ -1125,7 +1088,6 @@
         ]
       }
     }
-    
   },
   "hivebot_fab_on": {
     "dir_count": 1,
@@ -1157,7 +1119,6 @@
         ]
       }
     }
-    
   },
   "borgcharger1": {
     "dir_count": 1,
@@ -1189,7 +1150,6 @@
         ]
       }
     }
-    
   },
   "borgcharger0": {
     "dir_count": 1,
@@ -1206,7 +1166,6 @@
         ]
       }
     }
-    
   },
   "borgcharger2": {
     "dir_count": 1,
@@ -1223,7 +1182,6 @@
         ]
       }
     }
-    
   },
   "target_stake": {
     "dir_count": 1,
@@ -1240,7 +1198,6 @@
         ]
       }
     }
-    
   },
   "target_s": {
     "dir_count": 1,
@@ -1257,7 +1214,6 @@
         ]
       }
     }
-    
   },
   "target_q": {
     "dir_count": 1,
@@ -1274,7 +1230,6 @@
         ]
       }
     }
-    
   },
   "target_h": {
     "dir_count": 1,
@@ -1291,7 +1246,6 @@
         ]
       }
     }
-    
   },
   "target_c": {
     "dir_count": 1,
@@ -1308,7 +1262,6 @@
         ]
       }
     }
-    
   },
   "bhole3": {
     "dir_count": 1,
@@ -1340,7 +1293,6 @@
         ]
       }
     }
-    
   },
   "paint sprayer": {
     "dir_count": 1,
@@ -1357,7 +1309,6 @@
         ]
       }
     }
-    
   },
   "borgdecon1": {
     "dir_count": 1,
@@ -1374,7 +1325,6 @@
         ]
       }
     }
-    
   },
   "borgdecon2": {
     "dir_count": 1,
@@ -1391,7 +1341,6 @@
         ]
       }
     }
-    
   },
   "borgdecon3": {
     "dir_count": 1,
@@ -1408,7 +1357,6 @@
         ]
       }
     }
-    
   },
   "borgcharger-u0": {
     "dir_count": 1,
@@ -1425,7 +1373,6 @@
         ]
       }
     }
-    
   },
   "borgcharger-u1": {
     "dir_count": 1,
@@ -1442,7 +1389,6 @@
         ]
       }
     }
-    
   },
   "dogbed": {
     "dir_count": 1,
@@ -1459,7 +1405,6 @@
         ]
       }
     }
-    
   },
   "modkit": {
     "dir_count": 1,
@@ -1476,7 +1421,6 @@
         ]
       }
     }
-    
   },
   "modkit_crystal": {
     "dir_count": 1,
@@ -1493,7 +1437,6 @@
         ]
       }
     }
-    
   },
   "miningbeacon": {
     "dir_count": 4,
@@ -1557,7 +1500,6 @@
         ]
       }
     }
-    
   },
   "big_ash": {
     "dir_count": 1,
@@ -1574,7 +1516,6 @@
         ]
       }
     }
-    
   },
   "water": {
     "dir_count": 1,
@@ -1591,7 +1532,6 @@
         ]
       }
     }
-    
   },
   "fuel": {
     "dir_count": 1,
@@ -1608,7 +1548,6 @@
         ]
       }
     }
-    
   },
   "water_high": {
     "dir_count": 1,
@@ -1625,7 +1564,6 @@
         ]
       }
     }
-    
   },
   "rack": {
     "dir_count": 1,
@@ -1642,7 +1580,6 @@
         ]
       }
     }
-    
   },
   "dispenser": {
     "dir_count": 1,
@@ -1659,7 +1596,6 @@
         ]
       }
     }
-    
   },
   "plasma-1": {
     "dir_count": 1,
@@ -1676,7 +1612,6 @@
         ]
       }
     }
-    
   },
   "plasma-2": {
     "dir_count": 1,
@@ -1693,7 +1628,6 @@
         ]
       }
     }
-    
   },
   "plasma-3": {
     "dir_count": 1,
@@ -1710,7 +1644,6 @@
         ]
       }
     }
-    
   },
   "plasma-4": {
     "dir_count": 1,
@@ -1727,7 +1660,6 @@
         ]
       }
     }
-    
   },
   "plasma-5": {
     "dir_count": 1,
@@ -1744,7 +1676,6 @@
         ]
       }
     }
-    
   },
   "oxygen-1": {
     "dir_count": 1,
@@ -1761,7 +1692,6 @@
         ]
       }
     }
-    
   },
   "oxygen-2": {
     "dir_count": 1,
@@ -1778,7 +1708,6 @@
         ]
       }
     }
-    
   },
   "oxygen-3": {
     "dir_count": 1,
@@ -1795,7 +1724,6 @@
         ]
       }
     }
-    
   },
   "oxygen-4": {
     "dir_count": 1,
@@ -1812,7 +1740,6 @@
         ]
       }
     }
-    
   },
   "oxygen-5": {
     "dir_count": 1,

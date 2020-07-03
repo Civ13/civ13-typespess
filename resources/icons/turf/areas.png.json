@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "bridge": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "meeting": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "bridge_hallway": {
     "dir_count": 1,
@@ -65,7 +62,6 @@
         ]
       }
     }
-    
   },
   "unknown": {
     "dir_count": 1,
@@ -82,7 +78,6 @@
         ]
       }
     }
-    
   },
   "engine": {
     "dir_count": 1,
@@ -99,7 +94,6 @@
         ]
       }
     }
-    
   },
   "SolarcontrolFP": {
     "dir_count": 1,
@@ -116,7 +110,6 @@
         ]
       }
     }
-    
   },
   "SolarcontrolAS": {
     "dir_count": 1,
@@ -133,7 +126,6 @@
         ]
       }
     }
-    
   },
   "SolarcontrolAP": {
     "dir_count": 1,
@@ -150,7 +142,6 @@
         ]
       }
     }
-    
   },
   "panelsFS": {
     "dir_count": 1,
@@ -167,7 +158,6 @@
         ]
       }
     }
-    
   },
   "panelsFP": {
     "dir_count": 1,
@@ -184,7 +174,6 @@
         ]
       }
     }
-    
   },
   "panelsAS": {
     "dir_count": 1,
@@ -201,7 +190,6 @@
         ]
       }
     }
-    
   },
   "panelsAP": {
     "dir_count": 1,
@@ -218,7 +206,6 @@
         ]
       }
     }
-    
   },
   "SolarcontrolFS": {
     "dir_count": 1,
@@ -235,7 +222,6 @@
         ]
       }
     }
-    
   },
   "prototype_engine": {
     "dir_count": 1,
@@ -252,7 +238,6 @@
         ]
       }
     }
-    
   },
   "engine_control": {
     "dir_count": 1,
@@ -269,7 +254,6 @@
         ]
       }
     }
-    
   },
   "engine_monitoring": {
     "dir_count": 1,
@@ -286,7 +270,6 @@
         ]
       }
     }
-    
   },
   "teleporter": {
     "dir_count": 1,
@@ -303,7 +286,6 @@
         ]
       }
     }
-    
   },
   "chapel": {
     "dir_count": 1,
@@ -320,7 +302,6 @@
         ]
       }
     }
-    
   },
   "chapeloffice": {
     "dir_count": 1,
@@ -337,7 +318,6 @@
         ]
       }
     }
-    
   },
   "engine_storage": {
     "dir_count": 1,
@@ -354,7 +334,6 @@
         ]
       }
     }
-    
   },
   "engine_hallway": {
     "dir_count": 1,
@@ -371,7 +350,6 @@
         ]
       }
     }
-    
   },
   "yellow": {
     "dir_count": 1,
@@ -388,7 +366,6 @@
         ]
       }
     }
-    
   },
   "ass_line": {
     "dir_count": 1,
@@ -405,7 +382,6 @@
         ]
       }
     }
-    
   },
   "green": {
     "dir_count": 1,
@@ -422,7 +398,6 @@
         ]
       }
     }
-    
   },
   "security": {
     "dir_count": 1,
@@ -439,7 +414,6 @@
         ]
       }
     }
-    
   },
   "sec_prison": {
     "dir_count": 1,
@@ -456,7 +430,6 @@
         ]
       }
     }
-    
   },
   "sec_hos": {
     "dir_count": 1,
@@ -473,7 +446,6 @@
         ]
       }
     }
-    
   },
   "security_sub": {
     "dir_count": 1,
@@ -490,7 +462,6 @@
         ]
       }
     }
-    
   },
   "toxlab": {
     "dir_count": 1,
@@ -507,7 +478,6 @@
         ]
       }
     }
-    
   },
   "toxstorage": {
     "dir_count": 1,
@@ -524,7 +494,6 @@
         ]
       }
     }
-    
   },
   "toxtest": {
     "dir_count": 1,
@@ -541,7 +510,6 @@
         ]
       }
     }
-    
   },
   "toxmisc": {
     "dir_count": 1,
@@ -558,7 +526,6 @@
         ]
       }
     }
-    
   },
   "chem": {
     "dir_count": 1,
@@ -575,7 +542,6 @@
         ]
       }
     }
-    
   },
   "decontamination": {
     "dir_count": 1,
@@ -592,7 +558,6 @@
         ]
       }
     }
-    
   },
   "crew_quarters": {
     "dir_count": 1,
@@ -609,7 +574,6 @@
         ]
       }
     }
-    
   },
   "medresearch": {
     "dir_count": 1,
@@ -626,7 +590,6 @@
         ]
       }
     }
-    
   },
   "mechbay": {
     "dir_count": 1,
@@ -643,7 +606,6 @@
         ]
       }
     }
-    
   },
   "morgue": {
     "dir_count": 1,
@@ -660,7 +622,6 @@
         ]
       }
     }
-    
   },
   "storage": {
     "dir_count": 1,
@@ -677,7 +638,6 @@
         ]
       }
     }
-    
   },
   "storage_wing": {
     "dir_count": 1,
@@ -694,7 +654,6 @@
         ]
       }
     }
-    
   },
   "shuttle": {
     "dir_count": 1,
@@ -711,7 +670,6 @@
         ]
       }
     }
-    
   },
   "exit": {
     "dir_count": 1,
@@ -728,7 +686,6 @@
         ]
       }
     }
-    
   },
   "start": {
     "dir_count": 1,
@@ -745,7 +702,6 @@
         ]
       }
     }
-    
   },
   "dk_yellow": {
     "dir_count": 1,
@@ -762,7 +718,6 @@
         ]
       }
     }
-    
   },
   "purple": {
     "dir_count": 1,
@@ -779,7 +734,6 @@
         ]
       }
     }
-    
   },
   "bar": {
     "dir_count": 1,
@@ -796,7 +750,6 @@
         ]
       }
     }
-    
   },
   "cafeteria": {
     "dir_count": 1,
@@ -813,7 +766,6 @@
         ]
       }
     }
-    
   },
   "conference": {
     "dir_count": 1,
@@ -830,7 +782,6 @@
         ]
       }
     }
-    
   },
   "restrooms": {
     "dir_count": 1,
@@ -847,7 +798,6 @@
         ]
       }
     }
-    
   },
   "observatory": {
     "dir_count": 1,
@@ -864,7 +814,6 @@
         ]
       }
     }
-    
   },
   "atmos": {
     "dir_count": 1,
@@ -881,7 +830,6 @@
         ]
       }
     }
-    
   },
   "shuttle2": {
     "dir_count": 1,
@@ -898,7 +846,6 @@
         ]
       }
     }
-    
   },
   "shuttle3": {
     "dir_count": 1,
@@ -915,7 +862,6 @@
         ]
       }
     }
-    
   },
   "brig": {
     "dir_count": 1,
@@ -932,7 +878,6 @@
         ]
       }
     }
-    
   },
   "armory": {
     "dir_count": 1,
@@ -949,7 +894,6 @@
         ]
       }
     }
-    
   },
   "captain": {
     "dir_count": 1,
@@ -966,7 +910,6 @@
         ]
       }
     }
-    
   },
   "courtroom": {
     "dir_count": 1,
@@ -983,7 +926,6 @@
         ]
       }
     }
-    
   },
   "ai_upload": {
     "dir_count": 1,
@@ -1000,7 +942,6 @@
         ]
       }
     }
-    
   },
   "ai_foyer": {
     "dir_count": 1,
@@ -1017,7 +958,6 @@
         ]
       }
     }
-    
   },
   "ai_chamber": {
     "dir_count": 1,
@@ -1034,7 +974,6 @@
         ]
       }
     }
-    
   },
   "detective": {
     "dir_count": 1,
@@ -1051,7 +990,6 @@
         ]
       }
     }
-    
   },
   "checkpoint1": {
     "dir_count": 1,
@@ -1068,7 +1006,6 @@
         ]
       }
     }
-    
   },
   "eva": {
     "dir_count": 1,
@@ -1085,7 +1022,6 @@
         ]
       }
     }
-    
   },
   "kitchen": {
     "dir_count": 1,
@@ -1102,7 +1038,6 @@
         ]
       }
     }
-    
   },
   "medbay": {
     "dir_count": 1,
@@ -1119,7 +1054,6 @@
         ]
       }
     }
-    
   },
   "medbay2": {
     "dir_count": 1,
@@ -1136,7 +1070,6 @@
         ]
       }
     }
-    
   },
   "medbay3": {
     "dir_count": 1,
@@ -1153,7 +1086,6 @@
         ]
       }
     }
-    
   },
   "primarystorage": {
     "dir_count": 1,
@@ -1170,7 +1102,6 @@
         ]
       }
     }
-    
   },
   "panelsS": {
     "dir_count": 1,
@@ -1187,7 +1118,6 @@
         ]
       }
     }
-    
   },
   "panelsP": {
     "dir_count": 1,
@@ -1204,7 +1134,6 @@
         ]
       }
     }
-    
   },
   "SolarcontrolS": {
     "dir_count": 1,
@@ -1221,7 +1150,6 @@
         ]
       }
     }
-    
   },
   "SolarcontrolP": {
     "dir_count": 1,
@@ -1238,7 +1166,6 @@
         ]
       }
     }
-    
   },
   "construction": {
     "dir_count": 1,
@@ -1255,7 +1182,6 @@
         ]
       }
     }
-    
   },
   "auxstorage": {
     "dir_count": 1,
@@ -1272,7 +1198,6 @@
         ]
       }
     }
-    
   },
   "emergencystorage": {
     "dir_count": 1,
@@ -1289,7 +1214,6 @@
         ]
       }
     }
-    
   },
   "locker": {
     "dir_count": 1,
@@ -1306,7 +1230,6 @@
         ]
       }
     }
-    
   },
   "fitness": {
     "dir_count": 1,
@@ -1323,7 +1246,6 @@
         ]
       }
     }
-    
   },
   "head_quarters": {
     "dir_count": 1,
@@ -1340,7 +1262,6 @@
         ]
       }
     }
-    
   },
   "maintcentral": {
     "dir_count": 1,
@@ -1357,7 +1278,6 @@
         ]
       }
     }
-    
   },
   "fsmaint": {
     "dir_count": 1,
@@ -1374,7 +1294,6 @@
         ]
       }
     }
-    
   },
   "fmaint": {
     "dir_count": 1,
@@ -1391,7 +1310,6 @@
         ]
       }
     }
-    
   },
   "fmaint_2": {
     "dir_count": 1,
@@ -1408,7 +1326,6 @@
         ]
       }
     }
-    
   },
   "fpmaint": {
     "dir_count": 1,
@@ -1425,7 +1342,6 @@
         ]
       }
     }
-    
   },
   "pmaint": {
     "dir_count": 1,
@@ -1442,7 +1358,6 @@
         ]
       }
     }
-    
   },
   "apmaint": {
     "dir_count": 1,
@@ -1459,7 +1374,6 @@
         ]
       }
     }
-    
   },
   "smaint": {
     "dir_count": 1,
@@ -1476,7 +1390,6 @@
         ]
       }
     }
-    
   },
   "amaint": {
     "dir_count": 1,
@@ -1493,7 +1406,6 @@
         ]
       }
     }
-    
   },
   "amaint_2": {
     "dir_count": 1,
@@ -1510,7 +1422,6 @@
         ]
       }
     }
-    
   },
   "asmaint": {
     "dir_count": 1,
@@ -1527,7 +1438,6 @@
         ]
       }
     }
-    
   },
   "morgue_maint": {
     "dir_count": 1,
@@ -1544,7 +1454,6 @@
         ]
       }
     }
-    
   },
   "medbay_maint": {
     "dir_count": 1,
@@ -1561,7 +1470,6 @@
         ]
       }
     }
-    
   },
   "hallC": {
     "dir_count": 1,
@@ -1578,7 +1486,6 @@
         ]
       }
     }
-    
   },
   "hallF": {
     "dir_count": 1,
@@ -1595,7 +1502,6 @@
         ]
       }
     }
-    
   },
   "hallS": {
     "dir_count": 1,
@@ -1612,7 +1518,6 @@
         ]
       }
     }
-    
   },
   "hallA": {
     "dir_count": 1,
@@ -1629,7 +1534,6 @@
         ]
       }
     }
-    
   },
   "hallP": {
     "dir_count": 1,
@@ -1646,7 +1550,6 @@
         ]
       }
     }
-    
   },
   "hallFP": {
     "dir_count": 1,
@@ -1663,7 +1566,6 @@
         ]
       }
     }
-    
   },
   "hallAS": {
     "dir_count": 1,
@@ -1680,7 +1582,6 @@
         ]
       }
     }
-    
   },
   "hallAP": {
     "dir_count": 1,
@@ -1697,7 +1598,6 @@
         ]
       }
     }
-    
   },
   "hallFS": {
     "dir_count": 1,
@@ -1714,7 +1614,6 @@
         ]
       }
     }
-    
   },
   "escape": {
     "dir_count": 1,
@@ -1731,7 +1630,6 @@
         ]
       }
     }
-    
   },
   "entry": {
     "dir_count": 1,
@@ -1748,7 +1646,6 @@
         ]
       }
     }
-    
   },
   "escape_lounge": {
     "dir_count": 1,
@@ -1765,7 +1662,6 @@
         ]
       }
     }
-    
   },
   "hall_service": {
     "dir_count": 1,
@@ -1782,7 +1678,6 @@
         ]
       }
     }
-    
   },
   "quart": {
     "dir_count": 1,
@@ -1799,7 +1694,6 @@
         ]
       }
     }
-    
   },
   "quartoffice": {
     "dir_count": 1,
@@ -1816,7 +1710,6 @@
         ]
       }
     }
-    
   },
   "quartstorage": {
     "dir_count": 1,
@@ -1833,7 +1726,6 @@
         ]
       }
     }
-    
   },
   "cargo_bay": {
     "dir_count": 1,
@@ -1850,7 +1742,6 @@
         ]
       }
     }
-    
   },
   "cargo_delivery": {
     "dir_count": 1,
@@ -1867,7 +1758,6 @@
         ]
       }
     }
-    
   },
   "cargo_warehouse": {
     "dir_count": 1,
@@ -1884,7 +1774,6 @@
         ]
       }
     }
-    
   },
   "janitor": {
     "dir_count": 1,
@@ -1901,7 +1790,6 @@
         ]
       }
     }
-    
   },
   "ai": {
     "dir_count": 1,
@@ -1918,7 +1806,6 @@
         ]
       }
     }
-    
   },
   "disposal": {
     "dir_count": 1,
@@ -1935,7 +1822,6 @@
         ]
       }
     }
-    
   },
   "mining": {
     "dir_count": 1,
@@ -1952,7 +1838,6 @@
         ]
       }
     }
-    
   },
   "mining_production": {
     "dir_count": 1,
@@ -1969,7 +1854,6 @@
         ]
       }
     }
-    
   },
   "mining_eva": {
     "dir_count": 1,
@@ -1986,7 +1870,6 @@
         ]
       }
     }
-    
   },
   "mining_living": {
     "dir_count": 1,
@@ -2003,7 +1886,6 @@
         ]
       }
     }
-    
   },
   "explored": {
     "dir_count": 1,
@@ -2020,7 +1902,6 @@
         ]
       }
     }
-    
   },
   "unexplored": {
     "dir_count": 1,
@@ -2037,7 +1918,6 @@
         ]
       }
     }
-    
   },
   "danger": {
     "dir_count": 1,
@@ -2054,7 +1934,6 @@
         ]
       }
     }
-    
   },
   "cave": {
     "dir_count": 1,
@@ -2071,7 +1950,6 @@
         ]
       }
     }
-    
   },
   "hydro": {
     "dir_count": 1,
@@ -2088,7 +1966,6 @@
         ]
       }
     }
-    
   },
   "library": {
     "dir_count": 1,
@@ -2105,7 +1982,6 @@
         ]
       }
     }
-    
   },
   "law": {
     "dir_count": 1,
@@ -2122,7 +1998,6 @@
         ]
       }
     }
-    
   },
   "toxmix": {
     "dir_count": 1,
@@ -2139,7 +2014,6 @@
         ]
       }
     }
-    
   },
   "shuttlegrn": {
     "dir_count": 1,
@@ -2156,7 +2030,6 @@
         ]
       }
     }
-    
   },
   "shuttlegrn2": {
     "dir_count": 1,
@@ -2173,7 +2046,6 @@
         ]
       }
     }
-    
   },
   "shuttlered": {
     "dir_count": 1,
@@ -2190,7 +2062,6 @@
         ]
       }
     }
-    
   },
   "shuttlered2": {
     "dir_count": 1,
@@ -2207,7 +2078,6 @@
         ]
       }
     }
-    
   },
   "nuke_storage": {
     "dir_count": 1,
@@ -2224,7 +2094,6 @@
         ]
       }
     }
-    
   },
   "virology": {
     "dir_count": 1,
@@ -2241,7 +2110,6 @@
         ]
       }
     }
-    
   },
   "CMO": {
     "dir_count": 1,
@@ -2258,7 +2126,6 @@
         ]
       }
     }
-    
   },
   "Warden": {
     "dir_count": 1,
@@ -2275,7 +2142,6 @@
         ]
       }
     }
-    
   },
   "panelsA": {
     "dir_count": 1,
@@ -2292,7 +2158,6 @@
         ]
       }
     }
-    
   },
   "Sleep": {
     "dir_count": 1,
@@ -2309,7 +2174,6 @@
         ]
       }
     }
-    
   },
   "SolarcontrolA": {
     "dir_count": 1,
@@ -2326,7 +2190,6 @@
         ]
       }
     }
-    
   },
   "toilet": {
     "dir_count": 1,
@@ -2343,7 +2206,6 @@
         ]
       }
     }
-    
   },
   "DJ": {
     "dir_count": 1,
@@ -2360,7 +2222,6 @@
         ]
       }
     }
-    
   },
   "showroom": {
     "dir_count": 1,
@@ -2377,7 +2238,6 @@
         ]
       }
     }
-    
   },
   "Theatre": {
     "dir_count": 1,
@@ -2394,7 +2254,6 @@
         ]
       }
     }
-    
   },
   "exam_room": {
     "dir_count": 1,
@@ -2411,7 +2270,6 @@
         ]
       }
     }
-    
   },
   "surgery": {
     "dir_count": 1,
@@ -2428,7 +2286,6 @@
         ]
       }
     }
-    
   },
   "genetics": {
     "dir_count": 1,
@@ -2445,7 +2302,6 @@
         ]
       }
     }
-    
   },
   "cloning": {
     "dir_count": 1,
@@ -2462,7 +2318,6 @@
         ]
       }
     }
-    
   },
   "server": {
     "dir_count": 1,
@@ -2479,7 +2334,6 @@
         ]
       }
     }
-    
   },
   "engine_smes": {
     "dir_count": 1,
@@ -2496,7 +2350,6 @@
         ]
       }
     }
-    
   },
   "thunder": {
     "dir_count": 1,
@@ -2513,7 +2366,6 @@
         ]
       }
     }
-    
   },
   "centcom": {
     "dir_count": 1,
@@ -2530,7 +2382,6 @@
         ]
       }
     }
-    
   },
   "cryo": {
     "dir_count": 1,
@@ -2547,7 +2398,6 @@
         ]
       }
     }
-    
   },
   "patients": {
     "dir_count": 1,
@@ -2564,7 +2414,6 @@
         ]
       }
     }
-    
   },
   "syndie-ship": {
     "dir_count": 1,
@@ -2581,7 +2430,6 @@
         ]
       }
     }
-    
   },
   "syndie-control": {
     "dir_count": 1,
@@ -2598,7 +2446,6 @@
         ]
       }
     }
-    
   },
   "syndie-elite": {
     "dir_count": 1,
@@ -2615,7 +2462,6 @@
         ]
       }
     }
-    
   },
   "firingrange": {
     "dir_count": 1,
@@ -2632,7 +2478,6 @@
         ]
       }
     }
-    
   },
   "tcomsatcham": {
     "dir_count": 1,
@@ -2649,7 +2494,6 @@
         ]
       }
     }
-    
   },
   "tcomsatentrance": {
     "dir_count": 1,
@@ -2666,7 +2510,6 @@
         ]
       }
     }
-    
   },
   "tcomsatlob": {
     "dir_count": 1,
@@ -2683,7 +2526,6 @@
         ]
       }
     }
-    
   },
   "tcomsatstore": {
     "dir_count": 1,
@@ -2700,7 +2542,6 @@
         ]
       }
     }
-    
   },
   "tcomsateast": {
     "dir_count": 1,
@@ -2717,7 +2558,6 @@
         ]
       }
     }
-    
   },
   "tcomsatwest": {
     "dir_count": 1,
@@ -2734,7 +2574,6 @@
         ]
       }
     }
-    
   },
   "tcomsatcomp": {
     "dir_count": 1,
@@ -2751,7 +2590,6 @@
         ]
       }
     }
-    
   },
   "tcomsatlounge": {
     "dir_count": 1,
@@ -2768,7 +2606,6 @@
         ]
       }
     }
-    
   },
   "Holodeck": {
     "dir_count": 1,
@@ -2785,7 +2622,6 @@
         ]
       }
     }
-    
   },
   "away": {
     "dir_count": 1,
@@ -2802,7 +2638,6 @@
         ]
       }
     }
-    
   },
   "away1": {
     "dir_count": 1,
@@ -2819,7 +2654,6 @@
         ]
       }
     }
-    
   },
   "away2": {
     "dir_count": 1,
@@ -2836,7 +2670,6 @@
         ]
       }
     }
-    
   },
   "away3": {
     "dir_count": 1,
@@ -2853,7 +2686,6 @@
         ]
       }
     }
-    
   },
   "away4": {
     "dir_count": 1,
@@ -2870,7 +2702,6 @@
         ]
       }
     }
-    
   },
   "red2": {
     "dir_count": 1,
@@ -2887,7 +2718,6 @@
         ]
       }
     }
-    
   },
   "blue2": {
     "dir_count": 1,
@@ -2904,7 +2734,6 @@
         ]
       }
     }
-    
   },
   "blue-red2": {
     "dir_count": 1,
@@ -2921,7 +2750,6 @@
         ]
       }
     }
-    
   },
   "blue-red-d": {
     "dir_count": 1,
@@ -2938,7 +2766,6 @@
         ]
       }
     }
-    
   },
   "blue-red": {
     "dir_count": 1,
@@ -2960,7 +2787,6 @@
         ]
       }
     }
-    
   },
   "invi": {
     "dir_count": 1,
@@ -2977,7 +2803,6 @@
         ]
       }
     }
-    
   },
   "blueold": {
     "dir_count": 1,
@@ -2999,7 +2824,6 @@
         ]
       }
     }
-    
   },
   "red": {
     "dir_count": 1,
@@ -3031,7 +2855,6 @@
         ]
       }
     }
-    
   },
   "dark": {
     "dir_count": 1,
@@ -3048,7 +2871,6 @@
         ]
       }
     }
-    
   },
   "dark160": {
     "dir_count": 1,
@@ -3065,7 +2887,6 @@
         ]
       }
     }
-    
   },
   "dark128": {
     "dir_count": 1,
@@ -3082,7 +2903,6 @@
         ]
       }
     }
-    
   },
   "party": {
     "dir_count": 1,
@@ -3134,7 +2954,6 @@
         ]
       }
     }
-    
   },
   "blue": {
     "dir_count": 1,
@@ -3166,7 +2985,6 @@
         ]
       }
     }
-    
   },
   "bluenew": {
     "dir_count": 1,
@@ -3188,7 +3006,6 @@
         ]
       }
     }
-    
   },
   "north": {
     "dir_count": 1,
@@ -3205,7 +3022,6 @@
         ]
       }
     }
-    
   },
   "northeast": {
     "dir_count": 1,
@@ -3222,7 +3038,6 @@
         ]
       }
     }
-    
   },
   "northwest": {
     "dir_count": 1,
@@ -3239,7 +3054,6 @@
         ]
       }
     }
-    
   },
   "south": {
     "dir_count": 1,
@@ -3256,7 +3070,6 @@
         ]
       }
     }
-    
   },
   "southeast": {
     "dir_count": 1,
@@ -3273,7 +3086,6 @@
         ]
       }
     }
-    
   },
   "southwest": {
     "dir_count": 1,
@@ -3290,7 +3102,6 @@
         ]
       }
     }
-    
   },
   "east": {
     "dir_count": 1,
@@ -3307,7 +3118,6 @@
         ]
       }
     }
-    
   },
   "west": {
     "dir_count": 1,
@@ -3324,7 +3134,6 @@
         ]
       }
     }
-    
   },
   "telesci": {
     "dir_count": 1,
@@ -3341,7 +3150,6 @@
         ]
       }
     }
-    
   },
   "space": {
     "dir_count": 1,
@@ -3358,7 +3166,6 @@
         ]
       }
     }
-    
   },
   "space_near": {
     "dir_count": 1,
@@ -3375,7 +3182,6 @@
         ]
       }
     }
-    
   },
   "spacecontent1": {
     "dir_count": 1,
@@ -3392,7 +3198,6 @@
         ]
       }
     }
-    
   },
   "spacecontent2": {
     "dir_count": 1,
@@ -3409,7 +3214,6 @@
         ]
       }
     }
-    
   },
   "spacecontent3": {
     "dir_count": 1,
@@ -3426,7 +3230,6 @@
         ]
       }
     }
-    
   },
   "spacecontent4": {
     "dir_count": 1,
@@ -3443,7 +3246,6 @@
         ]
       }
     }
-    
   },
   "spacecontent5": {
     "dir_count": 1,
@@ -3460,7 +3262,6 @@
         ]
       }
     }
-    
   },
   "spacecontent6": {
     "dir_count": 1,
@@ -3477,7 +3278,6 @@
         ]
       }
     }
-    
   },
   "spacecontent7": {
     "dir_count": 1,
@@ -3494,7 +3294,6 @@
         ]
       }
     }
-    
   },
   "spacecontent8": {
     "dir_count": 1,
@@ -3511,7 +3310,6 @@
         ]
       }
     }
-    
   },
   "spacecontent9": {
     "dir_count": 1,
@@ -3528,7 +3326,6 @@
         ]
       }
     }
-    
   },
   "spacecontent10": {
     "dir_count": 1,
@@ -3545,7 +3342,6 @@
         ]
       }
     }
-    
   },
   "spacecontent11": {
     "dir_count": 1,
@@ -3562,7 +3358,6 @@
         ]
       }
     }
-    
   },
   "spacecontent12": {
     "dir_count": 1,
@@ -3579,7 +3374,6 @@
         ]
       }
     }
-    
   },
   "spacecontent13": {
     "dir_count": 1,
@@ -3596,7 +3390,6 @@
         ]
       }
     }
-    
   },
   "spacecontent14": {
     "dir_count": 1,
@@ -3613,7 +3406,6 @@
         ]
       }
     }
-    
   },
   "spacecontent15": {
     "dir_count": 1,
@@ -3630,7 +3422,6 @@
         ]
       }
     }
-    
   },
   "spacecontent16": {
     "dir_count": 1,
@@ -3647,7 +3438,6 @@
         ]
       }
     }
-    
   },
   "spacecontent17": {
     "dir_count": 1,
@@ -3664,7 +3454,6 @@
         ]
       }
     }
-    
   },
   "spacecontent18": {
     "dir_count": 1,
@@ -3681,7 +3470,6 @@
         ]
       }
     }
-    
   },
   "spacecontent19": {
     "dir_count": 1,
@@ -3698,7 +3486,6 @@
         ]
       }
     }
-    
   },
   "spacecontent20": {
     "dir_count": 1,
@@ -3715,7 +3502,6 @@
         ]
       }
     }
-    
   },
   "spacecontent21": {
     "dir_count": 1,
@@ -3732,7 +3518,6 @@
         ]
       }
     }
-    
   },
   "spacecontent22": {
     "dir_count": 1,
@@ -3749,7 +3534,6 @@
         ]
       }
     }
-    
   },
   "spacecontent23": {
     "dir_count": 1,
@@ -3766,7 +3550,6 @@
         ]
       }
     }
-    
   },
   "spacecontent24": {
     "dir_count": 1,
@@ -3783,7 +3566,6 @@
         ]
       }
     }
-    
   },
   "spacecontent25": {
     "dir_count": 1,
@@ -3800,7 +3582,6 @@
         ]
       }
     }
-    
   },
   "spacecontent26": {
     "dir_count": 1,
@@ -3817,7 +3598,6 @@
         ]
       }
     }
-    
   },
   "spacecontent27": {
     "dir_count": 1,
@@ -3834,7 +3614,6 @@
         ]
       }
     }
-    
   },
   "spacecontent28": {
     "dir_count": 1,
@@ -3851,7 +3630,6 @@
         ]
       }
     }
-    
   },
   "spacecontent29": {
     "dir_count": 1,
@@ -3868,7 +3646,6 @@
         ]
       }
     }
-    
   },
   "spacecontent30": {
     "dir_count": 1,
@@ -3885,7 +3662,6 @@
         ]
       }
     }
-    
   },
   "awaycontent1": {
     "dir_count": 1,
@@ -3902,7 +3678,6 @@
         ]
       }
     }
-    
   },
   "awaycontent2": {
     "dir_count": 1,
@@ -3919,7 +3694,6 @@
         ]
       }
     }
-    
   },
   "awaycontent3": {
     "dir_count": 1,
@@ -3936,7 +3710,6 @@
         ]
       }
     }
-    
   },
   "awaycontent4": {
     "dir_count": 1,
@@ -3953,7 +3726,6 @@
         ]
       }
     }
-    
   },
   "awaycontent5": {
     "dir_count": 1,
@@ -3970,7 +3742,6 @@
         ]
       }
     }
-    
   },
   "awaycontent6": {
     "dir_count": 1,
@@ -3987,7 +3758,6 @@
         ]
       }
     }
-    
   },
   "awaycontent7": {
     "dir_count": 1,
@@ -4004,7 +3774,6 @@
         ]
       }
     }
-    
   },
   "awaycontent8": {
     "dir_count": 1,
@@ -4021,7 +3790,6 @@
         ]
       }
     }
-    
   },
   "awaycontent9": {
     "dir_count": 1,
@@ -4038,7 +3806,6 @@
         ]
       }
     }
-    
   },
   "awaycontent10": {
     "dir_count": 1,
@@ -4055,7 +3822,6 @@
         ]
       }
     }
-    
   },
   "awaycontent11": {
     "dir_count": 1,
@@ -4072,7 +3838,6 @@
         ]
       }
     }
-    
   },
   "awaycontent12": {
     "dir_count": 1,
@@ -4089,7 +3854,6 @@
         ]
       }
     }
-    
   },
   "awaycontent13": {
     "dir_count": 1,
@@ -4106,7 +3870,6 @@
         ]
       }
     }
-    
   },
   "awaycontent14": {
     "dir_count": 1,
@@ -4123,7 +3886,6 @@
         ]
       }
     }
-    
   },
   "awaycontent15": {
     "dir_count": 1,
@@ -4140,7 +3902,6 @@
         ]
       }
     }
-    
   },
   "awaycontent16": {
     "dir_count": 1,
@@ -4157,7 +3918,6 @@
         ]
       }
     }
-    
   },
   "awaycontent17": {
     "dir_count": 1,
@@ -4174,7 +3934,6 @@
         ]
       }
     }
-    
   },
   "awaycontent18": {
     "dir_count": 1,
@@ -4191,7 +3950,6 @@
         ]
       }
     }
-    
   },
   "awaycontent19": {
     "dir_count": 1,
@@ -4208,7 +3966,6 @@
         ]
       }
     }
-    
   },
   "awaycontent20": {
     "dir_count": 1,
@@ -4225,7 +3982,6 @@
         ]
       }
     }
-    
   },
   "awaycontent21": {
     "dir_count": 1,
@@ -4242,7 +3998,6 @@
         ]
       }
     }
-    
   },
   "awaycontent22": {
     "dir_count": 1,
@@ -4259,7 +4014,6 @@
         ]
       }
     }
-    
   },
   "awaycontent23": {
     "dir_count": 1,
@@ -4276,7 +4030,6 @@
         ]
       }
     }
-    
   },
   "awaycontent24": {
     "dir_count": 1,
@@ -4293,7 +4046,6 @@
         ]
       }
     }
-    
   },
   "awaycontent25": {
     "dir_count": 1,
@@ -4310,7 +4062,6 @@
         ]
       }
     }
-    
   },
   "awaycontent26": {
     "dir_count": 1,
@@ -4327,7 +4078,6 @@
         ]
       }
     }
-    
   },
   "awaycontent27": {
     "dir_count": 1,
@@ -4344,7 +4094,6 @@
         ]
       }
     }
-    
   },
   "awaycontent28": {
     "dir_count": 1,
@@ -4361,7 +4110,6 @@
         ]
       }
     }
-    
   },
   "awaycontent29": {
     "dir_count": 1,
@@ -4378,7 +4126,6 @@
         ]
       }
     }
-    
   },
   "awaycontent30": {
     "dir_count": 1,
@@ -4395,7 +4142,6 @@
         ]
       }
     }
-    
   },
   "engine_sm": {
     "dir_count": 1,
@@ -4412,7 +4158,6 @@
         ]
       }
     }
-    
   },
   "xenomaint": {
     "dir_count": 1,
@@ -4429,7 +4174,6 @@
         ]
       }
     }
-    
   },
   "execution_room": {
     "dir_count": 1,
@@ -4446,7 +4190,6 @@
         ]
       }
     }
-    
   },
   "garden": {
     "dir_count": 1,
@@ -4463,7 +4206,6 @@
         ]
       }
     }
-    
   },
   "ce_office": {
     "dir_count": 1,
@@ -4480,7 +4222,6 @@
         ]
       }
     }
-    
   },
   "ce_private": {
     "dir_count": 1,
@@ -4497,7 +4238,6 @@
         ]
       }
     }
-    
   },
   "cmo_office": {
     "dir_count": 1,
@@ -4514,7 +4254,6 @@
         ]
       }
     }
-    
   },
   "cmo_private": {
     "dir_count": 1,
@@ -4531,7 +4270,6 @@
         ]
       }
     }
-    
   },
   "hop_office": {
     "dir_count": 1,
@@ -4548,7 +4286,6 @@
         ]
       }
     }
-    
   },
   "hop_private": {
     "dir_count": 1,
@@ -4565,7 +4302,6 @@
         ]
       }
     }
-    
   },
   "hos_office": {
     "dir_count": 1,
@@ -4582,7 +4318,6 @@
         ]
       }
     }
-    
   },
   "hos_private": {
     "dir_count": 1,
@@ -4599,7 +4334,6 @@
         ]
       }
     }
-    
   },
   "rd_office": {
     "dir_count": 1,
@@ -4616,7 +4350,6 @@
         ]
       }
     }
-    
   },
   "rd_private": {
     "dir_count": 1,
@@ -4633,7 +4366,6 @@
         ]
       }
     }
-    
   },
   "grav_gen": {
     "dir_count": 1,
@@ -4650,7 +4382,6 @@
         ]
       }
     }
-    
   },
   "engi_storage": {
     "dir_count": 1,
@@ -4667,7 +4398,6 @@
         ]
       }
     }
-    
   },
   "transit_tube": {
     "dir_count": 1,
@@ -4684,7 +4414,6 @@
         ]
       }
     }
-    
   },
   "engine_foyer": {
     "dir_count": 1,
@@ -4701,7 +4430,6 @@
         ]
       }
     }
-    
   },
   "atmos_engine": {
     "dir_count": 1,
@@ -4718,7 +4446,6 @@
         ]
       }
     }
-    
   },
   "abandoned_garden": {
     "dir_count": 1,
@@ -4735,7 +4462,6 @@
         ]
       }
     }
-    
   },
   "origin_marker": {
     "dir_count": 1,

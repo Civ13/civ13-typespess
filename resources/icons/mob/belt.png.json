@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "gun": {
     "dir_count": 4,
@@ -58,7 +57,6 @@
         ]
       }
     }
-    
   },
   "handcuff": {
     "dir_count": 4,
@@ -102,7 +100,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer": {
     "dir_count": 4,
@@ -146,7 +143,6 @@
         ]
       }
     }
-    
   },
   "electronic": {
     "dir_count": 4,
@@ -190,7 +186,6 @@
         ]
       }
     }
-    
   },
   "classic_baton": {
     "dir_count": 1,
@@ -207,7 +202,6 @@
         ]
       }
     }
-    
   },
   "pen": {
     "dir_count": 4,
@@ -251,7 +245,6 @@
         ]
       }
     }
-    
   },
   "gun_1": {
     "dir_count": 4,
@@ -295,7 +288,6 @@
         ]
       }
     }
-    
   },
   "gun_2": {
     "dir_count": 4,
@@ -339,7 +331,6 @@
         ]
       }
     }
-    
   },
   "gun_3": {
     "dir_count": 4,
@@ -383,7 +374,6 @@
         ]
       }
     }
-    
   },
   "handcuff_1": {
     "dir_count": 1,
@@ -400,7 +390,6 @@
         ]
       }
     }
-    
   },
   "handcuff_5": {
     "dir_count": 1,
@@ -417,7 +406,6 @@
         ]
       }
     }
-    
   },
   "handcuff_2": {
     "dir_count": 1,
@@ -434,7 +422,6 @@
         ]
       }
     }
-    
   },
   "handcuff_4": {
     "dir_count": 1,
@@ -451,7 +438,6 @@
         ]
       }
     }
-    
   },
   "handcuff_3": {
     "dir_count": 1,
@@ -468,7 +454,6 @@
         ]
       }
     }
-    
   },
   "electronic_1": {
     "dir_count": 1,
@@ -485,7 +470,6 @@
         ]
       }
     }
-    
   },
   "electronic_5": {
     "dir_count": 1,
@@ -502,7 +486,6 @@
         ]
       }
     }
-    
   },
   "electronic_2": {
     "dir_count": 1,
@@ -519,7 +502,6 @@
         ]
       }
     }
-    
   },
   "electronic_4": {
     "dir_count": 1,
@@ -536,7 +518,6 @@
         ]
       }
     }
-    
   },
   "electronic_3": {
     "dir_count": 1,
@@ -553,7 +534,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_1": {
     "dir_count": 1,
@@ -570,7 +550,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_5": {
     "dir_count": 1,
@@ -587,7 +566,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_2": {
     "dir_count": 1,
@@ -604,7 +582,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_4": {
     "dir_count": 1,
@@ -621,7 +598,6 @@
         ]
       }
     }
-    
   },
   "healthanalyzer_3": {
     "dir_count": 1,
@@ -638,7 +614,6 @@
         ]
       }
     }
-    
   },
   "pen_1": {
     "dir_count": 1,
@@ -655,7 +630,6 @@
         ]
       }
     }
-    
   },
   "pen_5": {
     "dir_count": 1,
@@ -672,7 +646,6 @@
         ]
       }
     }
-    
   },
   "pen_2": {
     "dir_count": 1,
@@ -689,7 +662,6 @@
         ]
       }
     }
-    
   },
   "pen_4": {
     "dir_count": 1,
@@ -706,7 +678,6 @@
         ]
       }
     }
-    
   },
   "pen_3": {
     "dir_count": 1,
@@ -723,7 +694,6 @@
         ]
       }
     }
-    
   },
   "emergency": {
     "dir_count": 4,
@@ -767,7 +737,6 @@
         ]
       }
     }
-    
   },
   "emergency_engi": {
     "dir_count": 4,
@@ -811,7 +780,6 @@
         ]
       }
     }
-    
   },
   "injector": {
     "dir_count": 4,
@@ -855,7 +823,6 @@
         ]
       }
     }
-    
   },
   "suspenders": {
     "dir_count": 4,
@@ -899,7 +866,6 @@
         ]
       }
     }
-    
   },
   "pickaxe": {
     "dir_count": 4,
@@ -943,7 +909,6 @@
         ]
       }
     }
-    
   },
   "spickaxe": {
     "dir_count": 4,
@@ -987,7 +952,6 @@
         ]
       }
     }
-    
   },
   "gpickaxe": {
     "dir_count": 4,
@@ -1031,7 +995,6 @@
         ]
       }
     }
-    
   },
   "dpickaxe": {
     "dir_count": 4,
@@ -1075,7 +1038,6 @@
         ]
       }
     }
-    
   },
   "jackhammer": {
     "dir_count": 4,
@@ -1119,7 +1081,6 @@
         ]
       }
     }
-    
   },
   "baton": {
     "dir_count": 4,
@@ -1163,7 +1124,6 @@
         ]
       }
     }
-    
   },
   "champion": {
     "dir_count": 4,
@@ -1207,7 +1167,6 @@
         ]
       }
     }
-    
   },
   "katana": {
     "dir_count": 4,
@@ -1251,7 +1210,6 @@
         ]
       }
     }
-    
   },
   "utility": {
     "dir_count": 4,
@@ -1295,7 +1253,6 @@
         ]
       }
     }
-    
   },
   "soulstonebelt": {
     "dir_count": 4,
@@ -1339,7 +1296,6 @@
         ]
       }
     }
-    
   },
   "janibelt": {
     "dir_count": 4,
@@ -1383,7 +1339,6 @@
         ]
       }
     }
-    
   },
   "medical": {
     "dir_count": 4,
@@ -1427,7 +1382,6 @@
         ]
       }
     }
-    
   },
   "military": {
     "dir_count": 4,
@@ -1471,7 +1425,6 @@
         ]
       }
     }
-    
   },
   "security": {
     "dir_count": 4,
@@ -1515,7 +1468,6 @@
         ]
       }
     }
-    
   },
   "bandolier": {
     "dir_count": 4,
@@ -1559,7 +1511,6 @@
         ]
       }
     }
-    
   },
   "holster": {
     "dir_count": 4,
@@ -1603,7 +1554,6 @@
         ]
       }
     }
-    
   },
   "fannypack_orange": {
     "dir_count": 4,
@@ -1647,7 +1597,6 @@
         ]
       }
     }
-    
   },
   "fannypack_black": {
     "dir_count": 4,
@@ -1691,7 +1640,6 @@
         ]
       }
     }
-    
   },
   "fannypack_red": {
     "dir_count": 4,
@@ -1735,7 +1683,6 @@
         ]
       }
     }
-    
   },
   "fannypack_purple": {
     "dir_count": 4,
@@ -1779,7 +1726,6 @@
         ]
       }
     }
-    
   },
   "fannypack_blue": {
     "dir_count": 4,
@@ -1823,7 +1769,6 @@
         ]
       }
     }
-    
   },
   "fannypack_leather": {
     "dir_count": 4,
@@ -1867,7 +1812,6 @@
         ]
       }
     }
-    
   },
   "fannypack_white": {
     "dir_count": 4,
@@ -1911,7 +1855,6 @@
         ]
       }
     }
-    
   },
   "fannypack_green": {
     "dir_count": 4,
@@ -1955,7 +1898,6 @@
         ]
       }
     }
-    
   },
   "fannypack_pink": {
     "dir_count": 4,
@@ -1999,7 +1941,6 @@
         ]
       }
     }
-    
   },
   "fannypack_yellow": {
     "dir_count": 4,
@@ -2043,7 +1984,6 @@
         ]
       }
     }
-    
   },
   "fannypack_cyan": {
     "dir_count": 4,
@@ -2087,7 +2027,6 @@
         ]
       }
     }
-    
   },
   "defibcompact": {
     "dir_count": 4,
@@ -2211,7 +2150,6 @@
         ]
       }
     }
-    
   },
   "ioncarbine": {
     "dir_count": 4,
@@ -2255,7 +2193,6 @@
         ]
       }
     }
-    
   },
   "energy_katana": {
     "dir_count": 4,
@@ -2299,7 +2236,6 @@
         ]
       }
     }
-    
   },
   "plasmaman_tank_belt": {
     "dir_count": 4,
@@ -2343,7 +2279,6 @@
         ]
       }
     }
-    
   },
   "grenadebeltold": {
     "dir_count": 4,
@@ -2387,7 +2322,6 @@
         ]
       }
     }
-    
   },
   "assault": {
     "dir_count": 4,
@@ -2431,7 +2365,6 @@
         ]
       }
     }
-    
   },
   "grenadebeltnew": {
     "dir_count": 4,
@@ -2475,7 +2408,6 @@
         ]
       }
     }
-    
   },
   "ebelt": {
     "dir_count": 4,
@@ -2519,7 +2451,6 @@
         ]
       }
     }
-    
   },
   "explorer1": {
     "dir_count": 4,
@@ -2563,7 +2494,6 @@
         ]
       }
     }
-    
   },
   "explorer2": {
     "dir_count": 4,
@@ -2607,7 +2537,6 @@
         ]
       }
     }
-    
   },
   "militarywebbing": {
     "dir_count": 4,
@@ -2651,7 +2580,6 @@
         ]
       }
     }
-    
   },
   "dread_ipad": {
     "dir_count": 4,
@@ -2695,7 +2623,6 @@
         ]
       }
     }
-    
   },
   "sheath-sabre": {
     "dir_count": 4,
@@ -2739,7 +2666,6 @@
         ]
       }
     }
-    
   },
   "sheath": {
     "dir_count": 4,
@@ -2783,7 +2709,6 @@
         ]
       }
     }
-    
   },
   "utility_ce": {
     "dir_count": 4,
@@ -2827,7 +2752,6 @@
         ]
       }
     }
-    
   },
   "gang": {
     "dir_count": 4,

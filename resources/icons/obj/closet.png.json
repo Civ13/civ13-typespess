@@ -14,7 +14,6 @@
         ]
       }
     }
-    
   },
   "locked": {
     "dir_count": 1,
@@ -31,7 +30,6 @@
         ]
       }
     }
-    
   },
   "off": {
     "dir_count": 1,
@@ -48,7 +46,6 @@
         ]
       }
     }
-    
   },
   "sparking": {
     "dir_count": 1,
@@ -80,7 +77,6 @@
         ]
       }
     }
-    
   },
   "welded": {
     "dir_count": 1,
@@ -97,7 +93,6 @@
         ]
       }
     }
-    
   },
   "generic_door": {
     "dir_count": 1,
@@ -114,7 +109,6 @@
         ]
       }
     }
-    
   },
   "blue_door": {
     "dir_count": 1,
@@ -131,7 +125,6 @@
         ]
       }
     }
-    
   },
   "mixed_door": {
     "dir_count": 1,
@@ -148,7 +141,6 @@
         ]
       }
     }
-    
   },
   "grey_door": {
     "dir_count": 1,
@@ -165,7 +157,6 @@
         ]
       }
     }
-    
   },
   "green_door": {
     "dir_count": 1,
@@ -182,7 +173,6 @@
         ]
       }
     }
-    
   },
   "orange_door": {
     "dir_count": 1,
@@ -199,7 +189,6 @@
         ]
       }
     }
-    
   },
   "pink_door": {
     "dir_count": 1,
@@ -216,7 +205,6 @@
         ]
       }
     }
-    
   },
   "red_door": {
     "dir_count": 1,
@@ -233,7 +221,6 @@
         ]
       }
     }
-    
   },
   "white_door": {
     "dir_count": 1,
@@ -250,7 +237,6 @@
         ]
       }
     }
-    
   },
   "yellow_door": {
     "dir_count": 1,
@@ -267,7 +253,6 @@
         ]
       }
     }
-    
   },
   "black_door": {
     "dir_count": 1,
@@ -284,7 +269,6 @@
         ]
       }
     }
-    
   },
   "atmos_wardrobe_door": {
     "dir_count": 1,
@@ -301,7 +285,6 @@
         ]
       }
     }
-    
   },
   "generic": {
     "dir_count": 1,
@@ -318,7 +301,6 @@
         ]
       }
     }
-    
   },
   "generic_open": {
     "dir_count": 1,
@@ -335,7 +317,6 @@
         ]
       }
     }
-    
   },
   "bio_door": {
     "dir_count": 1,
@@ -352,7 +333,6 @@
         ]
       }
     }
-    
   },
   "bio": {
     "dir_count": 1,
@@ -369,7 +349,6 @@
         ]
       }
     }
-    
   },
   "bio_open": {
     "dir_count": 1,
@@ -386,7 +365,6 @@
         ]
       }
     }
-    
   },
   "bio_viro_door": {
     "dir_count": 1,
@@ -403,7 +381,6 @@
         ]
       }
     }
-    
   },
   "bio_viro": {
     "dir_count": 1,
@@ -420,7 +397,6 @@
         ]
       }
     }
-    
   },
   "bio_viro_open": {
     "dir_count": 1,
@@ -437,7 +413,6 @@
         ]
       }
     }
-    
   },
   "bio_sec_door": {
     "dir_count": 1,
@@ -454,7 +429,6 @@
         ]
       }
     }
-    
   },
   "bio_sec": {
     "dir_count": 1,
@@ -471,7 +445,6 @@
         ]
       }
     }
-    
   },
   "bio_sec_open": {
     "dir_count": 1,
@@ -488,7 +461,6 @@
         ]
       }
     }
-    
   },
   "bio_jan_door": {
     "dir_count": 1,
@@ -505,7 +477,6 @@
         ]
       }
     }
-    
   },
   "bio_jan": {
     "dir_count": 1,
@@ -522,7 +493,6 @@
         ]
       }
     }
-    
   },
   "bio_jan_open": {
     "dir_count": 1,
@@ -539,7 +509,6 @@
         ]
       }
     }
-    
   },
   "syndicate_door": {
     "dir_count": 1,
@@ -556,7 +525,6 @@
         ]
       }
     }
-    
   },
   "syndicate": {
     "dir_count": 1,
@@ -573,7 +541,6 @@
         ]
       }
     }
-    
   },
   "syndicate_open": {
     "dir_count": 1,
@@ -590,7 +557,6 @@
         ]
       }
     }
-    
   },
   "emergency_door": {
     "dir_count": 1,
@@ -607,7 +573,6 @@
         ]
       }
     }
-    
   },
   "emergency": {
     "dir_count": 1,
@@ -624,7 +589,6 @@
         ]
       }
     }
-    
   },
   "emergency_open": {
     "dir_count": 1,
@@ -641,7 +605,6 @@
         ]
       }
     }
-    
   },
   "secure_door": {
     "dir_count": 1,
@@ -658,7 +621,6 @@
         ]
       }
     }
-    
   },
   "secure": {
     "dir_count": 1,
@@ -675,7 +637,6 @@
         ]
       }
     }
-    
   },
   "secure_open": {
     "dir_count": 1,
@@ -692,7 +653,6 @@
         ]
       }
     }
-    
   },
   "med_door": {
     "dir_count": 1,
@@ -709,7 +669,6 @@
         ]
       }
     }
-    
   },
   "med": {
     "dir_count": 1,
@@ -726,7 +685,6 @@
         ]
       }
     }
-    
   },
   "med_open": {
     "dir_count": 1,
@@ -743,7 +701,6 @@
         ]
       }
     }
-    
   },
   "chemical_door": {
     "dir_count": 1,
@@ -760,7 +717,6 @@
         ]
       }
     }
-    
   },
   "freezer_door": {
     "dir_count": 1,
@@ -777,7 +733,6 @@
         ]
       }
     }
-    
   },
   "freezer": {
     "dir_count": 1,
@@ -794,7 +749,6 @@
         ]
       }
     }
-    
   },
   "freezer_open": {
     "dir_count": 1,
@@ -811,7 +765,6 @@
         ]
       }
     }
-    
   },
   "fire_door": {
     "dir_count": 1,
@@ -828,7 +781,6 @@
         ]
       }
     }
-    
   },
   "fire": {
     "dir_count": 1,
@@ -845,7 +797,6 @@
         ]
       }
     }
-    
   },
   "fire_open": {
     "dir_count": 1,
@@ -862,7 +813,6 @@
         ]
       }
     }
-    
   },
   "eng_tool_door": {
     "dir_count": 1,
@@ -879,7 +829,6 @@
         ]
       }
     }
-    
   },
   "eng_rad_door": {
     "dir_count": 1,
@@ -896,7 +845,6 @@
         ]
       }
     }
-    
   },
   "eng_elec_door": {
     "dir_count": 1,
@@ -913,7 +861,6 @@
         ]
       }
     }
-    
   },
   "eng_weld_door": {
     "dir_count": 1,
@@ -930,7 +877,6 @@
         ]
       }
     }
-    
   },
   "eng": {
     "dir_count": 1,
@@ -947,7 +893,6 @@
         ]
       }
     }
-    
   },
   "eng_open": {
     "dir_count": 1,
@@ -964,7 +909,6 @@
         ]
       }
     }
-    
   },
   "eng_secure_door": {
     "dir_count": 1,
@@ -981,7 +925,6 @@
         ]
       }
     }
-    
   },
   "eng_secure": {
     "dir_count": 1,
@@ -998,7 +941,6 @@
         ]
       }
     }
-    
   },
   "eng_secure_open": {
     "dir_count": 1,
@@ -1015,7 +957,6 @@
         ]
       }
     }
-    
   },
   "mining_door": {
     "dir_count": 1,
@@ -1032,7 +973,6 @@
         ]
       }
     }
-    
   },
   "mining": {
     "dir_count": 1,
@@ -1049,7 +989,6 @@
         ]
       }
     }
-    
   },
   "mining_open": {
     "dir_count": 1,
@@ -1066,7 +1005,6 @@
         ]
       }
     }
-    
   },
   "bomb_door": {
     "dir_count": 1,
@@ -1083,7 +1021,6 @@
         ]
       }
     }
-    
   },
   "bomb": {
     "dir_count": 1,
@@ -1100,7 +1037,6 @@
         ]
       }
     }
-    
   },
   "bomb_open": {
     "dir_count": 1,
@@ -1117,7 +1053,6 @@
         ]
       }
     }
-    
   },
   "alien_door": {
     "dir_count": 1,
@@ -1134,7 +1069,6 @@
         ]
       }
     }
-    
   },
   "alien": {
     "dir_count": 1,
@@ -1151,7 +1085,6 @@
         ]
       }
     }
-    
   },
   "alien_open": {
     "dir_count": 1,
@@ -1168,7 +1101,6 @@
         ]
       }
     }
-    
   },
   "ce_door": {
     "dir_count": 1,
@@ -1185,7 +1117,6 @@
         ]
       }
     }
-    
   },
   "ce": {
     "dir_count": 1,
@@ -1202,7 +1133,6 @@
         ]
       }
     }
-    
   },
   "ce_open": {
     "dir_count": 1,
@@ -1219,7 +1149,6 @@
         ]
       }
     }
-    
   },
   "med_secure_door": {
     "dir_count": 1,
@@ -1236,7 +1165,6 @@
         ]
       }
     }
-    
   },
   "med_secure": {
     "dir_count": 1,
@@ -1253,7 +1181,6 @@
         ]
       }
     }
-    
   },
   "med_secure_open": {
     "dir_count": 1,
@@ -1270,7 +1197,6 @@
         ]
       }
     }
-    
   },
   "science_door": {
     "dir_count": 1,
@@ -1287,7 +1213,6 @@
         ]
       }
     }
-    
   },
   "science": {
     "dir_count": 1,
@@ -1304,7 +1229,6 @@
         ]
       }
     }
-    
   },
   "science_open": {
     "dir_count": 1,
@@ -1321,7 +1245,6 @@
         ]
       }
     }
-    
   },
   "cargo_door": {
     "dir_count": 1,
@@ -1338,7 +1261,6 @@
         ]
       }
     }
-    
   },
   "cargo": {
     "dir_count": 1,
@@ -1355,7 +1277,6 @@
         ]
       }
     }
-    
   },
   "cargo_open": {
     "dir_count": 1,
@@ -1372,7 +1293,6 @@
         ]
       }
     }
-    
   },
   "qm_door": {
     "dir_count": 1,
@@ -1389,7 +1309,6 @@
         ]
       }
     }
-    
   },
   "qm": {
     "dir_count": 1,
@@ -1406,7 +1325,6 @@
         ]
       }
     }
-    
   },
   "qm_open": {
     "dir_count": 1,
@@ -1423,7 +1341,6 @@
         ]
       }
     }
-    
   },
   "sec_door": {
     "dir_count": 1,
@@ -1440,7 +1357,6 @@
         ]
       }
     }
-    
   },
   "sec": {
     "dir_count": 1,
@@ -1457,7 +1373,6 @@
         ]
       }
     }
-    
   },
   "sec_open": {
     "dir_count": 1,
@@ -1474,7 +1389,6 @@
         ]
       }
     }
-    
   },
   "warden_door": {
     "dir_count": 1,
@@ -1491,7 +1405,6 @@
         ]
       }
     }
-    
   },
   "warden": {
     "dir_count": 1,
@@ -1508,7 +1421,6 @@
         ]
       }
     }
-    
   },
   "warden_open": {
     "dir_count": 1,
@@ -1525,7 +1437,6 @@
         ]
       }
     }
-    
   },
   "hos_door": {
     "dir_count": 1,
@@ -1542,7 +1453,6 @@
         ]
       }
     }
-    
   },
   "hos": {
     "dir_count": 1,
@@ -1559,7 +1469,6 @@
         ]
       }
     }
-    
   },
   "hos_open": {
     "dir_count": 1,
@@ -1576,7 +1485,6 @@
         ]
       }
     }
-    
   },
   "armory_door": {
     "dir_count": 1,
@@ -1593,7 +1501,6 @@
         ]
       }
     }
-    
   },
   "armory": {
     "dir_count": 1,
@@ -1610,7 +1517,6 @@
         ]
       }
     }
-    
   },
   "armory_open": {
     "dir_count": 1,
@@ -1627,7 +1533,6 @@
         ]
       }
     }
-    
   },
   "tac_door": {
     "dir_count": 1,
@@ -1644,7 +1549,6 @@
         ]
       }
     }
-    
   },
   "tac": {
     "dir_count": 1,
@@ -1661,7 +1565,6 @@
         ]
       }
     }
-    
   },
   "tac_open": {
     "dir_count": 1,
@@ -1678,7 +1581,6 @@
         ]
       }
     }
-    
   },
   "cap_door": {
     "dir_count": 1,
@@ -1695,7 +1597,6 @@
         ]
       }
     }
-    
   },
   "cap": {
     "dir_count": 1,
@@ -1712,7 +1613,6 @@
         ]
       }
     }
-    
   },
   "cap_open": {
     "dir_count": 1,
@@ -1729,7 +1629,6 @@
         ]
       }
     }
-    
   },
   "hop_door": {
     "dir_count": 1,
@@ -1746,7 +1645,6 @@
         ]
       }
     }
-    
   },
   "hop": {
     "dir_count": 1,
@@ -1763,7 +1661,6 @@
         ]
       }
     }
-    
   },
   "hop_open": {
     "dir_count": 1,
@@ -1780,7 +1677,6 @@
         ]
       }
     }
-    
   },
   "cmo_door": {
     "dir_count": 1,
@@ -1797,7 +1693,6 @@
         ]
       }
     }
-    
   },
   "cmo": {
     "dir_count": 1,
@@ -1814,7 +1709,6 @@
         ]
       }
     }
-    
   },
   "cmo_open": {
     "dir_count": 1,
@@ -1831,7 +1725,6 @@
         ]
       }
     }
-    
   },
   "rd_door": {
     "dir_count": 1,
@@ -1848,7 +1741,6 @@
         ]
       }
     }
-    
   },
   "rd": {
     "dir_count": 1,
@@ -1865,7 +1757,6 @@
         ]
       }
     }
-    
   },
   "rd_open": {
     "dir_count": 1,
@@ -1882,7 +1773,6 @@
         ]
       }
     }
-    
   },
   "hydro_door": {
     "dir_count": 1,
@@ -1899,7 +1789,6 @@
         ]
       }
     }
-    
   },
   "hydro": {
     "dir_count": 1,
@@ -1916,7 +1805,6 @@
         ]
       }
     }
-    
   },
   "hydro_open": {
     "dir_count": 1,
@@ -1933,7 +1821,6 @@
         ]
       }
     }
-    
   },
   "atmos_door": {
     "dir_count": 1,
@@ -1950,7 +1837,6 @@
         ]
       }
     }
-    
   },
   "atmos": {
     "dir_count": 1,
@@ -1967,7 +1853,6 @@
         ]
       }
     }
-    
   },
   "atmos_open": {
     "dir_count": 1,
@@ -1984,7 +1869,6 @@
         ]
       }
     }
-    
   },
   "cabinet_door": {
     "dir_count": 1,
@@ -2001,7 +1885,6 @@
         ]
       }
     }
-    
   },
   "cabinet": {
     "dir_count": 1,
@@ -2018,7 +1901,6 @@
         ]
       }
     }
-    
   },
   "cabinet_open": {
     "dir_count": 1,
@@ -2035,7 +1917,6 @@
         ]
       }
     }
-    
   },
   "coffin_door": {
     "dir_count": 1,
@@ -2052,7 +1933,6 @@
         ]
       }
     }
-    
   },
   "coffin": {
     "dir_count": 1,
@@ -2069,7 +1949,6 @@
         ]
       }
     }
-    
   },
   "coffin_open": {
     "dir_count": 1,
@@ -2086,7 +1965,6 @@
         ]
       }
     }
-    
   },
   "shotguncase_door": {
     "dir_count": 1,
@@ -2103,7 +1981,6 @@
         ]
       }
     }
-    
   },
   "shotguncase": {
     "dir_count": 1,
@@ -2120,7 +1997,6 @@
         ]
       }
     }
-    
   },
   "shotguncase_open": {
     "dir_count": 1,
@@ -2137,7 +2013,6 @@
         ]
       }
     }
-    
   },
   "shotgun": {
     "dir_count": 1,
@@ -2154,7 +2029,6 @@
         ]
       }
     }
-    
   },
   "ecase_door": {
     "dir_count": 1,
@@ -2171,7 +2045,6 @@
         ]
       }
     }
-    
   },
   "ecase": {
     "dir_count": 1,
@@ -2188,7 +2061,6 @@
         ]
       }
     }
-    
   },
   "ecase_open": {
     "dir_count": 1,
@@ -2205,7 +2077,6 @@
         ]
       }
     }
-    
   },
   "egun": {
     "dir_count": 1,
@@ -2222,7 +2093,6 @@
         ]
       }
     }
-    
   },
   "abductor": {
     "dir_count": 1,
@@ -2239,7 +2109,6 @@
         ]
       }
     }
-    
   },
   "abductor_open": {
     "dir_count": 1,
@@ -2256,7 +2125,6 @@
         ]
       }
     }
-    
   },
   "abductor_door": {
     "dir_count": 1,
@@ -2273,7 +2141,6 @@
         ]
       }
     }
-    
   },
   "cardboard_special": {
     "dir_count": 1,
@@ -2290,7 +2157,6 @@
         ]
       }
     }
-    
   },
   "cardboard": {
     "dir_count": 1,
@@ -2307,7 +2173,6 @@
         ]
       }
     }
-    
   },
   "cardboard_open": {
     "dir_count": 1,
@@ -2324,7 +2189,6 @@
         ]
       }
     }
-    
   },
   "oldcloset": {
     "dir_count": 1,
@@ -2341,7 +2205,6 @@
         ]
       }
     }
-    
   },
   "metalbox": {
     "dir_count": 1,
@@ -2358,7 +2221,6 @@
         ]
       }
     }
-    
   },
   "metalbox_open": {
     "dir_count": 1,
