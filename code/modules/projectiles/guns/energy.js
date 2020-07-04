@@ -30,8 +30,6 @@ class EnergyGun extends Component {
 			this.process_chamber.bind(this)
 		);
 		this.a.c.Item.attack_self = this.attack_self.bind(this);
-		this.a.c.Rechargeable.check_can_charge = this.check_can_charge.bind(this);
-		this.a.c.Rechargeable.recharge = this.recharge.bind(this);
 
 		make_watched_property(this, "select", "number");
 		make_watched_property(this, "cell");
@@ -157,8 +155,8 @@ class EnergyGun extends Component {
 
 }
 
-EnergyGun.loadBefore = ["Gun", "Rechargeable"];
-EnergyGun.depends = ["Gun", "Rechargeable"];
+EnergyGun.loadBefore = ["Gun"];
+EnergyGun.depends = ["Gun"];
 
 EnergyGun.template = {
 	vars: {

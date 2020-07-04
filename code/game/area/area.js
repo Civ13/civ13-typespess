@@ -165,44 +165,12 @@ module.exports.templates = {
 			},
 		},
 	},
-	area_maintenance: {
-		components: ["Area", "AreaAmbience", "AreaPower"],
-		vars: {
-			components: {
-				AreaAmbience: {
-					ambient_sounds: [
-						"sound/voice/lowHiss2.ogg", //Xeno Breathing Hisses, Hahahaha I'm not even sorry.
-						"sound/voice/lowHiss3.ogg",
-						"sound/voice/lowHiss4.ogg",
-					],
-				},
-			},
-		},
-		tree_paths: ["areas/maintenance"],
-	},
-	area_chapel: {
-		components: ["Area", "AreaAmbience", "AreaPower"],
-		tree_paths: ["areas/chapel"],
-	},
-	area_engine: {
-		components: ["Area", "AreaAmbience", "AreaPower"],
-		tree_paths: ["areas/engine"],
-	},
-	area_morgue: {
-		components: ["Area", "AreaAmbience", "AreaPower"],
-		tree_paths: ["areas/engine"],
-	},
-	area_detective: {
-		components: ["Area", "AreaAmbience", "AreaPower"],
-		tree_paths: ["areas/engine"],
-	},
 	area_arrivals: {
 		components: [
 			"Area",
 			"AreaAmbience",
 			"AreaArrivals",
 			"AreaPower",
-			"Shuttle",
 		],
 		vars: {
 			components: {
@@ -211,7 +179,7 @@ module.exports.templates = {
 				},
 			},
 		},
-		tree_paths: ["areas/shuttle/arrivals"],
+		tree_paths: ["areas/arrivals"],
 	},
 	area_brush: {
 		components: ["AreaBrush"],
