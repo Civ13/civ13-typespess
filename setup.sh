@@ -1,5 +1,6 @@
 #!/bin/bash
 
 npm install
+npm install -g ts-node
 cd client_src
-gulp
+npx ts-node compile.ts

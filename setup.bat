@@ -11,10 +11,11 @@ echo.
 echo Packages installed.
 
 cd client_src
-echo Running gulp...
+echo Browserifying client...
 
 echo.
-call gulp
+call npm install -g ts-node
+call npx ts-node compile.ts
 
 echo.
 echo Done.
