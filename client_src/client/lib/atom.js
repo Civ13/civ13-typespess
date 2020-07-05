@@ -5,8 +5,8 @@ const EventEmitter = require("events");
 class Atom extends EventEmitter {
 	constructor(client, instobj = {}) {
 		super();
-		if (!instobj.hasOwnProperty("x")) instobj.x = 0;
-		if (!instobj.hasOwnProperty("y")) instobj.y = 0;
+		if (!Object.prototype.hasOwnProperty.call(instobj,"x")) instobj.x = 0;
+		if (!Object.prototype.hasOwnProperty.call(instobj,"y")) instobj.y = 0;
 		this.client = client;
 		this.main_icon_renderer = new IconRenderer(this);
 		this.overlays = {};
@@ -14,7 +14,7 @@ class Atom extends EventEmitter {
 		this.overlay_renderers = {};
 
 		for (let key in instobj) {
-			if (!instobj.hasOwnProperty(key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(instobj,key)) continue;
 			if (key == "overlays" || key == "components" || key == "component_vars")
 				continue;
 			this[key] = instobj[key];
@@ -34,13 +34,13 @@ class Atom extends EventEmitter {
 
 		if (instobj.overlays)
 			for (let key in instobj.overlays) {
-				if (!instobj.overlays.hasOwnProperty(key)) continue;
+				if (!Object.prototype.hasOwnProperty.call(instobj.overlays,key)) continue;
 				this.set_overlay(key, instobj.overlays[key]);
 			}
 
 		this.components = {};
 		for (var component_name of instobj.components || []) {
-			if (!client.components.hasOwnProperty(component_name)) {
+			if (!Object.prototype.hasOwnProperty.call(client.components,component_name)) {
 				console.warn(
 					`Server passed an unknown networked component '${component_name}'! Yell at the devs of your server.`
 				);
@@ -294,7 +294,7 @@ class Atom extends EventEmitter {
 		this.main_icon_renderer.flick = val;
 		if (val.overlays) {
 			for (var key in val.overlays) {
-				if (!this.overlay_renderers.hasOwnProperty(key)) continue;
+				if (!Object.prototype.hasOwnProperty.call(this.overlay_renderers,key)) continue;
 				var overlay_flick = val.overlays[key];
 				this.overlay_renderers[key].flick = overlay_flick;
 				for (var prop of ["icon", "icon_state", "dir", "time_begin"])

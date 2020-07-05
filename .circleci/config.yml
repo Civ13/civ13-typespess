@@ -9,7 +9,6 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: sudo npm install -g gulp
             - run: sudo sh setup.sh
             - run:
                 command: sudo sh launch_test.sh
