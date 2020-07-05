@@ -62,6 +62,7 @@ class SpawnObjectPanel {
 			template_elem.dataset.templateKey = key;
 			template_elem.dataset.searchString = key + val.vars.name;
 			this.panel.$(".templates-list").appendChild(template_elem);
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			const preview : Element = template_elem.querySelector(".item-preview")!;
 
 			setTimeout(() => {

@@ -2,8 +2,8 @@
 
 class MachineWirePanel {
 	panel: any;
-	item_type: string;
-	constructor(panel) {
+	item_type: string | undefined;
+	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.on("message", this.handle_message.bind(this));
 
@@ -17,7 +17,7 @@ class MachineWirePanel {
 		`;
 	}
 
-	handle_message(msg) {
+	handle_message(msg: { wires: any; item_type: string | undefined; status_text: null | undefined; }) {
 		console.log(msg);
 		if (msg.wires) {
 			for (const wire of msg.wires) {

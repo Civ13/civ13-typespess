@@ -23,7 +23,7 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 						return "parallax";
 					};
 					parallax_atom.get_displacement = function get_displacement(
-						timestamp
+						timestamp: any
 					) {
 						const origin_disp =
 							this.eye &&
