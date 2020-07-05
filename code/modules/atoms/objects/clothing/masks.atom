@@ -1,0 +1,1078 @@
+death:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "death"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "death"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "death"
+	tree_paths: ["items/clothing/masks/death"]
+muzzle:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "muzzle"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "muzzle"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "muzzle"
+	tree_paths: ["items/clothing/masks/muzzle"]
+cigoff:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cigoff"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cigoff"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cigoff"
+	tree_paths: ["items/clothing/masks/cigoff"]
+cigon:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cigon"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cigon"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cigon"
+	tree_paths: ["items/clothing/masks/cigon"]
+luckcigon:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "luckcigon"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "luckcigon"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "luckcigon"
+	tree_paths: ["items/clothing/masks/luckcigon"]
+cigbutt:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cigbutt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cigbutt"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cigbutt"
+	tree_paths: ["items/clothing/masks/cigbutt"]
+cigaroff:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cigaroff"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cigaroff"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cigaroff"
+	tree_paths: ["items/clothing/masks/cigaroff"]
+cigaron:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cigaron"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cigaron"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cigaron"
+	tree_paths: ["items/clothing/masks/cigaron"]
+cigar2off:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cigar2off"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cigar2off"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cigar2off"
+	tree_paths: ["items/clothing/masks/cigar2off"]
+cigar2on:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cigar2on"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cigar2on"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cigar2on"
+	tree_paths: ["items/clothing/masks/cigar2on"]
+cigarbutt:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cigarbutt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cigarbutt"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cigarbutt"
+	tree_paths: ["items/clothing/masks/cigarbutt"]
+cobpipeon:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cobpipeon"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cobpipeon"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cobpipeon"
+	tree_paths: ["items/clothing/masks/cobpipeon"]
+cobpipeoff:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cobpipeoff"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cobpipeoff"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cobpipeoff"
+	tree_paths: ["items/clothing/masks/cobpipeoff"]
+pipeon:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "pipeon"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pipeon"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "pipeon"
+	tree_paths: ["items/clothing/masks/pipeon"]
+pipeoff:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "pipeoff"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pipeoff"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "pipeoff"
+	tree_paths: ["items/clothing/masks/pipeoff"]
+tooth-necklace:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "tooth-necklace"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tooth-necklace"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "tooth-necklace"
+	tree_paths: ["items/clothing/masks/tooth-necklace"]
+luckcigbutt:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "luckcigbutt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "luckcigbutt"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "luckcigbutt"
+	tree_paths: ["items/clothing/masks/luckcigbutt"]
+luckcigoff:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "luckcigoff"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "luckcigoff"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "luckcigoff"
+	tree_paths: ["items/clothing/masks/luckcigoff"]
+skull_mask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "skull_mask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "skull mask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "skull_mask"
+	tree_paths: ["items/clothing/masks/skull_mask"]
+plaguedoctor:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "plaguedoctor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "plaguedoctor"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "plaguedoctor"
+	tree_paths: ["items/clothing/masks/plaguedoctor"]
+shemagh1:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "shemagh1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "shemagh1"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "shemagh1"
+	tree_paths: ["items/clothing/masks/shemagh1"]
+shemagh0:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "shemagh0"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "shemagh0"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "shemagh0"
+	tree_paths: ["items/clothing/masks/shemagh0"]
+redkerchief0:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "redkerchief0"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "redkerchief0"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "redkerchief0"
+	tree_paths: ["items/clothing/masks/redkerchief0"]
+greykerchief0:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "greykerchief0"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greykerchief0"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "greykerchief0"
+	tree_paths: ["items/clothing/masks/greykerchief0"]
+redkerchief1:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "redkerchief1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "redkerchief1"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "redkerchief1"
+	tree_paths: ["items/clothing/masks/redkerchief1"]
+greykerchief1:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "greykerchief1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greykerchief1"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "greykerchief1"
+	tree_paths: ["items/clothing/masks/greykerchief1"]
+samurai1:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "samurai1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai1"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "samurai1"
+	tree_paths: ["items/clothing/masks/samurai1"]
+samurai2:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "samurai2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai2"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "samurai2"
+	tree_paths: ["items/clothing/masks/samurai2"]
+samurai3:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "samurai3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai3"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "samurai3"
+	tree_paths: ["items/clothing/masks/samurai3"]
+french_gasmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "french_gasmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "french gasmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "french_gasmask"
+	tree_paths: ["items/clothing/masks/french_gasmask"]
+german_gasmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "german_gasmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "german gasmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "german_gasmask"
+	tree_paths: ["items/clothing/masks/german_gasmask"]
+british_gasmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "british_gasmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "british gasmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "british_gasmask"
+	tree_paths: ["items/clothing/masks/british_gasmask"]
+painting_woodland:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "painting_woodland"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "painting woodland"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "painting_woodland"
+	tree_paths: ["items/clothing/masks/painting_woodland"]
+balaclava:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "balaclava"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "balaclava"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "balaclava"
+	tree_paths: ["items/clothing/masks/balaclava"]
+shemagh_1:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "shemagh_1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "shemagh 1"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "shemagh_1"
+	tree_paths: ["items/clothing/masks/shemagh_1"]
+shemagh_2:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "shemagh_2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "shemagh 2"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "shemagh_2"
+	tree_paths: ["items/clothing/masks/shemagh_2"]
+shemagh_3:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "shemagh_3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "shemagh 3"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "shemagh_3"
+	tree_paths: ["items/clothing/masks/shemagh_3"]
+shemagh_4:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "shemagh_4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "shemagh 4"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "shemagh_4"
+	tree_paths: ["items/clothing/masks/shemagh_4"]
+modern_gasmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "modern_gasmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern gasmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "modern_gasmask"
+	tree_paths: ["items/clothing/masks/modern_gasmask"]
+woodenmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "woodenmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "woodenmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "woodenmask"
+	tree_paths: ["items/clothing/masks/woodenmask"]
+chitin_mask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "chitin_mask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chitin mask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "chitin_mask"
+	tree_paths: ["items/clothing/masks/chitin_mask"]
+sovietmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "sovietmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovietmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "sovietmask"
+	tree_paths: ["items/clothing/masks/sovietmask"]
+moderngasmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "moderngasmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "moderngasmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "moderngasmask"
+	tree_paths: ["items/clothing/masks/moderngasmask"]
+clownmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "clownmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "clownmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "clownmask"
+	tree_paths: ["items/clothing/masks/clownmask"]
+iogplate:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "iogplate"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "iogplate"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "iogplate"
+	tree_paths: ["items/clothing/masks/iogplate"]
+joint:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "joint"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "joint"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "joint"
+	tree_paths: ["items/clothing/masks/joint"]
+joint-on:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "joint-on"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "joint-on"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "joint-on"
+	tree_paths: ["items/clothing/masks/joint-on"]
+military_gasmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "military_gasmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "military gasmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "military_gasmask"
+	tree_paths: ["items/clothing/masks/military_gasmask"]
+russiamask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "russiamask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "russiamask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "russiamask"
+	tree_paths: ["items/clothing/masks/russiamask"]
+sovietbala:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "sovietbala"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovietbala"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "sovietbala"
+	tree_paths: ["items/clothing/masks/sovietbala"]
+salamon:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "salamon"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "salamon"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "salamon"
+	tree_paths: ["items/clothing/masks/salamon"]
+swatmask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "swatmask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "swatmask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "swatmask"
+	tree_paths: ["items/clothing/masks/swatmask"]
+assyrian:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "assyrian"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "assyrian"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "assyrian"
+	tree_paths: ["items/clothing/masks/assyrian"]
+bossjaw:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "bossjaw"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bossjaw"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "bossjaw"
+	tree_paths: ["items/clothing/masks/bossjaw"]
+solitaire:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "solitaire"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "solitaire"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "solitaire"
+	tree_paths: ["items/clothing/masks/solitaire"]
+sack:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "sack"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sack"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "sack"
+	tree_paths: ["items/clothing/masks/sack"]
+scarecrow_sack:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "scarecrow_sack"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "scarecrow sack"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "scarecrow_sack"
+	tree_paths: ["items/clothing/masks/scarecrow_sack"]
+whistle:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "whistle"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "whistle"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "whistle"
+	tree_paths: ["items/clothing/masks/whistle"]
+cow_mask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "cow_mask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cow mask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "cow_mask"
+	tree_paths: ["items/clothing/masks/cow_mask"]
+joy:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "joy"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "joy"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "joy"
+	tree_paths: ["items/clothing/masks/joy"]
+rat:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "rat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "rat"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "rat"
+	tree_paths: ["items/clothing/masks/rat"]
+fox:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "fox"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fox"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "fox"
+	tree_paths: ["items/clothing/masks/fox"]
+bee:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "bee"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bee"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "bee"
+	tree_paths: ["items/clothing/masks/bee"]
+bear:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "bear"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bear"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "bear"
+	tree_paths: ["items/clothing/masks/bear"]
+bat:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "bat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bat"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "bat"
+	tree_paths: ["items/clothing/masks/bat"]
+raven:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "raven"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "raven"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "raven"
+	tree_paths: ["items/clothing/masks/raven"]
+jackal:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "jackal"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jackal"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "jackal"
+	tree_paths: ["items/clothing/masks/jackal"]
+bumba:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "bumba"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bumba"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "bumba"
+	tree_paths: ["items/clothing/masks/bumba"]
+glass_pipe:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "glass_pipe"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "glass pipe"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "glass_pipe"
+	tree_paths: ["items/clothing/masks/glass_pipe"]
+mummy_mask:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "mummy_mask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mummy mask"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "mummy_mask"
+	tree_paths: ["items/clothing/masks/mummy_mask"]
+frog:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "frog"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "frog"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "frog"
+	tree_paths: ["items/clothing/masks/frog"]
+owl:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "owl"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "owl"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "owl"
+	tree_paths: ["items/clothing/masks/owl"]
+anubis:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "anubis"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "anubis"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "anubis"
+	tree_paths: ["items/clothing/masks/anubis"]
+osiris:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "osiris"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "osiris"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "osiris"
+	tree_paths: ["items/clothing/masks/osiris"]
+pig:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "pig"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pig"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "pig"
+	tree_paths: ["items/clothing/masks/pig"]
+sterile:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "sterile"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sterile"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "sterile"
+	tree_paths: ["items/clothing/masks/sterile"]
+sterile_up:
+	components: ["MaskItem"]
+	vars:
+		components:
+			MaskItem:
+				worn_icon: "icons/mob/worn/masks.png"
+				worn_icon_state: "sterile_up"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sterile up"
+		icon: "icons/mob/under/masks.png"
+		icon_state: "sterile_up"
+	tree_paths: ["items/clothing/masks/sterile_up"]

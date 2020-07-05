@@ -1,0 +1,6034 @@
+orange_bandana:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "orange_bandana"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "orange bandana"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "orange_bandana"
+	tree_paths: ["items/clothing/hats/orange_bandana"]
+tophat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tophat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tophat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tophat"
+	tree_paths: ["items/clothing/hats/tophat"]
+centcom:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "centcom"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "centcom"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "centcom"
+	tree_paths: ["items/clothing/hats/centcom"]
+captain:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "captain"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "captain"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "captain"
+	tree_paths: ["items/clothing/hats/captain"]
+pwig:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pwig"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pwig"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pwig"
+	tree_paths: ["items/clothing/hats/pwig"]
+flatcap1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "flatcap1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "flatcap1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "flatcap1"
+	tree_paths: ["items/clothing/hats/flatcap1"]
+pirate:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pirate"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pirate"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pirate"
+	tree_paths: ["items/clothing/hats/pirate"]
+bandana:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "bandana"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bandana"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "bandana"
+	tree_paths: ["items/clothing/hats/bandana"]
+plaguedoctor:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "plaguedoctor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "plaguedoctor"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "plaguedoctor"
+	tree_paths: ["items/clothing/hats/plaguedoctor"]
+beret:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "beret"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "beret"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "beret"
+	tree_paths: ["items/clothing/hats/beret"]
+chaplain_hood:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chaplain_hood"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chaplain hood"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chaplain_hood"
+	tree_paths: ["items/clothing/hats/chaplain_hood"]
+nun_hood:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "nun_hood"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nun hood"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "nun_hood"
+	tree_paths: ["items/clothing/hats/nun_hood"]
+bowler:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "bowler"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bowler"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "bowler"
+	tree_paths: ["items/clothing/hats/bowler"]
+paper:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "paper"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "paper"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "paper"
+	tree_paths: ["items/clothing/hats/paper"]
+petehat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "petehat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "petehat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "petehat"
+	tree_paths: ["items/clothing/hats/petehat"]
+redcoat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "redcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "redcoat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "redcoat"
+	tree_paths: ["items/clothing/hats/redcoat"]
+hairflower:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "hairflower"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hairflower"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "hairflower"
+	tree_paths: ["items/clothing/hats/hairflower"]
+detective2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "detective2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "detective2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "detective2"
+	tree_paths: ["items/clothing/hats/detective2"]
+fez:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fez"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fez"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fez"
+	tree_paths: ["items/clothing/hats/fez"]
+boater_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "boater_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "boater hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "boater_hat"
+	tree_paths: ["items/clothing/hats/boater_hat"]
+bowler_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "bowler_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bowler hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "bowler_hat"
+	tree_paths: ["items/clothing/hats/bowler_hat"]
+fedora:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fedora"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fedora"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fedora"
+	tree_paths: ["items/clothing/hats/fedora"]
+feather_trilby:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "feather_trilby"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "feather trilby"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "feather_trilby"
+	tree_paths: ["items/clothing/hats/feather_trilby"]
+philosopher_wig:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "philosopher_wig"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "philosopher wig"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "philosopher_wig"
+	tree_paths: ["items/clothing/hats/philosopher_wig"]
+gru_bandana:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gru_bandana"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gru bandana"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gru_bandana"
+	tree_paths: ["items/clothing/hats/gru_bandana"]
+piratebandana1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "piratebandana1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "piratebandana1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "piratebandana1"
+	tree_paths: ["items/clothing/hats/piratebandana1"]
+piratehat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "piratehat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "piratehat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "piratehat"
+	tree_paths: ["items/clothing/hats/piratehat"]
+tarred_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tarred_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tarred hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tarred_hat"
+	tree_paths: ["items/clothing/hats/tarred_hat"]
+tricorne_black:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tricorne_black"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tricorne black"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tricorne_black"
+	tree_paths: ["items/clothing/hats/tricorne_black"]
+tricorne_british:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tricorne_british"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tricorne british"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tricorne_british"
+	tree_paths: ["items/clothing/hats/tricorne_british"]
+tricorne_british_soldier:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tricorne_british_soldier"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tricorne british soldier"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tricorne_british_soldier"
+	tree_paths: ["items/clothing/hats/tricorne_british_soldier"]
+redberet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "redberet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "redberet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "redberet"
+	tree_paths: ["items/clothing/hats/redberet"]
+chief_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chief_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chief hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chief_hat"
+	tree_paths: ["items/clothing/hats/chief_hat"]
+blueberet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "blueberet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "blueberet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "blueberet"
+	tree_paths: ["items/clothing/hats/blueberet"]
+tricorne_french:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tricorne_french"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tricorne french"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tricorne_french"
+	tree_paths: ["items/clothing/hats/tricorne_french"]
+tricorne_portuguese:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tricorne_portuguese"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tricorne portuguese"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tricorne_portuguese"
+	tree_paths: ["items/clothing/hats/tricorne_portuguese"]
+tricorne_dutch:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tricorne_dutch"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tricorne dutch"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tricorne_dutch"
+	tree_paths: ["items/clothing/hats/tricorne_dutch"]
+tricorne_spanish:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tricorne_spanish"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tricorne spanish"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tricorne_spanish"
+	tree_paths: ["items/clothing/hats/tricorne_spanish"]
+skull_mask:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "skull_mask"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "skull mask"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "skull_mask"
+	tree_paths: ["items/clothing/hats/skull_mask"]
+kerchief:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "kerchief"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kerchief"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "kerchief"
+	tree_paths: ["items/clothing/hats/kerchief"]
+tricorne_british2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tricorne_british2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tricorne british2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tricorne_british2"
+	tree_paths: ["items/clothing/hats/tricorne_british2"]
+chasseur_pt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chasseur_pt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chasseur pt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chasseur_pt"
+	tree_paths: ["items/clothing/hats/chasseur_pt"]
+chasseur_nl:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chasseur_nl"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chasseur nl"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chasseur_nl"
+	tree_paths: ["items/clothing/hats/chasseur_nl"]
+chasseur_fr:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chasseur_fr"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chasseur fr"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chasseur_fr"
+	tree_paths: ["items/clothing/hats/chasseur_fr"]
+chasseur_br:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chasseur_br"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chasseur br"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chasseur_br"
+	tree_paths: ["items/clothing/hats/chasseur_br"]
+gladiator:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gladiator"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gladiator"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gladiator"
+	tree_paths: ["items/clothing/hats/gladiator"]
+old_roman_c:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "old_roman_c"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "old roman c"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "old_roman_c"
+	tree_paths: ["items/clothing/hats/old_roman_c"]
+old_roman:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "old_roman"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "old roman"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "old_roman"
+	tree_paths: ["items/clothing/hats/old_roman"]
+metallichelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "metallichelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "metallichelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "metallichelmet"
+	tree_paths: ["items/clothing/hats/metallichelmet"]
+goldenhelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "goldenhelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "goldenhelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "goldenhelmet"
+	tree_paths: ["items/clothing/hats/goldenhelmet"]
+greek:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "greek"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greek"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "greek"
+	tree_paths: ["items/clothing/hats/greek"]
+greek_c:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "greek_c"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greek c"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "greek_c"
+	tree_paths: ["items/clothing/hats/greek_c"]
+old_roman_d:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "old_roman_d"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "old roman d"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "old_roman_d"
+	tree_paths: ["items/clothing/hats/old_roman_d"]
+toxotai:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "toxotai"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "toxotai"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "toxotai"
+	tree_paths: ["items/clothing/hats/toxotai"]
+greek_sl:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "greek_sl"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greek sl"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "greek_sl"
+	tree_paths: ["items/clothing/hats/greek_sl"]
+knight_green:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "knight_green"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight green"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "knight_green"
+	tree_paths: ["items/clothing/hats/knight_green"]
+knight_yellow:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "knight_yellow"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight yellow"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "knight_yellow"
+	tree_paths: ["items/clothing/hats/knight_yellow"]
+knight_blue:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "knight_blue"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight blue"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "knight_blue"
+	tree_paths: ["items/clothing/hats/knight_blue"]
+knight_red:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "knight_red"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight red"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "knight_red"
+	tree_paths: ["items/clothing/hats/knight_red"]
+knight_templar:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "knight_templar"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight templar"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "knight_templar"
+	tree_paths: ["items/clothing/hats/knight_templar"]
+knight_simple:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "knight_simple"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight simple"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "knight_simple"
+	tree_paths: ["items/clothing/hats/knight_simple"]
+medieval_helmet1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "medieval_helmet1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "medieval helmet1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "medieval_helmet1"
+	tree_paths: ["items/clothing/hats/medieval_helmet1"]
+medieval_helmet2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "medieval_helmet2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "medieval helmet2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "medieval_helmet2"
+	tree_paths: ["items/clothing/hats/medieval_helmet2"]
+medieval_helmet3:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "medieval_helmet3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "medieval helmet3"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "medieval_helmet3"
+	tree_paths: ["items/clothing/hats/medieval_helmet3"]
+noblehat1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "noblehat1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "noblehat1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "noblehat1"
+	tree_paths: ["items/clothing/hats/noblehat1"]
+noblehat2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "noblehat2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "noblehat2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "noblehat2"
+	tree_paths: ["items/clothing/hats/noblehat2"]
+coif:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "coif"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "coif"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "coif"
+	tree_paths: ["items/clothing/hats/coif"]
+coif_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "coif_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "coif helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "coif_helmet"
+	tree_paths: ["items/clothing/hats/coif_helmet"]
+turban1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "turban1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "turban1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "turban1"
+	tree_paths: ["items/clothing/hats/turban1"]
+turban2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "turban2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "turban2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "turban2"
+	tree_paths: ["items/clothing/hats/turban2"]
+turban3:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "turban3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "turban3"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "turban3"
+	tree_paths: ["items/clothing/hats/turban3"]
+turban4:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "turban4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "turban4"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "turban4"
+	tree_paths: ["items/clothing/hats/turban4"]
+turhelm1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "turhelm1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "turhelm1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "turhelm1"
+	tree_paths: ["items/clothing/hats/turhelm1"]
+turhelm2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "turhelm2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "turhelm2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "turhelm2"
+	tree_paths: ["items/clothing/hats/turhelm2"]
+turhelm3:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "turhelm3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "turhelm3"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "turhelm3"
+	tree_paths: ["items/clothing/hats/turhelm3"]
+turhelm4:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "turhelm4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "turhelm4"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "turhelm4"
+	tree_paths: ["items/clothing/hats/turhelm4"]
+arabw_helmet1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "arabw_helmet1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arabw helmet1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "arabw_helmet1"
+	tree_paths: ["items/clothing/hats/arabw_helmet1"]
+arabw_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "arabw_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arabw helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "arabw_helmet"
+	tree_paths: ["items/clothing/hats/arabw_helmet"]
+turban_w:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "turban_w"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "turban w"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "turban_w"
+	tree_paths: ["items/clothing/hats/turban_w"]
+gold_crown:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gold_crown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gold crown"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gold_crown"
+	tree_paths: ["items/clothing/hats/gold_crown"]
+gold_crown_diamond:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gold_crown_diamond"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gold crown diamond"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gold_crown_diamond"
+	tree_paths: ["items/clothing/hats/gold_crown_diamond"]
+brownbearpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brownbearpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brownbearpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brownbearpelt"
+	tree_paths: ["items/clothing/hats/brownbearpelt"]
+whitebearpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "whitebearpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "whitebearpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "whitebearpelt"
+	tree_paths: ["items/clothing/hats/whitebearpelt"]
+bearpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "bearpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bearpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "bearpelt"
+	tree_paths: ["items/clothing/hats/bearpelt"]
+wolfpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "wolfpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "wolfpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "wolfpelt"
+	tree_paths: ["items/clothing/hats/wolfpelt"]
+silver_crown:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "silver_crown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "silver crown"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "silver_crown"
+	tree_paths: ["items/clothing/hats/silver_crown"]
+silver_crown_diamond:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "silver_crown_diamond"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "silver crown diamond"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "silver_crown_diamond"
+	tree_paths: ["items/clothing/hats/silver_crown_diamond"]
+leatherhelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "leatherhelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leatherhelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "leatherhelmet"
+	tree_paths: ["items/clothing/hats/leatherhelmet"]
+mayan_headdress:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "mayan_headdress"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mayan headdress"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "mayan_headdress"
+	tree_paths: ["items/clothing/hats/mayan_headdress"]
+ruscap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ruscap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ruscap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ruscap"
+	tree_paths: ["items/clothing/hats/ruscap"]
+japcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japcap"
+	tree_paths: ["items/clothing/hats/japcap"]
+rusoffcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "rusoffcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "rusoffcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "rusoffcap"
+	tree_paths: ["items/clothing/hats/rusoffcap"]
+japoffcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japoffcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japoffcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japoffcap"
+	tree_paths: ["items/clothing/hats/japoffcap"]
+japcap2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japcap2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japcap2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japcap2"
+	tree_paths: ["items/clothing/hats/japcap2"]
+sombrero:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sombrero"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sombrero"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sombrero"
+	tree_paths: ["items/clothing/hats/sombrero"]
+rice_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "rice_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "rice hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "rice_hat"
+	tree_paths: ["items/clothing/hats/rice_hat"]
+cowboyX:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "cowboyX"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cowboyX"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "cowboyX"
+	tree_paths: ["items/clothing/hats/cowboyX"]
+doublecrown:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "doublecrown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "doublecrown"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "doublecrown"
+	tree_paths: ["items/clothing/hats/doublecrown"]
+redcrown:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "redcrown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "redcrown"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "redcrown"
+	tree_paths: ["items/clothing/hats/redcrown"]
+whitecrown:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "whitecrown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "whitecrown"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "whitecrown"
+	tree_paths: ["items/clothing/hats/whitecrown"]
+napoleonic_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "napoleonic_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "napoleonic hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "napoleonic_hat"
+	tree_paths: ["items/clothing/hats/napoleonic_hat"]
+japcapad:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japcapad"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japcapad"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japcapad"
+	tree_paths: ["items/clothing/hats/japcapad"]
+japoffcapad:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japoffcapad"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japoffcapad"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japoffcapad"
+	tree_paths: ["items/clothing/hats/japoffcapad"]
+japcap2add:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japcap2add"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japcap2add"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japcap2add"
+	tree_paths: ["items/clothing/hats/japcap2add"]
+cowboy2X:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "cowboy2X"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cowboy2X"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "cowboy2X"
+	tree_paths: ["items/clothing/hats/cowboy2X"]
+union_cap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "union_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "union cap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "union_cap"
+	tree_paths: ["items/clothing/hats/union_cap"]
+union_capad:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "union_capad"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "union capad"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "union_capad"
+	tree_paths: ["items/clothing/hats/union_capad"]
+union_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "union_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "union hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "union_hat"
+	tree_paths: ["items/clothing/hats/union_hat"]
+union_hat2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "union_hat2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "union hat2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "union_hat2"
+	tree_paths: ["items/clothing/hats/union_hat2"]
+confederate_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "confederate_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "confederate hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "confederate_hat"
+	tree_paths: ["items/clothing/hats/confederate_hat"]
+confederate_capad:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "confederate_capad"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "confederate capad"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "confederate_capad"
+	tree_paths: ["items/clothing/hats/confederate_capad"]
+confederate_cap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "confederate_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "confederate cap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "confederate_cap"
+	tree_paths: ["items/clothing/hats/confederate_cap"]
+flatcap3:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "flatcap3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "flatcap3"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "flatcap3"
+	tree_paths: ["items/clothing/hats/flatcap3"]
+flatcap2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "flatcap2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "flatcap2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "flatcap2"
+	tree_paths: ["items/clothing/hats/flatcap2"]
+cowboy:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "cowboy"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cowboy"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "cowboy"
+	tree_paths: ["items/clothing/hats/cowboy"]
+cowboy2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "cowboy2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cowboy2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "cowboy2"
+	tree_paths: ["items/clothing/hats/cowboy2"]
+artisan:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "artisan"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "artisan"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "artisan"
+	tree_paths: ["items/clothing/hats/artisan"]
+pickelhaube:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pickelhaube"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pickelhaube"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pickelhaube"
+	tree_paths: ["items/clothing/hats/pickelhaube"]
+stahlhelm:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "stahlhelm"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "stahlhelm"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "stahlhelm"
+	tree_paths: ["items/clothing/hats/stahlhelm"]
+brodie:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie"
+	tree_paths: ["items/clothing/hats/brodie"]
+old_pith:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "old_pith"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "old pith"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "old_pith"
+	tree_paths: ["items/clothing/hats/old_pith"]
+feathered_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "feathered_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "feathered hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "feathered_hat"
+	tree_paths: ["items/clothing/hats/feathered_hat"]
+stahlhelm_old:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "stahlhelm_old"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "stahlhelm old"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "stahlhelm_old"
+	tree_paths: ["items/clothing/hats/stahlhelm_old"]
+adrian:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "adrian"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "adrian"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "adrian"
+	tree_paths: ["items/clothing/hats/adrian"]
+brittcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brittcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brittcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brittcap"
+	tree_paths: ["items/clothing/hats/brittcap"]
+germcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "germcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "germcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "germcap"
+	tree_paths: ["items/clothing/hats/germcap"]
+frenchcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "frenchcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "frenchcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "frenchcap"
+	tree_paths: ["items/clothing/hats/frenchcap"]
+samurai1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "samurai1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "samurai1"
+	tree_paths: ["items/clothing/hats/samurai1"]
+samurai2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "samurai2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "samurai2"
+	tree_paths: ["items/clothing/hats/samurai2"]
+samurai3:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "samurai3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai3"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "samurai3"
+	tree_paths: ["items/clothing/hats/samurai3"]
+samurai4:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "samurai4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai4"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "samurai4"
+	tree_paths: ["items/clothing/hats/samurai4"]
+samurai_guard4:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "samurai_guard4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai guard4"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "samurai_guard4"
+	tree_paths: ["items/clothing/hats/samurai_guard4"]
+samurai_guard3:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "samurai_guard3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai guard3"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "samurai_guard3"
+	tree_paths: ["items/clothing/hats/samurai_guard3"]
+samurai_guard2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "samurai_guard2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai guard2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "samurai_guard2"
+	tree_paths: ["items/clothing/hats/samurai_guard2"]
+samurai_guard1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "samurai_guard1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai guard1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "samurai_guard1"
+	tree_paths: ["items/clothing/hats/samurai_guard1"]
+ww2_japoffcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_japoffcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japoffcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_japoffcap"
+	tree_paths: ["items/clothing/hats/ww2_japoffcap"]
+ww2_japoffcap_extended:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_japoffcap_extended"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japoffcap extended"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_japoffcap_extended"
+	tree_paths: ["items/clothing/hats/ww2_japoffcap_extended"]
+ww2_japcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_japcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_japcap"
+	tree_paths: ["items/clothing/hats/ww2_japcap"]
+ww2_japcap_extended:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_japcap_extended"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japcap extended"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_japcap_extended"
+	tree_paths: ["items/clothing/hats/ww2_japcap_extended"]
+japbandana:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japbandana"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japbandana"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japbandana"
+	tree_paths: ["items/clothing/hats/japbandana"]
+viking:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "viking"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "viking"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "viking"
+	tree_paths: ["items/clothing/hats/viking"]
+brodie_old:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_old"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie old"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_old"
+	tree_paths: ["items/clothing/hats/brodie_old"]
+germcap2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "germcap2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "germcap2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "germcap2"
+	tree_paths: ["items/clothing/hats/germcap2"]
+frenchcap2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "frenchcap2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "frenchcap2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "frenchcap2"
+	tree_paths: ["items/clothing/hats/frenchcap2"]
+pickelhaube2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pickelhaube2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pickelhaube2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pickelhaube2"
+	tree_paths: ["items/clothing/hats/pickelhaube2"]
+ushelmetX:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ushelmetX"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ushelmetX"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ushelmetX"
+	tree_paths: ["items/clothing/hats/ushelmetX"]
+ghillie:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ghillie"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ghillie"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ghillie"
+	tree_paths: ["items/clothing/hats/ghillie"]
+jungle_hat_khaki:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "jungle_hat_khaki"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jungle hat khaki"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "jungle_hat_khaki"
+	tree_paths: ["items/clothing/hats/jungle_hat_khaki"]
+jungle_hat_green:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "jungle_hat_green"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jungle hat green"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "jungle_hat_green"
+	tree_paths: ["items/clothing/hats/jungle_hat_green"]
+ushelmet_mar:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ushelmet_mar"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ushelmet mar"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ushelmet_mar"
+	tree_paths: ["items/clothing/hats/ushelmet_mar"]
+ushelmet_mar_nco:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ushelmet_mar_nco"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ushelmet mar nco"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ushelmet_mar_nco"
+	tree_paths: ["items/clothing/hats/ushelmet_mar_nco"]
+ushelmet_camo:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ushelmet_camo"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ushelmet camo"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ushelmet_camo"
+	tree_paths: ["items/clothing/hats/ushelmet_camo"]
+commando_bandana:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "commando_bandana"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "commando bandana"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "commando_bandana"
+	tree_paths: ["items/clothing/hats/commando_bandana"]
+lwh_black:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "lwh_black"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lwh black"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "lwh_black"
+	tree_paths: ["items/clothing/hats/lwh_black"]
+lwh_desert:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "lwh_desert"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lwh desert"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "lwh_desert"
+	tree_paths: ["items/clothing/hats/lwh_desert"]
+pasgt_woodland:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pasgt_woodland"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pasgt woodland"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pasgt_woodland"
+	tree_paths: ["items/clothing/hats/pasgt_woodland"]
+black_shemagh:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "black_shemagh"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black shemagh"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "black_shemagh"
+	tree_paths: ["items/clothing/hats/black_shemagh"]
+black_bandana:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "black_bandana"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black bandana"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "black_bandana"
+	tree_paths: ["items/clothing/hats/black_bandana"]
+pasgt_desert:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pasgt_desert"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pasgt desert"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pasgt_desert"
+	tree_paths: ["items/clothing/hats/pasgt_desert"]
+pasgt_desert_attachments:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pasgt_desert_attachments"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pasgt desert attachments"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pasgt_desert_attachments"
+	tree_paths: ["items/clothing/hats/pasgt_desert_attachments"]
+ushanka:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ushanka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ushanka"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ushanka"
+	tree_paths: ["items/clothing/hats/ushanka"]
+ushanka_up:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ushanka_up"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ushanka up"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ushanka_up"
+	tree_paths: ["items/clothing/hats/ushanka_up"]
+ger_officercapX:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ger_officercapX"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ger officercapX"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ger_officercapX"
+	tree_paths: ["items/clothing/hats/ger_officercapX"]
+sov_officercap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sov_officercap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sov officercap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sov_officercap"
+	tree_paths: ["items/clothing/hats/sov_officercap"]
+sovpilotka:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sovpilotka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovpilotka"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sovpilotka"
+	tree_paths: ["items/clothing/hats/sovpilotka"]
+sovhelm_medic:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sovhelm_medic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovhelm medic"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sovhelm_medic"
+	tree_paths: ["items/clothing/hats/sovhelm_medic"]
+nkvd_cap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "nkvd_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nkvd cap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "nkvd_cap"
+	tree_paths: ["items/clothing/hats/nkvd_cap"]
+gertanker:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gertanker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gertanker"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gertanker"
+	tree_paths: ["items/clothing/hats/gertanker"]
+fieldcap1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fieldcap1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fieldcap1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fieldcap1"
+	tree_paths: ["items/clothing/hats/fieldcap1"]
+sovtanker:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sovtanker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovtanker"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sovtanker"
+	tree_paths: ["items/clothing/hats/sovtanker"]
+japcap_mp:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japcap_mp"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japcap mp"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japcap_mp"
+	tree_paths: ["items/clothing/hats/japcap_mp"]
+affieldcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "affieldcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "affieldcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "affieldcap"
+	tree_paths: ["items/clothing/hats/affieldcap"]
+afger_officercap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "afger_officercap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "afger officercap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "afger_officercap"
+	tree_paths: ["items/clothing/hats/afger_officercap"]
+usnco_cap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "usnco_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "usnco cap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "usnco_cap"
+	tree_paths: ["items/clothing/hats/usnco_cap"]
+japtanker:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japtanker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japtanker"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japtanker"
+	tree_paths: ["items/clothing/hats/japtanker"]
+japhelm:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japhelm"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japhelm"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japhelm"
+	tree_paths: ["items/clothing/hats/japhelm"]
+japhelm_extended:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japhelm_extended"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japhelm extended"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japhelm_extended"
+	tree_paths: ["items/clothing/hats/japhelm_extended"]
+japhelm_old:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japhelm_old"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japhelm old"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japhelm_old"
+	tree_paths: ["items/clothing/hats/japhelm_old"]
+japhelm_medic_extended:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japhelm_medic_extended"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japhelm medic extended"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japhelm_medic_extended"
+	tree_paths: ["items/clothing/hats/japhelm_medic_extended"]
+japhelm_medic:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japhelm_medic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japhelm medic"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japhelm_medic"
+	tree_paths: ["items/clothing/hats/japhelm_medic"]
+japhelm_bandana_extended:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japhelm_bandana_extended"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japhelm bandana extended"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japhelm_bandana_extended"
+	tree_paths: ["items/clothing/hats/japhelm_bandana_extended"]
+japhelm_bandana:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japhelm_bandana"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japhelm bandana"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japhelm_bandana"
+	tree_paths: ["items/clothing/hats/japhelm_bandana"]
+sscap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sscap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sscap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sscap"
+	tree_paths: ["items/clothing/hats/sscap"]
+jappilotcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "jappilotcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jappilotcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "jappilotcap"
+	tree_paths: ["items/clothing/hats/jappilotcap"]
+fieldcap2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fieldcap2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fieldcap2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fieldcap2"
+	tree_paths: ["items/clothing/hats/fieldcap2"]
+afgerhelm:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "afgerhelm"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "afgerhelm"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "afgerhelm"
+	tree_paths: ["items/clothing/hats/afgerhelm"]
+sshelm:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sshelm"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sshelm"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sshelm"
+	tree_paths: ["items/clothing/hats/sshelm"]
+gerhelm_medic:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gerhelm_medic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gerhelm medic"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gerhelm_medic"
+	tree_paths: ["items/clothing/hats/gerhelm_medic"]
+sovhelm:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sovhelm"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovhelm"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sovhelm"
+	tree_paths: ["items/clothing/hats/sovhelm"]
+rad2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "rad2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "rad2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "rad2"
+	tree_paths: ["items/clothing/hats/rad2"]
+nbc:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "nbc"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nbc"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "nbc"
+	tree_paths: ["items/clothing/hats/nbc"]
+nbc2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "nbc2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nbc2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "nbc2"
+	tree_paths: ["items/clothing/hats/nbc2"]
+gat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gat"
+	tree_paths: ["items/clothing/hats/gat"]
+idf:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "idf"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "idf"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "idf"
+	tree_paths: ["items/clothing/hats/idf"]
+laurelcrown:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "laurelcrown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "laurelcrown"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "laurelcrown"
+	tree_paths: ["items/clothing/hats/laurelcrown"]
+cheka:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "cheka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cheka"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "cheka"
+	tree_paths: ["items/clothing/hats/cheka"]
+papakha:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "papakha"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "papakha"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "papakha"
+	tree_paths: ["items/clothing/hats/papakha"]
+papakha_white:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "papakha_white"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "papakha white"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "papakha_white"
+	tree_paths: ["items/clothing/hats/papakha_white"]
+papakha_kuban:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "papakha_kuban"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "papakha kuban"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "papakha_kuban"
+	tree_paths: ["items/clothing/hats/papakha_kuban"]
+budenovka:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "budenovka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "budenovka"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "budenovka"
+	tree_paths: ["items/clothing/hats/budenovka"]
+ac_hood:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ac_hood"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ac hood"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ac_hood"
+	tree_paths: ["items/clothing/hats/ac_hood"]
+beserkerhelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "beserkerhelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "beserkerhelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "beserkerhelmet"
+	tree_paths: ["items/clothing/hats/beserkerhelmet"]
+spearmanhelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "spearmanhelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "spearmanhelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "spearmanhelmet"
+	tree_paths: ["items/clothing/hats/spearmanhelmet"]
+captainhelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "captainhelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "captainhelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "captainhelmet"
+	tree_paths: ["items/clothing/hats/captainhelmet"]
+spearwhitehelm:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "spearwhitehelm"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "spearwhitehelm"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "spearwhitehelm"
+	tree_paths: ["items/clothing/hats/spearwhitehelm"]
+grunthelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "grunthelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "grunthelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "grunthelmet"
+	tree_paths: ["items/clothing/hats/grunthelmet"]
+chitin_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chitin_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chitin helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chitin_helmet"
+	tree_paths: ["items/clothing/hats/chitin_helmet"]
+sauronhelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sauronhelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sauronhelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sauronhelmet"
+	tree_paths: ["items/clothing/hats/sauronhelmet"]
+bone_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "bone_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bone helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "bone_helmet"
+	tree_paths: ["items/clothing/hats/bone_helmet"]
+furhat_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "furhat_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "furhat hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "furhat_hat"
+	tree_paths: ["items/clothing/hats/furhat_hat"]
+furcap_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "furcap_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "furcap hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "furcap_hat"
+	tree_paths: ["items/clothing/hats/furcap_hat"]
+customberet_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "customberet_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customberet hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "customberet_hat"
+	tree_paths: ["items/clothing/hats/customberet_hat"]
+roundcap_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "roundcap_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "roundcap hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "roundcap_hat"
+	tree_paths: ["items/clothing/hats/roundcap_hat"]
+custfeathercap_b_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custfeathercap_b_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custfeathercap b hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custfeathercap_b_hat"
+	tree_paths: ["items/clothing/hats/custfeathercap_b_hat"]
+custfeathercap_f_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custfeathercap_f_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custfeathercap f hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custfeathercap_f_hat"
+	tree_paths: ["items/clothing/hats/custfeathercap_f_hat"]
+customnoblehat_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "customnoblehat_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customnoblehat hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "customnoblehat_hat"
+	tree_paths: ["items/clothing/hats/customnoblehat_hat"]
+custombandana_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custombandana_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custombandana hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custombandana_hat"
+	tree_paths: ["items/clothing/hats/custombandana_hat"]
+custfeathercap_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custfeathercap_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custfeathercap hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custfeathercap_hat"
+	tree_paths: ["items/clothing/hats/custfeathercap_hat"]
+scraphelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "scraphelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "scraphelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "scraphelmet"
+	tree_paths: ["items/clothing/hats/scraphelmet"]
+kevlarhelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "kevlarhelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kevlarhelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "kevlarhelmet"
+	tree_paths: ["items/clothing/hats/kevlarhelmet"]
+fieldcap_china2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fieldcap_china2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fieldcap china2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fieldcap_china2"
+	tree_paths: ["items/clothing/hats/fieldcap_china2"]
+fieldcap_china:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fieldcap_china"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fieldcap china"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fieldcap_china"
+	tree_paths: ["items/clothing/hats/fieldcap_china"]
+guardiacivil_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "guardiacivil_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "guardiacivil hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "guardiacivil_hat"
+	tree_paths: ["items/clothing/hats/guardiacivil_hat"]
+ger_officercap_base:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ger_officercap_base"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ger officercap base"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ger_officercap_base"
+	tree_paths: ["items/clothing/hats/ger_officercap_base"]
+ger_officercap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ger_officercap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ger officercap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ger_officercap"
+	tree_paths: ["items/clothing/hats/ger_officercap"]
+ger_officercap_tanker:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ger_officercap_tanker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ger officercap tanker"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ger_officercap_tanker"
+	tree_paths: ["items/clothing/hats/ger_officercap_tanker"]
+blackberret:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "blackberret"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "blackberret"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "blackberret"
+	tree_paths: ["items/clothing/hats/blackberret"]
+ioghelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ioghelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ioghelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ioghelmet"
+	tree_paths: ["items/clothing/hats/ioghelmet"]
+peakyblindercap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "peakyblindercap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "peakyblindercap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "peakyblindercap"
+	tree_paths: ["items/clothing/hats/peakyblindercap"]
+laurelcrown_gold:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "laurelcrown_gold"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "laurelcrown gold"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "laurelcrown_gold"
+	tree_paths: ["items/clothing/hats/laurelcrown_gold"]
+chitin_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chitin_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chitin helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chitin_helmet"
+	tree_paths: ["items/clothing/hats/chitin_helmet"]
+gerhelm_winter:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gerhelm_winter"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gerhelm winter"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gerhelm_winter"
+	tree_paths: ["items/clothing/hats/gerhelm_winter"]
+gerhelm_winter2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gerhelm_winter2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gerhelm winter2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gerhelm_winter2"
+	tree_paths: ["items/clothing/hats/gerhelm_winter2"]
+fieldcap1_winter:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fieldcap1_winter"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fieldcap1 winter"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fieldcap1_winter"
+	tree_paths: ["items/clothing/hats/fieldcap1_winter"]
+fieldcap1_winter2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fieldcap1_winter2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fieldcap1 winter2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fieldcap1_winter2"
+	tree_paths: ["items/clothing/hats/fieldcap1_winter2"]
+ork_elite_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ork_elite_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ork elite helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ork_elite_helmet"
+	tree_paths: ["items/clothing/hats/ork_elite_helmet"]
+ork_elite_helmet_2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ork_elite_helmet_2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ork elite helmet 2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ork_elite_helmet_2"
+	tree_paths: ["items/clothing/hats/ork_elite_helmet_2"]
+sovhelm_winter:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sovhelm_winter"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovhelm winter"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sovhelm_winter"
+	tree_paths: ["items/clothing/hats/sovhelm_winter"]
+keffiyeh_black:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "keffiyeh_black"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "keffiyeh black"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "keffiyeh_black"
+	tree_paths: ["items/clothing/hats/keffiyeh_black"]
+keffiyeh_red:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "keffiyeh_red"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "keffiyeh red"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "keffiyeh_red"
+	tree_paths: ["items/clothing/hats/keffiyeh_red"]
+keffiyeh_custom:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "keffiyeh_custom"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "keffiyeh custom"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "keffiyeh_custom"
+	tree_paths: ["items/clothing/hats/keffiyeh_custom"]
+keffiyeh_custom_color:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "keffiyeh_custom_color"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "keffiyeh custom color"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "keffiyeh_custom_color"
+	tree_paths: ["items/clothing/hats/keffiyeh_custom_color"]
+keffiyeh_custom_white:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "keffiyeh_custom_white"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "keffiyeh custom white"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "keffiyeh_custom_white"
+	tree_paths: ["items/clothing/hats/keffiyeh_custom_white"]
+wool_hood:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "wool_hood"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "wool hood"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "wool_hood"
+	tree_paths: ["items/clothing/hats/wool_hood"]
+gerhelm_mp:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gerhelm_mp"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gerhelm mp"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gerhelm_mp"
+	tree_paths: ["items/clothing/hats/gerhelm_mp"]
+iogmask1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "iogmask1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "iogmask1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "iogmask1"
+	tree_paths: ["items/clothing/hats/iogmask1"]
+kasa:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "kasa"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kasa"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "kasa"
+	tree_paths: ["items/clothing/hats/kasa"]
+jingasa:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "jingasa"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jingasa"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "jingasa"
+	tree_paths: ["items/clothing/hats/jingasa"]
+jingasa_flaps:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "jingasa_flaps"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jingasa flaps"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "jingasa_flaps"
+	tree_paths: ["items/clothing/hats/jingasa_flaps"]
+hennin:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "hennin"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hennin"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "hennin"
+	tree_paths: ["items/clothing/hats/hennin"]
+custom_beanie:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custom_beanie"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom beanie"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custom_beanie"
+	tree_paths: ["items/clothing/hats/custom_beanie"]
+custom_hennin_point:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custom_hennin_point"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom hennin point"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custom_hennin_point"
+	tree_paths: ["items/clothing/hats/custom_hennin_point"]
+custom_hennin_lining:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custom_hennin_lining"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom hennin lining"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custom_hennin_lining"
+	tree_paths: ["items/clothing/hats/custom_hennin_lining"]
+custom_hennin:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custom_hennin"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom hennin"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custom_hennin"
+	tree_paths: ["items/clothing/hats/custom_hennin"]
+sovietfacehelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sovietfacehelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovietfacehelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sovietfacehelmet"
+	tree_paths: ["items/clothing/hats/sovietfacehelmet"]
+tacticalhelmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "tacticalhelmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tacticalhelmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "tacticalhelmet"
+	tree_paths: ["items/clothing/hats/tacticalhelmet"]
+zsh1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "zsh1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "zsh1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "zsh1"
+	tree_paths: ["items/clothing/hats/zsh1"]
+a6b47:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "a6b47"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "a6b47"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "a6b47"
+	tree_paths: ["items/clothing/hats/a6b47"]
+zsh2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "zsh2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "zsh2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "zsh2"
+	tree_paths: ["items/clothing/hats/zsh2"]
+pantherpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pantherpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pantherpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pantherpelt"
+	tree_paths: ["items/clothing/hats/pantherpelt"]
+sailor_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sailor_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sailor hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sailor_hat"
+	tree_paths: ["items/clothing/hats/sailor_hat"]
+sshelm_dark:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sshelm_dark"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sshelm dark"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sshelm_dark"
+	tree_paths: ["items/clothing/hats/sshelm_dark"]
+swat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "swat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "swat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "swat"
+	tree_paths: ["items/clothing/hats/swat"]
+egyptian_headdress_black:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "egyptian_headdress_black"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "egyptian headdress black"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "egyptian_headdress_black"
+	tree_paths: ["items/clothing/hats/egyptian_headdress_black"]
+egyptian_headdress_blue:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "egyptian_headdress_blue"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "egyptian headdress blue"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "egyptian_headdress_blue"
+	tree_paths: ["items/clothing/hats/egyptian_headdress_blue"]
+egyptian_headdress_red:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "egyptian_headdress_red"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "egyptian headdress red"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "egyptian_headdress_red"
+	tree_paths: ["items/clothing/hats/egyptian_headdress_red"]
+lionpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "lionpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lionpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "lionpelt"
+	tree_paths: ["items/clothing/hats/lionpelt"]
+foxpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "foxpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "foxpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "foxpelt"
+	tree_paths: ["items/clothing/hats/foxpelt"]
+whitefoxpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "whitefoxpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "whitefoxpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "whitefoxpelt"
+	tree_paths: ["items/clothing/hats/whitefoxpelt"]
+brown_eisenbruck:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brown_eisenbruck"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brown eisenbruck"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brown_eisenbruck"
+	tree_paths: ["items/clothing/hats/brown_eisenbruck"]
+grey_eisenbruck:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "grey_eisenbruck"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "grey eisenbruck"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "grey_eisenbruck"
+	tree_paths: ["items/clothing/hats/grey_eisenbruck"]
+aged_eisenbruck:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "aged_eisenbruck"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "aged eisenbruck"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "aged_eisenbruck"
+	tree_paths: ["items/clothing/hats/aged_eisenbruck"]
+gatorpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gatorpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gatorpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gatorpelt"
+	tree_paths: ["items/clothing/hats/gatorpelt"]
+nemes_headdress:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "nemes_headdress"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nemes headdress"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "nemes_headdress"
+	tree_paths: ["items/clothing/hats/nemes_headdress"]
+pharoah_headdress:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pharoah_headdress"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pharoah headdress"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pharoah_headdress"
+	tree_paths: ["items/clothing/hats/pharoah_headdress"]
+semitic_cap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "semitic_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "semitic cap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "semitic_cap"
+	tree_paths: ["items/clothing/hats/semitic_cap"]
+vaquerohat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "vaquerohat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "vaquerohat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "vaquerohat"
+	tree_paths: ["items/clothing/hats/vaquerohat"]
+fiendish:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fiendish"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fiendish"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fiendish"
+	tree_paths: ["items/clothing/hats/fiendish"]
+bandit:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "bandit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bandit"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "bandit"
+	tree_paths: ["items/clothing/hats/bandit"]
+ainu_smol:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ainu_smol"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ainu smol"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ainu_smol"
+	tree_paths: ["items/clothing/hats/ainu_smol"]
+ainu:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ainu"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ainu"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ainu"
+	tree_paths: ["items/clothing/hats/ainu"]
+new_viking:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "new_viking"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "new viking"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "new_viking"
+	tree_paths: ["items/clothing/hats/new_viking"]
+viking_king:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "viking_king"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "viking king"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "viking_king"
+	tree_paths: ["items/clothing/hats/viking_king"]
+ziggurhat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ziggurhat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ziggurhat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ziggurhat"
+	tree_paths: ["items/clothing/hats/ziggurhat"]
+barbarian:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "barbarian"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "barbarian"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "barbarian"
+	tree_paths: ["items/clothing/hats/barbarian"]
+valkyrie_queen:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "valkyrie_queen"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "valkyrie queen"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "valkyrie_queen"
+	tree_paths: ["items/clothing/hats/valkyrie_queen"]
+valkyrie:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "valkyrie"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "valkyrie"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "valkyrie"
+	tree_paths: ["items/clothing/hats/valkyrie"]
+crusader:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "crusader"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "crusader"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "crusader"
+	tree_paths: ["items/clothing/hats/crusader"]
+new_knight_templar:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "new_knight_templar"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "new knight templar"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "new_knight_templar"
+	tree_paths: ["items/clothing/hats/new_knight_templar"]
+crusader_king:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "crusader_king"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "crusader king"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "crusader_king"
+	tree_paths: ["items/clothing/hats/crusader_king"]
+baltic_crusader:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "baltic_crusader"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "baltic crusader"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "baltic_crusader"
+	tree_paths: ["items/clothing/hats/baltic_crusader"]
+templar_priest:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "templar_priest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "templar priest"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "templar_priest"
+	tree_paths: ["items/clothing/hats/templar_priest"]
+baltic_priest:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "baltic_priest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "baltic priest"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "baltic_priest"
+	tree_paths: ["items/clothing/hats/baltic_priest"]
+baltic_crusader_grandmaster:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "baltic_crusader_grandmaster"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "baltic crusader grandmaster"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "baltic_crusader_grandmaster"
+	tree_paths: ["items/clothing/hats/baltic_crusader_grandmaster"]
+crusader_saint:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "crusader_saint"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "crusader saint"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "crusader_saint"
+	tree_paths: ["items/clothing/hats/crusader_saint"]
+persian_immortal:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "persian_immortal"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "persian immortal"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "persian_immortal"
+	tree_paths: ["items/clothing/hats/persian_immortal"]
+mamluk_coif_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "mamluk_coif_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mamluk coif helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "mamluk_coif_helmet"
+	tree_paths: ["items/clothing/hats/mamluk_coif_helmet"]
+penlianal_whitestrake:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "penlianal_whitestrake"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "penlianal whitestrake"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "penlianal_whitestrake"
+	tree_paths: ["items/clothing/hats/penlianal_whitestrake"]
+hell_champion:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "hell_champion"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hell champion"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "hell_champion"
+	tree_paths: ["items/clothing/hats/hell_champion"]
+spartan:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "spartan"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "spartan"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "spartan"
+	tree_paths: ["items/clothing/hats/spartan"]
+mamluk_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "mamluk_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mamluk helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "mamluk_helmet"
+	tree_paths: ["items/clothing/hats/mamluk_helmet"]
+athenian:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "athenian"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "athenian"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "athenian"
+	tree_paths: ["items/clothing/hats/athenian"]
+new_greek:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "new_greek"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "new greek"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "new_greek"
+	tree_paths: ["items/clothing/hats/new_greek"]
+mamluk_lord:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "mamluk_lord"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mamluk lord"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "mamluk_lord"
+	tree_paths: ["items/clothing/hats/mamluk_lord"]
+mamluk_king:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "mamluk_king"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mamluk king"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "mamluk_king"
+	tree_paths: ["items/clothing/hats/mamluk_king"]
+assyrian_crown:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "assyrian_crown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "assyrian crown"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "assyrian_crown"
+	tree_paths: ["items/clothing/hats/assyrian_crown"]
+greek_custom:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "greek_custom"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greek custom"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "greek_custom"
+	tree_paths: ["items/clothing/hats/greek_custom"]
+greek_custom_h:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "greek_custom_h"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greek custom h"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "greek_custom_h"
+	tree_paths: ["items/clothing/hats/greek_custom_h"]
+greek_custom_a:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "greek_custom_a"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greek custom a"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "greek_custom_a"
+	tree_paths: ["items/clothing/hats/greek_custom_a"]
+napoleonic_bearskin_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "napoleonic_bearskin_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "napoleonic bearskin hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "napoleonic_bearskin_hat"
+	tree_paths: ["items/clothing/hats/napoleonic_bearskin_hat"]
+white_napoleonic_bearskin_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "white_napoleonic_bearskin_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "white napoleonic bearskin hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "white_napoleonic_bearskin_hat"
+	tree_paths: ["items/clothing/hats/white_napoleonic_bearskin_hat"]
+brown_napoleonic_bearskin_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brown_napoleonic_bearskin_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brown napoleonic bearskin hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brown_napoleonic_bearskin_hat"
+	tree_paths: ["items/clothing/hats/brown_napoleonic_bearskin_hat"]
+modern_bearskin_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "modern_bearskin_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern bearskin hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "modern_bearskin_hat"
+	tree_paths: ["items/clothing/hats/modern_bearskin_hat"]
+brown_modern_bearskin_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brown_modern_bearskin_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brown modern bearskin hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brown_modern_bearskin_hat"
+	tree_paths: ["items/clothing/hats/brown_modern_bearskin_hat"]
+white_modern_bearskin_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "white_modern_bearskin_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "white modern bearskin hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "white_modern_bearskin_hat"
+	tree_paths: ["items/clothing/hats/white_modern_bearskin_hat"]
+pith:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pith"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pith"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pith"
+	tree_paths: ["items/clothing/hats/pith"]
+customcap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "customcap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "customcap"
+	tree_paths: ["items/clothing/hats/customcap"]
+customcap_l1:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "customcap_l1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcap l1"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "customcap_l1"
+	tree_paths: ["items/clothing/hats/customcap_l1"]
+customcap_l2:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "customcap_l2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcap l2"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "customcap_l2"
+	tree_paths: ["items/clothing/hats/customcap_l2"]
+customcap_l3:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "customcap_l3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcap l3"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "customcap_l3"
+	tree_paths: ["items/clothing/hats/customcap_l3"]
+fieldcap_custom:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "fieldcap_custom"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fieldcap custom"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "fieldcap_custom"
+	tree_paths: ["items/clothing/hats/fieldcap_custom"]
+riding_hat_wip:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "riding_hat_wip"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "riding hat wip"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "riding_hat_wip"
+	tree_paths: ["items/clothing/hats/riding_hat_wip"]
+darkholme:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "darkholme"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "darkholme"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "darkholme"
+	tree_paths: ["items/clothing/hats/darkholme"]
+nap_satsuma:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "nap_satsuma"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap satsuma"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "nap_satsuma"
+	tree_paths: ["items/clothing/hats/nap_satsuma"]
+gnome_chompsky:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "gnome_chompsky"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gnome chompsky"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "gnome_chompsky"
+	tree_paths: ["items/clothing/hats/gnome_chompsky"]
+dunce_cap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "dunce_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dunce cap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "dunce_cap"
+	tree_paths: ["items/clothing/hats/dunce_cap"]
+custom_nap_lea_infantry_cap_b:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custom_nap_lea_infantry_cap_b"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom nap lea infantry cap b"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custom_nap_lea_infantry_cap_b"
+	tree_paths: ["items/clothing/hats/custom_nap_lea_infantry_cap_b"]
+custom_nap_lea_infantry_cap_f:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "custom_nap_lea_infantry_cap_f"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom nap lea infantry cap f"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "custom_nap_lea_infantry_cap_f"
+	tree_paths: ["items/clothing/hats/custom_nap_lea_infantry_cap_f"]
+commissar:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "commissar"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "commissar"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "commissar"
+	tree_paths: ["items/clothing/hats/commissar"]
+nap_lea_infantry_cap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "nap_lea_infantry_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap lea infantry cap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "nap_lea_infantry_cap"
+	tree_paths: ["items/clothing/hats/nap_lea_infantry_cap"]
+prussian_lea_infantry_cap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "prussian_lea_infantry_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "prussian lea infantry cap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "prussian_lea_infantry_cap"
+	tree_paths: ["items/clothing/hats/prussian_lea_infantry_cap"]
+brown_nap_lea_infantry_cap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brown_nap_lea_infantry_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brown nap lea infantry cap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brown_nap_lea_infantry_cap"
+	tree_paths: ["items/clothing/hats/brown_nap_lea_infantry_cap"]
+m1_mp_black:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_mp_black"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 mp black"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_mp_black"
+	tree_paths: ["items/clothing/hats/m1_mp_black"]
+m1_mp_white:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_mp_white"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 mp white"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_mp_white"
+	tree_paths: ["items/clothing/hats/m1_mp_white"]
+m1_mp_green:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_mp_green"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 mp green"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_mp_green"
+	tree_paths: ["items/clothing/hats/m1_mp_green"]
+adrian_russian_strap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "adrian_russian_strap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "adrian russian strap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "adrian_russian_strap"
+	tree_paths: ["items/clothing/hats/adrian_russian_strap"]
+adrian_russian:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "adrian_russian"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "adrian russian"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "adrian_russian"
+	tree_paths: ["items/clothing/hats/adrian_russian"]
+adrian_standard_strap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "adrian_standard_strap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "adrian standard strap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "adrian_standard_strap"
+	tree_paths: ["items/clothing/hats/adrian_standard_strap"]
+adrian_standard:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "adrian_standard"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "adrian standard"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "adrian_standard"
+	tree_paths: ["items/clothing/hats/adrian_standard"]
+ww2_british_beret:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_british_beret"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british beret"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_british_beret"
+	tree_paths: ["items/clothing/hats/ww2_british_beret"]
+ww2_british_tropical:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_british_tropical"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british tropical"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_british_tropical"
+	tree_paths: ["items/clothing/hats/ww2_british_tropical"]
+ww2_british_officer:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_british_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british officer"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_british_officer"
+	tree_paths: ["items/clothing/hats/ww2_british_officer"]
+ww2_british_officer_flap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_british_officer_flap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british officer flap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_british_officer_flap"
+	tree_paths: ["items/clothing/hats/ww2_british_officer_flap"]
+ww2_british_officer_tropical:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_british_officer_tropical"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british officer tropical"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_british_officer_tropical"
+	tree_paths: ["items/clothing/hats/ww2_british_officer_tropical"]
+ww2_british_officer_tropical_flap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_british_officer_tropical_flap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british officer tropical flap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_british_officer_tropical_flap"
+	tree_paths: ["items/clothing/hats/ww2_british_officer_tropical_flap"]
+ww2_aussie:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_aussie"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 aussie"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_aussie"
+	tree_paths: ["items/clothing/hats/ww2_aussie"]
+brodie_mk1_deb:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_mk1_deb"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie mk1 deb"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_mk1_deb"
+	tree_paths: ["items/clothing/hats/brodie_mk1_deb"]
+brodie_mk1_ag:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_mk1_ag"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie mk1 ag"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_mk1_ag"
+	tree_paths: ["items/clothing/hats/brodie_mk1_ag"]
+brodie_mk2_og:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_mk2_og"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie mk2 og"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_mk2_og"
+	tree_paths: ["items/clothing/hats/brodie_mk2_og"]
+brodie_mk2_medic:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_mk2_medic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie mk2 medic"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_mk2_medic"
+	tree_paths: ["items/clothing/hats/brodie_mk2_medic"]
+brodie_mk2_irish:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_mk2_irish"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie mk2 irish"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_mk2_irish"
+	tree_paths: ["items/clothing/hats/brodie_mk2_irish"]
+brodie_mk2_nettan:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_mk2_nettan"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie mk2 nettan"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_mk2_nettan"
+	tree_paths: ["items/clothing/hats/brodie_mk2_nettan"]
+brodie_mk2_nettanf:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_mk2_nettanf"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie mk2 nettanf"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_mk2_nettanf"
+	tree_paths: ["items/clothing/hats/brodie_mk2_nettanf"]
+brodie_mk2_netgreen:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_mk2_netgreen"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie mk2 netgreen"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_mk2_netgreen"
+	tree_paths: ["items/clothing/hats/brodie_mk2_netgreen"]
+brodie_mk2_netgreenf:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "brodie_mk2_netgreenf"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brodie mk2 netgreenf"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "brodie_mk2_netgreenf"
+	tree_paths: ["items/clothing/hats/brodie_mk2_netgreenf"]
+adrian_greek_strap:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "adrian_greek_strap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "adrian greek strap"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "adrian_greek_strap"
+	tree_paths: ["items/clothing/hats/adrian_greek_strap"]
+adrian_greek:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "adrian_greek"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "adrian greek"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "adrian_greek"
+	tree_paths: ["items/clothing/hats/adrian_greek"]
+m26_adrian:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m26_adrian"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m26 adrian"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m26_adrian"
+	tree_paths: ["items/clothing/hats/m26_adrian"]
+m26_adrian_s:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m26_adrian_s"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m26 adrian s"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m26_adrian_s"
+	tree_paths: ["items/clothing/hats/m26_adrian_s"]
+m26_medic:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m26_medic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m26 medic"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m26_medic"
+	tree_paths: ["items/clothing/hats/m26_medic"]
+m15_adrian_m:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m15_adrian_m"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m15 adrian m"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m15_adrian_m"
+	tree_paths: ["items/clothing/hats/m15_adrian_m"]
+roman_c:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "roman_c"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "roman c"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "roman_c"
+	tree_paths: ["items/clothing/hats/roman_c"]
+roman:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "roman"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "roman"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "roman"
+	tree_paths: ["items/clothing/hats/roman"]
+roman_d:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "roman_d"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "roman d"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "roman_d"
+	tree_paths: ["items/clothing/hats/roman_d"]
+sol_invictus:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sol_invictus"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sol invictus"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sol_invictus"
+	tree_paths: ["items/clothing/hats/sol_invictus"]
+athena:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "athena"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "athena"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "athena"
+	tree_paths: ["items/clothing/hats/athena"]
+leonidas:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "leonidas"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leonidas"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "leonidas"
+	tree_paths: ["items/clothing/hats/leonidas"]
+aries:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "aries"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "aries"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "aries"
+	tree_paths: ["items/clothing/hats/aries"]
+asterix:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "asterix"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "asterix"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "asterix"
+	tree_paths: ["items/clothing/hats/asterix"]
+apollo:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "apollo"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "apollo"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "apollo"
+	tree_paths: ["items/clothing/hats/apollo"]
+vitalstatistix:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "vitalstatistix"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "vitalstatistix"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "vitalstatistix"
+	tree_paths: ["items/clothing/hats/vitalstatistix"]
+varangian_guard:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "varangian_guard"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "varangian guard"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "varangian_guard"
+	tree_paths: ["items/clothing/hats/varangian_guard"]
+baltic_crusader_king:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "baltic_crusader_king"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "baltic crusader king"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "baltic_crusader_king"
+	tree_paths: ["items/clothing/hats/baltic_crusader_king"]
+giantdad:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "giantdad"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "giantdad"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "giantdad"
+	tree_paths: ["items/clothing/hats/giantdad"]
+emir_turban:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "emir_turban"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "emir turban"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "emir_turban"
+	tree_paths: ["items/clothing/hats/emir_turban"]
+m1_standard:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_standard"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 standard"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_standard"
+	tree_paths: ["items/clothing/hats/m1_standard"]
+m1_medic:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_medic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 medic"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_medic"
+	tree_paths: ["items/clothing/hats/m1_medic"]
+m1_1st_lt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_1st_lt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 1st lt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_1st_lt"
+	tree_paths: ["items/clothing/hats/m1_1st_lt"]
+m1_2nd_lt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_2nd_lt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 2nd lt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_2nd_lt"
+	tree_paths: ["items/clothing/hats/m1_2nd_lt"]
+m1_cpt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_cpt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 cpt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_cpt"
+	tree_paths: ["items/clothing/hats/m1_cpt"]
+m1_green_netting:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_green_netting"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 green netting"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_green_netting"
+	tree_paths: ["items/clothing/hats/m1_green_netting"]
+m1_tan_netting:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_tan_netting"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 tan netting"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_tan_netting"
+	tree_paths: ["items/clothing/hats/m1_tan_netting"]
+m1_chaplain:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_chaplain"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 chaplain"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_chaplain"
+	tree_paths: ["items/clothing/hats/m1_chaplain"]
+m1_greennet_leaves:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "m1_greennet_leaves"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "m1 greennet leaves"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "m1_greennet_leaves"
+	tree_paths: ["items/clothing/hats/m1_greennet_leaves"]
+viet_pith:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "viet_pith"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "viet pith"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "viet_pith"
+	tree_paths: ["items/clothing/hats/viet_pith"]
+black_boonie:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "black_boonie"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black boonie"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "black_boonie"
+	tree_paths: ["items/clothing/hats/black_boonie"]
+khaki_boonie:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "khaki_boonie"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "khaki boonie"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "khaki_boonie"
+	tree_paths: ["items/clothing/hats/khaki_boonie"]
+steppe_shaman_wool_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "steppe_shaman_wool_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "steppe shaman wool hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "steppe_shaman_wool_hat"
+	tree_paths: ["items/clothing/hats/steppe_shaman_wool_hat"]
+steppe_leather_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "steppe_leather_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "steppe leather helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "steppe_leather_helmet"
+	tree_paths: ["items/clothing/hats/steppe_leather_helmet"]
+wyvern:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "wyvern"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "wyvern"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "wyvern"
+	tree_paths: ["items/clothing/hats/wyvern"]
+ice_wyvern:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ice_wyvern"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ice wyvern"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ice_wyvern"
+	tree_paths: ["items/clothing/hats/ice_wyvern"]
+green_dragon:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "green_dragon"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "green dragon"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "green_dragon"
+	tree_paths: ["items/clothing/hats/green_dragon"]
+ape_helm:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ape_helm"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ape helm"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ape_helm"
+	tree_paths: ["items/clothing/hats/ape_helm"]
+phrigian_helmet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "phrigian_helmet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "phrigian helmet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "phrigian_helmet"
+	tree_paths: ["items/clothing/hats/phrigian_helmet"]
+dragoon:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "dragoon"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dragoon"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "dragoon"
+	tree_paths: ["items/clothing/hats/dragoon"]
+hedjet:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "hedjet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hedjet"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "hedjet"
+	tree_paths: ["items/clothing/hats/hedjet"]
+pschent:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "pschent"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pschent"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "pschent"
+	tree_paths: ["items/clothing/hats/pschent"]
+black_cape:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "black_cape"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black cape"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "black_cape"
+	tree_paths: ["items/clothing/hats/black_cape"]
+anubis:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "anubis"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "anubis"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "anubis"
+	tree_paths: ["items/clothing/hats/anubis"]
+egyptian_bronze_headdress:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "egyptian_bronze_headdress"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "egyptian bronze headdress"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "egyptian_bronze_headdress"
+	tree_paths: ["items/clothing/hats/egyptian_bronze_headdress"]
+osiris:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "osiris"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "osiris"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "osiris"
+	tree_paths: ["items/clothing/hats/osiris"]
+atef:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "atef"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "atef"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "atef"
+	tree_paths: ["items/clothing/hats/atef"]
+deshret:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "deshret"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "deshret"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "deshret"
+	tree_paths: ["items/clothing/hats/deshret"]
+khepresh:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "khepresh"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "khepresh"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "khepresh"
+	tree_paths: ["items/clothing/hats/khepresh"]
+phrigian_hat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "phrigian_hat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "phrigian hat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "phrigian_hat"
+	tree_paths: ["items/clothing/hats/phrigian_hat"]
+phrigian_hat_red:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "phrigian_hat_red"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "phrigian hat red"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "phrigian_hat_red"
+	tree_paths: ["items/clothing/hats/phrigian_hat_red"]
+phrigian_hat_blue:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "phrigian_hat_blue"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "phrigian hat blue"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "phrigian_hat_blue"
+	tree_paths: ["items/clothing/hats/phrigian_hat_blue"]
+nursehat:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "nursehat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nursehat"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "nursehat"
+	tree_paths: ["items/clothing/hats/nursehat"]
+mystic:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "mystic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mystic"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "mystic"
+	tree_paths: ["items/clothing/hats/mystic"]
+sheeppelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "sheeppelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sheeppelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "sheeppelt"
+	tree_paths: ["items/clothing/hats/sheeppelt"]
+goatpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "goatpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "goatpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "goatpelt"
+	tree_paths: ["items/clothing/hats/goatpelt"]
+lizardpelt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "lizardpelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lizardpelt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "lizardpelt"
+	tree_paths: ["items/clothing/hats/lizardpelt"]
+motorcycle:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "motorcycle"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "motorcycle"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "motorcycle"
+	tree_paths: ["items/clothing/hats/motorcycle"]
+ten_gallon_hat_white:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ten_gallon_hat_white"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ten gallon hat white"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ten_gallon_hat_white"
+	tree_paths: ["items/clothing/hats/ten_gallon_hat_white"]
+constable:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "constable"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "constable"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "constable"
+	tree_paths: ["items/clothing/hats/constable"]
+traffic_cop:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "traffic_cop"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "traffic cop"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "traffic_cop"
+	tree_paths: ["items/clothing/hats/traffic_cop"]
+ustanker:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ustanker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ustanker"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ustanker"
+	tree_paths: ["items/clothing/hats/ustanker"]
+chinese_ushanka:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chinese_ushanka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chinese ushanka"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chinese_ushanka"
+	tree_paths: ["items/clothing/hats/chinese_ushanka"]
+chinese_ushanka_up:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chinese_ushanka_up"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chinese ushanka up"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chinese_ushanka_up"
+	tree_paths: ["items/clothing/hats/chinese_ushanka_up"]
+chi_korea_helm:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "chi_korea_helm"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chi korea helm"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "chi_korea_helm"
+	tree_paths: ["items/clothing/hats/chi_korea_helm"]
+korea_m1_standard:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "korea_m1_standard"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "korea m1 standard"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "korea_m1_standard"
+	tree_paths: ["items/clothing/hats/korea_m1_standard"]
+korea_m1_medic:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "korea_m1_medic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "korea m1 medic"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "korea_m1_medic"
+	tree_paths: ["items/clothing/hats/korea_m1_medic"]
+korea_m1_1st_lt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "korea_m1_1st_lt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "korea m1 1st lt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "korea_m1_1st_lt"
+	tree_paths: ["items/clothing/hats/korea_m1_1st_lt"]
+korea_m1_2nd_lt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "korea_m1_2nd_lt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "korea m1 2nd lt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "korea_m1_2nd_lt"
+	tree_paths: ["items/clothing/hats/korea_m1_2nd_lt"]
+korea_m1_cpt:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "korea_m1_cpt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "korea m1 cpt"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "korea_m1_cpt"
+	tree_paths: ["items/clothing/hats/korea_m1_cpt"]
+korea_m1_green_netting:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "korea_m1_green_netting"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "korea m1 green netting"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "korea_m1_green_netting"
+	tree_paths: ["items/clothing/hats/korea_m1_green_netting"]
+korea_m1_tan_netting:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "korea_m1_tan_netting"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "korea m1 tan netting"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "korea_m1_tan_netting"
+	tree_paths: ["items/clothing/hats/korea_m1_tan_netting"]
+ww2_japcap_snlf:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_japcap_snlf"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japcap snlf"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_japcap_snlf"
+	tree_paths: ["items/clothing/hats/ww2_japcap_snlf"]
+ww2_japcap_snlf_extended:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "ww2_japcap_snlf_extended"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japcap snlf extended"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "ww2_japcap_snlf_extended"
+	tree_paths: ["items/clothing/hats/ww2_japcap_snlf_extended"]
+japhelm_snlf:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japhelm_snlf"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japhelm snlf"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japhelm_snlf"
+	tree_paths: ["items/clothing/hats/japhelm_snlf"]
+japhelm_snlf_extended:
+	components: ["HeadItem"]
+	vars:
+		components:
+			HeadItem:
+				worn_icon: "icons/mob/worn/hats.png"
+				worn_icon_state: "japhelm_snlf_extended"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japhelm snlf extended"
+		icon: "icons/mob/under/hats.png"
+		icon_state: "japhelm_snlf_extended"
+	tree_paths: ["items/clothing/hats/japhelm_snlf_extended"]

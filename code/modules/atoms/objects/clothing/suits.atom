@@ -1,0 +1,2926 @@
+chaplain_hoodie:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "chaplain_hoodie"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chaplain hoodie"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "chaplain_hoodie"
+	tree_paths: ["items/clothing/suits/chaplain_hoodie"]
+apronchef:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "apronchef"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "apronchef"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "apronchef"
+	tree_paths: ["items/clothing/suits/apronchef"]
+piratejacket1:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "piratejacket1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "piratejacket1"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "piratejacket1"
+	tree_paths: ["items/clothing/suits/piratejacket1"]
+piratejacket2:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "piratejacket2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "piratejacket2"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "piratejacket2"
+	tree_paths: ["items/clothing/suits/piratejacket2"]
+piratejacket3:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "piratejacket3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "piratejacket3"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "piratejacket3"
+	tree_paths: ["items/clothing/suits/piratejacket3"]
+piratejacket4:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "piratejacket4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "piratejacket4"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "piratejacket4"
+	tree_paths: ["items/clothing/suits/piratejacket4"]
+piratejacket5:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "piratejacket5"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "piratejacket5"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "piratejacket5"
+	tree_paths: ["items/clothing/suits/piratejacket5"]
+british_captain:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "british_captain"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "british captain"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "british_captain"
+	tree_paths: ["items/clothing/suits/british_captain"]
+british_officer:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "british_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "british officer"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "british_officer"
+	tree_paths: ["items/clothing/suits/british_officer"]
+british_soldier_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "british_soldier_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "british soldier jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "british_soldier_jacket"
+	tree_paths: ["items/clothing/suits/british_soldier_jacket"]
+civ_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "civ_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "civ jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "civ_jacket"
+	tree_paths: ["items/clothing/suits/civ_jacket"]
+portuguese_captain:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "portuguese_captain"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "portuguese captain"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "portuguese_captain"
+	tree_paths: ["items/clothing/suits/portuguese_captain"]
+portuguese_officer:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "portuguese_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "portuguese officer"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "portuguese_officer"
+	tree_paths: ["items/clothing/suits/portuguese_officer"]
+dutch_captain:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "dutch_captain"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dutch captain"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "dutch_captain"
+	tree_paths: ["items/clothing/suits/dutch_captain"]
+dutch_officer:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "dutch_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dutch officer"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "dutch_officer"
+	tree_paths: ["items/clothing/suits/dutch_officer"]
+french_captain:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "french_captain"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "french captain"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "french_captain"
+	tree_paths: ["items/clothing/suits/french_captain"]
+french_officer:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "french_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "french officer"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "french_officer"
+	tree_paths: ["items/clothing/suits/french_officer"]
+spanish_captain:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "spanish_captain"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "spanish captain"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "spanish_captain"
+	tree_paths: ["items/clothing/suits/spanish_captain"]
+spanish_officer:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "spanish_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "spanish officer"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "spanish_officer"
+	tree_paths: ["items/clothing/suits/spanish_officer"]
+dutch_army:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "dutch_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dutch army"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "dutch_army"
+	tree_paths: ["items/clothing/suits/dutch_army"]
+portuguese_army:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "portuguese_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "portuguese army"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "portuguese_army"
+	tree_paths: ["items/clothing/suits/portuguese_army"]
+bonearmor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "bonearmor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bonearmor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "bonearmor"
+	tree_paths: ["items/clothing/suits/bonearmor"]
+french_army:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "french_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "french army"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "french_army"
+	tree_paths: ["items/clothing/suits/french_army"]
+redcape:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "redcape"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "redcape"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "redcape"
+	tree_paths: ["items/clothing/suits/redcape"]
+bluecape:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "bluecape"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bluecape"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "bluecape"
+	tree_paths: ["items/clothing/suits/bluecape"]
+knight_red:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "knight_red"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight red"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "knight_red"
+	tree_paths: ["items/clothing/suits/knight_red"]
+knight_blue:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "knight_blue"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight blue"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "knight_blue"
+	tree_paths: ["items/clothing/suits/knight_blue"]
+knight_yellow:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "knight_yellow"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight yellow"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "knight_yellow"
+	tree_paths: ["items/clothing/suits/knight_yellow"]
+knight_green:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "knight_green"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight green"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "knight_green"
+	tree_paths: ["items/clothing/suits/knight_green"]
+knight_templar:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "knight_templar"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight templar"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "knight_templar"
+	tree_paths: ["items/clothing/suits/knight_templar"]
+knight_blue2:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "knight_blue2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight blue2"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "knight_blue2"
+	tree_paths: ["items/clothing/suits/knight_blue2"]
+knight_simple:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "knight_simple"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight simple"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "knight_simple"
+	tree_paths: ["items/clothing/suits/knight_simple"]
+chainmail:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "chainmail"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chainmail"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "chainmail"
+	tree_paths: ["items/clothing/suits/chainmail"]
+old_bronze_chestplate:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "old_bronze_chestplate"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "old bronze chestplate"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "old_bronze_chestplate"
+	tree_paths: ["items/clothing/suits/old_bronze_chestplate"]
+leather_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "leather_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leather armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "leather_armor"
+	tree_paths: ["items/clothing/suits/leather_armor"]
+iron_chestplate:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "iron_chestplate"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "iron chestplate"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "iron_chestplate"
+	tree_paths: ["items/clothing/suits/iron_chestplate"]
+iron_chestplater:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "iron_chestplater"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "iron chestplater"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "iron_chestplater"
+	tree_paths: ["items/clothing/suits/iron_chestplater"]
+iron_chestplateb:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "iron_chestplateb"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "iron chestplateb"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "iron_chestplateb"
+	tree_paths: ["items/clothing/suits/iron_chestplateb"]
+iron_chestplatec:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "iron_chestplatec"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "iron chestplatec"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "iron_chestplatec"
+	tree_paths: ["items/clothing/suits/iron_chestplatec"]
+hauberk:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "hauberk"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hauberk"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "hauberk"
+	tree_paths: ["items/clothing/suits/hauberk"]
+plaguedoctor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "plaguedoctor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "plaguedoctor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "plaguedoctor"
+	tree_paths: ["items/clothing/suits/plaguedoctor"]
+fur_jacket1X:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket1X"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket1X"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket1X"
+	tree_paths: ["items/clothing/suits/fur_jacket1X"]
+fur_jacket2:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket2"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket2"
+	tree_paths: ["items/clothing/suits/fur_jacket2"]
+fur_jacket3:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket3"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket3"
+	tree_paths: ["items/clothing/suits/fur_jacket3"]
+fur_jacket1hX:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket1hX"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket1hX"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket1hX"
+	tree_paths: ["items/clothing/suits/fur_jacket1hX"]
+fur_jacket2h:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket2h"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket2h"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket2h"
+	tree_paths: ["items/clothing/suits/fur_jacket2h"]
+fur_jacket3h:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket3h"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket3h"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket3h"
+	tree_paths: ["items/clothing/suits/fur_jacket3h"]
+fur_jacket4h:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket4h"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket4h"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket4h"
+	tree_paths: ["items/clothing/suits/fur_jacket4h"]
+fur_jacket4:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket4"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket4"
+	tree_paths: ["items/clothing/suits/fur_jacket4"]
+fur_jacket5h:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket5h"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket5h"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket5h"
+	tree_paths: ["items/clothing/suits/fur_jacket5h"]
+fur_jacket5:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket5"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket5"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket5"
+	tree_paths: ["items/clothing/suits/fur_jacket5"]
+kool_kids_klub:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "kool_kids_klub"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kool kids klub"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "kool_kids_klub"
+	tree_paths: ["items/clothing/suits/kool_kids_klub"]
+fur_jacket1:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket1"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket1"
+	tree_paths: ["items/clothing/suits/fur_jacket1"]
+fur_jacket1h:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket1h"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket1h"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket1h"
+	tree_paths: ["items/clothing/suits/fur_jacket1h"]
+japcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "japcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "japcoat"
+	tree_paths: ["items/clothing/suits/japcoat"]
+japcoat2:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "japcoat2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japcoat2"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "japcoat2"
+	tree_paths: ["items/clothing/suits/japcoat2"]
+ruscoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ruscoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ruscoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ruscoat"
+	tree_paths: ["items/clothing/suits/ruscoat"]
+rusoffcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "rusoffcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "rusoffcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "rusoffcoat"
+	tree_paths: ["items/clothing/suits/rusoffcoat"]
+japvest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "japvest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japvest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "japvest"
+	tree_paths: ["items/clothing/suits/japvest"]
+kozhanka:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "kozhanka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kozhanka"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "kozhanka"
+	tree_paths: ["items/clothing/suits/kozhanka"]
+kozhanka_w:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "kozhanka_w"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kozhanka w"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "kozhanka_w"
+	tree_paths: ["items/clothing/suits/kozhanka_w"]
+kozhankah:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "kozhankah"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kozhankah"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "kozhankah"
+	tree_paths: ["items/clothing/suits/kozhankah"]
+kozhanka_wh:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "kozhanka_wh"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kozhanka wh"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "kozhanka_wh"
+	tree_paths: ["items/clothing/suits/kozhanka_wh"]
+leather_overcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "leather_overcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leather overcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "leather_overcoat"
+	tree_paths: ["items/clothing/suits/leather_overcoat"]
+blackvest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "blackvest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "blackvest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "blackvest"
+	tree_paths: ["items/clothing/suits/blackvest"]
+olivevest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "olivevest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "olivevest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "olivevest"
+	tree_paths: ["items/clothing/suits/olivevest"]
+bluevest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "bluevest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bluevest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "bluevest"
+	tree_paths: ["items/clothing/suits/bluevest"]
+black_leather_overcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "black_leather_overcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black leather overcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "black_leather_overcoat"
+	tree_paths: ["items/clothing/suits/black_leather_overcoat"]
+charcoal_suit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "charcoal_suit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "charcoal suit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "charcoal_suit"
+	tree_paths: ["items/clothing/suits/charcoal_suit"]
+navy_suit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "navy_suit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "navy suit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "navy_suit"
+	tree_paths: ["items/clothing/suits/navy_suit"]
+burgundy_suit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "burgundy_suit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "burgundy suit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "burgundy_suit"
+	tree_paths: ["items/clothing/suits/burgundy_suit"]
+checkered_suit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "checkered_suit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "checkered suit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "checkered_suit"
+	tree_paths: ["items/clothing/suits/checkered_suit"]
+black_suit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "black_suit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black suit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "black_suit"
+	tree_paths: ["items/clothing/suits/black_suit"]
+really_black_suit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "really_black_suit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "really black suit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "really_black_suit"
+	tree_paths: ["items/clothing/suits/really_black_suit"]
+modern_winter:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "modern_winter"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern winter"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "modern_winter"
+	tree_paths: ["items/clothing/suits/modern_winter"]
+germtrench:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "germtrench"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "germtrench"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "germtrench"
+	tree_paths: ["items/clothing/suits/germtrench"]
+frenchtrench:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "frenchtrench"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "frenchtrench"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "frenchtrench"
+	tree_paths: ["items/clothing/suits/frenchtrench"]
+wise_tutor_hooded:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "wise_tutor_hooded"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "wise tutor hooded"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "wise_tutor_hooded"
+	tree_paths: ["items/clothing/suits/wise_tutor_hooded"]
+wise_tutor_robe:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "wise_tutor_robe"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "wise tutor robe"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "wise_tutor_robe"
+	tree_paths: ["items/clothing/suits/wise_tutor_robe"]
+samurai1:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "samurai1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai1"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "samurai1"
+	tree_paths: ["items/clothing/suits/samurai1"]
+samurai2:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "samurai2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai2"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "samurai2"
+	tree_paths: ["items/clothing/suits/samurai2"]
+samurai3:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "samurai3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai3"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "samurai3"
+	tree_paths: ["items/clothing/suits/samurai3"]
+samurai4:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "samurai4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai4"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "samurai4"
+	tree_paths: ["items/clothing/suits/samurai4"]
+arrogant_student_robe:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "arrogant_student_robe"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arrogant student robe"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "arrogant_student_robe"
+	tree_paths: ["items/clothing/suits/arrogant_student_robe"]
+arrogant_student_robe_hooded:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "arrogant_student_robe_hooded"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arrogant student robe hooded"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "arrogant_student_robe_hooded"
+	tree_paths: ["items/clothing/suits/arrogant_student_robe_hooded"]
+samurai_lord1:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "samurai_lord1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai lord1"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "samurai_lord1"
+	tree_paths: ["items/clothing/suits/samurai_lord1"]
+samurai_lord2:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "samurai_lord2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai lord2"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "samurai_lord2"
+	tree_paths: ["items/clothing/suits/samurai_lord2"]
+samurai_lord3:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "samurai_lord3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai lord3"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "samurai_lord3"
+	tree_paths: ["items/clothing/suits/samurai_lord3"]
+samurai_lord4:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "samurai_lord4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "samurai lord4"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "samurai_lord4"
+	tree_paths: ["items/clothing/suits/samurai_lord4"]
+scale_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "scale_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "scale armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "scale_armor"
+	tree_paths: ["items/clothing/suits/scale_armor"]
+heavycloth_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "heavycloth_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "heavycloth armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "heavycloth_armor"
+	tree_paths: ["items/clothing/suits/heavycloth_armor"]
+labcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "labcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "labcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "labcoat"
+	tree_paths: ["items/clothing/suits/labcoat"]
+britishtrench:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "britishtrench"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "britishtrench"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "britishtrench"
+	tree_paths: ["items/clothing/suits/britishtrench"]
+us_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "us_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "us_jacket"
+	tree_paths: ["items/clothing/suits/us_jacket"]
+ghillie:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ghillie"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ghillie"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ghillie"
+	tree_paths: ["items/clothing/suits/ghillie"]
+customcolonialcoat_top:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "customcolonialcoat_top"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcolonialcoat top"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "customcolonialcoat_top"
+	tree_paths: ["items/clothing/suits/customcolonialcoat_top"]
+customcolonialcoat_dec:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "customcolonialcoat_dec"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcolonialcoat dec"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "customcolonialcoat_dec"
+	tree_paths: ["items/clothing/suits/customcolonialcoat_dec"]
+customcolonialcoat_lines:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "customcolonialcoat_lines"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcolonialcoat lines"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "customcolonialcoat_lines"
+	tree_paths: ["items/clothing/suits/customcolonialcoat_lines"]
+customcolonialcoat_full:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "customcolonialcoat_full"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcolonialcoat full"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "customcolonialcoat_full"
+	tree_paths: ["items/clothing/suits/customcolonialcoat_full"]
+customcolonial_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "customcolonial_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcolonial jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "customcolonial_jacket"
+	tree_paths: ["items/clothing/suits/customcolonial_jacket"]
+customcolonial_cross:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "customcolonial_cross"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcolonial cross"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "customcolonial_cross"
+	tree_paths: ["items/clothing/suits/customcolonial_cross"]
+customcolonial_plain:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "customcolonial_plain"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcolonial plain"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "customcolonial_plain"
+	tree_paths: ["items/clothing/suits/customcolonial_plain"]
+customcolonial_full:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "customcolonial_full"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customcolonial full"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "customcolonial_full"
+	tree_paths: ["items/clothing/suits/customcolonial_full"]
+sov_offcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "sov_offcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sov offcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "sov_offcoat"
+	tree_paths: ["items/clothing/suits/sov_offcoat"]
+winter_coat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "winter_coat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "winter coat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "winter_coat"
+	tree_paths: ["items/clothing/suits/winter_coat"]
+gerparka:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "gerparka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gerparka"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "gerparka"
+	tree_paths: ["items/clothing/suits/gerparka"]
+ger_offcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ger_offcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ger offcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ger_offcoat"
+	tree_paths: ["items/clothing/suits/ger_offcoat"]
+ww2_japcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ww2_japcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ww2_japcoat"
+	tree_paths: ["items/clothing/suits/ww2_japcoat"]
+jappilotcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "jappilotcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jappilotcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "jappilotcoat"
+	tree_paths: ["items/clothing/suits/jappilotcoat"]
+sssmock:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "sssmock"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sssmock"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "sssmock"
+	tree_paths: ["items/clothing/suits/sssmock"]
+nbc:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "nbc"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nbc"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "nbc"
+	tree_paths: ["items/clothing/suits/nbc"]
+nbc2:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "nbc2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nbc2"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "nbc2"
+	tree_paths: ["items/clothing/suits/nbc2"]
+fbi:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fbi"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fbi"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fbi"
+	tree_paths: ["items/clothing/suits/fbi"]
+fbi2:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fbi2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fbi2"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fbi2"
+	tree_paths: ["items/clothing/suits/fbi2"]
+leathercoat_c:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "leathercoat_c"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leathercoat c"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "leathercoat_c"
+	tree_paths: ["items/clothing/suits/leathercoat_c"]
+kuban_cossak:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "kuban_cossak"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kuban cossak"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "kuban_cossak"
+	tree_paths: ["items/clothing/suits/kuban_cossak"]
+don_cossak:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "don_cossak"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "don cossak"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "don_cossak"
+	tree_paths: ["items/clothing/suits/don_cossak"]
+ac_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ac_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ac armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ac_armor"
+	tree_paths: ["items/clothing/suits/ac_armor"]
+fur_jacket6:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket6"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket6"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket6"
+	tree_paths: ["items/clothing/suits/fur_jacket6"]
+fur_jacket6h:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "fur_jacket6h"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur jacket6h"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "fur_jacket6h"
+	tree_paths: ["items/clothing/suits/fur_jacket6h"]
+urukhai_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "urukhai_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "urukhai armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "urukhai_armor"
+	tree_paths: ["items/clothing/suits/urukhai_armor"]
+whitehand_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "whitehand_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "whitehand armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "whitehand_armor"
+	tree_paths: ["items/clothing/suits/whitehand_armor"]
+grunt_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "grunt_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "grunt armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "grunt_armor"
+	tree_paths: ["items/clothing/suits/grunt_armor"]
+sauronarmor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "sauronarmor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sauronarmor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "sauronarmor"
+	tree_paths: ["items/clothing/suits/sauronarmor"]
+ac_armor1713:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ac_armor1713"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ac armor1713"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ac_armor1713"
+	tree_paths: ["items/clothing/suits/ac_armor1713"]
+ac_armor_napol:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ac_armor_napol"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ac armor napol"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ac_armor_napol"
+	tree_paths: ["items/clothing/suits/ac_armor_napol"]
+kevlarvest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "kevlarvest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kevlarvest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "kevlarvest"
+	tree_paths: ["items/clothing/suits/kevlarvest"]
+scraparmor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "scraparmor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "scraparmor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "scraparmor"
+	tree_paths: ["items/clothing/suits/scraparmor"]
+b3vest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "b3vest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "b3vest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "b3vest"
+	tree_paths: ["items/clothing/suits/b3vest"]
+jacket80s:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "jacket80s"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jacket80s"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "jacket80s"
+	tree_paths: ["items/clothing/suits/jacket80s"]
+hazmat_suit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "hazmat_suit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hazmat suit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "hazmat_suit"
+	tree_paths: ["items/clothing/suits/hazmat_suit"]
+moderncoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "moderncoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "moderncoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "moderncoat"
+	tree_paths: ["items/clothing/suits/moderncoat"]
+servicejacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "servicejacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "servicejacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "servicejacket"
+	tree_paths: ["items/clothing/suits/servicejacket"]
+civilianvest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "civilianvest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "civilianvest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "civilianvest"
+	tree_paths: ["items/clothing/suits/civilianvest"]
+bomberjacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "bomberjacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bomberjacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "bomberjacket"
+	tree_paths: ["items/clothing/suits/bomberjacket"]
+blackbomberjacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "blackbomberjacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "blackbomberjacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "blackbomberjacket"
+	tree_paths: ["items/clothing/suits/blackbomberjacket"]
+pcarrier_tan:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "pcarrier_tan"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pcarrier tan"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "pcarrier_tan"
+	tree_paths: ["items/clothing/suits/pcarrier_tan"]
+pcarrier_black:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "pcarrier_black"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pcarrier black"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "pcarrier_black"
+	tree_paths: ["items/clothing/suits/pcarrier_black"]
+gulagguard:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "gulagguard"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gulagguard"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "gulagguard"
+	tree_paths: ["items/clothing/suits/gulagguard"]
+gulagprisoner1:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "gulagprisoner1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gulagprisoner1"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "gulagprisoner1"
+	tree_paths: ["items/clothing/suits/gulagprisoner1"]
+gulagprisoner2:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "gulagprisoner2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gulagprisoner2"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "gulagprisoner2"
+	tree_paths: ["items/clothing/suits/gulagprisoner2"]
+gulagprisoner3:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "gulagprisoner3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gulagprisoner3"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "gulagprisoner3"
+	tree_paths: ["items/clothing/suits/gulagprisoner3"]
+thickcarrier:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "thickcarrier"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "thickcarrier"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "thickcarrier"
+	tree_paths: ["items/clothing/suits/thickcarrier"]
+expensivecoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "expensivecoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "expensivecoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "expensivecoat"
+	tree_paths: ["items/clothing/suits/expensivecoat"]
+woolcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "woolcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "woolcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "woolcoat"
+	tree_paths: ["items/clothing/suits/woolcoat"]
+iogsuit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "iogsuit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "iogsuit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "iogsuit"
+	tree_paths: ["items/clothing/suits/iogsuit"]
+royalcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "royalcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "royalcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "royalcoat"
+	tree_paths: ["items/clothing/suits/royalcoat"]
+gerparka_winter:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "gerparka_winter"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gerparka winter"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "gerparka_winter"
+	tree_paths: ["items/clothing/suits/gerparka_winter"]
+priestwhite:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "priestwhite"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "priestwhite"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "priestwhite"
+	tree_paths: ["items/clothing/suits/priestwhite"]
+royalplate:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "royalplate"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "royalplate"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "royalplate"
+	tree_paths: ["items/clothing/suits/royalplate"]
+ork_plate_commander:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ork_plate_commander"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ork plate commander"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ork_plate_commander"
+	tree_paths: ["items/clothing/suits/ork_plate_commander"]
+ork_plate_elite:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ork_plate_elite"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ork plate elite"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ork_plate_elite"
+	tree_paths: ["items/clothing/suits/ork_plate_elite"]
+ork_chestplate:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "ork_chestplate"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ork chestplate"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "ork_chestplate"
+	tree_paths: ["items/clothing/suits/ork_chestplate"]
+jap_raincoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "jap_raincoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jap raincoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "jap_raincoat"
+	tree_paths: ["items/clothing/suits/jap_raincoat"]
+bxsuit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "bxsuit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bxsuit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "bxsuit"
+	tree_paths: ["items/clothing/suits/bxsuit"]
+bailyvest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "bailyvest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bailyvest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "bailyvest"
+	tree_paths: ["items/clothing/suits/bailyvest"]
+customponcho:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "customponcho"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customponcho"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "customponcho"
+	tree_paths: ["items/clothing/suits/customponcho"]
+haori_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "haori_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "haori jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "haori_jacket"
+	tree_paths: ["items/clothing/suits/haori_jacket"]
+haori_jacket_custom:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "haori_jacket_custom"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "haori jacket custom"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "haori_jacket_custom"
+	tree_paths: ["items/clothing/suits/haori_jacket_custom"]
+biker:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "biker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "biker"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "biker"
+	tree_paths: ["items/clothing/suits/biker"]
+a6b45:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "a6b45"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "a6b45"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "a6b45"
+	tree_paths: ["items/clothing/suits/a6b45"]
+a6b44:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "a6b44"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "a6b44"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "a6b44"
+	tree_paths: ["items/clothing/suits/a6b44"]
+a6b28:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "a6b28"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "a6b28"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "a6b28"
+	tree_paths: ["items/clothing/suits/a6b28"]
+aztec_harness:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "aztec_harness"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "aztec harness"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "aztec_harness"
+	tree_paths: ["items/clothing/suits/aztec_harness"]
+swat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "swat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "swat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "swat"
+	tree_paths: ["items/clothing/suits/swat"]
+policevest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "policevest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "policevest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "policevest"
+	tree_paths: ["items/clothing/suits/policevest"]
+heavypolice:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "heavypolice"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "heavypolice"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "heavypolice"
+	tree_paths: ["items/clothing/suits/heavypolice"]
+mediumvest:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "mediumvest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mediumvest"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "mediumvest"
+	tree_paths: ["items/clothing/suits/mediumvest"]
+monk_robes:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "monk_robes"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "monk robes"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "monk_robes"
+	tree_paths: ["items/clothing/suits/monk_robes"]
+monk_robes_hood:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "monk_robes_hood"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "monk robes hood"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "monk_robes_hood"
+	tree_paths: ["items/clothing/suits/monk_robes_hood"]
+gator_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "gator_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gator jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "gator_jacket"
+	tree_paths: ["items/clothing/suits/gator_jacket"]
+gator_scale_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "gator_scale_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gator scale armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "gator_scale_armor"
+	tree_paths: ["items/clothing/suits/gator_scale_armor"]
+hawaiian_blue:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "hawaiian_blue"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hawaiian blue"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "hawaiian_blue"
+	tree_paths: ["items/clothing/suits/hawaiian_blue"]
+hawaiian_orange:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "hawaiian_orange"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hawaiian orange"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "hawaiian_orange"
+	tree_paths: ["items/clothing/suits/hawaiian_orange"]
+hawaiian_purple:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "hawaiian_purple"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hawaiian purple"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "hawaiian_purple"
+	tree_paths: ["items/clothing/suits/hawaiian_purple"]
+hawaiian_green:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "hawaiian_green"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hawaiian green"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "hawaiian_green"
+	tree_paths: ["items/clothing/suits/hawaiian_green"]
+bronze_chestplate:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "bronze_chestplate"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bronze chestplate"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "bronze_chestplate"
+	tree_paths: ["items/clothing/suits/bronze_chestplate"]
+mamluk_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "mamluk_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mamluk armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "mamluk_armor"
+	tree_paths: ["items/clothing/suits/mamluk_armor"]
+mamluk_lord:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "mamluk_lord"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mamluk lord"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "mamluk_lord"
+	tree_paths: ["items/clothing/suits/mamluk_lord"]
+mamluk_king:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "mamluk_king"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mamluk king"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "mamluk_king"
+	tree_paths: ["items/clothing/suits/mamluk_king"]
+varangian_lamellar:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "varangian_lamellar"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "varangian lamellar"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "varangian_lamellar"
+	tree_paths: ["items/clothing/suits/varangian_lamellar"]
+emir_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "emir_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "emir armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "emir_armor"
+	tree_paths: ["items/clothing/suits/emir_armor"]
+inquisitor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "inquisitor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "inquisitor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "inquisitor"
+	tree_paths: ["items/clothing/suits/inquisitor"]
+inqcape_armband:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "inqcape_armband"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "inqcape armband"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "inqcape_armband"
+	tree_paths: ["items/clothing/suits/inqcape_armband"]
+inquistor_alt:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "inquistor_alt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "inquistor alt"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "inquistor_alt"
+	tree_paths: ["items/clothing/suits/inquistor_alt"]
+inqcape_alt:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "inqcape_alt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "inqcape alt"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "inqcape_alt"
+	tree_paths: ["items/clothing/suits/inqcape_alt"]
+evil_inquisitor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "evil_inquisitor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "evil inquisitor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "evil_inquisitor"
+	tree_paths: ["items/clothing/suits/evil_inquisitor"]
+elf_harlequin:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "elf_harlequin"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "elf harlequin"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "elf_harlequin"
+	tree_paths: ["items/clothing/suits/elf_harlequin"]
+arbit:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "arbit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arbit"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "arbit"
+	tree_paths: ["items/clothing/suits/arbit"]
+commissar:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "commissar"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "commissar"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "commissar"
+	tree_paths: ["items/clothing/suits/commissar"]
+settra:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "settra"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "settra"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "settra"
+	tree_paths: ["items/clothing/suits/settra"]
+egyptian_lamellar:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "egyptian_lamellar"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "egyptian lamellar"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "egyptian_lamellar"
+	tree_paths: ["items/clothing/suits/egyptian_lamellar"]
+chitin_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "chitin_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chitin armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "chitin_armor"
+	tree_paths: ["items/clothing/suits/chitin_armor"]
+steppe_leather_armor:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "steppe_leather_armor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "steppe leather armor"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "steppe_leather_armor"
+	tree_paths: ["items/clothing/suits/steppe_leather_armor"]
+steppe_shaman_wool_coat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "steppe_shaman_wool_coat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "steppe shaman wool coat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "steppe_shaman_wool_coat"
+	tree_paths: ["items/clothing/suits/steppe_shaman_wool_coat"]
+elf_warlock:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "elf_warlock"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "elf warlock"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "elf_warlock"
+	tree_paths: ["items/clothing/suits/elf_warlock"]
+lizard_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "lizard_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lizard jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "lizard_jacket"
+	tree_paths: ["items/clothing/suits/lizard_jacket"]
+victorian_tailcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "victorian_tailcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "victorian tailcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "victorian_tailcoat"
+	tree_paths: ["items/clothing/suits/victorian_tailcoat"]
+black_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "black_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "black_jacket"
+	tree_paths: ["items/clothing/suits/black_jacket"]
+charcoal_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "charcoal_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "charcoal jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "charcoal_jacket"
+	tree_paths: ["items/clothing/suits/charcoal_jacket"]
+navy_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "navy_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "navy jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "navy_jacket"
+	tree_paths: ["items/clothing/suits/navy_jacket"]
+surgical:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "surgical"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "surgical"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "surgical"
+	tree_paths: ["items/clothing/suits/surgical"]
+nun:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "nun"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nun"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "nun"
+	tree_paths: ["items/clothing/suits/nun"]
+texas:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "texas"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "texas"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "texas"
+	tree_paths: ["items/clothing/suits/texas"]
+paramedic_jacket:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "paramedic_jacket"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "paramedic jacket"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "paramedic_jacket"
+	tree_paths: ["items/clothing/suits/paramedic_jacket"]
+high_vis_jacket_yellow:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "high_vis_jacket_yellow"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "high vis jacket yellow"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "high_vis_jacket_yellow"
+	tree_paths: ["items/clothing/suits/high_vis_jacket_yellow"]
+us_coat_korea:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "us_coat_korea"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us coat korea"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "us_coat_korea"
+	tree_paths: ["items/clothing/suits/us_coat_korea"]
+chi_korea_offcoat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "chi_korea_offcoat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chi korea offcoat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "chi_korea_offcoat"
+	tree_paths: ["items/clothing/suits/chi_korea_offcoat"]
+chi_korea_coat:
+	components: ["SuitItem"]
+	vars:
+		components:
+			SuitItem:
+				worn_icon: "icons/mob/worn/suits.png"
+				worn_icon_state: "chi_korea_coat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chi korea coat"
+		icon: "icons/mob/under/suits.png"
+		icon_state: "chi_korea_coat"
+	tree_paths: ["items/clothing/suits/chi_korea_coat"]

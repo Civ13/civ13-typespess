@@ -1,0 +1,252 @@
+glasses:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "glasses"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "glasses"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "glasses"
+	tree_paths: ["items/clothing/glasses/glasses"]
+sun:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "sun"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sun"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "sun"
+	tree_paths: ["items/clothing/glasses/sun"]
+blindfold:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "blindfold"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "blindfold"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "blindfold"
+	tree_paths: ["items/clothing/glasses/blindfold"]
+monocle_old:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "monocle_old"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "monocle old"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "monocle_old"
+	tree_paths: ["items/clothing/glasses/monocle_old"]
+eyepatch:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "eyepatch"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "eyepatch"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "eyepatch"
+	tree_paths: ["items/clothing/glasses/eyepatch"]
+gglasses:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "gglasses"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gglasses"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "gglasses"
+	tree_paths: ["items/clothing/glasses/gglasses"]
+monocle:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "monocle"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "monocle"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "monocle"
+	tree_paths: ["items/clothing/glasses/monocle"]
+sunhud:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "sunhud"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sunhud"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "sunhud"
+	tree_paths: ["items/clothing/glasses/sunhud"]
+hipster_glasses:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "hipster_glasses"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hipster glasses"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "hipster_glasses"
+	tree_paths: ["items/clothing/glasses/hipster_glasses"]
+steampunk:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "steampunk"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "steampunk"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "steampunk"
+	tree_paths: ["items/clothing/glasses/steampunk"]
+biker:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "biker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "biker"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "biker"
+	tree_paths: ["items/clothing/glasses/biker"]
+thermal:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "thermal"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "thermal"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "thermal"
+	tree_paths: ["items/clothing/glasses/thermal"]
+thermal_off:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "thermal_off"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "thermal off"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "thermal_off"
+	tree_paths: ["items/clothing/glasses/thermal_off"]
+nvg:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "nvg"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nvg"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "nvg"
+	tree_paths: ["items/clothing/glasses/nvg"]
+nvg_off:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "nvg_off"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nvg off"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "nvg_off"
+	tree_paths: ["items/clothing/glasses/nvg_off"]
+tactical_goggles:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "tactical_goggles"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tactical goggles"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "tactical_goggles"
+	tree_paths: ["items/clothing/glasses/tactical_goggles"]
+bigsunglasses:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "bigsunglasses"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bigsunglasses"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "bigsunglasses"
+	tree_paths: ["items/clothing/glasses/bigsunglasses"]
+ac_gauntlets:
+	components: ["Glasses"]
+	vars:
+		components:
+			Glasses:
+				worn_icon: "icons/mob/worn/glasses.png"
+				worn_icon_state: "ac_gauntlets"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ac gauntlets"
+		icon: "icons/mob/under/glasses.png"
+		icon_state: "ac_gauntlets"
+	tree_paths: ["items/clothing/glasses/ac_gauntlets"]

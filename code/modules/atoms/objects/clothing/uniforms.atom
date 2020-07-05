@@ -1,0 +1,5446 @@
+chaplain:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "chaplain"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chaplain"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "chaplain"
+	tree_paths: ["items/clothing/uniforms/chaplain"]
+nursesuit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nursesuit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nursesuit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nursesuit"
+	tree_paths: ["items/clothing/uniforms/nursesuit"]
+kilt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "kilt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kilt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "kilt"
+	tree_paths: ["items/clothing/uniforms/kilt"]
+pirate1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pirate1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pirate1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pirate1"
+	tree_paths: ["items/clothing/uniforms/pirate1"]
+pirate2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pirate2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pirate2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pirate2"
+	tree_paths: ["items/clothing/uniforms/pirate2"]
+pirate3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pirate3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pirate3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pirate3"
+	tree_paths: ["items/clothing/uniforms/pirate3"]
+pirate4:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pirate4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pirate4"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pirate4"
+	tree_paths: ["items/clothing/uniforms/pirate4"]
+pirate5:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pirate5"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pirate5"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pirate5"
+	tree_paths: ["items/clothing/uniforms/pirate5"]
+british_sailor1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "british_sailor1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "british sailor1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "british_sailor1"
+	tree_paths: ["items/clothing/uniforms/british_sailor1"]
+british_sailor2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "british_sailor2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "british sailor2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "british_sailor2"
+	tree_paths: ["items/clothing/uniforms/british_sailor2"]
+british_sailor3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "british_sailor3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "british sailor3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "british_sailor3"
+	tree_paths: ["items/clothing/uniforms/british_sailor3"]
+british_sailor4:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "british_sailor4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "british sailor4"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "british_sailor4"
+	tree_paths: ["items/clothing/uniforms/british_sailor4"]
+indian1b:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "indian1b"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "indian1b"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "indian1b"
+	tree_paths: ["items/clothing/uniforms/indian1b"]
+indian2b:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "indian2b"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "indian2b"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "indian2b"
+	tree_paths: ["items/clothing/uniforms/indian2b"]
+indian3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "indian3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "indian3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "indian3"
+	tree_paths: ["items/clothing/uniforms/indian3"]
+indianshaman:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "indianshaman"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "indianshaman"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "indianshaman"
+	tree_paths: ["items/clothing/uniforms/indianshaman"]
+indianchef:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "indianchef"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "indianchef"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "indianchef"
+	tree_paths: ["items/clothing/uniforms/indianchef"]
+indianwhite:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "indianwhite"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "indianwhite"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "indianwhite"
+	tree_paths: ["items/clothing/uniforms/indianwhite"]
+indian1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "indian1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "indian1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "indian1"
+	tree_paths: ["items/clothing/uniforms/indian1"]
+indian2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "indian2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "indian2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "indian2"
+	tree_paths: ["items/clothing/uniforms/indian2"]
+officer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "officer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "officer"
+	tree_paths: ["items/clothing/uniforms/officer"]
+spanish_sailor3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "spanish_sailor3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "spanish sailor3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "spanish_sailor3"
+	tree_paths: ["items/clothing/uniforms/spanish_sailor3"]
+spanish_sailor2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "spanish_sailor2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "spanish sailor2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "spanish_sailor2"
+	tree_paths: ["items/clothing/uniforms/spanish_sailor2"]
+spanish_sailor1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "spanish_sailor1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "spanish sailor1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "spanish_sailor1"
+	tree_paths: ["items/clothing/uniforms/spanish_sailor1"]
+french_sailor2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "french_sailor2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "french sailor2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "french_sailor2"
+	tree_paths: ["items/clothing/uniforms/french_sailor2"]
+french_sailor1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "french_sailor1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "french sailor1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "french_sailor1"
+	tree_paths: ["items/clothing/uniforms/french_sailor1"]
+french_sailor3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "french_sailor3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "french sailor3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "french_sailor3"
+	tree_paths: ["items/clothing/uniforms/french_sailor3"]
+french_officer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "french_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "french officer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "french_officer"
+	tree_paths: ["items/clothing/uniforms/french_officer"]
+giant_leopard_pelt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "giant_leopard_pelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "giant leopard pelt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "giant_leopard_pelt"
+	tree_paths: ["items/clothing/uniforms/giant_leopard_pelt"]
+portuguese_sailor1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "portuguese_sailor1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "portuguese sailor1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "portuguese_sailor1"
+	tree_paths: ["items/clothing/uniforms/portuguese_sailor1"]
+portuguese_sailor2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "portuguese_sailor2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "portuguese sailor2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "portuguese_sailor2"
+	tree_paths: ["items/clothing/uniforms/portuguese_sailor2"]
+portuguese_sailor3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "portuguese_sailor3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "portuguese sailor3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "portuguese_sailor3"
+	tree_paths: ["items/clothing/uniforms/portuguese_sailor3"]
+portuguese_sailor4:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "portuguese_sailor4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "portuguese sailor4"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "portuguese_sailor4"
+	tree_paths: ["items/clothing/uniforms/portuguese_sailor4"]
+dutch_sailor1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dutch_sailor1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dutch sailor1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dutch_sailor1"
+	tree_paths: ["items/clothing/uniforms/dutch_sailor1"]
+dutch_sailor3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dutch_sailor3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dutch sailor3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dutch_sailor3"
+	tree_paths: ["items/clothing/uniforms/dutch_sailor3"]
+dutch_sailor2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dutch_sailor2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dutch sailor2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dutch_sailor2"
+	tree_paths: ["items/clothing/uniforms/dutch_sailor2"]
+civuni2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "civuni2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "civuni2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "civuni2"
+	tree_paths: ["items/clothing/uniforms/civuni2"]
+civuni3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "civuni3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "civuni3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "civuni3"
+	tree_paths: ["items/clothing/uniforms/civuni3"]
+civuni4:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "civuni4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "civuni4"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "civuni4"
+	tree_paths: ["items/clothing/uniforms/civuni4"]
+civuni6:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "civuni6"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "civuni6"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "civuni6"
+	tree_paths: ["items/clothing/uniforms/civuni6"]
+civuni5:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "civuni5"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "civuni5"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "civuni5"
+	tree_paths: ["items/clothing/uniforms/civuni5"]
+civuni1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "civuni1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "civuni1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "civuni1"
+	tree_paths: ["items/clothing/uniforms/civuni1"]
+dress1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dress1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dress1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dress1"
+	tree_paths: ["items/clothing/uniforms/dress1"]
+dress2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dress2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dress2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dress2"
+	tree_paths: ["items/clothing/uniforms/dress2"]
+dress3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dress3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dress3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dress3"
+	tree_paths: ["items/clothing/uniforms/dress3"]
+nun:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nun"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nun"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nun"
+	tree_paths: ["items/clothing/uniforms/nun"]
+portuguese_army:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "portuguese_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "portuguese army"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "portuguese_army"
+	tree_paths: ["items/clothing/uniforms/portuguese_army"]
+dutch_army:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dutch_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dutch army"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dutch_army"
+	tree_paths: ["items/clothing/uniforms/dutch_army"]
+french_army:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "french_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "french army"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "french_army"
+	tree_paths: ["items/clothing/uniforms/french_army"]
+roman:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "roman"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "roman"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "roman"
+	tree_paths: ["items/clothing/uniforms/roman"]
+athens:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "athens"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "athens"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "athens"
+	tree_paths: ["items/clothing/uniforms/athens"]
+roman_centurion:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "roman_centurion"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "roman centurion"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "roman_centurion"
+	tree_paths: ["items/clothing/uniforms/roman_centurion"]
+toxotai:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "toxotai"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "toxotai"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "toxotai"
+	tree_paths: ["items/clothing/uniforms/toxotai"]
+thebes:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "thebes"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "thebes"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "thebes"
+	tree_paths: ["items/clothing/uniforms/thebes"]
+corinthia:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "corinthia"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "corinthia"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "corinthia"
+	tree_paths: ["items/clothing/uniforms/corinthia"]
+greek_commander:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "greek_commander"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greek commander"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "greek_commander"
+	tree_paths: ["items/clothing/uniforms/greek_commander"]
+yellow_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "yellow_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "yellow tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "yellow_tunic"
+	tree_paths: ["items/clothing/uniforms/yellow_tunic"]
+blue_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "blue_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "blue tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "blue_tunic"
+	tree_paths: ["items/clothing/uniforms/blue_tunic"]
+red_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "red_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "red tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "red_tunic"
+	tree_paths: ["items/clothing/uniforms/red_tunic"]
+leather_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "leather_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leather tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "leather_tunic"
+	tree_paths: ["items/clothing/uniforms/leather_tunic"]
+red_tunic2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "red_tunic2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "red tunic2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "red_tunic2"
+	tree_paths: ["items/clothing/uniforms/red_tunic2"]
+blue_tunic2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "blue_tunic2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "blue tunic2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "blue_tunic2"
+	tree_paths: ["items/clothing/uniforms/blue_tunic2"]
+white_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "white_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "white tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "white_tunic"
+	tree_paths: ["items/clothing/uniforms/white_tunic"]
+syellow_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "syellow_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "syellow tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "syellow_tunic"
+	tree_paths: ["items/clothing/uniforms/syellow_tunic"]
+sblue_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "sblue_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sblue tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "sblue_tunic"
+	tree_paths: ["items/clothing/uniforms/sblue_tunic"]
+sred_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "sred_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sred tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "sred_tunic"
+	tree_paths: ["items/clothing/uniforms/sred_tunic"]
+sred_tunic2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "sred_tunic2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sred tunic2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "sred_tunic2"
+	tree_paths: ["items/clothing/uniforms/sred_tunic2"]
+sblue_tunic2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "sblue_tunic2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sblue tunic2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "sblue_tunic2"
+	tree_paths: ["items/clothing/uniforms/sblue_tunic2"]
+swhite_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "swhite_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "swhite tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "swhite_tunic"
+	tree_paths: ["items/clothing/uniforms/swhite_tunic"]
+spartan:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "spartan"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "spartan"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "spartan"
+	tree_paths: ["items/clothing/uniforms/spartan"]
+white_tunic_long:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "white_tunic_long"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "white tunic long"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "white_tunic_long"
+	tree_paths: ["items/clothing/uniforms/white_tunic_long"]
+arabw_robe:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "arabw_robe"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arabw robe"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "arabw_robe"
+	tree_paths: ["items/clothing/uniforms/arabw_robe"]
+arabw_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "arabw_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arabw tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "arabw_tunic"
+	tree_paths: ["items/clothing/uniforms/arabw_tunic"]
+arab1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "arab1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arab1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "arab1"
+	tree_paths: ["items/clothing/uniforms/arab1"]
+arab2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "arab2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arab2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "arab2"
+	tree_paths: ["items/clothing/uniforms/arab2"]
+arab3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "arab3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arab3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "arab3"
+	tree_paths: ["items/clothing/uniforms/arab3"]
+hauberk:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "hauberk"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hauberk"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "hauberk"
+	tree_paths: ["items/clothing/uniforms/hauberk"]
+crusader1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "crusader1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "crusader1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "crusader1"
+	tree_paths: ["items/clothing/uniforms/crusader1"]
+crusader2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "crusader2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "crusader2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "crusader2"
+	tree_paths: ["items/clothing/uniforms/crusader2"]
+toga:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "toga"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "toga"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "toga"
+	tree_paths: ["items/clothing/uniforms/toga"]
+toga2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "toga2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "toga2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "toga2"
+	tree_paths: ["items/clothing/uniforms/toga2"]
+celtic_blue:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "celtic_blue"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "celtic blue"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "celtic_blue"
+	tree_paths: ["items/clothing/uniforms/celtic_blue"]
+celtic_red:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "celtic_red"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "celtic red"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "celtic_red"
+	tree_paths: ["items/clothing/uniforms/celtic_red"]
+celtic_green:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "celtic_green"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "celtic green"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "celtic_green"
+	tree_paths: ["items/clothing/uniforms/celtic_green"]
+celtic_short_braccae:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "celtic_short_braccae"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "celtic short braccae"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "celtic_short_braccae"
+	tree_paths: ["items/clothing/uniforms/celtic_short_braccae"]
+celtic_long_braccae:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "celtic_long_braccae"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "celtic long braccae"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "celtic_long_braccae"
+	tree_paths: ["items/clothing/uniforms/celtic_long_braccae"]
+chad:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "chad"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chad"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "chad"
+	tree_paths: ["items/clothing/uniforms/chad"]
+loincloth1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "loincloth1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "loincloth1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "loincloth1"
+	tree_paths: ["items/clothing/uniforms/loincloth1"]
+leatherloincloth1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "leatherloincloth1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leatherloincloth1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "leatherloincloth1"
+	tree_paths: ["items/clothing/uniforms/leatherloincloth1"]
+leatherloincloth2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "leatherloincloth2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leatherloincloth2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "leatherloincloth2"
+	tree_paths: ["items/clothing/uniforms/leatherloincloth2"]
+leatherloincloth3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "leatherloincloth3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leatherloincloth3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "leatherloincloth3"
+	tree_paths: ["items/clothing/uniforms/leatherloincloth3"]
+leatherloincloth4:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "leatherloincloth4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leatherloincloth4"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "leatherloincloth4"
+	tree_paths: ["items/clothing/uniforms/leatherloincloth4"]
+customtoga:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customtoga"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customtoga"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customtoga"
+	tree_paths: ["items/clothing/uniforms/customtoga"]
+customroman:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customroman"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customroman"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customroman"
+	tree_paths: ["items/clothing/uniforms/customroman"]
+customspartan:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customspartan"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customspartan"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customspartan"
+	tree_paths: ["items/clothing/uniforms/customspartan"]
+customshendyt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customshendyt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customshendyt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customshendyt"
+	tree_paths: ["items/clothing/uniforms/customshendyt"]
+customceltic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customceltic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customceltic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customceltic"
+	tree_paths: ["items/clothing/uniforms/customceltic"]
+pharaoh:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pharaoh"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pharaoh"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pharaoh"
+	tree_paths: ["items/clothing/uniforms/pharaoh"]
+customtunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customtunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customtunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customtunic"
+	tree_paths: ["items/clothing/uniforms/customtunic"]
+customarabictunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customarabictunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customarabictunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customarabictunic"
+	tree_paths: ["items/clothing/uniforms/customarabictunic"]
+halfhuipil:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "halfhuipil"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "halfhuipil"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "halfhuipil"
+	tree_paths: ["items/clothing/uniforms/halfhuipil"]
+huipil:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "huipil"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "huipil"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "huipil"
+	tree_paths: ["items/clothing/uniforms/huipil"]
+rusuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "rusuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "rusuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "rusuni"
+	tree_paths: ["items/clothing/uniforms/rusuni"]
+japuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "japuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "japuni"
+	tree_paths: ["items/clothing/uniforms/japuni"]
+japoffuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "japoffuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japoffuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "japoffuni"
+	tree_paths: ["items/clothing/uniforms/japoffuni"]
+mayan_loincloth:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "mayan_loincloth"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mayan loincloth"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "mayan_loincloth"
+	tree_paths: ["items/clothing/uniforms/mayan_loincloth"]
+greatshendyt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "greatshendyt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "greatshendyt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "greatshendyt"
+	tree_paths: ["items/clothing/uniforms/greatshendyt"]
+napoleonic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "napoleonic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "napoleonic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "napoleonic"
+	tree_paths: ["items/clothing/uniforms/napoleonic"]
+napoleonic_spanish:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "napoleonic_spanish"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "napoleonic spanish"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "napoleonic_spanish"
+	tree_paths: ["items/clothing/uniforms/napoleonic_spanish"]
+napolenic_officer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "napolenic_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "napolenic officer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "napolenic_officer"
+	tree_paths: ["items/clothing/uniforms/napolenic_officer"]
+pioneer_outfit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pioneer_outfit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pioneer outfit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pioneer_outfit"
+	tree_paths: ["items/clothing/uniforms/pioneer_outfit"]
+rancher_outfit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "rancher_outfit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "rancher outfit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "rancher_outfit"
+	tree_paths: ["items/clothing/uniforms/rancher_outfit"]
+rancher_trousers:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "rancher_trousers"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "rancher trousers"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "rancher_trousers"
+	tree_paths: ["items/clothing/uniforms/rancher_trousers"]
+pioneer_trousers:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pioneer_trousers"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pioneer trousers"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pioneer_trousers"
+	tree_paths: ["items/clothing/uniforms/pioneer_trousers"]
+cowboy_outfit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "cowboy_outfit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cowboy outfit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "cowboy_outfit"
+	tree_paths: ["items/clothing/uniforms/cowboy_outfit"]
+checkered_outfit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "checkered_outfit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "checkered outfit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "checkered_outfit"
+	tree_paths: ["items/clothing/uniforms/checkered_outfit"]
+worker_outfit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "worker_outfit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "worker outfit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "worker_outfit"
+	tree_paths: ["items/clothing/uniforms/worker_outfit"]
+worker_trousers:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "worker_trousers"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "worker trousers"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "worker_trousers"
+	tree_paths: ["items/clothing/uniforms/worker_trousers"]
+japoffunirolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "japoffunirolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japoffunirolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "japoffunirolled"
+	tree_paths: ["items/clothing/uniforms/japoffunirolled"]
+japunirolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "japunirolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japunirolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "japunirolled"
+	tree_paths: ["items/clothing/uniforms/japunirolled"]
+rusunirolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "rusunirolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "rusunirolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "rusunirolled"
+	tree_paths: ["items/clothing/uniforms/rusunirolled"]
+renaissance:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "renaissance"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "renaissance"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "renaissance"
+	tree_paths: ["items/clothing/uniforms/renaissance"]
+union_uniform:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "union_uniform"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "union uniform"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "union_uniform"
+	tree_paths: ["items/clothing/uniforms/union_uniform"]
+bartender:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "bartender"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bartender"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "bartender"
+	tree_paths: ["items/clothing/uniforms/bartender"]
+confederate_uniform1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "confederate_uniform1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "confederate uniform1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "confederate_uniform1"
+	tree_paths: ["items/clothing/uniforms/confederate_uniform1"]
+confederate_uniform2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "confederate_uniform2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "confederate uniform2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "confederate_uniform2"
+	tree_paths: ["items/clothing/uniforms/confederate_uniform2"]
+farmer_outfit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "farmer_outfit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "farmer outfit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "farmer_outfit"
+	tree_paths: ["items/clothing/uniforms/farmer_outfit"]
+mechanic_outfit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "mechanic_outfit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mechanic outfit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "mechanic_outfit"
+	tree_paths: ["items/clothing/uniforms/mechanic_outfit"]
+modern1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern1"
+	tree_paths: ["items/clothing/uniforms/modern1"]
+modern2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern2"
+	tree_paths: ["items/clothing/uniforms/modern2"]
+modern3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern3"
+	tree_paths: ["items/clothing/uniforms/modern3"]
+modern4:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern4"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern4"
+	tree_paths: ["items/clothing/uniforms/modern4"]
+empty:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "empty"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "empty"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "empty"
+	tree_paths: ["items/clothing/uniforms/empty"]
+pontifical:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pontifical"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pontifical"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pontifical"
+	tree_paths: ["items/clothing/uniforms/pontifical"]
+ww2_german:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_german"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 german"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_german"
+	tree_paths: ["items/clothing/uniforms/ww2_german"]
+modern_afghanka:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern_afghanka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern afghanka"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern_afghanka"
+	tree_paths: ["items/clothing/uniforms/modern_afghanka"]
+modern_camo:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern_camo"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern camo"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern_camo"
+	tree_paths: ["items/clothing/uniforms/modern_camo"]
+berezka:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "berezka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "berezka"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "berezka"
+	tree_paths: ["items/clothing/uniforms/berezka"]
+ww2_soviet:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_soviet"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 soviet"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_soviet"
+	tree_paths: ["items/clothing/uniforms/ww2_soviet"]
+modern_summer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern_summer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern summer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern_summer"
+	tree_paths: ["items/clothing/uniforms/modern_summer"]
+modern_camo_custom_l1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern_camo_custom_l1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern camo custom l1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern_camo_custom_l1"
+	tree_paths: ["items/clothing/uniforms/modern_camo_custom_l1"]
+modern_camo_custom_l2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern_camo_custom_l2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern camo custom l2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern_camo_custom_l2"
+	tree_paths: ["items/clothing/uniforms/modern_camo_custom_l2"]
+modern_camo_custom_l3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern_camo_custom_l3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern camo custom l3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern_camo_custom_l3"
+	tree_paths: ["items/clothing/uniforms/modern_camo_custom_l3"]
+modern_camo_custom_objs:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern_camo_custom_objs"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern camo custom objs"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern_camo_custom_objs"
+	tree_paths: ["items/clothing/uniforms/modern_camo_custom_objs"]
+modern_camo_custom:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern_camo_custom"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern camo custom"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern_camo_custom"
+	tree_paths: ["items/clothing/uniforms/modern_camo_custom"]
+modern_winter:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern_winter"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern winter"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern_winter"
+	tree_paths: ["items/clothing/uniforms/modern_winter"]
+flamengo:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "flamengo"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "flamengo"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "flamengo"
+	tree_paths: ["items/clothing/uniforms/flamengo"]
+wise_tutor:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "wise_tutor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "wise tutor"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "wise_tutor"
+	tree_paths: ["items/clothing/uniforms/wise_tutor"]
+arrogant_student:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "arrogant_student"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arrogant student"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "arrogant_student"
+	tree_paths: ["items/clothing/uniforms/arrogant_student"]
+artisan1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "artisan1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "artisan1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "artisan1"
+	tree_paths: ["items/clothing/uniforms/artisan1"]
+artisan2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "artisan2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "artisan2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "artisan2"
+	tree_paths: ["items/clothing/uniforms/artisan2"]
+artisan3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "artisan3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "artisan3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "artisan3"
+	tree_paths: ["items/clothing/uniforms/artisan3"]
+green_hanfu:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "green_hanfu"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "green hanfu"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "green_hanfu"
+	tree_paths: ["items/clothing/uniforms/green_hanfu"]
+light_hanfu:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "light_hanfu"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "light hanfu"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "light_hanfu"
+	tree_paths: ["items/clothing/uniforms/light_hanfu"]
+dark_hanfu:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dark_hanfu"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dark hanfu"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dark_hanfu"
+	tree_paths: ["items/clothing/uniforms/dark_hanfu"]
+customdress:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customdress"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customdress"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customdress"
+	tree_paths: ["items/clothing/uniforms/customdress"]
+customdress_top:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customdress_top"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customdress top"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customdress_top"
+	tree_paths: ["items/clothing/uniforms/customdress_top"]
+customdress_under:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customdress_under"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customdress under"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customdress_under"
+	tree_paths: ["items/clothing/uniforms/customdress_under"]
+customdress_over:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customdress_over"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customdress over"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customdress_over"
+	tree_paths: ["items/clothing/uniforms/customdress_over"]
+customren:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customren"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customren"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customren"
+	tree_paths: ["items/clothing/uniforms/customren"]
+customren_top:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customren_top"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customren top"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customren_top"
+	tree_paths: ["items/clothing/uniforms/customren_top"]
+customren_lining:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customren_lining"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customren lining"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customren_lining"
+	tree_paths: ["items/clothing/uniforms/customren_lining"]
+dressr:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dressr"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dressr"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dressr"
+	tree_paths: ["items/clothing/uniforms/dressr"]
+green_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "green_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "green tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "green_tunic"
+	tree_paths: ["items/clothing/uniforms/green_tunic"]
+dressg:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dressg"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dressg"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dressg"
+	tree_paths: ["items/clothing/uniforms/dressg"]
+dressr:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dressr"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dressr"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dressr"
+	tree_paths: ["items/clothing/uniforms/dressr"]
+ww2_japoffuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_japoffuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japoffuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_japoffuni"
+	tree_paths: ["items/clothing/uniforms/ww2_japoffuni"]
+ww2_japoffuni_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_japoffuni_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japoffuni rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_japoffuni_rolled"
+	tree_paths: ["items/clothing/uniforms/ww2_japoffuni_rolled"]
+custombuttonup_lines:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custombuttonup_lines"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custombuttonup lines"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custombuttonup_lines"
+	tree_paths: ["items/clothing/uniforms/custombuttonup_lines"]
+custombuttonup_bottom:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custombuttonup_bottom"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custombuttonup bottom"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custombuttonup_bottom"
+	tree_paths: ["items/clothing/uniforms/custombuttonup_bottom"]
+custombuttonup_full:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custombuttonup_full"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custombuttonup full"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custombuttonup_full"
+	tree_paths: ["items/clothing/uniforms/custombuttonup_full"]
+ww2_japuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_japuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_japuni"
+	tree_paths: ["items/clothing/uniforms/ww2_japuni"]
+ww2_japuni_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_japuni_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japuni rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_japuni_rolled"
+	tree_paths: ["items/clothing/uniforms/ww2_japuni_rolled"]
+ww1_german:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww1_german"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww1 german"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww1_german"
+	tree_paths: ["items/clothing/uniforms/ww1_german"]
+ww1_british:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww1_british"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww1 british"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww1_british"
+	tree_paths: ["items/clothing/uniforms/ww1_british"]
+ww1_french:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww1_french"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww1 french"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww1_french"
+	tree_paths: ["items/clothing/uniforms/ww1_french"]
+vietcong:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "vietcong"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "vietcong"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "vietcong"
+	tree_paths: ["items/clothing/uniforms/vietcong"]
+us_camo:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_camo"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us camo"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_camo"
+	tree_paths: ["items/clothing/uniforms/us_camo"]
+us_greentrousers:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_greentrousers"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us greentrousers"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_greentrousers"
+	tree_paths: ["items/clothing/uniforms/us_greentrousers"]
+us_lightuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_lightuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us lightuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_lightuni"
+	tree_paths: ["items/clothing/uniforms/us_lightuni"]
+us_camo_tigerstripes:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_camo_tigerstripes"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us camo tigerstripes"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_camo_tigerstripes"
+	tree_paths: ["items/clothing/uniforms/us_camo_tigerstripes"]
+us_uni_ww2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_uni_ww2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us uni ww2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_uni_ww2"
+	tree_paths: ["items/clothing/uniforms/us_uni_ww2"]
+us_lightuni2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_lightuni2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us lightuni2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_lightuni2"
+	tree_paths: ["items/clothing/uniforms/us_lightuni2"]
+us_uni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_uni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us uni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_uni"
+	tree_paths: ["items/clothing/uniforms/us_uni"]
+us_uni_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_uni_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us uni rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_uni_rolled"
+	tree_paths: ["items/clothing/uniforms/us_uni_rolled"]
+us_camo_woodland:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_camo_woodland"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us camo woodland"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_camo_woodland"
+	tree_paths: ["items/clothing/uniforms/us_camo_woodland"]
+us_camo_ocp:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_camo_ocp"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us camo ocp"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_camo_ocp"
+	tree_paths: ["items/clothing/uniforms/us_camo_ocp"]
+us_camo_ucp:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_camo_ucp"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us camo ucp"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_camo_ucp"
+	tree_paths: ["items/clothing/uniforms/us_camo_ucp"]
+insurgent_black:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "insurgent_black"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "insurgent black"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "insurgent_black"
+	tree_paths: ["items/clothing/uniforms/insurgent_black"]
+us_lightuni_modern:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_lightuni_modern"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us lightuni modern"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_lightuni_modern"
+	tree_paths: ["items/clothing/uniforms/us_lightuni_modern"]
+insurgent_sand:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "insurgent_sand"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "insurgent sand"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "insurgent_sand"
+	tree_paths: ["items/clothing/uniforms/insurgent_sand"]
+us_camo_dcu:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_camo_dcu"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us camo dcu"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_camo_dcu"
+	tree_paths: ["items/clothing/uniforms/us_camo_dcu"]
+insurgent_sand_green:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "insurgent_sand_green"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "insurgent sand green"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "insurgent_sand_green"
+	tree_paths: ["items/clothing/uniforms/insurgent_sand_green"]
+insurgent_sand_woodland:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "insurgent_sand_woodland"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "insurgent sand woodland"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "insurgent_sand_woodland"
+	tree_paths: ["items/clothing/uniforms/insurgent_sand_woodland"]
+insurgent_sand_dcu:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "insurgent_sand_dcu"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "insurgent sand dcu"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "insurgent_sand_dcu"
+	tree_paths: ["items/clothing/uniforms/insurgent_sand_dcu"]
+insurgent_leader:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "insurgent_leader"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "insurgent leader"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "insurgent_leader"
+	tree_paths: ["items/clothing/uniforms/insurgent_leader"]
+geruni_ww2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "geruni_ww2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "geruni ww2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "geruni_ww2"
+	tree_paths: ["items/clothing/uniforms/geruni_ww2"]
+geruni_ww2_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "geruni_ww2_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "geruni ww2 rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "geruni_ww2_rolled"
+	tree_paths: ["items/clothing/uniforms/geruni_ww2_rolled"]
+gertanker:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "gertanker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gertanker"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "gertanker"
+	tree_paths: ["items/clothing/uniforms/gertanker"]
+geruni_officer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "geruni_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "geruni officer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "geruni_officer"
+	tree_paths: ["items/clothing/uniforms/geruni_officer"]
+geruni_doctor:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "geruni_doctor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "geruni doctor"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "geruni_doctor"
+	tree_paths: ["items/clothing/uniforms/geruni_doctor"]
+geruni_mp:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "geruni_mp"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "geruni mp"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "geruni_mp"
+	tree_paths: ["items/clothing/uniforms/geruni_mp"]
+japuni_med:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "japuni_med"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japuni med"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "japuni_med"
+	tree_paths: ["items/clothing/uniforms/japuni_med"]
+japuni_med_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "japuni_med_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japuni med rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "japuni_med_rolled"
+	tree_paths: ["items/clothing/uniforms/japuni_med_rolled"]
+japuni_mp:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "japuni_mp"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japuni mp"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "japuni_mp"
+	tree_paths: ["items/clothing/uniforms/japuni_mp"]
+afgeruni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "afgeruni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "afgeruni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "afgeruni"
+	tree_paths: ["items/clothing/uniforms/afgeruni"]
+afgeruni_short:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "afgeruni_short"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "afgeruni short"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "afgeruni_short"
+	tree_paths: ["items/clothing/uniforms/afgeruni_short"]
+afgeruni_officer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "afgeruni_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "afgeruni officer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "afgeruni_officer"
+	tree_paths: ["items/clothing/uniforms/afgeruni_officer"]
+afgeruni_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "afgeruni_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "afgeruni rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "afgeruni_rolled"
+	tree_paths: ["items/clothing/uniforms/afgeruni_rolled"]
+ssuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ssuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ssuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ssuni"
+	tree_paths: ["items/clothing/uniforms/ssuni"]
+ssuni_officer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ssuni_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ssuni officer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ssuni_officer"
+	tree_paths: ["items/clothing/uniforms/ssuni_officer"]
+sovtanker:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "sovtanker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovtanker"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "sovtanker"
+	tree_paths: ["items/clothing/uniforms/sovtanker"]
+nkvd_uni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nkvd_uni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nkvd uni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nkvd_uni"
+	tree_paths: ["items/clothing/uniforms/nkvd_uni"]
+sovuni_officer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "sovuni_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovuni officer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "sovuni_officer"
+	tree_paths: ["items/clothing/uniforms/sovuni_officer"]
+japtanker:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "japtanker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japtanker"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "japtanker"
+	tree_paths: ["items/clothing/uniforms/japtanker"]
+usuni_mp:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "usuni_mp"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "usuni mp"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "usuni_mp"
+	tree_paths: ["items/clothing/uniforms/usuni_mp"]
+usuni_cap:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "usuni_cap"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "usuni cap"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "usuni_cap"
+	tree_paths: ["items/clothing/uniforms/usuni_cap"]
+usuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "usuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "usuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "usuni"
+	tree_paths: ["items/clothing/uniforms/usuni"]
+sovuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "sovuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "sovuni"
+	tree_paths: ["items/clothing/uniforms/sovuni"]
+ssuni_camo:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ssuni_camo"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ssuni camo"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ssuni_camo"
+	tree_paths: ["items/clothing/uniforms/ssuni_camo"]
+ww2_civuni1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_civuni1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 civuni1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_civuni1"
+	tree_paths: ["items/clothing/uniforms/ww2_civuni1"]
+ww2_civuni2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_civuni2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 civuni2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_civuni2"
+	tree_paths: ["items/clothing/uniforms/ww2_civuni2"]
+hj_uni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "hj_uni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "hj uni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "hj_uni"
+	tree_paths: ["items/clothing/uniforms/hj_uni"]
+idf_olive:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "idf_olive"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "idf olive"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "idf_olive"
+	tree_paths: ["items/clothing/uniforms/idf_olive"]
+tribalrobe:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "tribalrobe"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tribalrobe"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "tribalrobe"
+	tree_paths: ["items/clothing/uniforms/tribalrobe"]
+tribalrobe_decoration:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "tribalrobe_decoration"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tribalrobe decoration"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "tribalrobe_decoration"
+	tree_paths: ["items/clothing/uniforms/tribalrobe_decoration"]
+tribalrobe_robe:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "tribalrobe_robe"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tribalrobe robe"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "tribalrobe_robe"
+	tree_paths: ["items/clothing/uniforms/tribalrobe_robe"]
+tribalrobe_robebelt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "tribalrobe_robebelt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tribalrobe robebelt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "tribalrobe_robebelt"
+	tree_paths: ["items/clothing/uniforms/tribalrobe_robebelt"]
+us_camo_woodland_hez:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_camo_woodland_hez"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us camo woodland hez"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_camo_woodland_hez"
+	tree_paths: ["items/clothing/uniforms/us_camo_woodland_hez"]
+us_camo_woodland_hez_officer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_camo_woodland_hez_officer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us camo woodland hez officer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_camo_woodland_hez_officer"
+	tree_paths: ["items/clothing/uniforms/us_camo_woodland_hez_officer"]
+usuni2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "usuni2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "usuni2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "usuni2"
+	tree_paths: ["items/clothing/uniforms/usuni2"]
+us_shirtless:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_shirtless"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us shirtless"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_shirtless"
+	tree_paths: ["items/clothing/uniforms/us_shirtless"]
+ww1_russian:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww1_russian"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww1 russian"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww1_russian"
+	tree_paths: ["items/clothing/uniforms/ww1_russian"]
+ww1_russian2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww1_russian2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww1 russian2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww1_russian2"
+	tree_paths: ["items/clothing/uniforms/ww1_russian2"]
+ww1_russian_o:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww1_russian_o"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww1 russian o"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww1_russian_o"
+	tree_paths: ["items/clothing/uniforms/ww1_russian_o"]
+kuban_cossak:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "kuban_cossak"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "kuban cossak"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "kuban_cossak"
+	tree_paths: ["items/clothing/uniforms/kuban_cossak"]
+ac_shirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ac_shirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ac shirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ac_shirt"
+	tree_paths: ["items/clothing/uniforms/ac_shirt"]
+custom_pontifical:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_pontifical"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom pontifical"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_pontifical"
+	tree_paths: ["items/clothing/uniforms/custom_pontifical"]
+custompyjamas:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custompyjamas"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custompyjamas"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custompyjamas"
+	tree_paths: ["items/clothing/uniforms/custompyjamas"]
+custompont_mclines:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custompont_mclines"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custompont mclines"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custompont_mclines"
+	tree_paths: ["items/clothing/uniforms/custompont_mclines"]
+custompont_decore:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custompont_decore"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custompont decore"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custompont_decore"
+	tree_paths: ["items/clothing/uniforms/custompont_decore"]
+custompont_handdecore:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custompont_handdecore"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custompont handdecore"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custompont_handdecore"
+	tree_paths: ["items/clothing/uniforms/custompont_handdecore"]
+custompont_leggings:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custompont_leggings"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custompont leggings"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custompont_leggings"
+	tree_paths: ["items/clothing/uniforms/custompont_leggings"]
+custompyjamas_stripes:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custompyjamas_stripes"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custompyjamas stripes"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custompyjamas_stripes"
+	tree_paths: ["items/clothing/uniforms/custompyjamas_stripes"]
+custompyjamas_base:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custompyjamas_base"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custompyjamas base"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custompyjamas_base"
+	tree_paths: ["items/clothing/uniforms/custompyjamas_base"]
+ww2_china:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_china"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 china"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_china"
+	tree_paths: ["items/clothing/uniforms/ww2_china"]
+ww2_china_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_china_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 china rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_china_rolled"
+	tree_paths: ["items/clothing/uniforms/ww2_china_rolled"]
+ww2_china_off:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_china_off"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 china off"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_china_off"
+	tree_paths: ["items/clothing/uniforms/ww2_china_off"]
+ww2_china_off_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_china_off_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 china off rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_china_off_rolled"
+	tree_paths: ["items/clothing/uniforms/ww2_china_off_rolled"]
+ww2_china2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_china2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 china2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_china2"
+	tree_paths: ["items/clothing/uniforms/ww2_china2"]
+ww2_china2_off:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_china2_off"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 china2 off"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_china2_off"
+	tree_paths: ["items/clothing/uniforms/ww2_china2_off"]
+ww2_china2_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_china2_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 china2 rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_china2_rolled"
+	tree_paths: ["items/clothing/uniforms/ww2_china2_rolled"]
+ww2_china2_off_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_china2_off_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 china2 off rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_china2_off_rolled"
+	tree_paths: ["items/clothing/uniforms/ww2_china2_off_rolled"]
+guardiacivil:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "guardiacivil"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "guardiacivil"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "guardiacivil"
+	tree_paths: ["items/clothing/uniforms/guardiacivil"]
+oldmansuit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "oldmansuit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "oldmansuit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "oldmansuit"
+	tree_paths: ["items/clothing/uniforms/oldmansuit"]
+scrubsgreen:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "scrubsgreen"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "scrubsgreen"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "scrubsgreen"
+	tree_paths: ["items/clothing/uniforms/scrubsgreen"]
+pride:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pride"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pride"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pride"
+	tree_paths: ["items/clothing/uniforms/pride"]
+janitor:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "janitor"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "janitor"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "janitor"
+	tree_paths: ["items/clothing/uniforms/janitor"]
+tactiblack:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "tactiblack"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tactiblack"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "tactiblack"
+	tree_paths: ["items/clothing/uniforms/tactiblack"]
+towel:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "towel"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "towel"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "towel"
+	tree_paths: ["items/clothing/uniforms/towel"]
+customtshirt_jeans:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customtshirt_jeans"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customtshirt jeans"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customtshirt_jeans"
+	tree_paths: ["items/clothing/uniforms/customtshirt_jeans"]
+customtshirt_shirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customtshirt_shirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customtshirt shirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customtshirt_shirt"
+	tree_paths: ["items/clothing/uniforms/customtshirt_shirt"]
+customtshirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customtshirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customtshirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customtshirt"
+	tree_paths: ["items/clothing/uniforms/customtshirt"]
+breastplate_mob:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "breastplate_mob"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "breastplate mob"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "breastplate_mob"
+	tree_paths: ["items/clothing/uniforms/breastplate_mob"]
+breastplate_item:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "breastplate_item"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "breastplate item"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "breastplate_item"
+	tree_paths: ["items/clothing/uniforms/breastplate_item"]
+gulagprisoner:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "gulagprisoner"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gulagprisoner"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "gulagprisoner"
+	tree_paths: ["items/clothing/uniforms/gulagprisoner"]
+shorts_blue:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "shorts_blue"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "shorts blue"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "shorts_blue"
+	tree_paths: ["items/clothing/uniforms/shorts_blue"]
+shorts_red:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "shorts_red"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "shorts red"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "shorts_red"
+	tree_paths: ["items/clothing/uniforms/shorts_red"]
+modern7:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern7"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern7"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern7"
+	tree_paths: ["items/clothing/uniforms/modern7"]
+clown:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "clown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "clown"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "clown"
+	tree_paths: ["items/clothing/uniforms/clown"]
+jester:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "jester"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jester"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "jester"
+	tree_paths: ["items/clothing/uniforms/jester"]
+modern8:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "modern8"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "modern8"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "modern8"
+	tree_paths: ["items/clothing/uniforms/modern8"]
+peakyblinder:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "peakyblinder"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "peakyblinder"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "peakyblinder"
+	tree_paths: ["items/clothing/uniforms/peakyblinder"]
+oldmansuit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "oldmansuit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "oldmansuit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "oldmansuit"
+	tree_paths: ["items/clothing/uniforms/oldmansuit"]
+oldfirefighter:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "oldfirefighter"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "oldfirefighter"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "oldfirefighter"
+	tree_paths: ["items/clothing/uniforms/oldfirefighter"]
+black_tango_alt_s:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "black_tango_alt_s"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black tango alt s"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "black_tango_alt_s"
+	tree_paths: ["items/clothing/uniforms/black_tango_alt_s"]
+cozyoldy:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "cozyoldy"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cozyoldy"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "cozyoldy"
+	tree_paths: ["items/clothing/uniforms/cozyoldy"]
+trenchsuit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "trenchsuit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "trenchsuit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "trenchsuit"
+	tree_paths: ["items/clothing/uniforms/trenchsuit"]
+geruni_ww2_winter:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "geruni_ww2_winter"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "geruni ww2 winter"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "geruni_ww2_winter"
+	tree_paths: ["items/clothing/uniforms/geruni_ww2_winter"]
+sovuni_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "sovuni_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sovuni rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "sovuni_rolled"
+	tree_paths: ["items/clothing/uniforms/sovuni_rolled"]
+geruni_ww2_winter_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "geruni_ww2_winter_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "geruni ww2 winter rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "geruni_ww2_winter_rolled"
+	tree_paths: ["items/clothing/uniforms/geruni_ww2_winter_rolled"]
+baily:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "baily"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "baily"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "baily"
+	tree_paths: ["items/clothing/uniforms/baily"]
+haori2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "haori2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "haori2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "haori2"
+	tree_paths: ["items/clothing/uniforms/haori2"]
+haori:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "haori"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "haori"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "haori"
+	tree_paths: ["items/clothing/uniforms/haori"]
+haori3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "haori3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "haori3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "haori3"
+	tree_paths: ["items/clothing/uniforms/haori3"]
+haori_samurai:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "haori_samurai"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "haori samurai"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "haori_samurai"
+	tree_paths: ["items/clothing/uniforms/haori_samurai"]
+haori_samurai2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "haori_samurai2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "haori samurai2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "haori_samurai2"
+	tree_paths: ["items/clothing/uniforms/haori_samurai2"]
+haori_samurai3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "haori_samurai3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "haori samurai3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "haori_samurai3"
+	tree_paths: ["items/clothing/uniforms/haori_samurai3"]
+haori_custom:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "haori_custom"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "haori custom"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "haori_custom"
+	tree_paths: ["items/clothing/uniforms/haori_custom"]
+crinoline_dress_dress:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "crinoline_dress_dress"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "crinoline dress dress"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "crinoline_dress_dress"
+	tree_paths: ["items/clothing/uniforms/crinoline_dress_dress"]
+crinoline_dress_under:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "crinoline_dress_under"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "crinoline dress under"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "crinoline_dress_under"
+	tree_paths: ["items/clothing/uniforms/crinoline_dress_under"]
+crinoline_dress_lining:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "crinoline_dress_lining"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "crinoline dress lining"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "crinoline_dress_lining"
+	tree_paths: ["items/clothing/uniforms/crinoline_dress_lining"]
+crinoline_dress:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "crinoline_dress"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "crinoline dress"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "crinoline_dress"
+	tree_paths: ["items/clothing/uniforms/crinoline_dress"]
+baycona:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "baycona"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "baycona"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "baycona"
+	tree_paths: ["items/clothing/uniforms/baycona"]
+leaves_skirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "leaves_skirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leaves skirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "leaves_skirt"
+	tree_paths: ["items/clothing/uniforms/leaves_skirt"]
+leaves_skirt_long:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "leaves_skirt_long"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leaves skirt long"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "leaves_skirt_long"
+	tree_paths: ["items/clothing/uniforms/leaves_skirt_long"]
+scavfit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "scavfit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "scavfit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "scavfit"
+	tree_paths: ["items/clothing/uniforms/scavfit"]
+wastelander:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "wastelander"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "wastelander"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "wastelander"
+	tree_paths: ["items/clothing/uniforms/wastelander"]
+tactical1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "tactical1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tactical1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "tactical1"
+	tree_paths: ["items/clothing/uniforms/tactical1"]
+milrus2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "milrus2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "milrus2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "milrus2"
+	tree_paths: ["items/clothing/uniforms/milrus2"]
+aztec_loincloth:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "aztec_loincloth"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "aztec loincloth"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "aztec_loincloth"
+	tree_paths: ["items/clothing/uniforms/aztec_loincloth"]
+us_navy:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "us_navy"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "us navy"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "us_navy"
+	tree_paths: ["items/clothing/uniforms/us_navy"]
+gorka:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "gorka"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gorka"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "gorka"
+	tree_paths: ["items/clothing/uniforms/gorka"]
+japuni_summer:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "japuni_summer"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japuni summer"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "japuni_summer"
+	tree_paths: ["items/clothing/uniforms/japuni_summer"]
+swat:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "swat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "swat"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "swat"
+	tree_paths: ["items/clothing/uniforms/swat"]
+bman:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "bman"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bman"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "bman"
+	tree_paths: ["items/clothing/uniforms/bman"]
+pmc:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "pmc"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "pmc"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "pmc"
+	tree_paths: ["items/clothing/uniforms/pmc"]
+engi:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "engi"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "engi"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "engi"
+	tree_paths: ["items/clothing/uniforms/engi"]
+mafia:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "mafia"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "mafia"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "mafia"
+	tree_paths: ["items/clothing/uniforms/mafia"]
+tacti:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "tacti"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tacti"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "tacti"
+	tree_paths: ["items/clothing/uniforms/tacti"]
+prisoner:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "prisoner"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "prisoner"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "prisoner"
+	tree_paths: ["items/clothing/uniforms/prisoner"]
+police:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "police"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "police"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "police"
+	tree_paths: ["items/clothing/uniforms/police"]
+combat:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "combat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "combat"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "combat"
+	tree_paths: ["items/clothing/uniforms/combat"]
+beggar_clothing:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "beggar_clothing"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "beggar clothing"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "beggar_clothing"
+	tree_paths: ["items/clothing/uniforms/beggar_clothing"]
+ainu_robe:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ainu_robe"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ainu robe"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ainu_robe"
+	tree_paths: ["items/clothing/uniforms/ainu_robe"]
+ainu_robe2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ainu_robe2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ainu robe2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ainu_robe2"
+	tree_paths: ["items/clothing/uniforms/ainu_robe2"]
+customuni:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customuni"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customuni"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customuni"
+	tree_paths: ["items/clothing/uniforms/customuni"]
+customuni_shirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customuni_shirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customuni shirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customuni_shirt"
+	tree_paths: ["items/clothing/uniforms/customuni_shirt"]
+customuni_buttons:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customuni_buttons"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customuni buttons"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customuni_buttons"
+	tree_paths: ["items/clothing/uniforms/customuni_buttons"]
+customuni_belt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customuni_belt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customuni belt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customuni_belt"
+	tree_paths: ["items/clothing/uniforms/customuni_belt"]
+customuni_buckle:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customuni_buckle"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customuni buckle"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customuni_buckle"
+	tree_paths: ["items/clothing/uniforms/customuni_buckle"]
+customuni_pants:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "customuni_pants"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "customuni pants"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "customuni_pants"
+	tree_paths: ["items/clothing/uniforms/customuni_pants"]
+assyrian:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "assyrian"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "assyrian"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "assyrian"
+	tree_paths: ["items/clothing/uniforms/assyrian"]
+nightingale:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nightingale"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nightingale"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nightingale"
+	tree_paths: ["items/clothing/uniforms/nightingale"]
+black_tango:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "black_tango"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black tango"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "black_tango"
+	tree_paths: ["items/clothing/uniforms/black_tango"]
+red_evening_gown:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "red_evening_gown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "red evening gown"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "red_evening_gown"
+	tree_paths: ["items/clothing/uniforms/red_evening_gown"]
+nap_french_army:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nap_french_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap french army"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nap_french_army"
+	tree_paths: ["items/clothing/uniforms/nap_french_army"]
+nap_british_army:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nap_british_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap british army"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nap_british_army"
+	tree_paths: ["items/clothing/uniforms/nap_british_army"]
+blackwatch:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "blackwatch"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "blackwatch"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "blackwatch"
+	tree_paths: ["items/clothing/uniforms/blackwatch"]
+dinner_suit:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "dinner_suit"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "dinner suit"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "dinner_suit"
+	tree_paths: ["items/clothing/uniforms/dinner_suit"]
+nap_jaegers:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nap_jaegers"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap jaegers"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nap_jaegers"
+	tree_paths: ["items/clothing/uniforms/nap_jaegers"]
+nap_wip:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nap_wip"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap wip"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nap_wip"
+	tree_paths: ["items/clothing/uniforms/nap_wip"]
+walloon_guard:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "walloon_guard"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "walloon guard"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "walloon_guard"
+	tree_paths: ["items/clothing/uniforms/walloon_guard"]
+nap_russian_army:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nap_russian_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap russian army"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nap_russian_army"
+	tree_paths: ["items/clothing/uniforms/nap_russian_army"]
+nap_italian_army:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nap_italian_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap italian army"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nap_italian_army"
+	tree_paths: ["items/clothing/uniforms/nap_italian_army"]
+alamo_cazadores:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "alamo_cazadores"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "alamo cazadores"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "alamo_cazadores"
+	tree_paths: ["items/clothing/uniforms/alamo_cazadores"]
+patriot:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "patriot"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "patriot"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "patriot"
+	tree_paths: ["items/clothing/uniforms/patriot"]
+nap_portuguese_army:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nap_portuguese_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap portuguese army"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nap_portuguese_army"
+	tree_paths: ["items/clothing/uniforms/nap_portuguese_army"]
+nap_prussian_army:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nap_prussian_army"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap prussian army"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nap_prussian_army"
+	tree_paths: ["items/clothing/uniforms/nap_prussian_army"]
+arthur_morgan:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "arthur_morgan"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arthur morgan"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "arthur_morgan"
+	tree_paths: ["items/clothing/uniforms/arthur_morgan"]
+nap_satsuma:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "nap_satsuma"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nap satsuma"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "nap_satsuma"
+	tree_paths: ["items/clothing/uniforms/nap_satsuma"]
+ww2_british_tropical:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_british_tropical"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british tropical"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_british_tropical"
+	tree_paths: ["items/clothing/uniforms/ww2_british_tropical"]
+ww2_british_tropical_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_british_tropical_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british tropical rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_british_tropical_rolled"
+	tree_paths: ["items/clothing/uniforms/ww2_british_tropical_rolled"]
+ww2_british_off_tropical:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_british_off_tropical"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british off tropical"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_british_off_tropical"
+	tree_paths: ["items/clothing/uniforms/ww2_british_off_tropical"]
+ww2_british_off_tropical_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_british_off_tropical_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 british off tropical rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_british_off_tropical_rolled"
+	tree_paths: ["items/clothing/uniforms/ww2_british_off_tropical_rolled"]
+emir_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "emir_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "emir tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "emir_tunic"
+	tree_paths: ["items/clothing/uniforms/emir_tunic"]
+localnlfuniform_v1:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "localnlfuniform_v1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "localnlfuniform v1"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "localnlfuniform_v1"
+	tree_paths: ["items/clothing/uniforms/localnlfuniform_v1"]
+localnlfuniform_v2:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "localnlfuniform_v2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "localnlfuniform v2"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "localnlfuniform_v2"
+	tree_paths: ["items/clothing/uniforms/localnlfuniform_v2"]
+localnlfuniform_v3:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "localnlfuniform_v3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "localnlfuniform v3"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "localnlfuniform_v3"
+	tree_paths: ["items/clothing/uniforms/localnlfuniform_v3"]
+localnlfuniform_v4:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "localnlfuniform_v4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "localnlfuniform v4"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "localnlfuniform_v4"
+	tree_paths: ["items/clothing/uniforms/localnlfuniform_v4"]
+localnlfuniform_v5:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "localnlfuniform_v5"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "localnlfuniform v5"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "localnlfuniform_v5"
+	tree_paths: ["items/clothing/uniforms/localnlfuniform_v5"]
+steppe_wool_tunic:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "steppe_wool_tunic"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "steppe wool tunic"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "steppe_wool_tunic"
+	tree_paths: ["items/clothing/uniforms/steppe_wool_tunic"]
+custom_strapbikini:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_strapbikini"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom strapbikini"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_strapbikini"
+	tree_paths: ["items/clothing/uniforms/custom_strapbikini"]
+custom_bandbikini:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_bandbikini"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom bandbikini"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_bandbikini"
+	tree_paths: ["items/clothing/uniforms/custom_bandbikini"]
+custom_swimtrunks:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_swimtrunks"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom swimtrunks"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_swimtrunks"
+	tree_paths: ["items/clothing/uniforms/custom_swimtrunks"]
+gator_pants:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "gator_pants"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gator pants"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "gator_pants"
+	tree_paths: ["items/clothing/uniforms/gator_pants"]
+lizard_pants:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "lizard_pants"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lizard pants"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "lizard_pants"
+	tree_paths: ["items/clothing/uniforms/lizard_pants"]
+bman_red:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "bman_red"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bman red"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "bman_red"
+	tree_paths: ["items/clothing/uniforms/bman_red"]
+bman_blue:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "bman_blue"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bman blue"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "bman_blue"
+	tree_paths: ["items/clothing/uniforms/bman_blue"]
+bman_green:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "bman_green"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bman green"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "bman_green"
+	tree_paths: ["items/clothing/uniforms/bman_green"]
+bman_yellow:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "bman_yellow"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "bman yellow"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "bman_yellow"
+	tree_paths: ["items/clothing/uniforms/bman_yellow"]
+doug_dimmadome:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "doug_dimmadome"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "doug dimmadome"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "doug_dimmadome"
+	tree_paths: ["items/clothing/uniforms/doug_dimmadome"]
+texas:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "texas"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "texas"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "texas"
+	tree_paths: ["items/clothing/uniforms/texas"]
+traffic_cop:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "traffic_cop"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "traffic cop"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "traffic_cop"
+	tree_paths: ["items/clothing/uniforms/traffic_cop"]
+constable:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "constable"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "constable"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "constable"
+	tree_paths: ["items/clothing/uniforms/constable"]
+gang_leader:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "gang_leader"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gang leader"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "gang_leader"
+	tree_paths: ["items/clothing/uniforms/gang_leader"]
+christian_priest:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "christian_priest"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "christian priest"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "christian_priest"
+	tree_paths: ["items/clothing/uniforms/christian_priest"]
+ustanker:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ustanker"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ustanker"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ustanker"
+	tree_paths: ["items/clothing/uniforms/ustanker"]
+korea_china:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "korea_china"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "korea china"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "korea_china"
+	tree_paths: ["items/clothing/uniforms/korea_china"]
+usuni_korea:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "usuni_korea"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "usuni korea"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "usuni_korea"
+	tree_paths: ["items/clothing/uniforms/usuni_korea"]
+ww2_japuni_snlf:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_japuni_snlf"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japuni snlf"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_japuni_snlf"
+	tree_paths: ["items/clothing/uniforms/ww2_japuni_snlf"]
+ww2_japuni_snlf_rolled:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "ww2_japuni_snlf_rolled"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ww2 japuni snlf rolled"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "ww2_japuni_snlf_rolled"
+	tree_paths: ["items/clothing/uniforms/ww2_japuni_snlf_rolled"]
+lederhosen:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "lederhosen"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lederhosen"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "lederhosen"
+	tree_paths: ["items/clothing/uniforms/lederhosen"]
+custom_col_pants:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_col_pants"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom col pants"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_col_pants"
+	tree_paths: ["items/clothing/uniforms/custom_col_pants"]
+custom_col_shirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_col_shirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom col shirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_col_shirt"
+	tree_paths: ["items/clothing/uniforms/custom_col_shirt"]
+custom_col_full:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_col_full"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom col full"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_col_full"
+	tree_paths: ["items/clothing/uniforms/custom_col_full"]
+custom_modshort_full:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_modshort_full"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom modshort full"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_modshort_full"
+	tree_paths: ["items/clothing/uniforms/custom_modshort_full"]
+custom_modshort_shirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_modshort_shirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom modshort shirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_modshort_shirt"
+	tree_paths: ["items/clothing/uniforms/custom_modshort_shirt"]
+custom_modshort_pants:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_modshort_pants"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom modshort pants"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_modshort_pants"
+	tree_paths: ["items/clothing/uniforms/custom_modshort_pants"]
+custom_belt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_belt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom belt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_belt"
+	tree_paths: ["items/clothing/uniforms/custom_belt"]
+custom_mod_full:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_mod_full"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom mod full"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_mod_full"
+	tree_paths: ["items/clothing/uniforms/custom_mod_full"]
+custom_mod_pants:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_mod_pants"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom mod pants"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_mod_pants"
+	tree_paths: ["items/clothing/uniforms/custom_mod_pants"]
+custom_mod_shirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_mod_shirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom mod shirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_mod_shirt"
+	tree_paths: ["items/clothing/uniforms/custom_mod_shirt"]
+custom_col_short_full:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_col_short_full"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom col short full"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_col_short_full"
+	tree_paths: ["items/clothing/uniforms/custom_col_short_full"]
+custom_col_short_pants:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_col_short_pants"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom col short pants"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_col_short_pants"
+	tree_paths: ["items/clothing/uniforms/custom_col_short_pants"]
+custom_col_short_shirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_col_short_shirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom col short shirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_col_short_shirt"
+	tree_paths: ["items/clothing/uniforms/custom_col_short_shirt"]
+custom_modbaggy_full:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_modbaggy_full"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom modbaggy full"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_modbaggy_full"
+	tree_paths: ["items/clothing/uniforms/custom_modbaggy_full"]
+custom_modbaggy_pants:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_modbaggy_pants"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom modbaggy pants"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_modbaggy_pants"
+	tree_paths: ["items/clothing/uniforms/custom_modbaggy_pants"]
+custom_modbaggy_shirt:
+	components: ["UniformItem"]
+	vars:
+		components:
+			UniformItem:
+				worn_icon: "icons/mob/worn/uniforms.png"
+				worn_icon_state: "custom_modbaggy_shirt"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "custom modbaggy shirt"
+		icon: "icons/mob/under/uniforms.png"
+		icon_state: "custom_modbaggy_shirt"
+	tree_paths: ["items/clothing/uniforms/custom_modbaggy_shirt"]

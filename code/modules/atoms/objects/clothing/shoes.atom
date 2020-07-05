@@ -1,0 +1,798 @@
+detective:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "detective"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "detective"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "detective"
+	tree_paths: ["items/clothing/shoes/detective"]
+boots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "boots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "boots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "boots"
+	tree_paths: ["items/clothing/shoes/boots"]
+white:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "white"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "white"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "white"
+	tree_paths: ["items/clothing/shoes/white"]
+chef:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "chef"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chef"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "chef"
+	tree_paths: ["items/clothing/shoes/chef"]
+jackbootsOLD:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "jackbootsOLD"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jackbootsOLD"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "jackbootsOLD"
+	tree_paths: ["items/clothing/shoes/jackbootsOLD"]
+swat:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "swat"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "swat"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "swat"
+	tree_paths: ["items/clothing/shoes/swat"]
+wizard:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "wizard"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "wizard"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "wizard"
+	tree_paths: ["items/clothing/shoes/wizard"]
+galoshes:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "galoshes"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "galoshes"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "galoshes"
+	tree_paths: ["items/clothing/shoes/galoshes"]
+brown:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "brown"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "brown"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "brown"
+	tree_paths: ["items/clothing/shoes/brown"]
+black:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "black"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "black"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "black"
+	tree_paths: ["items/clothing/shoes/black"]
+tourist:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "tourist"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tourist"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "tourist"
+	tree_paths: ["items/clothing/shoes/tourist"]
+cult:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "cult"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cult"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "cult"
+	tree_paths: ["items/clothing/shoes/cult"]
+laceups:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "laceups"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "laceups"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "laceups"
+	tree_paths: ["items/clothing/shoes/laceups"]
+leather:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "leather"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "leather"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "leather"
+	tree_paths: ["items/clothing/shoes/leather"]
+workboots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "workboots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "workboots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "workboots"
+	tree_paths: ["items/clothing/shoes/workboots"]
+jackboots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "jackboots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "jackboots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "jackboots"
+	tree_paths: ["items/clothing/shoes/jackboots"]
+iogboot:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "iogboot"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "iogboot"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "iogboot"
+	tree_paths: ["items/clothing/shoes/iogboot"]
+wrappedboots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "wrappedboots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "wrappedboots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "wrappedboots"
+	tree_paths: ["items/clothing/shoes/wrappedboots"]
+cavalier_boots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "cavalier_boots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cavalier boots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "cavalier_boots"
+	tree_paths: ["items/clothing/shoes/cavalier_boots"]
+soldier_shoes:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "soldier_shoes"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "soldier shoes"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "soldier_shoes"
+	tree_paths: ["items/clothing/shoes/soldier_shoes"]
+sailorboots1:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "sailorboots1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sailorboots1"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "sailorboots1"
+	tree_paths: ["items/clothing/shoes/sailorboots1"]
+sailorboots2:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "sailorboots2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "sailorboots2"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "sailorboots2"
+	tree_paths: ["items/clothing/shoes/sailorboots2"]
+roman:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "roman"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "roman"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "roman"
+	tree_paths: ["items/clothing/shoes/roman"]
+medieval:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "medieval"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "medieval"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "medieval"
+	tree_paths: ["items/clothing/shoes/medieval"]
+knight:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "knight"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "knight"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "knight"
+	tree_paths: ["items/clothing/shoes/knight"]
+ork_warrior:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "ork_warrior"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ork warrior"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "ork_warrior"
+	tree_paths: ["items/clothing/shoes/ork_warrior"]
+arab:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "arab"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "arab"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "arab"
+	tree_paths: ["items/clothing/shoes/arab"]
+fur1:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "fur1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur1"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "fur1"
+	tree_paths: ["items/clothing/shoes/fur1"]
+fur2:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "fur2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur2"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "fur2"
+	tree_paths: ["items/clothing/shoes/fur2"]
+fur3:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "fur3"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur3"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "fur3"
+	tree_paths: ["items/clothing/shoes/fur3"]
+chad:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "chad"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "chad"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "chad"
+	tree_paths: ["items/clothing/shoes/chad"]
+fur4:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "fur4"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur4"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "fur4"
+	tree_paths: ["items/clothing/shoes/fur4"]
+fur5:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "fur5"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur5"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "fur5"
+	tree_paths: ["items/clothing/shoes/fur5"]
+japboots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "japboots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "japboots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "japboots"
+	tree_paths: ["items/clothing/shoes/japboots"]
+cowboyboots1:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "cowboyboots1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cowboyboots1"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "cowboyboots1"
+	tree_paths: ["items/clothing/shoes/cowboyboots1"]
+cowboyboots2:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "cowboyboots2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "cowboyboots2"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "cowboyboots2"
+	tree_paths: ["items/clothing/shoes/cowboyboots2"]
+flipflops:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "flipflops"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "flipflops"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "flipflops"
+	tree_paths: ["items/clothing/shoes/flipflops"]
+ac_boots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "ac_boots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "ac boots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "ac_boots"
+	tree_paths: ["items/clothing/shoes/ac_boots"]
+fur6:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "fur6"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "fur6"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "fur6"
+	tree_paths: ["items/clothing/shoes/fur6"]
+guardiacivil_boots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "guardiacivil_boots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "guardiacivil boots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "guardiacivil_boots"
+	tree_paths: ["items/clothing/shoes/guardiacivil_boots"]
+geta:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "geta"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "geta"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "geta"
+	tree_paths: ["items/clothing/shoes/geta"]
+winterboots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "winterboots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "winterboots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "winterboots"
+	tree_paths: ["items/clothing/shoes/winterboots"]
+usmc:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "usmc"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "usmc"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "usmc"
+	tree_paths: ["items/clothing/shoes/usmc"]
+aztec_sandals:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "aztec_sandals"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "aztec sandals"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "aztec_sandals"
+	tree_paths: ["items/clothing/shoes/aztec_sandals"]
+gator_cowboy:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "gator_cowboy"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gator cowboy"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "gator_cowboy"
+	tree_paths: ["items/clothing/shoes/gator_cowboy"]
+gator_ankleboots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "gator_ankleboots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gator ankleboots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "gator_ankleboots"
+	tree_paths: ["items/clothing/shoes/gator_ankleboots"]
+gator_laceup:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "gator_laceup"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gator laceup"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "gator_laceup"
+	tree_paths: ["items/clothing/shoes/gator_laceup"]
+gator_boots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "gator_boots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "gator boots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "gator_boots"
+	tree_paths: ["items/clothing/shoes/gator_boots"]
+tsuranuki:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "tsuranuki"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "tsuranuki"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "tsuranuki"
+	tree_paths: ["items/clothing/shoes/tsuranuki"]
+emir:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "emir"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "emir"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "emir"
+	tree_paths: ["items/clothing/shoes/emir"]
+nlfsandals_v1:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "nlfsandals_v1"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nlfsandals v1"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "nlfsandals_v1"
+	tree_paths: ["items/clothing/shoes/nlfsandals_v1"]
+nlfsandals_v2:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "nlfsandals_v2"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "nlfsandals v2"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "nlfsandals_v2"
+	tree_paths: ["items/clothing/shoes/nlfsandals_v2"]
+steppe_wool_shoes:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "steppe_wool_shoes"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "steppe wool shoes"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "steppe_wool_shoes"
+	tree_paths: ["items/clothing/shoes/steppe_wool_shoes"]
+lizard_cowboy:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "lizard_cowboy"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lizard cowboy"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "lizard_cowboy"
+	tree_paths: ["items/clothing/shoes/lizard_cowboy"]
+lizard_ankleboots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "lizard_ankleboots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lizard ankleboots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "lizard_ankleboots"
+	tree_paths: ["items/clothing/shoes/lizard_ankleboots"]
+lizard_laceup:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "lizard_laceup"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lizard laceup"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "lizard_laceup"
+	tree_paths: ["items/clothing/shoes/lizard_laceup"]
+lizard_boots:
+	components: ["FootItem"]
+	vars:
+		components:
+			FootItem:
+				worn_icon: "icons/mob/worn/shoes.png"
+				worn_icon_state: "lizard_boots"
+				can_adjust: false
+			Examine:
+				desc: ""
+		name: "lizard boots"
+		icon: "icons/mob/under/shoes.png"
+		icon_state: "lizard_boots"
+	tree_paths: ["items/clothing/shoes/lizard_boots"]
