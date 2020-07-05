@@ -1,9 +1,8 @@
 #!/bin/bash
-echo "Generating the map..."
 cd maps
 npx ts-node mapgen.ts
 cd -
 cd client_src
-gulp
+echo npx ts-node compile.ts
 cd -
 npx ts-node index.js test
