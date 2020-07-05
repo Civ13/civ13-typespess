@@ -26,7 +26,7 @@ class ReagentBinding {
 		}
 	}
 
-	message_handler(obj: { [x: string]: any; hasOwnProperty: (arg0: any) => any; temperature: number | null; holder_name: null; total_volume: null; maximum_volume: null; reagents: ArrayLike<unknown> | { [s: string]: unknown; }; }) {
+	message_handler(obj: { [x: string]: any; hasOwnProperty: (arg0: any) => any; temperature: number; holder_name: null; total_volume: null; maximum_volume: null; reagents: ArrayLike<unknown> | { [s: string]: unknown; }; }) {
 		for (const split of this.path.split(".")) {
 			if (!obj || !Object.prototype.hasOwnProperty.call(obj,split)) return;
 			obj = obj[split];
@@ -84,7 +84,7 @@ class ReagentBinding {
 					}
 					let elem = this.reagent_elems[key];
 					if (!elem) {
-						elem = this.build_entry(key, robj);
+						elem = this.build_entry(/*key, robj*/);
 						reagents_list.appendChild(elem);
 						this.reagent_elems[key] = elem;
 					}

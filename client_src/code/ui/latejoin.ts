@@ -15,7 +15,8 @@ class LatejoinPanel {
 		this.department_elems = {};
 
 		for (const department of Object.keys(departments)) {
-			const { name, color } = departments[department];
+			const nDepartment : any = department;
+			const { name, color } = departments[nDepartment];
 			const elem = document.createElement("fieldset");
 			elem.classList.add("status-display", "center");
 			const legend = document.createElement("legend");

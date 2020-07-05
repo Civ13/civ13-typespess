@@ -127,7 +127,7 @@ class PreferencesPanel {
 				text.textContent = obj.name;
 				const preview = this.create_preview({
 					prefs_modifier: (prefs: { hair_style: string; }) => {
-						prefs.hair_style = id;
+						return prefs.hair_style = id;
 					},
 				});
 				preview.style.float = "left";
@@ -230,7 +230,7 @@ class PreferencesPanel {
 		shadow_quality_slider.addEventListener("input", () => {
 			const desired_res = +shadow_quality_slider.value;
 			this.panel.manager.client.soft_shadow_resolution = desired_res;
-			localStorage.setItem("shadow_resolution", desired_res);
+			localStorage.setItem("shadow_resolution", String(desired_res));
 			for (const atom of this.panel.manager.client.atoms) {
 				if (atom && atom.c && atom.c.LightingObject) {
 					atom.mark_dirty();
@@ -420,15 +420,13 @@ class PreferencesPanel {
 	}
 
 	create_preview({
-		canvas,
+		canvas = document.createElement("canvas"),
 		dir = 2,
 		modifier = null,
-		prefs_modifier = null,
 		add_clothes = true,
 	} = {}) {
 		const atom = new Atom(this.panel.manager.client, { dir });
 		const prefs = JSON.parse(JSON.stringify(this.char_prefs));
-		if (prefs_modifier) prefs_modifier(prefs);
 		for (const part of ["l_arm", "r_arm", "l_leg", "r_leg", "chest", "head"]) {
 			let icon_state = `human_${part}`;
 			if (part == "chest" || part == "head") {
@@ -458,7 +456,6 @@ class PreferencesPanel {
 				icon_state: "grey",
 			});
 		if (modifier) modifier(atom);
-		if (!canvas) canvas = document.createElement("canvas");
 		canvas.width = 32;
 		canvas.height = 32;
 		let ts = performance.now();

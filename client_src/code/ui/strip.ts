@@ -1,7 +1,7 @@
 class StripPanel {
 	panel: any;
-	covered: {};
-	cached_appearances: {};
+	covered: any;
+	cached_appearances: any;
 	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.on("message", this.handle_message.bind(this));
@@ -39,7 +39,9 @@ class StripPanel {
 		{ slot_internals: slotkey }
 	)}">Disable Internals</div></td>
 				`;
-				tr.querySelector(".strip-button").dataset.message = JSON.stringify({
+				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+				const stripButton = tr.querySelector(".strip-button")!;
+				stripButton.dataset.message = JSON.stringify({
 					slot: slotkey,
 				});
 			}

@@ -41,7 +41,11 @@ class SpawnObjectPanel {
 	}
 
 	populate_templates() {
-		for (const [key, val] of Object.entries(this.templates).sort((a, b) => {
+		let key : any;
+		let val : any;
+		for (const kv of Object.entries(this.templates).sort((a, b) => {
+			key = kv[0];
+			val = kv[1];
 			return a[0] > b[0] ? 1 : a[0] == b[0] ? 0 : -1;
 		})) {
 			const template_elem = document.createElement("div");
@@ -58,7 +62,7 @@ class SpawnObjectPanel {
 			template_elem.dataset.templateKey = key;
 			template_elem.dataset.searchString = key + val.vars.name;
 			this.panel.$(".templates-list").appendChild(template_elem);
-			const preview = template_elem.querySelector(".item-preview");
+			const preview : Element = template_elem.querySelector(".item-preview")!;
 
 			setTimeout(() => {
 				// alright we need to build some images

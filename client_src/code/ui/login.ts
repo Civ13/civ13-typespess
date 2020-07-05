@@ -20,7 +20,8 @@ class LoginPanel {
 			const text_input = document.createElement("input");
 			text_input.type = "text";
 			text_input.maxlength = 30;
-			text_input.value = localStorage.getItem("debug_username") || null;
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			text_input.value = localStorage.getItem("debug_username")!;
 			text_input.placeholder = "Nickname";
 			div.appendChild(text_input);
 			this.panel.content_obj.appendChild(div);

@@ -62,16 +62,17 @@ class TypespessClient extends EventEmitter {
 		requestAnimationFrame(this.anim_loop.bind(this)); // Start the rendering loop
 		const networked_down = new Set();
 		document.addEventListener("keydown", (e) => {
-			if (e.target.localName != "input" && this.connection) {
-				networked_down.add(e.which);
-				this.connection.send(
-					JSON.stringify({ keydown: { which: e.which, id: e.target.id } })
-				);
-			}
+			if (e.target){
+				if (e.target.localName != "input" && this.connection) {
+					networked_down.add(e.which);
+					this.connection.send(
+						JSON.stringify({ keydown: { which: e.which, id: e.target.id } })
+					);
+				}}
 		});
 		document.addEventListener("keyup", (e) => {
 			if (
-				(e.target.localName != "input" && this.connection) ||
+				(e.target && e.target.localName != "input" && this.connection) ||
 				networked_down.has(e.which)
 			) {
 				networked_down.delete(e.which);
@@ -88,7 +89,7 @@ class TypespessClient extends EventEmitter {
 		});
 	}
 
-	importModule(mod) {
+	importModule(mod: any) {
 		if (mod.components) {
 			for (const componentName in mod.components) {
 				if (Object.prototype.hasOwnProperty.call(mod.components,componentName)) {
@@ -240,7 +241,7 @@ class TypespessClient extends EventEmitter {
 // This is pretty much identical to the function on the server's core/utils.ts
 const _chain_parent = Symbol("_chain_parent");
 const _chain_spliced = Symbol("_chain_spliced");
-(TypespessClient.chain_func = function (func1: any, func2: { call: (arg0: any, arg1: (...override_args: any[]) => any, arg2: any) => any; } | undefined) {
+(TypespessClient.chain_func = function (func1: any, func2: any) {
 	if (func2 == undefined) throw new Error("Chaining undefined function!");
 	function chained_func(this: any, ...args: any[]) {
 		while (
@@ -267,10 +268,10 @@ const _chain_spliced = Symbol("_chain_spliced");
 }),
 (TypespessClient.dropdown = function (
 	elem1: { getBoundingClientRect: () => any; appendChild: (arg0: any) => void; classList: { contains: (arg0: string) => any; }; contains: (arg0: any) => any; removeChild: (arg0: any) => void; },
-	elem2: Element | null,
-	{ point = null, autoremove = true } = {}
+	elem2: Element,
+	{ point = [0,0], autoremove = true } = {}
 ) {
-	let rect;
+	let rect = {x: 0, y: 0, width: 0, height: 0, left:0, right: 0, top: 0, bottom: 0};
 	if (point) {
 		rect = {
 			x: point[0],

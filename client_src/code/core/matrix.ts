@@ -18,7 +18,7 @@ class Matrix {
 		Object.freeze(this);
 	}
 
-	multiply(m2: number[]) {
+	multiply(m2 : any) {
 		let a1 = this.a,
 			b1 = this.b,
 			c1 = this.c,
