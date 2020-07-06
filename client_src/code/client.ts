@@ -76,9 +76,10 @@ class TypespessClient extends EventEmitter {
 				networked_down.has(e.which)
 			) {
 				networked_down.delete(e.which);
-				this.connection.send(
+				if (e.target && e.target.id)
+				{this.connection.send(
 					JSON.stringify({ keyup: { which: e.which, id: e.target.id } })
-				);
+				);}
 			}
 		});
 		window.addEventListener("blur", () => {

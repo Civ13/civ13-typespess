@@ -78,7 +78,7 @@ class LoginPanel {
 				this.panel.content_obj
 					.getElementsByClassName("connect-button")[0]
 					.classList.add("disabled");
-				localStorage.setItem("gh_access_token", undefined);
+				localStorage.setItem("gh_access_token", "");
 			});
 			connect_button.addEventListener("click", () => {
 				if (connect_button.classList.contains("disabled")) return;
@@ -122,7 +122,7 @@ class LoginPanel {
 				this.panel.content_obj
 					.getElementsByClassName("connect-button")[0]
 					.classList.add("disabled");
-				localStorage.setItem("gh_access_token", undefined);
+				localStorage.setItem("gh_access_token", "");
 			}
 		}
 	}

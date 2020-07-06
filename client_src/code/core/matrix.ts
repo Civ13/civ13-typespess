@@ -25,8 +25,8 @@ class Matrix {
 			d1 = this.d,
 			e1 = this.e,
 			f1 = this.f;
-		if (m2 instanceof Array) {
-			return [m2[0] * a1 + m2[1] * c1 + e1, m2[0] * b1 + m2[1] * d1 + f1];}
+		//if (m2 instanceof Array) {
+		//	return [m2[0] * a1 + m2[1] * c1 + e1, m2[0] * b1 + m2[1] * d1 + f1];}
 		let a2 = m2.a,
 			b2 = m2.b,
 			c2 = m2.c,
@@ -63,22 +63,25 @@ class Matrix {
 	}
 
 	translate(dx = 0, dy: number) {
-		return this.multiply(new Matrix(1, 0, 0, 1, dx, dy));
+		let tMatrix : Matrix = this.multiply(new Matrix(1, 0, 0, 1, dx, dy));
+		return tMatrix;
+		
 	}
 
 	rotate(angle: number, ox = 0, oy = 0) {
 		let c = Math.cos(angle);
 		let s = Math.sin(angle);
-		return this.translate(-ox, -oy)
-			.multiply(new Matrix(c, s, -s, c, 0, 0))
-			.translate(ox, oy);
+		let tMatrix = this.translate(-ox, -oy);
+		tMatrix.multiply(new Matrix(c, s, -s, c, 0, 0));
+		tMatrix.translate(ox, oy);
+		return tMatrix;
 	}
 
 	scale(sx: any, sy: undefined, ox = 0, oy = 0) {
 		if (sy == undefined) sy = sx;
-		let tMatrix : Matrix = this.translate(-ox, -oy)
-			.multiply(new Matrix(sx, 0, 0, sy, 0, 0))
-			.translate(ox, oy);
+		let tMatrix = this.translate(-ox, -oy);
+		tMatrix.multiply(new Matrix(sx, 0, 0, sy, 0, 0));
+		tMatrix.translate(ox, oy);
 		return tMatrix;
 	}
 

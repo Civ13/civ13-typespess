@@ -69,7 +69,7 @@ class Eye extends EventEmitter {
 		this.canvas.addEventListener("mousemove", this.handle_mousemove.bind(this));
 		this.canvas.addEventListener("mouseout", this.handle_mouseout.bind(this));
 	}
-	get_mouse_target(e: { target: { getBoundingClientRect: () => any; width: number; height: number; }; clientX: number; clientY: number; ctrlKey: any; shiftKey: any; altKey: any; button: any; }, timestamp = performance.now()) {
+	get_mouse_target(e: any, timestamp = performance.now()) {
 		const rect = e.target.getBoundingClientRect();
 		const clickX = ((e.clientX - rect.left) / rect.width) * e.target.width;
 		const clickY = ((e.clientY - rect.top) / rect.height) * e.target.height;
@@ -260,7 +260,7 @@ class Plane {
 	draw(eye_ctx: any, timestamp: any) {
 		this.size_canvases();
 		this.draw_objects(timestamp);
-		this.composite_plane(eye_ctx);
+		this.composite_plane(eye_ctx, null);
 	}
 
 	draw_objects(timestamp: number) {
@@ -541,12 +541,14 @@ class Plane {
 		return [0, 0];
 	}
 
-	calculate_composite_offset() {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	calculate_composite_offset(_timespamp: any) {
 		return [0, 0];
 	}
 
-	composite_plane(eye_ctx: CanvasRenderingContext2D) {
-		const [ox, oy] = this.calculate_composite_offset();
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	composite_plane(eye_ctx: CanvasRenderingContext2D, _timestamp: any) {
+		const [ox, oy] = this.calculate_composite_offset(null);
 		eye_ctx.drawImage(this.canvas, ox, oy);
 		//eye_ctx.globalAlpha = 0.5;
 		//eye_ctx.drawImage(this.mask_canvas, 0, 0);
@@ -614,7 +616,8 @@ class LightingPlane extends WorldPlane {
 		this.no_click = true;
 	}
 
-	composite_plane(eye_ctx: CanvasRenderingContext2D) {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	composite_plane(eye_ctx: CanvasRenderingContext2D, _timestamp: any) {
 		const dctx = this.draw_canvas.getContext("2d")!;
 		//let mctx = this.mask_plane.getContext('2d');
 		const ctx = this.canvas.getContext("2d")!;
@@ -627,7 +630,7 @@ class LightingPlane extends WorldPlane {
 		dctx.drawImage(eye_ctx.canvas, 0, 0);
 		dctx.globalCompositeOperation = "source-over";
 		eye_ctx.globalCompositeOperation = "multiply";
-		super.composite_plane(eye_ctx);
+		super.composite_plane(eye_ctx, null);
 		eye_ctx.globalCompositeOperation = "destination-in";
 		eye_ctx.drawImage(this.draw_canvas, 0, 0);
 		eye_ctx.globalCompositeOperation = "source-over";

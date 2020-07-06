@@ -106,7 +106,7 @@ class PreferencesPanel {
 				});
 				menu.appendChild(item);
 			}
-			dropdown(gender_dropdown, menu);
+			TypespessClient.dropdown(gender_dropdown, menu);
 		});
 
 		const hair_dropdown = this.panel.$(".property-hair");
@@ -115,7 +115,11 @@ class PreferencesPanel {
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
-			for (const [id, obj] of Object.entries(this.sprite_accessories.hair)) {
+			let id : any;
+			let obj : any;
+			for (const kv of Object.entries(this.sprite_accessories.hair)) {
+				id = kv[0];
+				obj = kv[1];
 				const item = document.createElement("div");
 				item.classList.add("button", "dropdown-item");
 				item.style.height = "64px";
@@ -127,9 +131,9 @@ class PreferencesPanel {
 				text.textContent = obj.name;
 				const preview = this.create_preview({
 					prefs_modifier: (prefs: { hair_style: string; }) => {
-						return prefs.hair_style = id;
-					},
+						return prefs.hair_style = id;},
 				});
+				
 				preview.style.float = "left";
 				preview.style.height = "64px";
 				item.appendChild(preview);
@@ -143,8 +147,8 @@ class PreferencesPanel {
 				});
 				menu.appendChild(item);
 			}
-			dropdown(hair_dropdown, menu);
-			if (sel_elem) sel_elem.scrollIntoView({ behavior: "instant" });
+			TypespessClient.dropdown(hair_dropdown, menu);
+			if (sel_elem) sel_elem.scrollIntoView({ behavior: "auto" });
 		});
 
 		const skin_tone_dropdown = this.panel.$(".property-skin_tone");
@@ -181,8 +185,8 @@ class PreferencesPanel {
 				});
 				menu.appendChild(item);
 			}
-			dropdown(skin_tone_dropdown, menu);
-			if (sel_elem) sel_elem.scrollIntoView({ behavior: "instant" });
+			TypespessClient.dropdown(skin_tone_dropdown, menu);
+			if (sel_elem) sel_elem.scrollIntoView({ behavior: "auto" });
 		});
 
 		const hair_color_dropdown = this.panel.$(".property-hair_color");
@@ -217,7 +221,7 @@ class PreferencesPanel {
 				});
 				menu.appendChild(slider);
 			}
-			dropdown(hair_color_dropdown, menu);
+			TypespessClient.dropdown(hair_color_dropdown, menu);
 		});
 
 		this.panel.$(".property-age").addEventListener("input", (e: { target: { value: string | number; }; }) => {
@@ -404,7 +408,7 @@ class PreferencesPanel {
 							});
 							menu.appendChild(item);
 						}
-						dropdown(job_pref_button, menu);
+						TypespessClient.dropdown(job_pref_button, menu);
 					});
 				}
 				this.panel.$(".job-list").appendChild(elem);
@@ -422,7 +426,6 @@ class PreferencesPanel {
 	create_preview({
 		canvas = document.createElement("canvas"),
 		dir = 2,
-		modifier = null,
 		add_clothes = true,
 	} = {}) {
 		const atom = new Atom(this.panel.manager.client, { dir });
@@ -455,7 +458,6 @@ class PreferencesPanel {
 				icon: "icons/mob/uniform.png",
 				icon_state: "grey",
 			});
-		if (modifier) modifier(atom);
 		canvas.width = 32;
 		canvas.height = 32;
 		let ts = performance.now();
@@ -463,7 +465,8 @@ class PreferencesPanel {
 		atom.fully_load().then(() => {
 			ts = performance.now();
 			atom.on_render_tick(ts);
-			const ctx = canvas.getContext("2d");
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			const ctx : CanvasRenderingContext2D = canvas.getContext("2d")!;
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			atom.draw(ctx, ts);
 			atom.del();

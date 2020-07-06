@@ -14,9 +14,9 @@ class LatejoinPanel {
 		this.jobs = {};
 		this.department_elems = {};
 
-		for (const department of Object.keys(departments)) {
-			const nDepartment : any = department;
-			const { name, color } = departments[nDepartment];
+		for (const department of departments) {
+			const name = department[0];
+			const color = department[1];
 			const elem = document.createElement("fieldset");
 			elem.classList.add("status-display", "center");
 			const legend = document.createElement("legend");
@@ -24,7 +24,7 @@ class LatejoinPanel {
 			legend.textContent = name;
 			elem.appendChild(legend);
 			this.panel.content_obj.appendChild(elem);
-			this.department_elems[department] = elem;
+			this.department_elems[department[0]] = elem;
 		}
 	}
 
@@ -67,11 +67,6 @@ class LatejoinPanel {
 	}
 }
 
-const departments = {
-	misc: {
-		name: "Miscellaneous",
-		color: "#ffffff",
-	},
-};
+const departments = [["Miscellaneous", "#ffffff"]];
 
 module.exports.panel_classes = { LatejoinPanel };

@@ -89,7 +89,7 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 			);
 		}
 		mctx.globalCompositeOperation = "source-in";
-		super.composite_plane(mctx, timestamp);
+		super.composite_plane(mctx, null);
 		mctx.globalCompositeOperation = "source-over";
 		eye_ctx.globalCompositeOperation = "destination-over";
 		eye_ctx.drawImage(this.mask_canvas, 0, 0);
