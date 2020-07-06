@@ -425,6 +425,7 @@ class PreferencesPanel {
 
 	create_preview({
 		canvas = document.createElement("canvas"),
+		prefs_modifier = this.prefs_modifier(),
 		dir = 2,
 		add_clothes = true,
 	} = {}) {
@@ -458,6 +459,7 @@ class PreferencesPanel {
 				icon: "icons/mob/uniform.png",
 				icon_state: "grey",
 			});
+		if (prefs_modifier) prefs_modifier(atom);
 		canvas.width = 32;
 		canvas.height = 32;
 		let ts = performance.now();
