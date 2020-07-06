@@ -48,7 +48,7 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 						dispy /= 32;
 						return { dispx, dispy };
 					};
-					parallax_atom.draw = TypespessClient.chain_func(parallax_atom.draw, function (
+					parallax_atom.draw = chain_func(parallax_atom.draw, function (
 						prev: () => void,
 						ctx: { globalCompositeOperation: string; }
 					) {

@@ -2,12 +2,12 @@ class GridDisplay extends Component {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.get_bounds = TypespessClient.chain_func(
+		this.a.get_bounds = chain_func(
 			this.a.get_bounds,
 			this.get_bounds.bind(this)
 		);
-		this.a.draw = TypespessClient.chain_func(this.a.draw, this.draw.bind(this));
-		this.a.is_mouse_over = TypespessClient.chain_func(
+		this.a.draw = chain_func(this.a.draw, this.draw.bind(this));
+		this.a.is_mouse_over = chain_func(
 			this.a.is_mouse_over,
 			this.is_mouse_over.bind(this)
 		);

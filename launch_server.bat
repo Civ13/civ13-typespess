@@ -6,7 +6,7 @@ echo Generating the map...
 cd maps
 call npx ts-node mapgen.ts
 cd..
-cd client
+cd client_src
 echo Browserifying Client...
 call npx ts-node compile.ts
 cd..
