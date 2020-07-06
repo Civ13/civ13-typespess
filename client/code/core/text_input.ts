@@ -39,7 +39,7 @@ module.exports.now = function (client: { connection: { send: (arg0: string) => v
 			if (e.which == 27) {
 				// escape
 				input_elem.blur();
-				input_elem.dataset.inputting = null;
+				input_elem.dataset.inputting = undefined;
 				input_elem.value = "";
 				input_elem.disabled = true;
 				e.preventDefault();
@@ -58,7 +58,7 @@ module.exports.now = function (client: { connection: { send: (arg0: string) => v
 				}
 
 				input_elem.blur();
-				input_elem.dataset.inputting = null;
+				input_elem.dataset.inputting = undefined;
 				input_elem.value = "";
 				input_elem.disabled = true;
 				e.preventDefault();

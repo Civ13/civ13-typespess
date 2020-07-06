@@ -5,13 +5,12 @@ class ReagentBinding {
 	panel: any;
 	reagent_elems: any;
 	path: any;
-	constructor(panel: any, elem: any, props: any | null) {
+	constructor(panel: any, elem: any) {
 		Object.assign(
 			this,
 			{
 				path: "beaker",
 			},
-			props
 		);
 		this.elem = elem;
 		this.message_handler = this.message_handler.bind(this);

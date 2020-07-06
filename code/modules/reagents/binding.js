@@ -1,7 +1,7 @@
 
 
 class ReagentBinding {
-	constructor(panel, holder, props) {
+	constructor(panel, holder) {
 		this.panel = panel;
 		this.reagent_holder = holder;
 		Object.assign(
@@ -12,7 +12,6 @@ class ReagentBinding {
 				include_holder_name: true,
 				sent_props: ["name", "volume"],
 			},
-			props
 		);
 		let obj = {};
 		if (this.include_temperature)
