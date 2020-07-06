@@ -1,11 +1,11 @@
 class Projectile extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.get_transform = chain_func(
+		this.a.get_transform = TypespessClient.chain_func(
 			this.a.get_transform,
 			this.get_transform.bind(this)
 		);
-		this.a.get_displacement = chain_func(
+		this.a.get_displacement = TypespessClient.chain_func(
 			this.a.get_displacement,
 			this.get_displacement.bind(this)
 		);

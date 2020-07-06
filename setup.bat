@@ -10,7 +10,7 @@ call npm install
 echo.
 echo Packages installed.
 
-cd client_src
+cd client
 echo Browserifying client...
 
 echo.

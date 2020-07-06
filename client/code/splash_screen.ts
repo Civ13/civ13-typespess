@@ -1,17 +1,15 @@
-const {chain_func} = require("../client/index.ts");
-
 class SplashScreen extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.fading = false;
 		this.fade_start = 0;
 		this.fade_len = 1500;
-		this.a.del = chain_func(this.a.del, this.del.bind(this));
-		this.a.on_render_tick = chain_func(
+		this.a.del = TypespessClient.chain_func(this.a.del, this.del.bind(this));
+		this.a.on_render_tick = TypespessClient.chain_func(
 			this.a.on_render_tick,
 			this.on_render_tick.bind(this)
 		);
-		this.a.draw = chain_func(this.a.draw, this.draw.bind(this));
+		this.a.draw = TypespessClient.chain_func(this.a.draw, this.draw.bind(this));
 	}
 
 	on_render_tick(prev: () => void) {

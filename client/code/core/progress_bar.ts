@@ -7,7 +7,7 @@ class ProgressBar extends Component {
 		super(atom, template);
 		atom.get_displacement = this.get_displacement.bind(this);
 		atom.get_plane_id = this.get_plane_id.bind(this);
-		atom.on_render_tick = chain_func(
+		atom.on_render_tick = TypespessClient.chain_func(
 			atom.on_render_tick,
 			this.on_render_tick.bind(this)
 		);

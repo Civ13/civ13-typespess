@@ -2,5 +2,5 @@
 
 npm install
 npm install -g ts-node
-cd client_src
+cd client
 npx ts-node compile.ts

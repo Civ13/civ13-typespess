@@ -2,7 +2,7 @@
 cd maps
 npx ts-node mapgen.ts
 cd -
-cd client_src
+cd client
 echo npx ts-node compile.ts
 cd -
 npx ts-node index.js test
