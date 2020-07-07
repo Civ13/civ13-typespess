@@ -24,7 +24,7 @@ const unfold = (f, initState) =>
 const None = Symbol ();
 
 const relativePaths = (path = ".") =>
-	readdirSync (path) .map (p => (join (path, p)));
+	readdirSync (path) .map (p => join (path, p));
 
 const traverseDir = (dir) =>
 	unfold( (next, done, [ path = None, ...rest ]) =>

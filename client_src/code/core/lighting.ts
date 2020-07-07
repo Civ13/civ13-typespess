@@ -148,11 +148,11 @@ class LightingObject extends Component {
 				(wall1.x1 === wall2.x2 || wall1.x2 === wall2.x1))
 						) {
 							if (wall1.x1 === wall2.x1 || wall1.x2 === wall2.x2) {
-								if (wall2.used_vertically) {continue;}
+								if (wall2.used_vertically) continue;
 								wall2.used_vertically = true;
 							}
 							if (wall1.y1 === wall2.y1 || wall1.y2 === wall2.y2) {
-								if (wall2.used_horizontally) {continue;}
+								if (wall2.used_horizontally) continue;
 								wall2.used_horizontally = true;
 							}
 							wall1.x1 = Math.min(wall1.x1, wall2.x1);
@@ -165,7 +165,7 @@ class LightingObject extends Component {
 
 				bctx.beginPath();
 				for (const wall of walls) {
-					if (wall.used_horizontally || wall.used_vertically) {continue;}
+					if (wall.used_horizontally || wall.used_vertically) continue;
 					let sx = 1;
 					let sy = 1;
 					let flip = false;

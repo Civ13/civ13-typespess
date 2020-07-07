@@ -36,7 +36,7 @@ class MachineWires extends Component {
 			]);
 			group_def = [];
 			for (let [type, name] of _.shuffle(Object.entries(this.wire_defs))) {
-				if (name === undefined) {continue;}
+				if (name === undefined) continue;
 				let color = colors.pop();
 
 				let template_obj = {

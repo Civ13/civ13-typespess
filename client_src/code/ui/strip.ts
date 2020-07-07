@@ -48,7 +48,7 @@ class StripPanel {
 		}
 		if (msg.covered) {
 			for (const [slot, val] of Object.entries(msg.covered)) {
-				if (!this.panel.$(`tr[data-slot=${slot}]`)) {continue;}
+				if (!this.panel.$(`tr[data-slot=${slot}]`)) continue;
 				this.covered[slot] = val;
 				const item_name_elem = this.panel.$(`tr[data-slot=${slot}] .item-name`);
 				const strip_button_elem = this.panel.$(
@@ -65,7 +65,7 @@ class StripPanel {
 		}
 		if (msg.item_names) {
 			for (const [slot, newname] of Object.entries(msg.item_names)) {
-				if (!this.panel.$(`tr[data-slot=${slot}]`)) {continue;}
+				if (!this.panel.$(`tr[data-slot=${slot}]`)) continue;
 				if (!this.covered[slot]) {
 					this.panel.$(`tr[data-slot=${slot}] .item-name`).textContent =
 			newname || "Empty";
@@ -80,7 +80,7 @@ class StripPanel {
 		}
 		if (msg.item_appearances) {
 			for (const [slot, newappearance] of Object.entries(msg.item_appearances)) {
-				if (!this.panel.$(`tr[data-slot=${slot}]`)) {continue;}
+				if (!this.panel.$(`tr[data-slot=${slot}]`)) continue;
 				const canvas = this.panel.$(`tr[data-slot=${slot}] .item-appearance`);
 				const do_clear = !this.cached_appearances[slot];
 				this.cached_appearances[slot] = newappearance;

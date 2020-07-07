@@ -203,7 +203,7 @@ if (server_config.gh_login.enabled) {
 							ws.send(JSON.stringify({
 								valid: true,
 								logged_in_as: obj2.user.login,
-								autojoin: server.dc_mobs[id] !== null || server.clients[id] !== null,
+								autojoin: server.dc_mobs[id] != null || server.clients[id] != null,
 							})
 							);
 						}
@@ -252,7 +252,7 @@ const serve = serveStatic(server.resRoot, { index: ["index.html"] });
 const http_handler = (req: any, res: any) => {
 	const done = finalhandler(req, res);
 	const url_obj = url.parse(req.url, true);
-	if (url_obj.pathname === "/gh-oauth" && server_config.gh_login.enabled) {
+	if (url_obj.pathname == "/gh-oauth" && server_config.gh_login.enabled) {
 		const req2 = https.request(			{
 			hostname: "github.com",
 			path: "/login/oauth/access_token",
@@ -290,7 +290,7 @@ const http_handler = (req: any, res: any) => {
 		})
 		);
 		req2.end();
-	} else if (url_obj.pathname === "/status") {
+	} else if (url_obj.pathname == "/status") {
 		res.setHeader("Access-Control-Allow-Origin", "*");
 		res.writeHead(200, { "Content-Type": "application/json" });
 		const clients = [...Object.keys(server.clients)];
@@ -322,7 +322,7 @@ if (server_config.https) {
 			socket.once("data", (buffer: any) => {
 				socket.pause();
 				const byte = buffer[0];
-				const protocol = byte === 22 ? "https" : "http";
+				const protocol = byte == 22 ? "https" : "http";
 				const proxy = proxies[protocol];
 				proxy.emit("connection", socket);
 				socket.unshift(buffer);
@@ -342,6 +342,6 @@ console.log("Server started.");
 
 //this signals the continuous integration program to exit.
 const args = process.argv;
-if (args[2] === "test") {
+if (args[2] == "test") {
 	console.log("test passed.");
 	process.exit(0);}

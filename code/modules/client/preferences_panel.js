@@ -111,7 +111,7 @@ class PreferencesPanel extends Panel {
 			"hair_style",
 			"hair_color",
 		]) {
-			if (parts && !parts.includes(key)) {continue;}
+			if (parts && !parts.includes(key)) continue;
 			char_prefs_msg[key] = this.char_prefs[key];
 		}
 		this.send_message({ char_prefs: char_prefs_msg });

@@ -54,7 +54,7 @@ class LargeContainer extends Component {
 
 	can_open(user) {
 		for (let atom of this.a.crosses()) {
-			if (!has_component(atom, "LivingMob")) {continue;}
+			if (!has_component(atom, "LivingMob")) continue;
 			if (
 				atom.c.Tangible.anchored ||
 		(this.horizontal &&
@@ -73,7 +73,7 @@ class LargeContainer extends Component {
 
 	can_close(user) {
 		for (let atom of this.a.crosses()) {
-			if (!has_component(atom, "LivingMob")) {continue;}
+			if (!has_component(atom, "LivingMob")) continue;
 			if (
 				atom.c.Tangible.anchored ||
 		(this.horizontal &&
@@ -125,7 +125,7 @@ class LargeContainer extends Component {
 				if (atom.c.LivingMob.mob_size > this.max_mob_size) return;
 				let mobs_stored = 0;
 				for (let item of this.a.contents) {
-					if (!has_component(item, "LivingMob")) {continue;}
+					if (!has_component(item, "LivingMob")) continue;
 					if (++mobs_stored >= this.mob_storage_capacity) return;
 				}
 			}

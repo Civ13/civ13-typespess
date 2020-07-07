@@ -155,7 +155,7 @@ class Panel extends EventEmitter {
 	_start_resize(e: { preventDefault: () => void; clientX: any; clientY: any; }) {
 		// bring the panel into focus
 		if (
-			this.container_obj !==this.uiframes.lastChild)
+			this.container_obj !=this.uiframes.lastChild)
 			this.uiframes.appendChild(this.container_obj);
 
 		const resize_meta = this._resize_meta(e);

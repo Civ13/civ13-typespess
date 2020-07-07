@@ -111,7 +111,7 @@ class Cable extends Component {
 			if (idx != -1) cable.c.Cable.cables.splice(idx, 1);
 		}
 		for (let node of this.nodes) {
-			if (node.c.PowerNode.cable != this.a) {continue;}
+			if (node.c.PowerNode.cable != this.a) continue;
 			if (this.powernet) this.powernet.nodes.delete(node);
 			if (node.powernet == this.powernet) node.powernet = null;
 			node.c.PowerNode.cable = null;
@@ -151,11 +151,11 @@ class Cable extends Component {
 		for (let loc of this.a.marginal_locs()) {
 			for (let cable of loc.partial_contents) {
 				if (this.does_connect_to(cable)) {
-					if (this.cables.includes(cable)) {continue;}
+					if (this.cables.includes(cable)) continue;
 					this.cables.push(cable);
 					cable.c.Cable.cables.push(this.a);
 					let other_powernet = cable.c.Cable.powernet;
-					if (other_powernet == new_powernet) {continue;}
+					if (other_powernet == new_powernet) continue;
 					if (!new_powernet) {
 						new_powernet = other_powernet;
 					} else if (other_powernet.cables.size > new_powernet.cables.size) {
@@ -169,8 +169,8 @@ class Cable extends Component {
 		}
 		if (this.d1 == 0) {
 			for (let crosser of this.a.crosses()) {
-				if (!has_component(crosser, "PowerNode")) {continue;}
-				if (crosser.c.PowerNode.cable) {continue;}
+				if (!has_component(crosser, "PowerNode")) continue;
+				if (crosser.c.PowerNode.cable) continue;
 				this.nodes.push(crosser);
 				crosser.c.PowerNode.cable = this.a;
 			}

@@ -46,7 +46,7 @@ class FloorBase extends Component {
 
 	is_shielded() {
 		for (let obj of this.a.crosses()) {
-			if (obj.layer <= this.a.layer) {continue;}
+			if (obj.layer <= this.a.layer) continue;
 			let shielded_components = ["FloorBase", "Wall", "Window"];
 			for (let comp of shielded_components) {
 				if (has_component(obj, comp)) return true;

@@ -488,7 +488,7 @@ class MobInventory extends Component {
 		let t_is = this.a.p_are();
 		let covered = this.get_covered_slots();
 		for (let slot of Object.values(this.slots)) {
-			if (!slot.item || covered.has(slot.id)) {continue;}
+			if (!slot.item || covered.has(slot.id)) continue;
 			if (slot.props.visible) {
 				let blood_stained = false;
 				let verb = slot.props.wear_verb
@@ -572,7 +572,7 @@ class MobInventory extends Component {
 			return true;
 		}
 		for (slot of Object.values(this[_slots])) {
-			if (!slot.props.is_hand_slot) {continue;}
+			if (!slot.props.is_hand_slot) continue;
 			if (slot.can_accept_item(item)) {
 				slot.item = item;
 				return true;
@@ -653,7 +653,7 @@ class MobInventory extends Component {
 	accident() {
 		for (let slot of Object.values(this.slots)) {
 			if (!slot.props.is_hand_slot || !slot.can_unequip()) return;
-			if (!slot.item) {continue;}
+			if (!slot.item) continue;
 			slot.item = null;
 		}
 	}
@@ -687,7 +687,7 @@ class MobInventory extends Component {
 			)
 				continue;
 			let covered_slots = slot.item.c[slot.props.clothing_slot].covered_slots;
-			if (!covered_slots) {continue;}
+			if (!covered_slots) continue;
 			for (let covered of covered_slots) set.add(covered);
 		}
 		return set;

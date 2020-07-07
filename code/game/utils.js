@@ -18,7 +18,7 @@ module.exports = {
   */
 	weak_deep_assign(a, b) {
 		for (var key in b) {
-			if (!Object.prototype.hasOwnProperty.call(b,key)) {continue;}
+			if (!Object.prototype.hasOwnProperty.call(b,key)) continue;
 			if (
 				typeof b[key] == "object" &&
 		b[key] != null &&
@@ -50,7 +50,7 @@ module.exports = {
 	deep_create(obj) {
 		var newobj = Object.create(obj);
 		for (var key in obj) {
-			if (!Object.prototype.hasOwnProperty.call(obj,key)) {continue;}
+			if (!Object.prototype.hasOwnProperty.call(obj,key)) continue;
 			if (typeof obj[key] == "object" && !(obj[key] instanceof Array))
 				newobj[key] = module.exports.deep_create(obj[key]);
 		}

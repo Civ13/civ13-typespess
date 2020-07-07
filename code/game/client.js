@@ -191,7 +191,7 @@ class Client extends EventEmitter {
 				if (pm.close) {
 					for (let id of pm.close) {
 						var panel = this.panels.get(id);
-						if (!panel) {continue;}
+						if (!panel) continue;
 						panel.close(false);
 					}
 				}
@@ -243,10 +243,10 @@ class Client extends EventEmitter {
 			this[_mob].c.Mob[mob_symbols._key] = undefined;
 			this.next_message.eye = this.next_message.eye || {};
 			for (let eyeId in this[_mob].c.Mob.eyes) {
-				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) {continue;}
+				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) continue;
 				let eye = this[_mob].c.Mob.eyes[eyeId];
 				for (let netid in eye.c.Eye[mob_symbols._viewing]) {
-					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) {continue;}
+					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) continue;
 					this.enqueue_delete_atom(netid);
 				}
 				for (let tile of eye.c.Eye[mob_symbols._visible_tiles]) {
@@ -263,10 +263,10 @@ class Client extends EventEmitter {
 			var old_client = this[_mob].c.Mob.client;
 			if (old_client) old_client.mob = null;
 			for (let eyeId in this[_mob].c.Mob.eyes) {
-				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) {continue;}
+				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) continue;
 				let eye = this[_mob].c.Mob.eyes[eyeId];
 				for (let netid in eye.c.Eye[mob_symbols._viewing]) {
-					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) {continue;}
+					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) continue;
 					this.enqueue_create_atom(
 						netid,
 						eye.c.Eye[mob_symbols._viewing][netid],
@@ -387,7 +387,7 @@ class Client extends EventEmitter {
 				if (atom.template && atom.template.components) {
 					for (let component_name of atom.template.components) {
 						var component = atom.components[component_name];
-						if (!(component instanceof Component.Networked)) {continue;}
+						if (!(component instanceof Component.Networked)) continue;
 						submessage.components.push(component_name);
 						submessage.component_vars[
 							component_name
@@ -453,7 +453,7 @@ class Client extends EventEmitter {
 			this[_tiles_to_remove].clear();
 		}
 		for (let key in this.next_message) {
-			if (!Object.prototype.hasOwnProperty.call(this.next_message,key)) {continue;}
+			if (!Object.prototype.hasOwnProperty.call(this.next_message,key)) continue;
 			message[key] = this.next_message[key];
 			delete this.next_message[key];
 		}
