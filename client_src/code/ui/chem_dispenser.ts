@@ -1,4 +1,4 @@
-const ReagentBinding = require("./reagent_bindings.ts");
+const ReagentBinding = require("./reagent_binding.ts");
 
 class ChemDispenserPanel {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
