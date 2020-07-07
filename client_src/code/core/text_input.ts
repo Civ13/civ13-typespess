@@ -1,7 +1,6 @@
 
 
 module.exports.now = function (client: { connection: { send: (arg0: string) => void; }; }) {
-	if (global.is_bs_editor_env) {return;}
 	window.addEventListener("load", () => {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 		const input_elem = document.getElementById("main-text-input")!;

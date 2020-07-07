@@ -2,6 +2,7 @@
 /* eslint-disable max-len */
 
 // BASED OFF OF tgstation COMMIT 910be9f4e29270e3a0a36ed8042310ed4bee1845
+export {}; //to prevent the duplicated modules error
 
 const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
