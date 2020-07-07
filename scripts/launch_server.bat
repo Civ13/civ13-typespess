@@ -3,6 +3,7 @@
 title Typespess Server
 
 echo Generating the map...
+cd..
 cd maps
 call npx ts-node mapgen.ts
 cd..

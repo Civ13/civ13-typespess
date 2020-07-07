@@ -5,6 +5,7 @@ title Typespess Installation
 echo Installing packages...
 
 echo.
+call cd..
 call npm install
 
 echo.

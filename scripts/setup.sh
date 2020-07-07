@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd -
 npm install
 npm install -g typescript
 npm install -g ts-node
