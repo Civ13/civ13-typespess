@@ -18,17 +18,17 @@ class LightingObject extends Component {
 
 	on_render_tick(timestamp: any) {
 		const disp = this.a.get_displacement(timestamp);
-		if (this.color != this.last_color) {
+		if (this.color !== this.last_color) {
 			this.dirty = true;
-		} else if (this.radius != this.last_radius) {
+		} else if (this.radius !== this.last_radius) {
 			this.dirty = true;
-		} else if (this.shadows_list != this.last_shadows_list) {
+		} else if (this.shadows_list !== this.last_shadows_list) {
 			this.dirty = true;
 		} else if (
-			!this.last_disp || this.last_disp.dispx != disp.dispx || this.last_disp.dispy != disp.dispy
+			!this.last_disp || this.last_disp.dispx !== disp.dispx || this.last_disp.dispy !== disp.dispy
 		) {
 			this.dirty = true;
-		} else if (this.a.client.soft_shadow_resolution != this.last_resolution) {
+		} else if (this.a.client.soft_shadow_resolution !== this.last_resolution) {
 			this.random_angle_offset = Math.random();
 			this.dirty = true;
 		}
@@ -51,7 +51,7 @@ class LightingObject extends Component {
 
 	draw(ctx: { globalCompositeOperation: string; drawImage: (arg0: any, arg1: number, arg2: number) => void; }, timestamp: any) {
 		if (
-			this.atom.screen_loc_x != null || this.radius !=== +this.radius || !this.enabled
+			this.atom.screen_loc_x !== null || this.radius !=== +this.radius || !this.enabled
 		)
 			return;
 
@@ -68,7 +68,7 @@ class LightingObject extends Component {
 			let { dispx, dispy } = this.atom.get_displacement(timestamp);
 			dispx = Math.round(dispx * 32) / 32;
 			dispy = Math.round(dispy * 32) / 32;
-			if (dispx != +dispx || dispy != +dispy) return;
+			if (dispx !== +dispx || dispy !== +dispy) {return;}
 
 			const sample_points = [];
 			if (
@@ -183,7 +183,7 @@ class LightingObject extends Component {
 						[y1, y2] = [-y2, -y1];
 					}
 					if (x1 <= 0 && x2 >= 0) {
-						flip = sx != sy;
+						flip = sx !== sy;
 						path.push([cx + x1 * sx, cy + (y1 + wall.base_height) * sy]);
 						path.push([cx + x1 * sx, cy + y1 * sy]);
 						let scalar = (this.radius * 32 + 48) / y1;
@@ -203,7 +203,7 @@ class LightingObject extends Component {
 						path.push([cx + x1 * sx, cy + y2 * sy]);
 						path.push([cx + (x1 + wall.base_width) * sx, cy + y2 * sy]);
 					} else {
-						flip = sx != sy;
+						flip = sx !== sy;
 						path.push([
 							cx + (x1 + wall.base_width) * sx,
 							cy + (y1 + wall.base_height) * sy,

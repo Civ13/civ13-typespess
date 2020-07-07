@@ -62,7 +62,7 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 	}
 
 	draw_objects(timestamp: number) {
-		if (this.parallax_velocity_lasttimestamp != -1) {
+		if (this.parallax_velocity_lasttimestamp !== -1) {
 			const diff = (timestamp - this.parallax_velocity_lasttimestamp) / 1000;
 			this.parallax_offset[0] += this.parallax_velocity[0] * diff;
 			this.parallax_offset[1] += this.parallax_velocity[1] * diff;

@@ -6,7 +6,7 @@ class PanelManager extends EventEmitter {
 	}
 
 	send_message(obj: any) {
-		if (!this.client.connection) return;
+		if (!this.client.connection) {return;}
 		this.client.connection.send(JSON.stringify({ panel: obj }));
 	}
 

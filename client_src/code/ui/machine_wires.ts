@@ -35,16 +35,16 @@ class MachineWirePanel {
 						<div class='button wire-cut-button' data-message='{"cut":"${wire.color}"}' title="Requires wirecutters"></div>
 					`;
 					this.panel.$(".wires_list").appendChild(elem);
-					if (this.item_type != "Multitool")
+					if (this.item_type !== "Multitool")
 						this.panel
 							.$(`.wire-color-${wire.color} .wire-pulse-button`)
 							.classList.add("disabled");
-					if (this.item_type != "Wirecutters")
+					if (this.item_type !== "Wirecutters")
 						this.panel
 							.$(`.wire-color-${wire.color} .wire-cut-button`)
 							.classList.add("disabled");
 				}
-				if (wire.cut != null)
+				if (wire.cut !== null)
 					this.panel.$(
 						`.wire-color-${wire.color} .wire-cut-button`
 					).textContent = wire.cut ? "Mend" : "Cut";

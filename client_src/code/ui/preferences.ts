@@ -86,7 +86,7 @@ class PreferencesPanel {
 
 		const gender_dropdown = this.panel.$(".property-gender");
 		gender_dropdown.addEventListener("click", (e: { defaultPrevented: any; }) => {
-			if (e.defaultPrevented) return;
+			if (e.defaultPrevented) {return;}
 			const genders = { male: "Male", female: "Female" };
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
@@ -111,7 +111,7 @@ class PreferencesPanel {
 
 		const hair_dropdown = this.panel.$(".property-hair");
 		hair_dropdown.addEventListener("click", (e: { defaultPrevented: any; }) => {
-			if (e.defaultPrevented) return;
+			if (e.defaultPrevented) {return;}
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
@@ -153,7 +153,7 @@ class PreferencesPanel {
 
 		const skin_tone_dropdown = this.panel.$(".property-skin_tone");
 		skin_tone_dropdown.addEventListener("click", (e: { defaultPrevented: any; }) => {
-			if (e.defaultPrevented) return;
+			if (e.defaultPrevented) {return;}
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
@@ -191,7 +191,7 @@ class PreferencesPanel {
 
 		const hair_color_dropdown = this.panel.$(".property-hair_color");
 		hair_color_dropdown.addEventListener("click", (e: { defaultPrevented: any; }) => {
-			if (e.defaultPrevented) return;
+			if (e.defaultPrevented) {return;}
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			const sliders: any[] = [];
@@ -320,7 +320,7 @@ class PreferencesPanel {
 				const ameta = this.job_metas[a];
 				const bmeta = this.job_metas[b];
 				const department_diff = department_order.indexOf(ameta.departments[0] || "misc") - department_order.indexOf(bmeta.departments[0] || "misc");
-				if (department_diff != 0) return department_diff;
+				if (department_diff !== 0) return department_diff;
 				if (
 					ameta.departments.includes("command") && !bmeta.departments.includes("command")
 				)
@@ -372,7 +372,7 @@ class PreferencesPanel {
 					job_pref_button.style.color = job_pref_colors[setting];
 					job_pref_button.textContent = job_pref_settings[setting];
 					job_pref_button.addEventListener("click", (e) => {
-						if (e.defaultPrevented) return;
+						if (e.defaultPrevented) {return;}
 						const menu = document.createElement("div");
 						menu.classList.add("dropdown-content");
 						for (let i = 0; i <= 3; i++) {
@@ -393,7 +393,7 @@ class PreferencesPanel {
 									for (const [otherjob, level] of Object.entries(
 										this.job_preferences
 									)) {
-										if (level === 3 && otherjob != key) {
+										if (level === 3 && otherjob !== key) {
 											this.job_preferences[otherjob] = 2;
 											const otherelem = this.panel.$(
 												`.job-list div[data-job-key="${otherjob}"] .job-selection-button`
@@ -490,7 +490,7 @@ const department_order = [
 
 module.exports.now = (client: { soft_shadow_resolution: number; }) => {
 	const shadow_pref = localStorage.getItem("shadow_resolution");
-	if (shadow_pref != null) {
+	if (shadow_pref !== null) {
 		client.soft_shadow_resolution = +shadow_pref;
 	}
 };

@@ -81,7 +81,7 @@ class LoginPanel {
 				localStorage.setItem("gh_access_token", "");
 			});
 			connect_button.addEventListener("click", () => {
-				if (connect_button.classList.contains("disabled")) return;
+				if (connect_button.classList.contains("disabled")) {return;}
 				this.connection.send(JSON.stringify({ login: true }));
 				this.login_finish();
 			});

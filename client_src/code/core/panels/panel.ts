@@ -79,8 +79,8 @@ class Panel extends EventEmitter {
 	}
 
 	_start_drag(e: { defaultPrevented: any; target: any; preventDefault: () => void; clientX: any; clientY: any; }) {
-		if (e.defaultPrevented) return;
-		if (e.target != this.header_obj) {
+		if (e.defaultPrevented) {return;}
+		if (e.target !== this.header_obj) {
 			return;
 		}
 		const pad = (this.container_obj.offsetWidth - this.panel_obj.offsetWidth) / 2;
@@ -159,7 +159,7 @@ class Panel extends EventEmitter {
 			this.uiframes.appendChild(this.container_obj);
 
 		const resize_meta = this._resize_meta(e);
-		if (!resize_meta.can_resize) return;
+		if (!resize_meta.can_resize) {return;}
 		const pad = (this.container_obj.offsetWidth - this.panel_obj.offsetWidth) / 2;
 		e.preventDefault();
 		this.panel_obj.focus();
@@ -251,7 +251,7 @@ class Panel extends EventEmitter {
 			if (target.dataset.toggle) {
 				target.classList.toggle("on");
 				const on = target.classList.contains("on");
-				if (target.dataset.toggle != "1" && target.dataset.toggle != "true")
+				if (target.dataset.toggle !== "1" && target.dataset.toggle !== "true")
 					this.send_message(build_message(target.dataset.toggle, on));
 			}
 		}

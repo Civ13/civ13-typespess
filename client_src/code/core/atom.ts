@@ -65,7 +65,7 @@ class Atom extends EventEmitter {
 	}
 
 	get_plane_id() {
-		if (this.screen_loc_x != null || this.screen_loc_y != null) return "ui";
+		if (this.screen_loc_x !== null || this.screen_loc_y !== null) return "ui";
 		return "";
 	}
 
@@ -84,7 +84,7 @@ class Atom extends EventEmitter {
 			delete this.overlays[key];
 			overlay_renderer = this.overlay_renderers[key];
 			const idx = this.overlay_renderers_list.indexOf(overlay_renderer);
-			if (idx != -1) this.overlay_renderers_list.splice(idx, 1);
+			if (idx !== -1) this.overlay_renderers_list.splice(idx, 1);
 			delete this.overlay_renderers[key];
 			this.mark_dirty();
 			return;
@@ -120,7 +120,7 @@ class Atom extends EventEmitter {
 	get_displacement(timestamp: any) {
 		let dispx = 0;
 		let dispy = 0;
-		if (this.screen_loc_x != null) {
+		if (this.screen_loc_x !== null) {
 			dispx = this.screen_loc_x;
 			dispy = this.screen_loc_y;
 		} else {
@@ -142,7 +142,7 @@ class Atom extends EventEmitter {
 	}
 
 	update_glide(timestamp: any) {
-		if (!this.glide) return;
+		if (!this.glide) {return;}
 		this.glide.update(timestamp);
 	}
 
@@ -317,7 +317,7 @@ class Glide {
 		if (
 			params.oldx === +params.oldx &&
 	params.oldy === +params.oldy &&
-	(params.oldx != object.x || params.oldy != object.y) &&
+	(params.oldx !== object.x || params.oldy !== object.y) &&
 	Math.abs(Math.max(object.x - params.oldx, object.y - params.oldy)) <=
 		1.50001
 		) {
@@ -337,8 +337,8 @@ class Glide {
 		let glidex = this.x;
 		let glidey = this.y;
 		let glide_size = +this.object.glide_size;
-		if (glide_size != glide_size) glide_size = this.object.client.glide_size;
-		if (glide_size != glide_size || glide_size === 0) {
+		if (glide_size !== glide_size) glide_size = this.object.client.glide_size;
+		if (glide_size !== glide_size || glide_size === 0) {
 			this.object.glide = null;
 			return;
 		}

@@ -63,7 +63,7 @@ class ChemDispenserPanel {
 			}
 		}
 		if (message.dispense_amount) {
-			if (message.dispense_amount != this.dispense_amount) {
+			if (message.dispense_amount !== this.dispense_amount) {
 				this.dispense_amount = message.dispense_amount;
 				for (const child of this.dispense_amounts.childNodes) {
 					if (child.dataset.radioValue === this.dispense_amount)

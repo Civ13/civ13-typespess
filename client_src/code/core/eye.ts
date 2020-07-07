@@ -32,14 +32,14 @@ class Eye extends EventEmitter {
 	}
 
 	draw(timestamp: number | undefined) {
-		if (!this.canvas) return;
+		if (!this.canvas) {return;}
 		const ctx = this.canvas.getContext("2d");
 		ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 		for (const atom of this.atoms) {
 			atom.on_render_tick(timestamp);
 			const last_plane = this.last_planes.get(atom);
 			const plane = atom.get_plane();
-			if (last_plane != plane) {
+			if (last_plane !== plane) {
 				if (last_plane) last_plane.atoms.delete(atom);
 				if (plane) plane.atoms.add(atom);
 				this.last_planes.set(atom, plane);
@@ -147,7 +147,7 @@ class Eye extends EventEmitter {
 		const start_meta = this.get_mouse_target(e);
 		const start_time = performance.now();
 		const mouseup = (e2: { button: any; }) => {
-			if (e2.button != e.button) return;
+			if (e2.button !== e.button) {return;}
 			document.removeEventListener("mouseup", mouseup);
 			const end_time = performance.now();
 			const end_meta = this.get_mouse_target(e2);
@@ -205,7 +205,7 @@ class Eye extends EventEmitter {
 	handle_mousemove(e: any, timestamp = performance.now()) {
 		this.last_mouse_event = e;
 		const meta = this.get_mouse_target(e, timestamp);
-		if (meta.atom != this.mouse_over_atom) {
+		if (meta.atom !== this.mouse_over_atom) {
 			if (this.mouse_over_atom) this.mouse_over_atom.emit("mouseout");
 			const old = this.mouse_over_atom;
 			this.mouse_over_atom = meta.atom;
@@ -275,10 +275,10 @@ class Plane {
 
 		const dirty_tiles : Set<any> = new Set();
 
-		if (this.last_originx != null && this.last_originy != null) {
+		if (this.last_originx !== null && this.last_originy !== null) {
 			const offsetx = originx - this.last_originx;
 			const offsety = originy - this.last_originy;
-			if (offsetx != 0 || offsety != 0) {
+			if (offsetx !== 0 || offsety !== 0) {
 				dctx.clearRect(0, 0, this.draw_canvas.width, this.draw_canvas.height);
 				dctx.drawImage(this.canvas, -offsetx * 32, offsety * 32);
 				ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -343,10 +343,10 @@ class Plane {
 					newbounds.y += dispy;
 					newbounds.transform = atom.get_transform(timestamp);
 					if (
-						newbounds.x != lastbounds.x ||
-			newbounds.y != lastbounds.y ||
-			newbounds.width != lastbounds.width ||
-			newbounds.height != lastbounds.height ||
+						newbounds.x !== lastbounds.x ||
+			newbounds.y !== lastbounds.y ||
+			newbounds.width !== lastbounds.width ||
+			newbounds.height !== lastbounds.height ||
 			!newbounds.transform.equals(lastbounds.transform)
 					) {
 						for (
@@ -561,7 +561,7 @@ class Plane {
 
 	size_canvases() {
 		const [width, height] = this.calculate_canvas_size();
-		if (width != this.canvas.width || height != this.canvas.height) {
+		if (width !== this.canvas.width || height !== this.canvas.height) {
 			this.canvas.width = width;
 			this.canvas.height = height;
 			this.draw_canvas.width = width;

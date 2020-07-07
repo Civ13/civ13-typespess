@@ -63,7 +63,7 @@ class TypespessClient extends EventEmitter {
 		const networked_down = new Set();
 		document.addEventListener("keydown", (e) => {
 			if (e.target){
-				if (e.target.localName != "input" && this.connection) {
+				if (e.target.localName !== "input" && this.connection) {
 					networked_down.add(e.which);
 					this.connection.send(
 						JSON.stringify({ keydown: { which: e.which, id: e.target.id } })
@@ -72,7 +72,7 @@ class TypespessClient extends EventEmitter {
 		});
 		document.addEventListener("keyup", (e) => {
 			if (
-				(e.target && e.target.localName != "input" && this.connection) ||
+				(e.target && e.target.localName !== "input" && this.connection) ||
 				networked_down.has(e.which)
 			) {
 				networked_down.delete(e.which);
@@ -97,7 +97,7 @@ class TypespessClient extends EventEmitter {
 					if (this.components[componentName]) {
 						throw new Error(`Component ${componentName} already exists!`);
 					}
-					if (mod.components[componentName].name != componentName)
+					if (mod.components[componentName].name !== componentName)
 						throw new Error(
 							`Component name mismatch! Named ${componentName} in map and constructor is named ${mod.components[componentName].name}`
 						);
@@ -111,7 +111,7 @@ class TypespessClient extends EventEmitter {
 					if (this.panel_classes[class_name]) {
 						throw new Error(`Panel class ${class_name} already exists!`);
 					}
-					if (mod.panel_classes[class_name].name != class_name)
+					if (mod.panel_classes[class_name].name !== class_name)
 						throw new Error(
 							`Panel class name mismatch! Named ${class_name} in map and constructor is named ${mod.panel_classes[class_name].name}`
 						);
@@ -252,7 +252,7 @@ const _chain_spliced = Symbol("_chain_spliced");
 			chained_func[_chain_parent] = chained_func[_chain_parent][_chain_parent];
 		}
 		const prev = (...override_args: undefined[]) => {
-			if (!chained_func[_chain_parent]) return;
+			if (!chained_func[_chain_parent]) {return;}
 			if (override_args.length)
 				return chained_func[_chain_parent].call(this, ...override_args);
 			else return chained_func[_chain_parent].call(this, ...args);
@@ -339,7 +339,7 @@ const _chain_spliced = Symbol("_chain_spliced");
 			elem2.addEventListener("focusout", () => {
 				setTimeout(() => {
 					if (
-						elem2 != document.activeElement &&
+						elem2 !== document.activeElement &&
 							!elem2.contains(document.activeElement) &&
 							elem1.contains(elem2)
 					) {

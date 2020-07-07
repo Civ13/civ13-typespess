@@ -11,7 +11,7 @@ class NewPlayerPanel {
 	}
 
 	handle_message(message: { latejoin: undefined; start_at: undefined; }) {
-		if (message.latejoin != undefined) {
+		if (message.latejoin !== undefined) {
 			[...this.panel.content_obj.getElementsByClassName("pregame")].forEach(
 				(item) => (item.style.display = message.latejoin ? "none" : "block")
 			);

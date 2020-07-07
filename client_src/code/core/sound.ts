@@ -13,7 +13,7 @@ class Sound {
 		this.id = sndobj.id || "id" + Math.random();
 		this.client.playing_sounds.set(this.id, this);
 		this.buffer_promise = this.client.get_audio_buffer(sndobj.path);
-		if (!this.client.audio_ctx) return;
+		if (!this.client.audio_ctx) {return;}
 		this.source = this.client.audio_ctx.createBufferSource();
 		if (sndobj.detune) this.source.detune.value = sndobj.detune;
 		if (sndobj.playback_rate)
@@ -48,14 +48,14 @@ class Sound {
 	update_spatial(emitter: { eye: any; eye_id: any; x: number; y: number; }, timestamp: number) {
 		if (this.spatial_node) {
 			const eye = emitter.eye || this.client.eyes[emitter.eye_id || ""];
-			if (!eye) return;
+			if (!eye) {return;}
 			const eye_disp = eye.origin.get_displacement(timestamp);
 			if (
-				eye_disp.dispx != +eye_disp.dispx ||
-		eye_disp.dispy != +eye_disp.dispy
+				eye_disp.dispx !== +eye_disp.dispx ||
+		eye_disp.dispy !== +eye_disp.dispy
 			)
 				return;
-			if (emitter.x != +emitter.x || emitter.y != +emitter.y) return;
+			if (emitter.x !== +emitter.x || emitter.y !== +emitter.y) {return;}
 			this.spatial_node.setPosition(
 				emitter.x - eye_disp.dispx,
 				0,
@@ -65,9 +65,9 @@ class Sound {
 	}
 
 	start() {
-		if (!this.client.audio_ctx) return;
+		if (!this.client.audio_ctx) {return;}
 		this.buffer_promise.then((buf: any) => {
-			if (!this.source) return;
+			if (!this.source) {return;}
 			this.source.buffer = buf;
 			this.source.addEventListener("ended", this.ended.bind(this));
 			this.source.start();

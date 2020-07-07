@@ -1,12 +1,12 @@
 
 
 module.exports.now = function (client: { connection: { send: (arg0: string) => void; }; }) {
-	if (global.is_bs_editor_env) return;
+	if (global.is_bs_editor_env) {return;}
 	window.addEventListener("load", () => {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 		const input_elem = document.getElementById("main-text-input")!;
 		document.addEventListener("keydown", (e) => {
-			if (e.target && e.target.localName === "input" || !client.connection) return;
+			if (e.target && e.target.localName === "input" || !client.connection) {return;}
 			// the e.preventDefault() is for stopping the character being typed into the input
 			if (e.which === 79) {
 				// o
