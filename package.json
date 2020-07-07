@@ -2,7 +2,7 @@
 	"name": "civ13",
 	"version": "0.0.1",
 	"description": "civ13 in typespess",
-	"main": "index.ts",
+	"main": "index.js",
 	"author": "taislin",
 	"license": "AGPL-3.0",
 	"repository": {

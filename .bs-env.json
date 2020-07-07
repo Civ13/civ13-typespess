@@ -1,0 +1,5 @@
+{
+	"env_name": "civ13 typespess",
+	"server_env_path": "./index.js",
+	"client_env_path": "./client_src/index.js"
+}
