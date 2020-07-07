@@ -94,7 +94,7 @@ class LoginPanel {
 					"not-logged-in"
 				)[0].style.display = "block";
 			}
-		} else if (obj.valid !=== undefined) {
+		} else if (obj.valid !== undefined) {
 			if (obj.valid) {
 				this.panel.content_obj.getElementsByClassName(
 					"logged-in"

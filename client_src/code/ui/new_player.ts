@@ -19,7 +19,7 @@ class NewPlayerPanel {
 				(item) => (item.style.display = message.latejoin ? "block" : "none")
 			);
 		}
-		if (message.start_at !=== undefined) {
+		if (message.start_at !== undefined) {
 			this.start_at = message.start_at;
 			this.update_timer();
 		}

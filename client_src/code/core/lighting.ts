@@ -51,7 +51,7 @@ class LightingObject extends Component {
 
 	draw(ctx: { globalCompositeOperation: string; drawImage: (arg0: any, arg1: number, arg2: number) => void; }, timestamp: any) {
 		if (
-			this.atom.screen_loc_x !== null || this.radius !=== +this.radius || !this.enabled
+			this.atom.screen_loc_x !== null || this.radius !== +this.radius || !this.enabled
 		)
 			return;
 
