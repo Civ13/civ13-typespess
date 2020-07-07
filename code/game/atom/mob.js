@@ -139,21 +139,21 @@ class Eye extends Component {
 	enqueue_create_atom(netid, atom) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_create_atom(netid, atom, this.a);
 		}
 	}
 	enqueue_update_atom_var(netid, atom, varname, is_appearance) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_update_atom_var(netid, atom, varname, is_appearance);
 		}
 	}
 	enqueue_delete_atom(netid) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_delete_atom(netid);
 		}
 	}
@@ -161,7 +161,7 @@ class Eye extends Component {
 	enqueue_add_tile(tile) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_add_tile(tile);
 		}
 	}
@@ -169,7 +169,7 @@ class Eye extends Component {
 	enqueue_remove_tile(tile) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_remove_tile(tile);
 		}
 	}
@@ -184,7 +184,7 @@ class Eye extends Component {
 		process.nextTick(() => {
 			for (let observer of this[_observers]) {
 				let client = observer.c.Mob.client;
-				if (!client) continue;
+				if (!client) {continue;}
 				client.next_message.eye = client.next_message.eye || {};
 				client.next_message.eye[observer.c.Mob[_eye_to_eyeid].get(this.a)] = {
 					x: this.a.base_mover.x,
@@ -353,7 +353,7 @@ class Mob extends Component {
 						var oldEye = target[property];
 						if (oldEye && this.client) {
 							for (let netid in oldEye.c.Eye[_viewing]) {
-								if (!Object.prototype.hasOwnProperty.call(oldEye.c.Eye[_viewing],netid)) continue;
+								if (!Object.prototype.hasOwnProperty.call(oldEye.c.Eye[_viewing],netid)) {continue;}
 								this.client.enqueue_delete_atom(netid);
 							}
 							for (let tile of oldEye.c.Eye[_visible_tiles]) {
@@ -373,7 +373,7 @@ class Mob extends Component {
 						}
 						if (value && this.client) {
 							for (let netid in value.c.Eye[_viewing]) {
-								if (!Object.prototype.hasOwnProperty.call(value.c.Eye[_viewing],netid)) continue;
+								if (!Object.prototype.hasOwnProperty.call(value.c.Eye[_viewing],netid)) {continue;}
 								var atom = value.c.Eye[_viewing][netid];
 								this.client.enqueue_create_atom(netid, atom, value);
 							}

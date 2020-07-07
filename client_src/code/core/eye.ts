@@ -80,7 +80,7 @@ class Eye extends EventEmitter {
 		for (const plane of [...this.planes.values()].sort((a, b) => {
 			return b.z_index - a.z_index;
 		})) {
-			if (plane.no_click) continue;
+			if (plane.no_click) {continue;}
 			const [originx, originy] = plane.calculate_origin(timestamp);
 			const [offsetx, offsety] = plane.calculate_composite_offset(timestamp);
 			const loc = `[${Math.floor((clickX - offsetx) / 32 + originx)},${Math.floor(
@@ -94,7 +94,7 @@ class Eye extends EventEmitter {
 				if (atom.mouse_opacity === undefined) {
 					atom.mouse_opacity = 1;
 				}
-				if (atom.mouse_opacity === 0) continue;
+				if (atom.mouse_opacity === 0) {continue;}
 				let { dispx, dispy } = atom.get_displacement(timestamp);
 				dispx = Math.round(dispx * 32) / 32;
 				dispy = Math.round(dispy * 32) / 32;
@@ -427,12 +427,12 @@ class Plane {
 		for (const atom of this.atoms) {
 			let add_to_tiles = false;
 			if (this.last_draw.has(atom)) {
-				if (!this.dirty_atoms.has(atom)) continue;
+				if (!this.dirty_atoms.has(atom)) {continue;}
 			} else {
 				add_to_tiles = true;
 			}
 			const bounds = atom.get_transformed_bounds(timestamp);
-			if (!bounds) continue;
+			if (!bounds) {continue;}
 			let { dispx, dispy } = atom.get_displacement(timestamp);
 			dispx = Math.round(dispx * 32) / 32;
 			dispy = Math.round(dispy * 32) / 32;
@@ -480,9 +480,9 @@ class Plane {
 		}
 
 		for (const atom of [...this.atoms].sort(Atom.atom_comparator)) {
-			if (!atom) continue;
+			if (!atom) {continue;}
 			const bounds = atom.get_transformed_bounds(timestamp);
-			if (!bounds) continue;
+			if (!bounds) {continue;}
 			let { dispx, dispy } = atom.get_displacement(timestamp);
 			dispx = Math.round(dispx * 32) / 32;
 			dispy = Math.round(dispy * 32) / 32;
@@ -506,7 +506,7 @@ class Plane {
 				}
 				if (should_draw) break;
 			}
-			if (!should_draw) continue;
+			if (!should_draw) {continue;}
 
 			dispx -= originx;
 			dispy -= originy;

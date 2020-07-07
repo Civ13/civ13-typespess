@@ -69,7 +69,7 @@ class Sound {
 		var clients = new Set();
 		for (let mob of mobs) {
 			if (!is_atom(mob) && mob && mob.mob) clients.add(mob);
-			if (!has_component(mob, "Eye")) continue;
+			if (!has_component(mob, "Eye")) {continue;}
 			for (let observer of mob.c.Eye.observers()) {
 				if (observer.c.Hearer.can_hear_sound(this) && observer.c.Mob.client)
 					clients.add(observer.c.Mob.client);

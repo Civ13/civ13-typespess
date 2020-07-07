@@ -10,7 +10,7 @@ class Atom extends EventEmitter {
 		this.overlay_renderers = {};
 
 		for (const key in instobj) {
-			if (!Object.prototype.hasOwnProperty.call(instobj,key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(instobj,key)) {continue;}
 			if (key === "overlays" || key === "components" || key === "component_vars")
 				continue;
 			this[key] = instobj[key];
@@ -30,7 +30,7 @@ class Atom extends EventEmitter {
 
 		if (instobj.overlays)
 			for (const key in instobj.overlays) {
-				if (!Object.prototype.hasOwnProperty.call(instobj.overlays,key)) continue;
+				if (!Object.prototype.hasOwnProperty.call(instobj.overlays,key)) {continue;}
 				this.set_overlay(key, instobj.overlays[key]);
 			}
 
@@ -181,7 +181,7 @@ class Atom extends EventEmitter {
 		let bounds = this.main_icon_renderer.get_bounds();
 		for (const overlay of this.overlay_renderers_list) {
 			const overlay_bounds = overlay.get_bounds();
-			if (!overlay_bounds) continue;
+			if (!overlay_bounds) {continue;}
 			if (!bounds) {
 				bounds = overlay_bounds;
 				continue;
@@ -290,7 +290,7 @@ class Atom extends EventEmitter {
 		this.main_icon_renderer.flick = val;
 		if (val.overlays) {
 			for (const key in val.overlays) {
-				if (!Object.prototype.hasOwnProperty.call(this.overlay_renderers,key)) continue;
+				if (!Object.prototype.hasOwnProperty.call(this.overlay_renderers,key)) {continue;}
 				const overlay_flick = val.overlays[key];
 				this.overlay_renderers[key].flick = overlay_flick;
 				for (const prop of ["icon", "icon_state", "dir", "time_begin"])

@@ -193,7 +193,7 @@ class LivingMob extends Component {
 	apply_damages(damages, def_zone, blocked) {
 		if (blocked >= 100) return false;
 		for (var key in damages) {
-			if (!Object.prototype.hasOwnProperty.call(damages,key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(damages,key)) {continue;}
 			this.apply_damage(damages[key], key, def_zone, blocked);
 		}
 		return true;

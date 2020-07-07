@@ -54,7 +54,7 @@ class JobController {
 		)
 			return candidates; // this ain't gonna be useful so let's get out of here.
 		for (let mind of this.unassigned) {
-			if (!this.can_be_job(mind, job)) continue;
+			if (!this.can_be_job(mind, job)) {continue;}
 			if (mind.character_preferences.job_preferences[job.id] >= level)
 				candidates.push(mind);
 		}
@@ -97,8 +97,8 @@ class JobController {
 		for (let level of [3, 2, 1]) {
 			for (let mind of _.shuffle([...this.unassigned])) {
 				for (let job of _.shuffle(Object.values(this.jobs))) {
-					if (!job) continue;
-					if (!this.can_be_job(mind, job)) continue;
+					if (!job) {continue;}
+					if (!this.can_be_job(mind, job)) {continue;}
 					if (mind.character_preferences.job_preferences[job.id] >= level) {
 						this.assign_role(mind, job);
 						break;

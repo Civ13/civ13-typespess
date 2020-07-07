@@ -1,3 +1,4 @@
+import { AnyNaptrRecord } from "dns";
 
 
 class ReagentBinding {
@@ -5,13 +6,12 @@ class ReagentBinding {
 	panel: any;
 	reagent_elems: any;
 	path: any;
-	constructor(panel: any, elem: any, props: any | null) {
+	constructor(panel: any, elem: AnyNaptrRecord) {
 		Object.assign(
 			this,
 			{
 				path: "beaker",
 			},
-			props
 		);
 		this.elem = elem;
 		this.message_handler = this.message_handler.bind(this);
@@ -39,7 +39,7 @@ class ReagentBinding {
 				e.style.display = null;
 			}
 			for (const e of Object.values(this.reagent_elems)) {
-				if (!e) continue;
+				if (!e) {continue;}
 				this.elem.querySelector(".reagents-list").removeChild(e);
 			}
 			this.reagent_elems = {};
