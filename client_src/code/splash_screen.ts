@@ -1,4 +1,4 @@
-const { chain_func } = require("../utils.js");
+const { chain_func } = require("../index.ts");
 
 class SplashScreen extends Component {
 	constructor(atom: any, template: any) {
