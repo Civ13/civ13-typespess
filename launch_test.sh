@@ -5,4 +5,4 @@ cd -
 cd client_src
 echo npx ts-node compile.ts
 cd -
-npx ts-node index.js test
+npx ts-node index.ts test

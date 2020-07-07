@@ -10,6 +10,6 @@ cd client_src
 echo Browserifying Client...
 call npx ts-node compile.ts
 cd..
-call npx ts-node index.js
+call npx ts-node index.ts
 
 pause
