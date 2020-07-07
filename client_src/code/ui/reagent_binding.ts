@@ -102,7 +102,7 @@ class ReagentBinding {
 	}
 	update_entry(id: string, obj: any, elem: { textContent: string; }) {
 		elem.textContent = `${+obj.volume.toFixed(2)} unit${
-			obj.volume == 1 ? "" : "s"
+			obj.volume === 1 ? "" : "s"
 		} of ${obj.name}`;
 	}
 

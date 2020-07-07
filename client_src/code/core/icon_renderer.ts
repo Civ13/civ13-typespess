@@ -76,13 +76,13 @@ class IconRenderer {
 		if (this.change_level >= CHANGE_LEVEL_ICON) {
 			this.icon_meta = this.atom.client.icon_metas[this.icon];
 			this.dir_meta = null;
-			if (this.icon_meta == undefined) {
+			if (this.icon_meta === undefined) {
 				this.change_level = CHANGE_LEVEL_NONE;
 				const enqueued_icon = this.icon;
 				this.atom.client
 					.enqueue_icon_meta_load(this.icon)
 					.then(() => {
-						if (this.icon == enqueued_icon) {
+						if (this.icon === enqueued_icon) {
 							this.change_level = CHANGE_LEVEL_ICON;
 						}
 					})
@@ -262,7 +262,7 @@ class IconRenderer {
 	}
 
 	get icon() {
-		if (this._icon == null && this.parent) return this.parent.icon;
+		if (this._icon === null && this.parent) return this.parent.icon;
 		let icon = this._icon;
 		if (this.flick && this.flick.icon) {
 			icon = this.flick.icon;
@@ -274,7 +274,7 @@ class IconRenderer {
 	}
 
 	get icon_state() {
-		if (this._icon_state == null && this.parent) return this.parent.icon_state;
+		if (this._icon_state === null && this.parent) return this.parent.icon_state;
 		let icon_state = this._icon_state;
 		if (this.flick && this.flick.icon_state) {
 			icon_state = this.flick.icon_state;
@@ -292,7 +292,7 @@ class IconRenderer {
 	}
 
 	get dir() {
-		if (this._dir == null && this.parent) return this.parent.dir;
+		if (this._dir === null && this.parent) return this.parent.dir;
 		let dir = this._dir;
 		if (this.flick && this.flick.dir) {
 			dir = this.flick.dir;
@@ -326,7 +326,7 @@ class IconRenderer {
 		return this._overlay_layer;
 	}
 	set overlay_layer(val) {
-		if (val == this._overlay_layer) return;
+		if (val === this._overlay_layer) return;
 		this._overlay_layer = val;
 		if (this.atom) this.atom.mark_dirty();
 	}
@@ -335,7 +335,7 @@ class IconRenderer {
 		return this._offset_x;
 	}
 	set offset_x(val) {
-		if (val == this._offset_x) return;
+		if (val === this._offset_x) return;
 		this._offset_x = +val || 0;
 		if (this.atom) this.atom.mark_dirty();
 	}
@@ -343,7 +343,7 @@ class IconRenderer {
 		return this._offset_y;
 	}
 	set offset_y(val) {
-		if (val == this._offset_y) return;
+		if (val === this._offset_y) return;
 		this._offset_y = +val || 0;
 		if (this.atom) this.atom.mark_dirty();
 	}
@@ -362,11 +362,11 @@ class IconRenderer {
 	}
 
 	get color() {
-		if (this._color == null && this.parent) return this.parent.color;
+		if (this._color === null && this.parent) return this.parent.color;
 		return this._color;
 	}
 	set color(val) {
-		if (val == this._color) return;
+		if (val === this._color) return;
 		this._color = "" + val;
 		if (this.atom) this.atom.mark_dirty();
 	}
@@ -375,7 +375,7 @@ class IconRenderer {
 		return this._alpha;
 	}
 	set alpha(val) {
-		if (val == this._alpha) return;
+		if (val === this._alpha) return;
 		this._alpha = "" + val;
 		if (this.atom) this.atom.mark_dirty();
 	}

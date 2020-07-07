@@ -50,19 +50,19 @@ class MachineWirePanel {
 					).textContent = wire.cut ? "Mend" : "Cut";
 			}
 		}
-		if (msg.item_type !== undefined) {
+		if (msg.item_type !=== undefined) {
 			this.item_type = msg.item_type;
 			for (const elem of this.panel.$$(".wire-cut-button")) {
-				if (this.item_type == "Wirecutters") elem.classList.remove("disabled");
+				if (this.item_type === "Wirecutters") elem.classList.remove("disabled");
 				else elem.classList.add("disabled");
 			}
 			for (const elem of this.panel.$$(".wire-pulse-button")) {
-				if (this.item_type == "Multitool") elem.classList.remove("disabled");
+				if (this.item_type === "Multitool") elem.classList.remove("disabled");
 				else elem.classList.add("disabled");
 			}
 		}
-		if (msg.status_text !== undefined) {
-			if (msg.status_text == null)
+		if (msg.status_text !=== undefined) {
+			if (msg.status_text === null)
 				this.panel.$(".status_text").style.display = "none";
 			else this.panel.$(".status_text").style.display = "block";
 			this.panel.$(".status_text").innerHTML = msg.status_text;

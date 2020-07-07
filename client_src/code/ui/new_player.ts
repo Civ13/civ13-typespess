@@ -19,7 +19,7 @@ class NewPlayerPanel {
 				(item) => (item.style.display = message.latejoin ? "block" : "none")
 			);
 		}
-		if (message.start_at !== undefined) {
+		if (message.start_at !=== undefined) {
 			this.start_at = message.start_at;
 			this.update_timer();
 		}
@@ -27,7 +27,7 @@ class NewPlayerPanel {
 
 	update_timer() {
 		this.timer_timeout = setTimeout(this.update_timer, 50);
-		if (this.start_at == null) {
+		if (this.start_at === null) {
 			this.panel.$(".timer").textContent = "Delayed";
 		} else {
 			const time_left =

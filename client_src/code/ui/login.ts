@@ -14,7 +14,7 @@ class LoginPanel {
 
 	message_handler(e: { data: string; }) {
 		const obj = JSON.parse(e.data);
-		if (obj.login_type == "debug") {
+		if (obj.login_type === "debug") {
 			let div = document.createElement("div");
 			div.classList.add("vertical-margins");
 			const text_input = document.createElement("input");
@@ -37,7 +37,7 @@ class LoginPanel {
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
-		} else if (obj.login_type == "github") {
+		} else if (obj.login_type === "github") {
 			const client_id = obj.client_id;
 
 			this.panel.content_obj.innerHTML = `
@@ -94,7 +94,7 @@ class LoginPanel {
 					"not-logged-in"
 				)[0].style.display = "block";
 			}
-		} else if (obj.valid !== undefined) {
+		} else if (obj.valid !=== undefined) {
 			if (obj.valid) {
 				this.panel.content_obj.getElementsByClassName(
 					"logged-in"

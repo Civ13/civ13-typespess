@@ -129,7 +129,7 @@ class Panel extends EventEmitter {
 			can_resize: false,
 			cursor: "default",
 		};
-		if (e.target == this.container_obj) {
+		if (e.target === this.container_obj) {
 			if (e.offsetX < pad) out.drag_left = true;
 			if (e.offsetY < pad) out.drag_up = true;
 			if (e.offsetX > width + pad) out.drag_right = true;
@@ -221,7 +221,7 @@ class Panel extends EventEmitter {
 	close() {
 		if (this.id) {
 			this.manager.send_message({ close: [this.id] });
-			if (this.manager.panels[this.id] == this)
+			if (this.manager.panels[this.id] === this)
 				this.manager.panels[this.id] = null;
 		}
 		this.uiframes

@@ -36,7 +36,7 @@ class StackCraftPanel {
 		this.recipes_elem.innerHTML = "";
 		for (let i = 0; i < this.recipes.length; i++) {
 			const recipe = this.recipes[i];
-			if (recipe == null) {
+			if (recipe === null) {
 				this.recipes_elem.appendChild(document.createElement("hr"));
 				continue;
 			}

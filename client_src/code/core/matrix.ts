@@ -78,7 +78,7 @@ class Matrix {
 	}
 
 	scale(sx: any, sy: undefined, ox = 0, oy = 0) {
-		if (sy == undefined) sy = sx;
+		if (sy === undefined) sy = sx;
 		let tMatrix = this.translate(-ox, -oy);
 		tMatrix.multiply(new Matrix(sx, 0, 0, sy, 0, 0));
 		tMatrix.translate(ox, oy);
@@ -87,12 +87,12 @@ class Matrix {
 
 	equals(other: { a: any; b: any; c: any; d: any; e: any; f: any; }) {
 		return (
-			other.a == this.a &&
-			other.b == this.b &&
-			other.c == this.c &&
-			other.d == this.d &&
-			other.e == this.e &&
-			other.f == this.f
+			other.a === this.a &&
+			other.b === this.b &&
+			other.c === this.c &&
+			other.d === this.d &&
+			other.e === this.e &&
+			other.f === this.f
 		);
 	}
 }

@@ -31,7 +31,7 @@ class AdminPanel {
 	populate_tools() {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		for (const [key, val] of Object.entries(this.tools).sort((a:Array<any>, b:Array<any>) => {
-			return a[1].name > b[1].name ? 1 : a[1].name == b[1].name ? 0 : -1;
+			return a[1].name > b[1].name ? 1 : a[1].name === b[1].name ? 0 : -1;
 		})) {
 			const template_elem = document.createElement("div");
 			template_elem.classList.add("tool-entry");

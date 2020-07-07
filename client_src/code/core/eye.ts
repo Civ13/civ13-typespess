@@ -12,7 +12,7 @@ class Eye extends EventEmitter {
 		client.eyes[id] = this;
 
 		for (const atom of client.atoms) {
-			if (atom.eye_id == id) {
+			if (atom.eye_id === id) {
 				atom.eye = this;
 				this.atoms.add(atom);
 			}
@@ -91,10 +91,10 @@ class Eye extends EventEmitter {
 			for (const atom of [...tile].sort((a, b) => {
 				return Atom.atom_comparator(b, a);
 			})) {
-				if (atom.mouse_opacity == undefined) {
+				if (atom.mouse_opacity === undefined) {
 					atom.mouse_opacity = 1;
 				}
-				if (atom.mouse_opacity == 0) continue;
+				if (atom.mouse_opacity === 0) continue;
 				let { dispx, dispy } = atom.get_displacement(timestamp);
 				dispx = Math.round(dispx * 32) / 32;
 				dispy = Math.round(dispy * 32) / 32;
@@ -118,7 +118,7 @@ class Eye extends EventEmitter {
 					bounds && localX >= bounds.x && localX < bounds.x + bounds.width && localY >= bounds.y && localY < bounds.y + bounds.height
 				) {
 					if (
-						atom.mouse_opacity == 2 ||
+						atom.mouse_opacity === 2 ||
 			atom.is_mouse_over(localX, localY, timestamp)
 					) {
 						clickedAtom = atom;
@@ -151,7 +151,7 @@ class Eye extends EventEmitter {
 			document.removeEventListener("mouseup", mouseup);
 			const end_time = performance.now();
 			const end_meta = this.get_mouse_target(e2);
-			if (end_time - start_time < 200 || end_meta.atom == start_meta.atom) {
+			if (end_time - start_time < 200 || end_meta.atom === start_meta.atom) {
 				if (this.client.connection)
 					this.client.connection.send(
 						JSON.stringify({

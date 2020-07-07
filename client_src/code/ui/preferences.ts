@@ -93,7 +93,7 @@ class PreferencesPanel {
 			for (const [id, name] of Object.entries(genders)) {
 				const item = document.createElement("div");
 				item.classList.add("button", "dropdown-item");
-				if (id == this.char_prefs.gender) {
+				if (id === this.char_prefs.gender) {
 					item.classList.add("selected");
 				}
 				item.textContent = name;
@@ -123,7 +123,7 @@ class PreferencesPanel {
 				const item = document.createElement("div");
 				item.classList.add("button", "dropdown-item");
 				item.style.height = "64px";
-				if (id == this.char_prefs.hair_style) {
+				if (id === this.char_prefs.hair_style) {
 					item.classList.add("selected");
 					sel_elem = item;
 				}
@@ -161,7 +161,7 @@ class PreferencesPanel {
 				const item = document.createElement("div");
 				item.classList.add("button", "dropdown-item");
 				item.style.height = "64px";
-				if (id == this.char_prefs.skin_tone) {
+				if (id === this.char_prefs.skin_tone) {
 					item.classList.add("selected");
 					sel_elem = item;
 				}
@@ -277,7 +277,7 @@ class PreferencesPanel {
 				this.panel.$(".property-name").value = msg.char_prefs.name;
 			}
 			if (msg.char_prefs.gender) {
-				this.panel.$(".property-gender").textContent = msg.char_prefs.gender == "male" ? "Male" : "Female";
+				this.panel.$(".property-gender").textContent = msg.char_prefs.gender === "male" ? "Male" : "Female";
 			}
 			if (msg.char_prefs.age) {
 				this.panel.$(".property-age").value = msg.char_prefs.age;
@@ -308,7 +308,7 @@ class PreferencesPanel {
 		}
 		if (msg.name_correction) {
 			const elem = this.panel.$(".property-name");
-			if (elem.value == msg.name_correction[0])
+			if (elem.value === msg.name_correction[0])
 				elem.value = msg.name_correction[1];
 		}
 		if (msg.job_preferences) {
@@ -355,7 +355,7 @@ class PreferencesPanel {
 					"white",
 					"job-selection-button"
 				);
-				if (key == "nomad") {
+				if (key === "nomad") {
 					if (setting) {
 						assistant_disable = true;
 						job_pref_button.style.color = "green";
@@ -378,7 +378,7 @@ class PreferencesPanel {
 						for (let i = 0; i <= 3; i++) {
 							const item = document.createElement("div");
 							item.classList.add("button", "dropdown-item", "white");
-							if (i == this.job_preferences[key]) {
+							if (i === this.job_preferences[key]) {
 								item.classList.add("selected");
 							}
 							item.textContent = job_pref_settings[i];
@@ -389,11 +389,11 @@ class PreferencesPanel {
 								job_pref_button.textContent = job_pref_settings[i];
 								job_pref_button.style.color = job_pref_colors[i];
 								this.job_preferences[key] = i;
-								if (i == 3) {
+								if (i === 3) {
 									for (const [otherjob, level] of Object.entries(
 										this.job_preferences
 									)) {
-										if (level == 3 && otherjob != key) {
+										if (level === 3 && otherjob != key) {
 											this.job_preferences[otherjob] = 2;
 											const otherelem = this.panel.$(
 												`.job-list div[data-job-key="${otherjob}"] .job-selection-button`
@@ -433,8 +433,8 @@ class PreferencesPanel {
 		const prefs = JSON.parse(JSON.stringify(this.char_prefs));
 		for (const part of ["l_arm", "r_arm", "l_leg", "r_leg", "chest", "head"]) {
 			let icon_state = `human_${part}`;
-			if (part == "chest" || part == "head") {
-				icon_state += prefs.gender == "female" ? "_f" : "_m";
+			if (part === "chest" || part === "head") {
+				icon_state += prefs.gender === "female" ? "_f" : "_m";
 			}
 			let color = null;
 			if (this.skin_tones) color = this.skin_tones[prefs.skin_tone];

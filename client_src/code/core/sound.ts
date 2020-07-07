@@ -7,7 +7,7 @@ class Sound {
 	spatial_node: any;
 	constructor(client: any, sndobj : any) {
 		this.client = client;
-		if (typeof sndobj.emitter == "string")
+		if (typeof sndobj.emitter === "string")
 			sndobj.emitter = this.client.atoms_by_netid[sndobj.emitter];
 		this.emitter = sndobj.emitter;
 		this.id = sndobj.id || "id" + Math.random();

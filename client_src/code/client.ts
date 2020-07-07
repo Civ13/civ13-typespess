@@ -142,10 +142,10 @@ class TypespessClient extends EventEmitter {
 				for (const key in inst) {
 					if (!Object.prototype.hasOwnProperty.call(inst,key)) continue;
 					if (
-						key == "appearance" ||
-						key == "network_id" ||
-						key == "overlays" ||
-						key == "components"
+						key === "appearance" ||
+						key === "network_id" ||
+						key === "overlays" ||
+						key === "components"
 					) {
 						continue;
 					}
@@ -243,7 +243,7 @@ class TypespessClient extends EventEmitter {
 const _chain_parent = Symbol("_chain_parent");
 const _chain_spliced = Symbol("_chain_spliced");
 (TypespessClient.chain_func = function (func1: any, func2: any) {
-	if (func2 == undefined) throw new Error("Chaining undefined function!");
+	if (func2 === undefined) throw new Error("Chaining undefined function!");
 	function chained_func(this: any, ...args: any[]) {
 		while (
 			chained_func[_chain_parent] &&

@@ -51,7 +51,7 @@ class LightingObject extends Component {
 
 	draw(ctx: { globalCompositeOperation: string; drawImage: (arg0: any, arg1: number, arg2: number) => void; }, timestamp: any) {
 		if (
-			this.atom.screen_loc_x != null || this.radius !== +this.radius || !this.enabled
+			this.atom.screen_loc_x != null || this.radius !=== +this.radius || !this.enabled
 		)
 			return;
 
@@ -138,20 +138,20 @@ class LightingObject extends Component {
 						}
 						if (
 							(wall1.x1 > 0 &&
-				wall1.x1 == wall2.x1 &&
-				(wall1.y1 == wall2.y2 || wall1.y2 == wall2.y1)) || (wall1.y1 > 0 &&
-				wall1.y1 == wall2.y1 &&
-				(wall1.x1 == wall2.x2 || wall1.x2 == wall2.x1)) || (wall1.x2 < 0 &&
-				wall1.x2 == wall2.x2 &&
-				(wall1.y1 == wall2.y2 || wall1.y2 == wall2.y1)) || (wall1.y2 < 0 &&
-				wall1.y2 == wall2.y2 &&
-				(wall1.x1 == wall2.x2 || wall1.x2 == wall2.x1))
+				wall1.x1 === wall2.x1 &&
+				(wall1.y1 === wall2.y2 || wall1.y2 === wall2.y1)) || (wall1.y1 > 0 &&
+				wall1.y1 === wall2.y1 &&
+				(wall1.x1 === wall2.x2 || wall1.x2 === wall2.x1)) || (wall1.x2 < 0 &&
+				wall1.x2 === wall2.x2 &&
+				(wall1.y1 === wall2.y2 || wall1.y2 === wall2.y1)) || (wall1.y2 < 0 &&
+				wall1.y2 === wall2.y2 &&
+				(wall1.x1 === wall2.x2 || wall1.x2 === wall2.x1))
 						) {
-							if (wall1.x1 == wall2.x1 || wall1.x2 == wall2.x2) {
+							if (wall1.x1 === wall2.x1 || wall1.x2 === wall2.x2) {
 								if (wall2.used_vertically) continue;
 								wall2.used_vertically = true;
 							}
-							if (wall1.y1 == wall2.y1 || wall1.y2 == wall2.y2) {
+							if (wall1.y1 === wall2.y1 || wall1.y2 === wall2.y2) {
 								if (wall2.used_horizontally) continue;
 								wall2.used_horizontally = true;
 							}
@@ -193,7 +193,7 @@ class LightingObject extends Component {
 						path.push([cx + x2 * sx, cy + y1 * sy]);
 						path.push([cx + x2 * sx, cy + (y1 + wall.base_height) * sy]);
 					} else if (y1 <= 0 && y2 >= 0) {
-						flip = sx == sy;
+						flip = sx === sy;
 						path.push([cx + (x1 + wall.base_width) * sx, cy + y1 * sy]);
 						path.push([cx + x1 * sx, cy + y1 * sy]);
 						let scalar = (this.radius * 32 + 48) / x1;
@@ -228,12 +228,12 @@ class LightingObject extends Component {
 					if (!flip) {
 						// draw it in a way that makes sure it winds in the right direction
 						for (let i = 0; i < path.length; i++) {
-							if (i == 0) bctx.moveTo(path[i][0], path[i][1]);
+							if (i === 0) bctx.moveTo(path[i][0], path[i][1]);
 							else bctx.lineTo(path[i][0], path[i][1]);
 						}
 					} else {
 						for (let i = path.length - 1; i >= 0; i--) {
-							if (i == path.length - 1) bctx.moveTo(path[i][0], path[i][1]);
+							if (i === path.length - 1) bctx.moveTo(path[i][0], path[i][1]);
 							else bctx.lineTo(path[i][0], path[i][1]);
 						}
 					}
