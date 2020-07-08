@@ -1,4 +1,4 @@
-
+import * as PouchDB from "pouchdb";
 
 class LoginPanel {
 	panel: any;

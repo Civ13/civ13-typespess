@@ -69,11 +69,9 @@ Windows PowerShell.lnk
 *.code-workspace
 maps/newmap.bsmap
 quick_launch.bat
-tools/unused-files-finder/unused.txt
-tools/unused-files-finder/jslist.txt
-tools/unused-files-finder/imglist.txt
 .eslintrc.json
 .eslintignore
 launch_client.bat
 resources/client.ts
 full_launch.bat
+pouchdb/
