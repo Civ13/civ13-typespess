@@ -75,3 +75,4 @@ tools/unused-files-finder/imglist.txt
 .eslintrc.json
 .eslintignore
 launch_client.bat
+resources/client.ts
