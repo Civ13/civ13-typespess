@@ -84,7 +84,7 @@ class FootItem extends Component {
 	mob_moved(movement) {
 		if (!movement.offset) return;
 		for (let [type, amount] of Object.entries(this.footprint_amounts)) {
-			if (amount <= 0) continue;
+			if (amount <= 0) {continue;}
 			let valid = true;
 			for (let obj of this.a.crosses()) {
 				if (

@@ -8,3 +8,4 @@ ts-node compile.ts
 cd -
 cd maps
 ts-node mapgen.ts
+

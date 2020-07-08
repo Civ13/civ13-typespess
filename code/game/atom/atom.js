@@ -1093,7 +1093,7 @@ class Atom extends EventEmitter {
 					}
 				}
 			}
-			if (clang) continue;
+			if (clang) {continue;}
 			for (let common of result.common_crossers) {
 				if (!this.can_move_within(common, remaining_x, remaining_y, reason)) {
 					clang = true;
@@ -1103,7 +1103,7 @@ class Atom extends EventEmitter {
 					}
 				}
 			}
-			if (clang) continue;
+			if (clang) {continue;}
 			for (let gained of result.gained_crossers) {
 				if (!this.can_cross(gained, remaining_x, remaining_y, reason)) {
 					clang = true;
@@ -1113,7 +1113,7 @@ class Atom extends EventEmitter {
 					}
 				}
 			}
-			if (clang) continue;
+			if (clang) {continue;}
 
 			cx += step_x * i;
 			cy += step_y * i;
@@ -1516,7 +1516,7 @@ class Atom extends EventEmitter {
 			}
 		}
 		for (let loc of this.partial_locs()) {
-			if (!loc.is_base_loc) continue;
+			if (!loc.is_base_loc) {continue;}
 			for (let hearer of loc.hearers)
 				hearer.c.Hearer.enqueue_update_visible_tiles();
 		}
@@ -1650,7 +1650,7 @@ class Atom extends EventEmitter {
 		if (this.template && this.template.components) {
 			for (let component_name of this.template.components) {
 				var component = this.components[component_name];
-				if (!(component instanceof Component.Networked)) continue;
+				if (!(component instanceof Component.Networked)) {continue;}
 				submessage.components.push(component_name);
 				submessage.component_vars[
 					component_name

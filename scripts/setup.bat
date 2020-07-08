@@ -9,24 +9,18 @@ cd..
 call npm install
 call npm install -g typescript
 call npm install -g ts-node
-
 echo.
 echo Packages installed.
-
 cd client_src
 echo Browserifying client...
-
 echo.
 call ts-node compile.ts
-
 echo.
 echo Done.
-
 echo.
 echo Generating the map...
 cd maps
 call ts-node mapgen.ts
 echo .
 echo Everything is done.
-
 echo.

@@ -104,7 +104,7 @@ class MobHud extends Component {
 	reorganize_alerts() {
 		var alert_idx = 0;
 		for (var alertname in this.alerts) {
-			if (!Object.prototype.hasOwnProperty.call(this.alerts,alertname)) continue;
+			if (!Object.prototype.hasOwnProperty.call(this.alerts,alertname)) {continue;}
 			var alert = this.alerts[alertname];
 			alert.screen_loc_x = 13.875;
 			alert.screen_loc_y = 12.84375 - 1.0625 * alert_idx;

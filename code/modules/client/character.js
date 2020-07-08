@@ -86,22 +86,22 @@ class CharacterPreferences {
 				number_of_alphanumberic++;
 				last_char_group = 4;
 			} else if (chr >= "0" && chr <= "9") {
-				if (!last_char_group) continue;
-				if (!allow_numbers) continue;
+				if (!last_char_group) {continue;}
+				if (!allow_numbers) {continue;}
 				t_out += chr;
 				number_of_alphanumberic++;
 				last_char_group = 3;
 			} else if ("'-.".includes(chr)) {
-				if (!last_char_group) continue;
+				if (!last_char_group) {continue;}
 				t_out += chr;
 				last_char_group = 2;
 			} else if ("~|@:#$%&*+".includes(chr)) {
-				if (!last_char_group) continue;
-				if (!allow_numbers) continue;
+				if (!last_char_group) {continue;}
+				if (!allow_numbers) {continue;}
 				t_out += chr;
 				last_char_group = 3;
 			} else if (chr == " ") {
-				if (last_char_group <= 1) continue;
+				if (last_char_group <= 1) {continue;}
 				t_out += chr;
 				last_char_group = 1;
 			} else {

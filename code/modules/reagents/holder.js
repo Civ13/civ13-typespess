@@ -215,7 +215,7 @@ class ReagentHolder extends Component {
 			);
 
 		for (let [key, reagent] of this.reagents) {
-			if (!this.should_metabolize_reagent(key, reagent)) continue;
+			if (!this.should_metabolize_reagent(key, reagent)) {continue;}
 			if (
 				reagent.overdose_threshold &&
 		reagent.volume >= reagent.overdose_threshold &&
@@ -247,7 +247,7 @@ class ReagentHolder extends Component {
 			this.addiction_tick -= 12;
 			for (let [key, addiction] of [...this.addictions]) {
 				addiction.addiction_stage += dt / 2;
-				if (addiction.addiction_stage < 1) continue;
+				if (addiction.addiction_stage < 1) {continue;}
 				let stage = Math.floor(addiction.addiction_stage / 10) + 1;
 				if (stage > 4) {
 					to_chat`<span class='notice'>You feel like you've gotten over your need for ${addiction.name}.</span>`(

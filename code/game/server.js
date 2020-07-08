@@ -98,7 +98,7 @@ class Typespess extends EventEmitter {
 		}
 		if (mod.templates) {
 			for (var templateName in mod.templates) {
-				if (!Object.prototype.hasOwnProperty.call(mod.templates,templateName)) continue;
+				if (!Object.prototype.hasOwnProperty.call(mod.templates,templateName)) {continue;}
 				if (this.templates[templateName])
 					throw new Error(`Template ${templateName} already exists!`);
 				var template = mod.templates[templateName];
@@ -122,8 +122,6 @@ class Typespess extends EventEmitter {
   * @param {Object} opts.demo_stream A stream (probably to a file) to log network updates to
   */
 	startServer({ websocket, demo_stream } = {}) {
-		if (global.is_bs_editor_env)
-			throw new Error("Server should not be started in editor mode");
 		this.wss = new WebSocket.Server(websocket);
 
 		this.wss.on("connection", (ws) => {
@@ -183,7 +181,7 @@ class Typespess extends EventEmitter {
 
 	[_net_tick]() {
 		for (let key in this.clients) {
-			if (!Object.prototype.hasOwnProperty.call(this.clients,key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(this.clients,key)) {continue;}
 			let client = this.clients[key];
 			client.send_network_updates();
 		}
@@ -242,10 +240,10 @@ class Typespess extends EventEmitter {
 		visible_tiles.add(atom.base_loc);
 		var used_tiles = new Set();
 		for (var tile of ring_tiles) {
-			if (used_tiles.has(tile)) continue;
+			if (used_tiles.has(tile)) {continue;}
 			let dx = tile.x - base_x;
 			let dy = tile.y - base_y;
-			if (!tile.opacity) continue;
+			if (!tile.opacity) {continue;}
 			if (tile.y != base_y) {
 				let left = base_x;
 				let right = base_x;
@@ -464,7 +462,7 @@ class Typespess extends EventEmitter {
 	instance_map_sync(obj, x = 0, y = 0, z = 0, dim) {
 		let inst_list = [];
 		for (var loc in obj.locs) {
-			if (!Object.prototype.hasOwnProperty.call(obj.locs,loc)) continue;
+			if (!Object.prototype.hasOwnProperty.call(obj.locs,loc)) {continue;}
 			for (var instobj of obj.locs[loc]) {
 				let base_template = this.templates[instobj.template_name];
 				if (!base_template) {
