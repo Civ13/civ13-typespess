@@ -9,6 +9,7 @@ cd..
 call npm install
 call npm install -g typescript
 call npm install -g ts-node
+call npm install -g pouchdb-server
 echo.
 echo Packages installed.
 cd client_src

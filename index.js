@@ -7,6 +7,7 @@
 const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 
+const Database = require("./code/database.ts");
 console.log("Loading game...");
 
 const server = new Typespess();
@@ -123,7 +124,6 @@ server.importModule(require("./code/onclick/interact.js"));
 server.importModule(require("./code/onclick/inventory.js"));
 server.importModule(require("./code/onclick/screen_objects.js"));
 
-// Load these packages within this if statement because they throw errors in atom.io
 const finalhandler = require("finalhandler");
 const http = require("http");
 const net = require("net");
@@ -132,6 +132,8 @@ const serveStatic = require("serve-static");
 const fs = require("fs");
 const url = require("url");
 const querystring = require("querystring");
+
+const database = new Database("typespess");
 
 const server_config = read_config("server.cson");
 const map = server_config.maps.current_map;
@@ -160,93 +162,20 @@ for (const [key, file] of Object.entries(server_config.http_opts.files)) {
 }
 
 if (server_config.gh_login.enabled) {
-	const authorization =
-		"Basic " +
-		Buffer.from(			`${server_config.gh_login.client_id}:${server_config.gh_login.client_secret}`
-		).toString("base64");
-	const invalid_tokens = new Set();
 	server.handle_login = function (ws) {
-		ws.send(JSON.stringify({login_type: "github",client_id: server_config.gh_login.client_id,})
+		ws.send(JSON.stringify({login_type: "database",client_id: server_config.gh_login.client_id,})
 		);
 		let id = null;
-		let name = null;
-		let token = null;
+		let validated = false;
 		const message_handler = (msg) => {
 			const obj = JSON.parse(msg);
-			if (obj.access_token) {
-				obj.access_token = "" + obj.access_token;
-				const req = https.request(					{
-					hostname: "api.github.com",
-					path: `/applications/${
-						server_config.gh_login.client_id
-					}/tokens/${querystring.escape(obj.access_token)}`,
-					method: "GET",
-					headers: {
-						"User-Agent": server_config.gh_login.user_agent,
-						Authorization: authorization,
-					},
-				},
-				(res) => {
-					res.setEncoding("utf8");
-					let data = "";
-					res.on("data", (chunk) => {
-						data += chunk;
-					});
-					res.on("end", () => {
-						const obj2 = JSON.parse(data);
-						if (!obj2.user || !obj2.scopes || !obj2.scopes.includes("user:email")
-						) {
-							ws.send(JSON.stringify({ valid: false }));
-						} else {
-							name = obj2.user.login;
-							id = obj2.user.id;
-							token = obj.access_token;
-							ws.send(JSON.stringify({
-								valid: true,
-								logged_in_as: obj2.user.login,
-								autojoin: server.dc_mobs[id] != null || server.clients[id] != null,
-							})
-							);
-						}
-					});
-				}
-				);
-				req.on("error", (err) => {
-					ws.send(JSON.stringify({ valid: false }));
-					console.error(err);
-				});
-				req.end();
-			} else if (obj.login) {
-				if (!id || !name || invalid_tokens.has(token)) {
-					return;
-				}
-				ws.removeListener("message", message_handler);
-				this.login(ws, id, name);
-			} else if (obj.logout) {
-				if (!token) {
-					return;
-				}
-				invalid_tokens.add(token);
-				const req = https.request({
-					hostname: "api.github.com",
-					path: `/applications/${
-						server_config.gh_login.client_id
-					}/grants/${querystring.escape(token)}`,
-					method: "DELETE",
-					headers: {
-						"User-Agent": server_config.gh_login.user_agent,
-						Authorization: authorization,
-					},
-				});
-				req.on("error", (err) => {
-					console.error(err);
-				});
-				req.end();
-			}
+			if (obj.access_token) {validated = database.authenticate(obj.name,obj.password);}
+	
+			if (validated) {ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: server.dc_mobs[id] != null || server.clients[id] != null}));}
+			else  {ws.send(JSON.stringify({ valid: false }));}
 		};
 		ws.on("message", message_handler);
-	};
-}
+	};}
 
 const serve = serveStatic(server.resRoot, { index: ["index.html"] });
 
