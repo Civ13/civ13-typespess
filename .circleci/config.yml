@@ -9,8 +9,9 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: cd scripts
-            - run: sudo sh setup.sh
+            - run: 
+                command: cd scripts
+                command: sudo sh setup.sh
             - run:
                 command: sudo sh launch_test.sh
                 no_output_timeout: 2m
