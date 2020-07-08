@@ -5,7 +5,6 @@ const CHANGE_LEVEL_ICON_STATE = 2;
 const CHANGE_LEVEL_ICON = 3;
 
 const color_canvas = document.createElement("canvas");
-global.color_canvas = color_canvas;
 
 class IconRenderer {
 	client: any;

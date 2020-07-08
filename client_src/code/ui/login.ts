@@ -1,5 +1,10 @@
-import * as PouchDB from "pouchdb";
+const PouchDB = require("pouchdb");
 
+const db = new PouchDB("player_db");
+
+db.info().then(function (info: any) {
+	console.log(info);
+});
 class LoginPanel {
 	panel: any;
 	connection: any;
