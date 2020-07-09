@@ -74,5 +74,6 @@ tools/unused-files-finder/jslist.txt
 tools/unused-files-finder/imglist.txt
 .eslintrc.json
 .eslintignore
-launch_client.bat
 resources/client.ts
+pouchdb/
+full_launch.bat
