@@ -36,6 +36,7 @@ class LoginPanel {
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
 		} else if (obj.login_type === "database") {
+			console.log(`login: ${obj}`)
 			let div = document.createElement("div");
 			div.classList.add("vertical-margins");
 			const text_input = document.createElement("input");
@@ -55,14 +56,41 @@ class LoginPanel {
 			div.classList.add("vertical-margins");
 			const button = document.createElement("div");
 			button.classList.add("button");
-			button.textContent = "Connect";
+			button.textContent = "Login";
 			button.addEventListener("click", () => {
 				this.connection.send(JSON.stringify({ name: text_input.value, password: password_input.value }));
 				this.login_finish();
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
-		}
+		} else if (obj.valid !== undefined) {
+			if (obj.valid) {
+				this.panel.content_obj.getElementsByClassName(
+					"logged-in"
+				)[0].style.display = "block";
+				this.panel.content_obj.getElementsByClassName(
+					"not-logged-in"
+				)[0].style.display = "none";
+				this.panel.content_obj
+					.getElementsByClassName("connect-button")[0]
+					.classList.remove("disabled");
+				this.panel.content_obj.getElementsByClassName(
+					"logged-in-as"
+				)[0].textContent = obj.logged_in_as;
+				if (obj.autojoin) {
+					this.connection.send(JSON.stringify({ login: true }));
+					this.login_finish();}
+			}} else {
+				this.panel.content_obj.getElementsByClassName(
+					"logged-in"
+				)[0].style.display = "none";
+				this.panel.content_obj.getElementsByClassName(
+					"not-logged-in"
+				)[0].style.display = "block";
+				this.panel.content_obj
+					.getElementsByClassName("connect-button")[0]
+					.classList.add("disabled");
+			}
 	}
 
 	login_finish() {

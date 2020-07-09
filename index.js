@@ -182,43 +182,7 @@ const serve = serveStatic(server.resRoot, { index: ["index.html"] });
 const http_handler = (req, res) => {
 	const done = finalhandler(req, res);
 	const url_obj = url.parse(req.url, true);
-	if (url_obj.pathname == "/gh-oauth" && server_config.gh_login.enabled) {
-		const req2 = https.request(			{
-			hostname: "github.com",
-			path: "/login/oauth/access_token",
-			method: "POST",
-			headers: { "User-Agent": server_config.gh_login.user_agent },
-		},
-		(res2) => {
-			res2.setEncoding("utf8");
-			let data = "";
-			res2.on("data", (chunk) => {
-				data += chunk;
-			});
-			res2.on("end", () => {
-				const obj = querystring.parse(data);
-				if (!obj.access_token) {
-					console.error(obj);
-					return done();
-				}
-				res.writeHead(200, { "Content-Type": "text/html" });
-				res.write(`<html><head><script>localStorage.setItem("gh_access_token", ${JSON.stringify(							obj.access_token
-				)}); window.location.href="/";</script></head><body></body></html>`
-				);
-				res.end();
-			});
-		}
-		);
-		req2.on("error", (err) => {
-			console.error(err);
-			done();
-		});
-		req2.write(querystring.stringify({
-			code: url_obj.query.code,
-		})
-		);
-		req2.end();
-	} else if (url_obj.pathname == "/status") {
+	if (url_obj.pathname == "/status") {
 		res.setHeader("Access-Control-Allow-Origin", "*");
 		res.writeHead(200, { "Content-Type": "application/json" });
 		const clients = [...Object.keys(server.clients)];
