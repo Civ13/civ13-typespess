@@ -11,7 +11,7 @@ const used_bundler = browserify({
 used_bundler.plugin(tsify, { noImplicitAny: false });
 used_bundler.bundle(function (err: Error, buf: string) {
 	if (err) {return console.log(err);}
-	fs.writeFile("../resources/client.ts", buf, function (err: Error) {
+	fs.writeFile("../resources/client.js", buf, function (err: Error) {
 		if (err) {return console.log(err);}});
 });
 console.log("done.");
