@@ -5,9 +5,6 @@ http_opts:
 		cert: null
 https: false
 gh_login:
-	enabled: false
-	client_id: null
-	client_secret: null
-	user_agent: "Typespess"
+	enabled: true
 maps:
 	current_map: "newmap"

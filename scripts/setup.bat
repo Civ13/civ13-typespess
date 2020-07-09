@@ -20,8 +20,10 @@ echo.
 echo Done.
 echo.
 echo Generating the map...
+cd..
 cd maps
 call ts-node mapgen.ts
 echo .
 echo Everything is done.
 echo.
+pause

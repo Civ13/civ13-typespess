@@ -163,7 +163,7 @@ for (const [key, file] of Object.entries(server_config.http_opts.files)) {
 
 if (server_config.gh_login.enabled) {
 	server.handle_login = function (ws) {
-		ws.send(JSON.stringify({login_type: "database",client_id: server_config.gh_login.client_id,})
+		ws.send(JSON.stringify({login_type: "database"})
 		);
 		let id = null;
 		let validated = false;
@@ -214,8 +214,6 @@ const http_handler = (req, res) => {
 			done();
 		});
 		req2.write(querystring.stringify({
-			client_id: server_config.gh_login.client_id,
-			client_secret: server_config.gh_login.client_secret,
 			code: url_obj.query.code,
 		})
 		);

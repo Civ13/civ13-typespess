@@ -17,7 +17,7 @@ class Database {
 		this.db.find({selector: {name: tname}, fields: ["_id"]}).then(function (result : any) {
 			// handle result
 			for (const i of result.docs)
-			{if (i.password == tpassword && i.name == tname && ibanned == false)
+			{if (i.password == tpassword && i.name == tname && i.banned == false)
 			{return true;}}
 		}).catch(function (err: Error) {console.log(err);});
 		return false;
