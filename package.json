@@ -10,7 +10,6 @@
 		"url": "https://github.com/civ13/civ13-typespess.git"
 	},
 	"dependencies": {
-		"@types/pouchdb": "^6.4.0",
 		"pouchdb": "^7.2.1",
 		"cson": "^7.12.0",
 		"finalhandler": "^1.1.2",
@@ -21,7 +20,6 @@
 	},
 	"devDependencies": {
 		"browserify": "^16.5.1",
-		"tsify": "^4.0.2",
-		"typescript": "^3.9.5"
+		"tsify": "^4.0.2"
 	}
 }
