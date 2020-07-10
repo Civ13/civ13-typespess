@@ -57,12 +57,12 @@ finalData = finalData + "	\"locs\": {\n";
 for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 	for (let j = inc_h; j <= Math.abs(inc_h); j++) {
 		let hascomma = "		],\n";
-		if (j == Math.abs(inc_h) && i == Math.abs(inc_w)) {
+		if (j === Math.abs(inc_h) && i === Math.abs(inc_w)) {
 			hascomma = "		]\n";
 		}
 		const floorname = random_floor(originalLoadedConfigs[3]);
 		finalData = finalData + `		"${i},${j},0": [\n`;
-		if (i == inc_w) {
+		if (i === inc_w) {
 			finalData = finalData + "			{\n";
 			finalData = finalData + "				\"instance_vars\": {\n";
 			finalData = finalData + "					\"components\": {\n";
@@ -94,7 +94,7 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		finalData = finalData + `				"variant_leaf_path": ["${floorname}"],\n`;
 		finalData = finalData + `				"x": ${i},\n`;
 		finalData = finalData + `				"y": ${j}\n`;
-		if (i == 0 && j == 0) {
+		if (i === 0 && j === 0) {
 			finalData = finalData + "			},\n";
 			finalData = finalData + "			{\n";
 			finalData = finalData + "				\"template_name\": \"sun\",\n";
