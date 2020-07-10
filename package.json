@@ -14,6 +14,7 @@
 		"cson": "^7.12.0",
 		"finalhandler": "^1.1.2",
 		"pouchdb": "^7.2.1",
+		"pouchdb-find": "^7.2.1",
 		"serve-static": "^1.14.1",
 		"toposort": "^2.0.2",
 		"underscore": "^1.9.0",

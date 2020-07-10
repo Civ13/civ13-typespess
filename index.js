@@ -1,7 +1,3 @@
-/* eslint-disable camelcase */
-/* eslint-disable max-len */
-
-
 // BASED OFF OF tgstation COMMIT 910be9f4e29270e3a0a36ed8042310ed4bee1845
 
 const Typespess = require("./code/game/server.js");
@@ -131,7 +127,6 @@ const https = require("https");
 const serveStatic = require("serve-static");
 const fs = require("fs");
 const url = require("url");
-const querystring = require("querystring");
 
 const database = new Database("typespess");
 
@@ -169,7 +164,7 @@ if (server_config.gh_login.enabled) {
 		let validated = false;
 		const message_handler = (msg) => {
 			const obj = JSON.parse(msg);
-			if (obj.access_token) {validated = database.authenticate(obj.name,obj.password);}
+			if (obj.request_check == true) {validated = database.authenticate(obj.name,obj.password);}
 	
 			if (validated) {ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: server.dc_mobs[id] != null || server.clients[id] != null}));}
 			else  {ws.send(JSON.stringify({ valid: false }));}

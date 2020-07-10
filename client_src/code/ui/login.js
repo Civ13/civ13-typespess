@@ -55,7 +55,7 @@ class LoginPanel {
 			button.classList.add("button");
 			button.textContent = "Login";
 			button.addEventListener("click", () => {
-				this.connection.send(JSON.stringify({ name: text_input.value, password: password_input.value }));
+				this.connection.send(JSON.stringify({ name: text_input.value, password: password_input.value , request_check: true}));
 				this.login_finish();
 			});
 			div.appendChild(button);
