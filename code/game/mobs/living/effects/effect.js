@@ -20,7 +20,7 @@ class StatusEffect {
 		mob.c.LivingMob.effects[this.constructor.name] = this;
 	}
 
-	adjust() {return;}
+	adjust() {}
 
 	unapply() {
 		if (!this.mob) return;
