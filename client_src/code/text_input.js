@@ -1,7 +1,6 @@
 
 
 module.exports.now = function (client) {
-	if (global.is_bs_editor_env) return;
 	window.addEventListener("load", () => {
 		let input_elem = document.getElementById("main-text-input");
 		document.addEventListener("keydown", (e) => {
