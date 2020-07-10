@@ -6,7 +6,7 @@ class Database {
 	constructor(name: string) {
 		this.name = name;
 		this.path = `http://localhost:5984/${name}`;
-		this.db = new PouchDB("http://localhost:5984/typespess");
+		this.db = new PouchDB(`http://localhost:5984/${name}`);
 	}
 
 	get_db_info(){
