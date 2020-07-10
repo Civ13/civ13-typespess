@@ -10,20 +10,22 @@
 		"url": "https://github.com/civ13/civ13-typespess.git"
 	},
 	"dependencies": {
+		"@types/pouchdb": "^6.4.0",
 		"cson": "^7.12.0",
 		"finalhandler": "^1.1.2",
+		"pouchdb": "^7.2.1",
 		"serve-static": "^1.14.1",
 		"toposort": "^2.0.2",
 		"underscore": "^1.9.0",
 		"ws": "^7.3.0"
 	},
 	"devDependencies": {
-		"typescript": "^3.9.5",
 		"@types/node": "^14.0.14",
-		"@typescript-eslint/eslint-plugin": "^3.4.0",
-		"@typescript-eslint/parser": "^3.4.0",
-		"eslint": "^7.3.1",
+		"@typescript-eslint/eslint-plugin": "^3.6.0",
+		"@typescript-eslint/parser": "^3.6.0",
 		"browserify": "^16.5.1",
-		"tsify": "^4.0.2"
+		"eslint": "^7.3.1",
+		"tsify": "^4.0.2",
+		"typescript": "^3.9.5"
 	}
 }
