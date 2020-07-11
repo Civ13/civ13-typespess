@@ -78,3 +78,4 @@ resources/client.ts
 pouchdb/
 full_launch.bat
 .eslintrc.js
+server.bat

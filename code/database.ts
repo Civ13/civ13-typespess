@@ -18,12 +18,12 @@ class Database {
 		this.db.get(tname).catch(function (err: Error) {
 			if (err.name === 'not_found') {
 				console.log("user not found!")
-				return false
+				return 0
 			} else {throw err;}
 			}).then(function (i: any) {
 				{if (i.password && i.name && i.password == tpassword && i.name == tname && i.banned == false)
-				{console.log("	Accepted");return true;}
-				else {console.log("	Rejected");return false;}}
+				{console.log("	Accepted");return 1;}
+				else {console.log("	Rejected");return 0;}}
 			}).catch(function (err: Error) {throw err;});
 	}
 }
