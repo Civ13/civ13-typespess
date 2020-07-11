@@ -15,14 +15,16 @@ class Database {
 	}
 	authenticate(tname : string, tpassword: string){
 		console.log("Authenticating "+tname+"...")
-		this.db.get(tname).then(function (result : any) {
-			// handle result
-			for (const i of result.docs)
-			{if (i.password == tpassword && i.name == tname && i.banned == false)
-			{console.log("	Accepted");return true;}}
-		}).catch(function (err: Error) {console.log(err);});
-		console.log("	Rejected!");
-		return false;
+		this.db.get(tname).catch(function (err: Error) {
+			if (err.name === 'not_found') {
+				console.log("user not found!")
+				return false
+			} else {throw err;}
+			}).then(function (i: any) {
+				{if (i.password && i.name && i.password == tpassword && i.name == tname && i.banned == false)
+				{console.log("	Accepted");return true;}
+				else {console.log("	Rejected");return false;}}
+			}).catch(function (err: Error) {throw err;});
 	}
 }
 module.exports = Database;
