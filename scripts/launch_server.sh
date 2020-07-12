@@ -3,5 +3,5 @@ cd -
 cd client_src
 echo ts-node compile.ts
 cd -
-ts-node index.js
-
+echo ts-node index.js
+cd pouchdb

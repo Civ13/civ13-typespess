@@ -165,7 +165,7 @@ class Typespess extends EventEmitter {
   * @param {String} name The name to display for the client
   * @returns {Client}
   */
-	login(socket, username, name) {
+	login(socket, username) {
 		if (this.clients[username] && this.clients[username].socket) {
 			var mob = this.clients[username].mob;
 			this.clients[username].mob = null;
@@ -173,7 +173,7 @@ class Typespess extends EventEmitter {
 			delete this.clients[username];
 			if (mob) mob.c.Mob.key = username;
 		}
-		var client = new Client(socket, username, this, name);
+		var client = new Client(socket, username, this);
 		this.clients[username] = client;
 		this.clients_by_name[client.name] = client;
 		return client;
