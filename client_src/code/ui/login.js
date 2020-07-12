@@ -61,7 +61,6 @@ class LoginPanel {
 				this.connection.send(JSON.stringify({name: text_input.value, password: password_input.value , request_check: true}));
 				localStorage.setItem("stored_username", text_input.value);
 				localStorage.setItem("stored_password", password_input.value);
-				this.login_finish();
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
@@ -80,7 +79,7 @@ class LoginPanel {
 					"logged-in-as"
 				)[0].textContent = obj.logged_in_as;
 				if (obj.autojoin) {
-					this.connection.send(JSON.stringify({ login: true }));
+					this.connection.send(JSON.stringify({ login: obj.logged_in_as }));
 					this.login_finish();}
 			}} else {
 				this.panel.content_obj.getElementsByClassName(
