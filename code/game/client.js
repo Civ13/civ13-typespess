@@ -17,7 +17,7 @@ const _tiles_to_remove = Symbol("_tiles_to_remove");
  * @alias Client
  */
 class Client extends EventEmitter {
-	constructor(socket, username, server, name) {
+	constructor(socket, username, server) {
 		super();
 		this.socket = socket;
 		/**
@@ -27,7 +27,7 @@ class Client extends EventEmitter {
 		/**
 	* @type {string}
 	*/
-		this.name = name || username;
+		this.name = username;
 		/**
 	* @type {Typespess}
 	*/

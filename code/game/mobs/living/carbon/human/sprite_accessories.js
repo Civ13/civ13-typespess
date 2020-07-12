@@ -18,7 +18,7 @@ class SpriteAccessory {
 
 class HairAccessory extends SpriteAccessory {
 	constructor(obj = {}) {
-		obj.icon = Object.prototype.hasOwnProperty.call(obj,"icon")
+		obj.icon = obj.hasOwnProperty("icon")
 			? obj.icon
 			: "icons/mob/human_face.png";
 		super(obj);
