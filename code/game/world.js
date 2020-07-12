@@ -1,16 +1,26 @@
 /** @typedef {import('./server')} Typespess */
 /** @typedef {import('./atom/atom')} Typespess.Atom */
 
+const pollFunc = require("./pollfunc.js")
+const eternalPollFunc = require("./scheduler.js");
+
 class World {
 	constructor(server) {
 		this.server = server;
-		this.servertime = 0; //server time in seconds
+		this.servertime = 0; //server time in seconds (1000ms)
 
 		this.season = "Summer";
 		this.possible_seasons = ["Spring", "Summer", "Autumn", "Winter"];
 		this.gametime = 0; //ingame time, in minutes (1440 = 24 hours)
 		this.weather = "Clear";
 		this.possible_weather = ["Clear", "Wet", "Storm"];
+
+		this.weather_running = true;
+		this.seasons_running = true;
+
+		eternalPollFunc(time_scheduler,1000);
+		eternalPollFunc(season_scheduler,3600000);
+		eternalPollFunc(weather_scheduler,60000);
 	}
 	
 	get_tod() { //gets the time of day in HH:MM
@@ -20,6 +30,19 @@ class World {
 		if (hours < 10) {var nhours = "0"+String(hours)}
 		if (minutes < 10) {var nminutes = "0"+String(minutes)}
 		return `${nhours}:${nminutes}`
+	}
+	get_descriptive_tod() { //gets the time of day in a string, like "Night", "Morning", and so on
+		let hours = Math.floor(this.gametime/60);
+		let desc_tod = "Unknown"
+		if (hours >= 0 && hours < 4) {desc_tod = "Night"}
+		else if (hours >= 4 && hours < 8) {desc_tod = "Early Morning"}
+		else if (hours >= 8 && hours < 12) {desc_tod = "Late Morning"}
+		else if (hours >= 12 && hours < 16) {desc_tod = "Early Afternoon"}
+		else if (hours >= 16 && hours < 20) {desc_tod = "Late Afternoon"}
+		else if (hours >= 20 && hours < 24) {desc_tod = "Evening"}
+		else {desc_tod = "Night"}
+
+		return desc_tod
 	}
 	change_season(new_season) { //sets the season to the input variable, if its in the list of possible_seasons
 		for (var s of this.possible_seasons)
@@ -43,5 +66,8 @@ class World {
 		console.log("Randomly changed the weather to "+this.weather);
 		return true;
 	}
+	time_scheduler() {this.servertime+=1;this.gametime+=0.25;} //4 seconds = 1 ingame minute
+	season_scheduler() {if (this.seasons_running) {this.advance_season();}}
+	weather_scheduler() {if (this.weather_running && Math.random()<=0.18){this.random_weather()};}
 }
-module.exports = World;
+module.exports = {World};
