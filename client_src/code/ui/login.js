@@ -34,7 +34,23 @@ class LoginPanel {
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
-		} else if (obj.login_type === "database" && obj.valid !== true ) {
+		} else if (obj.valid==true) {
+			this.panel.content_obj.getElementsByClassName(
+				"logged-in"
+			)[0].style.display = "block";
+			this.panel.content_obj.getElementsByClassName(
+				"not-logged-in"
+			)[0].style.display = "none";
+			this.panel.content_obj
+				.getElementsByClassName("connect-button")[0]
+				.classList.remove("disabled");
+			this.panel.content_obj.getElementsByClassName(
+				"logged-in-as"
+			)[0].textContent = obj.logged_in_as;
+			if (obj.autojoin) {
+				this.connection.send(JSON.stringify({ login: obj.logged_in_as }));
+				this.login_finish();}
+		} else if (obj.login_type === "database") {
 			let div = document.createElement("div");
 			div.classList.add("vertical-margins");
 			const text_input = document.createElement("input");
@@ -60,30 +76,10 @@ class LoginPanel {
 				this.connection.send(JSON.stringify({name: text_input.value, password: password_input.value , request_check: true}));
 				localStorage.setItem("stored_username", text_input.value);
 				localStorage.setItem("stored_password", password_input.value);
-				if (obj.valid) {
-					this.connection.send(JSON.stringify({ login: obj.logged_in_as }));
-					this.login_finish();}
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
-		} else if (obj.valid !== undefined) {
-			if (obj.valid==true) {
-				this.panel.content_obj.getElementsByClassName(
-					"logged-in"
-				)[0].style.display = "block";
-				this.panel.content_obj.getElementsByClassName(
-					"not-logged-in"
-				)[0].style.display = "none";
-				this.panel.content_obj
-					.getElementsByClassName("connect-button")[0]
-					.classList.remove("disabled");
-				this.panel.content_obj.getElementsByClassName(
-					"logged-in-as"
-				)[0].textContent = obj.logged_in_as;
-				if (obj.autojoin) {
-					this.connection.send(JSON.stringify({ login: obj.logged_in_as }));
-					this.login_finish();}
-			}} else {
+			} else {
 				this.panel.content_obj.getElementsByClassName(
 					"logged-in"
 				)[0].style.display = "none";
