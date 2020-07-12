@@ -13,18 +13,14 @@ class Database {
 		this.db.info().then(function (info: any) {
 			console.log(info);});
 	}
-	authenticate(tname : string, tpassword: string){
+	async authenticate(tname : string, tpassword: string){
 		console.log("Authenticating "+tname+"...")
-		this.db.get(tname).catch(function (err: Error) {
-			if (err.name === 'not_found') {
-				console.log("user not found!")
-				return 0
-			} else {throw err;}
-			}).then(function (i: any) {
-				{if (i.password && i.name && i.password == tpassword && i.name == tname && i.banned == false)
-				{console.log("	Accepted");return 1;}
-				else {console.log("	Rejected");return 0;}}
-			}).catch(function (err: Error) {throw err;});
+		var i = await this.db.get(tname);
+		let accepted = {value: false, name: tname}
+		if (i.password == tpassword && i.name == tname && i.banned == false)
+			{console.log("	Accepted");accepted.value=true;return accepted;}
+		else
+			{console.log("	Rejected");accepted.value=false;return accepted;}
 	}
 }
 module.exports = Database;
