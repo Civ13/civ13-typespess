@@ -75,3 +75,4 @@ launch_client.bat
 resources/client.ts
 full_launch.bat
 pouchdb/
+server.bat
