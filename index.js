@@ -158,15 +158,18 @@ for (const [key, file] of Object.entries(server_config.http_opts.files)) {
 
 if (server_config.gh_login.enabled) {
 	server.handle_login = function (ws) {
-		ws.send(JSON.stringify({login_type: "database"})
-		);
-		let id = null;
+		ws.send(JSON.stringify({login_type: "database"}));
 		let validated = {value: false, name: "none"};
 		const message_handler = (msg) => {
 			const obj = JSON.parse(msg);
 			if (obj.request_check == true) {database.authenticate(obj.name,obj.password).then(function(results){validated=results;
 			if (validated.value==true && validated.name==obj.name) {ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));}
 			else  {ws.send(JSON.stringify({ valid: false }));}});}
+
+			else if(obj.login) {
+				console.log("received login")
+				ws.removeListener("message", message_handler);
+				this.login(ws, obj.login);}
 		};
 		ws.on("message", message_handler);
 	};}

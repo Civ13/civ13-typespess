@@ -34,8 +34,7 @@ class LoginPanel {
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
-		} else if (obj.login_type === "database") {
-			console.log(`login: ${obj}`)
+		} else if (obj.login_type === "database" && obj.valid !== true ) {
 			let div = document.createElement("div");
 			div.classList.add("vertical-margins");
 			const text_input = document.createElement("input");
@@ -61,11 +60,14 @@ class LoginPanel {
 				this.connection.send(JSON.stringify({name: text_input.value, password: password_input.value , request_check: true}));
 				localStorage.setItem("stored_username", text_input.value);
 				localStorage.setItem("stored_password", password_input.value);
+				if (obj.valid) {
+					this.connection.send(JSON.stringify({ login: obj.logged_in_as }));
+					this.login_finish();}
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
 		} else if (obj.valid !== undefined) {
-			if (obj.valid) {
+			if (obj.valid==true) {
 				this.panel.content_obj.getElementsByClassName(
 					"logged-in"
 				)[0].style.display = "block";
