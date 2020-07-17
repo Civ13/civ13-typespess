@@ -1,12 +1,9 @@
 /** @typedef {import('./server')} Typespess */
 /** @typedef {import('./atom/atom')} Typespess.Atom */
 
-const pollFunc = require("./pollfunc.js")
-const eternalPollFunc = require("./scheduler.js");
-
 class World {
-	constructor(server) {
-		this.server = server;
+	
+	constructor() {
 		this.servertime = 0; //server time in seconds (1000ms)
 
 		this.season = "Summer";
@@ -18,9 +15,9 @@ class World {
 		this.weather_running = true;
 		this.seasons_running = true;
 
-		eternalPollFunc(time_scheduler,1000);
-		eternalPollFunc(season_scheduler,3600000);
-		eternalPollFunc(weather_scheduler,60000);
+		this.time_scheduler.bind(this);
+		this.season_scheduler.bind(this);
+		this.weather_scheduler.bind(this);
 	}
 	
 	get_tod() { //gets the time of day in HH:MM
@@ -66,8 +63,8 @@ class World {
 		console.log("Randomly changed the weather to "+this.weather);
 		return true;
 	}
-	time_scheduler() {this.servertime+=1;this.gametime+=0.25;} //4 seconds = 1 ingame minute
-	season_scheduler() {if (this.seasons_running) {this.advance_season();}}
-	weather_scheduler() {if (this.weather_running && Math.random()<=0.18){this.random_weather()};}
+	time_scheduler(thisworld) {thisworld.servertime+=1;thisworld.gametime+=0.25;setTimeout(thisworld.time_scheduler, 6000, thisworld);} //4 seconds = 1 ingame minute
+	season_scheduler(thisworld) {if (thisworld.seasons_running) {thisworld.advance_season();setTimeout(thisworld.season_scheduler, 3600000, thisworld);}}
+	weather_scheduler(thisworld) {if (thisworld.weather_running && Math.random()<=0.18){thisworld.random_weather()};setTimeout(thisworld.weather_scheduler, 60000, thisworld);}
 }
-module.exports = {World};
+module.exports = World;

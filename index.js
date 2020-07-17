@@ -2,11 +2,15 @@
 
 const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
-
+const World = require("./code/game/world.js");
 const Database = require("./code/database.ts");
+const Scheduler = require("./code/game/scheduler.js");
+
 console.log("Loading game...");
 
 const server = new Typespess();
+const world = new World();
+
 server.resRoot = "./resources/";
 
 server.config = read_config("config.cson");
@@ -230,6 +234,11 @@ if (server_config.https) {
 
 server.startServer({ websocket: { server: http_server } });
 console.log("Server started.");
+
+//schedulers
+world.time_scheduler(world);
+world.season_scheduler(world);
+world.weather_scheduler(world);
 
 //this signals the continuous integration program to exit.
 const args = process.argv;

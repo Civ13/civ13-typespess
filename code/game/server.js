@@ -9,7 +9,6 @@ const Sound = require("./sound.js");
 const utils = require("./utils.js");
 const VisibilityGroup = require("./atom/visgroup.js");
 const Dimension = require("./dimension.js");
-const World = require("./world.js");
 
 const _net_tick = Symbol("_net_tick");
 const _is_template_processed = Symbol("_is_template_processed");
@@ -583,5 +582,4 @@ Typespess.Sound = Sound;
 Typespess.VisibilityGroup = VisibilityGroup;
 Typespess.Dimension = Dimension;
 
-Typespess.World = World;
 module.exports = Typespess;
