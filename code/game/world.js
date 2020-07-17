@@ -1,6 +1,3 @@
-/** @typedef {import('./server')} Typespess */
-/** @typedef {import('./atom/atom')} Typespess.Atom */
-
 class World {
 	
 	constructor() {
@@ -14,6 +11,9 @@ class World {
 
 		this.weather_running = true;
 		this.seasons_running = true;
+
+		this.civilizations = [];
+		this.age = 0;
 
 		this.time_scheduler.bind(this);
 		this.season_scheduler.bind(this);
@@ -67,4 +67,5 @@ class World {
 	season_scheduler(thisworld) {if (thisworld.seasons_running) {thisworld.advance_season();setTimeout(thisworld.season_scheduler, 3600000, thisworld);}}
 	weather_scheduler(thisworld) {if (thisworld.weather_running && Math.random()<=0.18){thisworld.random_weather()};setTimeout(thisworld.weather_scheduler, 60000, thisworld);}
 }
+
 module.exports = World;
