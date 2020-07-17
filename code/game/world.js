@@ -1,3 +1,5 @@
+const {to_chat} = require("./utils.js");
+
 class World {
 	
 	constructor() {
@@ -43,29 +45,54 @@ class World {
 	}
 	change_season(new_season) { //sets the season to the input variable, if its in the list of possible_seasons
 		for (var s of this.possible_seasons)
-			if (s == new_season) {this.season = s; console.log("Changed the season to "+new_season);return true;}
+			if (s == new_season) {this.season = s; console.log("Changed the season to "+new_season);to_chat(user, format_html`<span class='announce'>It is now ${this.season}.</span>`);return true;}
 		return false;
 	}
 	advance_season() { //advances to the next season
-		if (this.season == "Winter") {this.season="Spring";console.log("Automatically advanced the season to "+this.season);return true;}
-		else if (this.season == "Spring") {this.season="Summer";console.log("Automatically advanced the season to "+this.season);return true;}
-		else if (this.season == "Summer") {this.season="Autumn";console.log("Automatically advanced the season to "+this.season);return true;}
-		else if (this.season == "Autumn") {this.season="Winter";console.log("Automatically advanced the season to "+this.season);return true;}
-		return false;
+		if (this.season == "Winter") {this.season="Spring";console.log("Automatically advanced the season to "+this.season);}
+		else if (this.season == "Spring") {this.season="Summer";console.log("Automatically advanced the season to "+this.season);}
+		else if (this.season == "Summer") {this.season="Autumn";console.log("Automatically advanced the season to "+this.season);}
+		else if (this.season == "Autumn") {this.season="Winter";console.log("Automatically advanced the season to "+this.season);}
+		to_chat(user, format_html`<span class='announce'>It is now ${this.season}.</span>`);
+		return true;
 	}
    change_weather(new_weather) { //sets the weather to the input variable, if its in the list of possible_weather
+		let last_weather = this.weather;
 		for (var w of this.possible_weather)
 			if (w == new_weather) {this.weather = w; console.log("Changed the weather to "+new_weather); return true;}
+			if (last_weather !== this.weather)
+			{to_chat(user, format_html`<span class='announce'>The weather has changed to ${this.weather}.</span>`);}
 		return false;
 	}
 	random_weather() { //randomizes the weather
+		let last_weather = this.weather;
 		this.weather = this.possible_weather[Math.floor(Math.random() * this.possible_weather.length)];
 		console.log("Randomly changed the weather to "+this.weather);
+		if (last_weather !== this.weather)
+			{to_chat(user, format_html`<span class='announce'>The weather has changed to ${this.weather}.</span>`);}
 		return true;
 	}
-	time_scheduler(thisworld) {thisworld.servertime+=1;thisworld.gametime+=0.25;setTimeout(thisworld.time_scheduler, 6000, thisworld);} //4 seconds = 1 ingame minute
-	season_scheduler(thisworld) {if (thisworld.seasons_running) {thisworld.advance_season();setTimeout(thisworld.season_scheduler, 3600000, thisworld);}}
-	weather_scheduler(thisworld) {if (thisworld.weather_running && Math.random()<=0.18){thisworld.random_weather()};setTimeout(thisworld.weather_scheduler, 60000, thisworld);}
+
+	time_scheduler(thisworld) {
+		thisworld.servertime+=1;
+		thisworld.gametime+=0.25;
+		if (thisworld.gametime >= 1440) {
+			thisworld.gametime -= 1440;
+		} //24 hours turns to 0 hours
+		setTimeout(thisworld.time_scheduler, 6000, thisworld);
+	} //4 seconds = 1 ingame minute
+
+	season_scheduler(thisworld) {
+		if (thisworld.seasons_running) {
+			thisworld.advance_season();
+			setTimeout(thisworld.season_scheduler, 3600000, thisworld);}
+		}
+
+	weather_scheduler(thisworld) {
+		if (thisworld.weather_running && Math.random()<=0.18) {
+			thisworld.random_weather()};
+			setTimeout(thisworld.weather_scheduler, 60000, thisworld);
+		}
 }
 
 module.exports = World;
