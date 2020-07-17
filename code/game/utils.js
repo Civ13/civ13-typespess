@@ -299,7 +299,6 @@ module.exports = {
 			};
 		}
 	},
-
 	/**
   * A tagged template literal function.
   * Anything in the <code>${}</code> is escaped.

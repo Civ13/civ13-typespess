@@ -1,10 +1,10 @@
-const {to_chat} = require("./utils.js");
-
+const {format_html} = require("./utils.js")
 class World {
 	
-	constructor() {
+	constructor(server) {
+		this.server = server;
 		this.servertime = 0; //server time in seconds (1000ms)
-
+	
 		this.season = "Summer";
 		this.possible_seasons = ["Spring", "Summer", "Autumn", "Winter"];
 		this.gametime = 0; //ingame time, in minutes (1440 = 24 hours)
@@ -53,7 +53,7 @@ class World {
 		else if (this.season == "Spring") {this.season="Summer";console.log("Automatically advanced the season to "+this.season);}
 		else if (this.season == "Summer") {this.season="Autumn";console.log("Automatically advanced the season to "+this.season);}
 		else if (this.season == "Autumn") {this.season="Winter";console.log("Automatically advanced the season to "+this.season);}
-		to_chat(user, format_html`<span class='announce'>It is now ${this.season}.</span>`);
+		this.server.to_global_chat(format_html`<span class='announce'>It is now ${this.season}.</span>`);
 		return true;
 	}
    change_weather(new_weather) { //sets the weather to the input variable, if its in the list of possible_weather
@@ -61,7 +61,7 @@ class World {
 		for (var w of this.possible_weather)
 			if (w == new_weather) {this.weather = w; console.log("Changed the weather to "+new_weather); return true;}
 			if (last_weather !== this.weather)
-			{to_chat(user, format_html`<span class='announce'>The weather has changed to ${this.weather}.</span>`);}
+			{this.server.to_global_chat(format_html`<span class='announce'>The weather has changed to ${this.weather}.</span>`);}
 		return false;
 	}
 	random_weather() { //randomizes the weather
@@ -69,7 +69,7 @@ class World {
 		this.weather = this.possible_weather[Math.floor(Math.random() * this.possible_weather.length)];
 		console.log("Randomly changed the weather to "+this.weather);
 		if (last_weather !== this.weather)
-			{to_chat(user, format_html`<span class='announce'>The weather has changed to ${this.weather}.</span>`);}
+			{this.server.to_global_chat(format_html`<span class='announce'>The weather has changed to ${this.weather}.</span>`);}
 		return true;
 	}
 

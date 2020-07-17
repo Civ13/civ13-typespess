@@ -63,6 +63,8 @@ class Typespess extends EventEmitter {
 
 		this[_is_server_started] = false;
 		this[_construct_time] = process.hrtime();
+
+		this.to_global_chat.bind(this);
 	}
 
 	/**
@@ -451,6 +453,34 @@ class Typespess extends EventEmitter {
 		}
 		return template;
 	}
+	/**
+  * Sends the given chat message to ALL clients. There's a tagged template literal form of this function that uses format_html that is demonstrated in the example
+  * @example
+  * to_global_chat("<span class='warning'>The action failed</span>");
+  *
+  * // This is the correct format:
+  * to_global_chat(format_html`<span class='warning'>The ${this.a} explodes!</span>`);
+  *
+  * // Be careful, if you do this, the HTML will not be escaped! Use one of the above format to ensure that your HTML is escaped to prevent XSS exploits.
+  * to_global_chat(`<span class='warning'>The ${this.a} explodes!</span>`);
+  * @memberof Typespess
+  * @see {@link Typespess#format_html}
+  * @param {Typespess.Atom|Client|Array<Typespess.Atom|Client>} target
+  * @param {string} message
+  */
+
+ to_global_chat(...b) {
+	for (let key in this.clients) {
+		if (!Object.prototype.hasOwnProperty.call(this.clients,key)) continue;
+			let client = this.clients[key];
+			var cl;
+			if (client instanceof Client) cl = client;
+			else cl = a.c.Mob.client;
+			if (!cl) return;
+			if (!cl.next_message.to_chat) cl.next_message.to_chat = [];
+			cl.next_message.to_chat.push(b.join(""));
+	}
+}
 
 	/**
   * Instances a map, like {@link instance_map}, but synchronous, and no callback for percentage.

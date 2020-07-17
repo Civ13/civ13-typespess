@@ -4,12 +4,11 @@ const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 const World = require("./code/game/world.js");
 const Database = require("./code/database.ts");
-const Scheduler = require("./code/game/scheduler.js");
 
 console.log("Loading game...");
 
 const server = new Typespess();
-const world = new World();
+const world = new World(server);
 
 server.resRoot = "./resources/";
 
