@@ -16,6 +16,10 @@ class World {
 
 		this.civilizations = [];
 		this.age = 0;
+	
+		this.age1 = 0;
+		this.age2 = 0;
+		this.age3 = 0;
 
 		this.time_scheduler.bind(this);
 		this.season_scheduler.bind(this);

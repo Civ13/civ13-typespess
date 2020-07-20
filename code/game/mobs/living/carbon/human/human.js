@@ -34,6 +34,9 @@ HumanMob.template = {
 			MobInventory: {
 				handcuffable: true,
 			},
+			Civilization: {
+				name: null
+			}
 		},
 	},
 };

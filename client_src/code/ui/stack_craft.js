@@ -1,3 +1,4 @@
+const { receiveMessageOnPort } = require("worker_threads");
 
 
 class StackCraftPanel {
@@ -36,10 +37,12 @@ class StackCraftPanel {
 				this.recipes_elem.appendChild(document.createElement("hr"));
 				continue;
 			}
-			let recipe_elem = document.createElement("div");
-			recipe_elem.classList.add("small-vertical-margins");
-			this.recipes_elem.appendChild(recipe_elem);
-			this.build_recipe(i);
+			else if (recipe_check_tech(recipe) == true) {
+				let recipe_elem = document.createElement("div");
+				recipe_elem.classList.add("small-vertical-margins");
+				this.recipes_elem.appendChild(recipe_elem);
+				this.build_recipe(i);
+			}
 		}
 	}
 	build_recipe(i) {
@@ -55,6 +58,30 @@ class StackCraftPanel {
 		if (recipe.build_limit <= 0) main_button_elem.classList.add("disabled");
 		main_button_elem.dataset.message = JSON.stringify({ build: i, amount: 1 });
 		elem.appendChild(main_button_elem);
+	}
+
+	recipe_check_tech(recipe, mob, world) {
+		if (!recipe.age1 || !recipe.age2 || !recipe.age2 || !recipe.last_age)
+			{return 0}
+		if (world.age > recipe.last_age)
+			{return 0}
+		if (mob.c.HumanMob.civilization.name == null)
+			{if (world.age1>= recipe.age1 && world.age2>= recipe.age2 && world.age3>= recipe.age3)
+				{return 1}
+			else
+				{return 0}
+			}
+		else
+			{if (world.civilizations[mob.c.HumanMob.civilization.name])
+				{
+					let currciv = world.civilizations[mob.c.HumanMob.civilization.name];
+					if (currciv.research_ind >= world.age1 && currciv.research_mil >= world.age1 && currciv.research_hlt >= world.age3)
+						{return 1}
+					else
+						{return 0}
+				}
+			else
+				{return 0}}
 	}
 }
 
