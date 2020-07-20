@@ -5,6 +5,10 @@ closet:
 	time: 1500
 	cant_cross: ["Closet"]
 	on_floor: true
+	age1: 0
+	age2: 0
+	age3: 0
+	last_age: 8
 
 wood_tiles:
 	name: "floor tiles"
@@ -12,6 +16,10 @@ wood_tiles:
 	cost: 1
 	res_amount: 4
 	time: 2000
+	age1: 0
+	age2: 0
+	age3: 0
+	last_age: 8
 
 stool:
 	name: "stool"
@@ -19,6 +27,10 @@ stool:
 	cost: 1
 	cant_cross: ["Chair"]
 	on_floor: true
+	age1: 0
+	age2: 0
+	age3: 0
+	last_age: 8
 
 bar_stool:
 	name: "bar stool"
@@ -26,6 +38,10 @@ bar_stool:
 	cost: 1
 	cant_cross: ["Chair"]
 	on_floor: true
+	age1: 0
+	age2: 0
+	age3: 0
+	last_age: 8
 
 wood_chair:
 	name: "chair"
@@ -33,6 +49,10 @@ wood_chair:
 	cost: 1
 	cant_cross: ["Chair"]
 	on_floor: true
+	age1: 0
+	age2: 0
+	age3: 0
+	last_age: 8
 
 swivel_chair:
 	name: "swivel chair"
@@ -40,9 +60,17 @@ swivel_chair:
 	cost: 5
 	cant_cross: ["Chair"]
 	on_floor: true
+	age1: 0
+	age2: 0
+	age3: 0
+	last_age: 8
 
 rack_parts:
 	name: "rack parts"
 	template_name: "rack_parts"
 	cost: 2
+	age1: 0
+	age2: 0
+	age3: 0
+	last_age: 8
 

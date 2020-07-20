@@ -175,7 +175,7 @@ class Stack extends Component {
 		}
 		var panel = new StackCraftPanel(user.c.Mob.client, {
 			title: `${this.a.name} construction`,
-		});
+		}, user);
 		user.c.Mob.bind_panel(this.a, panel);
 		panel.open();
 	}
