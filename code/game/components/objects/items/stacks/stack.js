@@ -49,6 +49,7 @@ class Stack extends Component {
 	constructor(atom, template) {
 		super(atom, template);
 		this.on("amount_changed", this.amount_changed.bind(this));
+		this.user = null;
 		this.amount_changed();
 		this.a.on("crossed_by", this.crossed_by.bind(this));
 		this.a.c.Examine.examine = chain_func(
@@ -141,6 +142,7 @@ class Stack extends Component {
 
 	attack_by(prev, item, user) {
 		if (this.merge_type && has_component(item, this.merge_type)) {
+			this.user = user
 			if (this.merge(item))
 				to_chat`<span class='notice'>Your ${item.name} stack now contains ${item.c.Stack.amount} ${item.c.Stack.singular_name}s.</span>`(
 					user
@@ -151,6 +153,7 @@ class Stack extends Component {
 	}
 
 	attack_hand(prev, user) {
+		this.user = user
 		let slot = this.a.c.Item.slot;
 		if (
 			slot &&
@@ -165,6 +168,7 @@ class Stack extends Component {
 	}
 
 	attack_self(prev, user) {
+		this.user = user;
 		if (
 			!this.recipes ||
 	!this.recipes.length ||
@@ -173,15 +177,18 @@ class Stack extends Component {
 		) {
 			return prev();
 		}
+		let civ = null
+		if (user.c) {civ = user.c.MobInteract.zone_sel_template}
 		var panel = new StackCraftPanel(user.c.Mob.client, {
 			title: `${this.a.name} construction`,
-		}, user);
+		}, civ);
 		user.c.Mob.bind_panel(this.a, panel);
 		panel.open();
 	}
 
 	split(user, amount) {
 		if (amount <= 0) return;
+		this.user = user;
 		if (amount >= this.amount) {
 			if (has_component(user, "MobInventory"))
 				user.c.MobInventory.put_in_hands(this.a);

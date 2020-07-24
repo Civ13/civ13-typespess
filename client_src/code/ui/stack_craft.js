@@ -1,8 +1,8 @@
 class StackCraftPanel {
 	constructor(panel) {
 		this.panel = panel;
+		this.civilization = null
 		this.panel.on("message", this.handle_message.bind(this));
-
 		var amount_elem = document.createElement("div");
 		amount_elem.appendChild(document.createTextNode("amount: "));
 		amount_elem.appendChild((this.amount_node = document.createTextNode("")));
@@ -12,9 +12,12 @@ class StackCraftPanel {
 	}
 
 	handle_message(message) {
+		if (message.civilization) {
+			this.civilization = message.civilization;
+		}
 		if (message.recipes) {
 			this.recipes = message.recipes;
-			this.build_recipes(message.mob);
+			this.build_recipes();
 		}
 		if (message.amount) {
 			this.amount_node.textContent = message.amount;
@@ -34,7 +37,7 @@ class StackCraftPanel {
 				this.recipes_elem.appendChild(document.createElement("hr"));
 				continue;
 			}
-			else if (panel.recipe_check_tech(recipe) == 1) {
+			else if (this.recipe_check_tech(recipe) == 1) {
 				let recipe_elem = document.createElement("div");
 				recipe_elem.classList.add("small-vertical-margins");
 				this.recipes_elem.appendChild(recipe_elem);
@@ -55,6 +58,29 @@ class StackCraftPanel {
 		if (recipe.build_limit <= 0) main_button_elem.classList.add("disabled");
 		main_button_elem.dataset.message = JSON.stringify({ build: i, amount: 1 });
 		elem.appendChild(main_button_elem);
+	}
+	recipe_check_tech(recipe) {
+		if (!recipe.age1 || !recipe.age2 || !recipe.age2 || !recipe.last_age)
+			{return 0}
+		if (Tworld.age > recipe.last_age)
+			{return 0}
+		if (this.civilization == null)
+			{console.log("No civ");if (Tworld.age1>= recipe.age1 && Tworld.age2>= recipe.age2 && Tworld.age3>= recipe.age3)
+				{return 1}
+			else
+				{return 0}
+			}
+		else
+			{console.log("yes civ");if (Tworld.civilizations[this.civilization])
+				{
+					let currciv = Tworld.civilizations[this.civilization];
+					if (currciv.research_ind >= Tworld.age1 && currciv.research_mil >= Tworld.age1 && currciv.research_hlt >= Tworld.age3)
+						{return 1}
+					else
+						{return 0}
+				}
+			else
+				{return 0}}
 	}
 }
 
