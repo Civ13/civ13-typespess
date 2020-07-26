@@ -25,7 +25,6 @@ class StackCraftPanel extends Panel {
 	}
 
 	opened() {
-		console.log(this.civilization)
 		this.send_message({
 			civilization: this.civilization,
 			recipes: this.bound_atom.c.Stack.recipes,

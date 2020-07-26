@@ -178,7 +178,7 @@ class Stack extends Component {
 			return prev();
 		}
 		let civ = null
-		if (user.c) {civ = user.c.MobInteract.zone_sel_template}
+		if (user.c && user.c.HumanMob) {civ = user.c.HumanMob.Civilization}
 		var panel = new StackCraftPanel(user.c.Mob.client, {
 			title: `${this.a.name} construction`,
 		}, civ);

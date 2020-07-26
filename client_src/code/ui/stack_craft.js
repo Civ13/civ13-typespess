@@ -37,7 +37,8 @@ class StackCraftPanel {
 				this.recipes_elem.appendChild(document.createElement("hr"));
 				continue;
 			}
-			else if (this.recipe_check_tech(recipe) == 1) {
+			//else if (this.recipe_check_tech(recipe) == 1) {
+			else {
 				let recipe_elem = document.createElement("div");
 				recipe_elem.classList.add("small-vertical-margins");
 				this.recipes_elem.appendChild(recipe_elem);
@@ -47,7 +48,7 @@ class StackCraftPanel {
 	}
 	build_recipe(i) {
 		let elem = this.recipes_elem.childNodes[i];
-		elem.innerHTML = "";
+		if (elem.innerHTML) {elem.innerHTML = "";}
 		let recipe = this.recipes[i];
 
 		let main_button_elem = document.createElement("div");
@@ -64,14 +65,14 @@ class StackCraftPanel {
 			{return 0}
 		if (Tworld.age > recipe.last_age)
 			{return 0}
-		if (this.civilization == null)
+		if (this.civilization == null || this.civilization == "")
 			{console.log("No civ");if (Tworld.age1>= recipe.age1 && Tworld.age2>= recipe.age2 && Tworld.age3>= recipe.age3)
 				{return 1}
 			else
 				{return 0}
 			}
 		else
-			{console.log("yes civ");if (Tworld.civilizations[this.civilization])
+			{console.log("Yes civ");if (Tworld.civilizations[this.civilization])
 				{
 					let currciv = Tworld.civilizations[this.civilization];
 					if (currciv.research_ind >= Tworld.age1 && currciv.research_mil >= Tworld.age1 && currciv.research_hlt >= Tworld.age3)
