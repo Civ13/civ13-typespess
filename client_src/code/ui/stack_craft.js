@@ -1,11 +1,8 @@
-const { receiveMessageOnPort } = require("worker_threads");
-
-
 class StackCraftPanel {
 	constructor(panel) {
 		this.panel = panel;
+		this.civilization = null
 		this.panel.on("message", this.handle_message.bind(this));
-
 		var amount_elem = document.createElement("div");
 		amount_elem.appendChild(document.createTextNode("amount: "));
 		amount_elem.appendChild((this.amount_node = document.createTextNode("")));
@@ -15,6 +12,9 @@ class StackCraftPanel {
 	}
 
 	handle_message(message) {
+		if (message.civilization) {
+			this.civilization = message.civilization;
+		}
 		if (message.recipes) {
 			this.recipes = message.recipes;
 			this.build_recipes();
@@ -37,7 +37,8 @@ class StackCraftPanel {
 				this.recipes_elem.appendChild(document.createElement("hr"));
 				continue;
 			}
-			else if (recipe_check_tech(recipe) == true) {
+			//else if (this.recipe_check_tech(recipe) == 1) {
+			else {
 				let recipe_elem = document.createElement("div");
 				recipe_elem.classList.add("small-vertical-margins");
 				this.recipes_elem.appendChild(recipe_elem);
@@ -47,7 +48,7 @@ class StackCraftPanel {
 	}
 	build_recipe(i) {
 		let elem = this.recipes_elem.childNodes[i];
-		elem.innerHTML = "";
+		if (elem.innerHTML) {elem.innerHTML = "";}
 		let recipe = this.recipes[i];
 
 		let main_button_elem = document.createElement("div");
@@ -59,23 +60,22 @@ class StackCraftPanel {
 		main_button_elem.dataset.message = JSON.stringify({ build: i, amount: 1 });
 		elem.appendChild(main_button_elem);
 	}
-
-	recipe_check_tech(recipe, mob, world) {
+	recipe_check_tech(recipe) {
 		if (!recipe.age1 || !recipe.age2 || !recipe.age2 || !recipe.last_age)
 			{return 0}
-		if (world.age > recipe.last_age)
+		if (Tworld.age > recipe.last_age)
 			{return 0}
-		if (mob.c.HumanMob.civilization.name == null)
-			{if (world.age1>= recipe.age1 && world.age2>= recipe.age2 && world.age3>= recipe.age3)
+		if (this.civilization == null || this.civilization == "")
+			{console.log("No civ");if (Tworld.age1>= recipe.age1 && Tworld.age2>= recipe.age2 && Tworld.age3>= recipe.age3)
 				{return 1}
 			else
 				{return 0}
 			}
 		else
-			{if (world.civilizations[mob.c.HumanMob.civilization.name])
+			{console.log("Yes civ");if (Tworld.civilizations[this.civilization])
 				{
-					let currciv = world.civilizations[mob.c.HumanMob.civilization.name];
-					if (currciv.research_ind >= world.age1 && currciv.research_mil >= world.age1 && currciv.research_hlt >= world.age3)
+					let currciv = Tworld.civilizations[this.civilization];
+					if (currciv.research_ind >= Tworld.age1 && currciv.research_mil >= Tworld.age1 && currciv.research_hlt >= Tworld.age3)
 						{return 1}
 					else
 						{return 0}

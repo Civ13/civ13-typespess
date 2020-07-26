@@ -1,8 +1,9 @@
 const { Panel } = require("./../../../../../../code/game/server.js");
 
 class StackCraftPanel extends Panel {
-	constructor(client, panel_props) {
+	constructor(client, panel_props, civilization) {
 		super(client, panel_props);
+		this.civilization = civilization;
 		this.on("open", this.opened.bind(this));
 		this.on("close", this.closed.bind(this));
 		this.on("message", this.message_handler.bind(this));
@@ -25,6 +26,7 @@ class StackCraftPanel extends Panel {
 
 	opened() {
 		this.send_message({
+			civilization: this.civilization,
 			recipes: this.bound_atom.c.Stack.recipes,
 			amount: this.bound_atom.c.Stack.amount,
 		});
