@@ -15,7 +15,7 @@ Check the original Civ13 that uses BYOND and SS13 code here: https://github.com/
 
 ## Installing
 
-1. Install node.js 8 or later from https://nodejs.org/en/download/
+1. Install node.js 12 or later from https://nodejs.org/en/download/
 2. Clone `https://github.com/civ13/civ13-typespess.git`
 3. Run `setup.bat` (or `setup.sh` if you are using an UNIX system) in the civ13-typespess folder
 
