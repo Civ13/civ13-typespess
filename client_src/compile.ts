@@ -14,4 +14,4 @@ used_bundler.bundle(function (err: Error, buf: string) {
 	fs.writeFile("../resources/client.js", buf, function (err: Error) {
 		if (err) {return console.log(err);}});
 });
-console.log("done.");
+console.log("COMPILE: done.");

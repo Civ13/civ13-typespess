@@ -5,7 +5,7 @@ const read_config = require("./code/config.js");
 const World = require("./code/game/world.js");
 const Database = require("./code/database.ts");
 
-console.log("Loading game...");
+console.log("SERVER: Loading game...");
 
 global.Tserver = new Typespess();
 global.Tworld = new World(Tserver);
@@ -135,7 +135,7 @@ const database = new Database("typespess");
 
 const server_config = read_config("server.cson");
 const map = server_config.maps.current_map;
-console.log("Loading map " + map + "...");
+console.log("SERVER: Loading map " + map + "...");
 Tserver.station_dim = new Typespess.Dimension(Tserver);
 Tserver.instance_map_sync(	JSON.parse(fs.readFileSync("maps/" + map + ".bsmap", "utf8")),
 	0,
@@ -150,7 +150,7 @@ Tserver.on("client_login", (client) => {
 		mob.c.Mob.client = client;
 	}
 });
-console.log("Starting server...");
+console.log("SERVER: Starting server...");
 
 for (const [key, file] of Object.entries(server_config.http_opts.files)) {
 	if (!key || !file) {
@@ -232,7 +232,7 @@ if (server_config.https) {
 }
 
 Tserver.startServer({ websocket: { server: http_server } });
-console.log("Server started.");
+console.log("SERVER: Server started.");
 
 //schedulers
 Tworld.time_scheduler(Tworld);
