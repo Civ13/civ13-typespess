@@ -26,10 +26,12 @@ class Hearer extends Component {
 		});
 		this[_visible_tiles] = new_visible;
 		for (let tile of added) {
-			tile.hearers.push(this.atom);
+			if (tile.hearers)
+				{tile.hearers.push(this.atom);}
 		}
 		for (let tile of removed) {
-			tile.hearers.splice(tile.hearers.indexOf(this.atom), 1);
+			if (tile.hearers)
+				{tile.hearers.splice(tile.hearers.indexOf(this.atom), 1);}
 		}
 		this.is_updating_visible_tiles = false;
 	}

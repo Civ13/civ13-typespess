@@ -205,27 +205,32 @@ class Eye extends Component {
 		this[_visible_tiles] = new_visible;
 		for (let tile of added) {
 			this.enqueue_add_tile(tile);
-			tile.viewers.push(this.atom);
-			for (let item of tile.partial_contents) {
-				this[_common_tiles_count].set(
-					item,
-					this[_common_tiles_count].get(item) + 1 || 1
-				);
-				if (this.can_see(item)) {
-					this[_add_viewing](item);
+			if (tile && tile.viewers) {
+				tile.viewers.push(this.atom);
+				for (let item of tile.partial_contents) {
+					this[_common_tiles_count].set(
+						item,
+						this[_common_tiles_count].get(item) + 1 || 1
+					);
+					if (this.can_see(item)) {
+						this[_add_viewing](item);
+					}
 				}
 			}
 		}
 		for (let tile of removed) {
 			this.enqueue_remove_tile(tile);
-			tile.viewers.splice(tile.viewers.indexOf(this.atom), 1);
-			for (let item of tile.partial_contents) {
-				this[_common_tiles_count].set(
-					item,
-					this[_common_tiles_count].get(item) - 1
-				);
-				if (!this.can_see(item)) {
-					this[_remove_viewing](item);
+			if (tile.viewers)
+				{tile.viewers.splice(tile.viewers.indexOf(this.atom), 1);}
+			if (tile.partial_contents){
+				for (let item of tile.partial_contents) {
+					this[_common_tiles_count].set(
+						item,
+						this[_common_tiles_count].get(item) - 1
+					);
+					if (!this.can_see(item)) {
+						this[_remove_viewing](item);
+					}
 				}
 			}
 		}
