@@ -35,18 +35,6 @@ class LoginPanel {
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
 		} else if (obj.valid==true) {
-			this.panel.content_obj.getElementsByClassName(
-				"logged-in"
-			)[0].style.display = "block";
-			this.panel.content_obj.getElementsByClassName(
-				"not-logged-in"
-			)[0].style.display = "none";
-			this.panel.content_obj
-				.getElementsByClassName("connect-button")[0]
-				.classList.remove("disabled");
-			this.panel.content_obj.getElementsByClassName(
-				"logged-in-as"
-			)[0].textContent = obj.logged_in_as;
 			if (obj.autojoin) {
 				this.connection.send(JSON.stringify({ login: obj.logged_in_as }));
 				this.login_finish();}
@@ -79,17 +67,22 @@ class LoginPanel {
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
-			} else {
-				this.panel.content_obj.getElementsByClassName(
-					"logged-in"
-				)[0].style.display = "none";
-				this.panel.content_obj.getElementsByClassName(
-					"not-logged-in"
-				)[0].style.display = "block";
-				this.panel.content_obj
-					.getElementsByClassName("connect-button")[0]
-					.classList.add("disabled");
+			if (obj.value == true && obj.logged_in_as == text_input.value) {
+				this.connection.send(JSON.stringify({ login: text_input.value }));
+				this.login_finish();
 			}
+
+		} else {
+			this.panel.content_obj.getElementsByClassName(
+				"logged-in"
+			)[0].style.display = "none";
+			this.panel.content_obj.getElementsByClassName(
+				"not-logged-in"
+			)[0].style.display = "block";
+			this.panel.content_obj
+				.getElementsByClassName("connect-button")[0]
+				.classList.add("disabled");
+		}
 	}
 
 	login_finish() {

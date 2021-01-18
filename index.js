@@ -167,8 +167,8 @@ if (server_config.gh_login.enabled) {
 			const obj = JSON.parse(msg);
 			console.log(obj)
 			if (obj.request_check == true) {database.authenticate(obj.name,obj.password).then(function(results){validated=results;
-			if (validated.value==true && validated.name==obj.name) {ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));}
-			else  {ws.send(JSON.stringify({ valid: false }));}});}
+			if (validated.value==true && validated.name==obj.name) {console.log(`DB AUTH: user \"${obj.name}\" authorized`);ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));}
+			else  {console.log(`DB AUTH: user \"${obj.name}\" denied`);ws.send(JSON.stringify({ valid: false }));}});}
 
 			if (obj.login) {
 				let username = obj.login + "";
