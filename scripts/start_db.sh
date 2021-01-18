@@ -1,4 +1,5 @@
-echo Launching Database...
+echo Launching Database... Address: 127.0.0.1:5984
 cd -
+mkdir -p pouchdb
 cd pouchdb
-call pouchdb-server --port 5984
+pouchdb-server --port 5984
