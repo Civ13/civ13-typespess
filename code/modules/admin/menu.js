@@ -68,7 +68,7 @@ module.exports.now = (server) => {
 		client.on("keydown", (e) => {
 			if (!e) return;
 			if (e.which == 115) {
-				if ((client.name == "admin" || client.holder) && !client.holder.admin_menu) {
+				if ((client.name != "admin" || client.holder) && !client.holder.admin_menu) {
 					let menu = new AdminPanel(client);
 					menu.open();
 				}
