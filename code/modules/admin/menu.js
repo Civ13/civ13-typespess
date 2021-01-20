@@ -32,12 +32,11 @@ class AdminPanel extends Panel {
 		this.client.holder.admin_menu = this;
 		let tools = {};
 		for (let [key, tool] of Object.entries(admin_tools)) {
-			if (this.client.name != "admin")
-				if (
-					!this.client.holder ||
-			!this.client.holder.has_permission(tool.perm_required)
-				)
-					continue;
+			if (
+				!this.client.holder ||
+		!this.client.holder.has_permission(tool.perm_required)
+			)
+				continue;
 			tools[key] = {
 				name: tool.name,
 				desc: tool.desc,
@@ -68,7 +67,7 @@ module.exports.now = (server) => {
 		client.on("keydown", (e) => {
 			if (!e) return;
 			if (e.which == 115) {
-				if ((client.name != "admin" || client.holder) && !client.holder.admin_menu) {
+				if (client.holder && !client.holder.admin_menu) {
 					let menu = new AdminPanel(client);
 					menu.open();
 				}
