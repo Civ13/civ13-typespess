@@ -16,7 +16,9 @@ module.exports = AdminHolder;
 
 module.exports.now = (server) => {
 	server.on("client_login", (client) => {
+		console.log(`${client.name}`)
 		if (client.address == "127.0.0.1" || client.address == "::1" || client.name in adminlist.hosts) {
+			console.log("found!")
 			client.holder = new AdminHolder(client);
 		}
 	});
