@@ -17,7 +17,7 @@ class NewPlayer extends Component {
 			vars: {
 				screen_loc_x: 0,
 				screen_loc_y: 14,
-				icon: "icons/title_screen/default.png",
+				icon: "icons/title_screen/civ13.png",
 				icon_state: "",
 				layer: 30,
 			},
