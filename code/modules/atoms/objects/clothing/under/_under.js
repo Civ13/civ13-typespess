@@ -14,7 +14,7 @@ UniformItem.template = {
 	vars: {
 		components: {
 			UniformItem: {
-				worn_icon: "icons/mob/uniform.png",
+				worn_icon: "icons/mob/worn/uniforms.png",
 				worn_icon_state: null, // If null, inherits from icon_state
 				fitted: "female_uniform_full",
 				can_adjust: true, //Useless until alt styles are implemented
@@ -32,7 +32,7 @@ UniformItem.template = {
 				],
 			},
 		},
-		icon: "icons/obj/clothing/uniforms.png",
+		icon: "icons/mob/under/uniforms.png",
 		name: "under",
 	},
 };

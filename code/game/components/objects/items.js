@@ -125,7 +125,7 @@ class Item extends Component {
 
 	apply_belt_overlay(item) {
 		item.overlays[`belt_${this.a.object_id}`] = {
-			icon: "icons/obj/clothing/belt_overlays.png",
+			icon: "icons/mob/under/belt_overlays.png",
 			icon_state: this.a.icon_state,
 		};
 	}

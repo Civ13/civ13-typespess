@@ -16,7 +16,7 @@ HeadItem.template = {
 	vars: {
 		components: {
 			HeadItem: {
-				worn_icon: "icons/mob/head.png",
+				worn_icon: "icons/mob/worn/hats.png",
 				worn_icon_state: null, // If null, inherits from icon_state
 				block_tracking: false, //for AI tracking
 				can_toggle: false,
@@ -30,7 +30,7 @@ HeadItem.template = {
 				inhand_icon_state: "that",
 			},
 		},
-		icon: "icons/obj/clothing/hats.png",
+		icon: "icons/mob/under/hats.png",
 		name: "head",
 	},
 };

@@ -15,7 +15,7 @@ SuitItem.template = {
 	vars: {
 		components: {
 			SuitItem: {
-				worn_icon: "icons/mob/suit.png",
+				worn_icon: "icons/mob/worn/suits.png",
 				worn_icon_state: null, // If null, inherits from icon_state
 				suit_storage_blacklist: [], // components you can or can't put in the suit storage slot
 				suit_storage_whitelist: [],
@@ -24,7 +24,7 @@ SuitItem.template = {
 				siemens_coefficient: 0,
 			},
 		},
-		icon: "icons/obj/clothing/suits.png",
+		icon: "icons/mob/under/suits.png",
 		name: "suit",
 	},
 };

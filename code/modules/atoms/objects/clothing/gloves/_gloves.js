@@ -14,7 +14,7 @@ HandItem.template = {
 	vars: {
 		components: {
 			HandItem: {
-				worn_icon: "icons/mob/hands.png",
+				worn_icon: "icons/mob/worn/gloves.png",
 				worn_icon_state: null, // If null, inherits from icon_state
 				siemens_coefficient: 0.5,
 			},
@@ -23,7 +23,7 @@ HandItem.template = {
 			},
 		},
 		gender: "plural",
-		icon: "icons/obj/clothing/gloves.png",
+		icon: "icons/mob/under/gloves.png",
 	},
 };
 

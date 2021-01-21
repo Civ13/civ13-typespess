@@ -10,14 +10,14 @@ MaskItem.template = {
 	vars: {
 		components: {
 			MaskItem: {
-				worn_icon: "icons/mob/mask.png",
+				worn_icon: "icons/mob/worn/masks.png",
 				worn_icon_state: null, // If null, inherits from icon_state
 				hide_face: false,
 				internals_mask: true,
 				adjusted: false,
 			},
 		},
-		icon: "icons/obj/clothing/masks.png",
+		icon: "icons/mob/under/masks.png",
 	},
 };
 

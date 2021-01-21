@@ -46,7 +46,7 @@ Belt.template = {
 			},
 		},
 		name: "belt",
-		icon: "icons/obj/clothing/belts.png",
+		icon: "icons/mob/under/belts.png",
 		icon_state: "utilitybelt",
 	},
 };
