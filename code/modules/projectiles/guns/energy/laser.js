@@ -24,7 +24,9 @@ module.exports.templates = {
 					shaded_charge: true,
 				},
 				Item: {
-					inhand_icon_state: "laser",
+					inhand_lhand_icon: "icons/mob/inhands/lefthand_guns.png",
+					inhand_rhand_icon: "icons/mob/inhands/righthand_guns.png",
+					inhand_icon_state: "dartgun-10",
 					materials: { metal: 2000 },
 				},
 				Examine: {

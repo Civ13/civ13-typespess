@@ -6,7 +6,7 @@ class AdminPanel extends Panel {
 	constructor(client) {
 		super(client, {
 			width: 500,
-			height: 800,
+			height: 400,
 			title: "Admin Tools",
 			can_close: true,
 		});
