@@ -25,8 +25,6 @@ class CleanableDecal extends Component {
 				other.destroy();
 			}
 		}
-		if (has_component(other, "FloorCover") && this.on_floor_cover_layer)
-			this.a.layer = this.on_floor_cover_layer;
 	}
 }
 

@@ -62,10 +62,10 @@ FloorBase.template = {
 	vars: {
 		components: {
 			FloorBase: {
+				can_break: false,
+				can_burn: false,
 				broken: false,
 				burnt: false,
-				broken_states: [],
-				burnt_states: [],
 			},
 			Tangible: {
 				anchored: true,
