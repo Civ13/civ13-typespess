@@ -46,7 +46,7 @@ module.exports.templates = {
 					size: 2,
 				},
 			},
-			name: "desert eagle",
+			name: "glock 17",
 			icon: 'icons/obj/guns/pistols/glock17.png',
 		},
 		tree_paths: ["items/gun/ballistic/automatic/pistol/glock17"],
