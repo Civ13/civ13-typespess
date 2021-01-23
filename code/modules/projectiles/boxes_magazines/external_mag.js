@@ -265,6 +265,22 @@ module.exports.templates = {
 		},
 		tree_paths: ["items/ammo_box/magazine/pistolm9mm"],
 	},
+	mag_glock17: {
+		components: ["GunMagazine"],
+		vars: {
+			components: {
+				AmmoBox: {
+					caliber: "9mm",
+					form_factor: "pistol",
+					ammo_type: "casing_c9mm",
+					max_ammo: 17,
+				},
+			},
+			name: "glock magazine (9mm)",
+			icon_state: "9x19p",
+		},
+		tree_paths: ["items/ammo_box/magazine/glock17"],
+	},
 	mag_smgm45: {
 		components: ["GunMagazine"],
 		vars: {
