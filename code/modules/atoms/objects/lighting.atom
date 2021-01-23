@@ -14,6 +14,22 @@ flashlight:
 	
 	tree_paths: ["items/flashlight"]
 
+candle:
+	components: ["Flashlight", "BeltItem"]
+	vars:
+		components:
+			Item:
+				inhand_icon_state: "flashlight"
+			
+			Examine:
+				desc: "A simple wax candle."
+			
+		
+		name: "candle"
+		icon: "icons/obj/candle1_lit.png",
+	
+	tree_paths: ["items/flashlight"]
+
 desk_lamp:
 	components: ["DeskLamp"]
 	tree_paths: ["items/flashlight/lamp"]
