@@ -68,5 +68,22 @@ function enqueue_icon_meta_load(newIcon) {
 	this.icon_meta_load_queue[newIcon] = promise;
 	return promise;
 }
+function enqueue_icon_meta_load_new(newIcon) {
+	if (this.icon_meta_load_queue[newIcon]) {
+		return this.icon_meta_load_queue[newIcon];
+	}
+	metai = new Image();
+	metai.src = this.resRoot + newIcon;
+	metai.canvas = document.createElement("canvas");
+	metai.ctx = metai.canvas.getContext("2d");
+	metai.canvas.width = 32;
+	metai.canvas.height = 32;
+	metai.ctx.drawImage(metai, 0, 0);
+	metai.__image_data = metai.ctx.getImageData(0, 0, metai.canvas.width, metai.canvas.height);
 
+	this.icon_state_meta = metai;
+	this.icon_metas[newIcon] = metai;
+	this.icon_meta_load_queue[newIcon] = metai;
+	return metai;
+}
 module.exports = enqueue_icon_meta_load;
