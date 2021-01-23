@@ -22,7 +22,6 @@ function enqueue_icon_meta_load(newIcon) {
 									{
 										x: 0,
 										y: 0,
-										delay: 500,
 									},
 								],
 							},
@@ -40,13 +39,6 @@ function enqueue_icon_meta_load(newIcon) {
 					if (!Object.prototype.hasOwnProperty.call(state.dirs,dir)) {
 						continue;
 					}
-					var total_delay = 0;
-					var dir_meta = state.dirs[dir];
-					for (var i = 0; i < dir_meta.frames.length; i++) {
-						var frame = dir_meta.frames[i];
-						total_delay += frame.delay;
-					}
-					dir_meta.total_delay = total_delay;
 				}
 			}
 			meta.__image_object = new Image();

@@ -285,24 +285,6 @@ class Atom extends EventEmitter {
 		this.main_icon_renderer.alpha = val;
 	}
 
-	get flick() {
-		return this.main_icon_renderer.flick;
-	}
-	set flick(val) {
-		for (var overlay_renderer of this.overlay_renderers_list)
-			overlay_renderer.flick = null;
-		this.main_icon_renderer.flick = val;
-		if (val.overlays) {
-			for (var key in val.overlays) {
-				if (!Object.prototype.hasOwnProperty.call(this.overlay_renderers,key)) continue;
-				var overlay_flick = val.overlays[key];
-				this.overlay_renderers[key].flick = overlay_flick;
-				for (var prop of ["icon", "icon_state", "dir", "time_begin"])
-					if (!overlay_flick[prop]) overlay_flick[prop] = val[prop];
-			}
-		}
-	}
-
 	get c() {
 		return this.components;
 	}

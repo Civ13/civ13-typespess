@@ -374,7 +374,6 @@ class Client extends EventEmitter {
 					"x",
 					"y",
 					"opacity",
-					"flick",
 					"color",
 					"alpha",
 				]) {

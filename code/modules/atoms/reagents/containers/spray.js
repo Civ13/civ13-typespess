@@ -59,7 +59,6 @@ class SprayBottle extends Component {
 				layer: 5,
 			},
 		});
-		chempuff.flick = { icon_state: "" };
 		chempuff.dir = dir_to(target.x - this.a.x, target.y - this.a.y);
 		chempuff.loc = this.a.base_mover.fine_loc;
 		let puff_reagent_left = range;

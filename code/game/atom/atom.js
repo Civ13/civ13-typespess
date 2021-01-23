@@ -29,7 +29,6 @@ const _glide_size = Symbol("_glide_size");
 const _screen_loc_x = Symbol("_screen_loc_x");
 const _screen_loc_y = Symbol("_screen_loc_y");
 const _mouse_opacity = Symbol("_mouse_opacity");
-const _flick = Symbol("_flick");
 const _color = Symbol("_color");
 const _alpha = Symbol("_alpha");
 const _visible = Symbol("_visible");
@@ -217,7 +216,7 @@ class Atom extends EventEmitter {
 	* @type {Object}
 	* @property {Object} <key>
 	* @property {string} [<key>.icon] {@link Typespess.Atom#icon}
-	* @property {string} [<key>.icon_state] {@link Typespess.Atom#icon_state} The string <code>[parent]</code> gets replaced with this atom's <code>icon_state</code> by the client, or the current flick's.
+	* @property {string} [<key>.icon_state] {@link Typespess.Atom#icon_state} The string <code>[parent]</code> gets replaced with this atom's <code>icon_state</code> by the client.
 	* @property {number} [<key>.dir] {@link Typespess.Atom#dir}
 	* @property {string} [<key>.color] {@link Typespess.Atom#color}
 	* @property {string} [<key>.alpha] {@link Typespess.Atom#alpha}
@@ -1481,20 +1480,6 @@ class Atom extends EventEmitter {
   * @property {Object} [overlays] {@link Typespess.Atom#overlays}
   * @property {number} [time_begin]
   */
-	get flick() {
-		return this[_flick];
-	}
-
-	set flick(val) {
-		if (typeof val != "object" && val != undefined)
-			throw new TypeError(`${val} is not an object!`);
-		if (!(val instanceof Flick) && val != undefined) {
-			val = new Flick(this.server, val);
-		}
-		if (val === undefined) val = null;
-		this[_flick] = val;
-		this[mob_symbols._update_var]("flick", 0);
-	}
 
 	/**
   * Whether this atom blocks visibility.
@@ -1637,7 +1622,6 @@ class Atom extends EventEmitter {
 			"x",
 			"y",
 			"opacity",
-			"flick",
 			"color",
 			"alpha",
 		]) {
@@ -1732,21 +1716,5 @@ class Atom extends EventEmitter {
 		return out;
 	}
 }
-
-class Flick {
-	constructor(server, { icon, icon_state, dir, overlays, time_begin } = {}) {
-		time_begin = time_begin || server.now();
-		Object.assign(this, { icon, icon_state, dir, overlays, time_begin });
-		Object.freeze(this);
-		if (this.overlays) {
-			Object.freeze(this.overlays);
-			for (var overlay_key in Reflect.ownKeys(this.overlays)) {
-				Object.freeze(this.overlays[overlay_key]);
-			}
-		}
-	}
-}
-
-Atom.Flick = Flick;
 
 module.exports = Atom;

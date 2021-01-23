@@ -10,7 +10,6 @@ class SparkEffect extends Component {
 	constructor(atom, template) {
 		super(atom, template);
 		this.a.on("moved", this.moved.bind(this));
-		this.a.flick = { icon_state: "sparks" };
 		this.a.once("moved", () => {
 			new Sound(this.a.server, { path: sounds.sparks, vary: true }).emit_from(
 				this.a
