@@ -83,14 +83,15 @@ class BodyPartHumanHair extends Component {
 		prev();
 		let hair_obj = sprite_accessories.hair[this.hair_style];
 		if (hair_obj) {
-			atom.overlays[`limb_${this.a.c.BodyPart.body_zone}_hair`] = this.get_main_overlay();
+			atom.overlays[`limb_${this.a.c.BodyPart.body_zone}_hair`] = this.get_main_overlay(atom);
 		} else {
 			atom.overlays[`limb_${this.a.c.BodyPart.body_zone}_hair`] = null;
 		}
 	}
 
-	get_main_overlay() {
-		let icodir = this.a.dir;
+	get_main_overlay(atm = null) {
+		let icodir = 1;
+		if (atm) {icodir = atm.dir;}
 		let hair_obj = sprite_accessories.hair[this.hair_style];
 		if (icodir == 1)
 			icodir = 2;
