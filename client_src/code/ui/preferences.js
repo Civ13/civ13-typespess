@@ -443,7 +443,7 @@ class PreferencesPanel {
 		if (hair_style) {
 			let hc = this.char_prefs.hair_color || [255, 255, 255];
 			atom.set_overlay("hair", {
-				icon: hair_style.icon,
+				icon: `${hair_style.base_icon}/${hair_style.icon_state}-dir${dir}.png`,
 				icon_state: hair_style.icon_state,
 				color: `rgb(${hc[0]},${hc[1]},${hc[2]})`,
 				overlay_layer: 14,
