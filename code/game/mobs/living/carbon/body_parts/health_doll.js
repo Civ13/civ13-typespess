@@ -3,7 +3,7 @@ const { Component } = require("./../../../../../../code/game/server.js");
 class HealthDoll extends Component {
 	constructor(atom, template) {
 		super(atom, template);
-		for (let zone of ["head", "chest", "l_leg", "r_leg", "l_arm", "r_arm"]) {
+		for (let zone of ["head", "torso", "l_leg", "r_leg", "l_arm", "r_arm"]) {
 			this.a.overlays[zone] = { icon: `icons/ui/screen_gen/${zone}6.png` };
 		}
 	}
@@ -15,7 +15,7 @@ class HealthDoll extends Component {
 	}
 
 	update_icon() {
-		for (let zone of ["head", "chest", "l_leg", "r_leg", "l_arm", "r_arm"]) {
+		for (let zone of ["head", "torso", "l_leg", "r_leg", "l_arm", "r_arm"]) {
 			let bp = this.mob.c.MobBodyParts.limbs[zone];
 			if (!bp) this.a.overlays[zone] = { icon: `icons/ui/screen_gen/${zone}6.png` };
 			else

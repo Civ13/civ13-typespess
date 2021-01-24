@@ -21,7 +21,7 @@ module.exports = {
 
 		let t = Math.floor(Math.random() * 18);
 		if (t == 0) return "head";
-		else if (t == 1) return "chest";
+		else if (t == 1) return "torso";
 		else if (t <= 5) return "l_arm";
 		else if (t <= 9) return "r_arm";
 		else if (t <= 13) return "l_leg";

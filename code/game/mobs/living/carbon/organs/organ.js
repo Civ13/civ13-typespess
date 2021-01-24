@@ -29,7 +29,7 @@ Organ.template = {
 		components: {
 			Organ: {
 				is_robotic: false,
-				zone: "chest",
+				zone: "torso",
 				slot: null,
 			},
 			Item: {

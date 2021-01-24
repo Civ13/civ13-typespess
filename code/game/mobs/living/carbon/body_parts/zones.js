@@ -1,22 +1,22 @@
 const { Component } = require("./../../../../../../code/game/server.js");
 
-class ChestBodyPart extends Component {}
-ChestBodyPart.depends = ["BodyPart"];
-ChestBodyPart.loadBefore = ["BodyPart"];
-ChestBodyPart.template = {
+class TorsoBodyPart extends Component {}
+TorsoBodyPart.depends = ["BodyPart"];
+TorsoBodyPart.loadBefore = ["BodyPart"];
+TorsoBodyPart.template = {
 	vars: {
 		components: {
 			BodyPart: {
-				body_zone: "chest",
+				body_zone: "torso",
 				max_damage: 200,
 				should_draw_gender: true,
 			},
 			Examine: {
-				desc: "It's impolite to stare at a person's chest.",
+				desc: "It's impolite to stare at a person's torso.",
 			},
 		},
-		name: "chest",
-		icon_state: "default_human_chest",
+		name: "torso",
+		icon_state: "default_human_torso",
 	},
 };
 
@@ -120,7 +120,7 @@ The hokey pokey has certainly changed a lot since space colonisation.",
 };
 
 module.exports.components = {
-	ChestBodyPart,
+	TorsoBodyPart,
 	LArmBodyPart,
 	RArmBodyPart,
 	LLegBodyPart,

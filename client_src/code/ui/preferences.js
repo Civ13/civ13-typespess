@@ -409,31 +409,32 @@ class PreferencesPanel {
 	}
 
 	update_previews() {
-		this.create_preview({ canvas: this.panel.$(".preview-down"), dir: 2 });
-		this.create_preview({ canvas: this.panel.$(".preview-right"), dir: 4 });
-		this.create_preview({ canvas: this.panel.$(".preview-up"), dir: 1 });
-		this.create_preview({ canvas: this.panel.$(".preview-left"), dir: 8 });
+		this.create_preview({ canvas: this.panel.$(".preview-down"), dir: 1 });
+		this.create_preview({ canvas: this.panel.$(".preview-right"), dir: 3 });
+		this.create_preview({ canvas: this.panel.$(".preview-up"), dir: 2 });
+		this.create_preview({ canvas: this.panel.$(".preview-left"), dir: 4 });
 	}
 
 	create_preview({
 		canvas,
-		dir = 2,
+		dir = 1,
 		modifier = null,
 		prefs_modifier = null,
-		add_clothes = true,
+		add_clothes = false,
 	} = {}) {
 		let atom = new Atom(this.panel.manager.client, { dir });
 		let prefs = JSON.parse(JSON.stringify(this.char_prefs));
 		if (prefs_modifier) prefs_modifier(prefs);
-		for (let part of ["l_arm", "r_arm", "l_leg", "r_leg", "chest", "head"]) {
-			let icon_state = `human_${part}`;
-			if (part == "chest" || part == "head") {
-				icon_state += prefs.gender == "female" ? "_f" : "_m";
-			}
+		for (let part of ["torso", "groin", "l_arm", "r_arm", "l_leg", "r_leg", "r_hand", "l_hand", "r_foot", "l_foot", "head"]) {
+			let icon_state = part;
+			let partic = part;
+			icon_state += prefs.gender == "female" ? "_f" : "_m";
+			partic += prefs.gender == "female" ? "_f" : "_m";
+
 			let color = null;
 			if (this.skin_tones) color = this.skin_tones[prefs.skin_tone];
 			atom.set_overlay(`limb_${part}`, {
-				icon: "icons/mob/human_parts_greyscale.png",
+				icon: `icons/mob/human_body/${partic}/${partic}-dir${dir}.png`,
 				icon_state,
 				color,
 			});

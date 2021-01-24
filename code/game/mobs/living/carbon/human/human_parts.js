@@ -12,8 +12,8 @@ module.exports.templates = {
 	human_r_leg: {
 		components: ["BodyPartSkinTone", "RLegBodyPart"],
 	},
-	human_chest: {
-		components: ["BodyPartSkinTone", "ChestBodyPart"],
+	human_torso: {
+		components: ["BodyPartSkinTone", "TorsoBodyPart"],
 	},
 	human_head: {
 		components: ["BodyPartSkinTone", "BodyPartHumanHair", "HeadBodyPart"],

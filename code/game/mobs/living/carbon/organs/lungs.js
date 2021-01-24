@@ -41,7 +41,7 @@ OrganLungs.template = {
 				},
 			},
 			Organ: {
-				zone: "chest",
+				zone: "torso",
 				slot: "lungs",
 			},
 			Item: {

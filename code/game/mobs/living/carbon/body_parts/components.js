@@ -36,7 +36,6 @@ class BodyPartSkinTone extends Component {
 
 	get_main_overlay(prev) {
 		let overlay = prev();
-		overlay.icon = "icons/mob/human_parts_greyscale.png";
 		return overlay;
 	}
 }

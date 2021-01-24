@@ -93,7 +93,7 @@ module.exports.hair = {
 	invertedhorns: new HairAccessory({
 		name: 'invertedhorns',
 		icon_state: 'facial_invertedhorns',
-		icon: 'icons/mob/human_face/facial_invertedhorns/invertedhorns-dir1.png',
+		icon: 'icons/mob/human_face/facial_invertedhorns/facial_invertedhorns-dir1.png',
 		base_icon: 'icons/mob/human_face/facial_invertedhorns/'
 	}),
 	jensen_s: new HairAccessory({
@@ -105,7 +105,7 @@ module.exports.hair = {
 	largehorns: new HairAccessory({
 		name: 'largehorns',
 		icon_state: 'facial_largehorns',
-		icon: 'icons/mob/human_face/facial_largehorns/largehorns-dir1.png',
+		icon: 'icons/mob/human_face/facial_largehorns/facial_largehorns-dir1.png',
 		base_icon: 'icons/mob/human_face/facial_largehorns/'
 	}),
 	longbeard_s: new HairAccessory({
@@ -117,13 +117,13 @@ module.exports.hair = {
 	massivehorns: new HairAccessory({
 		name: 'massivehorns',
 		icon_state: 'facial_massivehorns',
-		icon: 'icons/mob/human_face/facial_massivehorns/massivehorns-dir1.png',
+		icon: 'icons/mob/human_face/facial_massivehorns/facial_massivehorns-dir1.png',
 		base_icon: 'icons/mob/human_face/facial_massivehorns/'
 	}),
 	mediumhorns: new HairAccessory({
 		name: 'mediumhorns',
 		icon_state: 'facial_mediumhorns',
-		icon: 'icons/mob/human_face/facial_mediumhorns/mediumhorns-dir1.png',
+		icon: 'icons/mob/human_face/facial_mediumhorns/facial_mediumhorns-dir1.png',
 		base_icon: 'icons/mob/human_face/facial_mediumhorns/'
 	}),
 	neckbeard_s: new HairAccessory({
@@ -135,7 +135,7 @@ module.exports.hair = {
 	pointedhorns: new HairAccessory({
 		name: 'pointedhorns',
 		icon_state: 'facial_pointedhorns',
-		icon: 'icons/mob/human_face/facial_pointedhorns/pointedhorns-dir1.png',
+		icon: 'icons/mob/human_face/facial_pointedhorns/facial_pointedhorns-dir1.png',
 		base_icon: 'icons/mob/human_face/facial_pointedhorns/'
 	}),
 	selleck_s: new HairAccessory({
@@ -153,7 +153,7 @@ module.exports.hair = {
 	smallhorns: new HairAccessory({
 		name: 'smallhorns',
 		icon_state: 'facial_smallhorns',
-		icon: 'icons/mob/human_face/facial_smallhorns/smallhorns-dir1.png',
+		icon: 'icons/mob/human_face/facial_smallhorns/facial_smallhorns-dir1.png',
 		base_icon: 'icons/mob/human_face/facial_smallhorns/'
 	}),
 	vandyke_s: new HairAccessory({
