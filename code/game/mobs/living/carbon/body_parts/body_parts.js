@@ -375,7 +375,7 @@ BodyPart.template = {
 			},
 		},
 		name: "limb",
-		icon: "icons/mob/human_parts.png",
+		icon: "icons/mob/human_body/groin_m/groin_m-dir1.png",
 		layer: layers.BELOW_MOB_LAYER,
 	},
 };

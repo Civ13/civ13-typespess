@@ -30,755 +30,760 @@ class HairAccessory extends SpriteAccessory {
 // there were duplicate type paths. go figure.
 // that means some hair styles got overwritten
 module.exports.hair = {
-	
+	bald_s: new HairAccessory({
+		name: 'bald',
+		icon_state: 'bald_s',
+		icon: 'icons/mob/human_face/bald_s/bald_s-dir1.png',
+		base_icon: 'icons/mob/human_face/bald_s/'
+	}),
 	abe_s: new HairAccessory({
 		name: 'abe',
 		icon_state: 'facial_abe_s',
-		icon: 'icons/mob/human_face/abe_s/abe_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/abe_s/'
+		icon: 'icons/mob/human_face/facial_abe_s/facial_abe_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_abe_s/'
 	}),
 	chaplin_s: new HairAccessory({
 		name: 'chaplin',
 		icon_state: 'facial_chaplin_s',
-		icon: 'icons/mob/human_face/chaplin_s/chaplin_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/chaplin_s/'
+		icon: 'icons/mob/human_face/facial_chaplin_s/facial_chaplin_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_chaplin_s/'
 	}),
 	chin_s: new HairAccessory({
 		name: 'chin',
 		icon_state: 'facial_chin_s',
-		icon: 'icons/mob/human_face/chin_s/chin_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/chin_s/'
+		icon: 'icons/mob/human_face/facial_chin_s/facial_chin_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_chin_s/'
 	}),
 	dwarf_s: new HairAccessory({
 		name: 'dwarf',
 		icon_state: 'facial_dwarf_s',
-		icon: 'icons/mob/human_face/dwarf_s/dwarf_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/dwarf_s/'
+		icon: 'icons/mob/human_face/facial_dwarf_s/facial_dwarf_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_dwarf_s/'
 	}),
 	elvis_s: new HairAccessory({
 		name: 'elvis',
 		icon_state: 'facial_elvis_s',
-		icon: 'icons/mob/human_face/elvis_s/elvis_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/elvis_s/'
+		icon: 'icons/mob/human_face/facial_elvis_s/facial_elvis_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_elvis_s/'
 	}),
 	fullbeard_s: new HairAccessory({
 		name: 'fullbeard',
 		icon_state: 'facial_fullbeard_s',
-		icon: 'icons/mob/human_face/fullbeard_s/fullbeard_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/fullbeard_s/'
+		icon: 'icons/mob/human_face/facial_fullbeard_s/facial_fullbeard_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_fullbeard_s/'
 	}),
 	gt_s: new HairAccessory({
 		name: 'gt',
 		icon_state: 'facial_gt_s',
-		icon: 'icons/mob/human_face/gt_s/gt_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/gt_s/'
+		icon: 'icons/mob/human_face/facial_gt_s/facial_gt_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_gt_s/'
 	}),
 	hip_s: new HairAccessory({
 		name: 'hip',
 		icon_state: 'facial_hip_s',
-		icon: 'icons/mob/human_face/hip_s/hip_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/hip_s/'
+		icon: 'icons/mob/human_face/facial_hip_s/facial_hip_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_hip_s/'
 	}),
 	hogan_s: new HairAccessory({
 		name: 'hogan',
 		icon_state: 'facial_hogan_s',
-		icon: 'icons/mob/human_face/hogan_s/hogan_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/hogan_s/'
+		icon: 'icons/mob/human_face/facial_hogan_s/facial_hogan_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_hogan_s/'
 	}),
 	invertedhorns: new HairAccessory({
 		name: 'invertedhorns',
 		icon_state: 'facial_invertedhorns',
-		icon: 'icons/mob/human_face/invertedhorns/invertedhorns/-dir1.png',
-		base_icon: 'icons/mob/human_face/invertedhorns/'
+		icon: 'icons/mob/human_face/facial_invertedhorns/invertedhorns-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_invertedhorns/'
 	}),
 	jensen_s: new HairAccessory({
 		name: 'jensen',
 		icon_state: 'facial_jensen_s',
-		icon: 'icons/mob/human_face/jensen_s/jensen_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/jensen_s/'
+		icon: 'icons/mob/human_face/facial_jensen_s/facial_jensen_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_jensen_s/'
 	}),
 	largehorns: new HairAccessory({
 		name: 'largehorns',
 		icon_state: 'facial_largehorns',
-		icon: 'icons/mob/human_face/largehorns/largehorns/-dir1.png',
-		base_icon: 'icons/mob/human_face/largehorns/'
+		icon: 'icons/mob/human_face/facial_largehorns/largehorns-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_largehorns/'
 	}),
 	longbeard_s: new HairAccessory({
 		name: 'longbeard',
 		icon_state: 'facial_longbeard_s',
-		icon: 'icons/mob/human_face/longbeard_s/longbeard_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/longbeard_s/'
+		icon: 'icons/mob/human_face/facial_longbeard_s/facial_longbeard_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_longbeard_s/'
 	}),
 	massivehorns: new HairAccessory({
 		name: 'massivehorns',
 		icon_state: 'facial_massivehorns',
-		icon: 'icons/mob/human_face/massivehorns/massivehorns/-dir1.png',
-		base_icon: 'icons/mob/human_face/massivehorns/'
+		icon: 'icons/mob/human_face/facial_massivehorns/massivehorns-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_massivehorns/'
 	}),
 	mediumhorns: new HairAccessory({
 		name: 'mediumhorns',
 		icon_state: 'facial_mediumhorns',
-		icon: 'icons/mob/human_face/mediumhorns/mediumhorns/-dir1.png',
-		base_icon: 'icons/mob/human_face/mediumhorns/'
+		icon: 'icons/mob/human_face/facial_mediumhorns/mediumhorns-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_mediumhorns/'
 	}),
 	neckbeard_s: new HairAccessory({
 		name: 'neckbeard',
 		icon_state: 'facial_neckbeard_s',
-		icon: 'icons/mob/human_face/neckbeard_s/neckbeard_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/neckbeard_s/'
+		icon: 'icons/mob/human_face/facial_neckbeard_s/facial_neckbeard_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_neckbeard_s/'
 	}),
 	pointedhorns: new HairAccessory({
 		name: 'pointedhorns',
 		icon_state: 'facial_pointedhorns',
-		icon: 'icons/mob/human_face/pointedhorns/pointedhorns/-dir1.png',
-		base_icon: 'icons/mob/human_face/pointedhorns/'
+		icon: 'icons/mob/human_face/facial_pointedhorns/pointedhorns-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_pointedhorns/'
 	}),
 	selleck_s: new HairAccessory({
 		name: 'selleck',
 		icon_state: 'facial_selleck_s',
-		icon: 'icons/mob/human_face/selleck_s/selleck_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/selleck_s/'
+		icon: 'icons/mob/human_face/facial_selleck_s/facial_selleck_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_selleck_s/'
 	}),
 	smallbeard_s: new HairAccessory({
 		name: 'smallbeard',
 		icon_state: 'facial_smallbeard_s',
-		icon: 'icons/mob/human_face/smallbeard_s/smallbeard_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/smallbeard_s/'
+		icon: 'icons/mob/human_face/facial_smallbeard_s/facial_smallbeard_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_smallbeard_s/'
 	}),
 	smallhorns: new HairAccessory({
 		name: 'smallhorns',
 		icon_state: 'facial_smallhorns',
-		icon: 'icons/mob/human_face/smallhorns/smallhorns/-dir1.png',
-		base_icon: 'icons/mob/human_face/smallhorns/'
+		icon: 'icons/mob/human_face/facial_smallhorns/smallhorns-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_smallhorns/'
 	}),
 	vandyke_s: new HairAccessory({
 		name: 'vandyke',
 		icon_state: 'facial_vandyke_s',
-		icon: 'icons/mob/human_face/vandyke_s/vandyke_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/vandyke_s/'
+		icon: 'icons/mob/human_face/facial_vandyke_s/facial_vandyke_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_vandyke_s/'
 	}),
 	verywise_s: new HairAccessory({
 		name: 'verywise',
 		icon_state: 'facial_verywise_s',
-		icon: 'icons/mob/human_face/verywise_s/verywise_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/verywise_s/'
+		icon: 'icons/mob/human_face/facial_verywise_s/facial_verywise_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_verywise_s/'
 	}),
 	volaju_s: new HairAccessory({
 		name: 'volaju',
 		icon_state: 'facial_volaju_s',
-		icon: 'icons/mob/human_face/volaju_s/volaju_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/volaju_s/'
+		icon: 'icons/mob/human_face/facial_volaju_s/facial_volaju_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_volaju_s/'
 	}),
 	watson_s: new HairAccessory({
 		name: 'watson',
 		icon_state: 'facial_watson_s',
-		icon: 'icons/mob/human_face/watson_s/watson_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/watson_s/'
+		icon: 'icons/mob/human_face/facial_watson_s/facial_watson_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_watson_s/'
 	}),
 	wise_s: new HairAccessory({
 		name: 'wise',
 		icon_state: 'facial_wise_s',
-		icon: 'icons/mob/human_face/wise_s/wise_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/wise_s/'
+		icon: 'icons/mob/human_face/facial_wise_s/facial_wise_s-dir1.png',
+		base_icon: 'icons/mob/human_face/facial_wise_s/'
 	}),
 	afro2_s: new HairAccessory({
 		name: 'afro2',
 		icon_state: 'hair_afro2_s',
-		icon: 'icons/mob/human_face/afro2_s/afro2_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/afro2_s/'
+		icon: 'icons/mob/human_face/hair_afro2_s/hair_afro2_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_afro2_s/'
 	}),
 	afro_s: new HairAccessory({
 		name: 'afro',
 		icon_state: 'hair_afro_s',
-		icon: 'icons/mob/human_face/afro_s/afro_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/afro_s/'
+		icon: 'icons/mob/human_face/hair_afro_s/hair_afro_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_afro_s/'
 	}),
 	averagejoe_s: new HairAccessory({
 		name: 'averagejoe',
 		icon_state: 'hair_averagejoe_s',
-		icon: 'icons/mob/human_face/averagejoe_s/averagejoe_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/averagejoe_s/'
+		icon: 'icons/mob/human_face/hair_averagejoe_s/hair_averagejoe_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_averagejoe_s/'
 	}),
 	a_s: new HairAccessory({
 		name: 'a',
 		icon_state: 'hair_a_s',
-		icon: 'icons/mob/human_face/a_s/a_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/a_s/'
+		icon: 'icons/mob/human_face/hair_a_s/hair_a_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_a_s/'
 	}),
 	bedheadv2_s: new HairAccessory({
 		name: 'bedheadv2',
 		icon_state: 'hair_bedheadv2_s',
-		icon: 'icons/mob/human_face/bedheadv2_s/bedheadv2_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/bedheadv2_s/'
+		icon: 'icons/mob/human_face/hair_bedheadv2_s/hair_bedheadv2_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_bedheadv2_s/'
 	}),
 	bedheadv3_s: new HairAccessory({
 		name: 'bedheadv3',
 		icon_state: 'hair_bedheadv3_s',
-		icon: 'icons/mob/human_face/bedheadv3_s/bedheadv3_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/bedheadv3_s/'
+		icon: 'icons/mob/human_face/hair_bedheadv3_s/hair_bedheadv3_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_bedheadv3_s/'
 	}),
 	bedhead_s: new HairAccessory({
 		name: 'bedhead',
 		icon_state: 'hair_bedhead_s',
-		icon: 'icons/mob/human_face/bedhead_s/bedhead_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/bedhead_s/'
+		icon: 'icons/mob/human_face/hair_bedhead_s/hair_bedhead_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_bedhead_s/'
 	}),
 	beehive2_s: new HairAccessory({
 		name: 'beehive2',
 		icon_state: 'hair_beehive2_s',
-		icon: 'icons/mob/human_face/beehive2_s/beehive2_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/beehive2_s/'
+		icon: 'icons/mob/human_face/hair_beehive2_s/hair_beehive2_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_beehive2_s/'
 	}),
 	beehive_s: new HairAccessory({
 		name: 'beehive',
 		icon_state: 'hair_beehive_s',
-		icon: 'icons/mob/human_face/beehive_s/beehive_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/beehive_s/'
+		icon: 'icons/mob/human_face/hair_beehive_s/hair_beehive_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_beehive_s/'
 	}),
 	bigafro_s: new HairAccessory({
 		name: 'bigafro',
 		icon_state: 'hair_bigafro_s',
-		icon: 'icons/mob/human_face/bigafro_s/bigafro_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/bigafro_s/'
+		icon: 'icons/mob/human_face/hair_bigafro_s/hair_bigafro_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_bigafro_s/'
 	}),
 	bobcurl_s: new HairAccessory({
 		name: 'bobcurl',
 		icon_state: 'hair_bobcurl_s',
-		icon: 'icons/mob/human_face/bobcurl_s/bobcurl_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/bobcurl_s/'
+		icon: 'icons/mob/human_face/hair_bobcurl_s/hair_bobcurl_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_bobcurl_s/'
 	}),
 	bobcut_s: new HairAccessory({
 		name: 'bobcut',
 		icon_state: 'hair_bobcut_s',
-		icon: 'icons/mob/human_face/bobcut_s/bobcut_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/bobcut_s/'
+		icon: 'icons/mob/human_face/hair_bobcut_s/hair_bobcut_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_bobcut_s/'
 	}),
 	bowlcut_s: new HairAccessory({
 		name: 'bowlcut',
 		icon_state: 'hair_bowlcut_s',
-		icon: 'icons/mob/human_face/bowlcut_s/bowlcut_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/bowlcut_s/'
+		icon: 'icons/mob/human_face/hair_bowlcut_s/hair_bowlcut_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_bowlcut_s/'
 	}),
 	bowl_s: new HairAccessory({
 		name: 'bowl',
 		icon_state: 'hair_bowl_s',
-		icon: 'icons/mob/human_face/bowl_s/bowl_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/bowl_s/'
+		icon: 'icons/mob/human_face/hair_bowl_s/hair_bowl_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_bowl_s/'
 	}),
 	braid_s: new HairAccessory({
 		name: 'braid',
 		icon_state: 'hair_braid_s',
-		icon: 'icons/mob/human_face/braid_s/braid_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/braid_s/'
+		icon: 'icons/mob/human_face/hair_braid_s/hair_braid_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_braid_s/'
 	}),
 	bun_s: new HairAccessory({
 		name: 'bun',
 		icon_state: 'hair_bun_s',
-		icon: 'icons/mob/human_face/bun_s/bun_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/bun_s/'
+		icon: 'icons/mob/human_face/hair_bun_s/hair_bun_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_bun_s/'
 	}),
 	buzzcut_s: new HairAccessory({
 		name: 'buzzcut',
 		icon_state: 'hair_buzzcut_s',
-		icon: 'icons/mob/human_face/buzzcut_s/buzzcut_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/buzzcut_s/'
+		icon: 'icons/mob/human_face/hair_buzzcut_s/hair_buzzcut_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_buzzcut_s/'
 	}),
 	b_s: new HairAccessory({
 		name: 'b',
 		icon_state: 'hair_b_s',
-		icon: 'icons/mob/human_face/b_s/b_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/b_s/'
+		icon: 'icons/mob/human_face/hair_b_s/hair_b_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_b_s/'
 	}),
 	chad_s: new HairAccessory({
 		name: 'chad',
 		icon_state: 'hair_chad_s',
-		icon: 'icons/mob/human_face/chad_s/chad_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/chad_s/'
+		icon: 'icons/mob/human_face/hair_chad_s/hair_chad_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_chad_s/'
 	}),
 	cia_s: new HairAccessory({
 		name: 'cia',
 		icon_state: 'hair_cia_s',
-		icon: 'icons/mob/human_face/cia_s/cia_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/cia_s/'
+		icon: 'icons/mob/human_face/hair_cia_s/hair_cia_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_cia_s/'
 	}),
 	combover_s: new HairAccessory({
 		name: 'combover',
 		icon_state: 'hair_combover_s',
-		icon: 'icons/mob/human_face/combover_s/combover_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/combover_s/'
+		icon: 'icons/mob/human_face/hair_combover_s/hair_combover_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_combover_s/'
 	}),
 	crewcut_s: new HairAccessory({
 		name: 'crewcut',
 		icon_state: 'hair_crewcut_s',
-		icon: 'icons/mob/human_face/crewcut_s/crewcut_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/crewcut_s/'
+		icon: 'icons/mob/human_face/hair_crewcut_s/hair_crewcut_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_crewcut_s/'
 	}),
 	curls_s: new HairAccessory({
 		name: 'curls',
 		icon_state: 'hair_curls_s',
-		icon: 'icons/mob/human_face/curls_s/curls_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/curls_s/'
+		icon: 'icons/mob/human_face/hair_curls_s/hair_curls_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_curls_s/'
 	}),
 	c_s: new HairAccessory({
 		name: 'c',
 		icon_state: 'hair_c_s',
-		icon: 'icons/mob/human_face/c_s/c_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/c_s/'
+		icon: 'icons/mob/human_face/hair_c_s/hair_c_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_c_s/'
 	}),
 	dandypompadour_s: new HairAccessory({
 		name: 'dandypompadour',
 		icon_state: 'hair_dandypompadour_s',
-		icon: 'icons/mob/human_face/dandypompadour_s/dandypompadour_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/dandypompadour_s/'
+		icon: 'icons/mob/human_face/hair_dandypompadour_s/hair_dandypompadour_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_dandypompadour_s/'
 	}),
 	devilock_s: new HairAccessory({
 		name: 'devilock',
 		icon_state: 'hair_devilock_s',
-		icon: 'icons/mob/human_face/devilock_s/devilock_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/devilock_s/'
+		icon: 'icons/mob/human_face/hair_devilock_s/hair_devilock_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_devilock_s/'
 	}),
 	doublebun_s: new HairAccessory({
 		name: 'doublebun',
 		icon_state: 'hair_doublebun_s',
-		icon: 'icons/mob/human_face/doublebun_s/doublebun_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/doublebun_s/'
+		icon: 'icons/mob/human_face/hair_doublebun_s/hair_doublebun_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_doublebun_s/'
 	}),
 	dreads_s: new HairAccessory({
 		name: 'dreads',
 		icon_state: 'hair_dreads_s',
-		icon: 'icons/mob/human_face/dreads_s/dreads_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/dreads_s/'
+		icon: 'icons/mob/human_face/hair_dreads_s/hair_dreads_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_dreads_s/'
 	}),
 	drillruru_s: new HairAccessory({
 		name: 'drillruru',
 		icon_state: 'hair_drillruru_s',
-		icon: 'icons/mob/human_face/drillruru_s/drillruru_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/drillruru_s/'
+		icon: 'icons/mob/human_face/hair_drillruru_s/hair_drillruru_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_drillruru_s/'
 	}),
 	d_s: new HairAccessory({
 		name: 'd',
 		icon_state: 'hair_d_s',
-		icon: 'icons/mob/human_face/d_s/d_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/d_s/'
+		icon: 'icons/mob/human_face/hair_d_s/hair_d_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_d_s/'
 	}),
 	emolong_s: new HairAccessory({
 		name: 'emolong',
 		icon_state: 'hair_emolong_s',
-		icon: 'icons/mob/human_face/emolong_s/emolong_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/emolong_s/'
+		icon: 'icons/mob/human_face/hair_emolong_s/hair_emolong_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_emolong_s/'
 	}),
 	emoright_s: new HairAccessory({
 		name: 'emoright',
 		icon_state: 'hair_emoright_s',
-		icon: 'icons/mob/human_face/emoright_s/emoright_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/emoright_s/'
+		icon: 'icons/mob/human_face/hair_emoright_s/hair_emoright_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_emoright_s/'
 	}),
 	emo_s: new HairAccessory({
 		name: 'emo',
 		icon_state: 'hair_emo_s',
-		icon: 'icons/mob/human_face/emo_s/emo_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/emo_s/'
+		icon: 'icons/mob/human_face/hair_emo_s/hair_emo_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_emo_s/'
 	}),
 	e_s: new HairAccessory({
 		name: 'e',
 		icon_state: 'hair_e_s',
-		icon: 'icons/mob/human_face/e_s/e_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/e_s/'
+		icon: 'icons/mob/human_face/hair_e_s/hair_e_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_e_s/'
 	}),
 	fade_s: new HairAccessory({
 		name: 'fade',
 		icon_state: 'hair_fade_s',
-		icon: 'icons/mob/human_face/fade_s/fade_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/fade_s/'
+		icon: 'icons/mob/human_face/hair_fade_s/hair_fade_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_fade_s/'
 	}),
 	father_s: new HairAccessory({
 		name: 'father',
 		icon_state: 'hair_father_s',
-		icon: 'icons/mob/human_face/father_s/father_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/father_s/'
+		icon: 'icons/mob/human_face/hair_father_s/hair_father_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_father_s/'
 	}),
 	feather_s: new HairAccessory({
 		name: 'feather',
 		icon_state: 'hair_feather_s',
-		icon: 'icons/mob/human_face/feather_s/feather_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/feather_s/'
+		icon: 'icons/mob/human_face/hair_feather_s/hair_feather_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_feather_s/'
 	}),
 	flair_s: new HairAccessory({
 		name: 'flair',
 		icon_state: 'hair_flair_s',
-		icon: 'icons/mob/human_face/flair_s/flair_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/flair_s/'
+		icon: 'icons/mob/human_face/hair_flair_s/hair_flair_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_flair_s/'
 	}),
 	f_s: new HairAccessory({
 		name: 'f',
 		icon_state: 'hair_f_s',
-		icon: 'icons/mob/human_face/f_s/f_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/f_s/'
+		icon: 'icons/mob/human_face/hair_f_s/hair_f_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_f_s/'
 	}),
 	gelled_s: new HairAccessory({
 		name: 'gelled',
 		icon_state: 'hair_gelled_s',
-		icon: 'icons/mob/human_face/gelled_s/gelled_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/gelled_s/'
+		icon: 'icons/mob/human_face/hair_gelled_s/hair_gelled_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_gelled_s/'
 	}),
 	gentle_s: new HairAccessory({
 		name: 'gentle',
 		icon_state: 'hair_gentle_s',
-		icon: 'icons/mob/human_face/gentle_s/gentle_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/gentle_s/'
+		icon: 'icons/mob/human_face/hair_gentle_s/hair_gentle_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_gentle_s/'
 	}),
 	halfbang_alt_s: new HairAccessory({
 		name: 'halfbang_alt',
 		icon_state: 'hair_halfbang_alt_s',
-		icon: 'icons/mob/human_face/halfbang_alt_s/halfbang_alt_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/halfbang_alt_s/'
+		icon: 'icons/mob/human_face/hair_halfbang_alt_s/hair_halfbang_alt_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_halfbang_alt_s/'
 	}),
 	halfbang_s: new HairAccessory({
 		name: 'halfbang',
 		icon_state: 'hair_halfbang_s',
-		icon: 'icons/mob/human_face/halfbang_s/halfbang_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/halfbang_s/'
+		icon: 'icons/mob/human_face/hair_halfbang_s/hair_halfbang_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_halfbang_s/'
 	}),
 	halfshaved_s: new HairAccessory({
 		name: 'halfshaved',
 		icon_state: 'hair_halfshaved_s',
-		icon: 'icons/mob/human_face/halfshaved_s/halfshaved_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/halfshaved_s/'
+		icon: 'icons/mob/human_face/hair_halfshaved_s/hair_halfshaved_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_halfshaved_s/'
 	}),
 	hbraid_s: new HairAccessory({
 		name: 'hbraid',
 		icon_state: 'hair_hbraid_s',
-		icon: 'icons/mob/human_face/hbraid_s/hbraid_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/hbraid_s/'
+		icon: 'icons/mob/human_face/hair_hbraid_s/hair_hbraid_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_hbraid_s/'
 	}),
 	himecut_s: new HairAccessory({
 		name: 'himecut',
 		icon_state: 'hair_himecut_s',
-		icon: 'icons/mob/human_face/himecut_s/himecut_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/himecut_s/'
+		icon: 'icons/mob/human_face/hair_himecut_s/hair_himecut_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_himecut_s/'
 	}),
 	hitop_s: new HairAccessory({
 		name: 'hitop',
 		icon_state: 'hair_hitop_s',
-		icon: 'icons/mob/human_face/hitop_s/hitop_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/hitop_s/'
+		icon: 'icons/mob/human_face/hair_hitop_s/hair_hitop_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_hitop_s/'
 	}),
 	jensen_s: new HairAccessory({
 		name: 'jensen',
 		icon_state: 'hair_jensen_s',
-		icon: 'icons/mob/human_face/jensen_s/jensen_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/jensen_s/'
+		icon: 'icons/mob/human_face/hair_jensen_s/hair_jensen_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_jensen_s/'
 	}),
 	jewlocks_s: new HairAccessory({
 		name: 'jewlocks',
 		icon_state: 'hair_jewlocks_s',
-		icon: 'icons/mob/human_face/jewlocks_s/jewlocks_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/jewlocks_s/'
+		icon: 'icons/mob/human_face/hair_jewlocks_s/hair_jewlocks_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_jewlocks_s/'
 	}),
 	joestar_s: new HairAccessory({
 		name: 'joestar',
 		icon_state: 'hair_joestar_s',
-		icon: 'icons/mob/human_face/joestar_s/joestar_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/joestar_s/'
+		icon: 'icons/mob/human_face/hair_joestar_s/hair_joestar_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_joestar_s/'
 	}),
 	kagami_s: new HairAccessory({
 		name: 'kagami',
 		icon_state: 'hair_kagami_s',
-		icon: 'icons/mob/human_face/kagami_s/kagami_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/kagami_s/'
+		icon: 'icons/mob/human_face/hair_kagami_s/hair_kagami_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_kagami_s/'
 	}),
 	kusanagi_s: new HairAccessory({
 		name: 'kusanagi',
 		icon_state: 'hair_kusanagi_s',
-		icon: 'icons/mob/human_face/kusanagi_s/kusanagi_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/kusanagi_s/'
+		icon: 'icons/mob/human_face/hair_kusanagi_s/hair_kusanagi_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_kusanagi_s/'
 	}),
 	longbraid_s: new HairAccessory({
 		name: 'longbraid',
 		icon_state: 'hair_longbraid_s',
-		icon: 'icons/mob/human_face/longbraid_s/longbraid_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/longbraid_s/'
+		icon: 'icons/mob/human_face/hair_longbraid_s/hair_longbraid_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_longbraid_s/'
 	}),
 	longeralt2_s: new HairAccessory({
 		name: 'longeralt2',
 		icon_state: 'hair_longeralt2_s',
-		icon: 'icons/mob/human_face/longeralt2_s/longeralt2_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/longeralt2_s/'
+		icon: 'icons/mob/human_face/hair_longeralt2_s/hair_longeralt2_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_longeralt2_s/'
 	}),
 	longest_s: new HairAccessory({
 		name: 'longest',
 		icon_state: 'hair_longest_s',
-		icon: 'icons/mob/human_face/longest_s/longest_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/longest_s/'
+		icon: 'icons/mob/human_face/hair_longest_s/hair_longest_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_longest_s/'
 	}),
 	longfringe_s: new HairAccessory({
 		name: 'longfringe',
 		icon_state: 'hair_longfringe_s',
-		icon: 'icons/mob/human_face/longfringe_s/longfringe_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/longfringe_s/'
+		icon: 'icons/mob/human_face/hair_longfringe_s/hair_longfringe_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_longfringe_s/'
 	}),
 	longovereye_s: new HairAccessory({
 		name: 'longovereye',
 		icon_state: 'hair_longovereye_s',
-		icon: 'icons/mob/human_face/longovereye_s/longovereye_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/longovereye_s/'
+		icon: 'icons/mob/human_face/hair_longovereye_s/hair_longovereye_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_longovereye_s/'
 	}),
 	mia_s: new HairAccessory({
 		name: 'mia',
 		icon_state: 'hair_mia_s',
-		icon: 'icons/mob/human_face/mia_s/mia_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/mia_s/'
+		icon: 'icons/mob/human_face/hair_mia_s/hair_mia_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_mia_s/'
 	}),
 	mulder_s: new HairAccessory({
 		name: 'mulder',
 		icon_state: 'hair_mulder_s',
-		icon: 'icons/mob/human_face/mulder_s/mulder_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/mulder_s/'
+		icon: 'icons/mob/human_face/hair_mulder_s/hair_mulder_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_mulder_s/'
 	}),
 	nitori_s: new HairAccessory({
 		name: 'nitori',
 		icon_state: 'hair_nitori_s',
-		icon: 'icons/mob/human_face/nitori_s/nitori_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/nitori_s/'
+		icon: 'icons/mob/human_face/hair_nitori_s/hair_nitori_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_nitori_s/'
 	}),
 	odango_s: new HairAccessory({
 		name: 'odango',
 		icon_state: 'hair_odango_s',
-		icon: 'icons/mob/human_face/odango_s/odango_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/odango_s/'
+		icon: 'icons/mob/human_face/hair_odango_s/hair_odango_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_odango_s/'
 	}),
 	ombre_s: new HairAccessory({
 		name: 'ombre',
 		icon_state: 'hair_ombre_s',
-		icon: 'icons/mob/human_face/ombre_s/ombre_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/ombre_s/'
+		icon: 'icons/mob/human_face/hair_ombre_s/hair_ombre_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_ombre_s/'
 	}),
 	parted_s: new HairAccessory({
 		name: 'parted',
 		icon_state: 'hair_parted_s',
-		icon: 'icons/mob/human_face/parted_s/parted_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/parted_s/'
+		icon: 'icons/mob/human_face/hair_parted_s/hair_parted_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_parted_s/'
 	}),
 	pa_s: new HairAccessory({
 		name: 'pa',
 		icon_state: 'hair_pa_s',
-		icon: 'icons/mob/human_face/pa_s/pa_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/pa_s/'
+		icon: 'icons/mob/human_face/hair_pa_s/hair_pa_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_pa_s/'
 	}),
 	pompadour_s: new HairAccessory({
 		name: 'pompadour',
 		icon_state: 'hair_pompadour_s',
-		icon: 'icons/mob/human_face/pompadour_s/pompadour_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/pompadour_s/'
+		icon: 'icons/mob/human_face/hair_pompadour_s/hair_pompadour_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_pompadour_s/'
 	}),
 	ponytail3_s: new HairAccessory({
 		name: 'ponytail3',
 		icon_state: 'hair_ponytail3_s',
-		icon: 'icons/mob/human_face/ponytail3_s/ponytail3_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/ponytail3_s/'
+		icon: 'icons/mob/human_face/hair_ponytail3_s/hair_ponytail3_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_ponytail3_s/'
 	}),
 	ponytail4_s: new HairAccessory({
 		name: 'ponytail4',
 		icon_state: 'hair_ponytail4_s',
-		icon: 'icons/mob/human_face/ponytail4_s/ponytail4_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/ponytail4_s/'
+		icon: 'icons/mob/human_face/hair_ponytail4_s/hair_ponytail4_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_ponytail4_s/'
 	}),
 	ponytail_s: new HairAccessory({
 		name: 'ponytail',
 		icon_state: 'hair_ponytail_s',
-		icon: 'icons/mob/human_face/ponytail_s/ponytail_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/ponytail_s/'
+		icon: 'icons/mob/human_face/hair_ponytail_s/hair_ponytail_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_ponytail_s/'
 	}),
 	poofy_s: new HairAccessory({
 		name: 'poofy',
 		icon_state: 'hair_poofy_s',
-		icon: 'icons/mob/human_face/poofy_s/poofy_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/poofy_s/'
+		icon: 'icons/mob/human_face/hair_poofy_s/hair_poofy_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_poofy_s/'
 	}),
 	quiff_s: new HairAccessory({
 		name: 'quiff',
 		icon_state: 'hair_quiff_s',
-		icon: 'icons/mob/human_face/quiff_s/quiff_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/quiff_s/'
+		icon: 'icons/mob/human_face/hair_quiff_s/hair_quiff_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_quiff_s/'
 	}),
 	reversemohawk_s: new HairAccessory({
 		name: 'reversemohawk',
 		icon_state: 'hair_reversemohawk_s',
-		icon: 'icons/mob/human_face/reversemohawk_s/reversemohawk_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/reversemohawk_s/'
+		icon: 'icons/mob/human_face/hair_reversemohawk_s/hair_reversemohawk_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_reversemohawk_s/'
 	}),
 	sargeant_s: new HairAccessory({
 		name: 'sargeant',
 		icon_state: 'hair_sargeant_s',
-		icon: 'icons/mob/human_face/sargeant_s/sargeant_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/sargeant_s/'
+		icon: 'icons/mob/human_face/hair_sargeant_s/hair_sargeant_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_sargeant_s/'
 	}),
 	scully_s: new HairAccessory({
 		name: 'scully',
 		icon_state: 'hair_scully_s',
-		icon: 'icons/mob/human_face/scully_s/scully_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/scully_s/'
+		icon: 'icons/mob/human_face/hair_scully_s/hair_scully_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_scully_s/'
 	}),
 	shortbangs_s: new HairAccessory({
 		name: 'shortbangs',
 		icon_state: 'hair_shortbangs_s',
-		icon: 'icons/mob/human_face/shortbangs_s/shortbangs_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/shortbangs_s/'
+		icon: 'icons/mob/human_face/hair_shortbangs_s/hair_shortbangs_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_shortbangs_s/'
 	}),
 	shortbraid_s: new HairAccessory({
 		name: 'shortbraid',
 		icon_state: 'hair_shortbraid_s',
-		icon: 'icons/mob/human_face/shortbraid_s/shortbraid_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/shortbraid_s/'
+		icon: 'icons/mob/human_face/hair_shortbraid_s/hair_shortbraid_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_shortbraid_s/'
 	}),
 	shortovereye_s: new HairAccessory({
 		name: 'shortovereye',
 		icon_state: 'hair_shortovereye_s',
-		icon: 'icons/mob/human_face/shortovereye_s/shortovereye_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/shortovereye_s/'
+		icon: 'icons/mob/human_face/hair_shortovereye_s/hair_shortovereye_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_shortovereye_s/'
 	}),
 	skinhead_s: new HairAccessory({
 		name: 'skinhead',
 		icon_state: 'hair_skinhead_s',
-		icon: 'icons/mob/human_face/skinhead_s/skinhead_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/skinhead_s/'
+		icon: 'icons/mob/human_face/hair_skinhead_s/hair_skinhead_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_skinhead_s/'
 	}),
 	slick_s: new HairAccessory({
 		name: 'slick',
 		icon_state: 'hair_slick_s',
-		icon: 'icons/mob/human_face/slick_s/slick_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/slick_s/'
+		icon: 'icons/mob/human_face/hair_slick_s/hair_slick_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_slick_s/'
 	}),
 	spikey_s: new HairAccessory({
 		name: 'spikey',
 		icon_state: 'hair_spikey_s',
-		icon: 'icons/mob/human_face/spikey_s/spikey_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/spikey_s/'
+		icon: 'icons/mob/human_face/hair_spikey_s/hair_spikey_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_spikey_s/'
 	}),
 	stail_s: new HairAccessory({
 		name: 'stail',
 		icon_state: 'hair_stail_s',
-		icon: 'icons/mob/human_face/stail_s/stail_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/stail_s/'
+		icon: 'icons/mob/human_face/hair_stail_s/hair_stail_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_stail_s/'
 	}),
 	thefamilyman_s: new HairAccessory({
 		name: 'thefamilyman',
 		icon_state: 'hair_thefamilyman_s',
-		icon: 'icons/mob/human_face/thefamilyman_s/thefamilyman_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/thefamilyman_s/'
+		icon: 'icons/mob/human_face/hair_thefamilyman_s/hair_thefamilyman_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_thefamilyman_s/'
 	}),
 	toriyama2_s: new HairAccessory({
 		name: 'toriyama2',
 		icon_state: 'hair_toriyama2_s',
-		icon: 'icons/mob/human_face/toriyama2_s/toriyama2_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/toriyama2_s/'
+		icon: 'icons/mob/human_face/hair_toriyama2_s/hair_toriyama2_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_toriyama2_s/'
 	}),
 	toriyama_s: new HairAccessory({
 		name: 'toriyama',
 		icon_state: 'hair_toriyama_s',
-		icon: 'icons/mob/human_face/toriyama_s/toriyama_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/toriyama_s/'
+		icon: 'icons/mob/human_face/hair_toriyama_s/hair_toriyama_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_toriyama_s/'
 	}),
 	undercut_s: new HairAccessory({
 		name: 'undercut',
 		icon_state: 'hair_undercut_s',
-		icon: 'icons/mob/human_face/undercut_s/undercut_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/undercut_s/'
+		icon: 'icons/mob/human_face/hair_undercut_s/hair_undercut_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_undercut_s/'
 	}),
 	updo_s: new HairAccessory({
 		name: 'updo',
 		icon_state: 'hair_updo_s',
-		icon: 'icons/mob/human_face/updo_s/updo_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/updo_s/'
+		icon: 'icons/mob/human_face/hair_updo_s/hair_updo_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_updo_s/'
 	}),
 	vlongfringe_s: new HairAccessory({
 		name: 'vlongfringe',
 		icon_state: 'hair_vlongfringe_s',
-		icon: 'icons/mob/human_face/vlongfringe_s/vlongfringe_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/vlongfringe_s/'
+		icon: 'icons/mob/human_face/hair_vlongfringe_s/hair_vlongfringe_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_vlongfringe_s/'
 	}),
 	vlong_s: new HairAccessory({
 		name: 'vlong',
 		icon_state: 'hair_vlong_s',
-		icon: 'icons/mob/human_face/vlong_s/vlong_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/vlong_s/'
+		icon: 'icons/mob/human_face/hair_vlong_s/hair_vlong_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_vlong_s/'
 	}),
 	volaju_s: new HairAccessory({
 		name: 'volaju',
 		icon_state: 'hair_volaju_s',
-		icon: 'icons/mob/human_face/volaju_s/volaju_s/-dir1.png',
-		base_icon: 'icons/mob/human_face/volaju_s/'
+		icon: 'icons/mob/human_face/hair_volaju_s/hair_volaju_s-dir1.png',
+		base_icon: 'icons/mob/human_face/hair_volaju_s/'
 	}),
 	black: new HairAccessory({
 		name: 'black',
 		icon_state: 'lips_black',
-		icon: 'icons/mob/human_face/black/black/-dir1.png',
-		base_icon: 'icons/mob/human_face/black/'
+		icon: 'icons/mob/human_face/lips_black/lips_black-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_black/'
 	}),
 	black_fat: new HairAccessory({
 		name: 'black_fat',
 		icon_state: 'lips_black_fat',
-		icon: 'icons/mob/human_face/black_fat/black_fat/-dir1.png',
-		base_icon: 'icons/mob/human_face/black_fat/'
+		icon: 'icons/mob/human_face/lips_black_fat/lips_black_fat-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_black_fat/'
 	}),
 	black_slim: new HairAccessory({
 		name: 'blacklim',
 		icon_state: 'lips_black_slim',
-		icon: 'icons/mob/human_face/black_slim/black_slim/-dir1.png',
-		base_icon: 'icons/mob/human_face/black_slim/'
+		icon: 'icons/mob/human_face/lips_black_slim/lips_black_slim-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_black_slim/'
 	}),
 	jade: new HairAccessory({
 		name: 'jade',
 		icon_state: 'lips_jade',
-		icon: 'icons/mob/human_face/jade/jade/-dir1.png',
-		base_icon: 'icons/mob/human_face/jade/'
+		icon: 'icons/mob/human_face/lips_jade/lips_jade-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_jade/'
 	}),
 	jade_fat: new HairAccessory({
 		name: 'jade fat',
 		icon_state: 'lips_jade_fat',
-		icon: 'icons/mob/human_face/jade_fat/jade_fat/-dir1.png',
-		base_icon: 'icons/mob/human_face/jade_fat/'
+		icon: 'icons/mob/human_face/lips_jade_fat/lips_jade_fat-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_jade_fat/'
 	}),
 	jade_slim: new HairAccessory({
 		name: 'jadelim',
 		icon_state: 'lips_jade_slim',
-		icon: 'icons/mob/human_face/jade_slim/jade_slim/-dir1.png',
-		base_icon: 'icons/mob/human_face/jade_slim/'
+		icon: 'icons/mob/human_face/lips_jade_slim/lips_jade_slim-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_jade_slim/'
 	}),
 	purple: new HairAccessory({
 		name: 'purple',
 		icon_state: 'lips_purple',
-		icon: 'icons/mob/human_face/purple/purple/-dir1.png',
-		base_icon: 'icons/mob/human_face/purple/'
+		icon: 'icons/mob/human_face/lips_purple/lips_purple-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_purple/'
 	}),
 	purple_fat: new HairAccessory({
 		name: 'purple_fat',
 		icon_state: 'lips_purple_fat',
-		icon: 'icons/mob/human_face/purple_fat/purple_fat/-dir1.png',
-		base_icon: 'icons/mob/human_face/purple_fat/'
+		icon: 'icons/mob/human_face/lips_purple_fat/lips_purple_fat-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_purple_fat/'
 	}),
 	purple_slim: new HairAccessory({
 		name: 'purplelim',
 		icon_state: 'lips_purple_slim',
-		icon: 'icons/mob/human_face/purple_slim/purple_slim/-dir1.png',
-		base_icon: 'icons/mob/human_face/purple_slim/'
+		icon: 'icons/mob/human_face/lips_purple_slim/lips_purple_slim-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_purple_slim/'
 	}),
 	red: new HairAccessory({
 		name: 'red',
 		icon_state: 'lips_red',
-		icon: 'icons/mob/human_face/red/red/-dir1.png',
-		base_icon: 'icons/mob/human_face/red/'
+		icon: 'icons/mob/human_face/lips_red/lips_red-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_red/'
 	}),
 	red_fat: new HairAccessory({
 		name: 'red fat',
 		icon_state: 'lips_red_fat',
-		icon: 'icons/mob/human_face/red_fat/red_fat/-dir1.png',
-		base_icon: 'icons/mob/human_face/red_fat/'
+		icon: 'icons/mob/human_face/lips_red_fat/lips_red_fat-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_red_fat/'
 	}),
 	red_slim: new HairAccessory({
 		name: 'red slim',
 		icon_state: 'lips_red_slim',
-		icon: 'icons/mob/human_face/red_slim/red_slim/-dir1.png',
-		base_icon: 'icons/mob/human_face/red_slim/'
+		icon: 'icons/mob/human_face/lips_red_slim/lips_red_slim-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_red_slim/'
 	})
 }
