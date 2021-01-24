@@ -1066,21 +1066,40 @@ class Slot extends EventEmitter {
 				this.props.is_hand_slot &&
 		(this[_item].c.Item.inhand_icon_state || this[_item].icon_state)
 			) {
-				this.mob.overlays[`inhand_${this.id}`] = {
-					icon: this[_item].c.Item[`inhand_${this.id}_icon`],
-					icon_state:
-			this[_item].c.Item.inhand_icon_state || this[_item].icon_state,
+				let icodir = 1;
+				if (this.mob) {icodir = this.mob.dir;}
+				if (icodir == 1)
+					icodir = 2;
+				else if (icodir == 2)
+					icodir = 1;
+				else if (icodir == 4)
+					icodir = 3;
+				else if (icodir == 8)
+					icodir = 4;
+				this.mob.overlays[`inhand_${this.id}`] = 
+				{
+					icon_state: this[_item].c.Item.inhand_icon_state,
+					icon: `${this[_item].c.Item[`inhand_${this.id}_icon`]}${this[_item].c.Item.inhand_icon_state}/${this[_item].c.Item.inhand_icon_state}-dir${icodir}.png`,
 					overlay_layer: this.props.worn_layer,
 				};
 			}
 			if (this.props.clothing_slot) {
-				this.mob.overlays[`clothing_${this.id}`] = {
-					icon: this[_item].c[this.props.clothing_slot].worn_icon,
-					icon_state:
-			this[_item].c[this.props.clothing_slot].worn_icon_state ||
-			this[_item].icon_state,
+				let icodir = 1;
+				if (this.mob) {icodir = this.mob.dir;}
+				if (icodir == 1)
+					icodir = 2;
+				else if (icodir == 2)
+					icodir = 1;
+				else if (icodir == 4)
+					icodir = 3;
+				else if (icodir == 8)
+					icodir = 4;
+					this.mob.overlays[`clothing_${this.id}`] = {
+					icon_state: this[_item].c[this.props.clothing_slot].worn_icon_state,
+					icon: `${this[_item].c[this.props.clothing_slot].worn_icon}${this[_item].c[this.props.clothing_slot].worn_icon_state}/${this[_item].c[this.props.clothing_slot].worn_icon_state}-dir${icodir}.png`,
 					overlay_layer: this.props.worn_layer,
 				};
+
 			}
 		} else {
 			if (this.props.is_hand_slot)
