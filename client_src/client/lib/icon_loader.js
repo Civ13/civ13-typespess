@@ -5,15 +5,10 @@ function enqueue_icon_meta_load(newIcon) {
 	var promise = new Promise((resolve, reject) => {
 		var meta = {
 			"": {
-				dir_count: 1,
 				width: 32,
 				height: 32,
-				dirs: { //1 south, 2 north, 3 east, 4 west
-					"1": {
-					},
 				},
-			},
-		};
+			};
 
 		meta.__image_object = new Image();
 		meta.__image_object.src = this.resRoot + newIcon;

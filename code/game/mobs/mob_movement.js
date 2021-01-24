@@ -57,6 +57,10 @@ class MobMovement extends Component {
 		if (walk_dir & 12 && walk_dir & 3) walk_dir &= this.last_axis;
 		this.a.walk_dir = walk_dir;
 		this.a.walking = !!walk_dir;
+		for (let tlimb of ["torso", "groin", "l_arm", "r_arm", "l_leg", "r_leg", "r_hand", "l_hand", "r_foot", "l_foot", "head"]) {
+			if (this.atom.c.MobBodyParts.limbs[tlimb]) {
+				this.atom.c.MobBodyParts.limbs[tlimb].c.BodyPart.update_overlays()}
+		}
 	}
 	move(prev, dx, dy) {
 		var dir = 0;

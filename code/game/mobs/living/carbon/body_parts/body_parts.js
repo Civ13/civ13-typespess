@@ -302,13 +302,22 @@ class BodyPart extends Component {
 	get_main_overlay() {
 		if (!this.owner) return;
 		let mob = this.owner;
-		let overlay = { icon: `icons/mob/human_body/${this.body_zone}_m/${this.body_zone}_m-dir${mob.dir}.png` };
+		let icodir = mob.dir;
+		if (icodir == 1)
+			icodir = 2;
+		else if (icodir == 2)
+			icodir = 1;
+		else if (icodir == 4)
+			icodir = 3;
+		else if (icodir == 8)
+			icodir = 4;
+		let overlay = { icon: `icons/mob/human_body/${this.body_zone}_m/${this.body_zone}_m-dir${icodir}.png` };
 		overlay.icon_state = this.body_zone;
 		if (this.species_id)
 			overlay.icon_state = `${this.species_id}_${overlay.icon_state}`;
 		if (this.should_draw_gender)
 			overlay.icon_state += `_${this.body_gender == "female" ? "f" : "m"}`;
-		overlay.icon = `icons/mob/human_body/${overlay.icon_state}/${overlay.icon_state}-dir${mob.dir}.png`;
+		overlay.icon = `icons/mob/human_body/${overlay.icon_state}/${overlay.icon_state}-dir${icodir}.png`;
 		overlay.color = this.get_color();
 		return overlay;
 	}
