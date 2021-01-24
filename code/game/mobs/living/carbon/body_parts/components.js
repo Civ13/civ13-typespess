@@ -91,6 +91,7 @@ class BodyPartHumanHair extends Component {
 
 	get_main_overlay() {
 		let icodir = this.a.dir;
+		let hair_obj = sprite_accessories.hair[this.hair_style];
 		if (icodir == 1)
 			icodir = 2;
 		else if (icodir == 2)
