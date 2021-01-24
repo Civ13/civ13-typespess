@@ -1278,10 +1278,10 @@ class Atom extends EventEmitter {
 		this[_walk_stepping] = true;
 		var offsetx = 0;
 		var offsety = 0;
-		if (this.walk_dir & 2) offsety += this.walk_size;
-		if (this.walk_dir & 1) offsety -= this.walk_size;
-		if (this.walk_dir & 3) offsetx += this.walk_size;
-		if (this.walk_dir & 4) offsetx -= this.walk_size;
+		if (this.walk_dir & 1) offsety += this.walk_size;
+		if (this.walk_dir & 2) offsety -= this.walk_size;
+		if (this.walk_dir & 4) offsetx += this.walk_size;
+		if (this.walk_dir & 8) offsetx -= this.walk_size;
 		this.glide_size = (this.walk_size / this.walk_delay) * 1000;
 		this.move(offsetx, offsety, this.walk_reason);
 		// in case the move proc cause it to change

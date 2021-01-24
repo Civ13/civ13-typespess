@@ -21,6 +21,9 @@ class MobBodyParts extends Component {
 			get mouth() {
 				return this.head;
 			},
+			get groin() {
+				return this.torso;
+			},
 		});
 		this.limbs_set = new Set();
 
@@ -116,11 +119,6 @@ class MobBodyParts extends Component {
 			"r_arm",
 			"l_leg",
 			"r_leg",
-			"l_foot",
-			"r_foot",
-			"l_hand",
-			"r_hand",
-			"groin",
 		]);
 		for (let bp of this.limbs_set) {
 			missing.delete(bp.c.BodyPart.body_zone);
@@ -204,15 +202,10 @@ MobBodyParts.template = {
 			MobBodyParts: {
 				init_parts: [
 					"human_torso",
-					"human_groin",
 					"human_l_arm",
 					"human_r_arm",
-					"human_l_hand",
-					"human_r_hand",
 					"human_l_leg",
 					"human_r_leg",
-					"human_l_foot",
-					"human_r_foot",
 					"human_head",
 				],
 			},

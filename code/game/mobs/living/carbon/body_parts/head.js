@@ -29,7 +29,7 @@ HeadBodyPart.template = {
 			},
 		},
 		name: "head",
-		icon_state: "head",
+		icon_state: "default_human_head",
 	},
 };
 

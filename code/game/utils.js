@@ -375,28 +375,28 @@ module.exports = {
 
 	/**
   * @memberof Typespess
-  * @default 2
-  * @constant
-  */
-	NORTH: 2,
-	/**
-  * @memberof Typespess
   * @default 1
   * @constant
   */
-	SOUTH: 1,
+	NORTH: 1,
 	/**
   * @memberof Typespess
-  * @default 3
+  * @default 2
   * @constant
   */
-	EAST: 3,
+	SOUTH: 2,
 	/**
   * @memberof Typespess
   * @default 4
   * @constant
   */
-	WEST: 4,
+	EAST: 4,
+	/**
+  * @memberof Typespess
+  * @default 8
+  * @constant
+  */
+	WEST: 8,
 
 	readonly_traps: {
 		set: () => {return;},
