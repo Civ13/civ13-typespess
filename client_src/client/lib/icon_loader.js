@@ -8,17 +8,10 @@ function enqueue_icon_meta_load(newIcon) {
 				dir_count: 1,
 				width: 32,
 				height: 32,
-				dirs: {
-					"2": {
-						frames: [
-							{
-								x: 0,
-								y: 0,
-							},
-						],
+				dirs: { //1 south, 2 north, 3 east, 4 west
+					"1": {
 					},
 				},
-				tile_size: 32,
 			},
 		};
 

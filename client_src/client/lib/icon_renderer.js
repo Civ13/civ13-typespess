@@ -92,14 +92,8 @@ class IconRenderer {
 				this.change_level = CHANGE_LEVEL_NONE;
 				return;
 			}
-			var progression =
-		this.icon_state_meta.dir_progression ||
-		dir_progressions[this.icon_state_meta.dir_count] ||
-		dir_progressions[1];
 
-			this.dir_meta =
-		this.icon_state_meta.dirs[progression[this.dir]] ||
-		this.icon_state_meta.dirs[2];
+			this.dir_meta = this.icon_state_meta.dirs[1];
 
 			if (!this.dir_meta) {
 				this.change_level = CHANGE_LEVEL_NONE;
@@ -110,20 +104,12 @@ class IconRenderer {
 		}
 		this.change_level = CHANGE_LEVEL_NONE;
 
-		if (!this.dir_meta || this.dir_meta.frames.length <= 1) {
-			this.icon_frame = 0;
-			return;
-		}
+		this.icon_frame = 0;
 	}
 
 	draw(ctx) {
 		if (!this.dir_meta || !this.icon_meta || !this.icon_meta.__image_object)
 			return;
-		var frame_meta = this.dir_meta.frames[
-			this.icon_frame >= 0 && this.icon_frame < this.dir_meta.frames.length
-				? this.icon_frame
-				: 0
-		];
 
 		let image = this.icon_meta.__image_object;
 		if (this.color) {
@@ -146,8 +132,8 @@ class IconRenderer {
 			cctx.globalCompositeOperation = "source-over";
 			cctx.drawImage(
 				image,
-				frame_meta.x,
-				frame_meta.y,
+				0,
+				0,
 				this.icon_state_meta.width,
 				this.icon_state_meta.height,
 				0,
@@ -165,8 +151,8 @@ class IconRenderer {
 			cctx.globalCompositeOperation = "destination-in";
 			cctx.drawImage(
 				image,
-				frame_meta.x,
-				frame_meta.y,
+				0,
+				0,
 				this.icon_state_meta.width,
 				this.icon_state_meta.height,
 				0,
@@ -176,14 +162,13 @@ class IconRenderer {
 			);
 			cctx.globalCompositeOperation = "source-over";
 			image = color_canvas;
-			frame_meta = { x: 0, y: 0 };
 		}
 		let offset = this.get_offset();
 
 		ctx.drawImage(
 			image,
-			frame_meta.x,
-			frame_meta.y,
+			0,
+			0,
 			this.icon_state_meta.width,
 			this.icon_state_meta.height,
 			Math.round(offset[0] * 32),
@@ -201,17 +186,13 @@ class IconRenderer {
 		y -= offset[1];
 		var pxx = Math.floor(x * 32);
 		var pxy = Math.floor(32 - y * 32);
-		var frame_meta = this.dir_meta.frames[
-			this.icon_frame >= 0 && this.icon_frame < this.dir_meta.frames.length
-				? this.icon_frame
-				: 0
-		];
+
 		if (
 			pxx < 0 || pxy < 0 || pxx > this.icon_state_meta.width || pxy > this.icon_state_meta.height
 		)
 			return false;
 		var idx = 3 + 4 *
-		(pxx + frame_meta.x + (pxy + frame_meta.y) * this.icon_meta.__image_data.width);
+		(pxx + (pxy) * this.icon_meta.__image_data.width);
 		return this.icon_meta.__image_data.data[idx] > 0;
 	}
 
