@@ -2308,20 +2308,7 @@ dressg:
 		icon: "icons/mob/under/uniforms/"
 		icon_state: "dressg"
 	tree_paths: ["items/clothing/uniforms/dressg"]
-dressr:
-	components: ["UniformItem"]
-	vars:
-		components:
-			UniformItem:
-				worn_icon: "icons/mob/worn/uniform/"
-				worn_icon_state: "dressr"
-				can_adjust: false
-			Examine:
-				desc: ""
-		name: "dressr"
-		icon: "icons/mob/under/uniforms/"
-		icon_state: "dressr"
-	tree_paths: ["items/clothing/uniforms/dressr"]
+
 ww2_japoffuni:
 	components: ["UniformItem"]
 	vars:
@@ -3820,20 +3807,7 @@ peakyblinder:
 		icon: "icons/mob/under/uniforms/"
 		icon_state: "peakyblinder"
 	tree_paths: ["items/clothing/uniforms/peakyblinder"]
-oldmansuit:
-	components: ["UniformItem"]
-	vars:
-		components:
-			UniformItem:
-				worn_icon: "icons/mob/worn/uniform/"
-				worn_icon_state: "oldmansuit"
-				can_adjust: false
-			Examine:
-				desc: ""
-		name: "oldmansuit"
-		icon: "icons/mob/under/uniforms/"
-		icon_state: "oldmansuit"
-	tree_paths: ["items/clothing/uniforms/oldmansuit"]
+
 oldfirefighter:
 	components: ["UniformItem"]
 	vars:

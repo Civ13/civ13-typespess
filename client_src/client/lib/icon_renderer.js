@@ -24,7 +24,7 @@ class IconRenderer {
 	// Returns a promise that is resolved when the icon is fully loaded (json and image)
 	fully_load() {
 		if (this.icon_meta || !this.icon) return Promise.resolve();
-		return this.client.enqueue_icon_meta_load(this.icon);
+		return this.client.enqueue_icon_meta_load(this.icon,this.icon_state);
 	}
 
 	get_bounds() {
@@ -57,7 +57,7 @@ class IconRenderer {
 				this.change_level = CHANGE_LEVEL_NONE;
 				var enqueued_icon = this.icon;
 				this.atom.client
-					.enqueue_icon_meta_load(this.icon)
+					.enqueue_icon_meta_load(this.icon,this.icon_state)
 					.then(() => {
 						if (this.icon == enqueued_icon) {
 							this.change_level = CHANGE_LEVEL_ICON;

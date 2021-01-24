@@ -3,7 +3,7 @@ loincloth:
 	vars:
 		components:
 			UniformItem:
-				worn_icon: "icons/mob/under/uniform/"
+				worn_icon: "icons/mob/worn/uniform/"
 				worn_icon_state: "leatherloincloth1"
 				can_adjust: false
 			Examine:
