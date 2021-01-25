@@ -68,8 +68,9 @@ class ProgressBar extends Component {
 	on_render_tick(prev, timestamp) {
 		this.update_offset(timestamp);
 		var percentage =(timestamp - (this.time_begin + this.atom.client.server_time_to_client));
-		this.atom.icon_state = `prog_bar_${Math.max(0, Math.min(20, Math.round(percentage * 20))) * 5}`;
-		this.atom.icon = `${this.atom.base_icon}${this.atom.icon_state}`
+		this.atom.icon_state = `prog_bar_${Math.max(0, Math.min(20, Math.round(percentage * 20))) * 5}.png`;
+		this.atom.icon = `icons/effects/progressbar/${this.atom.icon_state}`;
+		this.atom.mark_dirty();
 		prev();
 	}
 
