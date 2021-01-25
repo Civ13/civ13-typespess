@@ -963,11 +963,11 @@ class Slot extends EventEmitter {
 			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png") != -1)
 				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
 			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("2.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`] = this.mob.overlays[`inhand_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
 			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("3.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`] = this.mob.overlays[`inhand_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
 			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("4.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`] = this.mob.overlays[`inhand_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
 		}
 		if (this.props.clothing_slot) {
 			let icodir = 1;

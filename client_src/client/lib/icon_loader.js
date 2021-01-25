@@ -1,5 +1,5 @@
 function enqueue_icon_meta_load(newIcon,newIconState = null) {
-	if (newIconState && !(newIcon.search(".png")))
+	if (newIconState && newIcon && !(newIcon.search(".png")))
 		{newIcon = `${newIcon}${newIconState}.png`}
 	if (this.icon_meta_load_queue[newIcon]) {
 		return this.icon_meta_load_queue[newIcon];
