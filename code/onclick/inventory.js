@@ -960,14 +960,13 @@ class Slot extends EventEmitter {
 				icodir = 3;
 			else if (icodir == 8)
 				icodir = 4;
-			console.log(this.mob.overlays);
-			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png"))
+			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png") != -1)
 				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("2.png"))
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("2.png") != -1)
 				{this.mob.overlays[`inhand_${this.id}`] = this.mob.overlays[`inhand_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("3.png"))
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("3.png") != -1)
 				{this.mob.overlays[`inhand_${this.id}`] = this.mob.overlays[`inhand_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("4.png"))
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("4.png") != -1)
 				{this.mob.overlays[`inhand_${this.id}`] = this.mob.overlays[`inhand_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
 		}
 		if (this.props.clothing_slot) {
@@ -981,13 +980,13 @@ class Slot extends EventEmitter {
 				icodir = 3;
 			else if (icodir == 8)
 				icodir = 4;
-			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("1.png"))
+			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("1.png") != -1)
 				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("2.png"))
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("2.png") != -1)
 				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("3.png"))
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("3.png") != -1)
 				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("4.png"))
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("4.png") != -1)
 				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
 
 		}	
