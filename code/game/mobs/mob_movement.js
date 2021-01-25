@@ -69,6 +69,7 @@ class MobMovement extends Component {
 			if (this.atom.c.MobBodyParts.limbs[tlimb]) {
 				this.atom.c.MobBodyParts.limbs[tlimb].c.BodyPart.update_overlays()}
 		}
+		for (let i in this.atom.c.MobInventory.slots)  {this.atom.c.MobInventory.slots[i].update_icons()}
 		return prev();
 	}
 }
