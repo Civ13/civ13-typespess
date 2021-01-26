@@ -3,9 +3,7 @@ chaplain_hoodie:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "chaplain_hoodie"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "chaplain hoodie"
@@ -17,9 +15,7 @@ apronchef:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "apronchef"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "apronchef"
@@ -31,9 +27,7 @@ piratejacket1:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "piratejacket1"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "piratejacket1"
@@ -45,9 +39,7 @@ piratejacket2:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "piratejacket2"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "piratejacket2"
@@ -59,9 +51,7 @@ piratejacket3:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "piratejacket3"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "piratejacket3"
@@ -73,9 +63,7 @@ piratejacket4:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "piratejacket4"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "piratejacket4"
@@ -87,9 +75,7 @@ piratejacket5:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "piratejacket5"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "piratejacket5"
@@ -101,9 +87,7 @@ british_captain:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "british_captain"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "british captain"
@@ -115,9 +99,7 @@ british_officer:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "british_officer"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "british officer"
@@ -129,9 +111,7 @@ british_soldier_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "british_soldier_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "british soldier jacket"
@@ -143,9 +123,7 @@ civ_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "civ_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "civ jacket"
@@ -157,9 +135,7 @@ portuguese_captain:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "portuguese_captain"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "portuguese captain"
@@ -171,9 +147,7 @@ portuguese_officer:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "portuguese_officer"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "portuguese officer"
@@ -185,9 +159,7 @@ dutch_captain:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "dutch_captain"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "dutch captain"
@@ -199,9 +171,7 @@ dutch_officer:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "dutch_officer"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "dutch officer"
@@ -213,9 +183,7 @@ french_captain:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "french_captain"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "french captain"
@@ -227,9 +195,7 @@ french_officer:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "french_officer"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "french officer"
@@ -241,9 +207,7 @@ spanish_captain:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "spanish_captain"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "spanish captain"
@@ -255,9 +219,7 @@ spanish_officer:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "spanish_officer"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "spanish officer"
@@ -269,9 +231,7 @@ dutch_army:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "dutch_army"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "dutch army"
@@ -283,9 +243,7 @@ portuguese_army:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "portuguese_army"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "portuguese army"
@@ -297,9 +255,7 @@ bonearmor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "bonearmor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "bonearmor"
@@ -311,9 +267,7 @@ french_army:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "french_army"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "french army"
@@ -325,9 +279,7 @@ redcape:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "redcape"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "redcape"
@@ -339,9 +291,7 @@ bluecape:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "bluecape"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "bluecape"
@@ -353,9 +303,7 @@ knight_red:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "knight_red"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight red"
@@ -367,9 +315,7 @@ knight_blue:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "knight_blue"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight blue"
@@ -381,9 +327,7 @@ knight_yellow:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "knight_yellow"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight yellow"
@@ -395,9 +339,7 @@ knight_green:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "knight_green"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight green"
@@ -409,9 +351,7 @@ knight_templar:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "knight_templar"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight templar"
@@ -423,9 +363,7 @@ knight_blue2:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "knight_blue2"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight blue2"
@@ -437,9 +375,7 @@ knight_simple:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "knight_simple"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight simple"
@@ -451,9 +387,7 @@ chainmail:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "chainmail"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "chainmail"
@@ -465,9 +399,7 @@ old_bronze_chestplate:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "old_bronze_chestplate"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "old bronze chestplate"
@@ -479,9 +411,7 @@ leather_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "leather_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "leather armor"
@@ -493,9 +423,7 @@ iron_chestplate:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "iron_chestplate"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "iron chestplate"
@@ -507,9 +435,7 @@ iron_chestplater:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "iron_chestplater"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "iron chestplater"
@@ -521,9 +447,7 @@ iron_chestplateb:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "iron_chestplateb"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "iron chestplateb"
@@ -535,9 +459,7 @@ iron_chestplatec:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "iron_chestplatec"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "iron chestplatec"
@@ -549,9 +471,7 @@ hauberk:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "hauberk"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "hauberk"
@@ -563,9 +483,7 @@ plaguedoctor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "plaguedoctor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "plaguedoctor"
@@ -577,9 +495,7 @@ fur_jacket1X:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket1X"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket1X"
@@ -591,9 +507,7 @@ fur_jacket2:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket2"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket2"
@@ -605,9 +519,7 @@ fur_jacket3:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket3"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket3"
@@ -619,9 +531,7 @@ fur_jacket1hX:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket1hX"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket1hX"
@@ -633,9 +543,7 @@ fur_jacket2h:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket2h"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket2h"
@@ -647,9 +555,7 @@ fur_jacket3h:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket3h"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket3h"
@@ -661,9 +567,7 @@ fur_jacket4h:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket4h"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket4h"
@@ -675,9 +579,7 @@ fur_jacket4:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket4"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket4"
@@ -689,9 +591,7 @@ fur_jacket5h:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket5h"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket5h"
@@ -703,9 +603,7 @@ fur_jacket5:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket5"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket5"
@@ -717,9 +615,7 @@ kool_kids_klub:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "kool_kids_klub"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "kool kids klub"
@@ -731,9 +627,7 @@ fur_jacket1:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket1"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket1"
@@ -745,9 +639,7 @@ fur_jacket1h:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket1h"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket1h"
@@ -759,9 +651,7 @@ japcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "japcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "japcoat"
@@ -773,9 +663,7 @@ japcoat2:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "japcoat2"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "japcoat2"
@@ -787,9 +675,7 @@ ruscoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ruscoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ruscoat"
@@ -801,9 +687,7 @@ rusoffcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "rusoffcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "rusoffcoat"
@@ -815,9 +699,7 @@ japvest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "japvest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "japvest"
@@ -829,9 +711,7 @@ kozhanka:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "kozhanka"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "kozhanka"
@@ -843,9 +723,7 @@ kozhanka_w:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "kozhanka_w"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "kozhanka w"
@@ -857,9 +735,7 @@ kozhankah:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "kozhankah"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "kozhankah"
@@ -871,9 +747,7 @@ kozhanka_wh:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "kozhanka_wh"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "kozhanka wh"
@@ -885,9 +759,7 @@ leather_overcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "leather_overcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "leather overcoat"
@@ -899,9 +771,7 @@ blackvest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "blackvest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "blackvest"
@@ -913,9 +783,7 @@ olivevest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "olivevest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "olivevest"
@@ -927,9 +795,7 @@ bluevest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "bluevest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "bluevest"
@@ -941,9 +807,7 @@ black_leather_overcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "black_leather_overcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "black leather overcoat"
@@ -955,9 +819,7 @@ charcoal_suit:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "charcoal_suit"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "charcoal suit"
@@ -969,9 +831,7 @@ navy_suit:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "navy_suit"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "navy suit"
@@ -983,9 +843,7 @@ burgundy_suit:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "burgundy_suit"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "burgundy suit"
@@ -997,9 +855,7 @@ checkered_suit:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "checkered_suit"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "checkered suit"
@@ -1010,10 +866,7 @@ black_suit:
 	components: ["SuitItem"]
 	vars:
 		components:
-			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
-				worn_icon_state: "black_suit"
-				can_adjust: false
+			SuitItem:				worn_icon_state: "black_suit"
 			Examine:
 				desc: ""
 		name: "black suit"
@@ -1025,9 +878,7 @@ really_black_suit:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "really_black_suit"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "really black suit"
@@ -1039,9 +890,7 @@ modern_winter:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "modern_winter"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "modern winter"
@@ -1053,9 +902,7 @@ germtrench:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "germtrench"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "germtrench"
@@ -1067,9 +914,7 @@ frenchtrench:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "frenchtrench"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "frenchtrench"
@@ -1081,9 +926,7 @@ wise_tutor_hooded:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "wise_tutor_hooded"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "wise tutor hooded"
@@ -1095,9 +938,7 @@ wise_tutor_robe:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "wise_tutor_robe"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "wise tutor robe"
@@ -1109,9 +950,7 @@ samurai1:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "samurai1"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai1"
@@ -1123,9 +962,7 @@ samurai2:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "samurai2"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai2"
@@ -1137,9 +974,7 @@ samurai3:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "samurai3"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai3"
@@ -1151,9 +986,7 @@ samurai4:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "samurai4"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai4"
@@ -1165,9 +998,7 @@ arrogant_student_robe:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "arrogant_student_robe"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "arrogant student robe"
@@ -1179,9 +1010,7 @@ arrogant_student_robe_hooded:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "arrogant_student_robe_hooded"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "arrogant student robe hooded"
@@ -1193,9 +1022,7 @@ samurai_lord1:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "samurai_lord1"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai lord1"
@@ -1207,9 +1034,7 @@ samurai_lord2:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "samurai_lord2"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai lord2"
@@ -1221,9 +1046,7 @@ samurai_lord3:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "samurai_lord3"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai lord3"
@@ -1235,9 +1058,7 @@ samurai_lord4:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "samurai_lord4"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai lord4"
@@ -1249,9 +1070,7 @@ scale_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "scale_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "scale armor"
@@ -1263,9 +1082,7 @@ heavycloth_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "heavycloth_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "heavycloth armor"
@@ -1277,9 +1094,7 @@ labcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "labcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "labcoat"
@@ -1291,9 +1106,7 @@ britishtrench:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "britishtrench"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "britishtrench"
@@ -1305,9 +1118,7 @@ us_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "us_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "us jacket"
@@ -1319,9 +1130,7 @@ ghillie:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ghillie"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ghillie"
@@ -1333,9 +1142,7 @@ customcolonialcoat_top:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "customcolonialcoat_top"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "customcolonialcoat top"
@@ -1347,9 +1154,7 @@ customcolonialcoat_dec:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "customcolonialcoat_dec"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "customcolonialcoat dec"
@@ -1361,9 +1166,7 @@ customcolonialcoat_lines:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "customcolonialcoat_lines"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "customcolonialcoat lines"
@@ -1375,9 +1178,7 @@ customcolonialcoat_full:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "customcolonialcoat_full"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "customcolonialcoat full"
@@ -1389,9 +1190,7 @@ customcolonial_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "customcolonial_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "customcolonial jacket"
@@ -1403,9 +1202,7 @@ customcolonial_cross:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "customcolonial_cross"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "customcolonial cross"
@@ -1417,9 +1214,7 @@ customcolonial_plain:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "customcolonial_plain"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "customcolonial plain"
@@ -1431,9 +1226,7 @@ customcolonial_full:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "customcolonial_full"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "customcolonial full"
@@ -1445,9 +1238,7 @@ sov_offcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "sov_offcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "sov offcoat"
@@ -1459,9 +1250,7 @@ winter_coat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "winter_coat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "winter coat"
@@ -1473,9 +1262,7 @@ gerparka:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "gerparka"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "gerparka"
@@ -1487,9 +1274,7 @@ ger_offcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ger_offcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ger offcoat"
@@ -1501,9 +1286,7 @@ ww2_japcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ww2_japcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ww2 japcoat"
@@ -1515,9 +1298,7 @@ jappilotcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "jappilotcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "jappilotcoat"
@@ -1529,9 +1310,7 @@ sssmock:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "sssmock"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "sssmock"
@@ -1543,9 +1322,7 @@ nbc:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "nbc"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "nbc"
@@ -1557,9 +1334,7 @@ nbc2:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "nbc2"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "nbc2"
@@ -1571,9 +1346,7 @@ fbi:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fbi"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fbi"
@@ -1585,9 +1358,7 @@ fbi2:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fbi2"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fbi2"
@@ -1599,9 +1370,7 @@ leathercoat_c:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "leathercoat_c"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "leathercoat c"
@@ -1613,9 +1382,7 @@ kuban_cossak:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "kuban_cossak"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "kuban cossak"
@@ -1627,9 +1394,7 @@ don_cossak:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "don_cossak"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "don cossak"
@@ -1641,9 +1406,7 @@ ac_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ac_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ac armor"
@@ -1655,9 +1418,7 @@ fur_jacket6:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket6"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket6"
@@ -1669,9 +1430,7 @@ fur_jacket6h:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "fur_jacket6h"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "fur jacket6h"
@@ -1683,9 +1442,7 @@ urukhai_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "urukhai_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "urukhai armor"
@@ -1697,9 +1454,7 @@ whitehand_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "whitehand_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "whitehand armor"
@@ -1711,9 +1466,7 @@ grunt_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "grunt_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "grunt armor"
@@ -1725,9 +1478,7 @@ sauronarmor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "sauronarmor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "sauronarmor"
@@ -1739,9 +1490,7 @@ ac_armor1713:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ac_armor1713"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ac armor1713"
@@ -1753,9 +1502,7 @@ ac_armor_napol:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ac_armor_napol"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ac armor napol"
@@ -1767,9 +1514,7 @@ kevlarvest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "kevlarvest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "kevlarvest"
@@ -1781,9 +1526,7 @@ scraparmor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "scraparmor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "scraparmor"
@@ -1795,9 +1538,7 @@ b3vest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "b3vest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "b3vest"
@@ -1809,9 +1550,7 @@ jacket80s:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "jacket80s"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "jacket80s"
@@ -1823,9 +1562,7 @@ hazmat_suit:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "hazmat_suit"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "hazmat suit"
@@ -1837,9 +1574,7 @@ moderncoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "moderncoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "moderncoat"
@@ -1851,9 +1586,7 @@ servicejacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "servicejacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "servicejacket"
@@ -1865,9 +1598,7 @@ civilianvest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "civilianvest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "civilianvest"
@@ -1879,9 +1610,7 @@ bomberjacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "bomberjacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "bomberjacket"
@@ -1893,9 +1622,7 @@ blackbomberjacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "blackbomberjacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "blackbomberjacket"
@@ -1907,9 +1634,7 @@ pcarrier_tan:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "pcarrier_tan"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "pcarrier tan"
@@ -1921,9 +1646,7 @@ pcarrier_black:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "pcarrier_black"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "pcarrier black"
@@ -1935,9 +1658,7 @@ gulagguard:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "gulagguard"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "gulagguard"
@@ -1949,9 +1670,7 @@ gulagprisoner1:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "gulagprisoner1"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "gulagprisoner1"
@@ -1963,9 +1682,7 @@ gulagprisoner2:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "gulagprisoner2"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "gulagprisoner2"
@@ -1977,9 +1694,7 @@ gulagprisoner3:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "gulagprisoner3"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "gulagprisoner3"
@@ -1991,9 +1706,7 @@ thickcarrier:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "thickcarrier"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "thickcarrier"
@@ -2005,9 +1718,7 @@ expensivecoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "expensivecoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "expensivecoat"
@@ -2019,9 +1730,7 @@ woolcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "woolcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "woolcoat"
@@ -2033,9 +1742,7 @@ iogsuit:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "iogsuit"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "iogsuit"
@@ -2047,9 +1754,7 @@ royalcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "royalcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "royalcoat"
@@ -2061,9 +1766,7 @@ gerparka_winter:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "gerparka_winter"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "gerparka winter"
@@ -2075,9 +1778,7 @@ priestwhite:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "priestwhite"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "priestwhite"
@@ -2089,9 +1790,7 @@ royalplate:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "royalplate"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "royalplate"
@@ -2103,9 +1802,7 @@ ork_plate_commander:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ork_plate_commander"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ork plate commander"
@@ -2117,9 +1814,7 @@ ork_plate_elite:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ork_plate_elite"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ork plate elite"
@@ -2131,9 +1826,7 @@ ork_chestplate:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "ork_chestplate"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "ork chestplate"
@@ -2145,9 +1838,7 @@ jap_raincoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "jap_raincoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "jap raincoat"
@@ -2159,9 +1850,7 @@ bxsuit:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "bxsuit"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "bxsuit"
@@ -2173,9 +1862,7 @@ bailyvest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "bailyvest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "bailyvest"
@@ -2187,9 +1874,7 @@ customponcho:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "customponcho"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "customponcho"
@@ -2201,9 +1886,7 @@ haori_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "haori_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "haori jacket"
@@ -2215,9 +1898,7 @@ haori_jacket_custom:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "haori_jacket_custom"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "haori jacket custom"
@@ -2229,9 +1910,7 @@ biker:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "biker"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "biker"
@@ -2243,9 +1922,7 @@ a6b45:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "a6b45"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "a6b45"
@@ -2257,9 +1934,7 @@ a6b44:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "a6b44"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "a6b44"
@@ -2271,9 +1946,7 @@ a6b28:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "a6b28"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "a6b28"
@@ -2285,9 +1958,7 @@ aztec_harness:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "aztec_harness"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "aztec harness"
@@ -2299,9 +1970,7 @@ swat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "swat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "swat"
@@ -2313,9 +1982,7 @@ policevest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "policevest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "policevest"
@@ -2327,9 +1994,7 @@ heavypolice:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "heavypolice"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "heavypolice"
@@ -2341,9 +2006,7 @@ mediumvest:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "mediumvest"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "mediumvest"
@@ -2355,9 +2018,7 @@ monk_robes:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "monk_robes"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "monk robes"
@@ -2369,9 +2030,7 @@ monk_robes_hood:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "monk_robes_hood"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "monk robes hood"
@@ -2383,9 +2042,7 @@ gator_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "gator_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "gator jacket"
@@ -2397,9 +2054,7 @@ gator_scale_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "gator_scale_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "gator scale armor"
@@ -2411,9 +2066,7 @@ hawaiian_blue:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "hawaiian_blue"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "hawaiian blue"
@@ -2425,9 +2078,7 @@ hawaiian_orange:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "hawaiian_orange"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "hawaiian orange"
@@ -2439,9 +2090,7 @@ hawaiian_purple:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "hawaiian_purple"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "hawaiian purple"
@@ -2453,9 +2102,7 @@ hawaiian_green:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "hawaiian_green"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "hawaiian green"
@@ -2467,9 +2114,7 @@ bronze_chestplate:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "bronze_chestplate"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "bronze chestplate"
@@ -2481,9 +2126,7 @@ mamluk_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "mamluk_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "mamluk armor"
@@ -2495,9 +2138,7 @@ mamluk_lord:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "mamluk_lord"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "mamluk lord"
@@ -2509,9 +2150,7 @@ mamluk_king:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "mamluk_king"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "mamluk king"
@@ -2523,9 +2162,7 @@ varangian_lamellar:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "varangian_lamellar"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "varangian lamellar"
@@ -2537,9 +2174,7 @@ emir_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "emir_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "emir armor"
@@ -2551,9 +2186,7 @@ inquisitor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "inquisitor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "inquisitor"
@@ -2565,9 +2198,7 @@ inqcape_armband:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "inqcape_armband"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "inqcape armband"
@@ -2579,9 +2210,7 @@ inquistor_alt:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "inquistor_alt"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "inquistor alt"
@@ -2593,9 +2222,7 @@ inqcape_alt:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "inqcape_alt"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "inqcape alt"
@@ -2607,9 +2234,7 @@ evil_inquisitor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "evil_inquisitor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "evil inquisitor"
@@ -2621,9 +2246,7 @@ elf_harlequin:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "elf_harlequin"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "elf harlequin"
@@ -2635,9 +2258,7 @@ arbit:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "arbit"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "arbit"
@@ -2649,9 +2270,7 @@ commissar:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "commissar"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "commissar"
@@ -2663,9 +2282,7 @@ settra:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "settra"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "settra"
@@ -2677,9 +2294,7 @@ egyptian_lamellar:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "egyptian_lamellar"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "egyptian lamellar"
@@ -2691,9 +2306,7 @@ chitin_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "chitin_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "chitin armor"
@@ -2705,9 +2318,7 @@ steppe_leather_armor:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "steppe_leather_armor"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "steppe leather armor"
@@ -2719,9 +2330,7 @@ steppe_shaman_wool_coat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "steppe_shaman_wool_coat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "steppe shaman wool coat"
@@ -2733,9 +2342,7 @@ elf_warlock:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "elf_warlock"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "elf warlock"
@@ -2747,9 +2354,7 @@ lizard_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "lizard_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "lizard jacket"
@@ -2761,9 +2366,7 @@ victorian_tailcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "victorian_tailcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "victorian tailcoat"
@@ -2775,9 +2378,7 @@ black_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "black_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "black jacket"
@@ -2789,9 +2390,7 @@ charcoal_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "charcoal_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "charcoal jacket"
@@ -2803,9 +2402,7 @@ navy_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "navy_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "navy jacket"
@@ -2817,9 +2414,7 @@ surgical:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "surgical"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "surgical"
@@ -2831,9 +2426,7 @@ nun:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "nun"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "nun"
@@ -2845,9 +2438,7 @@ texas:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "texas"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "texas"
@@ -2859,9 +2450,7 @@ paramedic_jacket:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "paramedic_jacket"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "paramedic jacket"
@@ -2873,9 +2462,7 @@ high_vis_jacket_yellow:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "high_vis_jacket_yellow"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "high vis jacket yellow"
@@ -2887,9 +2474,7 @@ us_coat_korea:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "us_coat_korea"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "us coat korea"
@@ -2901,9 +2486,7 @@ chi_korea_offcoat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "chi_korea_offcoat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "chi korea offcoat"
@@ -2915,9 +2498,7 @@ chi_korea_coat:
 	vars:
 		components:
 			SuitItem:
-				worn_icon: "icons/mob/worn/suit/"
 				worn_icon_state: "chi_korea_coat"
-				can_adjust: false
 			Examine:
 				desc: ""
 		name: "chi korea coat"

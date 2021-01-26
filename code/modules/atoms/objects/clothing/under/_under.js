@@ -7,16 +7,14 @@ class UniformItem extends Component {
 }
 //TODO: Alt styles
 //TODO: Sensors
-//TODO: "fitted" probably isn't fully implemented
 //TODO: A fuckton of other procs from the DM file
 
 UniformItem.template = {
 	vars: {
 		components: {
 			UniformItem: {
-				worn_icon: "icons/mob/worn/uniforms.png",
-				worn_icon_state: null, // If null, inherits from icon_state
-				fitted: "female_uniform_full",
+				worn_icon: "icons/mob/worn/uniform/",
+				worn_icon_state: "adam",
 				can_adjust: true, //Useless until alt styles are implemented
 				alt_covers_torso: false, //Also useless until alt styles
 			},
@@ -32,7 +30,8 @@ UniformItem.template = {
 				],
 			},
 		},
-		icon: "icons/mob/under/uniforms.png",
+		icon: "icons/mob/under/uniforms/",
+		icon_state: "adam",
 		name: "under",
 	},
 };

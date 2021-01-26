@@ -15,16 +15,6 @@ crowbar:
     components: ["Crowbar"]
     tree_paths: ["items/tools/crowbar"]
 
-red_crowbar:
-    components: ["Crowbar"]
-    vars:
-        components:
-            Item:
-                force: 8
-        icon_state: "crowbar_red"
-    
-    tree_paths: ["items/tools/crowbar/red"]
-
 welding_tool:
     components: ["WeldingTool"]
     tree_paths: ["items/tools/welder"]

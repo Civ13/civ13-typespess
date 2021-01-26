@@ -37,11 +37,13 @@ Tool.template = {
 				usesound: null,
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/equipment/tools_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/equipment/tools_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/equipment/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/equipment/righthand/",
+				inhand_icon_state: "nothing",
 			},
 		},
-		icon: "icons/obj/tools.png",
+		icon: "icons/obj/tools/",
+		icon_state: "bonehatchet"
 	},
 };
 

@@ -15,7 +15,7 @@ SuitItem.template = {
 	vars: {
 		components: {
 			SuitItem: {
-				worn_icon: "icons/mob/worn/suit/biker/",
+				worn_icon: "icons/mob/worn/suit/",
 				worn_icon_state: "biker", // If null, inherits from icon_state
 				suit_storage_blacklist: [], // components you can or can't put in the suit storage slot
 				suit_storage_whitelist: [],
