@@ -81,3 +81,4 @@ full_launch.bat
 server.bat
 .bs-env.json
 code/preloadlist.txt
+client_src/code/preloadlist.js

@@ -16,10 +16,12 @@ function dirIt(directory: string) {
 
 			if ( fs.statSync(fullPath).isFile()) {
 				let nfile:string = fullPath.replace("..\\resources\\","");
-				let pieces = nfile.split("\\");
-				nfile = pieces.join("/");
-				nfile = `"${nfile}",`
-				files+=nfile;
+				if (nfile.search("inhands") == -1) {
+					let pieces = nfile.split("\\");
+					nfile = pieces.join("/");
+					nfile = `"${nfile}",`
+					files+=nfile;
+				}
 			}
 			else
 				{dirs.push(fullPath);}
