@@ -61,8 +61,8 @@ DeskLamp.template = {
 			},
 			Item: {
 				inhand_icon_state: "lamp",
-				inhand_lhand_icon: "icons/mob/inhands/items_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/items_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/lefthand/",
 				force: 10,
 				size: 4,
 			},

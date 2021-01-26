@@ -35,8 +35,8 @@ WearableItem.template = {
 				min_cold_protection_temperature: null, //Min temp in kelvin the item protects against low temp. Null to disable protection. Only protects areas specified in cold_protection. 0 may or may not be acceptable depending on later implementation.
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/items_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/items_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_icon_state: "nothing"
 			},
 		},

@@ -15,8 +15,8 @@ SuitItem.template = {
 	vars: {
 		components: {
 			SuitItem: {
-				worn_icon: "icons/mob/worn/suits.png",
-				worn_icon_state: null, // If null, inherits from icon_state
+				worn_icon: "icons/mob/worn/suit/biker/",
+				worn_icon_state: "biker", // If null, inherits from icon_state
 				suit_storage_blacklist: [], // components you can or can't put in the suit storage slot
 				suit_storage_whitelist: [],
 				blood_overlay_type: "suit", //currently useless
@@ -24,7 +24,7 @@ SuitItem.template = {
 				siemens_coefficient: 0,
 			},
 		},
-		icon: "icons/mob/under/suits.png",
+		icon: "icons/mob/under/suits/biker.png",
 		name: "suit",
 	},
 };

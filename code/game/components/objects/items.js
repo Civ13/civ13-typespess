@@ -144,8 +144,8 @@ Item.template = {
 	vars: {
 		components: {
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/items_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/items_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_icon_state: "nothing",
 				size: 3,
 				sharpness: Item.IS_BLUNT,
