@@ -14,5 +14,9 @@ echo Generating the map...
 cd..
 cd maps
 call ts-node mapgen.ts
+echo Generating the preload list...
+cd..
+cd code
+ts-node preload_assets.ts
 echo Everything is done.
 pause

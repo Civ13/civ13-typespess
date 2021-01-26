@@ -3,6 +3,9 @@ cd -
 cd maps
 ts-node mapgen.ts
 cd -
+cd code
+ts-node preload_assets.ts
+cd -
 cd client_src
 echo ts-node compile.ts
 cd -

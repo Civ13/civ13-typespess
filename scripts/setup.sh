@@ -12,4 +12,8 @@ cd -
 cd maps
 echo Generating the map...
 ts-node mapgen.ts
+cd -
+cd client_src
+echo Generating the preload list...
+echo ts-node compile.ts
 echo Everything is done.
