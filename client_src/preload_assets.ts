@@ -18,8 +18,7 @@ function dirIt(directory: string) {
 				let nfile:string = fullPath.replace("..\\resources\\","");
 				let pieces = nfile.split("\\");
 				nfile = pieces.join("/");
-				nfile += "\n"
-				console.log(nfile);
+				nfile = `"${nfile}",`
 				files+=nfile;
 			}
 			else
@@ -41,7 +40,8 @@ function dirIt(directory: string) {
 };
 
 var preloadlist: string|null = dirIt("../resources/icons/");
-fs.writeFile("preloadlist.txt", preloadlist, function (err: unknown) {
+var tloadlist: string = `var preload_list = [${preloadlist}]; module.exports = preload_list;`;
+fs.writeFile("code/preloadlist.js", tloadlist, function (err: unknown) {
 	if (err) {
 		return console.error(err);
 	}

@@ -1,9 +1,4 @@
-
-
-let preload_list = [
-	"icons/effects/parallax.png",
-	"icons/error.png",
-];
+const preload_list = require("./preloadlist.js");
 
 module.exports = async function preload(client) {
 	for (let path of preload_list) {
