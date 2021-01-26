@@ -206,8 +206,8 @@ AmmoBox.template = {
 				desc: "A box of ammo.",
 			},
 		},
-		icon: "icons/obj/ammo.png",
-		icon_state: "357",
+		icon: "icons/obj/guns/ammo/",
+		icon_state: "pouch_closed",
 		name: "ammo box (null_reference_exception)",
 	},
 };

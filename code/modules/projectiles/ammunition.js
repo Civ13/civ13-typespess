@@ -19,7 +19,7 @@ class AmmoCasing extends Component {
 	update_icon() {
 		if (this.caseless) return;
 		this.a.icon_state = `${this.a.template.vars.icon_state}${
-			!this.spent ? "-live" : ""
+			this.spent ? "-0" : ""
 		}`;
 		this.a.c.Examine.desc = `${this.a.template.vars.components.Examine.desc}${
 			!this.spent ? "" : " This one is spent."
@@ -138,8 +138,8 @@ AmmoCasing.template = {
 				desc: "A bullet casing.",
 			},
 		},
-		icon: "icons/obj/ammo.png",
-		icon_state: "s-casing",
+		icon: "icons/obj/guns/ammo/",
+		icon_state: "pistolcasing_full",
 		name: "bullet casing",
 	},
 };
