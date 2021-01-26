@@ -3,12 +3,12 @@ loincloth:
 	vars:
 		components:
 			UniformItem:
-				worn_icon: "icons/mob/under/loincloth_worn.png"
+				worn_icon: "icons/mob/worn/uniform/"
 				worn_icon_state: "leatherloincloth1"
 				can_adjust: false
 			Examine:
 				desc: "A wrap of leather cloth, worn around the waist."
 		name: "leather loincloth"
-		icon: "icons/mob/under/loincloth.png"
-		icon_state: "leatherloincloth1"
+		icon: "icons/mob/under/uniforms/leatherloincloth1.png"
+		icon_state: null
 	tree_paths: ["items/clothing/under/loincloth"]

@@ -72,7 +72,7 @@ OrganLiver.template = {
 				filter_toxins: true,
 			},
 			Organ: {
-				zone: "chest",
+				zone: "torso",
 				slot: "liver",
 			},
 			Item: {

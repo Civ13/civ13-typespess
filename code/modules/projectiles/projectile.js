@@ -141,7 +141,7 @@ class Projectile extends Component.Networked {
 			let organ_hit_text = "";
 			if (has_component(target, "MobBodyParts")) {
 				organ_hit_text = ` in the ${parse_zone(
-					target.c.MobBodyParts.limbs[def_zone] ? def_zone : "chest"
+					target.c.MobBodyParts.limbs[def_zone] ? def_zone : "torso"
 				)}`;
 			}
 			if (this.suppressed) {

@@ -69,7 +69,6 @@ class Door extends Component {
 		if (this.a.density <= 0) return true;
 		if (this.operating) return;
 		this.operating = true;
-		this.a.flick = { icon_state: this.opening_state };
 		this.a.opacity = false;
 		await sleep(500);
 		this.a.density = 0;
@@ -104,7 +103,6 @@ class Door extends Component {
 		}
 		this.operating = true;
 
-		this.a.flick = { icon_state: this.closing_state };
 		this.a.layer = this.closed_layer;
 		await sleep(500);
 		this.a.density = 1;

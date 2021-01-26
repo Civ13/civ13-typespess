@@ -158,7 +158,7 @@ MobInteract.template = {
 			MobInteract: {
 				next_move_adjust: 0,
 				next_move_modifier: 1,
-				zone_sel: "chest",
+				zone_sel: "torso",
 				zone_sel_template: null,
 				act_intents: ["help", "harm"],
 				act_intent: "help",

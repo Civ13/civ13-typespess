@@ -22,17 +22,17 @@ module.exports.templates = {
 				},
 			},
 			name: "stechkin pistol",
-			icon_state: "pistol",
+			icon: 'icons/obj/guns/pistols/ruby.png',
 		},
 		tree_paths: ["items/gun/ballistic/automatic/pistol"],
 	},
-	deagle: {
+	glock17: {
 		components: ["BallisticGun", "BeltItem"],
 		vars: {
 			components: {
 				BallisticGun: {
-					spawn_mag: "mag_m50",
-					mag_caliber: ".50",
+					spawn_mag: "mag_glock17",
+					mag_caliber: "9mm",
 					mag_form_factor: "pistol",
 					tactical_reloads: true,
 					reload_sound: "sound/weapons/autoguninsert.ogg",
@@ -40,41 +40,16 @@ module.exports.templates = {
 					mag_state: true,
 				},
 				Examine: {
-					desc: "A robust .50 AE handgun.",
+					desc: "A simple 9mm Parabellum handgun.",
 				},
 				Item: {
 					size: 2,
 				},
 			},
-			name: "desert eagle",
-			icon_state: "deagle",
+			name: "glock 17",
+			icon: 'icons/obj/guns/pistols/glock17.png',
 		},
-		tree_paths: ["items/gun/ballistic/automatic/pistol/deagle"],
+		tree_paths: ["items/gun/ballistic/automatic/pistol/glock17"],
 	},
-	deagleg: {
-		parent_template: "deagle",
-		vars: {
-			components: {
-				Examine: {
-					desc:
-			"A gold plated Desert Eagle folded over a million times by superior martian gunsmiths. Uses .50 AE ammo.",
-				},
-			},
-			icon_state: "deagleg",
-		},
-		tree_paths: ["items/gun/ballistic/automatic/pistol/deagle/gold"],
-	},
-	deaglecamo: {
-		parent_template: "deagle",
-		vars: {
-			components: {
-				Examine: {
-					desc:
-			"A Deagle brand Deagle for operators operating operationally. Uses .50 AE ammo.",
-				},
-			},
-			icon_state: "deaglecamo",
-		},
-		tree_paths: ["items/gun/ballistic/automatic/pistol/deagle/camo"],
-	},
+
 };

@@ -947,7 +947,50 @@ class Slot extends EventEmitter {
 			this.item = e.from.atom;
 		}
 	}
+	update_icons()
+	{
+		if (this.props.is_hand_slot) {
+			let icodir = 1;
+			if (this.mob) {icodir = this.mob.dir;}
+			if (icodir == 1)
+				icodir = 2;
+			else if (icodir == 2)
+				icodir = 1;
+			else if (icodir == 4)
+				icodir = 3;
+			else if (icodir == 8)
+				icodir = 4;
+			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png") != -1)
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("2.png") != -1)
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("3.png") != -1)
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("4.png") != -1)
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
+		}
+		if (this.props.clothing_slot) {
+			let icodir = 1;
+			if (this.mob) {icodir = this.mob.dir;}
+			if (icodir == 1)
+				icodir = 2;
+			else if (icodir == 2)
+				icodir = 1;
+			else if (icodir == 4)
+				icodir = 3;
+			else if (icodir == 8)
+				icodir = 4;
+			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("1.png") != -1)
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("2.png") != -1)
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("3.png") != -1)
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("4.png") != -1)
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
 
+		}	
+	}
 	can_accept_item(item) {
 		if (!has_component(item, "Item")) return false;
 		if (this.item) return false;
@@ -1066,21 +1109,40 @@ class Slot extends EventEmitter {
 				this.props.is_hand_slot &&
 		(this[_item].c.Item.inhand_icon_state || this[_item].icon_state)
 			) {
-				this.mob.overlays[`inhand_${this.id}`] = {
-					icon: this[_item].c.Item[`inhand_${this.id}_icon`],
-					icon_state:
-			this[_item].c.Item.inhand_icon_state || this[_item].icon_state,
+				let icodir = 1;
+				if (this.mob) {icodir = this.mob.dir;}
+				if (icodir == 1)
+					icodir = 2;
+				else if (icodir == 2)
+					icodir = 1;
+				else if (icodir == 4)
+					icodir = 3;
+				else if (icodir == 8)
+					icodir = 4;
+				this.mob.overlays[`inhand_${this.id}`] = 
+				{
+					icon_state: this[_item].c.Item.inhand_icon_state,
+					icon: `${this[_item].c.Item[`inhand_${this.id}_icon`]}${this[_item].c.Item.inhand_icon_state}/${this[_item].c.Item.inhand_icon_state}-dir${icodir}.png`,
 					overlay_layer: this.props.worn_layer,
 				};
 			}
 			if (this.props.clothing_slot) {
-				this.mob.overlays[`clothing_${this.id}`] = {
-					icon: this[_item].c[this.props.clothing_slot].worn_icon,
-					icon_state:
-			this[_item].c[this.props.clothing_slot].worn_icon_state ||
-			this[_item].icon_state,
+				let icodir = 1;
+				if (this.mob) {icodir = this.mob.dir;}
+				if (icodir == 1)
+					icodir = 2;
+				else if (icodir == 2)
+					icodir = 1;
+				else if (icodir == 4)
+					icodir = 3;
+				else if (icodir == 8)
+					icodir = 4;
+					this.mob.overlays[`clothing_${this.id}`] = {
+					icon_state: this[_item].c[this.props.clothing_slot].worn_icon_state,
+					icon: `${this[_item].c[this.props.clothing_slot].worn_icon}${this[_item].c[this.props.clothing_slot].worn_icon_state}/${this[_item].c[this.props.clothing_slot].worn_icon_state}-dir${icodir}.png`,
 					overlay_layer: this.props.worn_layer,
 				};
+
 			}
 		} else {
 			if (this.props.is_hand_slot)
@@ -1167,7 +1229,8 @@ class ProgressBar extends Component.Networked {
 
 ProgressBar.template = {
 	vars: {
-		icon: "icons/effects/progressbar.png",
+		icon: "icons/effects/progressbar/prog_bar_0.png",
+		base_icon: "icons/effects/progressbar/",
 		name: "progress bar",
 		icon_state: "prog_bar_0",
 		layer: 50,

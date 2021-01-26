@@ -93,6 +93,7 @@ Sun.template = {
 			},
 		},
 		name: "sun",
+		icon: null,
 		icon_state: null,
 	},
 };

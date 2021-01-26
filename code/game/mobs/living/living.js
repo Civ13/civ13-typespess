@@ -318,7 +318,7 @@ class LivingMob extends Component {
 			}).emit_from(this.a);
 			return;
 		}
-		let zone = random_zone("chest", 65);
+		let zone = random_zone("torso", 65);
 		let volume = 0;
 		if (item.c.Tangible.throw_force && item.c.Item.size)
 			volume = Math.min(
@@ -355,7 +355,7 @@ class LivingMob extends Component {
 		let zone = random_zone(user.c.MobInteract.zone_sel);
 		let bp =
 	has_component(this.a, "MobBodyParts") &&
-	(this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.chest);
+	(this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.torso);
 		this.send_item_attack_message(item, user, bp && bp.name);
 		if (item.c.Item.force) {
 			this.apply_damage(item.c.Item.force, item.c.Item.damage_type, zone);

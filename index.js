@@ -71,7 +71,6 @@ global.Tserver.importModule(require("./code/game/components/objects/items.js"));
 global.Tserver.importModule(require("./code/game/components/objects/objs.js"));
 global.Tserver.importModule(require("./code/game/components/objects/puller.js"));
 global.Tserver.importModule(require("./code/game/turfs/floor_base.js"));
-global.Tserver.importModule(require("./code/game/turfs/floor.js"));
 global.Tserver.importModule(require("./code/game/placeholders.js"));
 global.Tserver.importModule(require("./code/game/ticker.js"));
 global.Tserver.importModule(require("./code/modules/admin/holder.js"));

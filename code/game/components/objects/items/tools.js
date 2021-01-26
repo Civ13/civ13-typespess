@@ -173,13 +173,16 @@ Axe.template = {
 				attack_verb: ["slashed", "bashed"],
 				size: 2,
 				hitsound: "sound/effects/generic_hit.ogg",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand_weapons/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand_weapons/",
+				inhand_icon_state: "hatchet",
 			},
 			Examine: {
 				desc: "This cuts trees.",
 			},
 		},
-		icon: "icons/obj/items_and_weapons.png",
-		icon_state: "axe0",
+		icon: "icons/obj/tools/bonehatchet.png",
+		icon_state: "bonehatchet",
 		name: "hatchet",
 	},
 	can_use(prev, tool) {

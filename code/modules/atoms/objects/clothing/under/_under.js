@@ -18,12 +18,12 @@ UniformItem.template = {
 				worn_icon_state: null, // If null, inherits from icon_state
 				fitted: "female_uniform_full",
 				can_adjust: true, //Useless until alt styles are implemented
-				alt_covers_chest: false, //Also useless until alt styles
+				alt_covers_torso: false, //Also useless until alt styles
 			},
 			WearableItem: {
 				permeability_coefficient: 0.9,
 				body_parts_covered: [
-					"chest",
+					"torso",
 					"groin",
 					"l_leg",
 					"r_leg",

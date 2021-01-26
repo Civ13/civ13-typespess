@@ -24,11 +24,11 @@ class IconRenderer {
 	// Returns a promise that is resolved when the icon is fully loaded (json and image)
 	fully_load() {
 		if (this.icon_meta || !this.icon) return Promise.resolve();
-		return this.client.enqueue_icon_meta_load(this.icon);
+		return this.client.enqueue_icon_meta_load(this.icon,this.icon_state);
 	}
 
 	get_bounds() {
-		if (!this.dir_meta || !this.icon_meta || !this.icon_state_meta) return;
+		if (!this.icon_meta || !this.icon_state_meta) return;
 		let offset = this.get_offset();
 		return {
 			x: offset[0],
@@ -38,9 +38,7 @@ class IconRenderer {
 		};
 	}
 
-	on_render_tick(timestamp) {
-		if (this.parent) this.parent.check_flick_validity(timestamp);
-		this.check_flick_validity(timestamp);
+	on_render_tick() {
 		if (this.icon != this.last_icon) {
 			this.change_level = Math.max(this.change_level, CHANGE_LEVEL_ICON);
 			this.last_icon = this.icon;
@@ -55,12 +53,11 @@ class IconRenderer {
 			this.atom.mark_dirty();
 		if (this.change_level >= CHANGE_LEVEL_ICON) {
 			this.icon_meta = this.atom.client.icon_metas[this.icon];
-			this.dir_meta = null;
 			if (this.icon_meta == undefined) {
 				this.change_level = CHANGE_LEVEL_NONE;
 				var enqueued_icon = this.icon;
 				this.atom.client
-					.enqueue_icon_meta_load(this.icon)
+					.enqueue_icon_meta_load(this.icon,this.icon_state)
 					.then(() => {
 						if (this.icon == enqueued_icon) {
 							this.change_level = CHANGE_LEVEL_ICON;
@@ -74,7 +71,6 @@ class IconRenderer {
 			}
 		}
 		if (this.change_level >= CHANGE_LEVEL_ICON_STATE) {
-			this.dir_meta = null;
 			if (!this.icon_meta) {
 				this.change_level = CHANGE_LEVEL_NONE;
 				return;
@@ -89,66 +85,22 @@ class IconRenderer {
 			}
 		}
 		if (this.change_level >= CHANGE_LEVEL_DIR) {
-			this.dir_meta = null;
 			if (!this.icon_state_meta) {
 				this.change_level = CHANGE_LEVEL_NONE;
 				return;
 			}
-			var progression =
-		this.icon_state_meta.dir_progression ||
-		dir_progressions[this.icon_state_meta.dir_count] ||
-		dir_progressions[1];
 
-			this.dir_meta =
-		this.icon_state_meta.dirs[progression[this.dir]] ||
-		this.icon_state_meta.dirs[2];
-
-			if (!this.dir_meta) {
-				this.change_level = CHANGE_LEVEL_NONE;
-				return;
-			}
 			if (this.atom) this.atom.mark_dirty();
 			this.icon_frame = -1;
 		}
 		this.change_level = CHANGE_LEVEL_NONE;
 
-		if (!this.dir_meta || this.dir_meta.frames.length <= 1) {
-			this.icon_frame = 0;
-			return;
-		}
-		var icon_time = timestamp % this.dir_meta.total_delay;
-		if (this.flick)
-			icon_time =
-		timestamp - (this.flick.time_begin + this.client.server_time_to_client);
-		else if (
-			this.parent && this.parent.flick && ((!this._icon && this.parent.flick.icon) ||
-		((!this._icon_state || this._icon_state.includes("[parent]")) && this.parent.flick.icon_state) ||
-		(!this._dir && this.parent.flick.dir))
-		)
-			icon_time =
-		timestamp -
-		(this.parent.flick.time_begin + this.client.server_time_to_client);
-		var accum_delay = 0;
-		for (var i = 0; i < this.dir_meta.frames.length; i++) {
-			accum_delay += this.dir_meta.frames[i].delay;
-			if (accum_delay > icon_time) {
-				if (i != this.icon_frame && this.atom) {
-					this.atom.mark_dirty();
-				}
-				this.icon_frame = i;
-				return;
-			}
-		}
+		this.icon_frame = 0;
 	}
 
 	draw(ctx) {
-		if (!this.dir_meta || !this.icon_meta || !this.icon_meta.__image_object)
+		if (!this.icon_meta || !this.icon_meta.__image_object)
 			return;
-		var frame_meta = this.dir_meta.frames[
-			this.icon_frame >= 0 && this.icon_frame < this.dir_meta.frames.length
-				? this.icon_frame
-				: 0
-		];
 
 		let image = this.icon_meta.__image_object;
 		if (this.color) {
@@ -171,8 +123,8 @@ class IconRenderer {
 			cctx.globalCompositeOperation = "source-over";
 			cctx.drawImage(
 				image,
-				frame_meta.x,
-				frame_meta.y,
+				0,
+				0,
 				this.icon_state_meta.width,
 				this.icon_state_meta.height,
 				0,
@@ -190,8 +142,8 @@ class IconRenderer {
 			cctx.globalCompositeOperation = "destination-in";
 			cctx.drawImage(
 				image,
-				frame_meta.x,
-				frame_meta.y,
+				0,
+				0,
 				this.icon_state_meta.width,
 				this.icon_state_meta.height,
 				0,
@@ -201,14 +153,13 @@ class IconRenderer {
 			);
 			cctx.globalCompositeOperation = "source-over";
 			image = color_canvas;
-			frame_meta = { x: 0, y: 0 };
 		}
 		let offset = this.get_offset();
 
 		ctx.drawImage(
 			image,
-			frame_meta.x,
-			frame_meta.y,
+			0,
+			0,
 			this.icon_state_meta.width,
 			this.icon_state_meta.height,
 			Math.round(offset[0] * 32),
@@ -219,33 +170,26 @@ class IconRenderer {
 	}
 
 	is_mouse_over(x, y) {
-		if (!this.icon_meta || !this.dir_meta || !this.icon_meta.__image_data)
+		if (!this.icon_meta || !this.icon_meta.__image_data)
 			return false;
 		let offset = this.get_offset();
 		x -= offset[0];
 		y -= offset[1];
 		var pxx = Math.floor(x * 32);
 		var pxy = Math.floor(32 - y * 32);
-		var frame_meta = this.dir_meta.frames[
-			this.icon_frame >= 0 && this.icon_frame < this.dir_meta.frames.length
-				? this.icon_frame
-				: 0
-		];
+
 		if (
 			pxx < 0 || pxy < 0 || pxx > this.icon_state_meta.width || pxy > this.icon_state_meta.height
 		)
 			return false;
 		var idx = 3 + 4 *
-		(pxx + frame_meta.x + (pxy + frame_meta.y) * this.icon_meta.__image_data.width);
+		(pxx + (pxy) * this.icon_meta.__image_data.width);
 		return this.icon_meta.__image_data.data[idx] > 0;
 	}
 
 	get icon() {
 		if (this._icon == null && this.parent) return this.parent.icon;
 		var icon = this._icon;
-		if (this.flick && this.flick.icon) {
-			icon = this.flick.icon;
-		}
 		return icon;
 	}
 	set icon(val) {
@@ -255,9 +199,6 @@ class IconRenderer {
 	get icon_state() {
 		if (this._icon_state == null && this.parent) return this.parent.icon_state;
 		var icon_state = this._icon_state;
-		if (this.flick && this.flick.icon_state) {
-			icon_state = this.flick.icon_state;
-		}
 		if (this.parent) {
 			icon_state = ("" + icon_state).replace(
 				/\[parent\]/g,
@@ -273,32 +214,10 @@ class IconRenderer {
 	get dir() {
 		if (this._dir == null && this.parent) return this.parent.dir;
 		var dir = this._dir;
-		if (this.flick && this.flick.dir) {
-			dir = this.flick.dir;
-		}
 		return dir;
 	}
 	set dir(val) {
 		this._dir = val;
-	}
-
-	check_flick_validity(timestamp) {
-		if (!this.flick) return;
-		var icon_meta = this.client.icon_metas[this.icon];
-		if (!icon_meta) return;
-		var icon_state_meta = icon_meta[this.icon_state] || icon_meta[" "] || icon_meta[""];
-		if (!icon_state_meta) {
-			this.flick = null;
-			return;
-		}
-		var progression = icon_state_meta.dir_progression || dir_progressions[icon_state_meta.dir_count] || dir_progressions[1];
-		var dir_meta = icon_state_meta.dirs[progression[this.dir]] || icon_state_meta.dirs[2];
-		if (!dir_meta) {
-			this.flick = null;
-			return;
-		}
-		var flick_time = timestamp - (this.flick.time_begin + this.client.server_time_to_client);
-		if (flick_time > dir_meta.total_delay) this.flick = null;
 	}
 
 	get overlay_layer() {

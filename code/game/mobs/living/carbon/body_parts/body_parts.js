@@ -21,9 +21,6 @@ class MobBodyParts extends Component {
 			get mouth() {
 				return this.head;
 			},
-			get groin() {
-				return this.chest;
-			},
 		});
 		this.limbs_set = new Set();
 
@@ -114,11 +111,16 @@ class MobBodyParts extends Component {
 		let msg = "<span class='warning'>";
 		let missing = new Set([
 			"head",
-			"chest",
+			"torso",
 			"l_arm",
 			"r_arm",
 			"l_leg",
 			"r_leg",
+			"l_foot",
+			"r_foot",
+			"l_hand",
+			"r_hand",
+			"groin",
 		]);
 		for (let bp of this.limbs_set) {
 			missing.delete(bp.c.BodyPart.body_zone);
@@ -164,7 +166,7 @@ class MobBodyParts extends Component {
 		else {
 			if (!def_zone) def_zone = random_zone(def_zone);
 			bp = this.limbs[def_zone];
-			if (!bp) bp = this.limbs.chest;
+			if (!bp) bp = this.limbs.torso;
 			if (!bp) return;
 		}
 		bp.c.BodyPart.receive_damage(damage_type, damage * hit_percent);
@@ -172,7 +174,7 @@ class MobBodyParts extends Component {
 
 	get_bodypart(zone) {
 		if (!zone) {
-			zone = "chest";
+			zone = "torso";
 		}
 		for (let bp of this.limbs_set) {
 			if (bp.body_zone == zone) {
@@ -201,11 +203,16 @@ MobBodyParts.template = {
 		components: {
 			MobBodyParts: {
 				init_parts: [
-					"human_chest",
+					"human_torso",
+					"human_groin",
 					"human_l_arm",
 					"human_r_arm",
+					"human_l_hand",
+					"human_r_hand",
 					"human_l_leg",
 					"human_r_leg",
+					"human_l_foot",
+					"human_r_foot",
 					"human_head",
 				],
 			},
@@ -293,12 +300,24 @@ class BodyPart extends Component {
 	}
 
 	get_main_overlay() {
-		let overlay = { icon: "icons/mob/human_parts_greyscale.png" };
-		overlay.icon_state = `${this.body_zone}`;
+		if (!this.owner) return;
+		let mob = this.owner;
+		let icodir = mob.dir;
+		if (icodir == 1)
+			icodir = 2;
+		else if (icodir == 2)
+			icodir = 1;
+		else if (icodir == 4)
+			icodir = 3;
+		else if (icodir == 8)
+			icodir = 4;
+		let overlay = { icon: `icons/mob/human_body/${this.body_zone}_m/${this.body_zone}_m-dir${icodir}.png` };
+		overlay.icon_state = this.body_zone;
 		if (this.species_id)
 			overlay.icon_state = `${this.species_id}_${overlay.icon_state}`;
 		if (this.should_draw_gender)
 			overlay.icon_state += `_${this.body_gender == "female" ? "f" : "m"}`;
+		overlay.icon = `icons/mob/human_body/${overlay.icon_state}/${overlay.icon_state}-dir${icodir}.png`;
 		overlay.color = this.get_color();
 		return overlay;
 	}
@@ -357,10 +376,10 @@ BodyPart.template = {
 				is_organic: true,
 				body_zone: null,
 				dismemberable: true,
-				should_draw_gender: false,
+				should_draw_gender: true,
 				dmg_overlay_type: "human",
 				body_gender: "male",
-				species_id: "human",
+				species_id: null, //null is for human
 				brute_damage: 0,
 				burn_damage: 0,
 			},
@@ -375,7 +394,7 @@ BodyPart.template = {
 			},
 		},
 		name: "limb",
-		icon: "icons/mob/human_parts.png",
+		icon: "icons/mob/human_body/groin_m/groin_m-dir2.png",
 		layer: layers.BELOW_MOB_LAYER,
 	},
 };

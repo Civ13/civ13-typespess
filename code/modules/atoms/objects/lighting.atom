@@ -26,7 +26,8 @@ candle:
 			
 		
 		name: "candle"
-		icon: "icons/obj/candle1_lit.png",
+		icon: "icons/obj/candle1_lit.gif"
+		icon_state: null
 	
 	tree_paths: ["items/flashlight"]
 

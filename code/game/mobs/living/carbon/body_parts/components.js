@@ -36,7 +36,6 @@ class BodyPartSkinTone extends Component {
 
 	get_main_overlay(prev) {
 		let overlay = prev();
-		overlay.icon = "icons/mob/human_parts_greyscale.png";
 		return overlay;
 	}
 }
@@ -84,17 +83,32 @@ class BodyPartHumanHair extends Component {
 		prev();
 		let hair_obj = sprite_accessories.hair[this.hair_style];
 		if (hair_obj) {
-			atom.overlays[`limb_${this.a.c.BodyPart.body_zone}_hair`] = {
-				icon: hair_obj.icon,
-				icon_state: hair_obj.icon_state,
-				color: `rgb(${this.hair_color.join(",")})`,
-				overlay_layer: 14,
-			};
+			atom.overlays[`limb_${this.a.c.BodyPart.body_zone}_hair`] = this.get_main_overlay(atom);
 		} else {
 			atom.overlays[`limb_${this.a.c.BodyPart.body_zone}_hair`] = null;
 		}
 	}
 
+	get_main_overlay(atm = null) {
+		let icodir = 1;
+		if (atm) {icodir = atm.dir;}
+		let hair_obj = sprite_accessories.hair[this.hair_style];
+		if (icodir == 1)
+			icodir = 2;
+		else if (icodir == 2)
+			icodir = 1;
+		else if (icodir == 4)
+			icodir = 3;
+		else if (icodir == 8)
+			icodir = 4;
+		let overlay = {
+			icon: `icons/mob/human_face/${hair_obj.icon_state}/${hair_obj.icon_state}-dir${icodir}.png`,
+			icon_state: hair_obj.icon_state,
+			color: `rgb(${this.hair_color.join(",")})`,
+			overlay_layer: 14,
+		};
+		return overlay;
+	}
 	remove_overlays(prev, atom) {
 		prev();
 		atom.overlays[`limb_${this.a.c.BodyPart.body_zone}_brute`] = null;

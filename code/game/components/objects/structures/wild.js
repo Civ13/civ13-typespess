@@ -88,7 +88,7 @@ Wild.template = {
 	vars: {
 		components: {
 			Wild: {
-				slicing_duration: 10000,
+				slicing_duration: 8000,
 				sheet_type: "wood_sheet",
 				sheet_amount: 7,
 			},

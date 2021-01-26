@@ -23,9 +23,9 @@ class ZoneSel extends Component {
 			else if (px >= 21 && px < 25) choice = "l_arm";
 			else return;
 		} else if ((py >= 14) & (py < 23)) {
-			//Chest and arms to shoulders
+			//Torso and arms to shoulders
 			if (px >= 8 && px < 12) choice = "r_arm";
-			else if (px >= 12 && px < 21) choice = "chest";
+			else if (px >= 12 && px < 21) choice = "torso";
 			else if (px >= 21 && px < 25) choice = "l_arm";
 			else return;
 		} else if (py >= 23 && py < 31) {
@@ -61,7 +61,7 @@ ZoneSel.template = {
 	vars: {
 		components: {
 			ZoneSel: {
-				overlay_icon: "icons/ui/screen_gen/chest.png",
+				overlay_icon: "icons/ui/screen_gen/torso.png",
 			},
 		},
 		icon: "icons/ui/screen_civ13/zone_sel.png",
