@@ -2,6 +2,7 @@
 
 let preload_list = [
 	"icons/effects/parallax.png",
+	"icons/error.png",
 ];
 
 module.exports = async function preload(client) {

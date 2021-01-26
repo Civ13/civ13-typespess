@@ -17,7 +17,7 @@ module.exports.templates = {
 				},
 			},
 			name: "speed loader (.357)",
-			icon_state: "357",
+			icon_state: "38-6",
 		},
 		tree_paths: ["items/ammo_box/a357"],
 	},
@@ -35,7 +35,7 @@ module.exports.templates = {
 				},
 			},
 			name: "speed loader (.38)",
-			icon_state: "38",
+			icon_state: "38-6",
 		},
 		tree_paths: ["items/ammo_box/c38"],
 	},
@@ -49,8 +49,7 @@ module.exports.templates = {
 				},
 			},
 			name: "ammo box (9mm)",
-			icon_state: "9mmbox",
-			//TODO origin_tech: "combat=2"
+			icon_state: "pouch-closed",
 		},
 		tree_paths: ["items/ammo_box/c9mm"],
 	},
@@ -64,8 +63,7 @@ module.exports.templates = {
 				},
 			},
 			name: "ammo box (10mm)",
-			icon_state: "10mmbox",
-			//TODO origin_tech: "combat=2"
+			icon_state: "pouch-closed",
 		},
 		tree_paths: ["items/ammo_box/c10mm"],
 	},
@@ -79,26 +77,11 @@ module.exports.templates = {
 				},
 			},
 			name: "ammo box (.45)",
-			icon_state: "45box",
-			//TODO origin_tech: "combat=2"
+			icon_state: "pouch-closed",
 		},
 		tree_paths: ["items/ammo_box/c45"],
 	},
-	ammo_box_a40mm: {
-		components: ["AmmoBox"],
-		vars: {
-			components: {
-				AmmoBox: {
-					ammo_type: "casing_a40mm",
-					max_ammo: 4,
-					multiple_sprites: 1,
-				},
-			},
-			name: "ammo box (40mm grenades)",
-			icon_state: "40mm",
-		},
-		tree_paths: ["items/ammo_box/a40mm"],
-	},
+
 	ammo_box_a762: {
 		components: ["AmmoBox"],
 		vars: {
@@ -113,7 +96,7 @@ module.exports.templates = {
 				},
 			},
 			name: "stripper clip (7.62mm)",
-			icon_state: "762",
+			icon_state: "kclip-5",
 		},
 		tree_paths: ["items/ammo_box/a762"],
 	},
@@ -127,39 +110,8 @@ module.exports.templates = {
 				},
 			},
 			name: "ammo box (7.62x38mmR)",
-			icon_state: "10mmbox",
-			//TODO origin_tech: "combat=2"
+			icon_state: "762x51-40",
 		},
 		tree_paths: ["items/ammo_box/n762"],
 	},
-	ammo_box_foambox: {
-		components: ["AmmoBox"],
-		vars: {
-			components: {
-				AmmoBox: {
-					ammo_type: "caseless_foam_dart",
-					max_ammo: 40,
-				},
-			},
-			name: "ammo box (Foam Darts)",
-			icon: "icons/obj/guns/toy.png",
-			icon_state: "foambox",
-		},
-		tree_paths: ["items/ammo_box/foambox"],
-	},
-	ammo_box_foambox_riot: {
-		components: ["AmmoBox"],
-		vars: {
-			components: {
-				AmmoBox: {
-					ammo_type: "caseless_foam_dart_riot",
-					max_ammo: 40,
-				},
-			},
-			name: "ammo box (Foam Darts)",
-			icon: "icons/obj/guns/toy.png",
-			icon_state: "foambox_riot",
-		},
-		tree_paths: ["items/ammo_box/foambox/riot"],
-	},
-};
+}

@@ -1,5 +1,5 @@
 function enqueue_icon_meta_load(newIcon,newIconState = null) {
-	if (newIconState && newIcon && !(newIcon.search(".png")))
+	if (newIconState && newIcon && (newIcon.search(".png") == -1))
 		{newIcon = `${newIcon}${newIconState}.png`}
 	if (this.icon_meta_load_queue[newIcon]) {
 		return this.icon_meta_load_queue[newIcon];
@@ -13,7 +13,18 @@ function enqueue_icon_meta_load(newIcon,newIconState = null) {
 			};
 
 		meta.__image_object = new Image();
-		meta.__image_object.src = this.resRoot + newIcon;
+		meta.__image_object.src = this.resRoot + "icons/error.png";
+		let fullpath = this.resRoot + newIcon;
+		fetch(fullpath, { method: 'HEAD' })
+		.then(res => {
+			if (res.ok) {
+				meta.__image_object.src = fullpath;
+			} else {
+				console.log(`MISSING ICON: ${fullpath}`)
+				meta.__image_object.src = this.resRoot + "icons/error.png";
+			}
+		}).catch(err => console.log('Error:', err));
+
 		meta.__image_object.addEventListener("load", () => {
 			// Make an image data object.
 			var canvas = document.createElement("canvas");
