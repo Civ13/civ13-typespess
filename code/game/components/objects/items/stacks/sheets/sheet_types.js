@@ -30,7 +30,6 @@ MetalSheet.template = {
 					"thrashed",
 					"smashed",
 				],
-				inhand_icon_state: "sheet-metal",
 			},
 			Tangible: {
 				throw_force: 10,
@@ -40,7 +39,7 @@ MetalSheet.template = {
 		},
 		name: "metal",
 		desc: "Sheets made out of metal.",
-		icon_state: "sheet-metal",
+		icon: "icons/obj/materials/sheet-metal.png",
 	},
 };
 
@@ -83,7 +82,7 @@ WoodSheet.template = {
 		},
 		name: "wooden plank",
 		desc: "One can only guess that this is a bunch of wood.",
-		icon_state: "sheet-wood",
+		icon: "icons/obj/materials/sheet-wood.png",
 	},
 };
 
@@ -123,7 +122,7 @@ StrawSheet.template = {
 		},
 		name: "straw bale",
 		desc: "A bale of straw.",
-		icon_state: "sandbags",
+		icon: "icons/obj/materials/sheet-straw.png",
 	},
 };
 class ClothSheet extends Component {
@@ -165,7 +164,7 @@ ClothSheet.template = {
 		},
 		name: "cloth",
 		desc: "Is it cotton? Linen? Denim? Burlap? Canvas? You can't tell.",
-		icon_state: "sheet-cloth",
+		icon: "icons/obj/materials/sheet-cloth.png",
 	},
 };
 
@@ -200,7 +199,6 @@ CardboardSheet.template = {
 					"thrashed",
 					"smashed",
 				],
-				inhand_icon_state: "sheet-card",
 			},
 			Tangible: {
 				throw_force: 0,
@@ -210,7 +208,7 @@ CardboardSheet.template = {
 		},
 		name: "cardboard",
 		desc: "Large sheets of card, like boxes folded flat.",
-		icon_state: "sheet-card",
+		icon: "icons/obj/materials/sheet-wood2.png",
 	},
 };
 
@@ -253,7 +251,7 @@ BoneSheet.template = {
 		},
 		name: "bones",
 		desc: "Someone's been drinking their milk.",
-		icon_state: "bone",
+		icon: "icons/obj/materials/sheet-bone.png",
 	},
 };
 
@@ -295,7 +293,7 @@ PlasticSheet.template = {
 		},
 		name: "plastic",
 		desc: "Compress dinosaur over millions of years, then refine, split and mold, and voila! You have plastic.",
-		icon_state: "sheet-plastic",
+		icon: "icons/obj/materials/sheet-plastic.png",
 	},
 };
 
@@ -337,7 +335,7 @@ PaperframeSheet.template = {
 		},
 		name: "paper frames",
 		desc: "A thin wooden frame with paper attached.",
-		icon_state: "sheet-paper",
+		icon: "icons/obj/materials/sheet-plasteel.png",
 	},
 };
 
