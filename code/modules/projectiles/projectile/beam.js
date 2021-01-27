@@ -27,7 +27,7 @@ BeamProjectile.template = {
 			},
 		},
 		name: "laser",
-		icon_state: "energy",
+		icon_state: "laser",
 		pass_flags:
 	pass_flags.PASSTABLE | pass_flags.PASSGLASS,
 	},
@@ -64,7 +64,6 @@ module.exports.templates = {
 				},
 			},
 			name: "disabler beam",
-			icon_state: "taser",
 		},
 	},
 };
