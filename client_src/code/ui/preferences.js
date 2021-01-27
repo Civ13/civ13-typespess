@@ -16,11 +16,11 @@ class PreferencesPanel {
 <hr>
 <div class='tabcontent' style='display: none' data-tab='character'>
 
-<div class='status-display float-right' style='width:128px;height:128px;margin-left: 10px;padding:0px;position:relative'>
-	<canvas class='preview-down' style='width:64px; position:absolute; top:0px;left:0px'></canvas>
-	<canvas class='preview-right' style='width:64px; position:absolute; top:0px;right:0px'></canvas>
-	<canvas class='preview-up' style='width:64px; position:absolute; bottom:0px;left:0px'></canvas>
-	<canvas class='preview-left' style='width:64px; position:absolute; bottom:0px;right:0px'></canvas>
+<div class='status-display float-right' style='width:128px;height:128px;margin-left: 10;padding:0;position:relative'>
+	<canvas class='preview-down' style='width:64px; position:absolute; top:0;left:0'></canvas>
+	<canvas class='preview-right' style='width:64px; position:absolute; top:0;right:0'></canvas>
+	<canvas class='preview-up' style='width:64px; position:absolute; bottom:0;left:0'></canvas>
+	<canvas class='preview-left' style='width:64px; position:absolute; bottom:0;right:0'></canvas>
 </div>
 <div class='status-display'>
 	<h2>Identity</h2>
@@ -329,12 +329,12 @@ class PreferencesPanel {
 			for (let key of job_order) {
 				let meta = this.job_metas[key];
 				let elem = document.createElement("div");
-				elem.style.minWidth = "280px";
+				elem.style.minWidth = "280";
 				elem.style.backgroundColor = meta.selection_color;
 				elem.dataset.jobKey = key;
 				let setting = this.job_preferences[key];
 				elem.innerHTML = `
-<div style='text-align:right;width:180px;display:inline-block;padding-right:3px'>${meta.name}</div>
+<div style='text-align:right;width:180;display:inline-block;padding-right:3px'>${meta.name}</div>
 <div style='display:inline-block' class='job-pref-button-container'></div>`;
 				let job_pref_button_container = elem.querySelector(
 					".job-pref-button-container"

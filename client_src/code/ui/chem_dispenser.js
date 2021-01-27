@@ -50,7 +50,7 @@ class ChemDispenserPanel {
 				let button = document.createElement("div");
 				button.classList.add("button");
 				button.style.width = "125px";
-				button.style.margin = "2px 0px";
+				button.style.margin = "2px 0";
 				button.innerText = name;
 				button.dataset.message = JSON.stringify({ dispense: reagent });
 				this.dispense_list.appendChild(button);

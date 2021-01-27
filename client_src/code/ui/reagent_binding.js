@@ -93,7 +93,7 @@ class ReagentBinding {
 	build_entry(/*id, obj*/) {
 		let elem = document.createElement("div");
 		elem.classList.add("zebrastripe");
-		elem.style.padding = "2px 0px";
+		elem.style.padding = "2px 0";
 		return elem;
 	}
 	update_entry(id, obj, elem) {
