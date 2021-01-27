@@ -1,5 +1,3 @@
-const dir_progressions = require("./dir_progressions.js");
-
 const CHANGE_LEVEL_NONE = 0;
 const CHANGE_LEVEL_DIR = 1;
 const CHANGE_LEVEL_ICON_STATE = 2;
@@ -26,17 +24,18 @@ class IconRenderer {
 		if (this.icon_meta || !this.icon) return Promise.resolve();
 		if (this.icon && this.icon_state && (this.icon.search(".png") == -1))
 			{this.icon = `${this.icon}${this.icon_state}.png`;}
-		return this.client.enqueue_icon_meta_load(this.icon);
+			this.icon_meta = this.client.enqueue_icon_meta_load(this.icon);
+		return this.icon_meta;
 	}
 
 	get_bounds() {
-		if (!this.icon_meta || !this.icon_state_meta) return;
+		if (!this.icon_meta || !this.icon_meta) return;
 		let offset = this.get_offset();
 		return {
 			x: offset[0],
-			y: 1 - this.icon_state_meta.height / 32 + offset[1],
-			width: this.icon_state_meta.width / 32,
-			height: this.icon_state_meta.height / 32,
+			y: 1 - this.icon_meta.height / 32 + offset[1],
+			width: this.icon_meta.width / 32,
+			height: this.icon_meta.height / 32,
 		};
 	}
 
@@ -53,23 +52,13 @@ class IconRenderer {
 		}
 		if (this.change_level > CHANGE_LEVEL_NONE && this.atom)
 			this.atom.mark_dirty();
-		if (this.change_level >= CHANGE_LEVEL_ICON) {
+		if (this.change_level >= CHANGE_LEVEL_DIR) {
 			this.icon_meta = this.atom.client.icon_metas[this.icon];
 			if (this.icon_meta == undefined) {
 				this.change_level = CHANGE_LEVEL_NONE;
-				var enqueued_icon = this.icon;
 				if (this.icon && this.icon_state && (this.icon.search(".png") == -1))
 					{this.icon = `${this.icon}${this.icon_state}.png`;}
-				this.atom.client
-					.enqueue_icon_meta_load(this.icon)
-					.then(() => {
-						if (this.icon == enqueued_icon) {
-							this.change_level = CHANGE_LEVEL_ICON;
-						}
-					})
-					.catch((err) => {
-						console.error(err);
-					});
+					this.icon_meta = this.atom.client.enqueue_icon_meta_load(this.icon);
 				this.change_level = CHANGE_LEVEL_NONE;
 				return;
 			}
@@ -79,17 +68,14 @@ class IconRenderer {
 				this.change_level = CHANGE_LEVEL_NONE;
 				return;
 			}
-			this.icon_state_meta =
-		this.icon_meta[this.icon_state] ||
-		this.icon_meta[" "] ||
-		this.icon_meta[""];
-			if (!this.icon_state_meta) {
+			this.icon_meta = this.icon_meta;
+			if (!this.icon_meta) {
 				this.change_level = CHANGE_LEVEL_NONE;
 				return;
 			}
 		}
 		if (this.change_level >= CHANGE_LEVEL_DIR) {
-			if (!this.icon_state_meta) {
+			if (!this.icon_meta) {
 				this.change_level = CHANGE_LEVEL_NONE;
 				return;
 			}
@@ -110,18 +96,18 @@ class IconRenderer {
 		if (this.color) {
 			color_canvas.width = Math.max(
 				color_canvas.width,
-				this.icon_state_meta.width
+				this.icon_meta.width
 			);
 			color_canvas.height = Math.max(
 				color_canvas.height,
-				this.icon_state_meta.height
+				this.icon_meta.height
 			);
 			let cctx = color_canvas.getContext("2d");
 			cctx.clearRect(
 				0,
 				0,
-				this.icon_state_meta.width + 1,
-				this.icon_state_meta.height + 1
+				this.icon_meta.width + 1,
+				this.icon_meta.height + 1
 			);
 			cctx.fillStyle = this.color;
 			cctx.globalCompositeOperation = "source-over";
@@ -129,31 +115,31 @@ class IconRenderer {
 				image,
 				0,
 				0,
-				this.icon_state_meta.width,
-				this.icon_state_meta.height,
+				this.icon_meta.width,
+				this.icon_meta.height,
 				0,
 				0,
-				this.icon_state_meta.width,
-				this.icon_state_meta.height
+				this.icon_meta.width,
+				this.icon_meta.height
 			);
 			cctx.globalCompositeOperation = "multiply";
 			cctx.fillRect(
 				0,
 				0,
-				this.icon_state_meta.width,
-				this.icon_state_meta.height
+				this.icon_meta.width,
+				this.icon_meta.height
 			);
 			cctx.globalCompositeOperation = "destination-in";
 			cctx.drawImage(
 				image,
 				0,
 				0,
-				this.icon_state_meta.width,
-				this.icon_state_meta.height,
+				this.icon_meta.width,
+				this.icon_meta.height,
 				0,
 				0,
-				this.icon_state_meta.width,
-				this.icon_state_meta.height
+				this.icon_meta.width,
+				this.icon_meta.height
 			);
 			cctx.globalCompositeOperation = "source-over";
 			image = color_canvas;
@@ -164,12 +150,12 @@ class IconRenderer {
 			image,
 			0,
 			0,
-			this.icon_state_meta.width,
-			this.icon_state_meta.height,
+			this.icon_meta.width,
+			this.icon_meta.height,
 			Math.round(offset[0] * 32),
 			Math.round(-offset[1] * 32),
-			this.icon_state_meta.width,
-			this.icon_state_meta.height
+			this.icon_meta.width,
+			this.icon_meta.height
 		);
 	}
 
@@ -183,7 +169,7 @@ class IconRenderer {
 		var pxy = Math.floor(32 - y * 32);
 
 		if (
-			pxx < 0 || pxy < 0 || pxx > this.icon_state_meta.width || pxy > this.icon_state_meta.height
+			pxx < 0 || pxy < 0 || pxx > this.icon_meta.width || pxy > this.icon_meta.height
 		)
 			return false;
 		var idx = 3 + 4 *
@@ -253,8 +239,8 @@ class IconRenderer {
 	get_offset() {
 		let dx = this.offset_x;
 		let dy = this.offset_y;
-		if (this.icon_state_meta && this.icon_state_meta.directional_offset) {
-			let world_amt = this.icon_state_meta.directional_offset / 32;
+		if (this.icon_meta && this.icon_meta.directional_offset) {
+			let world_amt = this.icon_meta.directional_offset / 32;
 			if (this.dir & 1) dy += world_amt;
 			if (this.dir & 2) dy -= world_amt;
 			if (this.dir & 4) dx += world_amt;
