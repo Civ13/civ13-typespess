@@ -7,7 +7,7 @@ const { ParallaxPlane } = require("./code/parallax.js");
 
 for (const collection_class of [HTMLCollection, NodeList, DOMTokenList]) {
 	if (!collection_class.prototype[Symbol.iterator])
-		collection_class.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+		{collection_class.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];}
 }
 
 const client = new TypespessClient();

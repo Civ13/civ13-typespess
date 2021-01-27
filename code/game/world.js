@@ -94,7 +94,7 @@ class World {
 
 	weather_scheduler(thisworld) {
 		if (thisworld.weather_running && Math.random()<=0.18) {
-			thisworld.random_weather()};
+			thisworld.random_weather()}
 			setTimeout(thisworld.weather_scheduler, 60000, thisworld);
 		}
 }

@@ -15,11 +15,11 @@ function dirIt(directory: string) {
 			const fullPath: string = join(directory,path);
 
 			if ( fs.statSync(fullPath).isFile()) {
-				let nfile:string = fullPath
+				let nfile:string = fullPath;
 				let pieces = nfile.split("\\");
 				nfile = pieces.join("/");
 				nfile = nfile.replace("../resources/","");
-				nfile = `"${nfile}",`
+				nfile = `"${nfile}",`;
 				files+=nfile;
 
 			}
@@ -39,7 +39,7 @@ function dirIt(directory: string) {
 		console.log(ex);
 		return "";
 	}
-};
+}
 
 var preloadlist: string = dirIt("../resources/icons/turf/floor/");
 let tdir1 = dirIt("../resources/icons/turf/walls/");
