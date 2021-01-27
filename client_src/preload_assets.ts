@@ -38,11 +38,20 @@ function dirIt(directory: string) {
 
 	} catch(ex) {
 		console.log(ex);
-		return null;
+		return "";
 	}
 };
 
-var preloadlist: string|null = dirIt("../resources/icons/");
+var preloadlist: string = dirIt("../resources/icons/turf/floor/");
+let tdir1 = dirIt("../resources/icons/turf/walls/");
+let tdir2 = dirIt("../resources/icons/ui/");
+let tdir3 = dirIt("../resources/icons/effects/");
+if (tdir1 != null)
+	{preloadlist += tdir1;}
+if (tdir2 != null)
+	{preloadlist += tdir2;}
+if (tdir3 != null)
+	{preloadlist += tdir3;}
 var tloadlist: string = `var preload_list = [${preloadlist}]; module.exports = preload_list;`;
 fs.writeFile("code/preloadlist.js", tloadlist, function (err: unknown) {
 	if (err) {
