@@ -15,10 +15,11 @@ function dirIt(directory: string) {
 			const fullPath: string = join(directory,path);
 
 			if ( fs.statSync(fullPath).isFile()) {
-				let nfile:string = fullPath.replace("..\\resources\\","");
-				if (nfile.search("inhands") == -1) {
+				let nfile:string = fullPath
+				if (nfile.search("inhands") == -1 && nfile.search("obj") == -1 && nfile.search("screen_overlays") == -1) {
 					let pieces = nfile.split("\\");
 					nfile = pieces.join("/");
+					nfile = nfile.replace("../resources/","");
 					nfile = `"${nfile}",`
 					files+=nfile;
 				}
