@@ -58,31 +58,13 @@ class IconRenderer {
 				this.change_level = CHANGE_LEVEL_NONE;
 				if (this.icon && this.icon_state && (this.icon.search(".png") == -1))
 					{this.icon = `${this.icon}${this.icon_state}.png`;}
-					this.icon_meta = this.atom.client.enqueue_icon_meta_load(this.icon);
+				if (!this.icon) {this.icon = "icons/nothing.png"}
+				this.icon_meta = this.atom.client.enqueue_icon_meta_load(this.icon);
 				this.change_level = CHANGE_LEVEL_NONE;
 				return;
 			}
 		}
-		if (this.change_level >= CHANGE_LEVEL_ICON_STATE) {
-			if (!this.icon_meta) {
-				this.change_level = CHANGE_LEVEL_NONE;
-				return;
-			}
-			this.icon_meta = this.icon_meta;
-			if (!this.icon_meta) {
-				this.change_level = CHANGE_LEVEL_NONE;
-				return;
-			}
-		}
-		if (this.change_level >= CHANGE_LEVEL_DIR) {
-			if (!this.icon_meta) {
-				this.change_level = CHANGE_LEVEL_NONE;
-				return;
-			}
 
-			if (this.atom) this.atom.mark_dirty();
-			this.icon_frame = -1;
-		}
 		this.change_level = CHANGE_LEVEL_NONE;
 
 		this.icon_frame = 0;

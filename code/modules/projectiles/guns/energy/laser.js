@@ -24,9 +24,9 @@ module.exports.templates = {
 					shaded_charge: true,
 				},
 				Item: {
-					inhand_lhand_icon: "icons/mob/inhands/lefthand_guns.png",
-					inhand_rhand_icon: "icons/mob/inhands/righthand_guns.png",
-					inhand_icon_state: "dartgun-10",
+					inhand_lhand_icon: "icons/mob/inhands/righthand_guns/",
+					inhand_rhand_icon: "icons/mob/inhands/lefthand_guns/",
+					inhand_icon_state: "taser",
 					materials: { metal: 2000 },
 				},
 				Examine: {

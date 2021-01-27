@@ -18,11 +18,10 @@ function dirIt(directory: string) {
 				let nfile:string = fullPath
 				let pieces = nfile.split("\\");
 				nfile = pieces.join("/");
-				if (nfile.search("effects/") != -1 || nfile.search("turf/") != -1 || nfile.search("ui/") != -1) {
-					nfile = nfile.replace("../resources/","");
-					nfile = `"${nfile}",`
-					files+=nfile;
-				}
+				nfile = nfile.replace("../resources/","");
+				nfile = `"${nfile}",`
+				files+=nfile;
+
 			}
 			else
 				{dirs.push(fullPath);}
