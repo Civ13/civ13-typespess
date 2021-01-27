@@ -16,9 +16,9 @@ function dirIt(directory: string) {
 
 			if ( fs.statSync(fullPath).isFile()) {
 				let nfile:string = fullPath
-				if (nfile.search("inhands") == -1 && nfile.search("obj") == -1 && nfile.search("screen_overlays") == -1) {
-					let pieces = nfile.split("\\");
-					nfile = pieces.join("/");
+				let pieces = nfile.split("\\");
+				nfile = pieces.join("/");
+				if (nfile.search("effects/") != -1 || nfile.search("turf/") != -1 || nfile.search("ui/") != -1) {
 					nfile = nfile.replace("../resources/","");
 					nfile = `"${nfile}",`
 					files+=nfile;
