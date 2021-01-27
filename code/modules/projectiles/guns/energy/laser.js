@@ -35,7 +35,7 @@ module.exports.templates = {
 				},
 			},
 			name: "laser gun",
-			icon_state: "laser",
+			icon_state: "medium",
 		},
 		tree_paths: ["items/gun/energy/laser"],
 	},
@@ -71,93 +71,8 @@ module.exports.templates = {
 				},
 			},
 			name: "retro laser gun",
-			icon_state: "retro",
+			icon_state: "energy",
 		},
 		tree_paths: ["items/gun/energy/laser/retro"],
 	},
-	lasergun_retro_old: {
-		parent_template: "lasergun",
-		vars: {
-			components: {
-				EnergyGun: {
-					ammo_type: ["energy_lens_lasergun_old"],
-				},
-				Examine: {
-					desc:
-			"First generation lasergun, developed by Nanotrasen. Suffers from ammo issues but its unique ability to recharge its ammo without the need of a magazine helps compensate. You really hope someone has developed a better lasergun while you were in cyro.",
-				},
-			},
-			name: "laser gun",
-			icon_state: "retro",
-		},
-		tree_paths: ["items/gun/energy/laser/retro/old"],
-	},
-	lasergun_captain: {
-		parent_template: "lasergun",
-		vars: {
-			components: {
-				EnergyGun: {
-					selfcharge: true,
-				},
-				Examine: {
-					desc:
-			"This is an antique laser gun. All craftsmanship is of the highest quality. It is decorated with assistant leather and chrome. The object menaces with spikes of energy. On the item is an image of Space Station 13. The station is exploding.",
-				},
-			},
-			name: "antique laser gun",
-			icon_state: "caplaser",
-			//TODO: resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-		},
-		tree_paths: ["items/gun/energy/laser/captain"],
-	},
-	lasergun_bluetag: {
-		parent_template: "lasergun",
-		vars: {
-			components: {
-				Item: {
-					needs_permit: false,
-				},
-				Gun: {
-					clumsy_check: false,
-				},
-				EnergyGun: {
-					selfcharge: true,
-					ammo_type: ["energy_lens_lasergun_bluetag"],
-				},
-				Examine: {
-					desc:
-			"A retro laser gun modified to fire harmless blue beams of light. Sound effects included!",
-				},
-			},
-			name: "laser tag gun",
-			icon_state: "bluetag",
-			//TODO: firing pin
-		},
-		tree_paths: ["items/gun/energy/laser/bluetag"],
-	},
-	lasergun_redtag: {
-		parent_template: "lasergun",
-		vars: {
-			components: {
-				Item: {
-					needs_permit: false,
-				},
-				Gun: {
-					clumsy_check: false,
-				},
-				EnergyGun: {
-					selfcharge: true,
-					ammo_type: ["energy_lens_lasergun_redtag"],
-				},
-				Examine: {
-					desc:
-			"A retro laser gun modified to fire harmless red beams of light. Sound effects included!",
-				},
-			},
-			name: "laser tag gun",
-			icon_state: "redtag",
-			//TODO: firing pin
-		},
-		tree_paths: ["items/gun/energy/laser/redtag"],
-	},
-};
+}

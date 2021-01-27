@@ -178,7 +178,7 @@ EnergyGun.template = {
 			},
 		},
 		name: "energy",
-		icon: "icons/obj/guns/energy.png",
+		icon: "icons/obj/guns/energy/",
 		icon_state: "energy",
 	},
 };

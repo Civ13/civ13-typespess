@@ -3,13 +3,11 @@ gladiator:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "gladiator"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "gladiator"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "gladiator"
 	tree_paths: ["items/clothing/hats/gladiator"]
 metallichelmet:
@@ -17,13 +15,11 @@ metallichelmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "metallichelmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "metallichelmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "metallichelmet"
 	tree_paths: ["items/clothing/hats/metallichelmet"]
 goldenhelmet:
@@ -31,13 +27,11 @@ goldenhelmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "goldenhelmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "goldenhelmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "goldenhelmet"
 	tree_paths: ["items/clothing/hats/goldenhelmet"]
 greek:
@@ -45,13 +39,11 @@ greek:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "greek"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "greek"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "greek"
 	tree_paths: ["items/clothing/hats/greek"]
 greek_c:
@@ -59,13 +51,11 @@ greek_c:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "greek_c"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "greek c"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "greek_c"
 	tree_paths: ["items/clothing/hats/greek_c"]
 greek_sl:
@@ -73,13 +63,11 @@ greek_sl:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "greek_sl"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "greek sl"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "greek_sl"
 	tree_paths: ["items/clothing/hats/greek_sl"]
 knight_green:
@@ -87,13 +75,11 @@ knight_green:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "knight_green"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight green"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "knight_green"
 	tree_paths: ["items/clothing/hats/knight_green"]
 knight_yellow:
@@ -101,13 +87,11 @@ knight_yellow:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "knight_yellow"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight yellow"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "knight_yellow"
 	tree_paths: ["items/clothing/hats/knight_yellow"]
 knight_blue:
@@ -115,13 +99,11 @@ knight_blue:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "knight_blue"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight blue"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "knight_blue"
 	tree_paths: ["items/clothing/hats/knight_blue"]
 knight_red:
@@ -129,13 +111,11 @@ knight_red:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "knight_red"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight red"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "knight_red"
 	tree_paths: ["items/clothing/hats/knight_red"]
 knight_templar:
@@ -143,13 +123,11 @@ knight_templar:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "knight_templar"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight templar"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "knight_templar"
 	tree_paths: ["items/clothing/hats/knight_templar"]
 knight_simple:
@@ -157,13 +135,11 @@ knight_simple:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "knight_simple"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "knight simple"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "knight_simple"
 	tree_paths: ["items/clothing/hats/knight_simple"]
 medieval_helmet1:
@@ -171,13 +147,11 @@ medieval_helmet1:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "medieval_helmet1"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "medieval helmet1"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "medieval_helmet1"
 	tree_paths: ["items/clothing/hats/medieval_helmet1"]
 medieval_helmet2:
@@ -185,13 +159,11 @@ medieval_helmet2:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "medieval_helmet2"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "medieval helmet2"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "medieval_helmet2"
 	tree_paths: ["items/clothing/hats/medieval_helmet2"]
 medieval_helmet3:
@@ -199,13 +171,11 @@ medieval_helmet3:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "medieval_helmet3"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "medieval helmet3"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "medieval_helmet3"
 	tree_paths: ["items/clothing/hats/medieval_helmet3"]
 coif:
@@ -213,13 +183,11 @@ coif:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "coif"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "coif"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "coif"
 	tree_paths: ["items/clothing/hats/coif"]
 coif_helmet:
@@ -227,13 +195,11 @@ coif_helmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "coif_helmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "coif helmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "coif_helmet"
 	tree_paths: ["items/clothing/hats/coif_helmet"]
 turhelm1:
@@ -241,13 +207,11 @@ turhelm1:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "turhelm1"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "turhelm1"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "turhelm1"
 	tree_paths: ["items/clothing/hats/turhelm1"]
 turhelm2:
@@ -255,13 +219,11 @@ turhelm2:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "turhelm2"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "turhelm2"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "turhelm2"
 	tree_paths: ["items/clothing/hats/turhelm2"]
 turhelm3:
@@ -269,13 +231,11 @@ turhelm3:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "turhelm3"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "turhelm3"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "turhelm3"
 	tree_paths: ["items/clothing/hats/turhelm3"]
 turhelm4:
@@ -283,13 +243,11 @@ turhelm4:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "turhelm4"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "turhelm4"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "turhelm4"
 	tree_paths: ["items/clothing/hats/turhelm4"]
 arabw_helmet1:
@@ -297,13 +255,11 @@ arabw_helmet1:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "arabw_helmet1"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "arabw helmet1"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "arabw_helmet1"
 	tree_paths: ["items/clothing/hats/arabw_helmet1"]
 arabw_helmet:
@@ -311,13 +267,11 @@ arabw_helmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "arabw_helmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "arabw helmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "arabw_helmet"
 	tree_paths: ["items/clothing/hats/arabw_helmet"]
 samurai1:
@@ -325,13 +279,11 @@ samurai1:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "samurai1"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai1"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "samurai1"
 	tree_paths: ["items/clothing/hats/samurai1"]
 samurai2:
@@ -339,13 +291,11 @@ samurai2:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "samurai2"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai2"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "samurai2"
 	tree_paths: ["items/clothing/hats/samurai2"]
 samurai3:
@@ -353,13 +303,11 @@ samurai3:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "samurai3"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai3"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "samurai3"
 	tree_paths: ["items/clothing/hats/samurai3"]
 samurai4:
@@ -367,13 +315,11 @@ samurai4:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "samurai4"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai4"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "samurai4"
 	tree_paths: ["items/clothing/hats/samurai4"]
 samurai_guard4:
@@ -381,13 +327,11 @@ samurai_guard4:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "samurai_guard4"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai guard4"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "samurai_guard4"
 	tree_paths: ["items/clothing/hats/samurai_guard4"]
 samurai_guard3:
@@ -395,13 +339,11 @@ samurai_guard3:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "samurai_guard3"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai guard3"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "samurai_guard3"
 	tree_paths: ["items/clothing/hats/samurai_guard3"]
 samurai_guard2:
@@ -409,13 +351,11 @@ samurai_guard2:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "samurai_guard2"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai guard2"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "samurai_guard2"
 	tree_paths: ["items/clothing/hats/samurai_guard2"]
 samurai_guard1:
@@ -423,13 +363,11 @@ samurai_guard1:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "samurai_guard1"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "samurai guard1"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "samurai_guard1"
 	tree_paths: ["items/clothing/hats/samurai_guard1"]
 viking:
@@ -437,13 +375,11 @@ viking:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "viking"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "viking"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "viking"
 	tree_paths: ["items/clothing/hats/viking"]
 beserkerhelmet:
@@ -451,13 +387,11 @@ beserkerhelmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "beserkerhelmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "beserkerhelmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "beserkerhelmet"
 	tree_paths: ["items/clothing/hats/beserkerhelmet"]
 spearmanhelmet:
@@ -465,13 +399,11 @@ spearmanhelmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "spearmanhelmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "spearmanhelmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "spearmanhelmet"
 	tree_paths: ["items/clothing/hats/spearmanhelmet"]
 captainhelmet:
@@ -479,13 +411,11 @@ captainhelmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "captainhelmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "captainhelmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "captainhelmet"
 	tree_paths: ["items/clothing/hats/captainhelmet"]
 spearwhitehelm:
@@ -493,13 +423,11 @@ spearwhitehelm:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "spearwhitehelm"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "spearwhitehelm"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "spearwhitehelm"
 	tree_paths: ["items/clothing/hats/spearwhitehelm"]
 grunthelmet:
@@ -507,13 +435,11 @@ grunthelmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "grunthelmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "grunthelmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "grunthelmet"
 	tree_paths: ["items/clothing/hats/grunthelmet"]
 chitin_helmet:
@@ -521,13 +447,11 @@ chitin_helmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "chitin_helmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "chitin helmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "chitin_helmet"
 	tree_paths: ["items/clothing/hats/chitin_helmet"]
 sauronhelmet:
@@ -535,13 +459,11 @@ sauronhelmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "sauronhelmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "sauronhelmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "sauronhelmet"
 	tree_paths: ["items/clothing/hats/sauronhelmet"]
 bone_helmet:
@@ -549,13 +471,11 @@ bone_helmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "bone_helmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "bone helmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "bone_helmet"
 	tree_paths: ["items/clothing/hats/bone_helmet"]
 mamluk_lord:
@@ -563,13 +483,11 @@ mamluk_lord:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "mamluk_lord"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "mamluk lord"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "mamluk_lord"
 	tree_paths: ["items/clothing/hats/mamluk_lord"]
 mamluk_king:
@@ -577,13 +495,11 @@ mamluk_king:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "mamluk_king"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "mamluk king"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "mamluk_king"
 	tree_paths: ["items/clothing/hats/mamluk_king"]
 mamluk_helmet:
@@ -591,12 +507,10 @@ mamluk_helmet:
 	vars:
 		components:
 			HeadItem:
-				worn_icon: "icons/mob/worn/hats.png"
 				worn_icon_state: "mamluk_helmet"
 				can_adjust: false
 			Examine:
 				desc: ""
 		name: "mamluk helmet"
-		icon: "icons/mob/under/hats.png"
 		icon_state: "mamluk_helmet"
 	tree_paths: ["items/clothing/hats/mamluk_helmet"]

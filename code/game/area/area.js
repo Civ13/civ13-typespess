@@ -23,14 +23,14 @@ Area.template = {
 	vars: {
 		components: {
 			Area: {
-				brush_icon: "icons/turf/areas.png",
+				brush_icon: "icons/effects/areas/",
 				brush_icon_state: "unknown",
 				map_id: null,
 			},
 		},
 		name: "Area",
-		icon: "icons/turf/areas.png",
-		icon_state: "origin_marker",
+		icon: "icons/effects/areas/",
+		icon_state: "x1",
 		visible: false,
 		layer: layers.BELOW_AREA_LAYER,
 	},
@@ -117,7 +117,7 @@ AreaBrush.template = {
 				map_id: null,
 			},
 		},
-		icon: "icons/turf/areas.png",
+		icon: "icons/effects/areas/",
 		icon_state: "unknown",
 		visible: false,
 		layer: layers.BELOW_AREA_LAYER,

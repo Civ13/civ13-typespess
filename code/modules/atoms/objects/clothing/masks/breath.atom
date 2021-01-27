@@ -9,5 +9,5 @@ mask_breath:
 			
 		
 		name: "breath mask",
-		icon_state: "breath",
+		icon_state: "german_gasmask",
 	

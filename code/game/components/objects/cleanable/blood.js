@@ -27,7 +27,8 @@ BloodDecal.template = {
 			},
 		},
 		name: "blood",
-		icon: "icons/effects/blood.png",
+		icon: "icons/effects/blood/",
+		icon_state: "floor1"
 	},
 };
 
@@ -128,8 +129,8 @@ FootprintsDecal.template = {
 			},
 		},
 		name: "footprints",
-		icon: "icons/effects/footprints.png",
-		icon_state: "nothingwhatsoever",
+		icon: "icons/effects/blood/",
+		icon_state: "drip1",
 		alpha: 0.5,
 	},
 };

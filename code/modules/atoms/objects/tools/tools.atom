@@ -31,7 +31,7 @@ industrial_welding_tool:
             
         
         name: "industrial welding tool"
-        icon_state: "indwelder"
+        icon_state: "welder"
     
     tree_paths: ["items/tools/welder/industrial"]
 
@@ -50,7 +50,7 @@ mini_welding_tool:
             
         
         name: "emergency welding tool"
-        icon_state: "miniwelder"
+        icon_state: "welder"
     
     tree_paths: ["items/tools/welder/emergency"]
 

@@ -49,7 +49,8 @@ StackTile.template = {
 				throw_range: 7,
 			},
 		},
-		icon: "icons/obj/tiles.png",
+		icon: "icons/obj/tiles/",
+		icon_state: "tile"
 	},
 };
 

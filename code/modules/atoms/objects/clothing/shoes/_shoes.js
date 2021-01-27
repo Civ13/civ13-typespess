@@ -126,15 +126,16 @@ FootItem.template = {
 	vars: {
 		components: {
 			FootItem: {
-				worn_icon: "icons/mob/worn/shoes.png",
-				worn_icon_state: null, // If null, inherits from icon_state
+				worn_icon: "icons/mob/worn/feet/",
+				worn_icon_state: "boots", // If null, inherits from icon_state
 			},
 			Describe: {
 				desc: "comfortable-looking shoes.",
 			},
 		},
 		name: "shoes",
-		icon: "icons/mob/under/shoes.png",
+		icon: "icons/mob/under/shoes/",
+		icon_state: "boots",
 		gender: "plural",
 	},
 };

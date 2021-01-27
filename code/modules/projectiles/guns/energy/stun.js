@@ -18,7 +18,7 @@ module.exports.templates = {
 				},
 			},
 			name: "hybrid taser",
-			icon_state: "advtaser",
+			icon_state: "taser",
 		},
 		tree_paths: ["items/gun/energy/advtaser"],
 	},

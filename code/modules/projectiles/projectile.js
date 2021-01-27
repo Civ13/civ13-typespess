@@ -251,7 +251,7 @@ Projectile.template = {
 			},
 		},
 		name: "projectile",
-		icon: "icons/obj/projectiles.png",
+		icon: "icons/obj/guns/projectiles/",
 		icon_state: "bullet",
 		layer: 3,
 		density: 0,

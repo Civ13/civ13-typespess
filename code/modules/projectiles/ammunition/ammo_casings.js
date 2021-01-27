@@ -38,7 +38,7 @@ module.exports.templates = {
 				},
 			},
 			name: "7.62 bullet casing",
-			icon_state: "762-casing",
+			icon_state: "kclip-bullet",
 		},
 		tree_paths: ["items/ammo_casing/a762"],
 	},
@@ -56,7 +56,7 @@ module.exports.templates = {
 				},
 			},
 			name: "7.62 bullet casing",
-			icon_state: "762-casing",
+			icon_state: "kclip-bullet",
 		},
 		tree_paths: ["items/ammo_casing/a762"],
 	},
@@ -305,189 +305,7 @@ module.exports.templates = {
 		},
 		tree_paths: ["items/ammo_casing/c45"],
 	},
-	casing_c45_nostamina: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: ".45",
-					projectile_type: "bullet_c45_nostamina",
-					casing_type: "casing_c45_nostamina",
-				},
-				Examine: {
-					desc: "A .45 bullet casing.",
-				},
-			},
-			name: ".45 bullet casing",
-		},
-		tree_paths: ["items/ammo_casing/c45_nostamina"],
-	},
-	// 5.56mm (M-90gl Carbine)
-	casing_a556: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "a556",
-					projectile_type: "bullet_a556",
-					casing_type: "casing_a556",
-				},
-				Examine: {
-					desc: "A 5.56mm bullet casing.",
-				},
-			},
-			name: "5.56mm bullet casing",
-		},
-		tree_paths: ["items/ammo_casing/a556"],
-	},
-	// 40mm (Grenade Launcher)
-	casing_a40mm: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "40mm",
-					projectile_type: "bullet_a556",
-					casing_type: "casing_a556",
-				},
-				Examine: {
-					desc:
-			"A cased high explosive grenade that can only be activated once fired out of a grenade launcher.",
-				},
-			},
-			name: "40mm HE shell",
-			icon_state: "40mmHE",
-		},
-		tree_paths: ["items/ammo_casing/a40mm"],
-	},
-	// .50 (Sniper)
-	casing_p50: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: ".50",
-					projectile_type: "bullet_p50",
-					casing_type: "casing_p50",
-				},
-				Examine: {
-					desc: "A .50 bullet casing.",
-				},
-			},
-			name: ".50 bullet casing",
-			icon_state: ".50",
-		},
-		tree_paths: ["items/ammo_casing/p50"],
-	},
-	casing_p50_soporific: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: ".50",
-					projectile_type: "bullet_p50_soporific",
-					casing_type: "casing_p50_soporific",
-				},
-				Examine: {
-					desc:
-			"A .50 bullet casing, specialised in sending the target to sleep, instead of hell.",
-				},
-			},
-			name: ".50 soporific bullet casing",
-			icon_state: "sleeper",
-		},
-		tree_paths: ["items/ammo_casing/p50_soporific"],
-	},
-	casing_p50_penetrator: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: ".50",
-					projectile_type: "bullet_p50_penetrator",
-					casing_type: "casing_p50_penetrator",
-				},
-				Examine: {
-					desc: "A .50 caliber penetrator round casing.",
-				},
-			},
-			name: ".50 penetrator round bullet casing",
-			icon_state: ".50",
-		},
-		tree_paths: ["items/ammo_casing/p50_penetrator"],
-	},
-	// 1.95x129mm (SAW)
-	casing_mm195x129: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "mm195x129",
-					projectile_type: "bullet_mm195x129",
-					casing_type: "casing_mm195x129",
-				},
-				Examine: {
-					desc: "A 10mm bullet casing.",
-				},
-			},
-			name: "1.95x129mm bullet casing",
-		},
-		tree_paths: ["items/ammo_casing/mm195x129"],
-	},
-	casing_mm195x129_ap: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "mm195x129",
-					projectile_type: "bullet_mm195x129_ap",
-					casing_type: "casing_mm195x129_ap",
-				},
-				Examine: {
-					desc:
-			"A 1.95x129mm bullet casing designed with a hardened-tipped core to help penetrate armored targets.",
-				},
-			},
-			name: "1.95x129mm armor-piercing bullet casing",
-		},
-		tree_paths: ["items/ammo_casing/mm195x129_ap"],
-	},
-	casing_mm195x129_hp: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "mm195x129",
-					projectile_type: "bullet_mm195x129_hp",
-					casing_type: "casing_mm195x129_hp",
-				},
-				Examine: {
-					desc:
-			"A 1.95x129mm bullet casing designed to cause more damage to unarmored targets.",
-				},
-			},
-			name: "1.95x129mm hollow point bullet casing",
-		},
-		tree_paths: ["items/ammo_casing/mm195x129_hp"],
-	},
-	casing_mm195x129_inc: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "mm195x129",
-					projectile_type: "bullet_mm195x129_inc",
-					casing_type: "casing_mm195x129_inc",
-				},
-				Examine: {
-					desc:
-			"A 1.95x129mm bullet casing designed with a chemical-filled capsule on the tip that when bursted, reacts with the atmosphere to produce a fireball, engulfing the target in flames.",
-				},
-			},
-			name: "1.95x129mm incendiary bullet casing",
-		},
-		tree_paths: ["items/ammo_casing/mm195x129_inc"],
-	},
+
 	// Shotgun
 	casing_shotgun_slug: {
 		components: ["AmmoCasing"],
@@ -506,7 +324,7 @@ module.exports.templates = {
 				},
 			},
 			name: "shotgun slug",
-			icon_state: "blshell",
+			icon_state: "slshell",
 		},
 		tree_paths: ["items/ammo_casing/shotgun_slug"],
 	},
@@ -531,27 +349,7 @@ module.exports.templates = {
 		},
 		tree_paths: ["items/ammo_casing/shotgun_beanbag"],
 	},
-	casing_shotgun_inc: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "shotgun",
-					projectile_type: "bullet_shotgun_inc",
-					casing_type: "casing_shotgun_inc",
-				},
-				Item: {
-					materials: { metal: 4000 },
-				},
-				Examine: {
-					desc: "An incendiary-coated shotgun slug.",
-				},
-			},
-			name: "incendiary slug",
-			icon_state: "ishell",
-		},
-		tree_paths: ["items/ammo_casing/shotgun_inc"],
-	},
+
 	casing_shotgun_dragonsbreath: {
 		components: ["AmmoCasing"],
 		vars: {
@@ -571,96 +369,11 @@ module.exports.templates = {
 				},
 			},
 			name: "dragonsbreath shell",
-			icon_state: "ishell2",
+			icon_state: "shell-bullet",
 		},
 		tree_paths: ["items/ammo_casing/shotgun_dragonsbreath"],
 	},
-	casing_shotgun_stunslug: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "shotgun",
-					projectile_type: "bullet_shotgun_stunslug",
-					casing_type: "casing_shotgun_stunslug",
-				},
-				Item: {
-					materials: { metal: 250 },
-				},
-				Examine: {
-					desc: "A stunning taser slug.",
-				},
-			},
-			name: "taser slug",
-			icon_state: "stunshell",
-		},
-		tree_paths: ["items/ammo_casing/shotgun_stunslug"],
-	},
-	casing_shotgun_meteorslug: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "shotgun",
-					projectile_type: "bullet_shotgun_meteorslug",
-					casing_type: "casing_shotgun_meteorslug",
-				},
-				Item: {
-					materials: { metal: 4000 },
-				},
-				Examine: {
-					desc:
-			"A shotgun shell rigged with CMC technology, which launches a massive slug when fired.",
-				},
-			},
-			name: "meteorslug shell",
-			icon_state: "mshell",
-		},
-		tree_paths: ["items/ammo_casing/shotgun_meteorslug"],
-	},
-	casing_shotgun_pulseslug: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "shotgun",
-					projectile_type: "bullet_shotgun_pulseslug",
-					casing_type: "casing_shotgun_pulseslug",
-				},
-				Item: {
-					materials: { metal: 4000 },
-				},
-				Examine: {
-					desc:
-			"A delicate device which can be loaded into a shotgun. The primer acts as a button which triggers the gain medium and fires a powerful energy blast. While the heat and power drain limit it to one use, it can still allow an operator to engage targets that ballistic ammunition would have difficulty with.",
-				},
-			},
-			name: "pulse slug",
-			icon_state: "pshell",
-		},
-		tree_paths: ["items/ammo_casing/shotgun_pulseslug"],
-	},
-	casing_shotgun_frag12: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "shotgun",
-					projectile_type: "bullet_shotgun_frag12",
-					casing_type: "casing_shotgun_slug",
-				},
-				Item: {
-					materials: { metal: 4000 },
-				},
-				Examine: {
-					desc: "A high explosive breaching round for a 12 gauge shotgun.",
-				},
-			},
-			name: "FRAG-12 slug",
-			icon_state: "heshell",
-		},
-		tree_paths: ["items/ammo_casing/shotgun_frag12"],
-	},
+
 	casing_shotgun_buckshot: {
 		components: ["AmmoCasing"],
 		vars: {
@@ -680,7 +393,7 @@ module.exports.templates = {
 				},
 			},
 			name: "buckshot shell",
-			icon_state: "gshell",
+			icon_state: "shell-bullet",
 		},
 		tree_paths: ["items/ammo_casing/shotgun_buckshot"],
 	},
@@ -728,76 +441,8 @@ module.exports.templates = {
 				},
 			},
 			name: "improvised shell",
-			icon_state: "improvshell",
+			icon_state: "bshell",
 		},
 		tree_paths: ["items/ammo_casing/shotgun_improvised"],
-	},
-	casing_shotgun_ion: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "shotgun",
-					projectile_type: "ion_weak",
-					casing_type: "casing_shotgun_ion",
-					pellets: 4,
-					spread: 9,
-				},
-				Item: {
-					materials: { metal: 4000 },
-				},
-				Examine: {
-					desc:
-			"An advanced shotgun shell which uses a subspace ansible crystal to produce an effect similar to a standard ion rifle. The unique properties of the crystal split the pulse into a spread of individually weaker bolts.",
-				},
-			},
-			name: "ion shell",
-			icon_state: "ionshell",
-		},
-		tree_paths: ["items/ammo_casing/shotgun_ion"],
-	},
-	casing_shotgun_laserslug: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "shotgun",
-					projectile_type: "beam_laser",
-					casing_type: "casing_shotgun_laserslug",
-				},
-				Item: {
-					materials: { metal: 4000 },
-				},
-				Examine: {
-					desc:
-			"An advanced shotgun shell that uses a micro laser to replicate the effects of a laser weapon in a ballistic package.",
-				},
-			},
-			name: "shotgun slug",
-			icon_state: "lshell",
-		},
-		tree_paths: ["items/ammo_casing/shotgun_laserslug"],
-	},
-	casing_shotgun_techshell: {
-		components: ["AmmoCasing"],
-		vars: {
-			components: {
-				AmmoCasing: {
-					caliber: "shotgun",
-					projectile_type: null,
-					casing_type: "casing_shotgun_techshell",
-				},
-				Item: {
-					materials: { metal: 4000 },
-				},
-				Examine: {
-					desc:
-			"A high-tech shotgun shell which can be loaded with materials to produce unique effects.",
-				},
-			},
-			name: "unloaded technological shell",
-			icon_state: "cshell",
-		},
-		tree_paths: ["items/ammo_casing/shotgun_techshell"],
 	},
 };
