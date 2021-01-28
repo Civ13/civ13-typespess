@@ -17,6 +17,8 @@ class IconRenderer {
 		this.change_level = 0;
 		this._offset_x = 0;
 		this._offset_y = 0;
+		this.directional = obj.directional;
+		if (!this.dir) {this.dir = 2;}
 	}
 
 	// Returns a promise that is resolved when the icon is fully loaded (json and image)
