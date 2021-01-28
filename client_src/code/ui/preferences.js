@@ -420,7 +420,6 @@ class PreferencesPanel {
 		dir = 1,
 		modifier = null,
 		prefs_modifier = null,
-		add_clothes = false,
 	} = {}) {
 		let atom = new Atom(this.panel.manager.client, { dir });
 		let prefs = JSON.parse(JSON.stringify(this.char_prefs));
@@ -434,8 +433,10 @@ class PreferencesPanel {
 			let color = null;
 			if (this.skin_tones) color = this.skin_tones[prefs.skin_tone];
 			atom.set_overlay(`limb_${part}`, {
-				icon: `icons/mob/human_body/${partic}/${partic}-dir${dir}.png`,
-				icon_state,
+				icon: "icons/mob/human_body/",
+				icon_state: "partic",
+				directional: true,
+				dir: this.dir,
 				color,
 			});
 		}
@@ -443,17 +444,14 @@ class PreferencesPanel {
 		if (hair_style) {
 			let hc = this.char_prefs.hair_color || [255, 255, 255];
 			atom.set_overlay("hair", {
-				icon: `${hair_style.base_icon}/${hair_style.icon_state}-dir${dir}.png`,
+				icon: `${hair_style.icon}/`,
 				icon_state: hair_style.icon_state,
+				directional: true,
+				dir: this.dir,
 				color: `rgb(${hc[0]},${hc[1]},${hc[2]})`,
 				overlay_layer: 14,
 			});
 		}
-		if (add_clothes)
-			atom.set_overlay("uniform", {
-				icon: "icons/mob/uniform.png",
-				icon_state: "grey",
-			});
 		if (modifier) modifier(atom);
 		if (!canvas) canvas = document.createElement("canvas");
 		canvas.width = 32;

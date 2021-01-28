@@ -311,13 +311,13 @@ class BodyPart extends Component {
 			icodir = 3;
 		else if (icodir == 8)
 			icodir = 4;
-		let overlay = { icon: `icons/mob/human_body/${this.body_zone}_m/${this.body_zone}_m-dir${icodir}.png` };
+		let overlay = { icon: "icons/mob/human_body/", icon_state: this.body_zone, directional: mob.directional, dir: icodir };
 		overlay.icon_state = this.body_zone;
 		if (this.species_id)
 			overlay.icon_state = `${this.species_id}_${overlay.icon_state}`;
 		if (this.should_draw_gender)
 			overlay.icon_state += `_${this.body_gender == "female" ? "f" : "m"}`;
-		overlay.icon = `icons/mob/human_body/${overlay.icon_state}/${overlay.icon_state}-dir${icodir}.png`;
+		overlay.icon = "icons/mob/human_body/";
 		overlay.color = this.get_color();
 		return overlay;
 	}
@@ -394,7 +394,9 @@ BodyPart.template = {
 			},
 		},
 		name: "limb",
-		icon: "icons/mob/human_body/groin_m/groin_m-dir2.png",
+		directional: true,
+		icon: "icons/mob/human_body/",
+		icon_state: "groin_m",
 		layer: layers.BELOW_MOB_LAYER,
 	},
 };

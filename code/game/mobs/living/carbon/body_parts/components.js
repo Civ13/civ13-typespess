@@ -102,8 +102,9 @@ class BodyPartHumanHair extends Component {
 		else if (icodir == 8)
 			icodir = 4;
 		let overlay = {
-			icon: `icons/mob/human_face/${hair_obj.icon_state}/${hair_obj.icon_state}-dir${icodir}.png`,
 			icon_state: hair_obj.icon_state,
+			directional: true,
+			dir: icodir,
 			color: `rgb(${this.hair_color.join(",")})`,
 			overlay_layer: 14,
 		};
