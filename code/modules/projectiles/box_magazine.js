@@ -192,8 +192,8 @@ AmmoBox.template = {
 				throw_speed: 3,
 				throw_range: 7,
 				size: 1,
-				inhand_lhand_icon: "icons/mob/inhands/equipment/medical_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/equipment/medical_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				inhand_icon_state: "syringe_kit",
 				//TODO flags_1 = CONDUCT_1
 				//TODO slot_flags = SLOT_BELT

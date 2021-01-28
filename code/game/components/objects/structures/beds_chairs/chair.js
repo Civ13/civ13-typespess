@@ -72,7 +72,7 @@ Chair.template = {
 			},
 		},
 		name: "chair",
-		icon: "icons/obj/chairs.png",
+		icon: "icons/obj/structures/chairs/",
 		icon_state: "chair",
 		layer: layers.OBJ_LAYER,
 	},

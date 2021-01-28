@@ -37,12 +37,13 @@ Flashlight.template = {
 				color: "#ffffff",
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/misc/devices_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/misc/devices_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/misc/righthand/",
 				size: 2,
 			},
 		},
-		icon: "icons/obj/lighting.png",
+		icon: "icons/obj/lighting/",
+		icon_state: "flashlight"
 	},
 };
 

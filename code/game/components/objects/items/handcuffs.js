@@ -84,8 +84,6 @@ Handcuffs.template = {
 			},
 			Item: {
 				inhand_icon_state: null,
-				inhand_lhand_icon: "icons/mob/inhands/equipment/security_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/equipment/security_righthand.png",
 				size: 2,
 			},
 			Destructible: {
@@ -112,7 +110,7 @@ Handcuffs.template = {
 		},
 		name: "handcuffs",
 		gender: "plural",
-		icon: "icons/obj/items_and_weapons.png",
+		icon: "icons/obj/misc/",
 		icon_state: "handcuff",
 	},
 };

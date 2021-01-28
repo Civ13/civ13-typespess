@@ -68,8 +68,8 @@ PowerCell.template = {
 				start_empty: false,
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/misc/devices_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/misc/devices_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 5,
 				size: 2,
 				inhand_icon_state: "cell",
@@ -84,7 +84,7 @@ PowerCell.template = {
 			},
 		},
 		name: "power cell",
-		icon: "icons/obj/power.png",
+		icon: "icons/obj/power/",
 		icon_state: "cell",
 	},
 };
@@ -118,6 +118,7 @@ module.exports.templates = {
 				},
 			},
 			name: "high-capacity power cell",
+			icon_state: "icell",
 		},
 		tree_paths: ["items/stock_parts/cell/upgraded"],
 	},

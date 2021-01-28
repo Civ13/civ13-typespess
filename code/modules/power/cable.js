@@ -216,7 +216,7 @@ Cable.template = {
 			},
 		},
 		name: "power cable",
-		icon: "icons/obj/power_cond/cables.png",
+		icon: "icons/obj/power/cables/",
 		icon_state: "0-1",
 		layer: layers.WIRE_LAYER,
 	},
@@ -300,8 +300,8 @@ StackCable.template = {
 				attack_verb: ["whipped", "lashed", "disciplined", "flogged"],
 				conduct: true,
 				size: 2,
-				inhand_lhand_icon: "icons/mob/inhands/equipment/tools_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/equipment/tools_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_lhand_icon: "icons/mob/inhands/righthand/",
 				inhand_icon_state: "coil",
 			},
 			Stack: {
@@ -322,7 +322,7 @@ StackCable.template = {
 		name: "cable coil",
 		gender: "neuter",
 		icon_state: "coil",
-		icon: "icons/obj/power.png",
+		icon: "icons/obj/misc/",
 	},
 };
 

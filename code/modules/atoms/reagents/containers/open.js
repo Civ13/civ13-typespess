@@ -175,7 +175,7 @@ class GlassBeaker extends Component {
 		} else {
 			this.a.overlays.reagent_filling = { icon_state: "[parent]100" };
 		}
-		this.a.overlays.reagent_filling.icon = "icons/obj/reagentfillings.png";
+		this.a.overlays.reagent_filling.icon = "icons/obj/chemical/reagentfillings/";
 		let [r, g, b, a] = this.a.c.ReagentHolder.get_reagents_color();
 		this.a.overlays.reagent_filling.color = `rgb(${Math.round(
 			r * 255
@@ -202,7 +202,7 @@ GlassBeaker.template = {
 			},
 		},
 		name: "beaker",
-		icon: "icons/obj/chemical.png",
+		icon: "icons/obj/chemical/",
 		icon_state: "beaker",
 	},
 };
@@ -224,7 +224,7 @@ module.exports.templates = {
 				},
 			},
 			name: "large beaker",
-			icon: "icons/obj/chemical.png",
+			icon: "icons/obj/chemical/",
 			icon_state: "beakerlarge",
 		},
 		tree_paths: ["items/beaker/large"],

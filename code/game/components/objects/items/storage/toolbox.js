@@ -32,8 +32,8 @@ Toolbox.template = {
 				rustle_jimmies: false,
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/equipment/toolbox_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/equipment/toolbox_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				inhand_icon_state: "toolbox_red",
 				force: 12,
 				size: 4,

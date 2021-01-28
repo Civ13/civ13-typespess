@@ -22,10 +22,10 @@ class Action /*lawsuit*/ extends EventEmitter {
 				target: null,
 				check_conscious: false,
 				check_interact: false,
-				bg_icon: "icons/mob/actions/backgrounds.png",
-				bg_icon_state: "bg_default",
-				act_icon: "icons/mob/actions.png",
-				act_icon_state: "default",
+				bg_icon:  "icons/ui/screen_civ13/",
+				bg_icon_state: "template",
+				act_icon: "icons/ui/screen_civ13/",
+				act_icon_state: "template_active",
 			},
 			inst
 		);

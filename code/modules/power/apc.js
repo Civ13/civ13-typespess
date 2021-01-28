@@ -191,8 +191,8 @@ Apc.template = {
 			},
 		},
 		name: "area power controller",
-		icon: "icons/obj/power.png",
-		icon_state: "apc0",
+		icon: "icons/obj/power/",
+		icon_state: "cell_charger",
 		layer: layers.OBJ_LAYER,
 	},
 };

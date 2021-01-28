@@ -15,8 +15,8 @@ Multitool.template = {
 	vars: {
 		components: {
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/equipment/tools_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/equipment/tools_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 5,
 				size: 2,
 				hitsound: "sound/weapons/tap.ogg",
@@ -27,8 +27,8 @@ Multitool.template = {
 			},
 		},
 		name: "multitool",
-		icon_state: "multitool",
-		icon: "icons/obj/device.png",
+		icon_state: "analyzer",
+		icon: "icons/obj/device/",
 	},
 };
 

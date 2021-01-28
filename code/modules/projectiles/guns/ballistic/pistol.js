@@ -22,7 +22,8 @@ module.exports.templates = {
 				},
 			},
 			name: "stechkin pistol",
-			icon: 'icons/obj/guns/pistols/ruby.png',
+			icon: 'icons/obj/guns/pistols/',
+			icon_state: "ruby"
 		},
 		tree_paths: ["items/gun/ballistic/automatic/pistol"],
 	},
@@ -47,7 +48,8 @@ module.exports.templates = {
 				},
 			},
 			name: "glock 17",
-			icon: 'icons/obj/guns/pistols/glock17.png',
+			icon: 'icons/obj/guns/pistols/',
+			icon_state: "glock17"
 		},
 		tree_paths: ["items/gun/ballistic/automatic/pistol/glock17"],
 	},

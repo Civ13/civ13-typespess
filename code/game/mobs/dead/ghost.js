@@ -20,8 +20,8 @@ class Ghost extends Component {
 
 		this.a.c.Eye.screen.reenter_corpse = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/mob/screen_ghost.png",
-				icon_state: "reenter_corpse",
+				icon: "icons/ui/screen_alert/",
+				icon_state: "weightless",
 				screen_loc_x: 7.75,
 				screen_loc_y: 0.1875,
 				layer: 30,
@@ -78,7 +78,7 @@ Ghost.template = {
 			},
 		},
 		name: "ghost",
-		icon: "icons/mob/mob.png",
+		icon: "icons/mob/",
 		icon_state: "ghost",
 		layer: layers.GHOST_LAYER,
 		density: -1,

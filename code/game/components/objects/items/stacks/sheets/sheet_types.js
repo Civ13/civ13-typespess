@@ -20,8 +20,8 @@ MetalSheet.template = {
 				material: "metal",
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/misc/sheets_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/misc/sheets_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 5,
 				attack_verb: [
 					"bashed",
@@ -39,7 +39,8 @@ MetalSheet.template = {
 		},
 		name: "metal",
 		desc: "Sheets made out of metal.",
-		icon: "icons/obj/materials/sheet-metal.png",
+		icon: "icons/obj/materials/",
+		icon_state: "sheet-metal",
 	},
 };
 
@@ -82,7 +83,8 @@ WoodSheet.template = {
 		},
 		name: "wooden plank",
 		desc: "One can only guess that this is a bunch of wood.",
-		icon: "icons/obj/materials/sheet-wood.png",
+		icon: "icons/obj/materials/",
+		icon_state: "sheet-wood",
 	},
 };
 
@@ -122,7 +124,8 @@ StrawSheet.template = {
 		},
 		name: "straw bale",
 		desc: "A bale of straw.",
-		icon: "icons/obj/materials/sheet-straw.png",
+		icon: "icons/obj/materials/",
+		icon_state: "sheet-straw",
 	},
 };
 class ClothSheet extends Component {
@@ -164,7 +167,8 @@ ClothSheet.template = {
 		},
 		name: "cloth",
 		desc: "Is it cotton? Linen? Denim? Burlap? Canvas? You can't tell.",
-		icon: "icons/obj/materials/sheet-cloth.png",
+		icon: "icons/obj/materials/",
+		icon_state: "sheet-cloth",
 	},
 };
 
@@ -189,8 +193,8 @@ CardboardSheet.template = {
 				material: "cardboard",
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/misc/sheets_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/misc/sheets_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 0,
 				attack_verb: [
 					"bashed",
@@ -208,7 +212,8 @@ CardboardSheet.template = {
 		},
 		name: "cardboard",
 		desc: "Large sheets of card, like boxes folded flat.",
-		icon: "icons/obj/materials/sheet-wood2.png",
+		icon: "icons/obj/materials/",
+		icon_state: "sheet-wood2",
 	},
 };
 
@@ -229,7 +234,6 @@ BoneSheet.template = {
 				singular_name: "bone",
 				merge_type: "BoneSheet",
 				novariants: false,
-				icon: "icons/obj/mining.png",
 				material: "bone",
 			},
 			Item: {
@@ -251,7 +255,8 @@ BoneSheet.template = {
 		},
 		name: "bones",
 		desc: "Someone's been drinking their milk.",
-		icon: "icons/obj/materials/sheet-bone.png",
+		icon: "icons/obj/materials/",
+		icon_state: "sheet-bone",
 	},
 };
 
@@ -293,7 +298,8 @@ PlasticSheet.template = {
 		},
 		name: "plastic",
 		desc: "Compress dinosaur over millions of years, then refine, split and mold, and voila! You have plastic.",
-		icon: "icons/obj/materials/sheet-plastic.png",
+		icon: "icons/obj/materials/",
+		icon_state: "sheet-plastic",
 	},
 };
 
@@ -335,7 +341,8 @@ PaperframeSheet.template = {
 		},
 		name: "paper frames",
 		desc: "A thin wooden frame with paper attached.",
-		icon: "icons/obj/materials/sheet-plasteel.png",
+		icon: "icons/obj/materials/",
+		icon_state: "sheet-plasteel",
 	},
 };
 

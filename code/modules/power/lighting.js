@@ -172,7 +172,7 @@ LightFixture.template = {
 		},
 		name: "light fixture",
 		layer: 2.9,
-		icon: "icons/obj/lighting.png",
+		icon: "icons/obj/lighting/",
 		icon_state: "tube1",
 	},
 };
@@ -233,7 +233,7 @@ LightTube.template = {
 			},
 		},
 		name: "light tube",
-		icon: "icons/obj/lighting.png",
+		icon: "icons/obj/lighting/",
 		icon_state: "ltube",
 	},
 };

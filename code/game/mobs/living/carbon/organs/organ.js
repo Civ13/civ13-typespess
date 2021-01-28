@@ -37,7 +37,7 @@ Organ.template = {
 			},
 		},
 		name: "organ",
-		icon: "icons/obj/surgery.png",
+		icon: "icons/obj/surgery/",
 	},
 };
 

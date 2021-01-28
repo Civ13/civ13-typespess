@@ -13,8 +13,8 @@ Analyzer.template = {
 	vars: {
 		components: {
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/equipment/tools_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/equipment/tools_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_lhand_icon: "icons/mob/inhands/righthand/",
 				inhand_icon_state: "analyzer",
 				size: 2,
 				no_bludgeon: true,
@@ -30,8 +30,8 @@ Analyzer.template = {
 			},
 		},
 		name: "analyzer",
-		icon: "icons/obj/device.png",
-		icon_state: "atmos",
+		icon: "icons/obj/device/",
+		icon_state: "analyzer",
 	},
 };
 

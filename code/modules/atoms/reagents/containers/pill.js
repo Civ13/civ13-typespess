@@ -69,8 +69,8 @@ Pill.template = {
 				maximum_volume: 50,
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/equipment/medical_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/equipment/medical_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				inhand_icon_state: "pill",
 			},
 			Examine: {
@@ -78,7 +78,7 @@ Pill.template = {
 			},
 		},
 		name: "pill",
-		icon: "icons/obj/chemical.png",
+		icon: "icons/obj/chemical/",
 		icon_state: "pill",
 	},
 };

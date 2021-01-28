@@ -109,7 +109,7 @@ Rack.template = {
 			},
 		},
 		name: "rack",
-		icon: "icons/obj/objects.png",
+		icon: "icons/obj/misc/",
 		icon_state: "rack",
 		let_pass_flags: pass_flags.LETPASSTHROW,
 		layer: layers.TABLE_LAYER,
@@ -131,7 +131,7 @@ RackParts.template = {
 			},
 		},
 		name: "rack parts",
-		icon: "icons/obj/items_and_weapons.png",
+		icon: "icons/obj/misc/",
 		icon_state: "rack_parts",
 		//TODO: flags_1 = CONDUCT_1
 	},

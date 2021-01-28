@@ -56,7 +56,7 @@ BackItem.template = {
 	vars: {
 		components: {
 			BackItem: {
-				worn_icon: "icons/mob/back.png",
+				worn_icon: "icons/mob/worn/back/",
 				worn_icon_state: null, // If null, inherits from icon_state
 			},
 		},
@@ -76,7 +76,7 @@ BeltItem.template = {
 	vars: {
 		components: {
 			BeltItem: {
-				worn_icon: "icons/mob/belt.png",
+				worn_icon: "icons/mob/worn/belt/",
 				worn_icon_state: null, // If null, inherits from icon_state
 			},
 		},
@@ -96,7 +96,7 @@ EarItem.template = {
 	vars: {
 		components: {
 			EarItem: {
-				worn_icon: "icons/mob/ears.png",
+				worn_icon: "icons/mob/worn/ears/",
 				worn_icon_state: null, // If null, inherits from icon_state
 			},
 		},
@@ -116,7 +116,7 @@ EyeItem.template = {
 	vars: {
 		components: {
 			EyeItem: {
-				worn_icon: "icons/mob/eyes.png",
+				worn_icon: "icons/mob/worn/eyes/",
 				worn_icon_state: null, // If null, inherits from icon_state
 			},
 		},
@@ -136,7 +136,7 @@ NeckItem.template = {
 	vars: {
 		components: {
 			NeckItem: {
-				worn_icon: "icons/mob/neck.png",
+				worn_icon: "icons/mob/worn/ties/",
 				worn_icon_state: null, // If null, inherits from icon_state
 			},
 		},

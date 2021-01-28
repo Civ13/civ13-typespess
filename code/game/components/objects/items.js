@@ -125,7 +125,7 @@ class Item extends Component {
 
 	apply_belt_overlay(item) {
 		item.overlays[`belt_${this.a.object_id}`] = {
-			icon: "icons/mob/under/belt_overlays.png",
+			icon: "icons/mob/worn/belt_overlays/",
 			icon_state: this.a.icon_state,
 		};
 	}
@@ -157,7 +157,7 @@ Item.template = {
 				equip_delay_other: 2000,
 			},
 		},
-		icon: "icons/obj/items.png",
+		icon: "icons/obj/misc/",
 		layer: 3,
 		bounds_x: 0.375,
 		bounds_y: 0.375,
@@ -171,12 +171,10 @@ module.exports.templates = {
 	cablecuffs: {
 		components: ["Item"],
 		vars: {
-			icon: "icons/obj/items_and_weapons.png",
+			icon: "icons/obj/misc/",
 			icon_state: "cuff",
 			components: {
 				Item: {
-					inhand_lhand_icon: "icons/mob/inhands/equipment/tools_lefthand.png",
-					inhand_rhand_icon: "icons/mob/inhands/equipment/tools_righthand.png",
 					inhand_icon_state: "coil_red",
 				},
 			},

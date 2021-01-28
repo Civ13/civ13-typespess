@@ -47,8 +47,8 @@ GlassSheet.template = {
 				],
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/misc/sheets_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/misc/sheets_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 5,
 				attack_verb: [
 					"bashed",
@@ -100,8 +100,8 @@ RGlassSheet.template = {
 				],
 			},
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/misc/sheets_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/misc/sheets_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 5,
 				attack_verb: [
 					"bashed",
@@ -152,8 +152,8 @@ GlassShard.template = {
 				size: 1,
 				force: 5,
 				inhand_icon_state: "shard-glass",
-				inhand_lhand_icon: "icons/mob/inhands/weapons/melee_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/weapons/melee_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand_weapons/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand_weapons/",
 				attack_verb: ["stabbed", "slashed", "sliced", "cut"],
 				hitsound: "sound/weapons/bladeslice.ogg",
 				sharpness: combat_defines.IS_SHARP,
@@ -180,7 +180,7 @@ GlassShard.template = {
 			},
 		},
 		name: "shard",
-		icon: "icons/obj/shards.png",
+		icon: "icons/obj/shards/",
 		icon_state: "large",
 	},
 };

@@ -290,7 +290,7 @@ class Stack extends Component {
 
 Stack.template = {
 	vars: {
-		icon: "icons/obj/stack_objects.png",
+		icon: "icons/obj/materials/",
 		components: {
 			Stack: {
 				amount: 1,

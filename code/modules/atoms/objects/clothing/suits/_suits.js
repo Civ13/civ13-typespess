@@ -24,7 +24,8 @@ SuitItem.template = {
 				siemens_coefficient: 0,
 			},
 		},
-		icon: "icons/mob/under/suits/biker.png",
+		icon: "icons/mob/under/suits/",
+		icon_state: "biker",
 		name: "suit",
 	},
 };

@@ -187,8 +187,8 @@ Gun.template = {
 				size: 3,
 				force: 5,
 				inhand_icon_state: "gun",
-				inhand_lhand_icon: "icons/mob/inhands/weapons/guns_lefthand.png",
-				inhand_rhand_icon: "icons/mob/inhands/weapons/guns_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand_guns/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand_guns/",
 			},
 			Tangible: {
 				throw_force: 5,
@@ -200,8 +200,8 @@ Gun.template = {
 			},
 		},
 		name: "gun",
-		icon: "icons/obj/guns/projectile.png",
-		icon_state: "detective",
+		icon: "icons/obj/guns/pistols/",
+		icon_state: "revolver",
 	},
 };
 

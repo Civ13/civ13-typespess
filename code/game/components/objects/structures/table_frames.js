@@ -148,7 +148,7 @@ TableFrame.template = {
 			},
 		},
 		name: "table frame",
-		icon: "icons/obj/structures.png",
+		icon: "icons/obj/structures/",
 		icon_state: "table_frame",
 		density: false,
 		layer: layers.PROJECTILE_HIT_THRESHHOLD_LAYER,

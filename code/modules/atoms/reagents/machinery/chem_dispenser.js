@@ -142,7 +142,7 @@ ChemDispenser.template = {
 		name: "chem dispenser",
 		density: 1,
 		layer: 2.9,
-		icon: "icons/obj/chemical.png",
+		icon: "icons/obj/chemical/",
 		icon_state: "dispenser",
 	},
 };

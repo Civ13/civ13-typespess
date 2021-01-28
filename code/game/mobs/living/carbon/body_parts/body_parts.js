@@ -262,14 +262,14 @@ class BodyPart extends Component {
 		let burnstate = Math.ceil((this.burn_damage / this.max_damage) * 3);
 		atom.overlays[`limb_${this.body_zone}_brute`] = brutestate
 			? {
-				icon: "icons/mob/dam_mob.png",
+				icon: "icons/mob/dam_mob/",
 				icon_state: `${this.dmg_overlay_type}_${this.body_zone}_${brutestate}0`,
 				overlay_layer: 0.2,
 			}
 			: null;
 		atom.overlays[`limb_${this.body_zone}_burn`] = burnstate
 			? {
-				icon: "icons/mob/dam_mob.png",
+				icon: "icons/mob/dam_mob/",
 				icon_state: `${this.dmg_overlay_type}_${this.body_zone}_0${burnstate}`,
 				overlay_layer: 0.2,
 			}

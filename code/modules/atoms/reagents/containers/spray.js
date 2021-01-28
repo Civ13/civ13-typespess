@@ -54,7 +54,8 @@ class SprayBottle extends Component {
 					},
 				},
 				name: "chemicals",
-				icon: "icons/obj/chempuff.png",
+				icon: "icons/effects/effects/",
+				icon_state: "chempuff",
 				pass_flags: pass_flags.PASSTABLE,
 				layer: 5,
 			},
@@ -137,9 +138,8 @@ SprayBottle.template = {
 			Item: {
 				no_bludgeon: true,
 				inhand_icon_state: "cleaner",
-				inhand_lhand_icon: "icons/mob/inhands/equipment/custodial_lefthand.png",
-				inhand_rhand_icon:
-		"icons/mob/inhands/equipment/custodial_righthand.png",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				size: 2,
 			},
 			Tangible: {
@@ -152,7 +152,7 @@ SprayBottle.template = {
 			},
 		},
 		name: "spray bottle",
-		icon: "icons/obj/janitor.png",
+		icon: "icons/obj/misc/",
 		icon_state: "cleaner",
 	},
 };

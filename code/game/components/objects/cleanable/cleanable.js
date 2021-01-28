@@ -48,7 +48,8 @@ CleanableDecal.template = {
 				desc: "It's red and gooey. Perhaps it's the chef's cooking?",
 			},
 		},
-		icon: "icons/effects/effects.png",
+		icon: "icons/effects/blood/",
+		icon_state: "floor3-old",
 		layer: layers.ABOVE_NORMAL_TURF_LAYER,
 	},
 };

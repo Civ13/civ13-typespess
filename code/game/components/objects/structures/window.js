@@ -63,7 +63,7 @@ class Window extends Component {
 			this.a.overlays.window_damage = null;
 		else
 			this.a.overlays.window_damage = {
-				icon: "icons/obj/structures.png",
+				icon: "icons/obj/windows/",
 				icon_state: `damage${ratio}`,
 				overlay_layer: -1,
 			};
@@ -250,8 +250,8 @@ Window.template = {
 			},
 		},
 		name: "window",
-		icon: "icons/obj/structures.png",
-		icon_state: "window",
+		icon: "icons/obj/windows/",
+		icon_state: "windownew",
 		density: true,
 		let_pass_flags: pass_flags.PASSGLASS,
 		layer: layers.ABOVE_OBJ_LAYER,
@@ -447,7 +447,7 @@ DirectionalWindow.depends = ["Window"];
 
 DirectionalWindow.template = {
 	vars: {
-		icon: "icons/obj/structures.png",
+		icon: "icons/obj/windows/",
 	},
 };
 
@@ -466,8 +466,8 @@ module.exports.templates = {
 					groups: ["window"],
 				},
 			},
-			icon: "icons/obj/smooth_structures/window.png",
-			icon_state: "window",
+			icon: "icons/obj/windows/",
+			icon_state: "windownew",
 		},
 		tree_paths: ["basic_structures/window"],
 	},
@@ -508,8 +508,8 @@ module.exports.templates = {
 					groups: ["window"],
 				},
 			},
-			icon: "icons/obj/smooth_structures/reinforced_window.png",
-			icon_state: "r_window",
+			icon: "icons/obj/windows/",
+			icon_state: "windowmetal",
 		},
 		tree_paths: ["basic_structures/window/reinforced"],
 	},
@@ -565,8 +565,8 @@ module.exports.templates = {
 				},
 			},
 			name: "shuttle window",
-			icon: "icons/obj/smooth_structures/shuttle_window.png",
-			icon_state: "shuttle_window",
+			icon: "icons/obj/windows/",
+			icon_state: "metal_porthole_full",
 		},
 		tree_paths: ["basic_structures/window/shuttle"],
 	},

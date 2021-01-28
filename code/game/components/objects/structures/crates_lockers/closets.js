@@ -51,8 +51,8 @@ Closet.template = {
 			},
 		},
 		name: "closet",
-		icon: "icons/obj/closet.png",
-		icon_state: "generic",
+		icon: "icons/obj/storage/",
+		icon_state: "closet",
 	},
 };
 

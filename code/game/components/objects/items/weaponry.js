@@ -13,8 +13,8 @@ BaseballBat.template = {
 	vars: {
 		components: {
 			Item: {
-				inhand_lhand_icon: "icons/mob/inhands/weapons/melee_lefthand.dmi",
-				inhand_rhand_icon: "icons/mob/inhands/weapons/melee_righthand.dmi",
+				inhand_lhand_icon: "icons/mob/inhands/lefthand_weapons/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand_weapons/",
 				inhand_icon_state: "baseball_bat",
 				size: 5,
 				force: 10,
@@ -27,7 +27,7 @@ BaseballBat.template = {
 				desc: "There ain't a skull in the league that can withstand a swatter.",
 			},
 		},
-		icon: "icons/obj/items_and_weapons.png",
+		icon: "icons/obj/misc/",
 		icon_state: "baseball_bat",
 		name: "baseball bat",
 	},
