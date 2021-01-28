@@ -187,7 +187,7 @@ module.exports.templates = {
 		vars: {
 			name: "tree",
 			icon: "icons/obj/flora/bigtrees/",
-			icon_state: "tree1",
+			icon_state: "",
 			density: 1,
 			components: {
 				Examine: {
@@ -213,7 +213,7 @@ module.exports.templates = {
 		vars: {
 			name: "grass",
 			icon: "icons/obj/flora/wild/",
-			icon_state: "tall_grass_1.png",
+			icon_state: "",
 			density: 0,
 			opacity: false,
 			components: {
