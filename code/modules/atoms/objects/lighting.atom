@@ -26,8 +26,8 @@ candle:
 			
 		
 		name: "candle"
-		icon: "icons/obj/tools/candle1_lit.png"
-		icon_state: null
+		icon: "icons/obj/lighting/"
+		icon_state: "candle1_lit"
 	
 	tree_paths: ["items/flashlight"]
 
@@ -46,24 +46,9 @@ desk_lamp_green:
 				desc: "A classic green-shaded desk lamp."
 			
 		
-		icon_state: "lampgreen"
+		icon_state: "littlelamp"
 	
 	tree_paths: ["items/flashlight/lamp/green"]
-
-desk_lamp_banana:
-	components: ["DeskLamp"]
-	vars:
-		components:
-			Item:
-				inhand_icon_state: "bananalamp"
-			
-			Examine:
-				desc: "Only a clown would think to make a ghetto banana-shaped lamp. Even has a goofy pullstring."
-			
-		
-		icon_state: "bananalamp"
-	
-	tree_paths: ["items/flashlight/lamp/banana"]
 
 sun:
 	components: ["Sun"]

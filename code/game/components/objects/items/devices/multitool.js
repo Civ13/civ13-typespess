@@ -27,7 +27,7 @@ Multitool.template = {
 			},
 		},
 		name: "multitool",
-		icon_state: "analyzer",
+		icon_state: "geiger_off",
 		icon: "icons/obj/device/",
 	},
 };

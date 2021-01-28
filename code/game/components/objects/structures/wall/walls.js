@@ -145,7 +145,7 @@ module.exports.templates = {
 				},
 			},
 			name: "wall",
-			icon_state: "wall",
+			icon_state: "0",
 		},
 		tree_paths: ["basic_structures/wall"],
 		requires_under: {

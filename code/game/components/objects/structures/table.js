@@ -238,7 +238,7 @@ module.exports.templates = {
 			},
 			name: "reinforced table",
 			icon: "icons/obj/structures/tables/",
-			icon_state: "r_table",
+			icon_state: "reinftable",
 		},
 		tree_paths: ["basic_structures/table/reinforced"],
 	},

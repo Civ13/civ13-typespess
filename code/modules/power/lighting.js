@@ -173,7 +173,7 @@ LightFixture.template = {
 		name: "light fixture",
 		layer: 2.9,
 		icon: "icons/obj/lighting/",
-		icon_state: "tube1",
+		icon_state: "ltube",
 	},
 };
 
@@ -253,7 +253,7 @@ module.exports.templates = {
 	light_small: {
 		components: ["LightFixture"],
 		vars: {
-			icon_state: "bulb1",
+			icon_state: "lbulb",
 			components: {
 				LightFixture: {
 					default_tube: "light_tube_small",

@@ -177,7 +177,7 @@ module.exports.templates = {
 				},
 			},
 			name: "bar stool",
-			icon_state: "bar",
+			icon_state: "stool_wood",
 		},
 		tree_paths: ["basic_structures/chair/stool/bar"],
 	},

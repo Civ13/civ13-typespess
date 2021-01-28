@@ -10,7 +10,7 @@ module.exports.templates = {
 				},
 			},
 			name: "emergency closet",
-			icon_state: "emergency",
+			icon_state: "locker",
 		},
 		tree_paths: ["closets/emergency", "basic_structures/emergency_closet"],
 	},
@@ -23,7 +23,7 @@ module.exports.templates = {
 				},
 			},
 			name: "fire-safety closet",
-			icon_state: "fire",
+			icon_state: "locker",
 		},
 		tree_paths: ["closets/fire"],
 	},
@@ -39,7 +39,7 @@ module.exports.templates = {
 				},
 			},
 			name: "tool closet",
-			icon_state: "eng",
+			icon_state: "locker",
 		},
 		tree_paths: ["closets/tools"],
 	},
@@ -55,22 +55,9 @@ module.exports.templates = {
 				},
 			},
 			name: "radiation closet",
-			icon_state: "eng",
+			icon_state: "locker",
 		},
 		tree_paths: ["closets/radiation"],
 	},
-	bomb_closet: {
-		components: ["Closet"],
-		vars: {
-			components: {
-				Examine: {
-					desc: "It's a storage unit for explosion-protective suits",
-				},
-			},
-			name: "EOD closet",
-			icon_state: "bomb",
-			force_improper: true,
-		},
-		tree_paths: ["closets/bomb"],
-	},
+
 };

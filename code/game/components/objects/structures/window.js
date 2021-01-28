@@ -383,7 +383,7 @@ ReinforcedWindow.template = {
 			},
 		},
 		name: "reinforced window",
-		icon_state: "rwindow",
+		icon_state: "windowmetal",
 		layer: layers.ABOVE_OBJ_LAYER,
 	},
 };

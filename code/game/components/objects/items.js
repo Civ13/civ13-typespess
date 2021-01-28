@@ -172,7 +172,7 @@ module.exports.templates = {
 		components: ["Item"],
 		vars: {
 			icon: "icons/obj/misc/",
-			icon_state: "cuff",
+			icon_state: "coil",
 			components: {
 				Item: {
 					inhand_icon_state: "coil_red",

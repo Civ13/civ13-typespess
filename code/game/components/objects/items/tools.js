@@ -108,7 +108,7 @@ Screwdriver.template = {
 				desc: "You can be totally screwy with this.",
 			},
 		},
-		icon_state: "screwdriver_map",
+		icon_state: "screwdriver",
 		name: "screwdriver",
 	},
 };
@@ -145,7 +145,7 @@ Wirecutters.template = {
 				desc: "This cuts wires.",
 			},
 		},
-		icon_state: "cutters",
+		icon_state: "wirecutters",
 		name: "wirecutters",
 	},
 };

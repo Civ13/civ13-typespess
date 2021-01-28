@@ -344,7 +344,8 @@ StorageItem.template = {
 			},
 		},
 		name: "storage",
-		icon: "icons/obj/storage.png",
+		icon: "icons/obj/storage/",
+		icon_state: "locker",
 		size: 3,
 	},
 };

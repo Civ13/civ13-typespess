@@ -20,6 +20,7 @@ const _walking = Symbol("_walking");
 const _walk_stepping = Symbol("_walk_stepping");
 const _walk_step = Symbol("_walk_step");
 
+const _directional = Symbol("_directional");
 const _icon = Symbol("_icon");
 const _icon_state = Symbol("_icon_state");
 const _dir = Symbol("_dir");
@@ -1611,6 +1612,7 @@ class Atom extends EventEmitter {
 		for (var key of [
 			"icon",
 			"icon_state",
+			"directional",
 			"dir",
 			"layer",
 			"name",

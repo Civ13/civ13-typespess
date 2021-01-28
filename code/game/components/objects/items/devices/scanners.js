@@ -31,7 +31,7 @@ Analyzer.template = {
 		},
 		name: "analyzer",
 		icon: "icons/obj/device/",
-		icon_state: "analyzer",
+		icon_state: "geiger_off",
 	},
 };
 

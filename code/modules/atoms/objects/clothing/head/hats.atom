@@ -1090,18 +1090,7 @@ custfeathercap_b_hat:
 		name: "custfeathercap b hat"
 		icon_state: "custfeathercap_b_hat"
 	tree_paths: ["items/clothing/hats/custfeathercap_b_hat"]
-custfeathercap_f_hat:
-	components: ["HeadItem"]
-	vars:
-		components:
-			HeadItem:
-				worn_icon_state: "custfeathercap_f_hat"
-				can_adjust: false
-			Examine:
-				desc: ""
-		name: "custfeathercap f hat"
-		icon_state: "custfeathercap_f_hat"
-	tree_paths: ["items/clothing/hats/custfeathercap_f_hat"]
+
 customnoblehat_hat:
 	components: ["HeadItem"]
 	vars:

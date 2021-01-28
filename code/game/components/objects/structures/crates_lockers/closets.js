@@ -52,7 +52,7 @@ Closet.template = {
 		},
 		name: "closet",
 		icon: "icons/obj/storage/",
-		icon_state: "closet",
+		icon_state: "cabinet",
 	},
 };
 
