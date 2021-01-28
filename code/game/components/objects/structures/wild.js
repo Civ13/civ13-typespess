@@ -132,7 +132,7 @@ module.exports.templates = {
 		variants: [
 			{
 				type: "single",
-				var_path: ["icon"],
+				var_path: ["icon_state"],
 				values: ["smallbush1",
 					"smallbush2",
 					"smallbush3",
@@ -198,7 +198,7 @@ module.exports.templates = {
 		variants: [
 			{
 				type: "single",
-				var_path: ["icon"],
+				var_path: ["icon_state"],
 				values: ["tree1",
 					"tree2",
 					"tree3",
@@ -230,7 +230,7 @@ module.exports.templates = {
 		variants: [
 			{
 				type: "single",
-				var_path: ["icon"],
+				var_path: ["icon_state"],
 				values: ["tall_grass_1",
 					"tall_grass_2",
 					"tall_grass_3",
