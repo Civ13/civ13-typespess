@@ -9,7 +9,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: 
+            - run:
                 command: sudo sh scripts/setup.sh
             - run:
                 command: sudo sh scripts/launch_test.sh

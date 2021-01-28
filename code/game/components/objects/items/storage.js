@@ -34,7 +34,8 @@ class StorageItem extends Component {
 			components: ["GridDisplay"],
 			vars: {
 				name: "storage",
-				icon: "icons/ui/screen_gen/block.png",
+				icon: "icons/ui/screen_gen/",
+				icon_state: "block",
 				screen_loc_x: 3.5,
 				screen_loc_y: 1.5,
 				layer: 30,
@@ -49,7 +50,8 @@ class StorageItem extends Component {
 		this[_close_button] = new Atom(this.a.server, {
 			vars: {
 				name: "close",
-				icon: "icons/ui/screen_gen/backpack_close.png",
+				icon: "icons/ui/screen_gen/",
+				icon_state: "backpack_close",
 				layer: 30,
 				screen_loc_x: 10.5,
 				screen_loc_y: 1.5,

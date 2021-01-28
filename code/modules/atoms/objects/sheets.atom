@@ -1,4 +1,4 @@
-metal_sheet: 
+metal_sheet:
 	components: ["MetalSheet"]
 	variants: [
 			type: "single"
@@ -10,7 +10,7 @@ metal_sheet:
 	tree_paths: ["items/stack/sheet/metal"]
 
 
-wood_sheet: 
+wood_sheet:
 	components: ["WoodSheet"]
 	variants: [
 			type: "single"
@@ -21,7 +21,7 @@ wood_sheet:
 	]
 	tree_paths: ["items/stack/sheet/mineral/wood"]
 
-straw_sheet: 
+straw_sheet:
 	components: ["StrawSheet"]
 	variants: [
 			type: "single"
@@ -32,7 +32,7 @@ straw_sheet:
 	]
 	tree_paths: ["items/stack/sheet/mineral/straw"]
 
-cloth_sheet: 
+cloth_sheet:
 	components: ["ClothSheet"]
 	variants: [
 			type: "single"
@@ -43,7 +43,7 @@ cloth_sheet:
 	]
 	tree_paths: ["items/stack/sheet/cloth"]
 
-cardboard_sheet: 
+cardboard_sheet:
 	components: ["CardboardSheet"]
 	variants: [
 			type: "single"
@@ -54,7 +54,7 @@ cardboard_sheet:
 	]
 	tree_paths: ["items/stack/sheet/cardboard"]
 
-bone_sheet: 
+bone_sheet:
 	components: ["BoneSheet"]
 	variants: [
 			type: "single"
@@ -65,7 +65,7 @@ bone_sheet:
 	]
 	tree_paths: ["items/stack/sheet/bone"]
 
-plastic_sheet: 
+plastic_sheet:
 	components: ["PlasticSheet"]
 	variants: [
 			type: "single"
@@ -76,7 +76,7 @@ plastic_sheet:
 	]
 	tree_paths: ["items/stack/sheet/plastic"]
 
-paperframe_sheet: 
+paperframe_sheet:
 	components: ["PaperframeSheet"]
 	variants: [
 			type: "single"

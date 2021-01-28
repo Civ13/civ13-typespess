@@ -44,7 +44,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"lhand",
 			{
-				icon: "icons/ui/screen_civ13/hand_l.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "hand_l",
 				screen_loc_x: 7.5,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -63,7 +64,7 @@ class MobInventory extends Component {
 		this.add_slot(
 			"rhand",
 			{
-				icon: "icons/ui/screen_civ13/hand_r.png",
+				icon: "icons/ui/screen_civ13/",
 				icon_state: "hand_r",
 				screen_loc_x: 6.5,
 				screen_loc_y: 0.15625,
@@ -83,7 +84,8 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.swap_hands = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/ui/screen_civ13/swap.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "swap",
 				name: "swap hands",
 				screen_loc_x: 6.5,
 				screen_loc_y: 1.15625,
@@ -97,7 +99,7 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.act_equip = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/ui/screen_civ13/act_equip.png",
+				icon: "icons/ui/screen_civ13/",
 				icon_state: "act_equip",
 				name: "equipment",
 				screen_loc_x: 6.5,
@@ -110,7 +112,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"id",
 			{
-				icon: "icons/ui/screen_civ13/id.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "id",
 				screen_loc_x: 3.375,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -127,7 +130,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"belt",
 			{
-				icon: "icons/ui/screen_civ13/belt.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "belt",
 				screen_loc_x: 4.4375,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -145,7 +149,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"back",
 			{
-				icon: "icons/ui/screen_civ13/back.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "back",
 				screen_loc_x: 5.4375,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -162,7 +167,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"storage1",
 			{
-				icon: "icons/ui/screen_civ13/pocket.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "pocket",
 				screen_loc_x: 8.5625,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -178,7 +184,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"storage2",
 			{
-				icon: "icons/ui/screen_civ13/pocket.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "pocket",
 				screen_loc_x: 9.625,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -194,7 +201,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"suit_storage",
 			{
-				icon: "icons/ui/screen_civ13/suit_storage.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "suit_storage",
 				screen_loc_x: 2.3125,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -212,7 +220,8 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.toggle_clothing = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/ui/screen_civ13/toggle.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "toggle",
 				name: "toggle inventory",
 				screen_loc_x: 0.1875,
 				screen_loc_y: 0.15625,
@@ -238,7 +247,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"shoes",
 			{
-				icon: "icons/ui/screen_civ13/shoes.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "shoes",
 				screen_loc_x: 1.25,
 				screen_loc_y: 0.15625,
 				layer: 30,
@@ -256,7 +266,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"iclothing",
 			{
-				icon: "icons/ui/screen_civ13/uniform.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "uniform",
 				screen_loc_x: 0.1875,
 				screen_loc_y: 1.21875,
 				layer: 30,
@@ -272,7 +283,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"oclothing",
 			{
-				icon: "icons/ui/screen_civ13/suit.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "suit",
 				screen_loc_x: 1.25,
 				screen_loc_y: 1.21875,
 				layer: 30,
@@ -288,7 +300,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"gloves",
 			{
-				icon: "icons/ui/screen_civ13/gloves.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "gloves",
 				screen_loc_x: 2.3125,
 				screen_loc_y: 1.21875,
 				layer: 30,
@@ -305,7 +318,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"mask",
 			{
-				icon: "icons/ui/screen_civ13/mask.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "mask",
 				screen_loc_x: 1.25,
 				screen_loc_y: 2.28125,
 				layer: 30,
@@ -322,7 +336,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"neck",
 			{
-				icon: "icons/ui/screen_civ13/neck.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "neck",
 				screen_loc_x: 0.1875,
 				screen_loc_y: 2.28125,
 				layer: 30,
@@ -339,7 +354,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"glasses",
 			{
-				icon: "icons/ui/screen_civ13/glasses.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "glasses",
 				screen_loc_x: 0.1875,
 				screen_loc_y: 3.34375,
 				layer: 30,
@@ -356,7 +372,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"ears",
 			{
-				icon: "icons/ui/screen_civ13/ears.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "ears",
 				screen_loc_x: 2.3125,
 				screen_loc_y: 2.28125,
 				layer: 30,
@@ -373,7 +390,8 @@ class MobInventory extends Component {
 		this.add_slot(
 			"head",
 			{
-				icon: "icons/ui/screen_civ13/head.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "head",
 				screen_loc_x: 1.25,
 				screen_loc_y: 3.34375,
 				layer: 30,
@@ -392,7 +410,8 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.drop_item = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/ui/screen_civ13/act_drop.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "act_drop",
 				name: "drop",
 				screen_loc_x: 13.875,
 				screen_loc_y: 1.21875,
@@ -405,7 +424,8 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.throw_item = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/ui/screen_civ13/act_throw_off.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "act_throw_off",
 				name: "throw",
 				screen_loc_x: 13.875,
 				screen_loc_y: 1.21875,
@@ -419,7 +439,8 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.resist = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/ui/screen_civ13/act_resist.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "act_resist",
 				name: "resist",
 				screen_loc_x: 12.8125,
 				screen_loc_y: 1.21875,
@@ -429,7 +450,8 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.act_intent = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/ui/screen_civ13/help.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "help",
 				name: "intent",
 				screen_loc_x: 11.75,
 				screen_loc_y: 0.15625,
@@ -439,7 +461,8 @@ class MobInventory extends Component {
 
 		this.a.c.Eye.screen.health = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/ui/screen_gen/health0.png",
+				icon: "icons/ui/screen_gen/",
+				icon_state: "health0",
 				name: "health",
 				screen_loc_x: 13.875,
 				screen_loc_y: 6.46875,
@@ -469,7 +492,7 @@ class MobInventory extends Component {
 			this[_slots][this[_active_hand]].atom.overlays.hand_active = undefined;
 		var old_active_hand = this[_active_hand];
 		this[_active_hand] = value;
-		this[_slots][this[_active_hand]].atom.overlays.hand_active = {icon : "icons/ui/screen_civ13/hand_active.png"};
+		this[_slots][this[_active_hand]].atom.overlays.hand_active = {icon : "icons/ui/screen_civ13/", icon_state: "hand_active"};
 		this.emit("active_hand_changed", old_active_hand, value);
 		this.emit(
 			"active_hand_item_changed",
@@ -538,9 +561,9 @@ class MobInventory extends Component {
 		val = !!val;
 		if (this[_throw_mode] == val) return;
 		this[_throw_mode] = val;
-		this.a.c.Eye.screen.throw_item.icon = val
-			? "icons/ui/screen_civ13/act_throw_on.png"
-			: "icons/ui/screen_civ13/act_throw_off.png";
+		this.a.c.Eye.screen.throw_item.icon_state = val
+			? "act_throw_on"
+			: "act_throw_off";
 	}
 
 	throw_item(target) {
@@ -632,17 +655,19 @@ class MobInventory extends Component {
 			});
 			this.a.overlays.handcuffed = {
 				overlay_layer: 17,
-				icon: "icons/mob/mob.png",
+				icon: "icons/mob/",
 				icon_state: "handcuff1",
 			};
 			// some interesting icon_state values you got there tg
 			this.slots.rhand.atom.overlays.handcuffed = {
 				name: "handcuffs",
-				icon: "icons/ui/screen_gen/markus.png",
+				icon: "icons/ui/screen_gen/",
+				icon_state: "markus",
 			};
 			this.slots.lhand.atom.overlays.handcuffed = {
 				name: "handcuffs",
-				icon: "icons/ui/screen_gen/gabrielle.png",
+				icon: "icons/ui/screen_gen/",
+				icon_state: "gabrielle",
 			};
 			this.a.c.MobInteract.nointeract_counter++;
 			this.accident();
@@ -960,14 +985,14 @@ class Slot extends EventEmitter {
 				icodir = 3;
 			else if (icodir == 8)
 				icodir = 4;
-			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("2.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("3.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("4.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
+			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("dir-1") != -1)
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("dir-1",`dir-${icodir}`)}
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("dir-2") != -1)
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("dir-2",`dir-${icodir}`)}
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("dir-3") != -1)
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("dir-3",`dir-${icodir}`)}
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("dir-4") != -1)
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("dir-4",`dir-${icodir}`)}
 		}
 		if (this.props.clothing_slot) {
 			let icodir = 1;
@@ -980,14 +1005,14 @@ class Slot extends EventEmitter {
 				icodir = 3;
 			else if (icodir == 8)
 				icodir = 4;
-			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("1.png") != -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("2.png") != -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("3.png") != -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("4.png") != -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
+			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("dir-1") != -1)
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("dir-1",`dir-${icodir}`)}
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("dir-2") != -1)
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("dir-2",`dir-${icodir}`)}
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("dir-3") != -1)
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("dir-3",`dir-${icodir}`)}
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("dir-4") != -1)
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("dir-4",`dir-${icodir}`)}
 
 		}	
 	}
@@ -1121,8 +1146,10 @@ class Slot extends EventEmitter {
 					icodir = 4;
 				this.mob.overlays[`inhand_${this.id}`] = 
 				{
+					icon: `${this[_item].c.Item[`inhand_${this.id}_icon`]}`,
 					icon_state: this[_item].c.Item.inhand_icon_state,
-					icon: `${this[_item].c.Item[`inhand_${this.id}_icon`]}${this[_item].c.Item.inhand_icon_state}/${this[_item].c.Item.inhand_icon_state}-dir${icodir}.png`,
+					directional: true,
+					dir: this.dir,
 					overlay_layer: this.props.worn_layer,
 				};
 			}
@@ -1138,8 +1165,10 @@ class Slot extends EventEmitter {
 				else if (icodir == 8)
 					icodir = 4;
 					this.mob.overlays[`clothing_${this.id}`] = {
+					icon: `${this[_item].c[this.props.clothing_slot].worn_icon}`,
 					icon_state: this[_item].c[this.props.clothing_slot].worn_icon_state,
-					icon: `${this[_item].c[this.props.clothing_slot].worn_icon}${this[_item].c[this.props.clothing_slot].worn_icon_state}/${this[_item].c[this.props.clothing_slot].worn_icon_state}-dir${icodir}.png`,
+					directional: true,
+					dir: icodir,
 					overlay_layer: this.props.worn_layer,
 				};
 
@@ -1229,8 +1258,7 @@ class ProgressBar extends Component.Networked {
 
 ProgressBar.template = {
 	vars: {
-		icon: "icons/effects/progressbar/prog_bar_0.png",
-		base_icon: "icons/effects/progressbar/",
+		icon: "icons/effects/progressbar/",
 		name: "progress bar",
 		icon_state: "prog_bar_0",
 		layer: 50,

@@ -333,6 +333,7 @@ class Mob extends Component {
 		this[_key] = undefined;
 		this[_panel_map] = new Map();
 		this[_eye_to_eyeid] = new WeakMap();
+		this.directional = true;
 
 		/**
 	* @type {Object<string,Typespess.Atom<Mob>>}

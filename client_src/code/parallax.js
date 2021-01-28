@@ -13,7 +13,8 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 			for (let y = 0; y < 2; y++) {
 				for (let layer = 1; layer <= 2; layer++) {
 					var parallax_atom = new Atom(this.client, {
-						icon: "icons/effects/parallax.png",
+						icon: "icons/effects/",
+						icon_state: "parallax",
 						layer: -10 + layer,
 						eye_id: eye.id,
 					});

@@ -27,7 +27,8 @@ JobLandmark.depends = [];
 JobLandmark.template = {
 	vars: {
 		name: "start",
-		icon: "icons/ui/screen_gen/x.png",
+		icon: "icons/ui/screen_gen/",
+		icon_state: "x",
 		visible: false,
 		layer: 2,
 	},

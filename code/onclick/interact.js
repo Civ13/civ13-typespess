@@ -25,7 +25,8 @@ class MobInteract extends Component {
 		this.move_mode = mob_defines.MOVE_INTENT_RUN;
 		this.a.c.Eye.screen.move_intent = new Atom(this.a.server, {
 			vars: {
-				icon: "icons/ui/screen_civ13/running.png",
+				icon: "icons/ui/screen_civ13/",
+				icon_state: "running",
 				name: "move intent",
 				screen_loc_x: 12.8125,
 				screen_loc_y: 0.15625,
@@ -124,10 +125,10 @@ class MobInteract extends Component {
 	move_intent() {
 		if (this.move_mode == mob_defines.MOVE_INTENT_RUN) {
 			this.move_mode = mob_defines.MOVE_INTENT_WALK;
-			this.a.c.Eye.screen.move_intent.icon = "icons/ui/screen_civ13/walking.png";
+			this.a.c.Eye.screen.move_intent.icon_state = "walking";
 		} else {
 			this.move_mode = mob_defines.MOVE_INTENT_RUN;
-			this.a.c.Eye.screen.move_intent.icon = "icons/ui/screen_civ13/running.png";
+			this.a.c.Eye.screen.move_intent.icon_state = "running";
 		}
 	}
 

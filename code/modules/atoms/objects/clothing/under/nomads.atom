@@ -9,6 +9,6 @@ loincloth:
 			Examine:
 				desc: "A wrap of leather cloth, worn around the waist."
 		name: "leather loincloth"
-		icon: "icons/mob/under/uniforms/leatherloincloth1.png"
-		icon_state: null
+		icon: "icons/mob/under/uniforms/"
+		icon_state: "leatherloincloth1"
 	tree_paths: ["items/clothing/under/loincloth"]

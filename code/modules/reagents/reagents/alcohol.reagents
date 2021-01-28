@@ -339,7 +339,7 @@ BloodyMary:
 	glass_name: "Bloody Mary"
 	glass_desc: "Tomato juice, mixed with Vodka and a lil' bit of lime. Tastes like liquid murder."
 
-BraveBull: 
+BraveBull:
 	name: "Brave Bull"
 	description: "It's just as effective as Dutch-Courage!"
 	color: [0.4, 0.26, 0]

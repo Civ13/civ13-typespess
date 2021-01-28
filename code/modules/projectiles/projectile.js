@@ -19,7 +19,6 @@ class Projectile extends Component.Networked {
 		super(atom, template);
 		this.add_networked_var("angle");
 		this.add_networked_var("speed");
-		this.add_networked_var("nondirectional_sprite");
 		this.add_networked_var("fired");
 		this.add_networked_var("paused");
 		this.add_networked_var("last_process");
@@ -236,7 +235,6 @@ Projectile.template = {
 				force_dodge: false,
 				angle: 0,
 				spread: 0, // standard deviation of angle in degrees. Use 1/4 of value from byond for approximately correct value.
-				nondirectional_sprite: false,
 
 				damage: 10,
 				damage_type: "brute",

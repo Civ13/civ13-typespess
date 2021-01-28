@@ -32,9 +32,9 @@ function random_floor(prob: number) {
 }
 
 function random_flora() {
-	if (Math.random() <= 0.25) return {rname:"bush",rvariant:`icons/obj/flora/bushes/smallbush${generateRandomInteger(1,44)}.png`};
-	else if (Math.random() <= 0.7) return {rname:"grass",rvariant:`icons/obj/flora/wild/tallgrass${generateRandomInteger(1,9)}.gif`};
-	else return {rname:"tree",rvariant:`icons/obj/flora/bigtrees/tree${generateRandomInteger(1,5)}.png`};
+	if (Math.random() <= 0.25) return {rname:"bush",icon: "icons/obj/flora/bushes/", icon_state:`smallbush${generateRandomInteger(1,44)}`};
+	else if (Math.random() <= 0.7) return {rname:"grass",icon: "icons/obj/flora/wild/", icon_state:`tallgrass${generateRandomInteger(1,9)}`};
+	else return {rname:"tree",icon:"icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1,5)}`};
 }
 
 originalLoadedConfigs = load_configs();
@@ -104,12 +104,13 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		}
 		else {
 			if (Math.random() <= 0.5) {
-				class rfloraObj{rname: string | undefined; rvariant: string | undefined}
+				class rfloraObj{rname: string | undefined; icon: string | undefined; icon_state: string | undefined}
 				const rflora : rfloraObj = random_flora();
 				finalData = finalData + "			},\n";
 				finalData = finalData + "			{\n";
 				finalData = finalData + `				"template_name": "${rflora.rname}",\n`;
-				finalData = finalData + `				"variant_leaf_path": ["${rflora.rvariant}"],\n`;
+				finalData = finalData + `				"icon": ["${rflora.icon}"],\n`;
+				finalData = finalData + `				"icon_state": ["${rflora.icon_state}"],\n`;
 				finalData = finalData + `				"x": ${i},\n`;
 				finalData = finalData + `				"y": ${j}\n`;
 				finalData = finalData + "			}\n";

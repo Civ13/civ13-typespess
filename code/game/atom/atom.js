@@ -1437,6 +1437,19 @@ class Atom extends EventEmitter {
 	}
 
 	/**
+  * If the icon has directional sprites (true) or not (false)
+  * @type {boolean}
+  */
+ get directional() {
+	return this[_directional];
+}
+set directional(val) {
+	if (val === undefined) val = false;
+	this[_directional] = val;
+	this[mob_symbols._update_var]("directional", 0);
+}
+
+	/**
   * Whether this atom gets sent to clients or not.
   * @type {boolean}
   */

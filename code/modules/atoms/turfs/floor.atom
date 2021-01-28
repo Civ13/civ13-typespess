@@ -3,7 +3,8 @@ floor_grass:
 	tree_paths: ["basic_structures/floor/grass"]
 	vars:
 		name: "grass"
-		icon: "icons/turf/floor/grass0.png"
+		icon: "icons/turf/floor/"
+		icon_state: "grass0"
 
 
 floor_dirt:
@@ -11,4 +12,5 @@ floor_dirt:
 	tree_paths: ["basic_structures/floor/dirt"]
 	vars:
 		name: "dirt"
-		icon: "icons/turf/floor/dirt.png"
+		icon: "icons/turf/floor/"
+		icon_state: "dirt"
