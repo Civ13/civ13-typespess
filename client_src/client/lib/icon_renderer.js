@@ -23,7 +23,14 @@ class IconRenderer {
 	fully_load() {
 		if (this.icon_meta || !this.icon) return Promise.resolve();
 		if (this.icon && this.icon_state && (this.icon.search(".png") == -1))
-			{this.icon = `${this.icon}${this.icon_state}.png`;}
+			{
+				if (this.atom.directional === true) {
+					this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
+				}
+				else {
+					this.icon = `${this.icon}${this.icon_state}.png`;
+				}
+			}
 			this.icon_meta = this.client.enqueue_icon_meta_load(this.icon);
 		return this.icon_meta;
 	}
@@ -56,8 +63,14 @@ class IconRenderer {
 			this.icon_meta = this.atom.client.icon_metas[this.icon];
 			if (this.icon_meta == undefined) {
 				this.change_level = CHANGE_LEVEL_NONE;
-				if (this.icon && this.icon_state && (this.icon.search(".png") == -1))
-					{this.icon = `${this.icon}${this.icon_state}.png`;}
+				if (this.icon && this.icon_state && (this.icon.search(".png") == -1)) {
+						if (this.directional === true) {
+							this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
+						}
+						else {
+							this.icon = `${this.icon}${this.icon_state}.png`;
+						}
+					}
 				if (!this.icon) {this.icon = "icons/nothing.png"}
 				this.icon_meta = this.atom.client.enqueue_icon_meta_load(this.icon);
 				this.change_level = CHANGE_LEVEL_NONE;

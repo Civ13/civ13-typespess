@@ -282,6 +282,7 @@ class Atom extends EventEmitter {
 		this[_y] = 0;
 		this[_z] = 0;
 		this[_loc] = null;
+		this[_directional] = false;
 		if (typeof x === "number") {
 			x = +x;
 			y = +y;

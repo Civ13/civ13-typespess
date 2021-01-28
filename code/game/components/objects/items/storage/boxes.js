@@ -36,6 +36,7 @@ Box.template = {
 			},
 		},
 		name: "box",
+		icon: "icons/obj/storage/",
 		icon_state: "box",
 	},
 };
