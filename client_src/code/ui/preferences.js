@@ -191,7 +191,7 @@ class PreferencesPanel {
 				item.style.width = "96px";
 				item.style.height = "24px";
 				item.style.backgroundColor = this.hair_colors[id];
-				if (id == this.char_prefs.hair_color) {
+				if (this.hair_colors[id] == this.char_prefs.hair_color) {
 					item.classList.add("selected");
 					sel_elem = item;
 				}

@@ -1254,8 +1254,7 @@ class ProgressBar extends Component.Networked {
 
 ProgressBar.template = {
 	vars: {
-		icon: "icons/effects/progressbar/prog_bar_0.png",
-		base_icon: "icons/effects/progressbar/",
+		icon: "icons/effects/progressbar/",
 		name: "progress bar",
 		icon_state: "prog_bar_0",
 		layer: 50,
