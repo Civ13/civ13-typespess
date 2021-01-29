@@ -58,7 +58,7 @@ class IconRenderer {
 			this.change_level = Math.max(this.change_level, CHANGE_LEVEL_DIR);
 			this.last_dir = this.dir;
 		}
-		if (this.change_level > CHANGE_LEVEL_NONE && this.atom)
+		if (this.change_level >= CHANGE_LEVEL_NONE && this.atom)
 			this.atom.mark_dirty();
 		if (this.change_level >= CHANGE_LEVEL_DIR) {
 			this.icon_meta = this.atom.client.icon_metas[this.icon];

@@ -10,18 +10,14 @@ function enqueue_icon_meta_load(newIcon) {
 		meta.height = 32;
 		meta.__image_object = new Image();
 		let fullpath = this.resRoot + newIcon;
-		fetch(fullpath, { method: 'HEAD' })
-		.then(res => {
-			if (res.ok) {
-				meta.__image_object.src = fullpath;
-			} else {
-				console.log(`MISSING ICON: ${fullpath}`)
-				if (fullpath.search("inhands") != -1)
-					{meta.__image_object.src = this.resRoot + "icons/nothing.png";}
-				else
-					{meta.__image_object.src = this.resRoot + "icons/error.png";}
-			}
-		}).catch(err => console.log('Error:', err));
+		meta.__image_object.src = fullpath;
+/*
+		if (fullpath.search("inhands") != -1)
+			{meta.__image_object.src = this.resRoot + "icons/nothing.png";}
+		else
+			{meta.__image_object.src = this.resRoot + "icons/error.png";}
+*/
+		
 		meta.__image_object.addEventListener("load", () => {
 			meta.__image_object.canvas = document.createElement("canvas");
 			meta.__image_object.ctx = meta.__image_object.canvas.getContext("2d");
