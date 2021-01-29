@@ -85,7 +85,7 @@ class MobInventory extends Component {
 		this.a.c.Eye.screen.swap_hands = new Atom(this.a.server, {
 			vars: {
 				icon: "icons/ui/screen_civ13/",
-				icon_state: "swap",
+				icon_state: "act_equip",
 				name: "swap hands",
 				screen_loc_x: 6.5,
 				screen_loc_y: 1.15625,
@@ -96,7 +96,7 @@ class MobInventory extends Component {
 			this.swap_hands();
 		});
 		this.active_hand = "rhand";
-
+/*
 		this.a.c.Eye.screen.act_equip = new Atom(this.a.server, {
 			vars: {
 				icon: "icons/ui/screen_civ13/",
@@ -108,7 +108,7 @@ class MobInventory extends Component {
 			},
 		});
 		this.a.c.Eye.screen.act_equip.on("clicked", () => {return;});
-
+*/
 		this.add_slot(
 			"id",
 			{

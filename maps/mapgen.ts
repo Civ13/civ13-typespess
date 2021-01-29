@@ -33,7 +33,7 @@ function random_floor(prob: number) {
 
 function random_flora() {
 	if (Math.random() <= 0.25) return {rname:"bush",icon: "icons/obj/flora/bushes/", icon_state:`smallbush${generateRandomInteger(1,44)}`};
-	else if (Math.random() <= 0.7) return {rname:"grass",icon: "icons/obj/flora/wild/", icon_state:`tallgrass${generateRandomInteger(1,9)}`};
+	else if (Math.random() <= 0.7) return {rname:"grass",icon: "icons/obj/flora/wild/", icon_state:`tall_grass_${generateRandomInteger(1,9)}`};
 	else return {rname:"tree",icon:"icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1,5)}`};
 }
 
@@ -91,7 +91,6 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		}
 		finalData = finalData + "			{\n";
 		finalData = finalData + `				"template_name": "floor_${floorname}",\n`;
-		finalData = finalData + `				"variant_leaf_path": ["${floorname}"],\n`;
 		finalData = finalData + `				"x": ${i},\n`;
 		finalData = finalData + `				"y": ${j}\n`;
 		if (i == 0 && j == 0) {
@@ -109,8 +108,10 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 				finalData = finalData + "			},\n";
 				finalData = finalData + "			{\n";
 				finalData = finalData + `				"template_name": "${rflora.rname}",\n`;
-				finalData = finalData + `				"icon": ["${rflora.icon}"],\n`;
-				finalData = finalData + `				"icon_state": ["${rflora.icon_state}"],\n`;
+				finalData = finalData + `				"instance_vars": {\n`;
+				finalData = finalData + `					"icon": "${rflora.icon}",\n`;
+				finalData = finalData + `					"icon_state": "${rflora.icon_state}"\n`;
+				finalData = finalData + `				},\n`;
 				finalData = finalData + `				"x": ${i},\n`;
 				finalData = finalData + `				"y": ${j}\n`;
 				finalData = finalData + "			}\n";
