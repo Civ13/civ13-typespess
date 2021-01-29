@@ -4,7 +4,7 @@ function enqueue_icon_meta_load(newIcon) {
 	if (this.icon_meta_load_queue[newIcon]) {
 		return this.icon_meta_load_queue[newIcon];
 	}
-
+	var promise = new Promise((resolve, reject) => {	
 		var meta = {}
 		meta.width = 32;
 		meta.height = 32;
@@ -31,14 +31,17 @@ function enqueue_icon_meta_load(newIcon) {
 			meta.__image_data = meta.__image_object.ctx.getImageData(0, 0, meta.width, meta.height);
 			meta.width = meta.__image_object.width;
 			meta.height = meta.__image_object.height;
-
+			resolve();
 			this.icon_meta_load_queue[newIcon] = undefined;
-		
-			this.icon_metas[newIcon] = meta;
 		});
+		meta.__image_object.addEventListener("error", (error) => {	
+			reject(error || new Error(`Loading failed for ${newIcon}`));	
+		});
+		this.icon_metas[newIcon] = meta;
 
-	this.icon_meta_load_queue[newIcon] = meta;
-	return meta;
+	});
+	this.icon_meta_load_queue[newIcon] = promise;
+	return promise;
 }
 
 module.exports = enqueue_icon_meta_load;
