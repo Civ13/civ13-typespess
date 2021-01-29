@@ -23,17 +23,7 @@ class HairAccessory extends SpriteAccessory {
 		super(obj);
 	}
 }
-
-// more proof tg coders are dumb
-// there were duplicate type paths. go figure.
-// that means some hair styles got overwritten
-module.exports.hair = {
-	bald_s: new HairAccessory({
-		name: 'bald',
-		icon_state: 'bald_s',
-		icon: 'icons/mob/human_face/bald_s/bald_s-dir1.png',
-		base_icon: 'icons/mob/human_face/bald_s/'
-	}),
+module.exports.facial = {
 	abe_s: new HairAccessory({
 		name: 'abe',
 		icon_state: 'facial_abe_s',
@@ -184,6 +174,45 @@ module.exports.hair = {
 		icon: 'icons/mob/human_face/facial_wise_s/facial_wise_s-dir1.png',
 		base_icon: 'icons/mob/human_face/facial_wise_s/'
 	}),
+}
+module.exports.lips = {
+	black: new HairAccessory({
+		name: 'black',
+		icon_state: 'lips_black',
+		icon: 'icons/mob/human_face/lips_black/lips_black-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_black/'
+	}),
+
+	jade: new HairAccessory({
+		name: 'jade',
+		icon_state: 'lips_jade',
+		icon: 'icons/mob/human_face/lips_jade/lips_jade-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_jade/'
+	}),
+
+	purple: new HairAccessory({
+		name: 'purple',
+		icon_state: 'lips_purple',
+		icon: 'icons/mob/human_face/lips_purple/lips_purple-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_purple/'
+	}),
+
+	red: new HairAccessory({
+		name: 'red',
+		icon_state: 'lips_red',
+		icon: 'icons/mob/human_face/lips_red/lips_red-dir1.png',
+		base_icon: 'icons/mob/human_face/lips_red/'
+	}),
+}
+
+module.exports.hair = {
+	bald_s: new HairAccessory({
+		name: 'bald',
+		icon_state: 'bald_s',
+		icon: 'icons/mob/human_face/bald_s/bald_s-dir1.png',
+		base_icon: 'icons/mob/human_face/bald_s/'
+	}),
+
 	afro2_s: new HairAccessory({
 		name: 'afro2',
 		icon_state: 'hair_afro2_s',
@@ -712,76 +741,5 @@ module.exports.hair = {
 		icon: 'icons/mob/human_face/hair_volaju_s/hair_volaju_s-dir1.png',
 		base_icon: 'icons/mob/human_face/hair_volaju_s/'
 	}),
-	black: new HairAccessory({
-		name: 'black',
-		icon_state: 'lips_black',
-		icon: 'icons/mob/human_face/lips_black/lips_black-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_black/'
-	}),
-	black_fat: new HairAccessory({
-		name: 'black_fat',
-		icon_state: 'lips_black_fat',
-		icon: 'icons/mob/human_face/lips_black_fat/lips_black_fat-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_black_fat/'
-	}),
-	black_slim: new HairAccessory({
-		name: 'blacklim',
-		icon_state: 'lips_black_slim',
-		icon: 'icons/mob/human_face/lips_black_slim/lips_black_slim-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_black_slim/'
-	}),
-	jade: new HairAccessory({
-		name: 'jade',
-		icon_state: 'lips_jade',
-		icon: 'icons/mob/human_face/lips_jade/lips_jade-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_jade/'
-	}),
-	jade_fat: new HairAccessory({
-		name: 'jade fat',
-		icon_state: 'lips_jade_fat',
-		icon: 'icons/mob/human_face/lips_jade_fat/lips_jade_fat-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_jade_fat/'
-	}),
-	jade_slim: new HairAccessory({
-		name: 'jadelim',
-		icon_state: 'lips_jade_slim',
-		icon: 'icons/mob/human_face/lips_jade_slim/lips_jade_slim-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_jade_slim/'
-	}),
-	purple: new HairAccessory({
-		name: 'purple',
-		icon_state: 'lips_purple',
-		icon: 'icons/mob/human_face/lips_purple/lips_purple-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_purple/'
-	}),
-	purple_fat: new HairAccessory({
-		name: 'purple_fat',
-		icon_state: 'lips_purple_fat',
-		icon: 'icons/mob/human_face/lips_purple_fat/lips_purple_fat-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_purple_fat/'
-	}),
-	purple_slim: new HairAccessory({
-		name: 'purplelim',
-		icon_state: 'lips_purple_slim',
-		icon: 'icons/mob/human_face/lips_purple_slim/lips_purple_slim-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_purple_slim/'
-	}),
-	red: new HairAccessory({
-		name: 'red',
-		icon_state: 'lips_red',
-		icon: 'icons/mob/human_face/lips_red/lips_red-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_red/'
-	}),
-	red_fat: new HairAccessory({
-		name: 'red fat',
-		icon_state: 'lips_red_fat',
-		icon: 'icons/mob/human_face/lips_red_fat/lips_red_fat-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_red_fat/'
-	}),
-	red_slim: new HairAccessory({
-		name: 'red slim',
-		icon_state: 'lips_red_slim',
-		icon: 'icons/mob/human_face/lips_red_slim/lips_red_slim-dir1.png',
-		base_icon: 'icons/mob/human_face/lips_red_slim/'
-	})
+
 }

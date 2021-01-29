@@ -104,7 +104,7 @@ class BodyPartHumanHair extends Component {
 		let overlay = {
 			icon: `icons/mob/human_face/${hair_obj.icon_state}/${hair_obj.icon_state}-dir${icodir}.png`,
 			icon_state: hair_obj.icon_state,
-			color: `rgb(${this.hair_color.join(",")})`,
+			color: this.hair_color,
 			overlay_layer: 14,
 		};
 		return overlay;

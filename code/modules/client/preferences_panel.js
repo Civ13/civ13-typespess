@@ -3,14 +3,14 @@ const { Panel } = require("./../../../code/game/server.js");
 const CharacterPreferences = require("./character.js");
 const sprite_accessories = require("../../game/mobs/living/carbon/human/sprite_accessories.js");
 const {
-	skin_tones,
+skin_tones, hair_colors,
 } = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class PreferencesPanel extends Panel {
 	constructor(client, { start_tab = "character" } = {}) {
 		super(client, {
 			width: 640,
-			height: 770,
+			height: 550,
 			title: "Preferences",
 			can_close: true,
 		});
@@ -60,18 +60,14 @@ class PreferencesPanel extends Panel {
 				)
 					this.char_prefs.hair_style = msg.char_prefs.hair_style;
 			}
-			if (msg.char_prefs.hair_color != null) {
-				let arr = msg.char_prefs.hair_color;
-				if (!(arr instanceof Array)) arr = [];
-				arr.length = 3;
-				arr = arr.map((item) => {
-					return Math.min(255, Math.max(0, Math.round(+item)));
-				});
-				this.char_prefs.hair_color = arr;
-			}
+
 			if (msg.char_prefs.skin_tone != null) {
 				if (Object.prototype.hasOwnProperty.call(skin_tones,msg.char_prefs.skin_tone))
 					this.char_prefs.skin_tone = msg.char_prefs.skin_tone;
+			}
+			if (msg.char_prefs.hair_color != null) {
+				if (Object.prototype.hasOwnProperty.call(hair_colors,msg.char_prefs.hair_color))
+					this.char_prefs.hair_color = msg.char_prefs.hair_color;
 			}
 		}
 		if (msg.randomize_name && this.char_prefs) {
@@ -143,6 +139,7 @@ class PreferencesPanel extends Panel {
 			set_tab: this.start_tab,
 			sprite_accessories,
 			skin_tones,
+			hair_colors,
 		});
 		this.send_prefs();
 		this.send_job_prefs();

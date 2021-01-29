@@ -2,19 +2,39 @@
 
 module.exports = {
 	skin_tones: {
-		caucasian1: "#ffe0d1",
-		caucasian2: "#fcccb3",
-		caucasian3: "#e8b59b",
-		latino: "#d9ae96",
-		mediterranean: "#c79b8b",
-		asian1: "#ffdeb3",
-		asian2: "#e3ba84",
-		arab: "#c4915e",
-		indian: "#b87840",
-		african1: "#754523",
-		african2: "#471c18",
-		albino: "#fff4e6",
-		orange: "#ffc905",
+		Caucasian1: "#ffe0d1",
+		Caucasian2: "#fcccb3",
+		Caucasian3: "#e8b59b",
+		Latino: "#d9ae96",
+		Mediterranean: "#c79b8b",
+		Asian1: "#ffdeb3",
+		Asian2: "#e3ba84",
+		Arab: "#c4915e",
+		Indian: "#b87840",
+		African1: "#754523",
+		African2: "#471c18",
+		Albino: "#fff4e6",
+		Orange: "#ffc905",
+	},
+	hair_colors: {
+		Black: "#090806",
+		LightBrown: "#6a4e42",
+		DarkBrown: "#3b3024",
+		Red: "#b55239",
+		Orange: "#91553d",
+		LightBlond: "#e6cea8",
+		Blond: "#e5c8a8",
+		DirtyBlond: "#b89778",
+		LightGrey: "#d3d3d3",
+		Grey: "#808080"
+	},
+	// new eye colors
+	eye_colors: {
+		Black: "#000000",
+		DarkBrown: "#2b1d0e",
+		Brown: "#542a0e",
+		Green: "#4b7248",
+		Blue: "#5ea4e7",
 	},
 	random_zone(zone, prob = 0.8) {
 		if (zone && Math.random() < prob) return zone;

@@ -179,40 +179,37 @@ class PreferencesPanel {
 			dropdown(skin_tone_dropdown, menu);
 			if (sel_elem) sel_elem.scrollIntoView({ behavior: "instant" });
 		});
-
 		let hair_color_dropdown = this.panel.$(".property-hair_color");
 		hair_color_dropdown.addEventListener("click", (e) => {
 			if (e.defaultPrevented) return;
 			let menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
-			let sliders = [];
-			for (let i = 0; i < 3; i++) {
-				let slider = document.createElement("input");
-				sliders[i] = slider;
-				slider.type = "range";
-				slider.classList.add("dropdown-item");
-				slider.style.display = "block";
-				slider.min = 0;
-				slider.max = 255;
-				slider.step = 1;
-				slider.value = this.char_prefs.hair_color[i];
-				slider.addEventListener("input", () => {
-					this.char_prefs.hair_color = sliders.map((elem) => {
-						return +elem.value;
-					});
-					hair_color_dropdown.style.backgroundColor = `rgb(${this.char_prefs.hair_color.join(
-						","
-					)})`;
+			let sel_elem = null;
+			for (let id of Object.keys(this.hair_colors)) {
+				let item = document.createElement("div");
+				item.classList.add("button", "dropdown-item");
+				item.style.width = "96px";
+				item.style.height = "24px";
+				item.style.backgroundColor = this.hair_colors[id];
+				if (id == this.char_prefs.hair_color) {
+					item.classList.add("selected");
+					sel_elem = item;
+				}
+				let text = document.createElement("span");
+				text.textContent = id;
+				item.appendChild(text);
+				item.addEventListener("click", (e) => {
+					this.panel.send_message({ char_prefs: { hair_color: id } });
+					e.preventDefault();
+					this.char_prefs.hair_color = id;
+					hair_color_dropdown.textContent = id;
+					hair_color_dropdown.style.backgroundColor = this.char_prefs.hair_color;
 					this.update_previews();
 				});
-				slider.addEventListener("change", () => {
-					this.panel.send_message({
-						char_prefs: { hair_color: this.char_prefs.hair_color },
-					});
-				});
-				menu.appendChild(slider);
+				menu.appendChild(item);
 			}
 			dropdown(hair_color_dropdown, menu);
+			if (sel_elem) sel_elem.scrollIntoView({ behavior: "instant" });
 		});
 
 		this.panel.$(".property-age").addEventListener("input", (e) => {
@@ -253,6 +250,9 @@ class PreferencesPanel {
 		if (msg.skin_tones) {
 			this.skin_tones = msg.skin_tones;
 		}
+		if (msg.hair_colors) {
+			this.hair_colors = msg.hair_colors;
+		}
 		if (msg.set_tab) {
 			[...this.panel.$$(".button[data-radio-group='tab']")].forEach((item) => {
 				item.classList.remove("selected");
@@ -278,10 +278,9 @@ class PreferencesPanel {
 				this.panel.$(".property-skin_tone").textContent = msg.char_prefs.skin_tone;
 			}
 			if (msg.char_prefs.hair_color) {
-				let hc = msg.char_prefs.hair_color;
 				this.panel.$(
 					".property-hair_color"
-				).style.backgroundColor = `rgb(${hc[0]},${hc[1]},${hc[2]})`;
+				).style.backgroundColor = msg.char_prefs.hair_color;
 			}
 			if (msg.char_prefs.hair_style) {
 				this.panel.$(
@@ -420,7 +419,6 @@ class PreferencesPanel {
 		dir = 1,
 		modifier = null,
 		prefs_modifier = null,
-		add_clothes = false,
 	} = {}) {
 		let atom = new Atom(this.panel.manager.client, { dir });
 		let prefs = JSON.parse(JSON.stringify(this.char_prefs));
@@ -441,19 +439,14 @@ class PreferencesPanel {
 		}
 		let hair_style = this.sprite_accessories.hair[prefs.hair_style];
 		if (hair_style) {
-			let hc = this.char_prefs.hair_color || [255, 255, 255];
 			atom.set_overlay("hair", {
 				icon: `${hair_style.base_icon}/${hair_style.icon_state}-dir${dir}.png`,
 				icon_state: hair_style.icon_state,
-				color: `rgb(${hc[0]},${hc[1]},${hc[2]})`,
+				color: this.char_prefs.hair_color,
 				overlay_layer: 14,
 			});
 		}
-		if (add_clothes)
-			atom.set_overlay("uniform", {
-				icon: "icons/mob/uniform.png",
-				icon_state: "grey",
-			});
+
 		if (modifier) modifier(atom);
 		if (!canvas) canvas = document.createElement("canvas");
 		canvas.width = 32;

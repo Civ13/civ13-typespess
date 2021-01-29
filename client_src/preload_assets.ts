@@ -42,7 +42,7 @@ function dirIt(directory: string) {
 }
 
 var preloadlist: string = dirIt("../resources/icons/turf/floor/");
-let tdir1 = dirIt("../resources/icons/turf/walls/");
+let tdir1 = dirIt("../resources/icons/mob/human_body/");
 let tdir2 = dirIt("../resources/icons/ui/");
 let tdir3 = dirIt("../resources/icons/effects/");
 let tdir4 = dirIt("../resources/icons/mob/human_face/");

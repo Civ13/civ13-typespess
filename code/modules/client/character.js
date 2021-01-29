@@ -8,7 +8,7 @@ const first_names_female = require("../../../strings/names/first_female.json");
 const last_names = require("../../../strings/names/last.json");
 const sprite_accessories = require("../../game/mobs/living/carbon/human/sprite_accessories.js");
 const {
-	skin_tones,
+	skin_tones,hair_colors,
 } = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class CharacterPreferences {
@@ -45,7 +45,7 @@ class CharacterPreferences {
 				return !item[0].gender || item[0].gender.includes(this.gender);
 			})
 		)[0];
-		this.hair_color = [_.random(0, 255), _.random(0, 255), _.random(0, 255)];
+		this.hair_color = _.sample(Object.keys(hair_colors));
 	}
 	randomize_name(type) {
 		if (!type || type == "human")
