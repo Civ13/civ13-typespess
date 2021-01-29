@@ -14,7 +14,6 @@ module.exports = {
 		African1: "#754523",
 		African2: "#471c18",
 		Albino: "#fff4e6",
-		Orange: "#ffc905",
 	},
 	hair_colors: {
 		Black: "#090806",

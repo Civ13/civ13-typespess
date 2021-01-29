@@ -199,9 +199,9 @@ class PreferencesPanel {
 				text.textContent = id;
 				item.appendChild(text);
 				item.addEventListener("click", (e) => {
-					this.panel.send_message({ char_prefs: { hair_color: id } });
+					this.panel.send_message({ char_prefs: { hair_color: this.hair_colors[id] } });
 					e.preventDefault();
-					this.char_prefs.hair_color = id;
+					this.char_prefs.hair_color = this.hair_colors[id];
 					hair_color_dropdown.textContent = id;
 					hair_color_dropdown.style.backgroundColor = this.char_prefs.hair_color;
 					this.update_previews();
