@@ -531,11 +531,11 @@ class MobInventory extends Component {
 	}
 
 	keydown(e) {
-		if (e.which == 88) {
+		if (e.which === 88) {
 			// x
 			this.swap_hands();
 		}
-		if (e.which == 90) {
+		if (e.which === 90) {
 			// z
 			if (
 				this.active_hand &&
@@ -545,11 +545,11 @@ class MobInventory extends Component {
 				this.slots[this.active_hand].item.c.Item.attack_self(this.a);
 			}
 		}
-		if (e.which == 81) {
+		if (e.which === 81) {
 			// q
 			this.slots[this.active_hand].item = undefined;
 		}
-		if (e.which == 82) {
+		if (e.which === 82) {
 			this.throw_mode = !this.throw_mode;
 		}
 	}

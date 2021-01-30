@@ -175,7 +175,7 @@ class Eye extends Component {
 	}
 
 	compute_visible_tiles() {
-		if (this.xray == true)
+		if (this.xray === true)
 			return this.a.server.compute_inrange_tiles(this.a, this.view_range);
 		else return this.a.server.compute_visible_tiles(this.a, this.view_range);
 	}
