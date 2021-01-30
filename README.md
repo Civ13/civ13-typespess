@@ -13,6 +13,8 @@ Welcome! This is an attempt at creating a Civ13 remake using *typescript* and *j
 
 Check the original Civ13 that uses BYOND and SS13 code here: https://github.com/civ13/civ13.
 
+**Please read the [Contribution Guide](CONTRIBUTING.md) page if you're willing to help! All help is appreciated!**
+
 ## Installing
 
 ### Windows
