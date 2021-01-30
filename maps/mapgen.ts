@@ -27,14 +27,14 @@ function generateRandomInteger(min: number, max: number) {
 	return Math.floor(min + Math.random()*(max + 1 - min));
 }
 function random_floor(prob: number) {
-	if (Math.random() <= prob / 100) return "dirt";
-	else return "grass";
+	if (Math.random() <= prob / 100) {return "dirt"}
+	else {return "grass"}
 }
 
 function random_flora() {
-	if (Math.random() <= 0.25) return {rname:"bush",icon: "icons/obj/flora/bushes/", icon_state:`smallbush${generateRandomInteger(1,44)}`};
-	else if (Math.random() <= 0.7) return {rname:"grass",icon: "icons/obj/flora/wild/", icon_state:`tall_grass_${generateRandomInteger(1,9)}`};
-	else return {rname:"tree",icon:"icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1,5)}`};
+	if (Math.random() <= 0.25) {return {rname:"bush",icon: "icons/obj/flora/bushes/", icon_state:`smallbush${generateRandomInteger(1,44)}`}}
+	else if (Math.random() <= 0.7) {return {rname:"grass",icon: "icons/obj/flora/wild/", icon_state:`tall_grass_${generateRandomInteger(1,9)}`}}
+	else {return {rname:"tree",icon:"icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1,5)}`}}
 }
 
 originalLoadedConfigs = load_configs();
@@ -62,7 +62,7 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		}
 		const floorname = random_floor(originalLoadedConfigs[3]);
 		finalData = finalData + `		"${i},${j},0": [\n`;
-		if (i == inc_w) {
+		if (i === inc_w) {
 			finalData = finalData + "			{\n";
 			finalData = finalData + "				\"instance_vars\": {\n";
 			finalData = finalData + "					\"components\": {\n";
@@ -93,7 +93,7 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		finalData = finalData + `				"template_name": "floor_${floorname}",\n`;
 		finalData = finalData + `				"x": ${i},\n`;
 		finalData = finalData + `				"y": ${j}\n`;
-		if (i == 0 && j == 0) {
+		if (i === 0 && j === 0) {
 			finalData = finalData + "			},\n";
 			finalData = finalData + "			{\n";
 			finalData = finalData + "				\"template_name\": \"sun\",\n";

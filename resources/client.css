@@ -283,8 +283,8 @@
 #gamewindow #mapwindow #hovering-atom {
   pointer-events: none;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   background-color: black;
   color: white;
   font-weight: bold;
@@ -317,7 +317,7 @@
   display: flex;
 }
 #gamewindow #inputwindow #main-text-input {
-  margin: 0px;
+  margin: 0;
   flex: 1;
   font-size: 20px;
   border: 1px solid black;
@@ -366,7 +366,7 @@
   }
 }
 body {
-  margin: 0px;
+  margin: 0;
 }
 /* PIXELLATED GRAPHICS EVERYWHERE */
 * {
@@ -421,15 +421,15 @@ body {
 }
 .bar .bar-fill {
   position: absolute;
-  top: 0px;
-  bottom: 0px;
+  top: 0;
+  bottom: 0;
   background-color: #40628a;
 }
 .bar .bar-fill:not(.bar-fill-inverse) {
-  left: 0px;
+  left: 0;
 }
 .bar .bar-fill.bar-fill-inverse {
-  right: 0px;
+  right: 0;
 }
 [data-status-color="good"].bar .bar-fill {
   background-color: #537d29;
@@ -528,7 +528,7 @@ div.button:active.dropdown-item {
 .button.dropdown-item {
   display: block;
   border: none;
-  margin: 0px;
+  margin: 0;
 }
 .dropdown-content {
   position: fixed;
@@ -788,10 +788,10 @@ div.button:active.dropdown-item {
 #uiframes-container {
   pointer-events: none;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
 }
 #uiframes-container .uiframe-container {
@@ -808,10 +808,10 @@ div.button:active.dropdown-item {
   color: white;
   margin: 7px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   border: 1px solid #40628a;
   cursor: auto;
   user-select: none;
@@ -823,9 +823,9 @@ div.button:active.dropdown-item {
 }
 #uiframes-container .uiframe-container .uiframe .uiframe-header {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
+  left: 0;
+  top: 0;
+  right: 0;
   height: 30px;
   font-size: 16px;
   color: #8ba5c4;
@@ -870,8 +870,8 @@ div.button:active.dropdown-item {
 #uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-close-button {
   position: absolute;
   height: 100%;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  top: 0;
   display: inline-block;
   font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
@@ -905,10 +905,10 @@ div.button:active.dropdown-item {
 }
 #uiframes-container .uiframe-container .uiframe .uiframe-content {
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 30px;
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
   overflow: auto;
   padding: 8px;
 }
@@ -924,8 +924,8 @@ div.button:active.dropdown-item {
   position: fixed;
 }
 .tooltip {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
   max-width: 298px;
   border: 2px solid #1b2967;

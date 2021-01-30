@@ -6,13 +6,13 @@ module.exports.now = function (client) {
 		document.addEventListener("keydown", (e) => {
 			if (e.target.localName == "input" || !client.connection) return;
 			// the e.preventDefault() is for stopping the character being typed into the input
-			if (e.which == 79) {
+			if (e.which === 79) {
 				// o
 				input_elem.dataset.inputting = "ooc";
 				input_elem.disabled = false;
 				input_elem.focus();
 				e.preventDefault();
-			} else if (e.which == 84) {
+			} else if (e.which === 84) {
 				// t
 				input_elem.dataset.inputting = "say";
 				input_elem.disabled = false;
@@ -33,14 +33,14 @@ module.exports.now = function (client) {
 			}
 		});
 		input_elem.addEventListener("keydown", (e) => {
-			if (e.which == 27) {
+			if (e.which === 27) {
 				// escape
 				input_elem.blur();
 				input_elem.dataset.inputting = null;
 				input_elem.value = "";
 				input_elem.disabled = true;
 				e.preventDefault();
-			} else if (e.which == 13) {
+			} else if (e.which === 13) {
 				// enter
 				if (input_elem.dataset.inputting == "ooc") {
 					if (client.connection)

@@ -14,7 +14,7 @@ class Database {
 			console.log(info);});
 	}
 	async authenticate(tname : string, tpassword: string){
-		console.log("Authenticating "+tname+"...")
+		console.log("Authenticating "+tname+"...");
 		var i = await this.db.get(tname);
 		let accepted = {value: false, name: tname};
 		if (i.password == tpassword && i.name == tname && i.banned === false)
