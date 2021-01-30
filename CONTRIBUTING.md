@@ -1,3 +1,5 @@
+All help is welcome!
+
 ## Issues
 Before adding a new [**Issue**](https://github.com/Civ13/civ13-typespess/issues), please check if there is an open or closed issue on the same subject.
 
