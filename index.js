@@ -1,5 +1,3 @@
-// BASED OFF OF tgstation COMMIT 910be9f4e29270e3a0a36ed8042310ed4bee1845
-
 const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 const World = require("./code/game/world.js");
@@ -122,124 +120,128 @@ global.Tserver.importModule(require("./code/onclick/interact.js"));
 global.Tserver.importModule(require("./code/onclick/inventory.js"));
 global.Tserver.importModule(require("./code/onclick/screen_objects.js"));
 
-const finalhandler = require("finalhandler");
-const http = require("http");
-const net = require("net");
-const https = require("https");
-const serveStatic = require("serve-static");
-const fs = require("fs");
-const url = require("url");
-
-const database = new Database("typespess");
-
-const server_config = read_config("server.cson");
-const map = server_config.maps.current_map;
-console.log("SERVER: Loading map " + map + "...");
-global.Tserver.station_dim = new Typespess.Dimension(global.Tserver);
-global.Tserver.instance_map_sync(	JSON.parse(fs.readFileSync("maps/" + map + ".bsmap", "utf8")),
-	0,
-	0,
-	0,
-	global.Tserver.station_dim
-);
-
-global.Tserver.on("client_login", (client) => {
-	if (!client.mob) {
-		const mob = new Typespess.Atom(global.Tserver, { components: ["NewPlayer"] });
-		mob.c.Mob.client = client;
-	}
-});
-console.log("SERVER: Starting server...");
-
-for (const [key, file] of Object.entries(server_config.http_opts.files)) {
-	if (!key || !file) {
-		continue;
-	}
-	server_config.http_opts[key] = fs.readFileSync(file, "utf8");
-}
-
-if (server_config.gh_login.enabled) {
-	global.Tserver.handle_login = function (ws) {
-		ws.send(JSON.stringify({login_type: "database"}));
-		let validated = {value: false, name: "none"};
-		const message_handler = (msg) => {
-			const obj = JSON.parse(msg);
-			console.log(obj)
-			if (obj.request_check === true) {database.authenticate(obj.name,obj.password).then(function(results){validated=results;
-			if (validated.value==true && validated.name==obj.name) {console.log(`DB AUTH: user \"${obj.name}\" authorized`);ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));}
-			else  {console.log(`DB AUTH: user \"${obj.name}\" denied`);ws.send(JSON.stringify({ valid: false }));}});}
-
-			if (obj.login) {
-				let username = obj.login + "";
-				ws.removeListener("message",  message_handler);
-				this.login(ws, username);
-			}
-		};
-		ws.on("message", message_handler);
-	};}
-
-const serve = serveStatic(global.Tserver.resRoot, { index: ["index.html"] });
-
-const http_handler = (req, res) => {
-	const done = finalhandler(req, res);
-	const url_obj = url.parse(req.url, true);
-	if (url_obj.pathname == "/status") {
-		res.setHeader("Access-Control-Allow-Origin", "*");
-		res.writeHead(200, { "Content-Type": "application/json" });
-		const clients = [...Object.keys(global.Tserver.clients)];
-		const clients_by_name = [...Object.keys(global.Tserver.clients_by_name)];
-		res.write(JSON.stringify({
-			player_count: clients.length,
-			clients,
-			clients_by_name,
-		})
-		);
-		res.end();
-	} else {
-		serve(req, res, done);
-	}
-};
-let http_server;
-if (server_config.https) {
-	const proxies = {
-		http: http.createServer((req, res) => {
-			res.writeHead(301, {
-				Location: "https://" + req.headers.host + req.url,
-			});
-			res.end();
-		}),
-		https: https.createServer(server_config.http_opts, http_handler),
-	};
-	net
-		.createServer((socket) => {
-			socket.once("data", (buffer) => {
-				socket.pause();
-				const byte = buffer[0];
-				const protocol = byte == 22 ? "https" : "http";
-				const proxy = proxies[protocol];
-				proxy.emit("connection", socket);
-				socket.unshift(buffer);
-				socket.resume();
-			});
-		})
-		.listen(server_config.port);
-
-	http_server = proxies.https;
+if(global.is_bs_editor_env) {
+	module.exports = client;
 } else {
-	http_server = http.createServer(http_handler);
-	http_server.listen(server_config.port);
-}
+	const finalhandler = require("finalhandler");
+	const http = require("http");
+	const net = require("net");
+	const https = require("https");
+	const serveStatic = require("serve-static");
+	const fs = require("fs");
+	const url = require("url");
 
-global.Tserver.startServer({ websocket: { server: http_server } });
-console.log("SERVER: Server started.");
+	const database = new Database("typespess");
 
-//schedulers
-global.Tworld.time_scheduler(global.Tworld);
-global.Tworld.season_scheduler(global.Tworld);
-global.Tworld.weather_scheduler(global.Tworld);
+	const server_config = read_config("server.cson");
+	const map = server_config.maps.current_map;
+	console.log("SERVER: Loading map " + map + "...");
+	global.Tserver.station_dim = new Typespess.Dimension(global.Tserver);
+	global.Tserver.instance_map_sync(	JSON.parse(fs.readFileSync("maps/" + map + ".bsmap", "utf8")),
+		0,
+		0,
+		0,
+		global.Tserver.station_dim
+	);
 
-//this signals the continuous integration program to exit.
-const args = process.argv;
-if (args[2] == "test") {
-	console.log("test passed.");
-	process.exit(0);}
+	global.Tserver.on("client_login", (client) => {
+		if (!client.mob) {
+			const mob = new Typespess.Atom(global.Tserver, { components: ["NewPlayer"] });
+			mob.c.Mob.client = client;
+		}
+	});
+	console.log("SERVER: Starting server...");
+
+	for (const [key, file] of Object.entries(server_config.http_opts.files)) {
+		if (!key || !file) {
+			continue;
+		}
+		server_config.http_opts[key] = fs.readFileSync(file, "utf8");
+	}
+
+	if (server_config.gh_login.enabled) {
+		global.Tserver.handle_login = function (ws) {
+			ws.send(JSON.stringify({login_type: "database"}));
+			let validated = {value: false, name: "none"};
+			const message_handler = (msg) => {
+				const obj = JSON.parse(msg);
+				console.log(obj)
+				if (obj.request_check === true) {database.authenticate(obj.name,obj.password).then(function(results){validated=results;
+				if (validated.value==true && validated.name==obj.name) {console.log(`DB AUTH: user \"${obj.name}\" authorized`);ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));}
+				else  {console.log(`DB AUTH: user \"${obj.name}\" denied`);ws.send(JSON.stringify({ valid: false }));}});}
+
+				if (obj.login) {
+					let username = obj.login + "";
+					ws.removeListener("message",  message_handler);
+					this.login(ws, username);
+				}
+			};
+			ws.on("message", message_handler);
+		};}
+
+	const serve = serveStatic(global.Tserver.resRoot, { index: ["index.html"] });
+
+	const http_handler = (req, res) => {
+		const done = finalhandler(req, res);
+		const url_obj = url.parse(req.url, true);
+		if (url_obj.pathname == "/status") {
+			res.setHeader("Access-Control-Allow-Origin", "*");
+			res.writeHead(200, { "Content-Type": "application/json" });
+			const clients = [...Object.keys(global.Tserver.clients)];
+			const clients_by_name = [...Object.keys(global.Tserver.clients_by_name)];
+			res.write(JSON.stringify({
+				player_count: clients.length,
+				clients,
+				clients_by_name,
+			})
+			);
+			res.end();
+		} else {
+			serve(req, res, done);
+		}
+	};
+	let http_server;
+	if (server_config.https) {
+		const proxies = {
+			http: http.createServer((req, res) => {
+				res.writeHead(301, {
+					Location: "https://" + req.headers.host + req.url,
+				});
+				res.end();
+			}),
+			https: https.createServer(server_config.http_opts, http_handler),
+		};
+		net
+			.createServer((socket) => {
+				socket.once("data", (buffer) => {
+					socket.pause();
+					const byte = buffer[0];
+					const protocol = byte == 22 ? "https" : "http";
+					const proxy = proxies[protocol];
+					proxy.emit("connection", socket);
+					socket.unshift(buffer);
+					socket.resume();
+				});
+			})
+			.listen(server_config.port);
+
+		http_server = proxies.https;
+	} else {
+		http_server = http.createServer(http_handler);
+		http_server.listen(server_config.port);
+	}
+
+	global.Tserver.startServer({ websocket: { server: http_server } });
+	console.log("SERVER: Server started.");
+
+	//schedulers
+	global.Tworld.time_scheduler(global.Tworld);
+	global.Tworld.season_scheduler(global.Tworld);
+	global.Tworld.weather_scheduler(global.Tworld);
+
+	//this signals the continuous integration program to exit.
+	const args = process.argv;
+	if (args[2] == "test") {
+		console.log("test passed.");
+		process.exit(0);}
+	}

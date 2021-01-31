@@ -124,6 +124,8 @@ class Typespess extends EventEmitter {
   * @param {Object} opts.demo_stream A stream (probably to a file) to log network updates to
   */
 	startServer({ websocket, demo_stream } = {}) {
+		if(global.is_bs_editor_env)
+			{throw new Error("Server should not be started in editor mode");}
 		this.wss = new WebSocket.Server(websocket);
 
 		this.wss.on("connection", (ws) => {

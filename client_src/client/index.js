@@ -29,8 +29,10 @@ class TypespessClient extends EventEmitter {
 
 		this.soft_shadow_resolution = 8;
 
-
-		if (global.AudioContext) this.audio_ctx = new AudioContext();
+		if(!global.is_bs_editor_env) {
+			if(global.AudioContext)
+				this.audio_ctx = new AudioContext();
+		}
 		this.importModule(require("./lib/lighting.js"));
 	}
 
@@ -42,6 +44,8 @@ class TypespessClient extends EventEmitter {
 	}
 
 	login() {
+		if(global.is_bs_editor_env)
+			{throw new Error("Client should not be started in editor mode");}
 		this.connection = new WebSocket(this.wsurl);
 		this.panel_manager = new PanelManager(this);
 		this.connection.addEventListener("open", () => {
@@ -58,6 +62,8 @@ class TypespessClient extends EventEmitter {
 	}
 
 	login_finish() {
+		if(global.is_bs_editor_env)
+			{throw new Error("Client should not be started in editor mode");}
 		this.connection.addEventListener(
 			"message",
 			this.handleSocketMessage.bind(this)
