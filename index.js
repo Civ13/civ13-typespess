@@ -10,7 +10,6 @@ global.Tworld = new World(global.Tserver);
 
 global.Tserver.resRoot = "./resources/";
 
-global.workspaceDir = location.pathname;
 console.log(global.workspaceDir);
 global.Tserver.importModule(require("./code/game/area/area_components.js"));
 global.Tserver.importModule(require("./code/game/area/area.js"));
