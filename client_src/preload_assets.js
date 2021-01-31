@@ -1,21 +1,21 @@
-import { join } from "path";
+const { join } = require ("path");
 const fs = require("fs");
 
-var files: string = "";
-const dirs: Array<string> = [];
+var files = "";
+const dirs = [];
 
-function dirIt(directory: string) {
+function dirIt(directory) {
 
 	try {
 
 		let dirContent = fs.readdirSync(directory);
 
-		dirContent.forEach( (path: string) => {
+		dirContent.forEach( (path) => {
 
-			const fullPath: string = join(directory,path);
+			const fullPath = join(directory,path);
 
 			if ( fs.statSync(fullPath).isFile()) {
-				let nfile:string = fullPath;
+				let nfile = fullPath;
 				let pieces = nfile.split("\\");
 				nfile = pieces.join("/");
 				nfile = nfile.replace("../resources/","");
@@ -28,7 +28,7 @@ function dirIt(directory: string) {
 		});
 
 		if ( dirs.length !== 0 ) {
-			let popd: string|undefined = dirs.pop();
+			let popd = dirs.pop();
 			if (popd)
 				{dirIt(popd);}
 			}
@@ -41,7 +41,7 @@ function dirIt(directory: string) {
 	}
 }
 
-var preloadlist: string = dirIt("../resources/icons/turf/floor/");
+var preloadlist = dirIt("../resources/icons/turf/floor/");
 let tdir1 = dirIt("../resources/icons/mob/human_body/");
 let tdir2 = dirIt("../resources/icons/ui/");
 let tdir3 = dirIt("../resources/icons/effects/");
@@ -54,8 +54,8 @@ if (tdir3 != null)
 	{preloadlist += tdir3;}
 if (tdir4 != null)
 	{preloadlist += tdir4;}
-var tloadlist: string = `var preload_list = [${preloadlist}]; module.exports = preload_list;`;
-fs.writeFile("code/preloadlist.js", tloadlist, function (err: unknown) {
+var tloadlist = `var preload_list = [${preloadlist}]; module.exports = preload_list;`;
+fs.writeFile("code/preloadlist.js", tloadlist, function (err) {
 	if (err) {
 		return console.error(err);
 	}

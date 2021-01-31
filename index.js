@@ -1,17 +1,16 @@
 const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 const World = require("./code/game/world.js");
-const Database = require("./code/database.ts");
+const Database = require("./code/database.js");
 
 console.log("SERVER: Loading game...");
 
 global.Tserver = new Typespess();
-global.Tworld = new World(Tserver);
+global.Tworld = new World(global.Tserver);
 
 global.Tserver.resRoot = "./resources/";
 
-global.Tserver.config = read_config("config.cson");
-
+console.log(global.workspaceDir);
 global.Tserver.importModule(require("./code/game/area/area_components.js"));
 global.Tserver.importModule(require("./code/game/area/area.js"));
 global.Tserver.importModule(require("./code/game/components/climbable.js"));
@@ -71,8 +70,6 @@ global.Tserver.importModule(require("./code/game/components/objects/puller.js"))
 global.Tserver.importModule(require("./code/game/turfs/floor_base.js"));
 global.Tserver.importModule(require("./code/game/placeholders.js"));
 global.Tserver.importModule(require("./code/game/ticker.js"));
-global.Tserver.importModule(require("./code/modules/admin/holder.js"));
-global.Tserver.importModule(require("./code/modules/admin/menu.js"));
 global.Tserver.importModule(require("./code/modules/client/verbs.js"));
 global.Tserver.importModule(require("./code/modules/atoms/objects/clothing/gloves/_gloves.js"));
 global.Tserver.importModule(require("./code/modules/atoms/objects/clothing/head/_head.js"));
@@ -121,8 +118,11 @@ global.Tserver.importModule(require("./code/onclick/inventory.js"));
 global.Tserver.importModule(require("./code/onclick/screen_objects.js"));
 
 if(global.is_bs_editor_env) {
-	module.exports = client;
+	module.exports = global.Tserver;
 } else {
+	global.Tserver.importModule(require("./code/modules/admin/holder.js"));
+	global.Tserver.importModule(require("./code/modules/admin/menu.js"));
+	global.Tserver.config = read_config("config.cson");
 	const finalhandler = require("finalhandler");
 	const http = require("http");
 	const net = require("net");
@@ -167,8 +167,8 @@ if(global.is_bs_editor_env) {
 				const obj = JSON.parse(msg);
 				console.log(obj)
 				if (obj.request_check === true) {database.authenticate(obj.name,obj.password).then(function(results){validated=results;
-				if (validated.value==true && validated.name==obj.name) {console.log(`DB AUTH: user \"${obj.name}\" authorized`);ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));}
-				else  {console.log(`DB AUTH: user \"${obj.name}\" denied`);ws.send(JSON.stringify({ valid: false }));}});}
+				if (validated.value==true && validated.name==obj.name) {console.log(`DB AUTH: user "${obj.name}" authorized`);ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));}
+				else  {console.log(`DB AUTH: user "${obj.name}" denied`);ws.send(JSON.stringify({ valid: false }));}});}
 
 				if (obj.login) {
 					let username = obj.login + "";

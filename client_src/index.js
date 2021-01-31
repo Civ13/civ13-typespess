@@ -57,8 +57,8 @@ if(global.is_bs_editor_env) {
 		parallax_plane.z_index = 9999;
 		eye.canvas = document.getElementById("mainlayer");
 		eye.create_click_handlers();
-		eye.on("mouse_over_atom_changed", (to: { name: string | null; }) => {
-			const doc : HTMLElement | null = document.getElementById("hovering-atom");
+		eye.on("mouse_over_atom_changed", (to) => {
+			const doc = document.getElementById("hovering-atom");
 			if (doc) {
 				if (to) {
 					doc.textContent = to.name;
