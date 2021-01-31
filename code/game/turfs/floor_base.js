@@ -37,7 +37,7 @@ class FloorBase extends Component {
 	}
 
 	break_tile() {
-		if (this.broken) return;
+		if (this.broken || !this.can_break) return;
 		if (this.broken_states.length) {
 			this.a.overlays.broken = { icon_state: _.sample(this.broken_states) };
 		}

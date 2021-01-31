@@ -14,3 +14,75 @@ floor_dirt:
 		name: "dirt"
 		icon: "icons/turf/floor/"
 		icon_state: "dirt"
+
+floor_dry_dirt:
+	components: ["FloorBase"]
+	tree_paths: ["basic_structures/floor/dirt/dry"]
+	vars:
+		name: "dry dirt"
+		icon: "icons/turf/floor/"
+		icon_state: "dust"
+
+floor_sand:
+	components: ["FloorBase"]
+	tree_paths: ["basic_structures/floor/sand"]
+	vars:
+		name: "sand"
+		icon: "icons/turf/floor/sand/"
+		icon_state: "sand"
+
+floor_sand_desert:
+	components: ["FloorBase"]
+	tree_paths: ["basic_structures/floor/sand/desert"]
+	vars:
+		name: "desert sand"
+		icon: "icons/turf/floor/sand/"
+		icon_state: "desert"
+
+floor_sand_dark:
+	components: ["FloorBase"]
+	tree_paths: ["basic_structures/floor/sand/dark"]
+	vars:
+		name: "dark sand"
+		icon: "icons/turf/floor/sand/"
+		icon_state: "darksand"
+
+floor_water:
+	components: ["FloorBase"]
+	tree_paths: ["basic_structures/floor/water"]
+	vars:
+		name: "shallow water"
+		icon: "icons/turf/floor/"
+		icon_state: "seashallow"
+		density: 0
+		opacity: false
+
+floor_water_deep:
+	components: ["FloorBase"]
+	tree_paths: ["basic_structures/floor/water/deep"]
+	vars:
+		name: "deep water"
+		icon: "icons/turf/floor/"
+		icon_state: "seadeep"
+		density: 1
+		opacity: false
+
+floor_water_salty_deep:
+	components: ["FloorBase"]
+	tree_paths: ["basic_structures/floor/water/deep/salty"]
+	vars:
+		name: "deep saltwater"
+		icon: "icons/turf/floor/"
+		icon_state: "seadeep"
+		density: 1
+		opacity: false
+
+floor_water_salty:
+	components: ["FloorBase"]
+	tree_paths: ["basic_structures/floor/water/salty"]
+	vars:
+		name: "saltwater"
+		icon: "icons/turf/floor/"
+		icon_state: "seashallow"
+		density: 0
+		opacity: false
