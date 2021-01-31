@@ -9,12 +9,12 @@ call npm install -g pouchdb-server
 echo Packages installed.
 cd client_src
 echo Generating the preload list...
-call ts-node preload_assets.ts
+call ts-node preload_assets.js
 echo Browserifying client...
-call ts-node compile.ts
+call ts-node compile.js
 echo Generating the map...
 cd..
 cd maps
-call ts-node mapgen.ts
+call ts-node mapgen.js
 echo Everything is done.
 pause

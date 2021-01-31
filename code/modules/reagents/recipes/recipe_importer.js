@@ -37,14 +37,27 @@ const traverseDir = (dir) =>
 			),
 	relativePaths (dir)
 	);
-
+	if(global.is_bs_editor_env) {
+		var appDir = global.workspaceDir;
+		for (const f of traverseDir(`${appDir}code/`)) {
+			if (getFileExtension(f) == "recipes") {
+				const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
+				let new_nrec = [];
+				for(let i in nrec)
+					new_nrec.push(i);
+				const nrec_parsed = new ReagentReaction(new_nrec);
+				module.exports.reagent_reactions.push(nrec_parsed);
+			}
+	}
+} else {
 for (const f of traverseDir("./code/")) {
 	if (getFileExtension(f) == "recipes") {
 		const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
-		var new_nrec = [];
-		for(var i in nrec)
+		let new_nrec = [];
+		for(let i in nrec)
 			new_nrec.push(i);
 		const nrec_parsed = new ReagentReaction(new_nrec);
 		module.exports.reagent_reactions.push(nrec_parsed);
 	}
+}
 }

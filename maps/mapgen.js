@@ -1,18 +1,18 @@
 import fs from "fs";
 
 console.log("Loading definitions...");
-let originalLoadedConfigs: Array<number> = [100, 100, 25, 20]; // width, height, water, dirt
+let originalLoadedConfigs = [100, 100, 25, 20]; // width, height, water, dirt
 let finalData = "";
 
 function load_configs() {
 	fs.readFile("mapdef.txt", function (
-		err: unknown,
-		data: { toString: () => string }
+		err,
+		data
 	) {
 		if (err) {
 			return console.error(err);
 		}
-		const tempConfigs: Array<string> = (data.toString() as string).split(",", 4);
+		const tempConfigs = (data.toString()).split(",", 4);
 		const loadedConfigs = [
 			Number(tempConfigs[0]),
 			Number(tempConfigs[1]),
@@ -23,10 +23,10 @@ function load_configs() {
 	});
 	return [100, 100, 25, 20];
 }
-function generateRandomInteger(min: number, max: number) {
+function generateRandomInteger(min, max) {
 	return Math.floor(min + Math.random()*(max + 1 - min));
 }
-function random_floor(prob: number) {
+function random_floor(prob) {
 	if (Math.random() <= prob / 100) {return "dirt"}
 	else {return "grass"}
 }
@@ -48,8 +48,8 @@ console.log(
 		"," +
 		originalLoadedConfigs[3]
 );
-const inc_w: number = -originalLoadedConfigs[0] / 2;
-const inc_h: number = -originalLoadedConfigs[1] / 2;
+const inc_w = -originalLoadedConfigs[0] / 2;
+const inc_h = -originalLoadedConfigs[1] / 2;
 
 console.log("Generating the map...");
 finalData = finalData + "{\n";
@@ -103,8 +103,7 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		}
 		else {
 			if (Math.random() <= 0.5) {
-				class rfloraObj{rname: string | undefined; icon: string | undefined; icon_state: string | undefined}
-				const rflora : rfloraObj = random_flora();
+				const rflora = random_flora();
 				finalData = finalData + "			},\n";
 				finalData = finalData + "			{\n";
 				finalData = finalData + `				"template_name": "${rflora.rname}",\n`;
@@ -125,7 +124,7 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 finalData = finalData + "	}\n";
 finalData = finalData + "}";
 
-fs.writeFile("newmap.bsmap", finalData, function (err: unknown) {
+fs.writeFile("newmap.bsmap", finalData, function (err) {
 	if (err) {
 		return console.error(err);
 	}

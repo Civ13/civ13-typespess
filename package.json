@@ -12,10 +12,10 @@
 	"atomTranspilers": [
 		{
 			"transpiler": "atom-ts-transpiler",
-			"glob": "{!(node_modules)/**/,}*.ts?(x)",
+			"glob": "{!(node_modules)/**/,}*.js?(x)",
 			"options": {
 				"compilerOptions": {},
-				"cacheKeyFiles": [],
+				"cacheKeyFiles": ["tsconfig.json"],
 				"verbose": false
 			}
 		}
