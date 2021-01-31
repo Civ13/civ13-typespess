@@ -100,7 +100,10 @@ class IconRenderer {
 			return;
 
 		let image = this.icon_meta.__image_object;
-		if (this.color) {
+		let tcolor = null;
+		if (this.color) {tcolor = this.color}
+		else if (this.icon_meta.color) {tcolor = this.icon_meta.color};
+		if (tcolor) {
 			color_canvas.width = Math.max(
 				color_canvas.width,
 				this.icon_meta.width
