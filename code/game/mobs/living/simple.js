@@ -107,40 +107,45 @@ SimpleMob.template = {
 		walk_delay: 700,
 	},
 };
-module.exports.templates = {
-	vars: {
-		components: {
-			LivingMob: {
-				status_flags:
-					combat_defines.CANSTUN |
-					combat_defines.CANWEAKEN |
-					combat_defines.CANPARALYSE |
-					combat_defines.CANPUSH,
-				max_health: 30,
-				stat: combat_defines.CONSCIOUS,
-				nomove_counter: 0,
-				mob_size: mob_defines.MOB_SIZE_SMALL,
-			},
-			Examine: {
-				desc: "A simple animal. Pretty generic.",
-			},
-			mobAI: {
-				behaviour: "scared",
-			},
-		},
-		name: "animal",
-		density: 1,
-		layer: layers.MOB_LAYER,
-		let_pass_flags: pass_flags.PASSMOB,
-		icon: "icons/mob/animals/",
-		icon_state: "pigeon_grey",
-		visible: true,
-		walk_delay: 700,
 
-	tree_paths: ["mobs/animals/pigeon"],
-	}
-}
 SimpleMob.depends = ["MobMovement", "Hearer", "Mob", "LivingMob", "Examine", "SpeechHearer"];
 SimpleMob.loadBefore = ["Mob", "LivingMob", "Examine", "SpeechHearer"];
 
 module.exports.components = { SimpleMob , mobAI };
+
+module.exports.templates = {
+	pigeon: {
+		components: ["Mob", "LivingMob", "mobAI"],
+		vars: {
+			components: {
+				LivingMob: {
+					status_flags:
+						combat_defines.CANSTUN |
+						combat_defines.CANWEAKEN |
+						combat_defines.CANPARALYSE |
+						combat_defines.CANPUSH,
+					max_health: 30,
+					stat: combat_defines.CONSCIOUS,
+					nomove_counter: 0,
+					mob_size: mob_defines.MOB_SIZE_SMALL,
+				},
+				Examine: {
+					desc: "A simple animal. Pretty generic.",
+				},
+				mobAI: {
+					behaviour: "scared",
+				},
+			},
+			name: "animal",
+			density: 1,
+			layer: layers.MOB_LAYER,
+			let_pass_flags: pass_flags.PASSMOB,
+			icon: "icons/mob/animals/",
+			icon_state: "pigeon_grey",
+			visible: true,
+			walk_delay: 700,
+
+		tree_paths: ["mobs/animals/pigeon"],
+		}
+	}
+}

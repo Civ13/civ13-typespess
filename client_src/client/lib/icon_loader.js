@@ -1,7 +1,6 @@
 function enqueue_icon_meta_load(newIcon) {
 	if (!newIcon)
 		{newIcon = "icons/error.png";console.log("MISSING ICON: Icon not defined!");}
-	if (newIcon.search(".gif.png") != -1) {newIcon.replace(".gif.png",".gif")}
 	if (this.icon_meta_load_queue[newIcon]) {
 		return this.icon_meta_load_queue[newIcon];
 	}

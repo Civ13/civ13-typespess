@@ -29,14 +29,7 @@ class IconRenderer {
 				if (this.atom.directional === true) {
 					this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
 				}
-				else {
-					if ((this.icon.search(".gif") == -1)) {
-						this.icon = `${this.icon}${this.icon_state}.png`;
-					}
-					else {
-						this.icon = `${this.icon}${this.icon_state}`;
-					}
-				}
+				else {this.icon = `${this.icon}${this.icon_state}.png`;}
 			}
 		return this.client.enqueue_icon_meta_load(this.icon);
 	}
@@ -75,14 +68,9 @@ class IconRenderer {
 							this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
 						}
 						else {
-							if ((this.icon.search(".gif") == -1)) {
-								this.icon = `${this.icon}${this.icon_state}.png`;
-							}
-							else {
-								this.icon = `${this.icon}${this.icon_state}`;
+							this.icon = `${this.icon}${this.icon_state}.png`;
 							}
 						}
-					}
 				if (!this.icon) {this.icon = "icons/nothing.png"}
 				this.atom.client
 					.enqueue_icon_meta_load(this.icon)	

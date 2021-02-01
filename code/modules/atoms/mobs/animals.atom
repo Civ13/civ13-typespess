@@ -1,5 +1,5 @@
 pigeon:
-	components: ["Mob", "MobLiving", "MobAI"]
+	components: ["Mob", "LivingMob", "MobAI"]
 	vars:
 		components:
 			LivingMob:

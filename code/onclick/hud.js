@@ -257,7 +257,7 @@ module.exports.templates = {
 			},
 			name: "Choking (No O2)",
 			icon: "icons/ui/screen_alert/",
-		icon_state: "not_enough_oxy.gif",
+		icon_state: "not_enough_oxy",
 		},
 	},
 
@@ -272,7 +272,7 @@ module.exports.templates = {
 			},
 			name: "Choking (O2)",
 			icon: "icons/ui/screen_alert/",
-		icon_state: "too_much_oxy.gif",
+		icon_state: "too_much_oxy",
 		},
 	},
 
@@ -287,7 +287,7 @@ module.exports.templates = {
 			},
 			name: "Choking (No CO2)",
 			icon: "icons/ui/screen_alert/",
-		icon_state: "not_enough_co2.gif",
+		icon_state: "not_enough_co2",
 		},
 	},
 
@@ -302,7 +302,7 @@ module.exports.templates = {
 			},
 			name: "Choking (CO2)",
 			icon: "icons/ui/screen_alert/",
-		icon_state: "too_much_co2.gif",
+		icon_state: "too_much_co2",
 		},
 	},
 
@@ -317,7 +317,7 @@ module.exports.templates = {
 			},
 			name: "Choking (No Plasma)",
 			icon: "icons/ui/screen_alert/",
-		icon_state: "not_enough_tox.gif",
+		icon_state: "not_enough_tox",
 		},
 	},
 
@@ -333,7 +333,7 @@ module.exports.templates = {
 			},
 			name: "Choking (Plasma)",
 			icon: "icons/ui/screen_alert/",
-		icon_state: "too_much_tox.gif",
+		icon_state: "too_much_tox",
 		},
 	},
 	//End gas alerts
@@ -404,7 +404,7 @@ module.exports.templates = {
 			},
 			name: "Too Cold",
 			icon: "icons/ui/screen_alert/",
-		icon_state: "cold.gif",
+		icon_state: "cold",
 		},
 	},
 	alert_lowpressure: {
@@ -418,7 +418,7 @@ module.exports.templates = {
 			},
 			name: "Low Pressure",
 			icon: "icons/ui/screen_alert/",
-		icon_state: "lowpressure2.gif",
+		icon_state: "lowpressure2",
 		},
 	},
 	alert_highpressure: {
@@ -432,7 +432,7 @@ module.exports.templates = {
 			},
 			name: "High Pressure",
 			icon: "icons/ui/screen_alert/",
-		icon_state: "highpressure2.gif",
+		icon_state: "highpressure2",
 		},
 	},
 	alert_blind: {

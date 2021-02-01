@@ -528,6 +528,7 @@ LivingMob.loadBefore = [
 LivingMob.template = {
 	vars: {
 		components: {
+			Atom: {directional: true},
 			LivingMob: {
 				status_flags:
 		combat_defines.CANSTUN |
