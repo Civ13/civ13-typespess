@@ -1,6 +1,6 @@
 	chair:
 		components: ["Chair"]
-		tree_paths: ["basic_structures/chair"]
+		tree_paths: ["structures/chair"]
 	
 	wooden_chair:
 		parent_template: "chair"
@@ -20,7 +20,7 @@
 			name: "wooden chair"
 			icon_state: "wooden_chair"
 		
-		tree_paths: ["basic_structures/chair/wood"]
+		tree_paths: ["structures/chair/wood"]
 	
 	wooden_chair_wings:
 		parent_template: "wooden_chair"
@@ -28,7 +28,7 @@
 			name: "wooden chair"
 			icon_state: "wooden_chair_wings"
 		
-		tree_paths: ["basic_structures/chair/wood/wings"]
+		tree_paths: ["structures/chair/wood/wings"]
 	
 	office_chair_light:
 		parent_template: "chair"
@@ -43,7 +43,7 @@
 			
 			icon_state: "officechair_white"
 		
-		tree_paths: ["basic_structures/chair/office/light"]
+		tree_paths: ["structures/chair/office/light"]
 	
 	office_chair_dark:
 		parent_template: "chair"
@@ -58,7 +58,7 @@
 			
 			icon_state: "officechair_dark"
 		
-		tree_paths: ["basic_structures/chair/office/dark"]
+		tree_paths: ["structures/chair/office/dark"]
 	
 	stool:
 		components: ["Chair"]
@@ -78,7 +78,7 @@
 			icon_state: "stool"
 			directional: false
 		
-		tree_paths: ["basic_structures/chair/stool"]
+		tree_paths: ["structures/chair/stool"]
 	
 	bar_stool:
 		parent_template: "stool"
@@ -92,6 +92,6 @@
 			icon_state: "stool_wood"
 			directional: false
 		
-		tree_paths: ["basic_structures/chair/stool/bar"]
+		tree_paths: ["structures/chair/stool/bar"]
 	
 

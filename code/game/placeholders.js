@@ -2,6 +2,7 @@
 
 module.exports.templates = {
 	crate: {
+		tree_paths: ["structures/closet/crate"],
 		components: ["Tangible"],
 		vars: {
 			icon: "icons/obj/storage/",

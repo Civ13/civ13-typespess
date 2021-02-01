@@ -516,6 +516,7 @@ CarbonMob.template = {
 
 module.exports.templates = {
 	screen_crit: {
+		tree_paths: ["effects/screen/overlays/screen_crit"],
 		vars: {
 			icon: "icons/ui/screen_overlays/",
 			icon_state: "passage0",
@@ -526,6 +527,7 @@ module.exports.templates = {
 		},
 	},
 	screen_crit_vision: {
+		tree_paths: ["effects/screen/overlays/screen_crit_vision"],
 		vars: {
 			icon: "icons/ui/screen_overlays/",
 			icon_state: "oxydamageoverlay0",
@@ -536,6 +538,7 @@ module.exports.templates = {
 		},
 	},
 	screen_brute: {
+		tree_paths: ["effects/screen/overlays/screen_brute"],
 		vars: {
 			icon: "icons/ui/screen_overlays/",
 			icon_state: "brutedamageoverlay0",
@@ -547,6 +550,7 @@ module.exports.templates = {
 	},
 	screen_oxy: {
 		vars: {
+			tree_paths: ["effects/screen/overlays/screen_oxy"],
 			icon: "icons/ui/screen_overlays/",
 			icon_state: "oxydamageoverlay0",
 			screen_loc_x: 0,

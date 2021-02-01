@@ -1,6 +1,6 @@
 floor_grass:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/grass"]
+	tree_paths: ["floors/grass"]
 	vars:
 		name: "grass"
 		icon: "icons/turf/floor/"
@@ -9,7 +9,7 @@ floor_grass:
 
 floor_dirt:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/dirt"]
+	tree_paths: ["floors/dirt"]
 	vars:
 		name: "dirt"
 		icon: "icons/turf/floor/"
@@ -17,7 +17,7 @@ floor_dirt:
 
 floor_dry_dirt:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/dirt/dry"]
+	tree_paths: ["floors/dirt/dry"]
 	vars:
 		name: "dry dirt"
 		icon: "icons/turf/floor/"
@@ -25,7 +25,7 @@ floor_dry_dirt:
 
 floor_sand:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/sand"]
+	tree_paths: ["floors/sand"]
 	vars:
 		name: "sand"
 		icon: "icons/turf/floor/sand/"
@@ -33,7 +33,7 @@ floor_sand:
 
 floor_sand_desert:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/sand/desert"]
+	tree_paths: ["floors/sand/desert"]
 	vars:
 		name: "desert sand"
 		icon: "icons/turf/floor/sand/"
@@ -41,7 +41,7 @@ floor_sand_desert:
 
 floor_sand_dark:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/sand/dark"]
+	tree_paths: ["floors/sand/dark"]
 	vars:
 		name: "dark sand"
 		icon: "icons/turf/floor/sand/"
@@ -49,7 +49,7 @@ floor_sand_dark:
 
 floor_water:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/water"]
+	tree_paths: ["floors/water"]
 	vars:
 		name: "shallow water"
 		icon: "icons/turf/floor/"
@@ -59,7 +59,7 @@ floor_water:
 
 floor_water_deep:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/water/deep"]
+	tree_paths: ["floors/water/deep"]
 	vars:
 		name: "deep water"
 		icon: "icons/turf/floor/"
@@ -69,7 +69,7 @@ floor_water_deep:
 
 floor_water_salty_deep:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/water/deep/salty"]
+	tree_paths: ["floors/water/deep/salty"]
 	vars:
 		name: "deep saltwater"
 		icon: "icons/turf/floor/"
@@ -79,7 +79,7 @@ floor_water_salty_deep:
 
 floor_water_salty:
 	components: ["FloorBase"]
-	tree_paths: ["basic_structures/floor/water/salty"]
+	tree_paths: ["floors/water/salty"]
 	vars:
 		name: "saltwater"
 		icon: "icons/turf/floor/"

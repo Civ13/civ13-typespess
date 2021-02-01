@@ -57,6 +57,7 @@ OrganLungs.template = {
 module.exports.templates = {
 	organ_lungs: {
 		components: ["OrganLungs"],
+		tree_paths: ["items/bodyparts/organ_lungs"],
 	},
 };
 

@@ -160,6 +160,7 @@ SprayBottle.template = {
 module.exports.templates = {
 	spray_spacecleaner: {
 		components: ["SprayBottle"],
+		tree_paths: ["items/spray_spacecleaner"],
 		vars: {
 			components: {
 				ReagentHolder: {

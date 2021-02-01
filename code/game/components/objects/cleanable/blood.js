@@ -138,6 +138,7 @@ FootprintsDecal.template = {
 module.exports.templates = {
 	decal_blood: {
 		components: ["BloodDecal"],
+		tree_paths: ["effects/blood/decal_blood"],
 		variants: [
 			{
 				type: "single",
@@ -159,6 +160,7 @@ module.exports.templates = {
 	},
 	decal_blood_old: {
 		components: ["BloodDecal"],
+		tree_paths: ["effects/blood/decal_blood_old"],
 		vars: {
 			components: {
 				CleanableDecal: {
@@ -191,6 +193,7 @@ module.exports.templates = {
 	},
 	decal_blood_splatter: {
 		components: ["BloodDecal"],
+		tree_paths: ["effects/blood/decal_blood_splatter"],
 		variants: [
 			{
 				type: "single",
@@ -204,6 +207,7 @@ module.exports.templates = {
 	},
 	decal_blood_drips: {
 		components: ["BloodDripsDecal"],
+		tree_paths: ["effects/blood/decal_blood_drips"],
 	},
 };
 

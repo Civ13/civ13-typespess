@@ -469,7 +469,7 @@ module.exports.templates = {
 			icon: "icons/obj/windows/",
 			icon_state: "windownew",
 		},
-		tree_paths: ["basic_structures/window"],
+		tree_paths: ["structures/window"],
 	},
 	window_dir: {
 		components: ["Window", "DirectionalWindow"],
@@ -481,7 +481,7 @@ module.exports.templates = {
 				orientation: "horizontal",
 			},
 		],
-		tree_paths: ["basic_structures/window/directional"],
+		tree_paths: ["structures/window/directional"],
 	},
 	window_construct: {
 		parent_template: "window",
@@ -492,7 +492,7 @@ module.exports.templates = {
 				},
 			},
 		},
-		tree_paths: ["basic_structures/window/construct"],
+		tree_paths: ["structures/window/construct"],
 	},
 	r_window: {
 		components: ["ReinforcedWindow", "TGSmooth"],
@@ -511,7 +511,7 @@ module.exports.templates = {
 			icon: "icons/obj/windows/",
 			icon_state: "windowmetal",
 		},
-		tree_paths: ["basic_structures/window/reinforced"],
+		tree_paths: ["structures/window/reinforced"],
 	},
 	r_window_dir: {
 		components: ["ReinforcedWindow", "DirectionalWindow"],
@@ -523,7 +523,7 @@ module.exports.templates = {
 				orientation: "horizontal",
 			},
 		],
-		tree_paths: ["basic_structures/window/reinforced/directional"],
+		tree_paths: ["structures/window/reinforced/directional"],
 	},
 	r_window_construct: {
 		parent_template: "r_window",
@@ -534,7 +534,7 @@ module.exports.templates = {
 				},
 			},
 		},
-		tree_paths: ["basic_structures/window/reinforced/construct"],
+		tree_paths: ["structures/window/reinforced/construct"],
 	},
 	shuttle_window: {
 		components: ["ReinforcedWindow", "TGSmooth"],
@@ -568,7 +568,7 @@ module.exports.templates = {
 			icon: "icons/obj/windows/",
 			icon_state: "metal_porthole_full",
 		},
-		tree_paths: ["basic_structures/window/shuttle"],
+		tree_paths: ["structures/window/shuttle"],
 	},
 };
 

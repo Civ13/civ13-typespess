@@ -173,7 +173,7 @@ Table.template = {
 module.exports.templates = {
 	table: {
 		components: ["TGSmooth", "Table"],
-		tree_paths: ["basic_structures/table"],
+		tree_paths: ["structures/table"],
 	},
 	wood_table: {
 		components: ["TGSmooth", "Table"],
@@ -200,7 +200,7 @@ module.exports.templates = {
 			icon: "icons/obj/structures/tables/",
 			icon_state: "wood_table",
 		},
-		tree_paths: ["basic_structures/table/wood"],
+		tree_paths: ["structures/table/wood"],
 	},
 	reinforced_table: {
 		components: ["TGSmooth", "Table"],
@@ -240,7 +240,7 @@ module.exports.templates = {
 			icon: "icons/obj/structures/tables/",
 			icon_state: "reinftable",
 		},
-		tree_paths: ["basic_structures/table/reinforced"],
+		tree_paths: ["structures/table/reinforced"],
 	},
 };
 

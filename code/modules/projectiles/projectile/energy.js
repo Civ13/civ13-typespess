@@ -3,6 +3,7 @@
 module.exports.templates = {
 	energy_projectile: {
 		components: ["Projectile"],
+		tree_paths: ["effects/projectiles/energy_projectile"],
 		vars: {
 			components: {
 				Projectile: {

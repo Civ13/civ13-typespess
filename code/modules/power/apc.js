@@ -208,7 +208,7 @@ module.exports.templates = {
 				orientation: "horizontal",
 			},
 		],
-		tree_path: ["basic_structures/apc"],
+		tree_path: ["structures/apc"],
 	},
 };
 

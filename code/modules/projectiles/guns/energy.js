@@ -186,6 +186,7 @@ EnergyGun.template = {
 module.exports.templates = {
 	test_egun: {
 		components: ["EnergyGun"],
+		tree_paths: ["items/gun/energy/test_egun"],
 	},
 };
 

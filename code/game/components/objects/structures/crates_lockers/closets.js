@@ -59,7 +59,7 @@ Closet.template = {
 module.exports.templates = {
 	closet: {
 		components: ["Closet"],
-		tree_paths: ["closets"],
+		tree_paths: ["structures/closet"],
 	},
 };
 

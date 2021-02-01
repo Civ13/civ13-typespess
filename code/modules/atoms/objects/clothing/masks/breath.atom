@@ -1,13 +1,14 @@
 
 mask_breath:
-	components: ["MaskItem"],
+	components: ["MaskItem"]
+	tree_paths: ["items/clothing/masks/mask_breath"]
 	vars:
 		components:
 			Item:
 				size: 2,
-				inhand_icon_state: "m_mask",
+				inhand_icon_state: "m_mask"
 			
 		
-		name: "breath mask",
-		icon_state: "german_gasmask",
+		name: "breath mask"
+		icon_state: "german_gasmask"
 	

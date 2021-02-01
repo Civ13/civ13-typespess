@@ -147,7 +147,7 @@ module.exports.templates = {
 			name: "wall",
 			icon_state: "0",
 		},
-		tree_paths: ["basic_structures/wall"],
+		tree_paths: ["walls/wall"],
 		requires_under: {
 			component: "FloorBase",
 			default: "dirt",
@@ -173,7 +173,7 @@ module.exports.templates = {
 			density: 1,
 			opacity: true,
 		},
-		tree_paths: ["basic_structures/wall/titanium"],
+		tree_paths: ["walls/titanium"],
 		requires_under: {
 			component: "FloorBase",
 			default: "dirt",

@@ -36,6 +36,7 @@ BeamProjectile.template = {
 module.exports.templates = {
 	beam_laser: {
 		components: ["BeamProjectile"],
+		tree_paths: ["effects/projectiles/beam_laser"]
 	},
 	beam_laser_practice: {
 		parent_template: "beam_laser",
@@ -52,6 +53,7 @@ module.exports.templates = {
 
 	beam_disabler: {
 		components: ["BeamProjectile"],
+		tree_paths: ["effects/projectiles/beam_disabler"],
 		vars: {
 			components: {
 				Projectile: {

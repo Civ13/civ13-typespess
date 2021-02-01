@@ -180,7 +180,7 @@ module.exports.templates = {
 				],
 			},
 		],
-		tree_paths: ["basic_structures/flora/bush"],
+		tree_paths: ["structures/flora/bush"],
 	},
 	tree: {
 		components: ["Wild"],
@@ -206,7 +206,7 @@ module.exports.templates = {
 					"tree5",],
 			},
 		],
-		tree_paths: ["basic_structures/flora/tree"],
+		tree_paths: ["structures/flora/tree"],
 	},
 	grass: {
 		components: ["Wild"],
@@ -242,7 +242,7 @@ module.exports.templates = {
 					"tall_grass_9",],
 			},
 		],
-		tree_paths: ["basic_structures/flora/grass"],
+		tree_paths: ["structures/flora/grass"],
 	},
 };
 

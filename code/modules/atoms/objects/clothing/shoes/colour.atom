@@ -1,6 +1,7 @@
 
 shoes_black:
 	components: ["FootItem"]
+	tree_paths: ["items/clothing/shoes/shoes_black"]
 	vars:
 		components:
 			Item:
@@ -16,6 +17,7 @@ shoes_black:
 
 shoes_brown:
 	components: ["FootItem"]
+	tree_paths: ["items/clothing/shoes/shoes_brown"]
 	vars:
 		components:
 			Item:
@@ -31,6 +33,7 @@ shoes_brown:
 
 shoes_white:
 	components: ["FootItem"]
+	tree_paths: ["items/clothing/shoes/shoes_white"]
 	vars:
 		components:
 			WearableItem:

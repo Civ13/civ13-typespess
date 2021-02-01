@@ -158,7 +158,7 @@ TableFrame.template = {
 module.exports.templates = {
 	table_frame: {
 		components: ["TableFrame"],
-		tree_paths: ["basic_structures/table_frame"],
+		tree_paths: ["structures/table_frame"],
 	},
 	wood_table_frame: {
 		components: ["TableFrame"],
@@ -176,7 +176,7 @@ module.exports.templates = {
 			icon: "icons/obj/structures/tables/",
 			icon_state: "wood_frame",
 		},
-		tree_paths: ["basic_structures/table_frame/wood"],
+		tree_paths: ["structures/table_frame/wood"],
 	},
 };
 

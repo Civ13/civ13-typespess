@@ -12,7 +12,7 @@ module.exports.templates = {
 			name: "emergency closet",
 			icon_state: "locker",
 		},
-		tree_paths: ["closets/emergency", "basic_structures/emergency_closet"],
+		tree_paths: ["structures/closet/emergency"],
 	},
 	fire_closet: {
 		components: ["Closet"],
@@ -25,7 +25,7 @@ module.exports.templates = {
 			name: "fire-safety closet",
 			icon_state: "locker",
 		},
-		tree_paths: ["closets/fire"],
+		tree_paths: ["structures/closet/fire"],
 	},
 	tool_closet: {
 		components: ["Closet"],
@@ -41,7 +41,7 @@ module.exports.templates = {
 			name: "tool closet",
 			icon_state: "locker",
 		},
-		tree_paths: ["closets/tools"],
+		tree_paths: ["structures/closet/tools"],
 	},
 	radiation_closet: {
 		components: ["Closet"],
@@ -57,7 +57,7 @@ module.exports.templates = {
 			name: "radiation closet",
 			icon_state: "locker",
 		},
-		tree_paths: ["closets/radiation"],
+		tree_paths: ["structures/closet/radiation"],
 	},
 
 };

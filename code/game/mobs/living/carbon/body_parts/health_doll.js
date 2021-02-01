@@ -42,6 +42,7 @@ HealthDoll.template = {
 module.exports.templates = {
 	human_health_doll: {
 		components: ["HealthDoll"],
+		tree_paths: ["effects/screen/human_health_doll"],
 	},
 };
 module.exports.components = { HealthDoll };

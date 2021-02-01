@@ -393,7 +393,7 @@ module.exports.templates = {
 				wrap: 4,
 			},
 		],
-		tree_paths: ["basic_structures/cable"],
+		tree_paths: ["structures/cable"],
 	},
 	stack_cable: {
 		components: ["StackCable"],

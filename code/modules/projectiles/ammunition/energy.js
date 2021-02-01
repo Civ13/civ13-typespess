@@ -30,6 +30,7 @@ EnergyLens.template = {
 module.exports.templates = {
 	energy_lens: {
 		components: ["EnergyLens"],
+		tree_paths: ["items/ammo_casing/energy/energy_lens"],
 	},
 	energy_lens_electrode: {
 		components: ["EnergyLens"],

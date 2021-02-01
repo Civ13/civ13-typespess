@@ -241,6 +241,7 @@ LightTube.template = {
 module.exports.templates = {
 	light: {
 		components: ["LightFixture"],
+		tree_paths: ["structures/lighting/light"],
 		variants: [
 			{
 				type: "single",
@@ -252,6 +253,7 @@ module.exports.templates = {
 	},
 	light_small: {
 		components: ["LightFixture"],
+		tree_paths: ["structures/lighting/light_small"],
 		vars: {
 			icon_state: "lbulb",
 			components: {
@@ -277,9 +279,11 @@ module.exports.templates = {
 	},
 	light_tube: {
 		components: ["LightTube"],
+		tree_paths: ["items/lighting/light_tube"],
 	},
 	light_tube_small: {
 		components: ["LightTube"],
+		tree_paths: ["items/lighting/light_tube"],
 		vars: {
 			components: {
 				LightTube: {

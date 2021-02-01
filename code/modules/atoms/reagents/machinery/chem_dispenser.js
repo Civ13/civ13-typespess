@@ -240,7 +240,7 @@ class ChemDispenserPanel extends Panel {
 module.exports.templates = {
 	chem_dispenser: {
 		components: ["ChemDispenser"],
-		tree_paths: ["machinery/chem_dispenser"],
+		tree_paths: ["structures/machinery/chem_dispenser"],
 	},
 };
 

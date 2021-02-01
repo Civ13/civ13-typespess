@@ -170,6 +170,7 @@ Item.template = {
 module.exports.templates = {
 	cablecuffs: {
 		components: ["Item"],
+		tree_paths: ["items/handcuffs/cablecuffs"],
 		vars: {
 			icon: "icons/obj/misc/",
 			icon_state: "coil",

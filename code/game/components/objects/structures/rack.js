@@ -140,7 +140,7 @@ RackParts.template = {
 module.exports.templates = {
 	rack: {
 		components: ["Rack"],
-		tree_paths: ["basic_structures/rack"],
+		tree_paths: ["structures/rack"],
 	},
 	rack_parts: {
 		components: ["RackParts"],
