@@ -37,7 +37,7 @@ JobLandmark.template = {
 module.exports.templates = {
 	job_landmark: {
 		components: ["JobLandmark"],
-		tree_paths: ["structures/job_landmark"],
+		tree_paths: ["effects/job_landmark"],
 	},
 };
 

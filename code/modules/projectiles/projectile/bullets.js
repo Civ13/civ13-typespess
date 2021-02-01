@@ -38,7 +38,7 @@ module.exports.templates = {
 			name: "bullet",
 			icon_state: "bullet",
 		},
-		tree_paths: ["items/projectile/bullet"],
+		tree_paths: ["effects/projectiles/bullet"],
 	},
 	// .357 (Syndie Revolver)
 	bullet_a357: {
@@ -46,7 +46,7 @@ module.exports.templates = {
 		vars: {
 			name: ".357 bullet",
 		},
-		tree_paths: ["items/projectile/bullet/a357"],
+		tree_paths: ["effects/projectiles/bullet/a357"],
 	},
 	// 7.62 (Nagant Rifle)
 	bullet_a762: {
@@ -54,7 +54,7 @@ module.exports.templates = {
 		vars: {
 			name: "7.62 bullet",
 		},
-		tree_paths: ["items/projectile/bullet/a762"],
+		tree_paths: ["effects/projectiles/bullet/a762"],
 	},
 	bullet_a762_enchanted: {
 		parent_template: "bullet",
@@ -67,7 +67,7 @@ module.exports.templates = {
 			},
 			name: "enchanted 7.62 bullet",
 		},
-		tree_paths: ["items/projectile/bullet/a762_enchanted"],
+		tree_paths: ["effects/projectiles/bullet/a762_enchanted"],
 	},
 	// 7.62x38mmR (Nagant Revolver)
 	bullet_n762: {
@@ -75,7 +75,7 @@ module.exports.templates = {
 		vars: {
 			name: "7.62x38mmR bullet",
 		},
-		tree_paths: ["items/projectile/bullet/n762"],
+		tree_paths: ["effects/projectiles/bullet/n762"],
 	},
 	// .50AE (Desert Eagle)
 	bullet_a50AE: {
@@ -83,7 +83,7 @@ module.exports.templates = {
 		vars: {
 			name: ".50AE bullet",
 		},
-		tree_paths: ["items/projectile/bullet/a50AE"],
+		tree_paths: ["effects/projectiles/bullet/a50AE"],
 	},
 	// .38 (Detective's Gun)
 	bullet_c38: {
@@ -98,7 +98,7 @@ module.exports.templates = {
 			},
 			name: "enchanted 7.62 bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c38"],
+		tree_paths: ["effects/projectiles/bullet/c38"],
 	},
 	// 10mm (Stechkin)
 	bullet_c10mm: {
@@ -111,7 +111,7 @@ module.exports.templates = {
 			},
 			name: "10mm bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c10mm"],
+		tree_paths: ["effects/projectiles/bullet/c10mm"],
 	},
 	bullet_c10mm_ap: {
 		parent_template: "bullet",
@@ -124,7 +124,7 @@ module.exports.templates = {
 			},
 			name: "10mm armor-piercing bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c10mm_ap"],
+		tree_paths: ["effects/projectiles/bullet/c10mm_ap"],
 	},
 	bullet_c10mm_hp: {
 		parent_template: "bullet",
@@ -137,7 +137,7 @@ module.exports.templates = {
 			},
 			name: "10mm hollow-point bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c10mm_hp"],
+		tree_paths: ["effects/projectiles/bullet/c10mm_hp"],
 	},
 	// 9mm (Stechkin APS)
 	bullet_c9mm: {
@@ -150,7 +150,7 @@ module.exports.templates = {
 			},
 			name: "9mm bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c9mm"],
+		tree_paths: ["effects/projectiles/bullet/c9mm"],
 	},
 	bullet_c9mm_ap: {
 		parent_template: "bullet",
@@ -163,7 +163,7 @@ module.exports.templates = {
 			},
 			name: "10mm armor-piercing bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c9mm_ap"],
+		tree_paths: ["effects/projectiles/bullet/c9mm_ap"],
 	},
 	// 4.6x30mm (Autorifles)
 	bullet_c46x30mm: {
@@ -176,7 +176,7 @@ module.exports.templates = {
 			},
 			name: "4.6x30mm bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c46x30mm"],
+		tree_paths: ["effects/projectiles/bullet/c46x30mm"],
 	},
 	bullet_c46x30mm_ap: {
 		parent_template: "bullet",
@@ -189,7 +189,7 @@ module.exports.templates = {
 			},
 			name: "4.6x30mm armor-piercing bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c46x30mm_ap"],
+		tree_paths: ["effects/projectiles/bullet/c46x30mm_ap"],
 	},
 	// .45 (M1911 & C20r)
 	bullet_c45: {
@@ -203,7 +203,7 @@ module.exports.templates = {
 			},
 			name: ".45 bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c45"],
+		tree_paths: ["effects/projectiles/bullet/c45"],
 	},
 	bullet_c45_nostamina: {
 		parent_template: "bullet",
@@ -215,7 +215,7 @@ module.exports.templates = {
 			},
 			name: ".45 bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c45_nostamina"],
+		tree_paths: ["effects/projectiles/bullet/c45_nostamina"],
 	},
 	// 5.56mm (M-90gl Carbine)
 	bullet_a556: {
@@ -228,7 +228,7 @@ module.exports.templates = {
 			},
 			name: "5.56mm bullet",
 		},
-		tree_paths: ["items/projectile/bullet/a556"],
+		tree_paths: ["effects/projectiles/bullet/a556"],
 	},
 	// 1.95x129mm (SAW)
 	bullet_mm195x129: {
@@ -242,7 +242,7 @@ module.exports.templates = {
 			},
 			name: "1.95x129mm bullet",
 		},
-		tree_paths: ["items/projectile/bullet/mm195x129"],
+		tree_paths: ["effects/projectiles/bullet/mm195x129"],
 	},
 	bullet_mm195x129_ap: {
 		parent_template: "bullet",
@@ -255,7 +255,7 @@ module.exports.templates = {
 			},
 			name: "1.95x129mm armor-piercing bullet",
 		},
-		tree_paths: ["items/projectile/bullet/mm195x129_ap"],
+		tree_paths: ["effects/projectiles/bullet/mm195x129_ap"],
 	},
 	bullet_mm195x129_hp: {
 		parent_template: "bullet",
@@ -268,7 +268,7 @@ module.exports.templates = {
 			},
 			name: "1.95x129mm hollow-point bullet",
 		},
-		tree_paths: ["items/projectile/bullet/mm195x129_hp"],
+		tree_paths: ["effects/projectiles/bullet/mm195x129_hp"],
 	},
 	// Shotgun
 	bullet_shotgun_slug: {
@@ -276,7 +276,7 @@ module.exports.templates = {
 		vars: {
 			name: "12g shotgun slug",
 		},
-		tree_paths: ["items/projectile/bullet/shotgun_slug"],
+		tree_paths: ["effects/projectiles/bullet/shotgun_slug"],
 	},
 	bullet_shotgun_beanbag: {
 		parent_template: "bullet",
@@ -289,7 +289,7 @@ module.exports.templates = {
 			},
 			name: "beanbag slug",
 		},
-		tree_paths: ["items/projectile/bullet/shotgun_beanbag"],
+		tree_paths: ["effects/projectiles/bullet/shotgun_beanbag"],
 	},
 	// Scattershot
 	bullet_scattershot: {
@@ -303,7 +303,7 @@ module.exports.templates = {
 			},
 			name: "bullet",
 		},
-		tree_paths: ["items/projectile/bullet/scattershot"],
+		tree_paths: ["effects/projectiles/bullet/scattershot"],
 	},
 	// LMD (exosuits)
 	bullet_lmg: {
@@ -316,7 +316,7 @@ module.exports.templates = {
 			},
 			name: "bullet",
 		},
-		tree_paths: ["items/projectile/bullet/lmg"],
+		tree_paths: ["effects/projectiles/bullet/lmg"],
 	},
 	// Turrets
 	bullet_manned_turret: {
@@ -329,7 +329,7 @@ module.exports.templates = {
 			},
 			name: "bullet",
 		},
-		tree_paths: ["items/projectile/bullet/manned_turret"],
+		tree_paths: ["effects/projectiles/bullet/manned_turret"],
 	},
 	bullet_syndicate_turret: {
 		parent_template: "bullet",
@@ -341,7 +341,7 @@ module.exports.templates = {
 			},
 			name: "bullet",
 		},
-		tree_paths: ["items/projectile/bullet/syndicate_turret"],
+		tree_paths: ["effects/projectiles/bullet/syndicate_turret"],
 	},
 	// C3D (Borgs)
 	bullet_c3d: {
@@ -354,6 +354,6 @@ module.exports.templates = {
 			},
 			name: "bullet",
 		},
-		tree_paths: ["items/projectile/bullet/c3d"],
+		tree_paths: ["effects/projectiles/bullet/c3d"],
 	},
 };
