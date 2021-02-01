@@ -17,6 +17,7 @@ class SimpleMob extends Component {
 		this.animal_class = "wild"; //wild, tamed
 		this.target = null;
 		this.hunting = null;
+		this.a.directional = true;
 	}
 	get mobAI() {
 		return this.a.c.mobAI;
@@ -26,6 +27,7 @@ class SimpleMob extends Component {
 	}
 
 	move_ai (movedir) {
+		this.a.dir = movedir;
 		let newx = this.a.x;
 		let newy = this.a.y;
 		if (movedir == Typespess.NORTH)
@@ -67,6 +69,7 @@ class mobAI extends Component {
 			this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 1000);
 	}
 	do_behaviour() {
+		console.log("running behaviour...")
 		if (this.behaviour == "scared") {
 			if (!this.a.c.SimpleMob.target) { //if no target, wander
 				if (Math.random() <= 25 / 100) {
@@ -135,8 +138,11 @@ module.exports.templates = {
 				mobAI: {
 					behaviour: "scared",
 				},
+				Atom: {
+					directional: true,
+				},
 			},
-			name: "animal",
+			name: "pigeon",
 			density: 1,
 			layer: layers.MOB_LAYER,
 			let_pass_flags: pass_flags.PASSMOB,

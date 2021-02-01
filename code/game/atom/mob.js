@@ -6,6 +6,7 @@ const _key = Symbol("_key");
 const _client = Symbol("_client");
 const _server_to_net = Symbol("_server_to_net");
 const _visible_tiles = Symbol("_visible_tiles");
+const _directional = Symbol("_directional");
 const _screen_set = Symbol("_screen_set");
 const _update_var = Symbol("_update_var");
 const _add_viewing = Symbol("_add_viewing");
@@ -333,7 +334,7 @@ class Mob extends Component {
 		this[_key] = undefined;
 		this[_panel_map] = new Map();
 		this[_eye_to_eyeid] = new WeakMap();
-		this.directional = true;
+		this[_directional]= true;
 
 		/**
 	* @type {Object<string,Typespess.Atom<Mob>>}

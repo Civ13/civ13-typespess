@@ -17,7 +17,6 @@ class IconRenderer {
 		this.change_level = 0;
 		this._offset_x = 0;
 		this._offset_y = 0;
-		this.directional = obj.directional;
 		if (!this.dir) {this.dir = 1;}
 	}
 
@@ -26,7 +25,7 @@ class IconRenderer {
 		if (this.icon_meta || !this.icon) return Promise.resolve();
 		if (this.icon && this.icon_state && (this.icon.search(".png") == -1))
 			{
-				if (this.atom.directional === true) {
+				if (this.atom.directional == true || this.directional == true ) {
 					this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
 				}
 				else {this.icon = `${this.icon}${this.icon_state}.png`;}
@@ -64,7 +63,7 @@ class IconRenderer {
 				this.change_level = CHANGE_LEVEL_NONE;
 				var enqueued_icon = this.icon;
 				if (this.icon && this.icon_state && (this.icon.search(".png") == -1)) {
-						if (this.directional === true) {
+						if (this.directional == true || this.atom.directional == true || (this.icon.search("icons/mob/") != -1 && (this.icon.search("icons/mob/under/") == -1))) {
 							this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
 						}
 						else {
