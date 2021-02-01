@@ -27,24 +27,25 @@ class SimpleMob extends Component {
 	}
 
 	move_ai (movedir) {
+		if (!(movedir in [1,2,4,8])) {movedir = _.sample([1,2,4,8])}
 		this.a.dir = movedir;
-		let newx = this.a.x;
-		let newy = this.a.y;
+		let newx = 0;
+		let newy = 0;
 		if (movedir == Typespess.NORTH)
 			{
-				newy += 1;
+				newy = 1;
 			}
 		else if (movedir == Typespess.SOUTH)
 			{
-				newy -= 1;
+				newy = -1;
 			}
 			else if (movedir == Typespess.EAST)
 			{
-				newx += 1;
+				newx = 1;
 			}
 			else if (movedir == Typespess.WEST)
 			{
-				newx -= 1;
+				newx = -1;
 			}
 
 		this.a.move(newx,newy,"walking");
@@ -72,7 +73,6 @@ class mobAI extends Component {
 		if (this.behaviour == "scared") {
 			if (!this.a.c.SimpleMob.target) { //if no target, wander
 				if (Math.random() <= 0.25) {
-					console.log(`moving ${randomDir}`)
 					this.a.c.SimpleMob.move_ai(_.sample(randomDir));
 				}
 			}
