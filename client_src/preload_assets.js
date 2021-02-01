@@ -45,15 +45,13 @@ var preloadlist = dirIt("../resources/icons/turf/floor/");
 let tdir1 = dirIt("../resources/icons/mob/human_body/");
 let tdir2 = dirIt("../resources/icons/ui/");
 let tdir3 = dirIt("../resources/icons/effects/");
-let tdir4 = dirIt("../resources/icons/mob/human_face/");
 if (tdir1 != null)
 	{preloadlist += tdir1;}
 if (tdir2 != null)
 	{preloadlist += tdir2;}
 if (tdir3 != null)
 	{preloadlist += tdir3;}
-if (tdir4 != null)
-	{preloadlist += tdir4;}
+
 var tloadlist = `var preload_list = [${preloadlist}]; module.exports = preload_list;`;
 fs.writeFile("./code/preloadlist.js", tloadlist, function (err) {
 	if (err) {

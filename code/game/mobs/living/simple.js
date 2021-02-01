@@ -47,7 +47,7 @@ class SimpleMob extends Component {
 				newx -= 1;
 			}
 
-		this.a.move(newx,newy);
+		this.a.move(newx,newy,"walking");
 	}
 }
 
@@ -57,7 +57,7 @@ class mobAI extends Component {
 		this.behaviour = "scared";
 		this.behaviour_timeout = null;
 		if (this.stat != combat_defines.DEAD) {
-			this.behaviour = setTimeout(this.run_behaviour.bind(this), 2000);
+			this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 2000);
 		}
 		this.behaviour_cycle_num = 0;
 	}
@@ -69,10 +69,10 @@ class mobAI extends Component {
 			this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 1000);
 	}
 	do_behaviour() {
-		console.log("running behaviour...")
 		if (this.behaviour == "scared") {
 			if (!this.a.c.SimpleMob.target) { //if no target, wander
-				if (Math.random() <= 25 / 100) {
+				if (Math.random() <= 0.25) {
+					console.log(`moving ${randomDir}`)
 					this.a.c.SimpleMob.move_ai(_.sample(randomDir));
 				}
 			}
@@ -118,18 +118,11 @@ module.exports.components = { SimpleMob , mobAI };
 
 module.exports.templates = {
 	pigeon: {
-		components: ["Mob", "LivingMob", "mobAI"],
+		components: ["Mob", "LivingMob", "mobAI", "SimpleMob"],
 		vars: {
 			components: {
 				LivingMob: {
-					status_flags:
-						combat_defines.CANSTUN |
-						combat_defines.CANWEAKEN |
-						combat_defines.CANPARALYSE |
-						combat_defines.CANPUSH,
 					max_health: 30,
-					stat: combat_defines.CONSCIOUS,
-					nomove_counter: 0,
 					mob_size: mob_defines.MOB_SIZE_SMALL,
 				},
 				Examine: {
@@ -143,12 +136,8 @@ module.exports.templates = {
 				},
 			},
 			name: "pigeon",
-			density: 1,
-			layer: layers.MOB_LAYER,
-			let_pass_flags: pass_flags.PASSMOB,
 			icon: "icons/mob/animals/",
 			icon_state: "pigeon_grey",
-			visible: true,
 			walk_delay: 700,
 
 		tree_paths: ["mobs/animals/pigeon"],
