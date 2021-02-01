@@ -1,4 +1,4 @@
-import fs from "fs";
+const fs = require("fs");
 
 console.log("Loading definitions...");
 let originalLoadedConfigs = [100, 100, 25, 20]; // width, height, water, dirt

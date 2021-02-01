@@ -55,7 +55,7 @@ if (tdir3 != null)
 if (tdir4 != null)
 	{preloadlist += tdir4;}
 var tloadlist = `var preload_list = [${preloadlist}]; module.exports = preload_list;`;
-fs.writeFile("code/preloadlist.js", tloadlist, function (err) {
+fs.writeFile("./code/preloadlist.js", tloadlist, function (err) {
 	if (err) {
 		return console.error(err);
 	}
