@@ -549,8 +549,8 @@ module.exports.templates = {
 		},
 	},
 	screen_oxy: {
+		tree_paths: ["effects/screen/overlays/screen_oxy"],
 		vars: {
-			tree_paths: ["effects/screen/overlays/screen_oxy"],
 			icon: "icons/ui/screen_overlays/",
 			icon_state: "oxydamageoverlay0",
 			screen_loc_x: 0,
