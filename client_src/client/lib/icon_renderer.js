@@ -30,7 +30,12 @@ class IconRenderer {
 					this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
 				}
 				else {
-					this.icon = `${this.icon}${this.icon_state}.png`;
+					if ((this.icon.search(".gif") == -1)) {
+						this.icon = `${this.icon}${this.icon_state}.png`;
+					}
+					else {
+						this.icon = `${this.icon}${this.icon_state}`;
+					}
 				}
 			}
 		return this.client.enqueue_icon_meta_load(this.icon);
@@ -70,7 +75,12 @@ class IconRenderer {
 							this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
 						}
 						else {
-							this.icon = `${this.icon}${this.icon_state}.png`;
+							if ((this.icon.search(".gif") == -1)) {
+								this.icon = `${this.icon}${this.icon_state}.png`;
+							}
+							else {
+								this.icon = `${this.icon}${this.icon_state}`;
+							}
 						}
 					}
 				if (!this.icon) {this.icon = "icons/nothing.png"}
@@ -102,7 +112,7 @@ class IconRenderer {
 		let image = this.icon_meta.__image_object;
 		let tcolor = null;
 		if (this.color) {tcolor = this.color}
-		else if (this.icon_meta.color) {tcolor = this.icon_meta.color};
+		else if (this.icon_meta.color) {tcolor = this.icon_meta.color}
 		if (tcolor) {
 			color_canvas.width = Math.max(
 				color_canvas.width,

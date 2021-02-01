@@ -10,7 +10,6 @@ global.Tworld = new World(global.Tserver);
 
 global.Tserver.resRoot = "./resources/";
 
-console.log(global.workspaceDir);
 global.Tserver.importModule(require("./code/game/area/area_components.js"));
 global.Tserver.importModule(require("./code/game/area/area.js"));
 global.Tserver.importModule(require("./code/game/components/climbable.js"));
@@ -21,6 +20,7 @@ global.Tserver.importModule(require("./code/game/mobs/new_player.js"));
 global.Tserver.importModule(require("./code/game/mobs/dead/ghost.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/living_defense.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/living.js"));
+global.Tserver.importModule(require("./code/game/mobs/living/simple.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/carbon/carbon.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/carbon/slip.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/carbon/body_parts/body_parts.js"));
