@@ -25,7 +25,7 @@ class IconRenderer {
 		if (this.icon_meta || !this.icon) return Promise.resolve();
 		if (this.icon && this.icon_state && (this.icon.search(".png") == -1))
 			{
-				if (this.atom.directional == true || this.directional == true ) {
+				if (this.atom.directional == true || this.directional == true || (this.icon.search("icons/mob/") != -1 && (this.icon.search("icons/mob/under/") == -1))) {
 					this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
 				}
 				else {this.icon = `${this.icon}${this.icon_state}.png`;}

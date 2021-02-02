@@ -477,7 +477,7 @@ class Typespess extends EventEmitter {
 			let client = this.clients[key];
 			var cl;
 			if (client instanceof Client) cl = client;
-			else cl = a.c.Mob.client;
+			else cl = client.a.c.Mob.client;
 			if (!cl) return;
 			if (!cl.next_message.to_chat) cl.next_message.to_chat = [];
 			cl.next_message.to_chat.push(b.join(""));
@@ -596,6 +596,7 @@ Typespess.turn_dir = utils.turn_dir;
 Typespess.dir_dx = utils.dir_dx;
 Typespess.dir_dy = utils.dir_dy;
 Typespess.dir_to = utils.dir_to;
+Typespess.dir_reverse = utils.dir_reverse;
 Typespess.stoplag = utils.stoplag;
 Typespess.sleep = utils.sleep;
 Typespess.visible_message = utils.visible_message;

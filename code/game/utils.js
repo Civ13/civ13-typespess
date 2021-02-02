@@ -208,6 +208,37 @@ module.exports = {
 		return dir;
 	},
 
+	dir_reverse(dir) {
+		switch(dir) {
+			case 1: //North
+				dir = 2;
+				break;
+			case 2: //South
+				dir = 1;
+				break;
+			case 4: //East
+				dir = 8;
+				break;
+			case 8: //West
+				dir = 4;
+				break;
+			case 5: //Northeast
+				dir = 10;
+				break;
+			case 6: //Southeast
+				dir = 9;
+				break;
+			case 9: //Northwest
+				dir = 6;
+				break;
+			case 10: //Southwest
+				dir = 5;
+				break;
+			default:
+				dir = 1;
+		}
+		return dir;
+	},
 	/**
   * Returns a promise that resolves on setImmediate(). Useful for doing expensive things without blocking the node.js event loop.
   * @memberof Typespess

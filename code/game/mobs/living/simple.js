@@ -76,6 +76,14 @@ class mobAI extends Component {
 					this.a.c.SimpleMob.move_ai(_.sample(randomDir));
 				}
 			}
+			else //if target, run away
+				{
+					let target_dir = Typespess.dir_to(this.a.x - this.a.c.SimpleMob.target.x, this.a.y - this.a.c.SimpleMob.target.y);
+					console.log(`target at ${target_dir}`);
+					target_dir = Typespess.dir_reverse(target_dir);
+					console.log(`moving to ${target_dir}`);
+					this.a.c.SimpleMob.move_ai(target_dir);
+				}
 		}
 	}
 }
@@ -119,11 +127,13 @@ module.exports.components = { SimpleMob , mobAI };
 module.exports.templates = {
 	pigeon: {
 		components: ["Mob", "LivingMob", "mobAI", "SimpleMob"],
+		tree_paths: ["mobs/animals/pigeon"],
 		vars: {
 			components: {
 				LivingMob: {
 					max_health: 30,
 					mob_size: mob_defines.MOB_SIZE_SMALL,
+					real_name: "pigeon"
 				},
 				Examine: {
 					desc: "A simple animal. Pretty generic.",
@@ -140,7 +150,6 @@ module.exports.templates = {
 			icon_state: "pigeon_grey",
 			walk_delay: 700,
 
-		tree_paths: ["mobs/animals/pigeon"],
 		}
 	}
 }
