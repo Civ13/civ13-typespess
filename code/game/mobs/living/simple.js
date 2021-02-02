@@ -9,7 +9,7 @@ const pass_flags = require("../../../defines/pass_flags.js");
 const Typespess = require("./../../../../code/game/server.js");
 
 const _ = require("underscore");
-const randomDir = [Typespess.NORTH, Typespess.SOUTH, Typespess.EAST, Typespess.WEST]
+const randomDir = [Typespess.NORTH, Typespess.SOUTH, Typespess.EAST, Typespess.WEST];
 class SimpleMob extends Component {
 	constructor(atom, template) {
 		super(atom, template);
@@ -27,26 +27,24 @@ class SimpleMob extends Component {
 	}
 
 	move_ai (movedir) {
-		if (!(movedir in [1,2,4,8])) {movedir = _.sample([1,2,4,8])}
+		if (!(movedir in [1,2,4,8])) {movedir = _.sample([1,2,4,8]);}
 		this.a.dir = movedir;
 		let newx = 0;
 		let newy = 0;
-		if (movedir == Typespess.NORTH)
-			{
+		switch(movedir) {
+			case Typespess.NORTH:
 				newy = 1;
-			}
-		else if (movedir == Typespess.SOUTH)
-			{
+				break;
+			case Typespess.SOUTH:
 				newy = -1;
-			}
-			else if (movedir == Typespess.EAST)
-			{
+				break;
+			case Typespess.EAST:
 				newx = 1;
-			}
-			else if (movedir == Typespess.WEST)
-			{
+				break;
+			case Typespess.WEST:
 				newx = -1;
-			}
+				break;
+		}
 
 		this.a.move(newx,newy,"walking");
 	}
@@ -152,4 +150,4 @@ module.exports.templates = {
 
 		}
 	}
-}
+};
