@@ -55,7 +55,7 @@ class mobAI extends Component {
 		super(atom, template);
 		this.behaviour = "scared";
 		this.behaviour_timeout = null;
-		if (this.stat != combat_defines.DEAD) {
+		if (this.stat !== combat_defines.DEAD) {
 			this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 2000);
 		}
 		this.behaviour_cycle_num = 0;
@@ -65,13 +65,13 @@ class mobAI extends Component {
 		this.behaviour_cycle_num++;
 		this.do_behaviour(this.behaviour_cycle_num);
 		if (this.stat != combat_defines.DEAD && !this.behaviour_timeout)
-			this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 1000);
+			{this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 1000);}
 	}
 	do_behaviour() {
-		if (this.behaviour == "scared") {
+		if (this.behaviour === "scared") {
 			if (!this.a.c.SimpleMob.target) { //if no target, wander
 				if (Math.random() <= 0.25) {
-					this.a.c.SimpleMob.move_ai(_.sample(randomDir));
+					{this.a.c.SimpleMob.move_ai(_.sample(randomDir));}
 				}
 			}
 			else //if target, run away

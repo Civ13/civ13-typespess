@@ -23,9 +23,9 @@ class IconRenderer {
 	// Returns a promise that is resolved when the icon is fully loaded (json and image)
 	fully_load() {
 		if (this.icon_meta || !this.icon) return Promise.resolve();
-		if (this.icon && this.icon_state && (this.icon.search(".png") == -1))
+		if (this.icon && this.icon_state && (this.icon.search(".png") === -1))
 			{
-				if (this.atom.directional === true || this.directional === true || (this.icon.search("icons/mob/") != -1 && (this.icon.search("icons/mob/under/") == -1))) {
+				if (this.atom.directional === true || this.directional === true || (this.icon.search("icons/mob/") !== -1 && (this.icon.search("icons/mob/under/") === -1))) {
 					this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
 				}
 				else {this.icon = `${this.icon}${this.icon_state}.png`;}
@@ -62,8 +62,8 @@ class IconRenderer {
 			if (this.icon_meta == undefined) {
 				this.change_level = CHANGE_LEVEL_NONE;
 				var enqueued_icon = this.icon;
-				if (this.icon && this.icon_state && (this.icon.search(".png") == -1)) {
-						if (this.directional === true || this.atom.directional === true || (this.icon.search("icons/mob/") != -1 && (this.icon.search("icons/mob/under/") == -1))) {
+				if (this.icon && this.icon_state && (this.icon.search(".png") === -1)) {
+						if (this.directional === true || this.atom.directional === true || (this.icon.search("icons/mob/") !== -1 && (this.icon.search("icons/mob/under/") === -1))) {
 							this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
 						}
 						else {
@@ -99,7 +99,7 @@ class IconRenderer {
 		let image = this.icon_meta.__image_object;
 		let tcolor = null;
 		if (this.color) {tcolor = this.color}
-		else if (this.icon_meta.color) {tcolor = this.icon_meta.color}
+		else if (this.icon_meta.color) {tcolor = this.icon_meta.color;}
 		if (tcolor) {
 			color_canvas.width = Math.max(
 				color_canvas.width,
