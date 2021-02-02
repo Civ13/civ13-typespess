@@ -358,7 +358,6 @@ class LivingMob extends Component {
 		this.send_item_attack_message(item, user, bp && bp.name);
 		if (has_component(this.a, "SimpleMob"))
 		{
-			console.log(`target set as ${user.c.LivingMob.real_name}`)
 			this.a.c.SimpleMob.target = user;
 		}
 		if (item.c.Item.force) {
