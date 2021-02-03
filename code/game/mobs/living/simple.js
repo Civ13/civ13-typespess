@@ -14,6 +14,8 @@ class SimpleMob extends Component {
 	constructor(atom, template) {
 		super(atom, template);
 
+		this.owner = this.a.c.Mob;
+		this.base_icon_state = this.a.icon_state;
 		this.a.c.LivingMob.update_stat = this.update_stat.bind(this);
 		this.animal_class = "wild"; //wild, tamed
 		this.target = null;
@@ -32,8 +34,8 @@ class SimpleMob extends Component {
 		if (this.a.c.LivingMob.stat != combat_defines.DEAD) {
 			if (health <= 0) {
 				this.a.c.LivingMob.stat = combat_defines.DEAD;
-				if (this.a.icon_state.search("_dead") == -1)
-					{this.a.icon_state = `${this.a.icon_state}_dead`;this.a.c.Atom.mark_dirty();}
+				if (this.base_icon_state.search("_dead") == -1)
+					{this.base_icon_state = `${this.base_icon_state}_dead`;this.update_overlays();}
 				return;
 			}
 			if (
@@ -71,8 +73,37 @@ class SimpleMob extends Component {
 				newx = -1;
 				break;
 		}
-
+		this.update_overlays()
 		this.a.move(newx,newy,"walking");
+	}
+
+	update_overlays() {
+		this.a.icon_state = "";
+		this.a.overlays["mob_icon"] = undefined;
+		this.a.overlays["mob_icon"] = this.get_main_overlay();
+	}
+
+	detach() {
+		return;
+	}
+
+	remove_overlays(atom) {
+		atom.overlays["mob_icon"] = undefined;
+	}
+
+	get_main_overlay() {
+		let icodir = this.a.dir;
+		if (icodir == 1)
+			icodir = 2;
+		else if (icodir == 2)
+			icodir = 1;
+		else if (icodir == 4)
+			icodir = 3;
+		else if (icodir == 8)
+			icodir = 4;
+		let overlay = { icon: `${this.a.icon}${this.base_icon_state}/${this.base_icon_state}-dir${icodir}.png` };
+
+		return overlay;
 	}
 }
 
@@ -95,6 +126,7 @@ class mobAI extends Component {
 	}
 	do_behaviour() {
 		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {return;}
+		this.a.c.SimpleMob.update_overlays();
 		if (this.behaviour === "scared") {
 			if (!this.a.c.SimpleMob.target) { //if no target, wander
 				if (Math.random() <= 0.25) {
@@ -103,7 +135,7 @@ class mobAI extends Component {
 			}
 			else { //if target, run away
 					let target_dir = Typespess.dir_to(this.a.x - this.a.c.SimpleMob.target.x, this.a.y - this.a.c.SimpleMob.target.y);
-					target_dir = Typespess.dir_reverse(target_dir);
+					//target_dir = Typespess.dir_reverse(target_dir); //apparently the target_dir is already the reverse dir
 					this.a.c.SimpleMob.move_ai(target_dir);
 				}
 		}
@@ -165,6 +197,9 @@ module.exports.templates = {
 				},
 				Atom: {
 					directional: true,
+				},
+				SimpleMob: {
+					base_icon_state: "pigeon_grey",
 				},
 			},
 			name: "pigeon",

@@ -41,9 +41,9 @@ function dirIt(directory) {
 	}
 }
 
-var preloadlist = dirIt("../resources/icons/turf/floor/");
+var preloadlist = dirIt("../resources/icons/ui/");
 let tdir1 = dirIt("../resources/icons/mob/human_body/");
-let tdir2 = dirIt("../resources/icons/ui/");
+let tdir2 = dirIt("../resources/icons/mob/animals/");
 let tdir3 = dirIt("../resources/icons/effects/");
 if (tdir1 != null)
 	{preloadlist += tdir1;}
