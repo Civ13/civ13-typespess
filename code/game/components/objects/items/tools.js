@@ -189,7 +189,7 @@ Axe.template = {
 	},
 	can_use(prev, tool) {
 		if (!prev()) {return false;}
-		if (tool != "Axe") {return true;}
+		if (tool !== "Axe") {return true;}
 	}
 };
 
@@ -272,7 +272,7 @@ class WeldingTool extends Component {
 
 	can_use(prev, tool) {
 		if (!prev()) {return false;}
-		if (tool != "WeldingTool") {return true;}
+		if (tool !== "WeldingTool") {return true;}
 		return this.is_on && this.get_fuel() > 0;
 	}
 

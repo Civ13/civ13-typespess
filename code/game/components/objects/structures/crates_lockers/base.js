@@ -99,7 +99,7 @@ class LargeContainer extends Component {
 
 	take_contents() {
 		for (let atom of [...this.a.crosses()]) {
-			if (this.insert(atom) == -1) {break;}
+			if (this.insert(atom) === -1) {break;}
 		}
 	}
 
@@ -165,7 +165,7 @@ class LargeContainer extends Component {
 	}
 
 	attack_by(prev, item, user) {
-		if (user.loc == this.a) {return;}
+		if (user.loc === this.a) {return;}
 		if (this.opened) {
 			if (item.c.Item.slot && item.c.Item.slot.can_unequip()) {
 				item.glide_size = 0;

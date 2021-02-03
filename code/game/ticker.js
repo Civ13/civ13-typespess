@@ -36,8 +36,8 @@ class GameTicker extends EventEmitter {
 	}
 	tick() {
 		if (this.busy) {return;}
-		if (this.game_state == "pregame") {
-			if (this.start_at != null) {
+		if (this.game_state === "pregame") {
+			if (this.start_at !== null) {
 				let time_left = this.start_at - this.server.now();
 				/** if (time_left <= 30000 && !this.round_tip_sent) {this.send_tip_of_the_round();
 					this.round_tip_sent = true;

@@ -83,7 +83,7 @@ class AreaBrush extends Component {
 		for (let brush of atom.crosses()) {
 			if (
 				has_component(brush, "AreaBrush") &&
-		brush.c.AreaBrush.area == this.area
+		brush.c.AreaBrush.area === this.area
 			)
 				{return;}
 		}

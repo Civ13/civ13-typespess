@@ -89,7 +89,7 @@ class FootItem extends Component {
 			for (let obj of this.a.crosses()) {
 				if (
 					has_component(obj, "FootprintsDecal") &&
-		obj.c.FootprintsDecal == type
+		obj.c.FootprintsDecal === type
 				) {
 					valid = false;
 					break;

@@ -17,7 +17,7 @@ class Pill extends Component {
 		if (!this.a.c.ReagentHolder.can_consume(target, user)) {return true;}
 
 		(async () => {
-			if (target == user) {
+			if (target === user) {
 				visible_message`<span class='notice'>The ${user} attempts to ${this.apply_method} the ${this.a}</span>`.emit_from(
 					target
 				);

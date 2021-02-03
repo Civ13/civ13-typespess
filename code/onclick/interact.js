@@ -74,7 +74,7 @@ class MobInteract extends Component {
 			: null;
 
 		if (e.atom) {
-			if (active_item == e.atom) {
+			if (active_item === e.atom) {
 				active_item.c.Item.attack_self(this.a);
 				return;
 			}
@@ -123,7 +123,7 @@ class MobInteract extends Component {
 	}
 
 	move_intent() {
-		if (this.move_mode == mob_defines.MOVE_INTENT_RUN) {
+		if (this.move_mode === mob_defines.MOVE_INTENT_RUN) {
 			this.move_mode = mob_defines.MOVE_INTENT_WALK;
 			this.a.c.Eye.screen.move_intent.icon_state = "walking";
 		} else {

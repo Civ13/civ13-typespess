@@ -29,7 +29,7 @@ class Item extends Component {
 	_attack_hand(prev, user) {
 		if (has_component(user, "MobInventory")) {
 			var slot = user.c.MobInventory.slots[user.c.MobInventory.active_hand];
-			if (slot.item != null || !slot.can_accept_item(this.a)) {return prev();}
+			if (slot.item !== null || !slot.can_accept_item(this.a)) {return prev();}
 			slot.item = this.atom;
 			return;
 		}
@@ -49,7 +49,7 @@ class Item extends Component {
 	examine(prev, user) {
 		prev();
 		to_chat`${
-			this.a.gender == "plural" ? "They are" : "It is"
+			this.a.gender === "plural" ? "They are" : "It is"
 		} a ${this.get_size_text()} item.`(user);
 	}
 

@@ -20,7 +20,7 @@ class Smooth extends Component {
 		this.a.icon_state = "";
 		for (let loc of this.a.marginal_locs()) {
 			for (let atom of loc.partial_contents) {
-				if (atom == exclude || atom == this.a) {continue;}
+				if (atom === exclude || atom === this.a) {continue;}
 				if (!has_component(atom, "SmoothGroup")) {continue;}
 				if (
 					!atom.c.SmoothGroup.enabled ||
@@ -86,7 +86,7 @@ class Smooth extends Component {
 		return this[_smooth_with];
 	}
 	set smooth_with(val) {
-		if (val == this[_smooth_with]) {return;}
+		if (val === this[_smooth_with]) {return;}
 		this[_smooth_with] = val;
 		if (this.a) {this.rebuild_smooth();}
 	}
@@ -95,7 +95,7 @@ class Smooth extends Component {
 		return this[_enabled];
 	}
 	set enabled(val) {
-		if (val == this[_enabled]) {return;}
+		if (val === this[_enabled]) {return;}
 		this[_enabled] = val;
 		if (this.a) {this.rebuild_smooth();}
 	}
@@ -155,7 +155,7 @@ class SmoothGroup extends Component {
 		return this[_enabled];
 	}
 	set enabled(val) {
-		if (val == this[_enabled]) {return;}
+		if (val === this[_enabled]) {return;}
 		this[_enabled] = val;
 		if (this.a) {this.moved();}
 	}
@@ -237,7 +237,7 @@ class TGSmooth extends Component {
 			if (corner & 2 && adjacent & (1 << 2)) {dir_string += "s";}
 			if (corner & 4 && adjacent & (1 << 4)) {dir_string += "e";}
 			if (corner & 8 && adjacent & (1 << 8)) {dir_string += "w";}
-			if (dir_string.length == 0) {dir_string = "i";}
+			if (dir_string.length === 0) {dir_string = "i";}
 			else if (dir_string.length >= 2) {
 				if (adjacent & (1 << corner)) {dir_string = "f";}
 			}

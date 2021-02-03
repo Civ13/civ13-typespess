@@ -33,13 +33,13 @@ class JobController {
 		if (mind.restricted_roles.has(job.id)) {return false;}
 		if (
 			latejoin &&
-	job.total_positions != -1 &&
+	job.total_positions !== -1 &&
 	job.current_positions > job.total_positions
 		)
 			{return false;}
 		if (
 			!latejoin &&
-	job.spawn_positions != -1 &&
+	job.spawn_positions !== -1 &&
 	job.current_positions > job.spawn_positions
 		)
 			{return false;}
@@ -49,7 +49,7 @@ class JobController {
 	find_occupation_candidates(job, level) {
 		let candidates = [];
 		if (
-			job.spawn_positions != -1 &&
+			job.spawn_positions !== -1 &&
 	job.current_positions > job.spawn_positions
 		)
 			{return candidates;} // this ain't gonna be useful so let's get out of here.
@@ -65,7 +65,7 @@ class JobController {
 		for (let job of _.shuffle(Object.values(this.jobs))) {
 			if (
 				job &&
-		job.id != "nomad" &&
+		job.id !== "nomad" &&
 		!job.departments.includes("command") &&
 		this.can_be_job(mind, job)
 			) {
@@ -88,7 +88,7 @@ class JobController {
 	}
 
 	divide_occupations() {
-		if (this.unassigned.size == 0) {return false;}
+		if (this.unassigned.size === 0) {return false;}
 
 		// people who want to be assistants, sure, go on.
 		for (let candidate of this.find_occupation_candidates(this.jobs.nomad,1)) {
@@ -112,18 +112,18 @@ class JobController {
 		for (let mind of [...this.unassigned]) {
 			if (
 				!this.can_be_job(mind, this.jobs.nomad) &&
-		mind.character_preferences.jobless_role != "none"
+		mind.character_preferences.jobless_role !== "none"
 			)
 				{this.give_random_job(mind);} // you get to roll for random before everyone else just to be sure you don't get assistant. you're so speshul
 		}
 		for (let mind of [...this.unassigned]) {
-			if (mind.character_preferences.jobless_role == "random")
+			if (mind.character_preferences.jobless_role === "random")
 				{this.give_random_job(mind);}
 		}
 
 		// for those who wanted to be assistant
 		for (let mind of [...this.unassigned]) {
-			if (mind.character_preferences.jobless_role == "nomad")
+			if (mind.character_preferences.jobless_role === "nomad")
 				{this.assign_role(mind, this.jobs.nomad);}
 			else {this.reject_player(mind);}
 		}

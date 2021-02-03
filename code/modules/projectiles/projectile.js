@@ -32,7 +32,7 @@ class Projectile extends Component.Networked {
 	}
 
 	bumped(target, dx, dy, reason) {
-		if (reason != "projectile") {return;}
+		if (reason !== "projectile") {return;}
 		if (this.collide(target)) {
 			this.a.destroy();
 		} else {
@@ -54,7 +54,7 @@ class Projectile extends Component.Networked {
 		}
 		if (this.permuted) {this.permuted.add(this.firer);}
 		this.starting = [this.a.x, this.a.y];
-		if (angle != undefined)
+		if (angle !== undefined)
 		//Does a Box-Muller transform to make the bullet spread a normal distribution.
 		// This is to make it easier to have spread from multiple sources work as you would expect.
 			{this.angle =
@@ -76,7 +76,7 @@ class Projectile extends Component.Networked {
 			return;
 		}
 		let now = this.a.server.now();
-		if (this.last_process == -1) {
+		if (this.last_process === -1) {
 			this.last_process = now;
 			return;
 		}
@@ -85,7 +85,7 @@ class Projectile extends Component.Networked {
 
 		let dist_to_move = (this.speed * dt) / 1000;
 		let rad_angle = (this.angle * Math.PI) / 180;
-		if (this.a.glide_size != this.speed + 1) {this.a.glide_size = this.speed + 1;}
+		if (this.a.glide_size !== this.speed + 1) {this.a.glide_size = this.speed + 1;}
 		this.a.move(
 			Math.cos(rad_angle) * dist_to_move,
 			Math.sin(rad_angle) * dist_to_move,
@@ -99,13 +99,13 @@ class Projectile extends Component.Networked {
 	}
 
 	can_cross(prev, target, dx, dy, reason) {
-		if (reason != "projectile") {return prev();}
+		if (reason !== "projectile") {return prev();}
 		if (this.permuted.has(target))
 		// We've already hit the thing, so let's go through it now.
 			{return true;}
 		if (
-			target == this.target &&
-	(target.density == 1 || has_component(target, "LivingMob"))
+			target === this.target &&
+	(target.density === 1 || has_component(target, "LivingMob"))
 		)
 			{return false;} // We aimed at the thing, so clearly we aimed down on it.
 		return prev();
@@ -194,7 +194,7 @@ class Projectile extends Component.Networked {
 		if (!has_component(target, "Tangible")) {return true;}
 
 		let permutation = target.c.Tangible.bullet_act(this.a, this.def_zone);
-		if (permutation == -1 || this.force_dodge) {
+		if (permutation === -1 || this.force_dodge) {
 			return false;
 		} else {
 			let alt = this.select_target(target);

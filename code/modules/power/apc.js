@@ -75,7 +75,7 @@ class Apc extends Component {
 	}
 
 	area_changed(from, to) {
-		if (from && from.c.AreaPower.apc == this.a) {from.c.AreaPower.apc = null;}
+		if (from && from.c.AreaPower.apc === this.a) {from.c.AreaPower.apc = null;}
 		if (to) {
 			if (to.c.AreaPower.apc)
 				{console.warn(
@@ -147,12 +147,12 @@ class Apc extends Component {
 		let new_icon_state = `apco3-${overlay_num}`;
 		if (
 			!this.a.overlays.apc_charge ||
-	new_icon_state != this.a.overlays.apc_charge.icon_state
+	new_icon_state !== this.a.overlays.apc_charge.icon_state
 		) {
 			this.a.overlays.apc_charge = { icon_state: new_icon_state };
-			if (overlay_num == 0)
+			if (overlay_num === 0)
 				{this.a.c.LightSource.color = lighting.LIGHT_COLOR_RED;}
-			else if (overlay_num == 1)
+			else if (overlay_num === 1)
 				{this.a.c.LightSource.color = lighting.LIGHT_COLOR_BLUE;}
 			else {this.a.c.LightSource.color = lighting.LIGHT_COLOR_GREEN;}
 		}

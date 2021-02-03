@@ -53,7 +53,7 @@ class Client extends EventEmitter {
 		this.socket.on("close", this.disconnect_handler.bind(this));
 
 		if (this.server.dc_mobs[this.key]) {
-			if (this.mob == undefined) {this.mob = this.server.dc_mobs[this.key];}
+			if (this.mob === undefined) {this.mob = this.server.dc_mobs[this.key];}
 			else {this.server.dc_mobs[this.key].c.Mob.key = undefined;}
 		}
 
@@ -152,7 +152,7 @@ class Client extends EventEmitter {
 				if (obj.click_on.ctrlKey) {click_prefix += "ctrl_";}
 				if (obj.click_on.altKey) {click_prefix += "alt_";}
 				if (obj.click_on.shiftKey) {click_prefix += "shift_";}
-				if (obj.click_on.button == 1) {click_prefix += "middle_";}
+				if (obj.click_on.button === 1) {click_prefix += "middle_";}
 
 				obj.click_on.atom = this[_netid_to_atom][obj.click_on.atom];
 				if (this.mob) {obj.click_on.mob = this.mob;}
@@ -209,9 +209,9 @@ class Client extends EventEmitter {
 		if (mob) {
 			this.mob = null;
 		}
-		if (this.server.clients[this.key] == this)
+		if (this.server.clients[this.key] === this)
 			{delete this.server.clients[this.key];}
-		if (this.server.clients_by_name[this.name] == this)
+		if (this.server.clients_by_name[this.name] === this)
 			{delete this.server.clients_by_name[this.name];}
 		if (mob) {
 			mob.c.Mob.key = this.key;
@@ -235,7 +235,7 @@ class Client extends EventEmitter {
 		return this[_mob];
 	}
 	set mob(val) {
-		if (val == this[_mob]) {return;}
+		if (val === this[_mob]) {return;}
 		if (val && !has_component(val, "Mob"))
 			{throw new TypeError("Expected object with Mob component");}
 		if (this[_mob]) {
@@ -314,7 +314,7 @@ class Client extends EventEmitter {
 		} else {
 			var subentry = entry.update;
 			var setname =
-		type == 1 ? "appearance_items" : type == 2 ? "overlays" : "items";
+		type === 1 ? "appearance_items" : type === 2 ? "overlays" : "items";
 			if (!subentry[setname]) {subentry[setname] = new Set();}
 			subentry[setname].add(varname);
 		}
@@ -338,7 +338,7 @@ class Client extends EventEmitter {
 	}
 
 	send_network_updates() {
-		if (!this.socket || this.socket.readyState != this.socket.OPEN) {return;}
+		if (!this.socket || this.socket.readyState !== this.socket.OPEN) {return;}
 		var message = {};
 		for (let netid in this[_atom_net_queue]) {
 			let entry = this[_atom_net_queue][netid];
@@ -456,7 +456,7 @@ class Client extends EventEmitter {
 			message[key] = this.next_message[key];
 			delete this.next_message[key];
 		}
-		if (JSON.stringify(message) == "{}") {return;}
+		if (JSON.stringify(message) === "{}") {return;}
 		message.timestamp = this.server.now();
 		if (this.server.demo_stream && !this.server.demo_stream.closed) {
 			this.server.demo_stream.write(

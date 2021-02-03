@@ -12,7 +12,7 @@ const _ = require("underscore");
 class Destructible extends Component {
 	constructor(atom, template) {
 		super(atom, template);
-		if (this.obj_integrity == null) {this.obj_integrity = this.max_integrity;}
+		if (this.obj_integrity === null) {this.obj_integrity = this.max_integrity;}
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 		this.a.c.Tangible.bullet_act = chain_func(
 			this.a.c.Tangible.bullet_act,
@@ -60,14 +60,14 @@ class Destructible extends Component {
 	}
 
 	run_obj_armor(damage_amount, damage_type, damage_flag) {
-		if (damage_type != "brute" && damage_type != "burn") {return 0;}
+		if (damage_type !== "brute" && damage_type !== "burn") {return 0;}
 		var protection = 0;
 		if (damage_flag && this.armor) {protection = this.armor[damage_flag] || 0;}
 		return Math.floor(damage_amount * (100 - protection) * 0.1) * 0.1;
 	}
 
 	play_attack_sound(damage_amount, damage_type = "brute") {
-		if (damage_type == "brute")
+		if (damage_type === "brute")
 			{if (damage_amount)
 				{new Sound(this.a.server, {
 					path: "sound/weapons/smash.ogg",
@@ -137,12 +137,12 @@ class Destructible extends Component {
 
 	ex_act(prev, severity) {
 		prev();
-		if (severity == 1) {
+		if (severity === 1) {
 			this.obj_integrity = 0;
 			this.a.destroy();
-		} else if (severity == 2) {
+		} else if (severity === 2) {
 			this.take_damage(_.random(100, 250), "brute", "bomb", false);
-		} else if (severity == 3) {
+		} else if (severity === 3) {
 			this.take_damage(_.random(10, 90), "brute", "bomb", false);
 		}
 	}

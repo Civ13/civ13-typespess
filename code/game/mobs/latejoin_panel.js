@@ -31,7 +31,7 @@ class LatejoinPanel extends Panel {
 	message_handler(msg) {
 		if (msg.join) {
 			if (
-				this.client.server.ticker.game_state != "playing" ||
+				this.client.server.ticker.game_state !== "playing" ||
 		this.client.server.ticker.busy
 			)
 				{return;}
@@ -39,7 +39,7 @@ class LatejoinPanel extends Panel {
 			if (!job) {return;}
 			if (
 				job.current_positions >= job.total_positions &&
-		job.total_positions != -1
+		job.total_positions !== -1
 			)
 				{return;}
 			job.current_positions++;

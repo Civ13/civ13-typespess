@@ -72,7 +72,7 @@ class Hearer extends Component {
   * @abstract
   */
 	can_see(atom) {
-		return atom && atom.loc && atom.loc == atom.base_loc;
+		return atom && atom.loc && atom.loc === atom.base_loc;
 	}
 
 	/**
@@ -92,9 +92,9 @@ class Hearer extends Component {
 		var can_hear = this.a.c.Hearer.can_hear(message.emitter);
 		var can_see = this.a.c.Hearer.can_see(message.emitter);
 		if (!can_see && !can_hear) {return;}
-		if (message.type == "see" && !can_see) {return message.blind_message;}
-		if (message.type == "hear" && !can_hear) {return message.deaf_message;}
-		if (message.self_message && message.emitter == this.a)
+		if (message.type === "see" && !can_see) {return message.blind_message;}
+		if (message.type === "hear" && !can_hear) {return message.deaf_message;}
+		if (message.self_message && message.emitter === this.a)
 			{return message.self_message;}
 		return message.message;
 	}

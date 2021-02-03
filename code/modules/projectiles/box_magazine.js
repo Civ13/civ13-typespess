@@ -38,7 +38,7 @@ class AmmoBox extends Component {
 		this.a.c.Examine.desc = `${
 			this.a.template.vars.components.Examine.desc
 		} There are ${this.stored_ammo.length} shell${
-			this.stored_ammo.length == 1 ? "" : "s"
+			this.stored_ammo.length === 1 ? "" : "s"
 		} left.`;
 	}
 
@@ -60,8 +60,8 @@ class AmmoBox extends Component {
 		}
 		if (
 			!ammo_casing ||
-	(this.caliber && ammo_casing.c.AmmoCasing.caliber != this.caliber) ||
-	(!this.caliber && ammo_casing.c.AmmoCasing.casing_type != this.ammo_type)
+	(this.caliber && ammo_casing.c.AmmoCasing.caliber !== this.caliber) ||
+	(!this.caliber && ammo_casing.c.AmmoCasing.casing_type !== this.ammo_type)
 		) {
 			return false;
 		}
@@ -76,7 +76,7 @@ class AmmoBox extends Component {
 				if (!casing.projectile) {
 					//Spent ammo.
 					let idx = this.stored_ammo.indexOf(casing);
-					if (idx != -1) {this.stored_ammo.splice(idx, 1);}
+					if (idx !== -1) {this.stored_ammo.splice(idx, 1);}
 					casing.loc = this.a.loc;
 
 					this.stored_ammo.push(ammo_casing);
@@ -100,7 +100,7 @@ class AmmoBox extends Component {
 		for (let ammo of this.stored_ammo) {
 			ammo.loc = this.a.loc;
 			let idx = this.stored_ammo.indexOf(ammo);
-			if (idx != -1) {this.stored_ammo.splice(idx, 1);}
+			if (idx !== -1) {this.stored_ammo.splice(idx, 1);}
 		}
 	}
 
@@ -120,7 +120,7 @@ class AmmoBox extends Component {
 				let did_load = this.give_round(casing, replace_spent);
 				if (did_load) {
 					let idx = item.c.AmmoBox.stored_ammo.indexOf(casing);
-					if (idx != -1) {item.c.AmmoBox.stored_ammo.splice(idx, 1);}
+					if (idx !== -1) {item.c.AmmoBox.stored_ammo.splice(idx, 1);}
 					num_loaded++;
 				}
 				if (!did_load || !this.multiload) {
@@ -138,7 +138,7 @@ class AmmoBox extends Component {
 		if (num_loaded) {
 			if (!silent) {
 				to_chat`<span class='notice'>You load ${num_loaded} shell${
-					num_loaded == 1 ? "" : "s"
+					num_loaded === 1 ? "" : "s"
 				} into the ${this.a}!</span>`(user);
 				new Sound(this.a.server, {
 					path: "sound/weapons/bulletinsert.ogg",

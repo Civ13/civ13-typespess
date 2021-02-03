@@ -25,7 +25,7 @@ class PreferencesPanel extends Panel {
 
 	message_handler(msg) {
 		if (msg.char_prefs && this.char_prefs) {
-			if (msg.char_prefs.name != null) {
+			if (msg.char_prefs.name !== null) {
 				let new_name = CharacterPreferences.reject_bad_name(
 					msg.char_prefs.name
 				);
@@ -35,7 +35,7 @@ class PreferencesPanel extends Panel {
 						msg.char_prefs.name,
 						{ trim: false }
 					);
-					if (corrected != msg.char_prefs.name) {
+					if (corrected !== msg.char_prefs.name) {
 						this.send_message({
 							name_correction: [msg.char_prefs.name, corrected],
 						});
@@ -45,15 +45,15 @@ class PreferencesPanel extends Panel {
 					this.send_message({ name_valid: false });
 				}
 			}
-			if (msg.char_prefs.gender != null) {
-				this.char_prefs.gender = msg.char_prefs.gender == "female" ? "female" : "male";
+			if (msg.char_prefs.gender !== null) {
+				this.char_prefs.gender = msg.char_prefs.gender === "female" ? "female" : "male";
 			}
-			if (msg.char_prefs.age != null) {
+			if (msg.char_prefs.age !== null) {
 				let age = +msg.char_prefs.age || 0;
 				age = Math.min(Math.max(17, age), 85);
 				this.char_prefs.age = age;
 			}
-			if (msg.char_prefs.hair_style != null) {
+			if (msg.char_prefs.hair_style !== null) {
 				let hair_obj = sprite_accessories.hair[msg.char_prefs.hair_style];
 				if (
 					hair_obj && Object.prototype.hasOwnProperty.call(sprite_accessories.hair,msg.char_prefs.hair_style) && (!hair_obj.gender || hair_obj.gender.includes(this.char_prefs.gender))
@@ -61,11 +61,11 @@ class PreferencesPanel extends Panel {
 					{this.char_prefs.hair_style = msg.char_prefs.hair_style;}
 			}
 
-			if (msg.char_prefs.skin_tone != null) {
+			if (msg.char_prefs.skin_tone !== null) {
 				if (Object.prototype.hasOwnProperty.call(skin_tones,msg.char_prefs.skin_tone))
 					{this.char_prefs.skin_tone = msg.char_prefs.skin_tone;}
 			}
-			if (msg.char_prefs.hair_color != null) {
+			if (msg.char_prefs.hair_color !== null) {
 				if (Object.prototype.hasOwnProperty.call(hair_colors,msg.char_prefs.hair_color))
 					{this.char_prefs.hair_color = msg.char_prefs.hair_color;}
 			}
@@ -77,15 +77,15 @@ class PreferencesPanel extends Panel {
 		if (msg.job_preferences) {
 			for (let [key, setting] of Object.entries(msg.job_preferences)) {
 				setting = Math.max(Math.min(Math.round(+setting || 0), 3), 0); // sanitize the value
-				if (key == "nomad") {setting = +!!setting;} // turn it into 0/1 deal
+				if (key === "nomad") {setting = +!!setting;} // turn it into 0/1 deal
 				if (!this.client.server.job_controller.jobs[key]) {continue;} // oi that job doesnt exist ree
-				if (setting == 0) {delete this.char_prefs.job_preferences[key];}
+				if (setting === 0) {delete this.char_prefs.job_preferences[key];}
 				else {this.char_prefs.job_preferences[key] = setting;}
-				if (setting == 3) {
+				if (setting === 3) {
 					for (let [otherjob, othersetting] of Object.entries(
 						this.char_prefs.job_preferences
 					)) {
-						if (otherjob != key && othersetting == 3) {
+						if (otherjob !== key && othersetting === 3) {
 							this.char_prefs.job_preferences[otherjob] = 2;
 						}
 					}

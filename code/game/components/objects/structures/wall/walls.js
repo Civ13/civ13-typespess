@@ -83,7 +83,7 @@ class Wall extends Component {
 	}
 
 	ex_act(prev, severity) {
-		if (severity == 2) {
+		if (severity === 2) {
 			if (Math.random() < 0.5) {
 				this.a.c.Destructible.deconstruct(false);
 			} else {
@@ -92,7 +92,7 @@ class Wall extends Component {
 				sheets.loc = this.a.fine_loc;
 				this.a.destroy();
 			}
-		} else if (severity == 3) {
+		} else if (severity === 3) {
 			if (Math.random() < this.hardness) {
 				this.a.c.Destructible.deconstruct(false);
 			}

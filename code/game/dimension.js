@@ -135,8 +135,8 @@ class Location {
   * @returns {Location}
   */
 	get_step(dir) {
-		if ((dir & 3) == 3) {dir &= ~3;}
-		if ((dir & 12) == 12) {dir &= ~12;}
+		if ((dir & 3) === 3) {dir &= ~3;}
+		if ((dir & 12) === 12) {dir &= ~12;}
 		var cached = this[_step_cache][dir];
 		if (cached) {return cached;}
 		var newx = this.x;

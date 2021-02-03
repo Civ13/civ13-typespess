@@ -16,7 +16,7 @@ class PowerController {
 	}
 
 	async tick() {
-		if (this.server.ticker.game_state != "pregame") {
+		if (this.server.ticker.game_state !== "pregame") {
 			this.last_tick_time = this.server.now();
 			let dt = 1;
 			for (let powernet of _.shuffle([...this.powernets])) {

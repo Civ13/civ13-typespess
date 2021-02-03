@@ -21,21 +21,21 @@ module.exports = {
 			if (!Object.prototype.hasOwnProperty.call(b,key)) {continue;}
 			if (
 				typeof b[key] === "object" &&
-		b[key] != null &&
+		b[key] !== null &&
 		!(b[key] instanceof Array) &&
 		(!Object.prototype.hasOwnProperty.call(a,key) ||
 		typeof a[key] !== "object" ||
-		a[key] == null ||
+		a[key] === null ||
 		a[key] instanceof Array)
 			)
 				{a[key] = {};}
 			if (Object.prototype.hasOwnProperty.call(a,key)) {
 				if (
 					typeof a[key] === "object" &&
-		a[key] != null &&
+		a[key] !== null &&
 		!(a[key] instanceof Array) &&
 		typeof b[key] === "object" &&
-		b[key] != null &&
+		b[key] !== null &&
 		!(b[key] instanceof Array)
 				)
 					{module.exports.weak_deep_assign(a[key], b[key]);}
@@ -78,7 +78,7 @@ module.exports = {
   * @returns {Function}
   */
 	chain_func(func1, func2) {
-		if (func2 == undefined) {throw new Error("Chaining undefined function!");}
+		if (func2 === undefined) {throw new Error("Chaining undefined function!");}
 		function chained_func(...args) {
 			while (
 				chained_func[_chain_parent] &&
@@ -182,7 +182,7 @@ module.exports = {
 			[0, 10, 5, 15, 9, 8, 1, 15, 6, 2, 4, 15, 15, 15, 15, 15],
 			[0, 8, 4, 12, 1, 9, 5, 13, 2, 10, 6, 14, 3, 11, 7, 15],
 			[0, 9, 6, 15, 5, 1, 4, 15, 10, 8, 2, 15, 15, 15, 15, 15],
-		][Math.floor(angle / 90) * 2 + (angle % 90 == 0 ? 0 : 1)][dir];
+		][Math.floor(angle / 90) * 2 + (angle % 90 === 0 ? 0 : 1)][dir];
 	},
 
 	dir_dx(dir) {
@@ -348,12 +348,12 @@ module.exports = {
 		var out_str = "";
 		for (let i = 0; i < strs.length; i++) {
 			var pre_tag = strs[i];
-			if (i == strs.length - 1) {
+			if (i === strs.length - 1) {
 				out_str += pre_tag;
 				continue;
 			}
 			var str_tag = "" + tags[i];
-			var is_proper = str_tag.length && str_tag[0] == str_tag[0].toUpperCase();
+			var is_proper = str_tag.length && str_tag[0] === str_tag[0].toUpperCase();
 			var gender = "neuter";
 			if (tags[i] instanceof Atom) {
 				if (tags[i].force_improper) {is_proper = false;}
@@ -365,7 +365,7 @@ module.exports = {
 					/(^|[ \t.,>])(?:the|a) (?=(?:[ \t]|(?:<[^>]+>))*$)/i,
 					"$1"
 				);}
-			else if (gender == "plural")
+			else if (gender === "plural")
 				{pre_tag = pre_tag.replace(
 					/((?:^|[ \t.,>]))a(?= (?:[ \t]|(?:<[^>]+>))*$)/i,
 					"$1some"
@@ -390,11 +390,11 @@ module.exports = {
   */
 	escape_html(str) {
 		return str.replace(/[&<>"']/gi, (chr) => {
-			if (chr == "&") {return "&amp;";}
-			if (chr == "<") {return "&lt;";}
-			if (chr == ">") {return "&gt;";}
-			if (chr == "\"") {return "&quot;";}
-			if (chr == "'") {return "&#039;";}
+			if (chr === "&") {return "&amp;";}
+			if (chr === "<") {return "&lt;";}
+			if (chr === ">") {return "&gt;";}
+			if (chr === "\"") {return "&quot;";}
+			if (chr === "'") {return "&#039;";}
 		});
 	},
 

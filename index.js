@@ -184,7 +184,7 @@ if(global.is_bs_editor_env) {
 	const http_handler = (req, res) => {
 		const done = finalhandler(req, res);
 		const url_obj = url.parse(req.url, true);
-		if (url_obj.pathname == "/status") {
+		if (url_obj.pathname === "/status") {
 			res.setHeader("Access-Control-Allow-Origin", "*");
 			res.writeHead(200, { "Content-Type": "application/json" });
 			const clients = [...Object.keys(global.Tserver.clients)];
@@ -216,7 +216,7 @@ if(global.is_bs_editor_env) {
 				socket.once("data", (buffer) => {
 					socket.pause();
 					const byte = buffer[0];
-					const protocol = byte == 22 ? "https" : "http";
+					const protocol = byte === 22 ? "https" : "http";
 					const proxy = proxies[protocol];
 					proxy.emit("connection", socket);
 					socket.unshift(buffer);
@@ -241,7 +241,7 @@ if(global.is_bs_editor_env) {
 
 	//this signals the continuous integration program to exit.
 	const args = process.argv;
-	if (args[2] == "test") {
+	if (args[2] === "test") {
 		console.log("test passed.");
 		process.exit(0);}
 	}

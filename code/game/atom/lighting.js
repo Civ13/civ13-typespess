@@ -112,7 +112,7 @@ class LightSource extends Component {
 					return;
 				}
 				this[_lighting_object].glide_size =
-		this.a.base_mover == this.last_base_mover
+		this.a.base_mover === this.last_base_mover
 			? this.a.base_mover.glide_size
 			: 0;
 				this[_lighting_object].fine_loc = this.a.base_mover.fine_loc;
@@ -134,7 +134,7 @@ class LightSource extends Component {
 	}
 	set enabled(val) {
 		let old = this[_enabled];
-		if (old == val) {return;}
+		if (old === val) {return;}
 		this[_enabled] = val;
 		this.update_lighting_object();
 		this.emit("enabled_changed", old, val);
@@ -150,7 +150,7 @@ class LightSource extends Component {
 	}
 	set color(val) {
 		let old = this[_color];
-		if (old == val) {return;}
+		if (old === val) {return;}
 		this[_color] = val;
 		this.update_lighting_object();
 		this.emit("color_changed", old, val);
@@ -166,7 +166,7 @@ class LightSource extends Component {
 	}
 	set radius(val) {
 		let old = this[_radius];
-		if (old == val) {return;}
+		if (old === val) {return;}
 		this[_radius] = val;
 		this.update_lighting_object();
 		this.emit("radius_changed", old, val);

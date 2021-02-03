@@ -69,9 +69,9 @@ class Eye extends Component {
 			{},
 			{
 				set: (target, key, value) => {
-					if (value != undefined && !is_atom(value))
+					if (value !== undefined && !is_atom(value))
 						{throw new TypeError(`${value} is not an atom`);}
-					if (target[key] == value) {return true;}
+					if (target[key] === value) {return true;}
 					if (target[key]) {
 						this[_screen_set].delete(target[key]);
 						if (!this.can_see(target[key])) {this[_remove_viewing](target[key]);}
@@ -132,7 +132,7 @@ class Eye extends Component {
 		delete this[_viewing][netid];
 		delete this[_server_to_net][item.object_id];
 		var idx;
-		if ((idx = item[_viewers].indexOf(this.atom)) != -1)
+		if ((idx = item[_viewers].indexOf(this.atom)) !== -1)
 			{item[_viewers].splice(idx, 1);}
 
 		this.enqueue_delete_atom(netid);
@@ -353,9 +353,9 @@ class Mob extends Component {
 					set: (target, property, value) => {
 						property = "" + property;
 						if (value instanceof Eye) {value = value.atom;}
-						if (value != undefined && !has_component(value, "Eye"))
+						if (value !== undefined && !has_component(value, "Eye"))
 							{throw new TypeError("Expected object with Eye component");}
-						if (value && value.c.Eye[_observers].indexOf(this) != -1)
+						if (value && value.c.Eye[_observers].indexOf(this) !== -1)
 							{return false;}
 						var oldEye = target[property];
 						if (oldEye && this.client) {
@@ -369,7 +369,7 @@ class Mob extends Component {
 						}
 						if (oldEye) {
 							var idx = oldEye.c.Eye[_observers].indexOf(this.a);
-							if (idx != -1) {
+							if (idx !== -1) {
 								oldEye.c.Eye[_observers].splice(idx, 1);
 							}
 						}
@@ -419,7 +419,7 @@ class Mob extends Component {
 	}
 	set key(val) {
 		this.a.server.dc_mobs[this[_key]] = undefined;
-		if (val && val != "") {
+		if (val && val !== "") {
 			if (this.a.server.clients[val]) {this.client = this.a.server.clients[val];}
 			else {
 				if (this.a.server.dc_mobs[val])
@@ -471,8 +471,8 @@ class Mob extends Component {
 	basic_panel_read_checks(atom, panel) {
 		if (typeof panel === "object") {
 			if (
-				panel.client != this.client ||
-		(panel.bound_mob && panel.bound_mob != this.a)
+				panel.client !== this.client ||
+		(panel.bound_mob && panel.bound_mob !== this.a)
 			)
 				{return false;}
 		}

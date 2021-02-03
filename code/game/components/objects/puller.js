@@ -16,18 +16,18 @@ class Puller extends Component {
 
 	ctrl_click_on(e) {
 		if (e.atom) {
-			if (this.pulling == e.atom) {this.pulling = null;}
+			if (this.pulling === e.atom) {this.pulling = null;}
 			else {this.pulling = e.atom;}
 		}
 	}
 
 	can_pull(target) {
 		return (
-			target != this.a &&
+			target !== this.a &&
 	has_component(target, "Tangible") &&
 	!target.c.Tangible.anchored &&
-	this.a.z == target.z &&
-	this.a.dim == target.dim &&
+	this.a.z === target.z &&
+	this.a.dim === target.dim &&
 	Math.max(Math.abs(this.a.x - target.x), Math.abs(this.a.y - target.y)) <=
 		1.50001 &&
 	this.a.loc &&
@@ -44,14 +44,14 @@ class Puller extends Component {
 
 	moved(movement) {
 		if (
-			this[_pulling] == null ||
+			this[_pulling] === null ||
 	!this.a.loc ||
 	!this.a.loc.is_base_loc ||
 	!this.pulling.loc ||
 	!this.pulling.loc.is_base_loc ||
 	!movement.offset ||
-	movement.offset.z != 0 ||
-	this[_pulling] == null
+	movement.offset.z !== 0 ||
+	this[_pulling] === null
 		)
 			{return;}
 		var oldx = this.a.x - movement.offset.x;
@@ -89,11 +89,11 @@ class Puller extends Component {
 	}
 
 	set pulling(val) {
-		if (val != null && !this.can_pull(val)) {
-			if (val != this[_pulling]) {return;}
+		if (val !== null && !this.can_pull(val)) {
+			if (val !== this[_pulling]) {return;}
 			val = null;
 		}
-		if (val == this[_pulling]) {return;}
+		if (val === this[_pulling]) {return;}
 		if (this[_pulling]) {this[_pulling].c.Tangible.puller = null;}
 		this[_pulling] = val;
 		if (val) {

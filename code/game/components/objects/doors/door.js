@@ -152,7 +152,7 @@ class Door extends Component {
 
 	set locked(val) {
 		val = !!val;
-		if (val == this[_locked]) {return;}
+		if (val === this[_locked]) {return;}
 		this[_locked] = val;
 		if (val) {this.emit("locked");}
 		else {this.emit("unlocked");}

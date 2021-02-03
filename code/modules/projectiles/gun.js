@@ -21,7 +21,7 @@ class Gun extends Component {
 		if (this.firing_burst || !target.loc || !target.loc.is_base_loc) {return;}
 		if (prox) {
 			if (!has_component(target, "LivingMob")) {return;}
-			if (target == user && user.c.MobInteract.zone_sel != "mouth")
+			if (target === user && user.c.MobInteract.zone_sel !== "mouth")
 			//so we can't shoot ourselves (unless mouth selected)
 				{return;}
 		}
@@ -34,16 +34,16 @@ class Gun extends Component {
 		}
 
 		if (prox) {
-			if (user.zone_selected == "mouth") {
+			if (user.zone_selected === "mouth") {
 				// TODO suicide
 				return;
 			}
 		}
 
-		if (this.weapon_weight == combat_defines.WEAPON_HEAVY) {
+		if (this.weapon_weight === combat_defines.WEAPON_HEAVY) {
 			let hands = 0;
 			for (let hand of user.c.MobInventory.hand_slots()) {
-				if (!hand.item || hand.item == this.a) {hands++;}
+				if (!hand.item || hand.item === this.a) {hands++;}
 			}
 			if (hands < 2) {
 				to_chat`<span class='userdanger'>You need both hands free to fire the ${this.a}!</span>`(
@@ -78,7 +78,7 @@ class Gun extends Component {
 		let angle = angle_offset + (Math.atan2(dy, dx) * 180) / Math.PI;
 		if (
 			!this.a.c.Item.slot ||
-	this.a.c.Item.slot.mob != user ||
+	this.a.c.Item.slot.mob !== user ||
 	!this.a.c.Item.slot.props.is_hand_slot
 		) {
 			return false;

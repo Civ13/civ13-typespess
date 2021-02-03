@@ -46,7 +46,7 @@ class PowerNode extends Component {
 	reconnect() {
 		if (this.cable) {
 			let idx = this.cable.c.Cable.nodes.indexOf(this.a);
-			if (idx != -1) {this.cable.c.Cable.nodes.splice(idx, 1);}
+			if (idx !== -1) {this.cable.c.Cable.nodes.splice(idx, 1);}
 			this.cable = null;
 		}
 		if (this.powernet) {
@@ -55,7 +55,7 @@ class PowerNode extends Component {
 		for (let crosser of this.a.crosses()) {
 			if (
 				has_component(crosser, "Cable") &&
-		crosser.c.Cable.d1 == 0 &&
+		crosser.c.Cable.d1 === 0 &&
 		crosser.c.Cable.powernet &&
 		crosser.crosses(this.a, {
 			bounds_x: 0.5,

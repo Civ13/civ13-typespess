@@ -71,7 +71,7 @@ class AreaArrivals extends Component {
 	end_touch(item) {
 		if (has_component(item, "Chair")) {
 			let idx = this.chairs.indexOf(item);
-			if (idx != -1) {this.chairs.splice(idx, 1);}
+			if (idx !== -1) {this.chairs.splice(idx, 1);}
 		}
 	}
 }

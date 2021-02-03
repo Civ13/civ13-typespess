@@ -37,14 +37,14 @@ var templateArray = {};
 if(global.is_bs_editor_env) {
 	var appDir = global.workspaceDir;
 for (const f of traverseDir(`${appDir}code/`)) {
-	if (getFileExtension(f) == "atom") {
+	if (getFileExtension(f) === "atom") {
 		const nobj = CSON.parse(fs.readFileSync(f, "utf8"));
 		Object.assign(templateArray,nobj);
 	}
 }
 } else {
 	for (const f of traverseDir("./code/")) {
-		if (getFileExtension(f) == "atom") {
+		if (getFileExtension(f) === "atom") {
 			const nobj = CSON.parse(fs.readFileSync(f, "utf8"));
 			Object.assign(templateArray,nobj);
 		}

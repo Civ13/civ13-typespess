@@ -20,10 +20,10 @@ class FloorBase extends Component {
 	ex_act(prev, severity) {
 		prev();
 		let shielded = this.is_shielded();
-		if (severity != 1 && shielded) {return;}
-		if (severity == 1) {
+		if (severity !== 1 && shielded) {return;}
+		if (severity === 1) {
 			this.a.destroy();
-		} else if (severity == 2) {
+		} else if (severity === 2) {
 			if (Math.random() < 0.65) {
 				this.a.destroy();
 			} else {

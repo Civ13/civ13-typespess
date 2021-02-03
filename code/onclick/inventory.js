@@ -517,7 +517,7 @@ class MobInventory extends Component {
 				let verb = slot.props.wear_verb
 					? `${t_is} ${slot.props.wear_verb}`
 					: t_has;
-				let article = slot.item.gender == "plural" ? "some" : "a";
+				let article = slot.item.gender === "plural" ? "some" : "a";
 				let noun = slot.props.wear_noun
 					? ` ${slot.props.wear_prep} ${t_his} ${slot.props.wear_noun}`
 					: "";
@@ -559,7 +559,7 @@ class MobInventory extends Component {
 	}
 	set throw_mode(val) {
 		val = !!val;
-		if (this[_throw_mode] == val) {return;}
+		if (this[_throw_mode] === val) {return;}
 		this[_throw_mode] = val;
 		this.a.c.Eye.screen.throw_item.icon_state = val
 			? "act_throw_on"
@@ -581,7 +581,7 @@ class MobInventory extends Component {
 	}
 
 	swap_hands() {
-		if (this.active_hand == "lhand") {
+		if (this.active_hand === "lhand") {
 			this.active_hand = "rhand";
 		} else {
 			this.active_hand = "lhand";
@@ -615,7 +615,7 @@ class MobInventory extends Component {
 	}
 	set nohold_counter(val) {
 		let old = this[_nohold_counter];
-		if (val == old) {return;}
+		if (val === old) {return;}
 		this[_nohold_counter] = val;
 		if (val && !old) {
 			for (let slot of Object.values(this.slots)) {
@@ -626,7 +626,7 @@ class MobInventory extends Component {
 
 	can_use_guns(gun) {
 		if (
-			gun.c.Gun.trigger_guard != combat_defines.TRIGGER_GUARD_ALLOW_ALL &&
+			gun.c.Gun.trigger_guard !== combat_defines.TRIGGER_GUARD_ALLOW_ALL &&
 	!this.a.c.MobInteract.advanced_tool_user
 		) {
 			to_chat`<span class='warning'>You don't have the dexterity to do this!</span>`(
@@ -722,8 +722,8 @@ class MobInventory extends Component {
 	mouse_dragged_to(e) {
 		let user = e.mob;
 		if (
-			e.from.atom == this.a &&
-	e.to.atom == user &&
+			e.from.atom === this.a &&
+	e.to.atom === user &&
 	(!has_component(e.mob, "Tangible") || e.mob.c.Tangible.can_reach(this.a))
 		) {
 			// time for some fun strippy times
@@ -936,7 +936,7 @@ class Slot extends EventEmitter {
 
 	clicked(e) {
 		if (this.props.is_hand_slot) {
-			if (this.mob.c.MobInventory.active_hand == this.id) {
+			if (this.mob.c.MobInventory.active_hand === this.id) {
 				if (this.item) {this.item.c.Item.attack_self(this.mob);}
 			} else {
 				this.mob.c.MobInventory.active_hand = this.id;
@@ -965,7 +965,7 @@ class Slot extends EventEmitter {
 			this.props.is_hand_slot &&
 	this.can_accept_item(e.from.atom) &&
 	e.from.atom.c.Item.slot &&
-	e.from.atom.c.Item.slot.mob == this.mob &&
+	e.from.atom.c.Item.slot.mob === this.mob &&
 	this.mob.c.MobInteract.can_interact() &&
 	!this.item
 		) {
@@ -985,13 +985,13 @@ class Slot extends EventEmitter {
 				{icodir = 3;}
 			else if (icodir ===8)
 				{icodir = 4;}
-			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png") != -1)
+			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png") !== -1)
 				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("1.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("2.png") != -1)
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("2.png") !== -1)
 				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("2.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("3.png") != -1)
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("3.png") !== -1)
 				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("3.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("4.png") != -1)
+			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("4.png") !== -1)
 				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("4.png",`${icodir}.png`);}
 		}
 		if (this.props.clothing_slot) {
@@ -1005,13 +1005,13 @@ class Slot extends EventEmitter {
 				{icodir = 3;}
 			else if (icodir ===8)
 				{icodir = 4;}
-			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("1.png") != -1)
+			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("1.png") !== -1)
 				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("1.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("2.png") != -1)
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("2.png") !== -1)
 				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("2.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("3.png") != -1)
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("3.png") !== -1)
 				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("3.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("4.png") != -1)
+			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("4.png") !== -1)
 				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("4.png",`${icodir}.png`);}
 
 		}	
@@ -1094,7 +1094,7 @@ class Slot extends EventEmitter {
 		return this[_item];
 	}
 	set item(value) {
-		if (!has_component(value, "Item") && value != undefined)
+		if (!has_component(value, "Item") && value !== undefined)
 			{throw new TypeError(
 				`${value} is not an atom with item component or undefined!`
 			);}
@@ -1110,7 +1110,7 @@ class Slot extends EventEmitter {
 			this[_item].loc = this.mob.fine_loc;
 			this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = undefined;
 			for (let slot of Object.values(this.mob.c.MobInventory.slots)) {
-				if (slot.props.requires_slot == this.id) {
+				if (slot.props.requires_slot === this.id) {
 					if (slot.can_unequip()) {slot.item = null;}
 				}
 			}
@@ -1176,7 +1176,7 @@ class Slot extends EventEmitter {
 		if (olditem) {olditem.c.Item.emit("unequipped", this);}
 		this.emit("item_changed", olditem, value);
 		this.mob.c.MobInventory.emit("slot_item_changed", this.id, olditem, value);
-		if (this.id == this.mob.c.MobInventory.active_hand)
+		if (this.id === this.mob.c.MobInventory.active_hand)
 			{this.mob.c.MobInventory.emit("active_hand_item_changed", olditem, value);}
 		if (value) {value.c.Item.emit("equipped", this);}
 		if (has_component(this.mob, "LivingMob")) {

@@ -2,15 +2,15 @@
 
 class StatusEffect {
 	apply_to(mob, props = {}) {
-		if (this.mob && this.mob != mob)
+		if (this.mob && this.mob !== mob)
 			{throw new Error(
 				`This status effect has already been applied to ${this.mob}! Can't apply to ${mob} as well. Make a new status effect instead`
 			);}
 		let overwriting = mob.c.LivingMob.effects[this.constructor.name];
-		if (overwriting && overwriting != this) {
-			if (this.overwrite_mode == "update") {
+		if (overwriting && overwriting !== this) {
+			if (this.overwrite_mode === "update") {
 				return overwriting.apply_to(mob, props);
-			} else if (this.overwrite_mode == "replace") {
+			} else if (this.overwrite_mode === "replace") {
 				overwriting.unapply();
 			} else {
 				throw new Error(`Unrecognized overwrite mode ${this.overwrite_mode}`);
@@ -24,7 +24,7 @@ class StatusEffect {
 
 	unapply() {
 		if (!this.mob) {return;}
-		if (this.mob.c.LivingMob.effects[this.constructor.name] == this)
+		if (this.mob.c.LivingMob.effects[this.constructor.name] === this)
 			{this.mob.c.LivingMob.effects[this.constructor.name] = null;}
 		this.mob = null;
 	}

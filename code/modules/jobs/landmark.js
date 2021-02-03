@@ -17,7 +17,7 @@ class JobLandmark extends Component {
 		let job_landmarks = this.a.server.job_controller.job_landmarks;
 		if (!job_landmarks[this.a.name]) {return;}
 		const idx = job_landmarks[this.a.name].indexOf(this.a);
-		if (idx != -1) {job_landmarks[this.a.name].splice(idx, 1);}
+		if (idx !== -1) {job_landmarks[this.a.name].splice(idx, 1);}
 	}
 }
 

@@ -17,7 +17,7 @@ class Database {
 		console.log("Authenticating "+tname+"...");
 		var i = await this.db.get(tname);
 		let accepted = {value: false, name: tname};
-		if (i.password == tpassword && i.name == tname && i.banned === false)
+		if (i.password === tpassword && i.name === tname && i.banned === false)
 			{console.log("	Accepted");accepted.value=true;}
 		else
 			{console.log("	Rejected");accepted.value=false;}

@@ -57,7 +57,7 @@ class Squeak extends Component {
 	}
 
 	equipped(slot) {
-		if (slot.id == "shoes") {slot.mob.on("moved", this.step_squeak);}
+		if (slot.id === "shoes") {slot.mob.on("moved", this.step_squeak);}
 	}
 	unequipped(slot) {
 		slot.mob.removeListener("moved", this.step_squeak);

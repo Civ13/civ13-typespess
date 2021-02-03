@@ -21,7 +21,7 @@ class NewPlayerPanel extends Panel {
 
 	opened() {
 		this.send_message({
-			latejoin: this.client.server.ticker.game_state != "pregame",
+			latejoin: this.client.server.ticker.game_state !== "pregame",
 			start_at: this.client.server.ticker.start_at,
 		});
 		this.client.server.ticker.on("game_state_changed", this.game_state_changed);
@@ -54,7 +54,7 @@ class NewPlayerPanel extends Panel {
 				ghost.c.Mob.client = this.client;
 			}
 		}
-		if (msg.ready != null) {
+		if (msg.ready !== null) {
 			this.ready = msg.ready;
 		}
 	}
@@ -72,8 +72,8 @@ class NewPlayerPanel extends Panel {
 	}
 
 	game_state_changed(from, to) {
-		this.send_message({ latejoin: to != "pregame" });
-		if (to == "playing" && this.latejoin_panel) {this.latejoin_panel.close();}
+		this.send_message({ latejoin: to !== "pregame" });
+		if (to === "playing" && this.latejoin_panel) {this.latejoin_panel.close();}
 	}
 	start_at_changed(from, to) {
 		this.send_message({ start_at: to });

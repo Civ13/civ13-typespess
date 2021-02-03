@@ -84,7 +84,7 @@ class StripPanel extends Panel {
 			this.bound_atom.c.MobInventory.slots
 		)) {
 			let new_covered = new_covered_set.has(otherslotname);
-			if (this.cached_covered[otherslotname] != new_covered) {
+			if (this.cached_covered[otherslotname] !== new_covered) {
 				new_covered_msg[otherslotname] = new_covered;
 				this.cached_covered[otherslotname] = new_covered;
 				if (new_covered) {

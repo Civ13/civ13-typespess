@@ -32,7 +32,7 @@ class Window extends Component {
 	}
 
 	play_attack_sound(damage_amount, damage_type = "brute") {
-		if (damage_type == "brute") {
+		if (damage_type === "brute") {
 			if (damage_amount)
 				{new Sound(this.a.server, {
 					path: "sound/effects/Glasshit.ogg",
@@ -45,7 +45,7 @@ class Window extends Component {
 					volume: 0.75,
 					vary: true,
 				}).emit_from(this.a);}
-		} else if (damage_type == "burn") {
+		} else if (damage_type === "burn") {
 			new Sound(this.a.server, {
 				path: "sound/items/Welder.ogg",
 				vary: true,
@@ -101,7 +101,7 @@ class Window extends Component {
 				});
 				return true;
 			}
-			if (this.state == "screwed_to_floor") {
+			if (this.state === "screwed_to_floor") {
 				if (item.c.Tool.can_use("Screwdriver", user)) {
 					item.c.Tool.used("Screwdriver");
 					to_chat`<span class='notice'>You begin to unscrew the window from the floor...</span>`(
@@ -111,7 +111,7 @@ class Window extends Component {
 						delay: this.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success) => {
-						if (!success || this.state != "screwed_to_floor") {return;}
+						if (!success || this.state !== "screwed_to_floor") {return;}
 						this.state = "unscrewed_from_floor";
 						to_chat`<span class='notice'>You unfasten the window from the floor...</span>`(
 							user
@@ -119,7 +119,7 @@ class Window extends Component {
 					});
 					return true;
 				}
-			} else if (this.state == "unscrewed_from_floor") {
+			} else if (this.state === "unscrewed_from_floor") {
 				if (item.c.Tool.can_use("Screwdriver", user)) {
 					item.c.Tool.used("Screwdriver");
 					to_chat`<span class='notice'>You begin to screw the window to the floor...</span>`(
@@ -129,7 +129,7 @@ class Window extends Component {
 						delay: this.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success) => {
-						if (!success || this.state != "unscrewed_from_floor") {return;}
+						if (!success || this.state !== "unscrewed_from_floor") {return;}
 						this.state = "screwed_to_floor";
 						to_chat`<span class='notice'>You fasten the window to the floor...</span>`(
 							user
@@ -145,7 +145,7 @@ class Window extends Component {
 						delay: this.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success) => {
-						if (!success || this.state != "unscrewed_from_floor") {return;}
+						if (!success || this.state !== "unscrewed_from_floor") {return;}
 						new Sound(this.a.server, {
 							path: "sound/items/Deconstruct.ogg",
 							volume: 0.5,
@@ -192,9 +192,9 @@ class Window extends Component {
 		return this[_state];
 	}
 	set state(val) {
-		if (val == this[_state]) {return;}
+		if (val === this[_state]) {return;}
 		this[_state] = val;
-		if (val == "unscrewed_from_floor") {
+		if (val === "unscrewed_from_floor") {
 			this.a.c.Tangible.anchored = false;
 			if (has_component(this.a, "Smooth")) {
 				this.a.c.Smooth.enabled = false;
@@ -270,7 +270,7 @@ class ReinforcedWindow extends Component {
 
 	attack_by(prev, item, user) {
 		if (has_component(item, "Tool")) {
-			if (this.a.c.Window.state == "screwed_to_floor") {
+			if (this.a.c.Window.state === "screwed_to_floor") {
 				if (item.c.Tool.can_use("Crowbar", user)) {
 					item.c.Tool.used("Crowbar");
 					to_chat`<span class='notice'>You begin to lever the window into the frame...</span>`(
@@ -280,7 +280,7 @@ class ReinforcedWindow extends Component {
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success) => {
-						if (!success || this.a.c.Window.state != "screwed_to_floor") {return;}
+						if (!success || this.a.c.Window.state !== "screwed_to_floor") {return;}
 						this.a.c.Window.state = "in_frame";
 						to_chat`<span class='notice'>You pry the window into the frame.</span>`(
 							user
@@ -288,7 +288,7 @@ class ReinforcedWindow extends Component {
 					});
 					return true;
 				}
-			} else if (this.a.c.Window.state == "in_frame") {
+			} else if (this.a.c.Window.state === "in_frame") {
 				if (item.c.Tool.can_use("Crowbar", user)) {
 					item.c.Tool.used("Crowbar");
 					to_chat`<span class='notice'>You begin to lever the window out of the frame...</span>`(
@@ -298,7 +298,7 @@ class ReinforcedWindow extends Component {
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success) => {
-						if (!success || this.a.c.Window.state != "in_frame") {return;}
+						if (!success || this.a.c.Window.state !== "in_frame") {return;}
 						this.a.c.Window.state = "screwed_to_floor";
 						to_chat`<span class='notice'>You pry the window out of the frame.</span>`(
 							user
@@ -314,7 +314,7 @@ class ReinforcedWindow extends Component {
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success) => {
-						if (!success || this.a.c.Window.state != "in_frame") {return;}
+						if (!success || this.a.c.Window.state !== "in_frame") {return;}
 						this.a.c.Window.state = "screwed_to_frame";
 						to_chat`<span class='notice'>You fasten the window to the frame.</span>`(
 							user
@@ -322,7 +322,7 @@ class ReinforcedWindow extends Component {
 					});
 					return true;
 				}
-			} else if (this.a.c.Window.state == "screwed_to_frame") {
+			} else if (this.a.c.Window.state === "screwed_to_frame") {
 				if (item.c.Tool.can_use("Screwdriver", user)) {
 					item.c.Tool.used("Screwdriver");
 					to_chat`<span class='notice'>You begin to unscrew the window from the frame...</span>`(
@@ -332,7 +332,7 @@ class ReinforcedWindow extends Component {
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success) => {
-						if (!success || this.a.c.Window.state != "screwed_to_frame") {return;}
+						if (!success || this.a.c.Window.state !== "screwed_to_frame") {return;}
 						this.a.c.Window.state = "in_frame";
 						to_chat`<span class='notice'>You unfasten the window from the frame.</span>`(
 							user

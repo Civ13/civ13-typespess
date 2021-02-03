@@ -18,7 +18,7 @@ class Climbable extends Component {
 	}
 
 	can_be_crossed(prev, atom, dx, dy, reason) {
-		if (reason == "climb") {return true;}
+		if (reason === "climb") {return true;}
 		return prev();
 	}
 
@@ -27,7 +27,7 @@ class Climbable extends Component {
 		let from = e.from.atom;
 		if (
 			from &&
-	from == user &&
+	from === user &&
 	has_component(user, "MobInventory") &&
 	has_component(user, "CarbonMob") &&
 	user.c.Tangible.adjacent(this.a) &&
@@ -44,7 +44,7 @@ class Climbable extends Component {
 				target: [user, this.a],
 			}).then((success) => {
 				let idx = this.climbers.indexOf(user);
-				if (idx != -1) {this.climbers.splice(idx, 1);}
+				if (idx !== -1) {this.climbers.splice(idx, 1);}
 				if (!success) {return;}
 				visible_message`<span class='warning'>The ${user} climbs onto the ${this.a}.</span>`
 					.self`<span class='notice'>You climb onto the ${this.a}...</span>`.emit_from(

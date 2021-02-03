@@ -35,7 +35,7 @@ async function explosion({
 		let far_dist = heavy_impact_range * 5 + devastation_range * 20;
 		let emitter = { x: x0, y: y0 };
 		for (let mob of dim.server.atoms_for_components.Mob) {
-			if (mob.dim != dim) {continue;}
+			if (mob.dim !== dim) {continue;}
 			let dist = Math.sqrt((x0 - mob.x) ** 2 + (y0 - mob.y) ** 2);
 			if (dist <= max_range + 5) {
 				new Sound(dim.server, {
@@ -58,7 +58,7 @@ async function explosion({
 	// word of warning here, the algorithm used here is quite different from byond ss13
 	// alright, let's get a bounding box.
 	let bbox = [];
-	if (max_range == 0) {bbox.push([0, 0]);}
+	if (max_range === 0) {bbox.push([0, 0]);}
 	else {
 		for (let i = -max_range + 1; i <= max_range - 1; i++) {
 			bbox.push([i, max_range]);

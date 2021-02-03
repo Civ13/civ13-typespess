@@ -78,7 +78,7 @@ class Stack extends Component {
 		return this[_amount];
 	}
 	set amount(val) {
-		if (this[_amount] == val) {return;}
+		if (this[_amount] === val) {return;}
 		this[_amount] = val;
 		this.emit("amount_changed");
 	}
@@ -88,7 +88,7 @@ class Stack extends Component {
 			this.a.destroy();
 		}
 
-		if (this.amount == 1) {this.a.gender = "neuter";}
+		if (this.amount === 1) {this.a.gender = "neuter";}
 		else {this.a.gender = "plural";}
 
 		if (!this.novariants) {
@@ -121,7 +121,7 @@ class Stack extends Component {
 			!has_component(S, "Stack") ||
 	S.destroyed ||
 	this.a.destroyed ||
-	S == this.a
+	S === this.a
 		)
 			{return;}
 		var transfer = Math.min(
@@ -135,7 +135,7 @@ class Stack extends Component {
 
 	examine(prev, user) {
 		prev();
-		to_chat`There ${this.amount == 1 ? "is" : "are"} ${this.amount} ${
+		to_chat`There ${this.amount === 1 ? "is" : "are"} ${this.amount} ${
 			this.singular_name || ""
 		}s in the stack.`(user);
 	}
@@ -157,9 +157,9 @@ class Stack extends Component {
 		let slot = this.a.c.Item.slot;
 		if (
 			slot &&
-	slot.mob == user &&
+	slot.mob === user &&
 	slot.props.is_hand_slot &&
-	user.c.MobInventory.active_hand != slot
+	user.c.MobInventory.active_hand !== slot
 		) {
 			return this.split(user, 1);
 		} else {
@@ -214,12 +214,12 @@ class Stack extends Component {
 	}
 
 	can_user_read_panel(user) {
-		return this.a.c.Item.slot && this.a.c.Item.slot.mob == user;
+		return this.a.c.Item.slot && this.a.c.Item.slot.mob === user;
 	}
 	import_recipes(material) {
 		var recList = [];
 		for (const f of traverseDir("./code/modules/crafting/")) {
-			if (getFileExtension(f) == "crafting" && f.search(material) != -1) {
+			if (getFileExtension(f) === "crafting" && f.search(material) !== -1) {
 				const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
 				for(var i in nrec) {recList.push(nrec[i]);}}
 		}
@@ -251,7 +251,7 @@ class Stack extends Component {
 					if (did_break) {break;}
 				}
 			}
-			if (build_limit != recipe.build_limit) {
+			if (build_limit !== recipe.build_limit) {
 				recipe.build_limit = build_limit;
 				this.emit("recipe_build_limit_changed", { recipe, index: i });
 			}

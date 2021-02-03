@@ -80,7 +80,7 @@ class CarbonMob extends Component.Networked {
 	}
 
 	damage_changed(type) {
-		if (type == "stamina") {
+		if (type === "stamina") {
 			this.update_stamina();
 		}
 	}
@@ -105,7 +105,7 @@ class CarbonMob extends Component.Networked {
 	update_stat() {
 		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {return;}
 		let health = this.a.c.LivingMob.health;
-		if (this.a.c.LivingMob.stat != combat_defines.DEAD) {
+		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
 			if (health <= combat_defines.HEALTH_THRESHOLD_DEAD) {
 				this.a.c.LivingMob.stat = combat_defines.DEAD;
 				return;
@@ -133,7 +133,7 @@ class CarbonMob extends Component.Networked {
 	this.a.c.LivingMob.health - this.a.c.LivingMob.get_damage("stamina");
 		let max_health = this.a.c.LivingMob.max_health;
 		let variant;
-		if (this.a.c.LivingMob.stat != combat_defines.DEAD) {
+		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
 			variant = Math.min(
 				Math.max(5 - Math.floor((health / max_health) * 5), 0),
 				6
@@ -146,7 +146,7 @@ class CarbonMob extends Component.Networked {
 	}
 
 	update_damage_hud() {
-		if (this.a.c.LivingMob.stat == combat_defines.DEAD) {
+		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {
 			if (this.a.c.Eye.screen.crit_vision) {
 				this.a.c.Eye.screen.crit_vision.destroy();
 				delete this.a.c.Eye.screen.crit_vision;
@@ -231,7 +231,7 @@ class CarbonMob extends Component.Networked {
 
 	movement_delay(prev) {
 		let delay = prev();
-		if (this.a.c.LivingMob.stat == combat_defines.SOFT_CRIT)
+		if (this.a.c.LivingMob.stat === combat_defines.SOFT_CRIT)
 			{delay += combat_defines.SOFTCRIT_ADD_SLOWDOWN;}
 		let health_deficiency =
 	100 -
@@ -248,7 +248,7 @@ class CarbonMob extends Component.Networked {
 	}
 	set lying_counter(val) {
 		let old = this[_lying_counter];
-		if (old == val) {return;}
+		if (old === val) {return;}
 		this[_lying_counter] = val;
 		this.update_lying(old, val);
 	}
@@ -372,7 +372,7 @@ class CarbonMob extends Component.Networked {
 	}
 
 	add_splatter_floor({ ref = this.a, small_drip = false } = {}) {
-		if (this.get_blood_id() != "blood") {return;}
+		if (this.get_blood_id() !== "blood") {return;}
 		if (!ref || !ref.base_mover || !ref.base_mover.loc) {return;}
 
 		let splatter;
@@ -402,7 +402,7 @@ class CarbonMob extends Component.Networked {
 		if (has_component(this.a, "MobInventory"))
 			{this.a.c.MobInventory.examine_slots(user);}
 		let appears_dead = false;
-		if (this.a.c.LivingMob.stat == combat_defines.DEAD) {
+		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {
 			appears_dead = true;
 			if (this.a.c.LivingMob.suiciding)
 				{to_chat`<span class='warning'>${t_He} appear${this.a.p_s()} to have commited suicide... there is no hope of recovery.</span>`(
@@ -413,7 +413,7 @@ class CarbonMob extends Component.Networked {
 				let foundghost = false;
 				if (this.a.c.LivingMob.mind) {
 					for (let ghost of this.a.server.atoms_for_components.Ghost) {
-						if (ghost.c.Ghost.mind == this.a.c.LivingMob.mind) {
+						if (ghost.c.Ghost.mind === this.a.c.LivingMob.mind) {
 							foundghost = true;
 							break;
 						}
@@ -465,7 +465,7 @@ class CarbonMob extends Component.Networked {
 			{to_chat`<span class='warning'>${t_He} ${t_has} pale skin.</span>`(user);}
 
 		if (!appears_dead) {
-			if (this.a.c.LivingMob.stat == combat_defines.UNCONSCIOUS)
+			if (this.a.c.LivingMob.stat === combat_defines.UNCONSCIOUS)
 				{to_chat`<span class='info'>${t_He} ${t_is}n't responding to anything around ${t_him} and seem${this.a.p_s()} to be asleep.</span>`(
 					user
 				);}

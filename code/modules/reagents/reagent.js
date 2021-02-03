@@ -35,9 +35,9 @@ class Reagent extends EventEmitter {
 		this.subtype = "chemical";
 	}
 	add(amount, { reagent, temp } = {}) {
-		if (temp == null && (reagent == null || reagent.holder == null)) {
+		if (temp === null && (reagent === null || reagent.holder === null)) {
 			temp = 300;
-		} else if (temp == null) {
+		} else if (temp === null) {
 			temp = reagent.holder.c.ReagentHolder.temperature;
 		}
 		amount = Math.min(
@@ -113,7 +113,7 @@ class Reagent extends EventEmitter {
 
 	reaction_obj() {return;}
 	reaction_mob(target, { method, volume } = {}) {
-		if (method == "vapor") {
+		if (method === "vapor") {
 			if (volume > 0.5) {target.c.ReagentHolder.add(this, volume);}
 		}
 	}
@@ -150,12 +150,12 @@ class ReagentReaction {
 			if (container.c.ReagentHolder.volume_of(req) < amount) {return 2;}
 		}
 		if (
-			this.min_temp != null &&
+			this.min_temp !== null &&
 	container.c.ReagentHolder.temperature < this.min_temp
 		)
 			{return 1;}
 		if (
-			this.max_temp != null &&
+			this.max_temp !== null &&
 	container.c.ReagentHolder.temperature > this.max_temp
 		)
 			{return 1;}
@@ -164,11 +164,11 @@ class ReagentReaction {
 
 	update(container) {
 		let react_status = this.get_react_status(container);
-		if (react_status == 2) {
+		if (react_status === 2) {
 			container.c.ReagentHolder.held_reactions.delete(this);
 			return;
 		}
-		if (react_status == 1) {
+		if (react_status === 1) {
 			container.c.ReagentHolder.held_reactions.add(this);
 			return;
 		}

@@ -40,7 +40,7 @@ const traverseDir = (dir) =>
 	if(global.is_bs_editor_env) {
 		var appDir = global.workspaceDir;
 		for (const f of traverseDir(`${appDir}code/`)) {
-			if (getFileExtension(f) == "recipes") {
+			if (getFileExtension(f) === "recipes") {
 				const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
 				let new_nrec = [];
 				for(let i in nrec)
@@ -51,7 +51,7 @@ const traverseDir = (dir) =>
 	}
 } else {
 for (const f of traverseDir("./code/")) {
-	if (getFileExtension(f) == "recipes") {
+	if (getFileExtension(f) === "recipes") {
 		const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
 		let new_nrec = [];
 		for(let i in nrec)

@@ -34,7 +34,7 @@ class Outfit {
 				);}
 
 			for (let [id, slot] of Object.entries(target.c.MobInventory.slots)) {
-				if (id == "iclothing" || id == "oclothing") {continue;}
+				if (id === "iclothing" || id === "oclothing") {continue;}
 				if (clone.slots[id])
 					{slot.equip_or_del(new Atom(target.server, clone.slots[id]));}
 			}

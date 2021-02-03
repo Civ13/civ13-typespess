@@ -89,14 +89,14 @@ class Action /*lawsuit*/ extends EventEmitter {
 			mob.c.Eye.screen["button_" + button.object_id] = null;
 			button.destroy();
 			let idx = this.instanced_buttons.indexOf(button);
-			if (idx != -1) {this.instanced_buttons.splice(idx, 1);}
+			if (idx !== -1) {this.instanced_buttons.splice(idx, 1);}
 		}
 		mob.c.MobHud.reorganize_buttons();
 	}
 	check_mob_use(mob) {
 		if (this.check_conscious) {
 			if (!has_component(mob, "LivingMob")) {return false;}
-			if (mob.c.LivingMob.stat != combat_defines.CONSCIOUS) {return false;}
+			if (mob.c.LivingMob.stat !== combat_defines.CONSCIOUS) {return false;}
 		}
 		if (this.check_interact) {
 			if (!has_component(mob, "MobInteract")) {return false;}
@@ -127,7 +127,7 @@ class ItemAction extends Action {
 		if (
 			!has_component(mob, "MobInventory") ||
 	!this.target ||
-	this.target.loc != mob
+	this.target.loc !== mob
 		)
 			{return false;}
 		return true;
@@ -148,7 +148,7 @@ class ActionButton extends Component {
 	}
 
 	clicked(e) {
-		if (!this.action || !this.action.check_mob_use(e.mob) || e.mob != this.mob)
+		if (!this.action || !this.action.check_mob_use(e.mob) || e.mob !== this.mob)
 			{return;}
 		this.action.click_act(e.mob);
 	}
@@ -185,7 +185,7 @@ class ItemActions extends Component {
 	}
 
 	moved(e) {
-		if (e.old && e.new && e.old.loc == e.new.loc) {return;} // nothing changed stop rearranging my buttons ree
+		if (e.old && e.new && e.old.loc === e.new.loc) {return;} // nothing changed stop rearranging my buttons ree
 		if (e.old && has_component(e.old.loc, "MobHud")) {
 			for (let act of this.actions) {
 				act.remove_from(e.old.loc);
@@ -211,7 +211,7 @@ class ItemActions extends Component {
 	}
 	remove_action(act) {
 		let idx = this.actions.indexOf(act);
-		if (idx == -1) {return;}
+		if (idx === -1) {return;}
 		this.actions.splice(idx, 1);
 		if (has_component(this.loc, "MobHud")) {act.remove_from(this.loc);}
 	}

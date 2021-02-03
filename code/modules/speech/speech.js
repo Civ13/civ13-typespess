@@ -50,7 +50,7 @@ class SpeechEmitter extends Component {
 			)
 				{hearer.c.SpeechHearer.hear_message(message, this.a);}
 		}
-		if (message.mode == "radio" && !message.radio_freq) {
+		if (message.mode === "radio" && !message.radio_freq) {
 			// TODO make this less hacky
 			let new_message = message.clone();
 			new_message.radio_freq = 1459;
@@ -119,7 +119,7 @@ class SpeechHearer extends Component {
 	}
 	hear_message(message, emitter) {
 		let deaf_message = null;
-		if (message.speaker != this.a) {
+		if (message.speaker !== this.a) {
 			if (!message.radio_freq)
 				{deaf_message = format_html`<span class='name'>${message.speaker}</span> ${message.speaker.c.SpeechEmitter.verb_say} something but you cannot hear them.`;}
 		} else {

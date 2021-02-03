@@ -28,7 +28,7 @@ class MobHud extends Component {
 		Clicks are forwarded to master
 		Override makes it so the alert is not replaced until cleared by a clear_alert with clear_override, and it's used for hallucinations.
 		*/
-		if (severity == undefined) {severity = "";}
+		if (severity === undefined) {severity = "";}
 		if (!category) {return;}
 		if (typeof template === "string")
 			{template = this.a.server.templates[template];}
@@ -41,17 +41,17 @@ class MobHud extends Component {
 		if (this.alerts[category]) {
 			thealert = this.alerts[category];
 			if (thealert.c.Alert.override_alerts) {return;}
-			if (new_master && new_master != thealert.c.Alert.master) {
+			if (new_master && new_master !== thealert.c.Alert.master) {
 				console.warn(
 					`${this} threw alert ${category} with new_master ${new_master} while already having that alert with master ${thealert.c.Alert.master}`
 				);
 
 				this.clear_alert(category);
 				return this.throw_alert.apply(this, arguments);
-			} else if (thealert.template != template) {
+			} else if (thealert.template !== template) {
 				this.clear_alert(category);
 				return this.throw_alert.apply(this, arguments);
-			} else if (!severity || severity == thealert.c.Alert.severity) {
+			} else if (!severity || severity === thealert.c.Alert.severity) {
 				if (thealert.c.Alert.timeout) {
 					this.clear_alert(category);
 					return this.throw_alert.apply(this, arguments);
@@ -85,7 +85,7 @@ class MobHud extends Component {
 		// TODO Animation, see code/_onclick/hud/alert.dm line 64
 		if (thealert.c.Alert.timeout) {
 			setTimeout(() => {
-				if (thealert.c.Alert.timeout && this.alerts[category] == thealert)
+				if (thealert.c.Alert.timeout && this.alerts[category] === thealert)
 					{this.clear_alert(category);}
 			}, thealert.c.Alert.timeout);
 		}

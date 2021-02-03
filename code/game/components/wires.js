@@ -64,7 +64,7 @@ class MachineWires extends Component {
 				},
 				set: (val) => {
 					val = !!val;
-					if (cut == val) {return;}
+					if (cut === val) {return;}
 					cut = val;
 					if (cut) {this.emit("cut", wire_obj);}
 					else {this.emit("mend", wire_obj);}

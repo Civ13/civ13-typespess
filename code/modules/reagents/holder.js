@@ -121,7 +121,7 @@ class ReagentHolder extends Component {
 	}
 	set temperature(val) {
 		let old = this[_temperature];
-		if (val == old) {return;}
+		if (val === old) {return;}
 		this[_temperature] = val;
 
 		this.emit("temperature_changed", old, val);
@@ -263,7 +263,7 @@ class ReagentHolder extends Component {
 	}
 
 	should_metabolize_reagent(key /*, reagent*/) {
-		if (key == "Blood" && this.a.c.CarbonMob.uses_blood) {return false;}
+		if (key === "Blood" && this.a.c.CarbonMob.uses_blood) {return false;}
 		return true;
 	}
 
@@ -297,7 +297,7 @@ class ReagentHolder extends Component {
 			let rg = reagent.color[1];
 			let rb = reagent.color[2];
 			let ra = reagent.color[3];
-			if (ra == null) {ra = 1;}
+			if (ra === null) {ra = 1;}
 			let m = ra * reagent.volume;
 			r += rr * m;
 			g += rg * m;

@@ -30,7 +30,7 @@ class OpenReagentContainer extends Component {
 			return;
 		}
 		(async () => {
-			if (target != user) {
+			if (target !== user) {
 				visible_message`<span class='danger'>The ${user} attempts to feed something to the ${target}.</span>`
 					.self`<span class='userdanger'>The ${user} attempts to feed something to you.</span>`.emit_from(
 					target
@@ -123,7 +123,7 @@ class ReagentReceiver extends Component {
 				item.c.OpenReagentContainer.transfer_amount
 			);
 			to_chat`<span class='notice'>You transfer ${trans} unit${
-				trans == 1 ? "" : "s"
+				trans === 1 ? "" : "s"
 			} of the solution to ${this.a}</span>`(user);
 			return true;
 		}
@@ -156,7 +156,7 @@ class GlassBeaker extends Component {
 		let percent =
 	this.a.c.ReagentHolder.total_volume /
 	this.a.c.ReagentHolder.maximum_volume;
-		if (percent == 0) {
+		if (percent === 0) {
 			this.a.overlays.reagent_filling = null;
 			return;
 		}

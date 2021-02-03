@@ -77,7 +77,7 @@ class StorageItem extends Component {
 			{for (let viewer of this[_viewers]) {
 				viewer.c.Eye.screen[`storage_item_${slotnum}`] = movement.atom;
 			}}
-		if (this.rows != prev_rows)
+		if (this.rows !== prev_rows)
 			{for (let i = 0; i < slotnum; i++) {
 				this.set_screen_loc_for_slot_num(this[_slots][i][0], i);
 			}}
@@ -99,8 +99,8 @@ class StorageItem extends Component {
 		for (i = 0; i < this[_slots].length; i++) {
 			var slot = this[_slots][i];
 			var idx = slot.indexOf(movement.atom);
-			if (idx == -1) {continue;}
-			if (idx == 0) {
+			if (idx === -1) {continue;}
+			if (idx === 0) {
 				if (this[_viewers])
 					{for (let viewer of this[_viewers]) {
 						viewer.c.Eye.screen[`storage_item_${i}`] = slot[1];
@@ -139,7 +139,7 @@ class StorageItem extends Component {
 				}}
 			this.set_screen_loc_for_slot_num(this[_slots][j][0], j);
 		}
-		if (this.rows != prev_rows)
+		if (this.rows !== prev_rows)
 			{for (let j = 0; j < i; j++) {
 				this.set_screen_loc_for_slot_num(this[_slots][j][0], j);
 			}}
@@ -155,8 +155,8 @@ class StorageItem extends Component {
 	attack_hand(prev, mob) {
 		if (
 			this.a.c.Item.slot &&
-	this.a.c.Item.slot.mob == mob &&
-	this.a.c.Item.slot.id != mob.c.MobInventory.active_hand
+	this.a.c.Item.slot.mob === mob &&
+	this.a.c.Item.slot.id !== mob.c.MobInventory.active_hand
 		) {
 			if (this.is_showing_to(mob)) {
 				this.hide_from(mob);
@@ -169,7 +169,7 @@ class StorageItem extends Component {
 	}
 
 	mouse_dragged_to(e) {
-		if (e.to.atom == e.mob) {
+		if (e.to.atom === e.mob) {
 			this.show_to(e.mob);
 			return;
 		}
@@ -177,7 +177,7 @@ class StorageItem extends Component {
 
 	show_to(user) {
 		if (!has_component(user, "Eye")) {return;}
-		if (user.c.Eye[_current_storage_item] == this.a) {return;}
+		if (user.c.Eye[_current_storage_item] === this.a) {return;}
 		if (user.c.Eye[_current_storage_item])
 			{user.c.Eye[_current_storage_item].c.StorageItem.hide_from(user);}
 		this[_viewers] = this[_viewers] || new Set();
@@ -192,7 +192,7 @@ class StorageItem extends Component {
 
 	hide_from(user) {
 		if (!has_component(user, "Eye")) {return;}
-		if (user.c.Eye[_current_storage_item] != this.a) {return;}
+		if (user.c.Eye[_current_storage_item] !== this.a) {return;}
 		this[_viewers].delete(user);
 		user.c.Eye[_current_storage_item] = null;
 		for (let i = 0; i < this[_slots].length; i++) {
@@ -204,7 +204,7 @@ class StorageItem extends Component {
 
 	can_be_inserted(item, user, stop_messages = false) {
 		if (!has_component(item, "Item")) {return;} // not an item
-		if (this.a.loc == item) {return false;}
+		if (this.a.loc === item) {return false;}
 
 		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return false;}
 
@@ -299,7 +299,7 @@ class StorageItem extends Component {
 	is_showing_to(user) {
 		return (
 			has_component(user, "Eye") &&
-	user.components.Eye[_current_storage_item] == this.a
+	user.components.Eye[_current_storage_item] === this.a
 		);
 	}
 

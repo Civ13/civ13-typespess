@@ -63,7 +63,7 @@ class LivingMob extends Component {
 		this.a.on("bumped", this.bumped.bind(this));
 		this.on("health_changed", this.health_changed.bind(this));
 		this.life_timeout = null;
-		if (this.stat != combat_defines.DEAD) {
+		if (this.stat !== combat_defines.DEAD) {
 			this.life_timeout = setTimeout(this.run_life.bind(this), 2000);
 		}
 		this.life_cycle_num = 0;
@@ -80,7 +80,7 @@ class LivingMob extends Component {
 			set: (newval, { health_event = true, force = false } = {}) => {
 				if (this.status_flags & combat_defines.GODMODE && !force) {return false;}
 				newval = Math.max(0, newval);
-				if (newval == damage_obj.val) {return;}
+				if (newval === damage_obj.val) {return;}
 				damage_obj.val = newval;
 				this.emit("damage_changed", name);
 				if (health_event) {this.emit("health_changed");}
@@ -132,7 +132,7 @@ class LivingMob extends Component {
 	set stat(val) {
 		let oldstat = this.stat;
 		// eslint-disable-next-line no-setter-return
-		if (val == oldstat) {return false;}
+		if (val === oldstat) {return false;}
 		this[_stat] = val;
 		this.emit("stat_changed", oldstat, val);
 		if (
@@ -148,10 +148,10 @@ class LivingMob extends Component {
 			this.nomove_counter--;
 			this.a.c.MobInteract.nointeract_counter--;
 		}
-		if (val == combat_defines.DEAD && this.life_timeout) {
+		if (val === combat_defines.DEAD && this.life_timeout) {
 			clearTimeout(this.life_timeout);
 			this.life_timeout = null;
-		} else if (val != combat_defines.DEAD && !this.life_timeout) {
+		} else if (val !== combat_defines.DEAD && !this.life_timeout) {
 			this.life_timeout = setTimeout(this.run_life.bind(this), 2000);
 		}
 	}
@@ -159,15 +159,15 @@ class LivingMob extends Component {
 	get in_crit() {
 		return (
 			this.health <= combat_defines.HEALTH_THRESHOLD_CRIT &&
-	(this.stat == combat_defines.SOFT_CRIT ||
-		this.stat == combat_defines.UNCONSCIOUS)
+	(this.stat === combat_defines.SOFT_CRIT ||
+		this.stat === combat_defines.UNCONSCIOUS)
 		);
 	}
 
 	get in_full_crit() {
 		return (
 			this.health <= combat_defines.HEALTH_THRESHOLD_FULLCRIT &&
-	this.stat == combat_defines.UNCONSCIOUS
+	this.stat === combat_defines.UNCONSCIOUS
 		);
 	}
 
@@ -203,14 +203,14 @@ class LivingMob extends Component {
 		this.life_timeout = null;
 		this.life_cycle_num++;
 		this.life(this.life_cycle_num);
-		if (this.stat != combat_defines.DEAD && !this.life_timeout)
+		if (this.stat !== combat_defines.DEAD && !this.life_timeout)
 			{this.life_timeout = setTimeout(this.run_life.bind(this), 2000);}
 	}
 
 	life() {return;}
 
 	movement_delay() {
-		if (this.a.c.MobInteract.move_mode == mob_defines.MOVE_INTENT_WALK) {
+		if (this.a.c.MobInteract.move_mode === mob_defines.MOVE_INTENT_WALK) {
 			return 400;
 		} else {
 			return 150;
@@ -235,9 +235,9 @@ class LivingMob extends Component {
 	}
 
 	move(prev, dx, dy, reason) {
-		if (reason != "walking") {return prev();}
+		if (reason !== "walking") {return prev();}
 
-		if (this.stat == combat_defines.DEAD) {
+		if (this.stat === combat_defines.DEAD) {
 			this.ghostize(true);
 			return;
 		}
@@ -274,8 +274,8 @@ class LivingMob extends Component {
 
 	can_interact_with_panel(target) {
 		return (
-			target.z == this.a.z &&
-	target.dim == this.a.dim &&
+			target.z === this.a.z &&
+	target.dim === this.a.dim &&
 	Math.max(Math.abs(target.x - this.a.x), Math.abs(target.y - this.a.y)) < 1
 		);
 	}
@@ -292,8 +292,8 @@ class LivingMob extends Component {
 	can_be_crossed(prev, mover, reason) {
 		if (
 			(mover.density < 1 || this.a.density < 1) &&
-	reason != "throw" &&
-	reason != "projectile"
+	reason !== "throw" &&
+	reason !== "projectile"
 		)
 			{return true;}
 		return prev();
@@ -362,7 +362,7 @@ class LivingMob extends Component {
 		}
 		if (item.c.Item.force) {
 			this.apply_damage(item.c.Item.force, item.c.Item.damage_type, zone);
-			if (item.c.Item.damage_type == "brute" && Math.random() < 0.33) {
+			if (item.c.Item.damage_type === "brute" && Math.random() < 0.33) {
 				this.add_splatter_floor();
 			}
 			return true; // successful attack
@@ -423,7 +423,7 @@ class LivingMob extends Component {
 		let face_name = this.get_face_name("");
 		let id_name = this.get_id_name("");
 		if (face_name) {
-			if (id_name && id_name != face_name)
+			if (id_name && id_name !== face_name)
 				{return `${face_name} (as ${id_name})`;}
 			return face_name;
 		}
@@ -468,11 +468,11 @@ class LivingMob extends Component {
 				: "harm";
 			if (
 				has_component(this.a, "Puller") &&
-		this.a.c.Puller.pulling == atom &&
-		this_intent == "grab"
+		this.a.c.Puller.pulling === atom &&
+		this_intent === "grab"
 			)
 				{mob_swap = true;}
-			else if (this_intent == "help" || other_intent == "help") {mob_swap = true;}
+			else if (this_intent === "help" || other_intent === "help") {mob_swap = true;}
 			if (mob_swap) {
 				if (!this.a.c.Tangible.adjacent(atom)) {return;}
 				this.now_pushing = true;

@@ -63,8 +63,8 @@ class BallisticGun extends Component {
 		if (
 			has_component(item, "GunMagazine") &&
 	!has_component(item, "InternalMagazine") &&
-	this.mag_caliber == item.c.AmmoBox.caliber &&
-	this.mag_form_factor == item.c.AmmoBox.form_factor
+	this.mag_caliber === item.c.AmmoBox.caliber &&
+	this.mag_form_factor === item.c.AmmoBox.form_factor
 		) {
 			if (this.magazine && !this.tactical_reloads) {
 				to_chat`<span class='notice'>There's already a magazine in the ${this.a}.</span>`(
@@ -139,7 +139,7 @@ class BallisticGun extends Component {
 	examine(prev, user) {
 		prev();
 		let ammo_count = this.get_ammo();
-		to_chat`It has ${ammo_count} round${ammo_count == 1 ? "" : "s"} remaining.`(
+		to_chat`It has ${ammo_count} round${ammo_count === 1 ? "" : "s"} remaining.`(
 			user
 		);
 	}

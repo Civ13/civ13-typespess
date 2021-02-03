@@ -63,7 +63,7 @@ class LightFixture extends Component {
 				{to_chat`<span class='warning'>There is a ${this.tube_type} already inserted!</span>`(
 					user
 				);}
-			else if (item.c.LightTube.tube_type != this.tube_type)
+			else if (item.c.LightTube.tube_type !== this.tube_type)
 				{to_chat`<span class='warning'>This type of light requires a ${this.tube_type}</span>`(
 					user
 				);}
@@ -93,7 +93,7 @@ class LightFixture extends Component {
 	}
 
 	play_attack_sound(damage_amount, damage_type = "brute") {
-		if (damage_type == "brute") {
+		if (damage_type === "brute") {
 			if (!this.tube)
 				{new Sound(this.a.server, {
 					path: "sound/weapons/smash.ogg",
@@ -112,7 +112,7 @@ class LightFixture extends Component {
 					volume: 0.9,
 					vary: true,
 				}).emit_from(this.a);}
-		} else if (damage_type == "burn") {
+		} else if (damage_type === "burn") {
 			new Sound(this.a.server, {
 				path: "sound/items/Welder.ogg",
 				vary: true,

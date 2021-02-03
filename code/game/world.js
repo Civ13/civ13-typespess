@@ -49,21 +49,21 @@ class World {
 	}
 	change_season(new_season) { //sets the season to the input variable, if its in the list of possible_seasons
 		for (var s of this.possible_seasons)
-			{if (s == new_season) {this.season = s; console.log("WORLD: Changed the season to "+new_season);to_chat(user, format_html`<span class='announce'>It is now ${this.season}.</span>`);return true;}}
+			{if (s === new_season) {this.season = s; console.log("WORLD: Changed the season to "+new_season);to_chat(user, format_html`<span class='announce'>It is now ${this.season}.</span>`);return true;}}
 		return false;
 	}
 	advance_season() { //advances to the next season
-		if (this.season == "Winter") {this.season="Spring";console.log("WORLD: Automatically advanced the season to "+this.season);}
-		else if (this.season == "Spring") {this.season="Summer";console.log("WORLD: Automatically advanced the season to "+this.season);}
-		else if (this.season == "Summer") {this.season="Autumn";console.log("WORLD: Automatically advanced the season to "+this.season);}
-		else if (this.season == "Autumn") {this.season="Winter";console.log("WORLD: Automatically advanced the season to "+this.season);}
+		if (this.season === "Winter") {this.season="Spring";console.log("WORLD: Automatically advanced the season to "+this.season);}
+		else if (this.season === "Spring") {this.season="Summer";console.log("WORLD: Automatically advanced the season to "+this.season);}
+		else if (this.season === "Summer") {this.season="Autumn";console.log("WORLD: Automatically advanced the season to "+this.season);}
+		else if (this.season === "Autumn") {this.season="Winter";console.log("WORLD: Automatically advanced the season to "+this.season);}
 		this.server.to_global_chat(format_html`<span class='announce'>It is now ${this.season}.</span>`);
 		return true;
 	}
    change_weather(new_weather) { //sets the weather to the input variable, if its in the list of possible_weather
 		let last_weather = this.weather;
 		for (var w of this.possible_weather)
-			{if (w == new_weather) {this.weather = w; console.log("WORLD: Changed the weather to "+new_weather); return true;}}
+			{if (w === new_weather) {this.weather = w; console.log("WORLD: Changed the weather to "+new_weather); return true;}}
 			if (last_weather !== this.weather)
 			{this.server.to_global_chat(format_html`<span class='announce'>The weather has changed to ${this.weather}.</span>`);}
 		return false;

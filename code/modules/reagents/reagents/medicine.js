@@ -370,7 +370,7 @@ class Charcoal extends Medicine {
 	mob_life(dt) {
 		this.holder.c.LivingMob.adjust_damage("tox", -1 * dt);
 		for (let key of this.holder.c.ReagentHolder.reagents.keys()) {
-			if (key != this.constructor.name) {
+			if (key !== this.constructor.name) {
 				this.holder.c.ReagentHolder.remove(key, 0.5 * dt);
 			}
 		}
@@ -420,7 +420,7 @@ class Calomel extends Medicine {
 	// /datum/reagent/medicine/calomel
 	mob_life(dt) {
 		for (let key of this.holder.c.ReagentHolder.reagents.keys()) {
-			if (key != this.constructor.name) {
+			if (key !== this.constructor.name) {
 				this.holder.c.ReagentHolder.remove(key, 1.25 * dt);
 			}
 		}
@@ -469,7 +469,7 @@ class PenteticAcid extends Medicine {
 	Math.min(this.holder.c.CarbonMob.radiation - 250 * dt, 0) / 50;
 		this.holder.c.LivingMob.adjust_damage("tox", -1 * dt);
 		for (let key of this.holder.c.ReagentHolder.reagents.keys()) {
-			if (key != this.constructor.name) {
+			if (key !== this.constructor.name) {
 				this.holder.c.ReagentHolder.remove(key, 1 * dt);
 			}
 		}
@@ -641,7 +641,7 @@ class Morphine extends Medicine {
 	// /datum/reagent/medicine/morphine //TODO: overdose_process(), and addiction_act_stage()s
 	mob_life(dt) {
 		this.holder.c.LivingMob.status_flags |= combat_defines.IGNORESLOWDOWN;
-		if (this.time_in_mob == 22) {
+		if (this.time_in_mob === 22) {
 			to_chat`<span class='warning'>You start to feel tired...</span>`(
 				this.holder
 			);
@@ -931,7 +931,7 @@ class AntiToxin extends Medicine {
 	mob_life(dt) {
 		this.holder.c.LivingMob.adjust_damage("tox", -1 * dt);
 		for (let key of this.holder.c.ReagentHolder.reagents.keys()) {
-			if (key != this.constructor.name) {
+			if (key !== this.constructor.name) {
 				this.holder.c.ReagentHolder.remove(key, 0.5 * dt);
 			}
 		}
@@ -1063,7 +1063,7 @@ class Haloperidol extends Medicine {
 	// /datum/reagent/medicine/haloperidol
 	mob_life(dt) {
 		for (let key of this.holder.c.ReagentHolder.reagents.keys()) {
-			if (key != this.constructor.name) {
+			if (key !== this.constructor.name) {
 				this.holder.c.ReagentHolder.remove(key, 2.5 * dt);
 			}
 		}

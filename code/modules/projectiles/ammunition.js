@@ -89,10 +89,10 @@ class AmmoCasing extends Component {
 				if (boolets > 0) {
 					item.c.AmmoBox.update_icon();
 					to_chat`<span class='notice'>You collect ${boolets} shell${
-						boolets == 1 ? "" : "s"
+						boolets === 1 ? "" : "s"
 					}. The ${this.a} now contains ${
 						item.c.AmmoBox.stored_ammo.length
-					} shell${item.c.AmmoBox.stored_ammo.length == 1 ? "" : "s"}</span>`(
+					} shell${item.c.AmmoBox.stored_ammo.length === 1 ? "" : "s"}</span>`(
 						user
 					);
 				} else {

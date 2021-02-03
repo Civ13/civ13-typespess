@@ -24,7 +24,7 @@ class Mind extends EventEmitter {
 			this.current.c.LivingMob.mind = null;
 		}
 		if (this.key) {
-			if (new_character.c.Mob.key != this.key)
+			if (new_character.c.Mob.key !== this.key)
 				{new_character.c.LivingMob.ghostize(true);}
 		} else {
 			this.key = new_character.c.Mob.key;

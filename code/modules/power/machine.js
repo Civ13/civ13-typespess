@@ -25,7 +25,7 @@ class ApcPowered extends Component {
 		}
 	}
 	end_touch_area(atom) {
-		if (atom == this.area) {
+		if (atom === this.area) {
 			for (let brush of this.a.crosses()) {
 				if (
 					has_component(brush, "AreaBrush") &&

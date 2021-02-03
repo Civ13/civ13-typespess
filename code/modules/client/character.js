@@ -48,14 +48,14 @@ class CharacterPreferences {
 		this.hair_color = _.sample(Object.keys(hair_colors));
 	}
 	randomize_name(type) {
-		if (!type || type == "human")
+		if (!type || type === "human")
 			{this.name = CharacterPreferences.generate_human_name(this.gender);}
 	}
 
 	static generate_human_name(gender) {
 		let first_list = first_names;
-		if (gender == "male") {first_list = first_names_male;}
-		if (gender == "female") {first_list = first_names_female;}
+		if (gender === "male") {first_list = first_names_male;}
+		if (gender === "female") {first_list = first_names_female;}
 		let first_name = _.sample(first_list);
 		let last_name = _.sample(last_names);
 		return `${first_name} ${last_name}`;
@@ -100,7 +100,7 @@ class CharacterPreferences {
 				if (!allow_numbers) {continue;}
 				t_out += chr;
 				last_char_group = 3;
-			} else if (chr == " ") {
+			} else if (chr === " ") {
 				if (last_char_group <= 1) {continue;}
 				t_out += chr;
 				last_char_group = 1;

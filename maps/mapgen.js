@@ -57,7 +57,7 @@ finalData = finalData + "	\"locs\": {\n";
 for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 	for (let j = inc_h; j <= Math.abs(inc_h); j++) {
 		let hascomma = "		],\n";
-		if (j == Math.abs(inc_h) && i == Math.abs(inc_w)) {
+		if (j === Math.abs(inc_h) && i === Math.abs(inc_w)) {
 			hascomma = "		]\n";
 		}
 		const floorname = random_floor(originalLoadedConfigs[3]);

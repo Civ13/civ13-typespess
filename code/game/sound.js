@@ -48,7 +48,7 @@ class Sound {
 			"" + (Math.floor(Math.random() * (1 + +to - +from)) + +from);
 					// Hey idiots making libraries on NPM
 					// Left padding is a native part of javascript! No need to include left-pad.
-					if (from.length == to.length)
+					if (from.length === to.length)
 						{return result.padStart(from.length, "0");}
 					else {return result;}
 				}
@@ -61,7 +61,7 @@ class Sound {
   */
 	play_to(mobs) {
 		if (!(mobs instanceof Array)) {mobs = [mobs];}
-		if (this.playing != null)
+		if (this.playing !== null)
 			{throw new Error(
 				"Cannot play sound more than once. Create new sound instead."
 			);}

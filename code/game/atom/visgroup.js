@@ -79,17 +79,17 @@ class VisibilityGroup {
 	}
 
 	override_changed(key, { viewer = null, atom = null } = {}) {
-		if (viewer == null) {
+		if (viewer === null) {
 			for (viewer of this.viewers) {
 				this.override_changed(key, { viewer, atom });
 			}
 			return;
-		} else if (atom == null) {
+		} else if (atom === null) {
 			for (atom of this.atoms) {
 				this.override_changed(key, { viewer, atom });
 			}
 			return;
-		} else if (key == null) {
+		} else if (key === null) {
 			for (key of this.overrides.keys()) {
 				this.override_changed(key, { viewer, atom });
 			}
@@ -98,7 +98,7 @@ class VisibilityGroup {
 		let match;
 		let can_see = viewer.c.Eye.can_see(atom);
 
-		if (key == "visible") {
+		if (key === "visible") {
 			// Special snowflakey code for when this changes visibility...
 			// which is what this class will probably be used for 99% of the time.
 			if (can_see) {viewer.c.Eye[mob_symbols._add_viewing](atom);}
