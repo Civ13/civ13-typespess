@@ -974,7 +974,7 @@ class Atom extends EventEmitter {
 	set bounds_height(newval) {
 		newval = +newval;
 		if (newval === this[_bounds_height]) {return;}
-		if (newval != newval)
+		if (newval !== newval)
 			{throw new TypeError(`New boundary ${newval} is not a number`);}
 		this[_changeloc](
 			this[_x],
@@ -1727,7 +1727,7 @@ set directional(val) {
 	}
 	p_s(capitalized, gender = this.gender) {
 		let out = "";
-		if (gender != "plural") {out = "s";}
+		if (gender !== "plural") {out = "s";}
 		if (capitalized) {out = out[0].toUpperCase() + out.substr(1);}
 		return out;
 	}

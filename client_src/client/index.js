@@ -71,7 +71,7 @@ class TypespessClient extends EventEmitter {
 		requestAnimationFrame(this.anim_loop.bind(this)); // Start the rendering loop
 		let networked_down = new Set();
 		document.addEventListener("keydown", (e) => {
-			if (e.target.localName != "input" && this.connection) {
+			if (e.target.localName !== "input" && this.connection) {
 				networked_down.add(e.which);
 				this.connection.send(
 					JSON.stringify({ keydown: { which: e.which, id: e.target.id } })
@@ -80,7 +80,7 @@ class TypespessClient extends EventEmitter {
 		});
 		document.addEventListener("keyup", (e) => {
 			if (
-				(e.target.localName != "input" && this.connection) ||
+				(e.target.localName !== "input" && this.connection) ||
 				networked_down.has(e.which)
 			) {
 				networked_down.delete(e.which);

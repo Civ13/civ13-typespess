@@ -8,7 +8,7 @@ class NewPlayerPanel {
 	}
 
 	handle_message(message) {
-		if (message.latejoin != undefined) {
+		if (typeof message.latejoin !== "undefined") {
 			[...this.panel.content_obj.getElementsByClassName("pregame")].forEach(
 				(item) => (item.style.display = message.latejoin ? "none" : "block")
 			);

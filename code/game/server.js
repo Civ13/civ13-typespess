@@ -390,7 +390,7 @@ class Typespess extends EventEmitter {
 		if (!template.is_variant && template.variants && template.variants.length) {
 			for (let i = 0; i < template.variants.length; i++) {
 				let variant = template.variants[i];
-				if (variant.type == "single") {
+				if (variant.type === "single") {
 					let curr_obj = template.vars;
 					for (let j = 0; j < variant.var_path.length - 1; j++) {
 						let next_obj = curr_obj[variant.var_path[j]];
@@ -429,7 +429,7 @@ class Typespess extends EventEmitter {
 			variant_leaf_path.length = template.variants.length;
 			for (var i = 0; i < template.variants.length; i++) {
 				var variant = template.variants[i];
-				if (variant.type == "single") {
+				if (variant.type === "single") {
 					var idx = variant.values.indexOf(variant_leaf_path[i]);
 					if (idx == -1 || variant_leaf_path.length <= i) {
 						idx = 0;

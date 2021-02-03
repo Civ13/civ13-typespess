@@ -20,8 +20,6 @@ class StatusEffect {
 		mob.c.LivingMob.effects[this.constructor.name] = this;
 	}
 
-	adjust() {}
-
 	unapply() {
 		if (!this.mob) {return;}
 		if (this.mob.c.LivingMob.effects[this.constructor.name] === this)

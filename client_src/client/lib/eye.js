@@ -74,6 +74,8 @@ class Eye extends EventEmitter {
 		var rect = e.target.getBoundingClientRect();
 		var clickX = ((e.clientX - rect.left) / rect.width) * e.target.width;
 		var clickY = ((e.clientY - rect.top) / rect.height) * e.target.height;
+		var localX;
+		var localY;
 		// Iterate through the atoms from top to bottom.
 		var clickedAtom;
 		for (let plane of [...this.planes.values()].sort((a, b) => {
@@ -104,8 +106,8 @@ class Eye extends EventEmitter {
 					),
 				];
 
-				var localX = (clickX - scrx) / 32;
-				var localY = 1 - (clickY - scry) / 32;
+				localX = (clickX - scrx) / 32;
+				localY = 1 - (clickY - scry) / 32;
 				[localX, localY] = atom
 					.get_transform(timestamp)
 					.inverse()
@@ -204,7 +206,7 @@ class Eye extends EventEmitter {
 	handle_mousemove(e, timestamp = performance.now()) {
 		this.last_mouse_event = e;
 		let meta = this.get_mouse_target(e, timestamp);
-		if (meta.atom != this.mouse_over_atom) {
+		if (meta.atom !== this.mouse_over_atom) {
 			if (this.mouse_over_atom) {this.mouse_over_atom.emit("mouseout");}
 			let old = this.mouse_over_atom;
 			this.mouse_over_atom = meta.atom;
@@ -259,7 +261,7 @@ class Plane {
 
 		let dirty_tiles = new Set();
 
-		if (this.last_originx != null && this.last_originy != null) {
+		if (this.last_originx !== null && this.last_originy !== null) {
 			let offsetx = originx - this.last_originx;
 			let offsety = originy - this.last_originy;
 			if (offsetx !== 0 || offsety !== 0) {
@@ -327,10 +329,10 @@ class Plane {
 					newbounds.y += dispy;
 					newbounds.transform = atom.get_transform(timestamp);
 					if (
-						newbounds.x != lastbounds.x ||
-			newbounds.y != lastbounds.y ||
-			newbounds.width != lastbounds.width ||
-			newbounds.height != lastbounds.height ||
+						newbounds.x !== lastbounds.x ||
+			newbounds.y !== lastbounds.y ||
+			newbounds.width !== lastbounds.width ||
+			newbounds.height !== lastbounds.height ||
 			!newbounds.transform.equals(lastbounds.transform)
 					) {
 						for (
