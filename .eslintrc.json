@@ -24,6 +24,7 @@
         "max-params": ["warn", 4],
         "max-statements": ["warn", 10],
         "max-nested-callbacks": ["warn", 10],
+        "max-lines": ["error", {"max": 500, "skipComments": true, "skipBlankLines": true}],
 
         "curly": "error",
         "block-scoped-var": "error",

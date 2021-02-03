@@ -84,30 +84,8 @@ class Typespess extends EventEmitter {
   * @param {Function} [mod.server_start] A callback which is called when the server starts (or now if it already has) with an instance of this server object
   */
 	importModule(mod) {
-		if (mod.components) {
-			for (var componentName in mod.components) {
-				if (Object.prototype.hasOwnProperty.call(mod.components,componentName)) {
-					if (this.components[componentName]) {
-						throw new Error(`Component ${componentName} already exists!`);
-					}
-					if (mod.components[componentName].name != componentName)
-						{throw new Error(
-							`Component name mismatch! Named ${componentName} in map and constructor is named ${mod.components[componentName].name}`
-						);}
-					this.components[componentName] = mod.components[componentName];
-				}
-			}
-		}
-		if (mod.templates) {
-			for (var templateName in mod.templates) {
-				if (!Object.prototype.hasOwnProperty.call(mod.templates,templateName)) {continue;}
-				if (this.templates[templateName])
-					{throw new Error(`Template ${templateName} already exists!`);}
-				var template = mod.templates[templateName];
-
-				this.templates[templateName] = template;
-			}
-		}
+		if (mod.components) {this.importComponents(mod);}
+		if (mod.templates) {this.importTemplates(mod);}
 		if (mod.now instanceof Function) {
 			mod.now(this);
 		}
@@ -117,6 +95,31 @@ class Typespess extends EventEmitter {
 		}
 	}
 
+	importComponents(mod) {
+		for (var componentName in mod.components) {
+			if (Object.prototype.hasOwnProperty.call(mod.components,componentName)) {
+				if (this.components[componentName]) {
+					throw new Error(`Component ${componentName} already exists!`);
+				}
+				if (mod.components[componentName].name !== componentName)
+					{throw new Error(
+						`Component name mismatch! Named ${componentName} in map and constructor is named ${mod.components[componentName].name}`
+					);}
+				this.components[componentName] = mod.components[componentName];
+			}
+		}
+	}
+
+	importTemplates (mod) {
+		for (var templateName in mod.templates) {
+			if (!Object.prototype.hasOwnProperty.call(mod.templates,templateName)) {continue;}
+			if (this.templates[templateName])
+				{throw new Error(`Template ${templateName} already exists!`);}
+			var template = mod.templates[templateName];
+
+			this.templates[templateName] = template;
+		}
+	}
 	/**
   * Starts the server.
   * @param {Object} opts
@@ -169,6 +172,7 @@ class Typespess extends EventEmitter {
   * @param {String} name The name to display for the client
   * @returns {Client}
   */
+	// eslint-disable-next-line max-statements
 	login(socket, username) {
 		if (this.clients[username] && this.clients[username].socket) {
 			var mob = this.clients[username].mob;
@@ -200,7 +204,7 @@ class Typespess extends EventEmitter {
   */
 	compute_inrange_tiles(atom, dist) {
 		var inrange_tiles = new Set();
-		if (atom.base_loc == null) {return inrange_tiles;}
+		if (typeof atom.base_loc === "undefined") {return inrange_tiles;}
 		for (
 			var x = Math.floor(atom.x + 0.00001 - dist);
 			x <= Math.ceil(atom.x - 0.00001 + dist);
@@ -222,24 +226,16 @@ class Typespess extends EventEmitter {
   * @param {number} dist The radius to go out
   * @returns {Set<Location>} A set of tiles a given distance away from the origin that are visible to the origin (not blocked by opaque atoms)
   */
+	// eslint-disable-next-line max-statements
 	compute_visible_tiles(atom, dist) {
-		if (atom.base_loc == null) {return new Set();}
+		if (typeof atom.base_loc === "undefined") {return new Set();}
 		var ring_tiles = [];
 		var base_x = Math.round(atom.x);
 		var base_y = Math.round(atom.y);
 		var base_z = Math.floor(atom.z);
-		for (let i = 1; i <= dist * 2; i++) {
-			for (
-				let j = Math.max(i - dist, 0);
-				j < i - Math.max(i - dist - 1, 0);
-				j++
-			) {
-				ring_tiles.push(atom.dim.location(base_x + i - j, base_y + j, base_z));
-				ring_tiles.push(atom.dim.location(base_x - j, base_y + i - j, base_z));
-				ring_tiles.push(atom.dim.location(base_x - i + j, base_y - j, base_z));
-				ring_tiles.push(atom.dim.location(base_x + j, base_y - i + j, base_z));
-			}
-		}
+
+		this.pushRingTiles(atom, dist, ring_tiles, base_x, base_y, base_z);
+
 		var visible_tiles = new Set(ring_tiles);
 		visible_tiles.add(atom.base_loc);
 		var used_tiles = new Set();
@@ -248,7 +244,7 @@ class Typespess extends EventEmitter {
 			let dx = tile.x - base_x;
 			let dy = tile.y - base_y;
 			if (!tile.opacity) {continue;}
-			if (tile.y != base_y) {
+			if (tile.y !== base_y) {
 				let left = base_x;
 				let right = base_x;
 				let iter_tile = tile;
@@ -267,7 +263,7 @@ class Typespess extends EventEmitter {
 				let left_dx = (left - base_x) / Math.abs(dy);
 				let right_dx = (right - base_x) / Math.abs(dy);
 				for (let y = tile.y; Math.abs(y - base_y) <= dist; y += vdir) {
-					if (y != tile.y) {
+					if (y !== tile.y) {
 						for (let x = Math.ceil(left); x <= Math.floor(right); x++) {
 							visible_tiles.delete(atom.dim.location(x, y, base_z));
 						}
@@ -277,7 +273,7 @@ class Typespess extends EventEmitter {
 				}
 			}
 
-			if (tile.x != base_x) {
+			if (tile.x !== base_x) {
 				let down = base_y;
 				let up = base_y;
 				let iter_tile = tile;
@@ -296,7 +292,7 @@ class Typespess extends EventEmitter {
 				let down_dy = (down - base_y) / Math.abs(dx);
 				let up_dy = (up - base_y) / Math.abs(dx);
 				for (let x = tile.x; Math.abs(x - base_x) <= dist; x += hdir) {
-					if (x != tile.x) {
+					if (x !== tile.x) {
 						for (let y = Math.ceil(down); y <= Math.floor(up); y++) {
 							visible_tiles.delete(atom.dim.location(x, y, base_z));
 						}
@@ -308,7 +304,20 @@ class Typespess extends EventEmitter {
 		}
 		return visible_tiles;
 	}
-
+	pushRingTiles (atom, dist, ring_tiles, base_x, base_y, base_z) {
+		for (let i = 1; i <= dist * 2; i++) {
+			for (
+				let j = Math.max(i - dist, 0);
+				j < i - Math.max(i - dist - 1, 0);
+				j++
+			) {
+				ring_tiles.push(atom.dim.location(base_x + i - j, base_y + j, base_z));
+				ring_tiles.push(atom.dim.location(base_x - j, base_y + i - j, base_z));
+				ring_tiles.push(atom.dim.location(base_x - i + j, base_y - j, base_z));
+				ring_tiles.push(atom.dim.location(base_x + j, base_y - i + j, base_z));
+			}
+		}
+	}
 	/**
   * Returns a precise timestamp, in milliseconds, since the server was constructed.
   * This timestamp is sent to clients periodically.
@@ -346,7 +355,7 @@ class Typespess extends EventEmitter {
 				hasAddedDependencies = false;
 				for (let componentName of template.components) {
 					let component = this.components[componentName];
-					if (component == null)
+					if (typeof component === "undefined")
 						{throw new Error(`Component ${componentName} does not exist!`);}
 					if (component.depends)
 						{for (var depends of component.depends) {
@@ -431,7 +440,7 @@ class Typespess extends EventEmitter {
 				var variant = template.variants[i];
 				if (variant.type === "single") {
 					var idx = variant.values.indexOf(variant_leaf_path[i]);
-					if (idx == -1 || variant_leaf_path.length <= i) {
+					if (idx === -1 || variant_leaf_path.length <= i) {
 						idx = 0;
 					}
 					var curr_obj = template.vars;
@@ -534,6 +543,7 @@ class Typespess extends EventEmitter {
   * @param {number} z
   * @param {Function} [percentage_callback] A callback that is called periodically with a number 0 to 1 denoting how far along the instancing process is done.
   */
+	// eslint-disable-next-line max-params
 	async instance_map(obj, x = 0, y = 0, z = 0, dim, percentage_callback) {
 		let locs = [...Object.values(obj.locs)];
 		let inst_list = [];
