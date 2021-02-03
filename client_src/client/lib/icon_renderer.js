@@ -70,7 +70,7 @@ class IconRenderer {
 							this.icon = `${this.icon}${this.icon_state}.png`;
 							}
 						}
-				else if (this.icon_state == "") {return;} //if theres no icon state - don't draw.
+				else if (this.icon_state === "") {return;} //if theres no icon state - don't draw.
 				if (!this.icon) {this.icon = "icons/nothing.png"}
 				this.atom.client
 					.enqueue_icon_meta_load(this.icon)	

@@ -29,12 +29,12 @@ class SimpleMob extends Component {
 		this.a.c.mobAI = val;
 	}
 	update_stat() {
-		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) return;
+		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {return;}
 		let health = this.a.c.LivingMob.health;
-		if (this.a.c.LivingMob.stat != combat_defines.DEAD) {
+		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
 			if (health <= 0) {
 				this.a.c.LivingMob.stat = combat_defines.DEAD;
-				if (this.base_icon_state.search("_dead") == -1)
+				if (this.base_icon_state.search("_dead") === -1)
 					{this.base_icon_state = `${this.base_icon_state}_dead`;this.update_overlays();}
 				return;
 			}
@@ -73,13 +73,12 @@ class SimpleMob extends Component {
 				newx = -1;
 				break;
 		}
-		this.update_overlays()
+		this.update_overlays();
 		this.a.move(newx,newy,"walking");
 	}
 
 	update_overlays() {
 		this.a.icon_state = "";
-		this.a.overlays["mob_icon"] = undefined;
 		this.a.overlays["mob_icon"] = this.get_main_overlay();
 	}
 
@@ -88,18 +87,18 @@ class SimpleMob extends Component {
 	}
 
 	remove_overlays(atom) {
-		atom.overlays["mob_icon"] = undefined;
+		atom.overlays["mob_icon"] = void 0;
 	}
 
 	get_main_overlay() {
 		let icodir = this.a.dir;
-		if (icodir == 1)
+		if (icodir === 1)
 			icodir = 2;
-		else if (icodir == 2)
+		else if (icodir === 2)
 			icodir = 1;
-		else if (icodir == 4)
+		else if (icodir === 4)
 			icodir = 3;
-		else if (icodir == 8)
+		else if (icodir === 8)
 			icodir = 4;
 		let overlay = { icon: `${this.a.icon}${this.base_icon_state}/${this.base_icon_state}-dir${icodir}.png` };
 
@@ -130,7 +129,7 @@ class mobAI extends Component {
 		if (this.behaviour === "scared") {
 			if (!this.a.c.SimpleMob.target) { //if no target, wander
 				if (Math.random() <= 0.25) {
-					{this.a.c.SimpleMob.move_ai(_.sample(randomDir));}
+					this.a.c.SimpleMob.move_ai(_.sample(randomDir));
 				}
 			}
 			else { //if target, run away
