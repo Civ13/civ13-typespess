@@ -303,13 +303,13 @@ class BodyPart extends Component {
 		if (!this.owner) return;
 		let mob = this.owner;
 		let icodir = mob.dir;
-		if (icodir == 1)
+		if (icodir ===1)
 			icodir = 2;
-		else if (icodir == 2)
+		else if (icodir ===2)
 			icodir = 1;
-		else if (icodir == 4)
+		else if (icodir ===4)
 			icodir = 3;
-		else if (icodir == 8)
+		else if (icodir ===8)
 			icodir = 4;
 		let overlay = { icon: `icons/mob/human_body/${this.body_zone}_m/${this.body_zone}_m-dir${icodir}.png` };
 		overlay.icon_state = this.body_zone;

@@ -34,7 +34,7 @@ class LoginPanel {
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
-		} else if (obj.valid==true) {
+		} else if (obj.valid === true) {
 			if (obj.autojoin) {
 				this.connection.send(JSON.stringify({ login: obj.logged_in_as }));
 				this.login_finish();}

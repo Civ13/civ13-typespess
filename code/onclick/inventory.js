@@ -977,13 +977,13 @@ class Slot extends EventEmitter {
 		if (this.props.is_hand_slot) {
 			let icodir = 1;
 			if (this.mob) {icodir = this.mob.dir;}
-			if (icodir == 1)
+			if (icodir ===1)
 				icodir = 2;
-			else if (icodir == 2)
+			else if (icodir ===2)
 				icodir = 1;
-			else if (icodir == 4)
+			else if (icodir ===4)
 				icodir = 3;
-			else if (icodir == 8)
+			else if (icodir ===8)
 				icodir = 4;
 			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png") != -1)
 				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
@@ -997,13 +997,13 @@ class Slot extends EventEmitter {
 		if (this.props.clothing_slot) {
 			let icodir = 1;
 			if (this.mob) {icodir = this.mob.dir;}
-			if (icodir == 1)
+			if (icodir ===1)
 				icodir = 2;
-			else if (icodir == 2)
+			else if (icodir ===2)
 				icodir = 1;
-			else if (icodir == 4)
+			else if (icodir ===4)
 				icodir = 3;
-			else if (icodir == 8)
+			else if (icodir ===8)
 				icodir = 4;
 			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("1.png") != -1)
 				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
@@ -1136,13 +1136,13 @@ class Slot extends EventEmitter {
 			) {
 				let icodir = 1;
 				if (this.mob) {icodir = this.mob.dir;}
-				if (icodir == 1)
+				if (icodir ===1)
 					icodir = 2;
-				else if (icodir == 2)
+				else if (icodir ===2)
 					icodir = 1;
-				else if (icodir == 4)
+				else if (icodir ===4)
 					icodir = 3;
-				else if (icodir == 8)
+				else if (icodir ===8)
 					icodir = 4;
 				this.mob.overlays[`inhand_${this.id}`] = 
 				{
@@ -1154,13 +1154,13 @@ class Slot extends EventEmitter {
 			if (this.props.clothing_slot) {
 				let icodir = 1;
 				if (this.mob) {icodir = this.mob.dir;}
-				if (icodir == 1)
+				if (icodir ===1)
 					icodir = 2;
-				else if (icodir == 2)
+				else if (icodir ===2)
 					icodir = 1;
-				else if (icodir == 4)
+				else if (icodir ===4)
 					icodir = 3;
-				else if (icodir == 8)
+				else if (icodir ===8)
 					icodir = 4;
 					this.mob.overlays[`clothing_${this.id}`] = {
 					icon_state: this[_item].c[this.props.clothing_slot].worn_icon_state,
