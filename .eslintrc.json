@@ -27,7 +27,7 @@
 
         "curly": "error",
         "block-scoped-var": "error",
-        "eqeqeq": 2,
+        "eqeqeq": "error",
         "guard-for-in": "warn",
         "new-cap": "warn",
         "no-caller": "error",

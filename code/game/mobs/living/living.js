@@ -447,14 +447,16 @@ class LivingMob extends Component {
 		this.mob_collide(atom)
 			)
 				{return;}
-			if (!atom.c.Tangible.anchored) {
-				this.a.glide_size = atom.glide_size;
-				this.now_pushing = true;
-				atom.move(Math.sign(offsetx), Math.sign(offsety), "bumped");
-				this.a.move(offsetx, offsety, "pushing");
-				this.now_pushing = false;
-			}
+			if (!atom.c.Tangible.anchored) {this.set_anchored(atom, offsetx, offsety);}
+
 		}
+	}
+	set_anchored(atom, offsetx, offsety) {
+		this.a.glide_size = atom.glide_size;
+		this.now_pushing = true;
+		atom.move(Math.sign(offsetx), Math.sign(offsety), "bumped");
+		this.a.move(offsetx, offsety, "pushing");
+		this.now_pushing = false;
 	}
 	mob_collide(atom) {
 		if (this.now_pushing) {return true;}

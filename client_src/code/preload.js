@@ -1,3 +1,4 @@
+// eslint-disable-next-line node/no-unpublished-require
 const preload_list = require("./preloadlist.js");
 let tpreload_list = ["icons/error.png"];
 if (Array.isArray(preload_list) === true)
