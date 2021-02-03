@@ -63,7 +63,7 @@ class LoginPanel {
 			button.addEventListener("click", () => {
 				this.connection.send(JSON.stringify({name: text_input.value, password: password_input.value , request_check: true}));
 				localStorage.setItem("stored_username", text_input.value);
-				localStorage.setItem("stored_password", password_input.value);
+//				localStorage.setItem("stored_password", password_input.value);
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
