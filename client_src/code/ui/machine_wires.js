@@ -48,7 +48,7 @@ class MachineWirePanel {
 					).textContent = wire.cut ? "Mend" : "Cut";}
 			}
 		}
-		if (msg.item_type !== undefined) {
+		if (typeof msg.item_type !== "undefined") {
 			this.item_type = msg.item_type;
 			for (let elem of this.panel.$$(".wire-cut-button")) {
 				if (this.item_type == "Wirecutters") {elem.classList.remove("disabled");}
@@ -59,7 +59,7 @@ class MachineWirePanel {
 				else {elem.classList.add("disabled");}
 			}
 		}
-		if (msg.status_text !== undefined) {
+		if (typeof msg.status_text !== "undefined") {
 			if (msg.status_text == null)
 				{this.panel.$(".status_text").style.display = "none";}
 			else {this.panel.$(".status_text").style.display = "block";}

@@ -45,13 +45,13 @@ class IconRenderer {
 	}
 
 	on_render_tick() {
-		if (this.icon != this.last_icon) {
+		if (this.icon !== this.last_icon) {
 			this.change_level = Math.max(this.change_level, CHANGE_LEVEL_ICON);
 			this.last_icon = this.icon;
-		} else if (this.icon_state != this.last_icon_state) {
+		} else if (this.icon_state !== this.last_icon_state) {
 			this.change_level = Math.max(this.change_level, CHANGE_LEVEL_ICON_STATE);
 			this.last_icon_state = this.icon_state;
-		} else if (this.dir != this.last_dir) {
+		} else if (this.dir !== this.last_dir) {
 			this.change_level = Math.max(this.change_level, CHANGE_LEVEL_DIR);
 			this.last_dir = this.dir;
 		}
@@ -59,7 +59,7 @@ class IconRenderer {
 			{this.atom.mark_dirty();}
 		if (this.change_level >= CHANGE_LEVEL_DIR) {
 			this.icon_meta = this.atom.client.icon_metas[this.icon];
-			if (this.icon_meta == undefined) {
+			if (typeof this.icon_meta === "undefined") {
 				this.change_level = CHANGE_LEVEL_NONE;
 				var enqueued_icon = this.icon;
 				if (this.icon && this.icon_state && (this.icon.search(".png") === -1)) {

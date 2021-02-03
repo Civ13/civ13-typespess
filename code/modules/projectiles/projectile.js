@@ -54,7 +54,7 @@ class Projectile extends Component.Networked {
 		}
 		if (this.permuted) {this.permuted.add(this.firer);}
 		this.starting = [this.a.x, this.a.y];
-		if (angle !== undefined)
+		if (typeof angle !== "undefined")
 		//Does a Box-Muller transform to make the bullet spread a normal distribution.
 		// This is to make it easier to have spread from multiple sources work as you would expect.
 			{this.angle =

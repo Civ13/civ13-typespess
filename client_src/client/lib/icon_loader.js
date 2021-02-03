@@ -28,7 +28,7 @@ function enqueue_icon_meta_load(newIcon) {
 			meta.width = meta.__image_object.width;
 			meta.height = meta.__image_object.height;
 			resolve();
-			this.icon_meta_load_queue[newIcon] = undefined;
+			this.icon_meta_load_queue[newIcon] = void 0;
 		});
 		meta.__image_object.addEventListener("error", (error) => {	
 			reject(error || new Error(`Loading failed for ${newIcon}`));	

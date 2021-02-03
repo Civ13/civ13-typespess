@@ -28,7 +28,7 @@ class MobHud extends Component {
 		Clicks are forwarded to master
 		Override makes it so the alert is not replaced until cleared by a clear_alert with clear_override, and it's used for hallucinations.
 		*/
-		if (severity === undefined) {severity = "";}
+		if (typeof severity === "undefined") {severity = "";}
 		if (!category) {return;}
 		if (typeof template === "string")
 			{template = this.a.server.templates[template];}
@@ -97,7 +97,7 @@ class MobHud extends Component {
 
 		delete this.alerts[category];
 		this.reorganize_alerts();
-		//this.c.Eye.screen[`alert_${category}`] = undefined;
+		//this.c.Eye.screen[`alert_${category}`] = void 0;
 		// TODO: destroy the alert;
 	}
 	_onclick() {return;}
@@ -113,7 +113,7 @@ class MobHud extends Component {
 			if (alert_idx >= 5) {break;}
 		}
 		for (; alert_idx < 5; alert_idx++) {
-			this.a.c.Eye.screen[`ui_alert${alert_idx}`] = undefined;
+			this.a.c.Eye.screen[`ui_alert${alert_idx}`] = void 0;
 		}
 	}
 	reorganize_buttons() {

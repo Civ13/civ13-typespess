@@ -69,7 +69,7 @@ class Eye extends Component {
 			{},
 			{
 				set: (target, key, value) => {
-					if (value !== undefined && !is_atom(value))
+					if (typeof value !== "undefined" && !is_atom(value))
 						{throw new TypeError(`${value} is not an atom`);}
 					if (target[key] === value) {return true;}
 					if (target[key]) {
@@ -330,8 +330,8 @@ class Mob extends Component {
 	constructor(atom, template) {
 		super(atom, template);
 
-		this[_client] = undefined;
-		this[_key] = undefined;
+		this[_client] = void 0;
+		this[_key] = void 0;
 		this[_panel_map] = new Map();
 		this[_eye_to_eyeid] = new WeakMap();
 		this[_directional]= true;
@@ -353,7 +353,7 @@ class Mob extends Component {
 					set: (target, property, value) => {
 						property = "" + property;
 						if (value instanceof Eye) {value = value.atom;}
-						if (value !== undefined && !has_component(value, "Eye"))
+						if (typeof value !== "undefined" && !has_component(value, "Eye"))
 							{throw new TypeError("Expected object with Eye component");}
 						if (value && value.c.Eye[_observers].indexOf(this) !== -1)
 							{return false;}
@@ -400,7 +400,7 @@ class Mob extends Component {
 						throw new Error("Cannot define property on eyes map");
 					},
 					deleteProperty: (target, property) => {
-						this.eyes[property] = undefined;
+						this.eyes[property] = void 0;
 						delete target[property];
 					},
 				}
@@ -418,16 +418,16 @@ class Mob extends Component {
 		return this[_key];
 	}
 	set key(val) {
-		this.a.server.dc_mobs[this[_key]] = undefined;
+		this.a.server.dc_mobs[this[_key]] = void 0;
 		if (val && val !== "") {
 			if (this.a.server.clients[val]) {this.client = this.a.server.clients[val];}
 			else {
 				if (this.a.server.dc_mobs[val])
-					{this.a.server.dc_mobs[val].c.Mob.key = undefined;}
+					{this.a.server.dc_mobs[val].c.Mob.key = void 0;}
 				this.a.server.dc_mobs[val] = this.atom;
 			}
 		}
-		this[_key] = val || undefined;
+		this[_key] = val || void 0;
 	}
 
 	/**

@@ -416,7 +416,7 @@ class Typespess extends EventEmitter {
   * @param {Array} variant_leaf_path
   */
 	get_template_variant(template, variant_leaf_path, instance_vars) {
-		if (!instance_vars && (!variant_leaf_path || variant_leaf_path.length == 0))
+		if (!instance_vars && (!variant_leaf_path || variant_leaf_path.length === 0))
 			{return template;}
 		template = utils.weak_deep_assign({}, template);
 		instance_vars = instance_vars

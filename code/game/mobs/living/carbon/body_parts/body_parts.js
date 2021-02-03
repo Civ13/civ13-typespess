@@ -294,9 +294,9 @@ class BodyPart extends Component {
 	}
 
 	remove_overlays(atom) {
-		atom.overlays[`limb_${this.body_zone}`] = undefined;
-		atom.overlays[`limb_${this.body_zone}_brute`] = undefined;
-		atom.overlays[`limb_${this.body_zone}_burn`] = undefined;
+		atom.overlays[`limb_${this.body_zone}`] = void 0;
+		atom.overlays[`limb_${this.body_zone}_brute`] = void 0;
+		atom.overlays[`limb_${this.body_zone}_burn`] = void 0;
 	}
 
 	get_main_overlay() {

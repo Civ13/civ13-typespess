@@ -249,7 +249,7 @@ class TypespessClient extends EventEmitter {
 const _chain_parent = Symbol("_chain_parent");
 const _chain_spliced = Symbol("_chain_spliced");
 (TypespessClient.chain_func = function (func1, func2) {
-	if (func2 == undefined) {throw new Error("Chaining undefined function!");}
+	if (typeof func2 === "undefined") {throw new Error("Chaining undefined function!");}
 	function chained_func(...args) {
 		while (
 			chained_func[_chain_parent] &&

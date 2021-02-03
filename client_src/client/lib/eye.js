@@ -90,7 +90,7 @@ class Eye extends EventEmitter {
 			for (let atom of [...tile].sort((a, b) => {
 				return Atom.atom_comparator(b, a);
 			})) {
-				if (atom.mouse_opacity == undefined) {
+				if (typeof atom.mouse_opacity == "undefined") {
 					atom.mouse_opacity = 1;
 				}
 				if (atom.mouse_opacity == 0) {continue;}

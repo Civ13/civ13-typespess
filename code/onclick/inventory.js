@@ -419,7 +419,7 @@ class MobInventory extends Component {
 			},
 		});
 		this.a.c.Eye.screen.drop_item.on("clicked", () => {
-			this.slots[this.active_hand].item = undefined;
+			this.slots[this.active_hand].item = void 0;
 		});
 
 		this.a.c.Eye.screen.throw_item = new Atom(this.a.server, {
@@ -489,7 +489,7 @@ class MobInventory extends Component {
 				`${value} is not a string referring to a valid hand slot.`
 			);}
 		if (this[_active_hand])
-			{this[_slots][this[_active_hand]].atom.overlays.hand_active = undefined;}
+			{this[_slots][this[_active_hand]].atom.overlays.hand_active = void 0;}
 		var old_active_hand = this[_active_hand];
 		this[_active_hand] = value;
 		this[_slots][this[_active_hand]].atom.overlays.hand_active = {icon : "icons/ui/screen_civ13/", icon_state: "hand_active"};
@@ -547,7 +547,7 @@ class MobInventory extends Component {
 		}
 		if (e.which === 81) {
 			// q
-			this.slots[this.active_hand].item = undefined;
+			this.slots[this.active_hand].item = void 0;
 		}
 		if (e.which === 82) {
 			this.throw_mode = !this.throw_mode;
@@ -571,7 +571,7 @@ class MobInventory extends Component {
 		if (!this.slots[this.active_hand].can_unequip()) {return;}
 		if (!this.slots[this.active_hand].item) {return;}
 		let item = this.slots[this.active_hand].item;
-		this.slots[this.active_hand].item = undefined;
+		this.slots[this.active_hand].item = void 0;
 		visible_message(
 			`<span class='danger'>The ${this.a} has thrown the ${item}</span class='danger'>`
 		).emit_from(this.a);
@@ -1082,8 +1082,8 @@ class Slot extends EventEmitter {
 			this.mob.c.Eye.screen[`slot_${this.id}`] = this.atom;
 			this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = this.item;
 		} else {
-			this.mob.c.Eye.screen[`slot_${this.id}`] = undefined;
-			this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = undefined;
+			this.mob.c.Eye.screen[`slot_${this.id}`] = void 0;
+			this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = void 0;
 		}
 	}
 	get visible() {
@@ -1094,7 +1094,7 @@ class Slot extends EventEmitter {
 		return this[_item];
 	}
 	set item(value) {
-		if (!has_component(value, "Item") && value !== undefined)
+		if (!has_component(value, "Item") && typeof value !== "undefined")
 			{throw new TypeError(
 				`${value} is not an atom with item component or undefined!`
 			);}
@@ -1102,13 +1102,13 @@ class Slot extends EventEmitter {
 			if (this.props.clothing_slot) {
 				this.mob.overlays[`clothing_${this.id}`] = null;
 			}
-			this[_item].c.Item[_slot] = undefined;
+			this[_item].c.Item[_slot] = void 0;
 			this[_item].layer = this.old_item_layer;
 			this[_item].screen_loc_x = null;
 			this[_item].screen_loc_y = null;
 			this[_item].glide_size = 0;
 			this[_item].loc = this.mob.fine_loc;
-			this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = undefined;
+			this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = void 0;
 			for (let slot of Object.values(this.mob.c.MobInventory.slots)) {
 				if (slot.props.requires_slot === this.id) {
 					if (slot.can_unequip()) {slot.item = null;}
@@ -1119,7 +1119,7 @@ class Slot extends EventEmitter {
 		this[_item] = value;
 		if (this[_item]) {
 			if (this[_item].c.Item[_slot]) {
-				this[_item].c.Item[_slot].item = undefined;
+				this[_item].c.Item[_slot].item = void 0;
 				this[_item].loc = this.mob.fine_loc;
 			}
 			this[_item].loc = this.mob;
@@ -1171,7 +1171,7 @@ class Slot extends EventEmitter {
 			}
 		} else {
 			if (this.props.is_hand_slot)
-				{this.mob.overlays[`inhand_${this.id}`] = undefined;}
+				{this.mob.overlays[`inhand_${this.id}`] = void 0;}
 		}
 		if (olditem) {olditem.c.Item.emit("unequipped", this);}
 		this.emit("item_changed", olditem, value);

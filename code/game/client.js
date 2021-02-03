@@ -53,8 +53,8 @@ class Client extends EventEmitter {
 		this.socket.on("close", this.disconnect_handler.bind(this));
 
 		if (this.server.dc_mobs[this.key]) {
-			if (this.mob === undefined) {this.mob = this.server.dc_mobs[this.key];}
-			else {this.server.dc_mobs[this.key].c.Mob.key = undefined;}
+			if (typeof this.mob === "undefined") {this.mob = this.server.dc_mobs[this.key];}
+			else {this.server.dc_mobs[this.key].c.Mob.key = void 0;}
 		}
 
 		if (this.server.demo_stream && !this.server.demo_stream.closed) {
@@ -239,8 +239,8 @@ class Client extends EventEmitter {
 		if (val && !has_component(val, "Mob"))
 			{throw new TypeError("Expected object with Mob component");}
 		if (this[_mob]) {
-			this[_mob].c.Mob[mob_symbols._client] = undefined;
-			this[_mob].c.Mob[mob_symbols._key] = undefined;
+			this[_mob].c.Mob[mob_symbols._client] = void 0;
+			this[_mob].c.Mob[mob_symbols._key] = void 0;
 			this.next_message.eye = this.next_message.eye || {};
 			for (let eyeId in this[_mob].c.Mob.eyes) {
 				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) {continue;}
@@ -320,8 +320,8 @@ class Client extends EventEmitter {
 		}
 	}
 	enqueue_delete_atom(netid) {
-		this[_netid_to_atom][netid] = undefined;
-		this[_netid_to_eye][netid] = undefined;
+		this[_netid_to_atom][netid] = void 0;
+		this[_netid_to_eye][netid] = void 0;
 		this[_atom_net_queue][netid] = { delete: true };
 	}
 
@@ -414,14 +414,14 @@ class Client extends EventEmitter {
 							if (visgroup.overrides.has(item))
 								{submessage[item] = visgroup.overrides.get(item);}
 						}
-						if (submessage[item] === undefined) {submessage[item] = null;}
+						if (typeof submessage[item] === "undefined") {submessage[item] = null;}
 					}
 				}
 				if (entry.update.overlays) {
 					submessage.overlays = {};
 					for (let item of entry.update.overlays) {
 						submessage.overlays[item] =
-			atom.overlays[item] === undefined ? null : atom.overlays[item];
+			typeof atom.overlays[item] === "undefined" ? null : atom.overlays[item];
 					}
 				}
 				if (entry.update.components) {

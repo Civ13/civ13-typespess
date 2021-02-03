@@ -78,7 +78,7 @@ module.exports = {
   * @returns {Function}
   */
 	chain_func(func1, func2) {
-		if (func2 === undefined) {throw new Error("Chaining undefined function!");}
+		if (typeof func2 === "undefined") {throw new Error("Chaining undefined function!");}
 		function chained_func(...args) {
 			while (
 				chained_func[_chain_parent] &&
@@ -120,7 +120,7 @@ module.exports = {
 				if (typeof val !== type) {return true;}
 			};
 		}
-		if (check && init_value !== undefined && check(init_value))
+		if (check && typeof init_value !== "undefined" && check(init_value))
 			{throw new Error(
 				`Initial value ${init_value} for ${name} failed type check!`
 			);}
@@ -138,7 +138,7 @@ module.exports = {
 			},
 			enumerable: true,
 		});
-		if (init_value !== undefined) {obj[name] = init_value;}
+		if (typeof init_value !== "undefined") {obj[name] = init_value;}
 	},
 
 	/**

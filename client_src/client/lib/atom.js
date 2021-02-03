@@ -298,16 +298,16 @@ class Glide {
 		this.x = 0;
 		this.y = 0;
 		if (
-			params.oldx == +params.oldx &&
-	params.oldy == +params.oldy &&
-	(params.oldx != object.x || params.oldy != object.y) &&
+			params.oldx === +params.oldx &&
+	params.oldy === +params.oldy &&
+	(params.oldx !== object.x || params.oldy !== object.y) &&
 	Math.abs(Math.max(object.x - params.oldx, object.y - params.oldy)) <=
 		1.50001
 		) {
 			var pgx = (object.glide && object.glide.x) || 0;
-			if (Math.sign(pgx) == params.oldx - object.x) {pgx = 0;}
+			if (Math.sign(pgx) === params.oldx - object.x) {pgx = 0;}
 			var pgy = (object.glide && object.glide.y) || 0;
-			if (Math.sign(pgy) == params.oldy - object.y) {pgy = 0;}
+			if (Math.sign(pgy) === params.oldy - object.y) {pgy = 0;}
 			Object.assign(this, {
 				x: params.oldx - object.x + pgx,
 				y: params.oldy - object.y + pgy,
@@ -320,8 +320,8 @@ class Glide {
 		var glidex = this.x;
 		var glidey = this.y;
 		var glide_size = +this.object.glide_size;
-		if (glide_size != glide_size) {glide_size = this.object.client.glide_size;}
-		if (glide_size != glide_size || glide_size == 0) {
+		if (glide_size !== glide_size) {glide_size = this.object.client.glide_size;}
+		if (glide_size !== glide_size || glide_size === 0) {
 			this.object.glide = null;
 			return;
 		}
@@ -339,7 +339,7 @@ class Glide {
 		}
 		this.x = glidex;
 		this.y = glidey;
-		if (glidex == 0 && glidey == 0) {this.object.glide = undefined;}
+		if (glidex === 0 && glidey === 0) {this.object.glide = void 0;}
 	}
 }
 
@@ -350,8 +350,8 @@ Atom.atom_comparator = function (a, b) {
 	if (!a) {return 1;}
 	if (!b) {return -1;}
 	var comparison = a.layer - b.layer;
-	if (comparison == 0) {comparison = b.y - a.y;}
-	if (comparison == 0)
+	if (comparison === 0) {comparison = b.y - a.y;}
+	if (comparison === 0)
 		{if (a.network_id > b.network_id) {comparison = 1;}
 		else if (a.network_id < b.network_id) {comparison = -1;}}
 	return comparison;

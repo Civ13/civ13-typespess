@@ -227,8 +227,8 @@ class Atom extends EventEmitter {
 			{},
 			{
 				set: (target, key, value) => {
-					if (value === undefined || value === null) {
-						target[key] = undefined;
+					if (typeof value === "undefined" || value === null) {
+						target[key] = void 0;
 						this[mob_symbols._update_var](key, 2);
 						return true;
 					}
@@ -525,7 +525,7 @@ class Atom extends EventEmitter {
 		this[_z] = newZ;
 		this[_dim] = newLoc && newLoc.dim;
 		this[_loc] = newLoc;
-		if (newBounds_x !== undefined) {
+		if (typeof newBounds_x !== "undefined") {
 			this[_bounds_x] = newBounds_x;
 			this[_bounds_y] = newBounds_y;
 			this[_bounds_width] = newBounds_width;
@@ -1354,7 +1354,7 @@ class Atom extends EventEmitter {
 		return this[_name];
 	}
 	set name(val) {
-		if (val === undefined) {val = null;}
+		if (typeof val === "undefined") {val = null;}
 		this[_name] = val;
 		this[mob_symbols._update_var]("name", 0);
 	}
@@ -1379,7 +1379,7 @@ class Atom extends EventEmitter {
 		return this[_screen_loc_x];
 	}
 	set screen_loc_x(val) {
-		if (val === undefined) {val = null;}
+		if (typeof val === "undefined") {val = null;}
 		this[_screen_loc_x] = val;
 		this[mob_symbols._update_var]("screen_loc_x", 0);
 	}
@@ -1392,7 +1392,7 @@ class Atom extends EventEmitter {
 		return this[_screen_loc_y];
 	}
 	set screen_loc_y(val) {
-		if (val === undefined) {val = null;}
+		if (typeof val === "undefined") {val = null;}
 		this[_screen_loc_y] = val;
 		this[mob_symbols._update_var]("screen_loc_y", 0);
 	}
@@ -1405,7 +1405,7 @@ class Atom extends EventEmitter {
 		return this[_mouse_opacity];
 	}
 	set mouse_opacity(val) {
-		if (val === undefined) {val = null;}
+		if (typeof val === "undefined") {val = null;}
 		this[_mouse_opacity] = val;
 		this[mob_symbols._update_var]("mouse_opacity", 0);
 	}
@@ -1418,7 +1418,7 @@ class Atom extends EventEmitter {
 		return this[_color];
 	}
 	set color(val) {
-		if (val === undefined) {val = null;}
+		if (typeof val === "undefined") {val = null;}
 		this[_color] = val;
 		this[mob_symbols._update_var]("color", 0);
 	}
@@ -1431,7 +1431,7 @@ class Atom extends EventEmitter {
 		return this[_alpha];
 	}
 	set alpha(val) {
-		if (val === undefined) {val = null;}
+		if (typeof val === "undefined") {val = null;}
 		this[_alpha] = val;
 		this[mob_symbols._update_var]("alpha", 0);
 	}
@@ -1444,7 +1444,7 @@ class Atom extends EventEmitter {
 	return this[_directional];
 }
 set directional(val) {
-	if (val === undefined) {val = false;}
+	if (typeof val === "undefined") {val = false;}
 	this[_directional] = val;
 	this[mob_symbols._update_var]("directional", 0);
 }

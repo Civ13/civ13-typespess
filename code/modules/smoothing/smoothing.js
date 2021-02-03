@@ -182,10 +182,10 @@ class TGSmooth extends Component {
 	redraw_smoothing() {
 		if (!this.a.c.Smooth.enabled && !this.a.c.Smooth.use_soft_disable) {
 			for (let i of [1, 2, 3, 4])
-				{this.a.overlays[`smoothing_corner_${i}`] = undefined;}
+				{this.a.overlays[`smoothing_corner_${i}`] = void 0;}
 			if (this.diagonal) {
-				this.a.overlays["smoothing_diag_a"] = undefined;
-				this.a.overlays["smoothing_diag_b"] = undefined;
+				this.a.overlays["smoothing_diag_a"] = void 0;
+				this.a.overlays["smoothing_diag_b"] = void 0;
 			}
 			return;
 		}
@@ -220,13 +220,13 @@ class TGSmooth extends Component {
 			}
 			if (diag_a) {
 				for (let i of [1, 2, 3, 4])
-					{this.a.overlays[`smoothing_corner_${i}`] = undefined;}
+					{this.a.overlays[`smoothing_corner_${i}`] = void 0;}
 				this.a.overlays["smoothing_diag_a"] = { icon_state: diag_a };
 				this.a.overlays["smoothing_diag_b"] = { icon_state: diag_b };
 				return;
 			} else {
-				this.a.overlays["smoothing_diag_a"] = undefined;
-				this.a.overlays["smoothing_diag_b"] = undefined;
+				this.a.overlays["smoothing_diag_a"] = void 0;
+				this.a.overlays["smoothing_diag_b"] = void 0;
 			}
 		}
 

@@ -74,7 +74,7 @@ class Matrix {
 	}
 
 	scale(sx, sy, ox = 0, oy = 0) {
-		if (sy == undefined) {sy = sx;}
+		if (typeof sy === "undefined") {sy = sx;}
 		return this.translate(-ox, -oy)
 			.multiply(new Matrix(sx, 0, 0, sy, 0, 0))
 			.translate(ox, oy);
