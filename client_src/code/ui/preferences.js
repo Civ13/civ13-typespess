@@ -88,7 +88,7 @@ class PreferencesPanel {
 			for (let [id, name] of Object.entries(genders)) {
 				let item = document.createElement("div");
 				item.classList.add("button", "dropdown-item");
-				if (id == this.char_prefs.gender) {
+				if (id === this.char_prefs.gender) {
 					item.classList.add("selected");
 				}
 				item.textContent = name;
@@ -114,7 +114,7 @@ class PreferencesPanel {
 				let item = document.createElement("div");
 				item.classList.add("button", "dropdown-item");
 				item.style.height = "64px";
-				if (id == this.char_prefs.hair_style) {
+				if (id === this.char_prefs.hair_style) {
 					item.classList.add("selected");
 					sel_elem = item;
 				}
@@ -152,7 +152,7 @@ class PreferencesPanel {
 				let item = document.createElement("div");
 				item.classList.add("button", "dropdown-item");
 				item.style.height = "64px";
-				if (id == this.char_prefs.skin_tone) {
+				if (id === this.char_prefs.skin_tone) {
 					item.classList.add("selected");
 					sel_elem = item;
 				}
@@ -191,7 +191,7 @@ class PreferencesPanel {
 				item.style.width = "96px";
 				item.style.height = "24px";
 				item.style.backgroundColor = this.hair_colors[id];
-				if (this.hair_colors[id] == this.char_prefs.hair_color) {
+				if (this.hair_colors[id] === this.char_prefs.hair_color) {
 					item.classList.add("selected");
 					sel_elem = item;
 				}
@@ -268,7 +268,7 @@ class PreferencesPanel {
 				this.panel.$(".property-name").value = msg.char_prefs.name;
 			}
 			if (msg.char_prefs.gender) {
-				this.panel.$(".property-gender").textContent = msg.char_prefs.gender == "male" ? "Male" : "Female";
+				this.panel.$(".property-gender").textContent = msg.char_prefs.gender === "male" ? "Male" : "Female";
 			}
 			if (msg.char_prefs.age) {
 				this.panel.$(".property-age").value = msg.char_prefs.age;
@@ -298,7 +298,7 @@ class PreferencesPanel {
 		}
 		if (msg.name_correction) {
 			let elem = this.panel.$(".property-name");
-			if (elem.value == msg.name_correction[0])
+			if (elem.value === msg.name_correction[0])
 				{elem.value = msg.name_correction[1];}
 		}
 		if (msg.job_preferences) {
@@ -310,7 +310,7 @@ class PreferencesPanel {
 				let ameta = this.job_metas[a];
 				let bmeta = this.job_metas[b];
 				let department_diff = department_order.indexOf(ameta.departments[0] || "misc") - department_order.indexOf(bmeta.departments[0] || "misc");
-				if (department_diff != 0) {return department_diff;}
+				if (department_diff !== 0) {return department_diff;}
 				if (
 					ameta.departments.includes("command") && !bmeta.departments.includes("command")
 				)
@@ -346,7 +346,7 @@ class PreferencesPanel {
 					"white",
 					"job-selection-button"
 				);
-				if (key == "nomad") {
+				if (key === "nomad") {
 					if (setting) {
 						assistant_disable = true;
 						job_pref_button.style.color = "green";
@@ -369,7 +369,7 @@ class PreferencesPanel {
 						for (let i = 0; i <= 3; i++) {
 							let item = document.createElement("div");
 							item.classList.add("button", "dropdown-item", "white");
-							if (i == this.job_preferences[key]) {
+							if (i === this.job_preferences[key]) {
 								item.classList.add("selected");
 							}
 							item.textContent = job_pref_settings[i];
@@ -380,11 +380,11 @@ class PreferencesPanel {
 								job_pref_button.textContent = job_pref_settings[i];
 								job_pref_button.style.color = job_pref_colors[i];
 								this.job_preferences[key] = i;
-								if (i == 3) {
+								if (i === 3) {
 									for (let [otherjob, level] of Object.entries(
 										this.job_preferences
 									)) {
-										if (level == 3 && otherjob != key) {
+										if (level === 3 && otherjob != key) {
 											this.job_preferences[otherjob] = 2;
 											let otherelem = this.panel.$(
 												`.job-list div[data-job-key="${otherjob}"] .job-selection-button`
@@ -426,8 +426,8 @@ class PreferencesPanel {
 		for (let part of ["torso", "groin", "l_arm", "r_arm", "l_leg", "r_leg", "r_hand", "l_hand", "r_foot", "l_foot", "head"]) {
 			let icon_state = part;
 			let partic = part;
-			icon_state += prefs.gender == "female" ? "_f" : "_m";
-			partic += prefs.gender == "female" ? "_f" : "_m";
+			icon_state += prefs.gender === "female" ? "_f" : "_m";
+			partic += prefs.gender === "female" ? "_f" : "_m";
 
 			let color = null;
 			if (this.skin_tones) {color = this.skin_tones[prefs.skin_tone];}

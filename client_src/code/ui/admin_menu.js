@@ -28,7 +28,7 @@ class AdminPanel {
 
 	populate_tools() {
 		for (let [key, val] of Object.entries(this.tools).sort((a, b) => {
-			return a[1].name > b[1].name ? 1 : a[1].name == b[1].name ? 0 : -1;
+			return a[1].name > b[1].name ? 1 : a[1].name === b[1].name ? 0 : -1;
 		})) {
 			let template_elem = document.createElement("div");
 			template_elem.classList.add("tool-entry");

@@ -67,7 +67,7 @@ class LoginPanel {
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
-			if (obj.value === true && obj.logged_in_as == text_input.value) {
+			if (obj.value === true && obj.logged_in_as === text_input.value) {
 				this.connection.send(JSON.stringify({ login: text_input.value }));
 				this.login_finish();
 			}

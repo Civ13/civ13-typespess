@@ -16,7 +16,7 @@ class Atom extends EventEmitter {
 
 		for (let key in instobj) {
 			if (!Object.prototype.hasOwnProperty.call(instobj,key)) {continue;}
-			if (key == "overlays" || key == "components" || key == "component_vars")
+			if (key === "overlays" || key === "components" || key === "component_vars")
 				{continue;}
 			this[key] = instobj[key];
 		}

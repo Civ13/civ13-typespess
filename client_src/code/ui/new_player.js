@@ -24,7 +24,7 @@ class NewPlayerPanel {
 
 	update_timer() {
 		this.timer_timeout = setTimeout(this.update_timer, 50);
-		if (this.start_at == null) {
+		if (this.start_at === null) {
 			this.panel.$(".timer").textContent = "Delayed";
 		} else {
 			let time_left =

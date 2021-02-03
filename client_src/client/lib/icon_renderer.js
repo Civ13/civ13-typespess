@@ -75,7 +75,7 @@ class IconRenderer {
 				this.atom.client
 					.enqueue_icon_meta_load(this.icon)	
 					.then(() => {	
-						if (this.icon == enqueued_icon) {	
+						if (this.icon === enqueued_icon) {	
 							this.change_level = CHANGE_LEVEL_ICON;	
 						}	
 					})	
@@ -186,7 +186,7 @@ class IconRenderer {
 	}
 
 	get icon() {
-		if (this._icon == null && this.parent) {return this.parent.icon;}
+		if (this._icon === null && this.parent) {return this.parent.icon;}
 		var icon = this._icon;
 		return icon;
 	}
@@ -195,7 +195,7 @@ class IconRenderer {
 	}
 
 	get icon_state() {
-		if (this._icon_state == null && this.parent) {return this.parent.icon_state;}
+		if (this._icon_state === null && this.parent) {return this.parent.icon_state;}
 		var icon_state = this._icon_state;
 		if (this.parent) {
 			icon_state = ("" + icon_state).replace(
@@ -210,7 +210,7 @@ class IconRenderer {
 	}
 
 	get dir() {
-		if (this._dir == null && this.parent) {return this.parent.dir;}
+		if (this._dir === null && this.parent) {return this.parent.dir;}
 		var dir = this._dir;
 		return dir;
 	}
@@ -222,7 +222,7 @@ class IconRenderer {
 		return this._overlay_layer;
 	}
 	set overlay_layer(val) {
-		if (val == this._overlay_layer) {return;}
+		if (val === this._overlay_layer) {return;}
 		this._overlay_layer = val;
 		if (this.atom) {this.atom.mark_dirty();}
 	}
@@ -231,7 +231,7 @@ class IconRenderer {
 		return this._offset_x;
 	}
 	set offset_x(val) {
-		if (val == this._offset_x) {return;}
+		if (val === this._offset_x) {return;}
 		this._offset_x = +val || 0;
 		if (this.atom) {this.atom.mark_dirty();}
 	}
@@ -239,7 +239,7 @@ class IconRenderer {
 		return this._offset_y;
 	}
 	set offset_y(val) {
-		if (val == this._offset_y) {return;}
+		if (val === this._offset_y) {return;}
 		this._offset_y = +val || 0;
 		if (this.atom) {this.atom.mark_dirty();}
 	}
@@ -258,11 +258,11 @@ class IconRenderer {
 	}
 
 	get color() {
-		if (this._color == null && this.parent) {return this.parent.color;}
+		if (this._color === null && this.parent) {return this.parent.color;}
 		return this._color;
 	}
 	set color(val) {
-		if (val == this._color) {return;}
+		if (val === this._color) {return;}
 		this._color = "" + val;
 		if (this.atom) {this.atom.mark_dirty();}
 	}
@@ -271,7 +271,7 @@ class IconRenderer {
 		return this._alpha;
 	}
 	set alpha(val) {
-		if (val == this._alpha) {return;}
+		if (val === this._alpha) {return;}
 		this._alpha = "" + val;
 		if (this.atom) {this.atom.mark_dirty();}
 	}

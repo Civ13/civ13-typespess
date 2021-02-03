@@ -149,10 +149,10 @@ class TypespessClient extends EventEmitter {
 				for (let key in inst) {
 					if (!Object.prototype.hasOwnProperty.call(inst,key)) {continue;}
 					if (
-						key == "appearance" ||
-						key == "network_id" ||
-						key == "overlays" ||
-						key == "components"
+						key === "appearance" ||
+						key === "network_id" ||
+						key === "overlays" ||
+						key === "components"
 					) {
 						continue;
 					}

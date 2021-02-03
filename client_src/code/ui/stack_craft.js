@@ -33,11 +33,11 @@ class StackCraftPanel {
 		this.recipes_elem.innerHTML = "";
 		for (let i = 0; i < this.recipes.length; i++) {
 			let recipe = this.recipes[i];
-			if (recipe == null) {
+			if (recipe === null) {
 				this.recipes_elem.appendChild(document.createElement("hr"));
 				continue;
 			}
-			//else if (this.recipe_check_tech(recipe) == 1) {
+			//else if (this.recipe_check_tech(recipe) === 1) {
 			else {
 				let recipe_elem = document.createElement("div");
 				recipe_elem.classList.add("small-vertical-margins");
@@ -65,7 +65,7 @@ class StackCraftPanel {
 			{return 0;}
 		if (Tworld.age > recipe.last_age)
 			{return 0;}
-		if (this.civilization == null || this.civilization == "")
+		if (this.civilization === null || this.civilization === "")
 			{console.log("No civ");if (Tworld.age1>= recipe.age1 && Tworld.age2>= recipe.age2 && Tworld.age3>= recipe.age3)
 				{return 1;}
 			else

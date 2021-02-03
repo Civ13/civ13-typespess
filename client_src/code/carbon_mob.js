@@ -21,7 +21,7 @@ class CarbonMob extends Component {
 		let timestamp_diff = timestamp - this.last_timestamp;
 		if (timestamp_diff > 0) {
 			if (this.lying) {
-				if (this.interpolated_lying == 0) {
+				if (this.interpolated_lying === 0) {
 					this.lying_direction = Math.random() < 0.5 ? 1 : -1;
 				}
 				this.interpolated_lying = Math.min(

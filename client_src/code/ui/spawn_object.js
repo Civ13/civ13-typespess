@@ -42,7 +42,7 @@ class SpawnObjectPanel {
 
 	populate_templates() {
 		for (let [key, val] of Object.entries(this.templates).sort((a, b) => {
-			return a[0] > b[0] ? 1 : a[0] == b[0] ? 0 : -1;
+			return a[0] > b[0] ? 1 : a[0] === b[0] ? 0 : -1;
 		})) {
 			let template_elem = document.createElement("div");
 			template_elem.classList.add("template-entry");

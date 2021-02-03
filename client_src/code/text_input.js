@@ -6,7 +6,7 @@ module.exports.now = function (client) {
 	window.addEventListener("load", () => {
 		let input_elem = document.getElementById("main-text-input");
 		document.addEventListener("keydown", (e) => {
-			if (e.target.localName == "input" || !client.connection) {return;}
+			if (e.target.localName === "input" || !client.connection) {return;}
 			// the e.preventDefault() is for stopping the character being typed into the input
 			if (e.which === 79) {
 				// o
@@ -44,12 +44,12 @@ module.exports.now = function (client) {
 				e.preventDefault();
 			} else if (e.which === 13) {
 				// enter
-				if (input_elem.dataset.inputting == "ooc") {
+				if (input_elem.dataset.inputting === "ooc") {
 					if (client.connection)
 						{client.connection.send(
 							JSON.stringify({ ooc_message: input_elem.value })
 						);}
-				} else if (input_elem.dataset.inputting == "say") {
+				} else if (input_elem.dataset.inputting === "say") {
 					if (client.connection)
 						{client.connection.send(
 							JSON.stringify({ say_message: input_elem.value })

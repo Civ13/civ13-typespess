@@ -82,12 +82,12 @@ class Matrix {
 
 	equals(other) {
 		return (
-			other.a == this.a &&
-			other.b == this.b &&
-			other.c == this.c &&
-			other.d == this.d &&
-			other.e == this.e &&
-			other.f == this.f
+			other.a === this.a &&
+			other.b === this.b &&
+			other.c === this.c &&
+			other.d === this.d &&
+			other.e === this.e &&
+			other.f === this.f
 		);
 	}
 }

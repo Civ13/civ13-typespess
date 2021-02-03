@@ -21,7 +21,7 @@ class StripPanel {
 				i++;
 				let tr = document.createElement("tr");
 				table.appendChild(tr);
-				if (slotkey == null) {
+				if (slotkey === null) {
 					tr.innerHTML = "<td colspan=3>&nbsp;</td>";
 					continue;
 				}
@@ -88,7 +88,7 @@ class StripPanel {
 					if (do_clear) {ctx.clearRect(0, 0, 32, 32);}
 					a.on_render_tick(0);
 					a.fully_load().then(() => {
-						if (newappearance == this.cached_appearances[slot]) {
+						if (newappearance === this.cached_appearances[slot]) {
 							ctx.clearRect(0, 0, 32, 32);
 							a.on_render_tick(0);
 							a.draw(ctx, 0);
