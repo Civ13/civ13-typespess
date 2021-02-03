@@ -465,6 +465,7 @@ class Atom extends EventEmitter {
 		if (newLoc && !newLoc.is_base_loc) {
 			let slowPointer = newLoc;
 			let fastPointer = newLoc;
+			// eslint-disable-next-line eqeqeq
 			while (slowPointer != null) {
 				slowPointer = slowPointer[_loc];
 				if (fastPointer) {fastPointer = fastPointer[_loc];}
@@ -488,7 +489,7 @@ class Atom extends EventEmitter {
 		if (this[_loc]) {
 			if (this[_loc].contents) {
 				let idx = this[_loc].contents.indexOf(this);
-				if (idx != -1) {this[_loc].contents.splice(idx, 1);}
+				if (idx !== -1) {this[_loc].contents.splice(idx, 1);}
 			}
 			if (this[_loc].is_base_loc) {
 				for (
@@ -506,12 +507,12 @@ class Atom extends EventEmitter {
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
 						let idx = thisloc.partial_contents.indexOf(this);
-						if (idx != -1) {thisloc.partial_contents.splice(idx, 1);}
+						if (idx !== -1) {thisloc.partial_contents.splice(idx, 1);}
 						thisloc.viewers.forEach((item) => {
 							lost_viewers.push(item);
 						});
 						for (let atom of thisloc.partial_contents) {
-							if (atom != this && atom.does_cross(this)) {
+							if (atom !== this && atom.does_cross(this)) {
 								if (!lost_crossers.includes(atom)) {lost_crossers.push(atom);}
 							}
 						}
@@ -559,7 +560,7 @@ class Atom extends EventEmitter {
 							gained_viewers.push(item);
 						});
 						for (let atom of thisloc.partial_contents) {
-							if (atom != this && this.does_cross(atom)) {
+							if (atom !== this && this.does_cross(atom)) {
 								let idx = lost_crossers.indexOf(atom);
 								if (idx === -1) {
 									if (
@@ -587,7 +588,7 @@ class Atom extends EventEmitter {
 
 		for (let lost of lost_crossers) {
 			let idx = lost[_crosses].indexOf(this);
-			if (idx != -1) {lost[_crosses].splice(idx, 1);}
+			if (idx !== -1) {lost[_crosses].splice(idx, 1);}
 			this.emit("uncrossed", lost, movement);
 			lost.emit("uncrossed_by", this, movement);
 		}
@@ -686,7 +687,7 @@ class Atom extends EventEmitter {
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
 						for (let atom of thisloc.partial_contents) {
-							if (atom != this && atom.does_cross(this)) {
+							if (atom !== this && atom.does_cross(this)) {
 								if (!lost_crossers.includes(atom)) {lost_crossers.push(atom);}
 							}
 						}
@@ -708,7 +709,7 @@ class Atom extends EventEmitter {
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
 						for (let atom of thisloc.partial_contents) {
-							if (atom != this && this.does_cross(atom, { x: newX, y: newY })) {
+							if (atom !== this && this.does_cross(atom, { x: newX, y: newY })) {
 								var idx = lost_crossers.indexOf(atom);
 
 								if (idx === -1) {
@@ -823,7 +824,7 @@ class Atom extends EventEmitter {
 				this.loc = null;
 				return;
 			}
-			if (newLoc.loc != null && !newLoc.loc.is_base_loc) {
+			if (newLoc.loc !== null && !newLoc.loc.is_base_loc) {
 				this.loc = newLoc.loc;
 				return;
 			}
@@ -834,7 +835,7 @@ class Atom extends EventEmitter {
 		!newLoc.dim
 			)
 				{throw new TypeError("new fine loc is invalid");}
-			var newz = newLoc.z != null ? newLoc.z : this.z;
+			var newz = newLoc.z !== null ? newLoc.z : this.z;
 			this[_changeloc](
 				newLoc.x,
 				newLoc.y,
@@ -902,7 +903,7 @@ class Atom extends EventEmitter {
 	set bounds_x(newval) {
 		newval = +newval;
 		if (newval === this[_bounds_x]) {return;}
-		if (newval != newval)
+		if (newval !== newval)
 			{throw new TypeError(`New boundary ${newval} is not a number`);}
 		this[_changeloc](
 			this[_x],
@@ -926,7 +927,7 @@ class Atom extends EventEmitter {
 	set bounds_y(newval) {
 		newval = +newval;
 		if (newval === this[_bounds_y]) {return;}
-		if (newval != newval)
+		if (newval !== newval)
 			{throw new TypeError(`New boundary ${newval} is not a number`);}
 		this[_changeloc](
 			this[_x],
@@ -950,7 +951,7 @@ class Atom extends EventEmitter {
 	set bounds_width(newval) {
 		newval = +newval;
 		if (newval === this[_bounds_width]) {return;}
-		if (newval != newval)
+		if (newval !== newval)
 			{throw new TypeError(`New boundary ${newval} is not a number`);}
 		this[_changeloc](
 			this[_x],
@@ -1224,7 +1225,7 @@ class Atom extends EventEmitter {
   */
 	does_enclose_tile(tile) {
 		if (
-			!tile.is_base_loc || !this[_loc] || !this[_loc].is_base_loc || this[_z] != tile.z
+			!tile.is_base_loc || !this[_loc] || !this[_loc].is_base_loc || this[_z] !== tile.z
 		)
 			{return false;}
 		return (
