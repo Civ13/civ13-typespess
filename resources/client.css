@@ -411,12 +411,12 @@ body {
   background: #272727;
   color: #ffffff;
 }
-.bar:after {
+.bar::after {
   content: attr(data-bar-label);
   position: relative;
   vertical-align: middle;
 }
-.bar[data-status-color]:after {
+.bar[data-status-color]::after {
   color: #ffffff;
 }
 .bar .bar-fill {
@@ -522,7 +522,7 @@ div.button:active.dropdown-item {
 .button.nocenter {
   text-align: left;
 }
-.button.dropdown:after {
+.button.dropdown::after {
   content: " ⯆";
 }
 .button.dropdown-item {
@@ -722,7 +722,8 @@ div.button:active.dropdown-item {
 }
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px / 1;
+  font-family: FontAwesome, sans-serif;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -843,7 +844,6 @@ div.button:active.dropdown-item {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 28px;
   line-height: 30px;
 }
 #uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-visibility-indicator.fa-pull-left {
@@ -858,7 +858,7 @@ div.button:active.dropdown-item {
 #uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-visibility-indicator.pull-right {
   margin-left: 0.3em;
 }
-#uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-visibility-indicator:before {
+#uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-visibility-indicator::before {
   content: "\f06e";
 }
 #uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-visibility-indicator.good {
@@ -894,7 +894,7 @@ div.button:active.dropdown-item {
 #uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-close-button.pull-right {
   margin-left: 0.3em;
 }
-#uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-close-button:before {
+#uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-close-button::before {
   content: "\f00d";
 }
 #uiframes-container .uiframe-container .uiframe .uiframe-header .uiframe-close-button:hover {

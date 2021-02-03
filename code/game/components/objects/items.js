@@ -111,7 +111,7 @@ class Item extends Component {
 		target.c.Mob.last_attacker_key = user.c.Mob.key;
 
 		user.c.Tangible.do_attack_animation(target);
-		target.c.Tangible.attacked_by(this.a, target);
+		target.c.Tangible.attacked_by(this.a, user);
 
 		// TODO logs and fingerprints
 	}

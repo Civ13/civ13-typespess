@@ -193,7 +193,7 @@ class LivingMob extends Component {
 	apply_damages(damages, def_zone, blocked) {
 		if (blocked >= 100) return false;
 		for (var key in damages) {
-			if (!damages.hasOwnProperty(key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(damages,key)) continue;
 			this.apply_damage(damages[key], key, def_zone, blocked);
 		}
 		return true;
@@ -353,10 +353,13 @@ class LivingMob extends Component {
 
 	attacked_by(item, user) {
 		let zone = random_zone(user.c.MobInteract.zone_sel);
-		let bp =
-	has_component(this.a, "MobBodyParts") &&
-	(this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.torso);
+		let bp = has_component(this.a, "MobBodyParts") &&
+			(this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.torso);
 		this.send_item_attack_message(item, user, bp && bp.name);
+		if (has_component(this.a, "SimpleMob"))
+		{
+			this.a.c.SimpleMob.target = user;
+		}
 		if (item.c.Item.force) {
 			this.apply_damage(item.c.Item.force, item.c.Item.damage_type, zone);
 			if (item.c.Item.damage_type == "brute" && Math.random() < 0.33) {
@@ -528,6 +531,7 @@ LivingMob.loadBefore = [
 LivingMob.template = {
 	vars: {
 		components: {
+			Atom: {directional: true},
 			LivingMob: {
 				status_flags:
 		combat_defines.CANSTUN |

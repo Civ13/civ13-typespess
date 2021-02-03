@@ -301,7 +301,7 @@ StackCable.template = {
 				conduct: true,
 				size: 2,
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
-				inhand_lhand_icon: "icons/mob/inhands/righthand/",
+				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				inhand_icon_state: "coil",
 			},
 			Stack: {
