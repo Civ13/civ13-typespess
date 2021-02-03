@@ -839,7 +839,8 @@ div.button:active.dropdown-item {
   height: 100%;
   margin-left: 2px;
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px / 1;
+  font-family: FontAwesome, sans-serif;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -873,12 +874,12 @@ div.button:active.dropdown-item {
   right: 0;
   top: 0;
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px / 1;
+  font-family: FontAwesome, sans-serif;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 28px;
   line-height: 30px;
   margin-right: 4px;
 }
