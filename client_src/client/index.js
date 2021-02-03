@@ -10,7 +10,7 @@ const { Eye, Plane } = require("./lib/eye.js");
 class TypespessClient extends EventEmitter {
 	constructor(wsurl, resRoot = "") {
 		super();
-		if (!wsurl) wsurl = "ws" + window.location.origin.substring(4);
+		if (!wsurl) {wsurl = "ws" + window.location.origin.substring(4);}
 		this.resRoot = resRoot;
 		this.wsurl = wsurl;
 		this.atoms_by_netid = {};
@@ -31,7 +31,7 @@ class TypespessClient extends EventEmitter {
 
 		if(!global.is_bs_editor_env) {
 			if(global.AudioContext)
-				this.audio_ctx = new AudioContext();
+				{this.audio_ctx = new AudioContext();}
 		}
 		this.importModule(require("./lib/lighting.js"));
 	}
@@ -105,9 +105,9 @@ class TypespessClient extends EventEmitter {
 						throw new Error(`Component ${componentName} already exists!`);
 					}
 					if (mod.components[componentName].name != componentName)
-						throw new Error(
+						{throw new Error(
 							`Component name mismatch! Named ${componentName} in map and constructor is named ${mod.components[componentName].name}`
-						);
+						);}
 					this.components[componentName] = mod.components[componentName];
 				}
 			}
@@ -119,9 +119,9 @@ class TypespessClient extends EventEmitter {
 						throw new Error(`Panel class ${class_name} already exists!`);
 					}
 					if (mod.panel_classes[class_name].name != class_name)
-						throw new Error(
+						{throw new Error(
 							`Panel class name mismatch! Named ${class_name} in map and constructor is named ${mod.panel_classes[class_name].name}`
-						);
+						);}
 					this.panel_classes[class_name] = mod.panel_classes[class_name];
 				}
 			}
@@ -143,11 +143,11 @@ class TypespessClient extends EventEmitter {
 			for (let i = 0; i < obj.update_atoms.length; i++) {
 				var inst = obj.update_atoms[i];
 				let atom = this.atoms_by_netid[inst.network_id];
-				if (!atom) continue;
+				if (!atom) {continue;}
 				var oldx = atom.x;
 				var oldy = atom.y;
 				for (let key in inst) {
-					if (!Object.prototype.hasOwnProperty.call(inst,key)) continue;
+					if (!Object.prototype.hasOwnProperty.call(inst,key)) {continue;}
 					if (
 						key == "appearance" ||
 						key == "network_id" ||
@@ -161,16 +161,16 @@ class TypespessClient extends EventEmitter {
 				atom.glide = new Atom.Glide(atom, { oldx, oldy, lasttime: timestamp });
 				if (inst.overlays) {
 					for (let key in inst.overlays) {
-						if (!Object.prototype.hasOwnProperty.call(inst.overlays,key)) continue;
+						if (!Object.prototype.hasOwnProperty.call(inst.overlays,key)) {continue;}
 						atom.set_overlay(key, inst.overlays[key]);
 					}
 				}
 				if (inst.components) {
 					for (let component_name in inst.components) {
-						if (!Object.prototype.hasOwnProperty.call(inst.components,component_name)) continue;
+						if (!Object.prototype.hasOwnProperty.call(inst.components,component_name)) {continue;}
 						for (let key in inst.components[component_name]) {
 							if (!Object.prototype.hasOwnProperty.call(inst.components[component_name],key))
-								continue;
+								{continue;}
 							atom.components[component_name][key] =
 								inst.components[component_name][key];
 						}
@@ -181,7 +181,7 @@ class TypespessClient extends EventEmitter {
 		if (obj.delete_atoms) {
 			for (var i = 0; i < obj.delete_atoms.length; i++) {
 				let atom = this.atoms_by_netid[obj.delete_atoms[i]];
-				if (!atom) continue;
+				if (!atom) {continue;}
 				atom.del();
 			}
 		}
@@ -201,7 +201,7 @@ class TypespessClient extends EventEmitter {
 		if (obj.eye) {
 			for (let [id, props] of Object.entries(obj.eye)) {
 				let eye = this.eyes[id];
-				if (!eye) continue;
+				if (!eye) {continue;}
 				let oldx = eye.origin.x;
 				let oldy = eye.origin.y;
 				Object.assign(eye.origin, props);
@@ -215,27 +215,27 @@ class TypespessClient extends EventEmitter {
 		if (obj.to_chat) {
 			let cw = document.getElementById("chatwindow");
 			let do_scroll = false;
-			if (cw.scrollTop + cw.clientHeight >= cw.scrollHeight) do_scroll = true;
+			if (cw.scrollTop + cw.clientHeight >= cw.scrollHeight) {do_scroll = true;}
 			for (let item of obj.to_chat) {
 				let newdiv = document.createElement("div");
 				newdiv.innerHTML = item;
 				document.getElementById("chatwindow").appendChild(newdiv);
 			}
-			if (do_scroll) cw.scrollTop = cw.scrollHeight - cw.clientHeight;
+			if (do_scroll) {cw.scrollTop = cw.scrollHeight - cw.clientHeight;}
 		}
 		if (obj.panel) {
 			this.panel_manager.handle_message(obj.panel);
 		}
 		if (obj.sound) {
 			if (obj.sound.play)
-				for (let sound of obj.sound.play) {
-					if (this.playing_sounds.get(sound.id)) continue;
+				{for (let sound of obj.sound.play) {
+					if (this.playing_sounds.get(sound.id)) {continue;}
 					new Sound(this, sound).start();
-				}
+				}}
 			if (obj.sound.stop) {
 				for (let id of obj.sound.stop) {
 					let sound = this.playing_sounds.get(id);
-					if (sound) sound.stop();
+					if (sound) {sound.stop();}
 				}
 			}
 		}
@@ -249,7 +249,7 @@ class TypespessClient extends EventEmitter {
 const _chain_parent = Symbol("_chain_parent");
 const _chain_spliced = Symbol("_chain_spliced");
 (TypespessClient.chain_func = function (func1, func2) {
-	if (func2 == undefined) throw new Error("Chaining undefined function!");
+	if (func2 == undefined) {throw new Error("Chaining undefined function!");}
 	function chained_func(...args) {
 		while (
 			chained_func[_chain_parent] &&
@@ -258,12 +258,12 @@ const _chain_spliced = Symbol("_chain_spliced");
 			chained_func[_chain_parent] = chained_func[_chain_parent][_chain_parent];
 		}
 		let prev = (...override_args) => {
-			if (!chained_func[_chain_parent]) return;
+			if (!chained_func[_chain_parent]) {return;}
 			if (override_args.length)
-				return chained_func[_chain_parent].call(this, ...override_args);
-			else return chained_func[_chain_parent].call(this, ...args);
+				{return chained_func[_chain_parent].call(this, ...override_args);}
+			else {return chained_func[_chain_parent].call(this, ...args);}
 		};
-		if (chained_func[_chain_spliced]) return prev();
+		if (chained_func[_chain_spliced]) {return prev();}
 		return func2.call(this, prev, ...args);
 	}
 	chained_func.splice = function () {
@@ -309,13 +309,13 @@ const _chain_spliced = Symbol("_chain_spliced");
 		(sideways ? rect.right : rect.left) + dropdown_rect.width >=
 			viewport_width - 10
 	)
-		flip_horizontal = true;
+		{flip_horizontal = true;}
 	if (
 		(sideways ? rect.top : rect.bottom) + dropdown_rect.height >=
 				viewport_height - 10 &&
 			(sideways ? rect.top : rect.bottom) >= viewport_width / 2
 	)
-		flip_vertical = true;
+		{flip_vertical = true;}
 
 	let dropdown_x = sideways && !flip_horizontal ? rect.right : rect.left;
 	let dropdown_y = !sideways && !flip_vertical ? rect.bottom : rect.top;
@@ -357,7 +357,7 @@ const _chain_spliced = Symbol("_chain_spliced");
 	}
 
 	elem2.style.visibility = "";
-	if (autoremove) elem2.focus();
+	if (autoremove) {elem2.focus();}
 });
 
 TypespessClient.prototype.enqueue_icon_meta_load = require("./lib/icon_loader.js");

@@ -3,9 +3,9 @@
 class StatusEffect {
 	apply_to(mob, props = {}) {
 		if (this.mob && this.mob != mob)
-			throw new Error(
+			{throw new Error(
 				`This status effect has already been applied to ${this.mob}! Can't apply to ${mob} as well. Make a new status effect instead`
-			);
+			);}
 		let overwriting = mob.c.LivingMob.effects[this.constructor.name];
 		if (overwriting && overwriting != this) {
 			if (this.overwrite_mode == "update") {
@@ -23,9 +23,9 @@ class StatusEffect {
 	adjust() {}
 
 	unapply() {
-		if (!this.mob) return;
+		if (!this.mob) {return;}
 		if (this.mob.c.LivingMob.effects[this.constructor.name] == this)
-			this.mob.c.LivingMob.effects[this.constructor.name] = null;
+			{this.mob.c.LivingMob.effects[this.constructor.name] = null;}
 		this.mob = null;
 	}
 }
@@ -35,11 +35,11 @@ StatusEffect.prototype.overwrite_mode = "update";
 class TimedEffect extends StatusEffect {
 	apply_to(mob, props = {}) {
 		let new_target_time = mob.server.now() + (props.delay || 0);
-		if (new_target_time <= (this.target_time || 0)) return;
+		if (new_target_time <= (this.target_time || 0)) {return;}
 		super.apply_to(mob, props);
-		if (!this.mob) return;
+		if (!this.mob) {return;}
 		this.target_time = new_target_time;
-		if (this.timeout) clearTimeout(this.timeout);
+		if (this.timeout) {clearTimeout(this.timeout);}
 		this.timeout = setTimeout(this.unapply.bind(this), props.delay || 0);
 	}
 
@@ -55,7 +55,7 @@ class TimedEffect extends StatusEffect {
 	}
 
 	unapply() {
-		if (this.timeout) clearTimeout(this.timeout);
+		if (this.timeout) {clearTimeout(this.timeout);}
 		this.timeout = null;
 		super.unapply();
 	}

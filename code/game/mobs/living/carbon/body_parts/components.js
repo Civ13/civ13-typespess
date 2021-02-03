@@ -94,13 +94,13 @@ class BodyPartHumanHair extends Component {
 		if (atm) {icodir = atm.dir;}
 		let hair_obj = sprite_accessories.hair[this.hair_style];
 		if (icodir ===1)
-			icodir = 2;
+			{icodir = 2;}
 		else if (icodir ===2)
-			icodir = 1;
+			{icodir = 1;}
 		else if (icodir ===4)
-			icodir = 3;
+			{icodir = 3;}
 		else if (icodir ===8)
-			icodir = 4;
+			{icodir = 4;}
 		let overlay = {
 			icon: `icons/mob/human_face/${hair_obj.icon_state}/${hair_obj.icon_state}-dir${icodir}.png`,
 			icon_state: hair_obj.icon_state,

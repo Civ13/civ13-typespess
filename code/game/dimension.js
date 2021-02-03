@@ -135,22 +135,22 @@ class Location {
   * @returns {Location}
   */
 	get_step(dir) {
-		if ((dir & 3) == 3) dir &= ~3;
-		if ((dir & 12) == 12) dir &= ~12;
+		if ((dir & 3) == 3) {dir &= ~3;}
+		if ((dir & 12) == 12) {dir &= ~12;}
 		var cached = this[_step_cache][dir];
-		if (cached) return cached;
+		if (cached) {return cached;}
 		var newx = this.x;
 		var newy = this.y;
-		if (dir & 1) newy++;
-		if (dir & 2) newy--;
-		if (dir & 4) newx++;
-		if (dir & 8) newx--;
+		if (dir & 1) {newy++;}
+		if (dir & 2) {newy--;}
+		if (dir & 4) {newx++;}
+		if (dir & 8) {newx--;}
 		return (this[_step_cache][dir] = this.dim.location(newx, newy, this.z));
 	}
 
 	get opacity() {
 		for (var atom of this.partial_contents)
-			if (atom.opacity && atom.does_enclose_tile(this)) return atom.opacity;
+			{if (atom.opacity && atom.does_enclose_tile(this)) {return atom.opacity;}}
 		return false;
 	}
 

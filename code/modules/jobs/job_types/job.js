@@ -35,7 +35,7 @@ class JobType {
 	}
 
 	instance(server, prefs) {
-		if (!prefs) prefs = new CharacterPreferences();
+		if (!prefs) {prefs = new CharacterPreferences();}
 		let mob = prefs.instance_human(server, {
 			name_override: this.name_override,
 		});
@@ -47,11 +47,11 @@ class JobType {
 		to_chat`<b>You job title is ${""}${this.title}.</b>`(user);
 		to_chat`Your role is ${this.description}`(user);
 		if (this.req_admin_notify)
-			to_chat`<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>`(user);
+			{to_chat`<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>`(user);}
 	}
 
 	equip(mob) {
-		if (this.outfit) this.outfit.equip(mob);
+		if (this.outfit) {this.outfit.equip(mob);}
 	}
 }
 
@@ -83,7 +83,7 @@ class JobOutfit extends Outfit {
 	pre_equip() {
 		this.slots.back = this.backpack;
 		if (this.box) {
-			if (!this.backpack_contents) this.backpack_contents = [];
+			if (!this.backpack_contents) {this.backpack_contents = [];}
 			this.backpack_contents.splice(0, 0, this.box); // at 0th position, deleting 0 items, insert this.box
 		}
 	}

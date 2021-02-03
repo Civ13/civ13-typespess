@@ -25,7 +25,7 @@ class Table extends Component {
 
 	can_be_crossed(prev, mover) {
 		for (let crosser of mover.crosses()) {
-			if (has_component(crosser, "Table")) return true;
+			if (has_component(crosser, "Table")) {return true;}
 		}
 		return prev();
 	}
@@ -41,7 +41,7 @@ class Table extends Component {
 					delay: 4000 * item.c.Tool.toolspeed,
 					target: this.a,
 				}).then((success) => {
-					if (!success) return;
+					if (!success) {return;}
 					this.a.c.Destructible.deconstruct(true, true);
 				});
 				return true;
@@ -57,7 +57,7 @@ class Table extends Component {
 					delay: 2000 * item.c.Tool.toolspeed,
 					target: this.a,
 				}).then((success) => {
-					if (!success) return;
+					if (!success) {return;}
 					this.a.c.Destructible.deconstruct(true, false);
 				});
 				return true;
@@ -71,7 +71,7 @@ class Table extends Component {
 						delay: 5000 * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success) => {
-						if (!success) return;
+						if (!success) {return;}
 						to_chat`<span class='notice'>You strengthen the ${this.a}.</span>`(
 							user
 						);
@@ -85,7 +85,7 @@ class Table extends Component {
 						delay: 5000 * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success) => {
-						if (!success) return;
+						if (!success) {return;}
 						to_chat`<span class='notice'>You weaken the ${this.a}.</span>`(
 							user
 						);
@@ -105,7 +105,7 @@ class Table extends Component {
 	}
 
 	deconstruct(prev, disassembled, wrench_disassembly = false) {
-		if (!this.a.loc) return;
+		if (!this.a.loc) {return;}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			if (wrench_disassembly) {
 				let frame_template = this.a.server.templates[this.frame];

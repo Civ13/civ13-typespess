@@ -1,26 +1,26 @@
 class Sound {
 	constructor(client, sndobj = {}) {
 		this.client = client;
-		if (typeof sndobj.emitter == "string")
-			sndobj.emitter = this.client.atoms_by_netid[sndobj.emitter];
+		if (typeof sndobj.emitter === "string")
+			{sndobj.emitter = this.client.atoms_by_netid[sndobj.emitter];}
 		this.emitter = sndobj.emitter;
 		this.id = sndobj.id || "id" + Math.random();
 		this.client.playing_sounds.set(this.id, this);
 		this.buffer_promise = this.client.get_audio_buffer(sndobj.path);
-		if (!this.client.audio_ctx) return;
+		if (!this.client.audio_ctx) {return;}
 		this.source = this.client.audio_ctx.createBufferSource();
-		if (sndobj.detune) this.source.detune.value = sndobj.detune;
+		if (sndobj.detune) {this.source.detune.value = sndobj.detune;}
 		if (sndobj.playback_rate)
-			this.source.playbackRate.value = sndobj.playback_rate;
-		if (sndobj.loop) this.source.loop = true;
+			{this.source.playbackRate.value = sndobj.playback_rate;}
+		if (sndobj.loop) {this.source.loop = true;}
 		this.apply_effects(sndobj, this.source).connect(
 			this.client.audio_ctx.destination
 		);
 	}
 
 	apply_effects(sndobj, node) {
-		if (sndobj.volume) node = this.apply_volume(sndobj.volume, node);
-		if (sndobj.emitter) node = this.apply_spatial(sndobj.emitter, node);
+		if (sndobj.volume) {node = this.apply_volume(sndobj.volume, node);}
+		if (sndobj.emitter) {node = this.apply_spatial(sndobj.emitter, node);}
 		return node;
 	}
 
@@ -42,14 +42,14 @@ class Sound {
 	update_spatial(emitter, timestamp) {
 		if (this.spatial_node) {
 			let eye = emitter.eye || this.client.eyes[emitter.eye_id || ""];
-			if (!eye) return;
+			if (!eye) {return;}
 			let eye_disp = eye.origin.get_displacement(timestamp);
 			if (
 				eye_disp.dispx != +eye_disp.dispx ||
 		eye_disp.dispy != +eye_disp.dispy
 			)
-				return;
-			if (emitter.x != +emitter.x || emitter.y != +emitter.y) return;
+				{return;}
+			if (emitter.x != +emitter.x || emitter.y != +emitter.y) {return;}
 			this.spatial_node.setPosition(
 				emitter.x - eye_disp.dispx,
 				0,
@@ -59,9 +59,9 @@ class Sound {
 	}
 
 	start() {
-		if (!this.client.audio_ctx) return;
+		if (!this.client.audio_ctx) {return;}
 		this.buffer_promise.then((buf) => {
-			if (!this.source) return;
+			if (!this.source) {return;}
 			this.source.buffer = buf;
 			this.source.addEventListener("ended", this.ended.bind(this));
 			this.source.start();

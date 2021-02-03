@@ -419,4 +419,4 @@ module.exports.templates = {
 		},
 		tree_paths: ["items/ammo_box/magazine/m12g/slug"],
 	},
-}
+};

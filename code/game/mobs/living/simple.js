@@ -93,13 +93,13 @@ class SimpleMob extends Component {
 	get_main_overlay() {
 		let icodir = this.a.dir;
 		if (icodir === 1)
-			icodir = 2;
+			{icodir = 2;}
 		else if (icodir === 2)
-			icodir = 1;
+			{icodir = 1;}
 		else if (icodir === 4)
-			icodir = 3;
+			{icodir = 3;}
 		else if (icodir === 8)
-			icodir = 4;
+			{icodir = 4;}
 		let overlay = { icon: `${this.a.icon}${this.base_icon_state}/${this.base_icon_state}-dir${icodir}.png` };
 
 		return overlay;

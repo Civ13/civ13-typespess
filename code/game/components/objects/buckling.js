@@ -99,7 +99,7 @@ class Buckle extends Component {
 			unbuckling.c.LivingMob.nomove_counter--;
 			unbuckling.c.MobHud.clear_alert("buckled");
 			let idx = this.buckled_mobs.indexOf(unbuckling);
-			if (idx != -1) this.buckled_mobs.splice(idx, 1);
+			if (idx != -1) {this.buckled_mobs.splice(idx, 1);}
 			this.post_buckle_mob();
 			return true;
 		}

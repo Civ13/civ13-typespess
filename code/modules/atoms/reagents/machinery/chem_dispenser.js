@@ -32,7 +32,7 @@ class ChemDispenser extends Component {
 				return true;
 			}
 
-			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) return true;
+			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return true;}
 			item.loc = this.a;
 
 			this.beaker = item;
@@ -62,7 +62,7 @@ class ChemDispenser extends Component {
 	}
 	set beaker(val) {
 		let old = this[_beaker];
-		if (old == val) return;
+		if (old == val) {return;}
 		this[_beaker] = val;
 		this.emit("beaker_changed", old, val);
 		if (val) {
@@ -70,7 +70,7 @@ class ChemDispenser extends Component {
 		} else {
 			this.a.overlays.beaker = null;
 		}
-		if (old && old.loc == this.a) old.loc = this.a.base_mover.fine_loc;
+		if (old && old.loc == this.a) {old.loc = this.a.base_mover.fine_loc;}
 	}
 
 	get dispense_amount() {
@@ -78,13 +78,13 @@ class ChemDispenser extends Component {
 	}
 	set dispense_amount(val) {
 		let old = this[_dispense_amount];
-		if (old == val) return;
+		if (old == val) {return;}
 		this[_dispense_amount] = val;
 		this.emit("dispense_amount_changed", old, val);
 	}
 
 	exited(e) {
-		if (e.atom == this.beaker) this.beaker = null;
+		if (e.atom == this.beaker) {this.beaker = null;}
 	}
 }
 
@@ -230,8 +230,8 @@ class ChemDispenserPanel extends Panel {
 		}
 		if (msg.dispense_amount) {
 			let da = msg.dispense_amount;
-			if (da % 5 != 0 && da != 1) return;
-			if (da < 1) return;
+			if (da % 5 != 0 && da != 1) {return;}
+			if (da < 1) {return;}
 			this.bound_atom.c.ChemDispenser.dispense_amount = da;
 		}
 	}

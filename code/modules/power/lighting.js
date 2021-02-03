@@ -54,19 +54,19 @@ class LightFixture extends Component {
 
 	attack_by(prev, item, user) {
 		if (has_component(item, "LightTube")) {
-			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) return true;
+			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return true;}
 			if (
 				this.tube &&
 		!this.tube.c.LightTube.broken &&
 		!this.tube.c.LightTube.burned
 			)
-				to_chat`<span class='warning'>There is a ${this.tube_type} already inserted!</span>`(
+				{to_chat`<span class='warning'>There is a ${this.tube_type} already inserted!</span>`(
 					user
-				);
+				);}
 			else if (item.c.LightTube.tube_type != this.tube_type)
-				to_chat`<span class='warning'>This type of light requires a ${this.tube_type}</span>`(
+				{to_chat`<span class='warning'>This type of light requires a ${this.tube_type}</span>`(
 					user
-				);
+				);}
 			else {
 				if (this.tube) {
 					this.tube.loc = this.a.fine_loc;
@@ -89,29 +89,29 @@ class LightFixture extends Component {
 		}
 		//TODO burn your hands
 		to_chat`<span class='notice'>You remove the ${this.tube}.</span>`(user);
-		if (user.c.MobInventory.put_in_hands(this.tube)) this.tube = null;
+		if (user.c.MobInventory.put_in_hands(this.tube)) {this.tube = null;}
 	}
 
 	play_attack_sound(damage_amount, damage_type = "brute") {
 		if (damage_type == "brute") {
 			if (!this.tube)
-				new Sound(this.a.server, {
+				{new Sound(this.a.server, {
 					path: "sound/weapons/smash.ogg",
 					volume: 0.5,
 					vary: true,
-				}).emit_from(this.a);
+				}).emit_from(this.a);}
 			else if (this.tube.c.LightTube.broken)
-				new Sound(this.a.server, {
+				{new Sound(this.a.server, {
 					path: "sound/effects/hit_on_shattered_glass.ogg",
 					volume: 0.9,
 					vary: true,
-				}).emit_from(this.a);
+				}).emit_from(this.a);}
 			else
-				new Sound(this.a.server, {
+				{new Sound(this.a.server, {
 					path: "sound/effects/glasshit.ogg",
 					volume: 0.9,
 					vary: true,
-				}).emit_from(this.a);
+				}).emit_from(this.a);}
 		} else if (damage_type == "burn") {
 			new Sound(this.a.server, {
 				path: "sound/items/Welder.ogg",
@@ -123,13 +123,13 @@ class LightFixture extends Component {
 	take_damage(prev, damage_amount) {
 		let dot = prev();
 		if (!this.a.destroyed) {
-			if (Math.random() < damage_amount * 0.05) this.break_light_tube();
+			if (Math.random() < damage_amount * 0.05) {this.break_light_tube();}
 		}
 		return dot;
 	}
 
 	break_light_tube(skip_sound_and_sparks = false) {
-		if (!this.tube || this.tube.c.LightTube.broken) return;
+		if (!this.tube || this.tube.c.LightTube.broken) {return;}
 
 		if (!skip_sound_and_sparks) {
 			new Sound(this.a.server, {
@@ -201,7 +201,7 @@ class LightTube extends Component {
 			this.a.c.Item.force = this.a.template.vars.components.Item.force;
 		}
 		if (has_component(this.a.loc, "LightFixture"))
-			this.a.loc.c.LightFixture.update_on();
+			{this.a.loc.c.LightFixture.update_on();}
 	}
 }
 

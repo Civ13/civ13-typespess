@@ -46,7 +46,7 @@ class NewPlayer extends Component {
 			this.lobby_music_sound.play_to(new_client);
 
 			if (!new_client.character_preferences)
-				new_client.character_preferences = new CharacterPreferences();
+				{new_client.character_preferences = new CharacterPreferences();}
 		}
 	}
 

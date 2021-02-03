@@ -12,7 +12,7 @@ class Organ extends Component {
 	do_life() {return;}
 
 	insert(mob) {
-		if (!has_component(mob, "CarbonMob")) return false;
+		if (!has_component(mob, "CarbonMob")) {return false;}
 		this.mob = mob;
 		mob.c.CarbonMob.organs[this.slot] = this.a;
 		this.a.loc = mob;

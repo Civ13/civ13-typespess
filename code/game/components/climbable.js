@@ -18,7 +18,7 @@ class Climbable extends Component {
 	}
 
 	can_be_crossed(prev, atom, dx, dy, reason) {
-		if (reason == "climb") return true;
+		if (reason == "climb") {return true;}
 		return prev();
 	}
 
@@ -44,8 +44,8 @@ class Climbable extends Component {
 				target: [user, this.a],
 			}).then((success) => {
 				let idx = this.climbers.indexOf(user);
-				if (idx != -1) this.climbers.splice(idx, 1);
-				if (!success) return;
+				if (idx != -1) {this.climbers.splice(idx, 1);}
+				if (!success) {return;}
 				visible_message`<span class='warning'>The ${user} climbs onto the ${this.a}.</span>`
 					.self`<span class='notice'>You climb onto the ${this.a}...</span>`.emit_from(
 					user
@@ -64,7 +64,7 @@ class Climbable extends Component {
 				user.move(this.a.x - user.x, this.a.y - user.y, "climb");
 
 				if (stun_delay)
-					user.c.LivingMob.apply_effect("Stun", { delay: stun_delay });
+					{user.c.LivingMob.apply_effect("Stun", { delay: stun_delay });}
 			});
 		}
 	}

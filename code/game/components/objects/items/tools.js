@@ -20,9 +20,9 @@ class Tool extends Component {
 	}
 	used() {
 		if (this.usesound)
-			new Sound(this.a.server, { path: this.usesound, vary: true }).emit_from(
+			{new Sound(this.a.server, { path: this.usesound, vary: true }).emit_from(
 				this.a
-			);
+			);}
 	}
 }
 
@@ -117,7 +117,7 @@ class Wirecutters extends Component {
 	constructor(atom, template) {
 		super(atom, template);
 		if (this.random_color)
-			this.a.icon_state = `cutters_${_.sample(["yellow", "red"])}`;
+			{this.a.icon_state = `cutters_${_.sample(["yellow", "red"])}`;}
 	}
 }
 
@@ -188,8 +188,8 @@ Axe.template = {
 		name: "hatchet",
 	},
 	can_use(prev, tool) {
-		if (!prev()) return false;
-		if (tool != "Axe") return true;
+		if (!prev()) {return false;}
+		if (tool != "Axe") {return true;}
 	}
 };
 
@@ -261,9 +261,9 @@ class WeldingTool extends Component {
 
 	update_torch() {
 		if (this.a.overlays.welder_on && !this.is_on)
-			this.a.overlays.welder_on = null;
+			{this.a.overlays.welder_on = null;}
 		else if (!this.a.overlays.welder_on && this.is_on)
-			this.a.overlays.welder_on = { icon_state: "[parent]-on" };
+			{this.a.overlays.welder_on = { icon_state: "[parent]-on" };}
 	}
 
 	attack_self(/*prev, user*/) {
@@ -271,13 +271,13 @@ class WeldingTool extends Component {
 	}
 
 	can_use(prev, tool) {
-		if (!prev()) return false;
-		if (tool != "WeldingTool") return true;
+		if (!prev()) {return false;}
+		if (tool != "WeldingTool") {return true;}
 		return this.is_on && this.get_fuel() > 0;
 	}
 
 	use_fuel(amount, user) {
-		if (!this.a.c.Tool.can_use("WeldingTool", user)) return false;
+		if (!this.a.c.Tool.can_use("WeldingTool", user)) {return false;}
 		if (this.get_fuel() >= amount) {
 			this.a.c.ReagentHolder.remove("WeldingFuel", amount);
 			return true;

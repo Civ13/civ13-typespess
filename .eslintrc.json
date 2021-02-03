@@ -17,6 +17,32 @@
     "rules": {
         "@typescript-eslint/no-var-requires": 0,
         "@typescript-eslint/no-explicit-any": 0,
-        "complexity": ["error", 20]
-    }
+        "complexity": ["warn", 20],
+        "curly": "error",
+        "block-scoped-var": "error",
+        "eqeqeq": 2,
+        "guard-for-in": "warn",
+        "new-cap": "warn",
+        "no-caller": "error",
+        "no-class-assign": "error",
+        "no-cond-assign": "error",
+        "no-const-assign":"error",
+        "no-constant-condition": "warn",
+        "no-delete-var": "error",
+        "no-dupe-args": "error",
+        "no-duplicate-case": "warn",
+        "no-empty": "warn",
+        "no-extra-semi":"warn",
+        "no-func-assign": "error",
+        "no-iterator": "error",
+        "no-loop-func": "error",
+        "no-mixed-spaces-and-tabs": "error",
+        "no-redeclare": "error",
+        "no-undefined": "warn",
+        "no-undef": "warn",
+        "semi": "error",
+        "use-isnan": "error",
+        "valid-typeof": "error",
+        "wrap-iife": "error"
+        }
 }

@@ -28,19 +28,19 @@ class MobHud extends Component {
 		Clicks are forwarded to master
 		Override makes it so the alert is not replaced until cleared by a clear_alert with clear_override, and it's used for hallucinations.
 		*/
-		if (severity == undefined) severity = "";
-		if (!category) return;
-		if (typeof template == "string")
-			template = this.a.server.templates[template];
-		if (!template || typeof template != "object")
-			throw new TypeError(`${template} is not a valid template`);
+		if (severity == undefined) {severity = "";}
+		if (!category) {return;}
+		if (typeof template === "string")
+			{template = this.a.server.templates[template];}
+		if (!template || typeof template !== "object")
+			{throw new TypeError(`${template} is not a valid template`);}
 		this.a.server.process_template(template);
 		if (!template.components.includes("Alert"))
-			throw new TypeError("Template provided is missing an Alert component.");
+			{throw new TypeError("Template provided is missing an Alert component.");}
 		var thealert;
 		if (this.alerts[category]) {
 			thealert = this.alerts[category];
-			if (thealert.c.Alert.override_alerts) return;
+			if (thealert.c.Alert.override_alerts) {return;}
 			if (new_master && new_master != thealert.c.Alert.master) {
 				console.warn(
 					`${this} threw alert ${category} with new_master ${new_master} while already having that alert with master ${thealert.c.Alert.master}`
@@ -63,7 +63,7 @@ class MobHud extends Component {
 		} else {
 			thealert = new Atom(this.a.server, template);
 			thealert.c.Alert.override_alerts = override;
-			if (override) thealert.c.Alert.timeout = 0;
+			if (override) {thealert.c.Alert.timeout = 0;}
 		}
 		thealert.c.Alert.mob_viewer = this.atom;
 
@@ -86,14 +86,14 @@ class MobHud extends Component {
 		if (thealert.c.Alert.timeout) {
 			setTimeout(() => {
 				if (thealert.c.Alert.timeout && this.alerts[category] == thealert)
-					this.clear_alert(category);
+					{this.clear_alert(category);}
 			}, thealert.c.Alert.timeout);
 		}
 	}
 	clear_alert(category, clear_override = false) {
 		var alert = this.alerts[category];
-		if (!alert) return false;
-		if (alert.c.Alert.override_alerts && !clear_override) return false;
+		if (!alert) {return false;}
+		if (alert.c.Alert.override_alerts && !clear_override) {return false;}
 
 		delete this.alerts[category];
 		this.reorganize_alerts();
@@ -104,13 +104,13 @@ class MobHud extends Component {
 	reorganize_alerts() {
 		var alert_idx = 0;
 		for (var alertname in this.alerts) {
-			if (!Object.prototype.hasOwnProperty.call(this.alerts,alertname)) continue;
+			if (!Object.prototype.hasOwnProperty.call(this.alerts,alertname)) {continue;}
 			var alert = this.alerts[alertname];
 			alert.screen_loc_x = 13.875;
 			alert.screen_loc_y = 12.84375 - 1.0625 * alert_idx;
 			this.a.c.Eye.screen[`ui_alert${alert_idx}`] = alert;
 			alert_idx++;
-			if (alert_idx >= 5) break;
+			if (alert_idx >= 5) {break;}
 		}
 		for (; alert_idx < 5; alert_idx++) {
 			this.a.c.Eye.screen[`ui_alert${alert_idx}`] = undefined;
@@ -130,7 +130,7 @@ class MobHud extends Component {
 	}
 	update_buttons() {
 		for (let button of this.action_buttons.values())
-			button.c.ActionButton.update_icon();
+			{button.c.ActionButton.update_icon();}
 	}
 }
 
@@ -168,7 +168,7 @@ class Alert extends Component {
 	this.mob_viewer &&
 	has_component(this.mob_viewer, "MobInteract")
 		)
-			this.mob_viewer.c.MobInteract.resist();
+			{this.mob_viewer.c.MobInteract.resist();}
 	}
 }
 Alert.template = {

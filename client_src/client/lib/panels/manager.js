@@ -9,7 +9,7 @@ class PanelManager extends EventEmitter {
 	}
 
 	send_message(obj) {
-		if (!this.client.connection) return;
+		if (!this.client.connection) {return;}
 		this.client.connection.send(JSON.stringify({ panel: obj }));
 	}
 
@@ -22,13 +22,13 @@ class PanelManager extends EventEmitter {
 	handle_message(obj) {
 		if (obj.create) {
 			for (let id in obj.create) {
-				if (!Object.prototype.hasOwnProperty.call(obj.create,id)) continue;
+				if (!Object.prototype.hasOwnProperty.call(obj.create,id)) {continue;}
 				if (this.panels[id])
-					console.warn(
+					{console.warn(
 						`The server tried to open a panel with the same ID ${id} twice! ${JSON.stringify(
 							obj.create[id]
 						)}`
-					);
+					);}
 				let panel = new Panel(this, id, obj.create[id]);
 				this.emit("create", panel, obj.create[id]);
 			}
@@ -36,14 +36,14 @@ class PanelManager extends EventEmitter {
 		if (obj.message) {
 			for (let message of obj.message) {
 				let panel = this.panels[message.id];
-				if (!panel) continue;
+				if (!panel) {continue;}
 				panel.emit("message", message.contents);
 			}
 		}
 		if (obj.close) {
 			for (let id of obj.close) {
 				let panel = this.panels[id];
-				if (!panel) continue;
+				if (!panel) {continue;}
 				panel.close();
 			}
 		}

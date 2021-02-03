@@ -19,34 +19,34 @@ class PowerNode extends Component {
 	}
 
 	get avail() {
-		if (this.powernet) return this.powernet.avail;
+		if (this.powernet) {return this.powernet.avail;}
 		return 0;
 	}
 
 	get new_avail() {
-		if (this.powernet) return this.powernet.new_avail;
+		if (this.powernet) {return this.powernet.new_avail;}
 		return 0;
 	}
 	set new_avail(val) {
-		if (this.powernet) this.powernet.new_avail = val;
+		if (this.powernet) {this.powernet.new_avail = val;}
 	}
 	get surplus() {
-		if (this.powernet) return this.powernet.avail - this.powernet.load;
+		if (this.powernet) {return this.powernet.avail - this.powernet.load;}
 		return 0;
 	}
 
 	get load() {
-		if (this.powernet) return this.powernet.load;
+		if (this.powernet) {return this.powernet.load;}
 		return 0;
 	}
 	set load(val) {
-		if (this.powernet) this.powernet.load = val;
+		if (this.powernet) {this.powernet.load = val;}
 	}
 
 	reconnect() {
 		if (this.cable) {
 			let idx = this.cable.c.Cable.nodes.indexOf(this.a);
-			if (idx != -1) this.cable.c.Cable.nodes.splice(idx, 1);
+			if (idx != -1) {this.cable.c.Cable.nodes.splice(idx, 1);}
 			this.cable = null;
 		}
 		if (this.powernet) {

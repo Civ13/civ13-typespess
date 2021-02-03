@@ -16,22 +16,22 @@ class Mind extends EventEmitter {
 
 	transfer_to(new_character) {
 		if (!has_component(new_character, "LivingMob"))
-			throw new TypeError(
+			{throw new TypeError(
 				`New character ${new_character} is not a living mob!`
-			);
+			);}
 		let old_character = this.current;
 		if (this.current) {
 			this.current.c.LivingMob.mind = null;
 		}
 		if (this.key) {
 			if (new_character.c.Mob.key != this.key)
-				new_character.c.LivingMob.ghostize(true);
+				{new_character.c.LivingMob.ghostize(true);}
 		} else {
 			this.key = new_character.c.Mob.key;
 		}
 
 		if (new_character.c.LivingMob.mind)
-			new_character.c.LivingMob.mind.current = null;
+			{new_character.c.LivingMob.mind.current = null;}
 
 		this.current = new_character;
 		new_character.c.LivingMob.mind = this;

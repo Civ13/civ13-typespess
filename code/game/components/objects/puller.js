@@ -11,13 +11,13 @@ class Puller extends Component {
 		this.a.on("before_move", this.before_move.bind(this));
 		this.a.on("moved", this.moved.bind(this));
 		if (this.a.c.Mob)
-			this.a.c.Mob.on("ctrl_click_on", this.ctrl_click_on.bind(this));
+			{this.a.c.Mob.on("ctrl_click_on", this.ctrl_click_on.bind(this));}
 	}
 
 	ctrl_click_on(e) {
 		if (e.atom) {
-			if (this.pulling == e.atom) this.pulling = null;
-			else this.pulling = e.atom;
+			if (this.pulling == e.atom) {this.pulling = null;}
+			else {this.pulling = e.atom;}
 		}
 	}
 
@@ -53,7 +53,7 @@ class Puller extends Component {
 	movement.offset.z != 0 ||
 	this[_pulling] == null
 		)
-			return;
+			{return;}
 		var oldx = this.a.x - movement.offset.x;
 		var oldy = this.a.y - movement.offset.y;
 		if (
@@ -90,14 +90,14 @@ class Puller extends Component {
 
 	set pulling(val) {
 		if (val != null && !this.can_pull(val)) {
-			if (val != this[_pulling]) return;
+			if (val != this[_pulling]) {return;}
 			val = null;
 		}
-		if (val == this[_pulling]) return;
-		if (this[_pulling]) this[_pulling].c.Tangible.puller = null;
+		if (val == this[_pulling]) {return;}
+		if (this[_pulling]) {this[_pulling].c.Tangible.puller = null;}
 		this[_pulling] = val;
 		if (val) {
-			if (val.c.Tangible.puller) val.c.Tangible.puller.c.Puller.pulling = null;
+			if (val.c.Tangible.puller) {val.c.Tangible.puller.c.Puller.pulling = null;}
 			val.c.Tangible.puller = this.a;
 		}
 		this.emit("pulling_changed", val);

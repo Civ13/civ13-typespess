@@ -31,15 +31,15 @@ class SpeechEmitter extends Component {
 	}
 	build_message({ text = "" } = {}) {
 		let msg = new SpeechMessage({ message: text, speaker: this.a });
-		if (!msg.message || !msg.message.length) return null;
+		if (!msg.message || !msg.message.length) {return null;}
 		return msg;
 	}
 	emit_message(message) {
-		if (!message) return;
+		if (!message) {return;}
 		var hearers = new Set();
 		for (var loc of this.a.base_mover.partial_locs()) {
 			for (let hearer of loc.hearers)
-				if (has_component(hearer, "SpeechHearer")) hearers.add(hearer);
+				{if (has_component(hearer, "SpeechHearer")) {hearers.add(hearer);}}
 		}
 		for (let hearer of hearers) {
 			if (
@@ -48,7 +48,7 @@ class SpeechEmitter extends Component {
 					Math.abs(hearer.y - this.a.y)
 				) <= message.range
 			)
-				hearer.c.SpeechHearer.hear_message(message, this.a);
+				{hearer.c.SpeechHearer.hear_message(message, this.a);}
 		}
 		if (message.mode == "radio" && !message.radio_freq) {
 			// TODO make this less hacky
@@ -121,15 +121,15 @@ class SpeechHearer extends Component {
 		let deaf_message = null;
 		if (message.speaker != this.a) {
 			if (!message.radio_freq)
-				deaf_message = format_html`<span class='name'>${message.speaker}</span> ${message.speaker.c.SpeechEmitter.verb_say} something but you cannot hear them.`;
+				{deaf_message = format_html`<span class='name'>${message.speaker}</span> ${message.speaker.c.SpeechEmitter.verb_say} something but you cannot hear them.`;}
 		} else {
 			deaf_message = "<span class='notice'>You can't hear yourself!</span>";
 		}
 
 		let composed = this.compose_message(message, emitter);
-		if (!composed) return;
+		if (!composed) {return;}
 		let shown_message = audible_message(composed);
-		if (deaf_message) shown_message.deaf(deaf_message);
+		if (deaf_message) {shown_message.deaf(deaf_message);}
 		shown_message.show_directly_to(this.a, emitter);
 	}
 

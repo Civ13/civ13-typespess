@@ -62,7 +62,7 @@ class StorageItem extends Component {
 		for (var item of this.a.contents) {
 			this.entered({ atom: item });
 		}
-		if (this.populate_contents) this.populate_contents();
+		if (this.populate_contents) {this.populate_contents();}
 	}
 
 	entered(movement) {
@@ -74,13 +74,13 @@ class StorageItem extends Component {
 		movement.atom.layer = 31;
 		this.set_screen_loc_for_slot_num(movement.atom, slotnum);
 		if (this[_viewers])
-			for (let viewer of this[_viewers]) {
+			{for (let viewer of this[_viewers]) {
 				viewer.c.Eye.screen[`storage_item_${slotnum}`] = movement.atom;
-			}
+			}}
 		if (this.rows != prev_rows)
-			for (let i = 0; i < slotnum; i++) {
+			{for (let i = 0; i < slotnum; i++) {
 				this.set_screen_loc_for_slot_num(this[_slots][i][0], i);
-			}
+			}}
 		this[_grid].c.GridDisplay.height = this.rows + 1;
 	}
 
@@ -99,12 +99,12 @@ class StorageItem extends Component {
 		for (i = 0; i < this[_slots].length; i++) {
 			var slot = this[_slots][i];
 			var idx = slot.indexOf(movement.atom);
-			if (idx == -1) continue;
+			if (idx == -1) {continue;}
 			if (idx == 0) {
 				if (this[_viewers])
-					for (let viewer of this[_viewers]) {
+					{for (let viewer of this[_viewers]) {
 						viewer.c.Eye.screen[`storage_item_${i}`] = slot[1];
-					}
+					}}
 				if (slot[1]) {
 					slot[1].screen_loc_x = slot[0].screen_loc_x;
 					slot[1].screen_loc_y = slot[0].screen_loc_y;
@@ -115,7 +115,7 @@ class StorageItem extends Component {
 				slot[0].screen_loc_x = null;
 				slot[0].screen_loc_y = null;
 				slot.splice(0, 1);
-				if (slot.length) return;
+				if (slot.length) {return;}
 				break;
 			} else {
 				slot.splice(idx, 1);
@@ -124,30 +124,30 @@ class StorageItem extends Component {
 		}
 		if (i >= this[_slots].length)
 		// this should never happen
-			return;
+			{return;}
 		if (this[_viewers])
-			for (let j = i + 1; j < this[_slots].length; j++) {
+			{for (let j = i + 1; j < this[_slots].length; j++) {
 				for (let viewer of this[_viewers]) {
 					viewer.c.Eye.screen[`storage_item_${j}`] = null;
 				}
-			}
+			}}
 		this[_slots].splice(i, 1);
 		for (let j = i; j < this[_slots].length; j++) {
 			if (this[_viewers])
-				for (let viewer of this[_viewers]) {
+				{for (let viewer of this[_viewers]) {
 					viewer.c.Eye.screen[`storage_item_${j}`] = this[_slots][j][0];
-				}
+				}}
 			this.set_screen_loc_for_slot_num(this[_slots][j][0], j);
 		}
 		if (this.rows != prev_rows)
-			for (let j = 0; j < i; j++) {
+			{for (let j = 0; j < i; j++) {
 				this.set_screen_loc_for_slot_num(this[_slots][j][0], j);
-			}
+			}}
 		this[_grid].c.GridDisplay.height = this.rows + 1;
 	}
 
 	attack_by(prev, item, user) {
-		if (!this.can_be_inserted(item, user)) return prev();
+		if (!this.can_be_inserted(item, user)) {return prev();}
 		this.insert_item(item, user);
 		return true;
 	}
@@ -176,10 +176,10 @@ class StorageItem extends Component {
 	}
 
 	show_to(user) {
-		if (!has_component(user, "Eye")) return;
-		if (user.c.Eye[_current_storage_item] == this.a) return;
+		if (!has_component(user, "Eye")) {return;}
+		if (user.c.Eye[_current_storage_item] == this.a) {return;}
 		if (user.c.Eye[_current_storage_item])
-			user.c.Eye[_current_storage_item].c.StorageItem.hide_from(user);
+			{user.c.Eye[_current_storage_item].c.StorageItem.hide_from(user);}
 		this[_viewers] = this[_viewers] || new Set();
 		this[_viewers].add(user);
 		for (let i = 0; i < this[_slots].length; i++) {
@@ -191,8 +191,8 @@ class StorageItem extends Component {
 	}
 
 	hide_from(user) {
-		if (!has_component(user, "Eye")) return;
-		if (user.c.Eye[_current_storage_item] != this.a) return;
+		if (!has_component(user, "Eye")) {return;}
+		if (user.c.Eye[_current_storage_item] != this.a) {return;}
 		this[_viewers].delete(user);
 		user.c.Eye[_current_storage_item] = null;
 		for (let i = 0; i < this[_slots].length; i++) {
@@ -203,16 +203,16 @@ class StorageItem extends Component {
 	}
 
 	can_be_inserted(item, user, stop_messages = false) {
-		if (!has_component(item, "Item")) return; // not an item
-		if (this.a.loc == item) return false;
+		if (!has_component(item, "Item")) {return;} // not an item
+		if (this.a.loc == item) {return false;}
 
-		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) return false;
+		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return false;}
 
 		if (this.a.contents.length >= this.storage_slots) {
 			if (user && !stop_messages)
-				to_chat`<span class='warning'>The ${this.a} is full, make some space!</span>`(
+				{to_chat`<span class='warning'>The ${this.a} is full, make some space!</span>`(
 					user
-				);
+				);}
 			return false;
 		}
 
@@ -220,9 +220,9 @@ class StorageItem extends Component {
 			for (let cant of this.cant_hold) {
 				if (has_component(item, cant)) {
 					if (user && !stop_messages)
-						to_chat`<span class='warning'>The ${this.a} cannot hold the ${item}!</span>`(
+						{to_chat`<span class='warning'>The ${this.a} cannot hold the ${item}!</span>`(
 							user
-						);
+						);}
 					return false;
 				}
 			}
@@ -237,29 +237,29 @@ class StorageItem extends Component {
 			}
 			if (!flagged) {
 				if (user && !stop_messages)
-					to_chat`<span class='warning'>The ${this.a} cannot hold the ${item}!</span>`(
+					{to_chat`<span class='warning'>The ${this.a} cannot hold the ${item}!</span>`(
 						user
-					);
+					);}
 				return false;
 			}
 		}
 
 		if (item.c.Item.size > this.max_size) {
 			if (user && !stop_messages)
-				to_chat`<span class='warning'>The ${item} is too big for the ${this.a}!</span>`(
+				{to_chat`<span class='warning'>The ${item} is too big for the ${this.a}!</span>`(
 					user
-				);
+				);}
 			return false;
 		}
 
 		let sum_size = item.c.Item.size;
-		for (let item of this.a.contents) sum_size += item.c.Item.size;
+		for (let item of this.a.contents) {sum_size += item.c.Item.size;}
 
 		if (sum_size > this.max_combined_size) {
 			if (user && !stop_messages)
-				to_chat`<span class=w'arning'>The ${item} won't fit in the ${this.a}, make some space!</span>`(
+				{to_chat`<span class=w'arning'>The ${item} won't fit in the ${this.a}, make some space!</span>`(
 					user
-				);
+				);}
 			return false;
 		}
 
@@ -268,32 +268,32 @@ class StorageItem extends Component {
 	item.c.Item.size >= this.a.c.Item.size
 		) {
 			if (user && !stop_messages)
-				to_chat`<span class='warning'>The ${this.a} cannot hold ${item} as it's a storage item of the same size!</span>`(
+				{to_chat`<span class='warning'>The ${this.a} cannot hold ${item} as it's a storage item of the same size!</span>`(
 					user
-				);
+				);}
 			return false;
 		}
 		return true;
 	}
 
 	insert_item(item, user, prevent_warning = false) {
-		if (!has_component(item, "Item")) return false;
-		if (item.c.Item.slot) item.c.Item.slot.item = null;
+		if (!has_component(item, "Item")) {return false;}
+		if (item.c.Item.slot) {item.c.Item.slot.item = null;}
 		item.loc = this.a;
 		if (user && !prevent_warning) {
 			if (this.rustle_jimmies)
-				new Sound(this.a.server, {
+				{new Sound(this.a.server, {
 					path: sounds.rustle,
 					volume: 1,
 					vary: true,
-				}).emit_from(this.a.base_mover);
+				}).emit_from(this.a.base_mover);}
 		}
 		return true;
 	}
 
 	insert_item_or_del(item, user, prevent_warning = false) {
 		if (!this.insert_item(item, user, prevent_warning) && is_atom(item))
-			item.destroy();
+			{item.destroy();}
 	}
 
 	is_showing_to(user) {
@@ -307,7 +307,7 @@ class StorageItem extends Component {
 		this.hide_from(e.mob);
 	}
 	grid_clicked(e) {
-		if (!e.mob) return;
+		if (!e.mob) {return;}
 		var slot = (this.rows - Math.floor(e.y)) * 7 + Math.floor(e.x);
 		var target_atom;
 		if (this[_slots][slot]) {
@@ -321,7 +321,7 @@ class StorageItem extends Component {
 			x: e.x - Math.floor(e.x),
 		});
 		target_atom.emit("clicked", new_event);
-		if (e.mob) e.mob.c.Mob.emit("click_on", new_event);
+		if (e.mob) {e.mob.c.Mob.emit("click_on", new_event);}
 	}
 }
 

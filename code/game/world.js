@@ -1,4 +1,4 @@
-const {format_html} = require("./utils.js")
+const {format_html} = require("./utils.js");
 class World {
 	
 	constructor(server) {
@@ -30,26 +30,26 @@ class World {
 		let hours = Math.floor(this.gametime/60);
 		let minutes = Math.floor((this.gametime%60)*60);
 
-		if (hours < 10) {var nhours = "0"+String(hours)}
-		if (minutes < 10) {var nminutes = "0"+String(minutes)}
-		return `${nhours}:${nminutes}`
+		if (hours < 10) {var nhours = "0"+String(hours);}
+		if (minutes < 10) {var nminutes = "0"+String(minutes);}
+		return `${nhours}:${nminutes}`;
 	}
 	get_descriptive_tod() { //gets the time of day in a string, like "Night", "Morning", and so on
 		let hours = Math.floor(this.gametime/60);
-		let desc_tod = "Unknown"
-		if (hours >= 0 && hours < 4) {desc_tod = "Night"}
-		else if (hours >= 4 && hours < 8) {desc_tod = "Early Morning"}
-		else if (hours >= 8 && hours < 12) {desc_tod = "Late Morning"}
-		else if (hours >= 12 && hours < 16) {desc_tod = "Early Afternoon"}
-		else if (hours >= 16 && hours < 20) {desc_tod = "Late Afternoon"}
-		else if (hours >= 20 && hours < 24) {desc_tod = "Evening"}
-		else {desc_tod = "Night"}
+		let desc_tod = "Unknown";
+		if (hours >= 0 && hours < 4) {desc_tod = "Night";}
+		else if (hours >= 4 && hours < 8) {desc_tod = "Early Morning";}
+		else if (hours >= 8 && hours < 12) {desc_tod = "Late Morning";}
+		else if (hours >= 12 && hours < 16) {desc_tod = "Early Afternoon";}
+		else if (hours >= 16 && hours < 20) {desc_tod = "Late Afternoon";}
+		else if (hours >= 20 && hours < 24) {desc_tod = "Evening";}
+		else {desc_tod = "Night";}
 
-		return desc_tod
+		return desc_tod;
 	}
 	change_season(new_season) { //sets the season to the input variable, if its in the list of possible_seasons
 		for (var s of this.possible_seasons)
-			if (s == new_season) {this.season = s; console.log("WORLD: Changed the season to "+new_season);to_chat(user, format_html`<span class='announce'>It is now ${this.season}.</span>`);return true;}
+			{if (s == new_season) {this.season = s; console.log("WORLD: Changed the season to "+new_season);to_chat(user, format_html`<span class='announce'>It is now ${this.season}.</span>`);return true;}}
 		return false;
 	}
 	advance_season() { //advances to the next season
@@ -63,7 +63,7 @@ class World {
    change_weather(new_weather) { //sets the weather to the input variable, if its in the list of possible_weather
 		let last_weather = this.weather;
 		for (var w of this.possible_weather)
-			if (w == new_weather) {this.weather = w; console.log("WORLD: Changed the weather to "+new_weather); return true;}
+			{if (w == new_weather) {this.weather = w; console.log("WORLD: Changed the weather to "+new_weather); return true;}}
 			if (last_weather !== this.weather)
 			{this.server.to_global_chat(format_html`<span class='announce'>The weather has changed to ${this.weather}.</span>`);}
 		return false;
@@ -94,7 +94,7 @@ class World {
 
 	weather_scheduler(thisworld) {
 		if (thisworld.weather_running && Math.random()<=0.18) {
-			thisworld.random_weather()}
+			thisworld.random_weather();}
 			setTimeout(thisworld.weather_scheduler, 60000, thisworld);
 		}
 }

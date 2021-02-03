@@ -18,15 +18,15 @@ class Gun extends Component {
 	}
 
 	after_attack(target, user, prox, e) {
-		if (this.firing_burst || !target.loc || !target.loc.is_base_loc) return;
+		if (this.firing_burst || !target.loc || !target.loc.is_base_loc) {return;}
 		if (prox) {
-			if (!has_component(target, "LivingMob")) return;
+			if (!has_component(target, "LivingMob")) {return;}
 			if (target == user && user.c.MobInteract.zone_sel != "mouth")
 			//so we can't shoot ourselves (unless mouth selected)
-				return;
+				{return;}
 		}
 
-		if (!this.can_trigger(user)) return;
+		if (!this.can_trigger(user)) {return;}
 
 		if (!this.can_shoot()) {
 			this.shoot_with_empty_chamber({ user });
@@ -43,7 +43,7 @@ class Gun extends Component {
 		if (this.weapon_weight == combat_defines.WEAPON_HEAVY) {
 			let hands = 0;
 			for (let hand of user.c.MobInventory.hand_slots()) {
-				if (!hand.item || hand.item == this.a) hands++;
+				if (!hand.item || hand.item == this.a) {hands++;}
 			}
 			if (hands < 2) {
 				to_chat`<span class='userdanger'>You need both hands free to fire the ${this.a}!</span>`(
@@ -124,13 +124,13 @@ class Gun extends Component {
 		}).emit_from(user);
 		if (!this.suppressed && message) {
 			if (point_blank)
-				visible_message`<span class='danger'>The ${user} fires the ${this.a} point blank at the ${point_blank}!</span>`
+				{visible_message`<span class='danger'>The ${user} fires the ${this.a} point blank at the ${point_blank}!</span>`
 					.range(combat_defines.COMBAT_MESSAGE_RANGE)
-					.emit_from(user);
+					.emit_from(user);}
 			else
-				visible_message`<span class='danger'>The ${user} fires the ${this.a}!</span>`
+				{visible_message`<span class='danger'>The ${user} fires the ${this.a}!</span>`
 					.range(combat_defines.COMBAT_MESSAGE_RANGE)
-					.emit_from(user);
+					.emit_from(user);}
 		}
 	}
 
@@ -150,7 +150,7 @@ class Gun extends Component {
 			!has_component(user, "MobInventory") ||
 	!user.c.MobInventory.can_use_guns(this.a)
 		)
-			return false;
+			{return false;}
 		return true;
 	}
 

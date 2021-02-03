@@ -16,12 +16,12 @@ class Belt extends Component {
 	entered(movement) {
 		let item = movement.atom;
 		if (has_component(item, "Item") && this.content_overlays)
-			item.c.Item.apply_belt_overlay(this.a);
+			{item.c.Item.apply_belt_overlay(this.a);}
 	}
 	exited(movement) {
 		let item = movement.atom;
 		if (has_component(item, "Item") && this.content_overlays)
-			item.c.Item.unapply_belt_overlay(this.a);
+			{item.c.Item.unapply_belt_overlay(this.a);}
 	}
 }
 

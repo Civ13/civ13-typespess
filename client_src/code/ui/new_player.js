@@ -30,8 +30,8 @@ class NewPlayerPanel {
 			let time_left =
 		this.start_at -
 		(performance.now() - this.panel.manager.client.server_time_to_client);
-			if (time_left < 0) this.panel.$(".timer").textContent = "SOON";
-			else this.panel.$(".timer").textContent = (time_left / 1000).toFixed(1);
+			if (time_left < 0) {this.panel.$(".timer").textContent = "SOON";}
+			else {this.panel.$(".timer").textContent = (time_left / 1000).toFixed(1);}
 		}
 	}
 

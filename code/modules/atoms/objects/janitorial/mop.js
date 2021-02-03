@@ -18,13 +18,13 @@ class Mop extends Component {
 	}
 
 	after_attack(prev, target, user, prox) {
-		if (!prox) return prev();
+		if (!prox) {return prev();}
 
 		if (has_component(target, "OpenReagentContainer")) {
 			if (target.c.ReagentHolder.total_volume < 1)
-				to_chat`<span class='warning'>The ${target} is out of water!</span>`(
+				{to_chat`<span class='warning'>The ${target} is out of water!</span>`(
 					user
-				);
+				);}
 			else {
 				target.c.ReagentHolder.transfer_to(this.a, 5);
 				to_chat`<span class='warning'>You wet the ${this.a} in the ${target}</span>`(
@@ -55,7 +55,7 @@ class Mop extends Component {
 				delay: this.mop_speed,
 				target: turf,
 			}).then((success) => {
-				if (!success) return;
+				if (!success) {return;}
 				to_chat`<span class='notice'>You finish mopping.</span>`(user);
 				if (this.a.c.ReagentHolder.volume_of("Water") >= 1) {
 					for (let crosser of [...turf.crosses()]) {

@@ -78,7 +78,7 @@ class Stack extends Component {
 		return this[_amount];
 	}
 	set amount(val) {
-		if (this[_amount] == val) return;
+		if (this[_amount] == val) {return;}
 		this[_amount] = val;
 		this.emit("amount_changed");
 	}
@@ -88,29 +88,29 @@ class Stack extends Component {
 			this.a.destroy();
 		}
 
-		if (this.amount == 1) this.a.gender = "neuter";
-		else this.a.gender = "plural";
+		if (this.amount == 1) {this.a.gender = "neuter";}
+		else {this.a.gender = "plural";}
 
 		if (!this.novariants) {
 			var base_state = this.a.template.vars.icon_state;
 			if (this.amount <= this.max_amount * (1 / 3))
-				this.a.icon_state = base_state;
+				{this.a.icon_state = base_state;}
 			else if (this.amount <= this.max_amount * (2 / 3))
-				this.a.icon_state = `${base_state}_2`;
-			else this.a.icon_state = `${base_state}_3`;
+				{this.a.icon_state = `${base_state}_2`;}
+			else {this.a.icon_state = `${base_state}_3`;}
 		}
 
 		var base_size = this.a.template.vars.components.Item.size;
 		if (this.amount <= this.max_amount * (1 / 3))
-			this.a.c.Item.size = Math.max(base_size - 2, 1);
+			{this.a.c.Item.size = Math.max(base_size - 2, 1);}
 		else if (this.amount <= this.max_amount * (2 / 3))
-			this.a.c.Item.size = Math.max(base_size - 1, 1);
-		else this.a.c.Item.size = base_size;
+			{this.a.c.Item.size = Math.max(base_size - 1, 1);}
+		else {this.a.c.Item.size = base_size;}
 		this.update_recipes();
 	}
 
 	use(used) {
-		if (this.amount < used) return false;
+		if (this.amount < used) {return false;}
 		this.amount -= used;
 		return true;
 	}
@@ -123,7 +123,7 @@ class Stack extends Component {
 	this.a.destroyed ||
 	S == this.a
 		)
-			return;
+			{return;}
 		var transfer = Math.min(
 			this.amount,
 			S.c.Stack.max_amount - S.c.Stack.amount
@@ -142,18 +142,18 @@ class Stack extends Component {
 
 	attack_by(prev, item, user) {
 		if (this.merge_type && has_component(item, this.merge_type)) {
-			this.user = user
+			this.user = user;
 			if (this.merge(item))
-				to_chat`<span class='notice'>Your ${item.name} stack now contains ${item.c.Stack.amount} ${item.c.Stack.singular_name}s.</span>`(
+				{to_chat`<span class='notice'>Your ${item.name} stack now contains ${item.c.Stack.amount} ${item.c.Stack.singular_name}s.</span>`(
 					user
-				);
+				);}
 		} else {
 			return prev();
 		}
 	}
 
 	attack_hand(prev, user) {
-		this.user = user
+		this.user = user;
 		let slot = this.a.c.Item.slot;
 		if (
 			slot &&
@@ -177,8 +177,8 @@ class Stack extends Component {
 		) {
 			return prev();
 		}
-		let civ = null
-		if (user.c && user.c.HumanMob) {civ = user.c.HumanMob.Civilization}
+		let civ = null;
+		if (user.c && user.c.HumanMob) {civ = user.c.HumanMob.Civilization;}
 		var panel = new StackCraftPanel(user.c.Mob.client, {
 			title: `${this.a.name} construction`,
 		}, civ);
@@ -187,11 +187,11 @@ class Stack extends Component {
 	}
 
 	split(user, amount) {
-		if (amount <= 0) return;
+		if (amount <= 0) {return;}
 		this.user = user;
 		if (amount >= this.amount) {
 			if (has_component(user, "MobInventory"))
-				user.c.MobInventory.put_in_hands(this.a);
+				{user.c.MobInventory.put_in_hands(this.a);}
 			return this.a;
 		}
 		var new_stack = new Atom(this.a.server, this.a.template);
@@ -248,7 +248,7 @@ class Stack extends Component {
 							break;
 						}
 					}
-					if (did_break) break;
+					if (did_break) {break;}
 				}
 			}
 			if (build_limit != recipe.build_limit) {
@@ -259,10 +259,10 @@ class Stack extends Component {
 	}
 
 	async build_recipe(recipe, amount, user) {
-		if (!has_component(user, "MobInventory") || !recipe) return;
+		if (!has_component(user, "MobInventory") || !recipe) {return;}
 		this.update_recipes();
 		amount = Math.min(Math.max(+amount || 1, 1), recipe.build_limit); // no trust clients
-		if (amount < 1) return;
+		if (amount < 1) {return;}
 		let multiplied_amount = (recipe.res_amount || 1) * amount;
 		if (recipe.time) {
 			if (
@@ -271,9 +271,9 @@ class Stack extends Component {
 					target: this.a,
 				}))
 			)
-				return;
+				{return;}
 			this.update_recipes();
-			if (amount > recipe.build_limit) return;
+			if (amount > recipe.build_limit) {return;}
 		}
 		let template = this.a.server.templates[recipe.template_name];
 		let new_atom = new Atom(this.a.server, template);

@@ -24,8 +24,8 @@ class LightingObject extends Component.Networked {
 	}
 
 	crossed(item) {
-		if (!item.opacity) return;
-		if (this.shadows.has(item)) return;
+		if (!item.opacity) {return;}
+		if (this.shadows.has(item)) {return;}
 		var move_callback = this.update_shadow.bind(this, item);
 		this.move_callbacks.set(item, move_callback);
 		item.on("moved", move_callback);
@@ -39,7 +39,7 @@ class LightingObject extends Component.Networked {
 	}
 
 	uncrossed(item) {
-		if (!this.shadows.has(item)) return;
+		if (!this.shadows.has(item)) {return;}
 		var move_callback = this.move_callbacks.get(item);
 		if (move_callback) {
 			item.removeListener("moved", move_callback);
@@ -49,9 +49,9 @@ class LightingObject extends Component.Networked {
 	}
 
 	update_shadow(item) {
-		if (!item.opacity) return this.uncrossed(item);
+		if (!item.opacity) {return this.uncrossed(item);}
 		var shadow = this.shadows.get(item);
-		if (!shadow) return this.crossed(item);
+		if (!shadow) {return this.crossed(item);}
 		shadow.x1 = item.x + item.bounds_x;
 		shadow.y1 = item.y + item.bounds_y;
 		shadow.x2 = item.x + item.bounds_x + item.bounds_width;
@@ -96,11 +96,11 @@ class LightSource extends Component {
 		this.update_queued = false;
 	}
 	update_lighting_object() {
-		if (this.update_queued) return;
+		if (this.update_queued) {return;}
 		this.update_queued = true;
 		process.nextTick(() => {
 			try {
-				if (!this[_lighting_object]) return;
+				if (!this[_lighting_object]) {return;}
 				if (
 					!this[_enabled] ||
 		!this.a.loc ||
@@ -134,7 +134,7 @@ class LightSource extends Component {
 	}
 	set enabled(val) {
 		let old = this[_enabled];
-		if (old == val) return;
+		if (old == val) {return;}
 		this[_enabled] = val;
 		this.update_lighting_object();
 		this.emit("enabled_changed", old, val);
@@ -150,7 +150,7 @@ class LightSource extends Component {
 	}
 	set color(val) {
 		let old = this[_color];
-		if (old == val) return;
+		if (old == val) {return;}
 		this[_color] = val;
 		this.update_lighting_object();
 		this.emit("color_changed", old, val);
@@ -166,7 +166,7 @@ class LightSource extends Component {
 	}
 	set radius(val) {
 		let old = this[_radius];
-		if (old == val) return;
+		if (old == val) {return;}
 		this[_radius] = val;
 		this.update_lighting_object();
 		this.emit("radius_changed", old, val);

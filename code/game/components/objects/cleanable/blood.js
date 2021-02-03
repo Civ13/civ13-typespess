@@ -90,25 +90,25 @@ class FootprintsDecal extends Component {
 
 	entered_dirs_changed(from, to) {
 		for (let dir of [1, 2, 4, 8]) {
-			if (from & dir && !(to & dir)) this.a.overlays[`entered_${dir}`] = null;
+			if (from & dir && !(to & dir)) {this.a.overlays[`entered_${dir}`] = null;}
 			else if (to & dir && !(from & dir))
-				this.a.overlays[`entered_${dir}`] = {
+				{this.a.overlays[`entered_${dir}`] = {
 					icon_state: `${this.type}1`,
 					dir,
 					alpha: this.a.alpha,
-				};
+				};}
 		}
 	}
 
 	exited_dirs_changed(from, to) {
 		for (let dir of [1, 2, 4, 8]) {
-			if (from & dir && !(to & dir)) this.a.overlays[`exited_${dir}`] = null;
+			if (from & dir && !(to & dir)) {this.a.overlays[`exited_${dir}`] = null;}
 			else if (to & dir && !(from & dir))
-				this.a.overlays[`exited_${dir}`] = {
+				{this.a.overlays[`exited_${dir}`] = {
 					icon_state: `${this.type}2`,
 					dir,
 					alpha: this.a.alpha,
-				};
+				};}
 		}
 	}
 }

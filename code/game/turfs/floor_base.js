@@ -20,7 +20,7 @@ class FloorBase extends Component {
 	ex_act(prev, severity) {
 		prev();
 		let shielded = this.is_shielded();
-		if (severity != 1 && shielded) return;
+		if (severity != 1 && shielded) {return;}
 		if (severity == 1) {
 			this.a.destroy();
 		} else if (severity == 2) {
@@ -30,14 +30,14 @@ class FloorBase extends Component {
 				this.break_tile();
 			}
 			if (Math.random() < 0.33)
-				new Atom(this.a.server, "metal_sheet", this.a.loc);
+				{new Atom(this.a.server, "metal_sheet", this.a.loc);}
 		} else {
-			if (Math.random() < 0.5) this.break_tile();
+			if (Math.random() < 0.5) {this.break_tile();}
 		}
 	}
 
 	break_tile() {
-		if (this.broken || !this.can_break) return;
+		if (this.broken || !this.can_break) {return;}
 		if (this.broken_states.length) {
 			this.a.overlays.broken = { icon_state: _.sample(this.broken_states) };
 		}
@@ -46,10 +46,10 @@ class FloorBase extends Component {
 
 	is_shielded() {
 		for (let obj of this.a.crosses()) {
-			if (obj.layer <= this.a.layer) continue;
+			if (obj.layer <= this.a.layer) {continue;}
 			let shielded_components = ["FloorBase", "Wall", "Window"];
 			for (let comp of shielded_components) {
-				if (has_component(obj, comp)) return true;
+				if (has_component(obj, comp)) {return true;}
 			}
 		}
 	}

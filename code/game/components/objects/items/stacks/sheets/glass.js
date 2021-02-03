@@ -133,11 +133,11 @@ class GlassShard extends Component {
 			var bxo = Math.random() - 0.5;
 			var byo = Math.random() - 0.5;
 			if (this.a.icon_state == "small")
-				this.a.move(bxo * 0.75, byo * 0.75, "placement");
+				{this.a.move(bxo * 0.75, byo * 0.75, "placement");}
 			if (this.a.icon_state == "medium")
-				this.a.move(bxo * 0.5, byo * 0.5, "placement");
+				{this.a.move(bxo * 0.5, byo * 0.5, "placement");}
 			if (this.a.icon_state == "large")
-				this.a.move(bxo * 0.3125, byo * 0.3125, "placement");
+				{this.a.move(bxo * 0.3125, byo * 0.3125, "placement");}
 		});
 	}
 }

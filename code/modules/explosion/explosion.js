@@ -18,7 +18,7 @@ async function explosion({
 } = {}) {
 	if (!epicenter.dim)
 	// fuck off there's no place to explode into
-		return;
+		{return;}
 	let max_range = Math.max(
 		devastation_range,
 		heavy_impact_range,
@@ -35,7 +35,7 @@ async function explosion({
 		let far_dist = heavy_impact_range * 5 + devastation_range * 20;
 		let emitter = { x: x0, y: y0 };
 		for (let mob of dim.server.atoms_for_components.Mob) {
-			if (mob.dim != dim) continue;
+			if (mob.dim != dim) {continue;}
 			let dist = Math.sqrt((x0 - mob.x) ** 2 + (y0 - mob.y) ** 2);
 			if (dist <= max_range + 5) {
 				new Sound(dim.server, {
@@ -58,7 +58,7 @@ async function explosion({
 	// word of warning here, the algorithm used here is quite different from byond ss13
 	// alright, let's get a bounding box.
 	let bbox = [];
-	if (max_range == 0) bbox.push([0, 0]);
+	if (max_range == 0) {bbox.push([0, 0]);}
 	else {
 		for (let i = -max_range + 1; i <= max_range - 1; i++) {
 			bbox.push([i, max_range]);
@@ -79,7 +79,7 @@ async function explosion({
 		target[0] = Math.abs(target[0]);
 		target[1] = Math.abs(target[1]);
 		let flip_xy = target[1] > target[0];
-		if (flip_xy) target = [target[1], target[0]];
+		if (flip_xy) {target = [target[1], target[0]];}
 		let delta_error = target[1] / target[0];
 		let flipped_dy = 0;
 		let error = 0;
@@ -87,9 +87,9 @@ async function explosion({
 		// alright, time to cast a ray!
 		for (let flipped_dx = 0; flipped_dx <= target[0]; flipped_dx++) {
 			let dx = flip_xy ? flipped_dy : flipped_dx;
-			if (flip_x) dx = -dx;
+			if (flip_x) {dx = -dx;}
 			let dy = flip_xy ? flipped_dx : flipped_dy;
-			if (flip_y) dy = -dy;
+			if (flip_y) {dy = -dy;}
 			let tile = dim.location(x0 + dx, y0 + dy, z0);
 			if (explosion_block_cache.has(tile)) {
 				// This tile has already been done, add explosion block and move on
@@ -99,23 +99,23 @@ async function explosion({
 				// first check if it's too far away
 				let dist =
 		accumulated_explosion_block + Math.sqrt(dx * dx + dy * dy) - 0.5;
-				if (dist > max_range) break; // we don't need to cast any more rays.
+				if (dist > max_range) {break;} // we don't need to cast any more rays.
 				let this_explosion_block = 0;
 				for (let obj of tile.partial_contents) {
 					if (has_component(obj, "Tangible"))
-						this_explosion_block += obj.c.Tangible.explosion_block;
+						{this_explosion_block += obj.c.Tangible.explosion_block;}
 				}
 				accumulated_explosion_block += this_explosion_block;
 				dist += this_explosion_block;
 				explosion_block_cache.set(tile, this_explosion_block);
-				if (dist > max_range) break;
+				if (dist > max_range) {break;}
 				let explode_power = combat_defines.EXPLODE_NONE;
 				if (dist < devastation_range)
-					explode_power = combat_defines.EXPLODE_DEVASTATE;
+					{explode_power = combat_defines.EXPLODE_DEVASTATE;}
 				else if (dist < heavy_impact_range)
-					explode_power = combat_defines.EXPLODE_HEAVY;
+					{explode_power = combat_defines.EXPLODE_HEAVY;}
 				else if (dist < light_impact_range)
-					explode_power = combat_defines.EXPLODE_LIGHT;
+					{explode_power = combat_defines.EXPLODE_LIGHT;}
 
 				if (explode_power > combat_defines.EXPLODE_NONE) {
 					let sorted_contents = [...tile.contents];
@@ -124,7 +124,7 @@ async function explosion({
 					});
 					for (let obj of sorted_contents) {
 						if (has_component(obj, "Tangible"))
-							obj.c.Tangible.ex_act(explode_power);
+							{obj.c.Tangible.ex_act(explode_power);}
 					}
 				}
 			}
@@ -147,7 +147,7 @@ explosion.dyn_explosion = function dyn_explosion({
 	silent = false,
 	smoke = true,
 } = {}) {
-	if (!power) return;
+	if (!power) {return;}
 	let range = Math.round(Math.sqrt(2 * power));
 	explosion({
 		epicenter,

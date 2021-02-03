@@ -18,27 +18,27 @@ module.exports = {
   */
 	weak_deep_assign(a, b) {
 		for (var key in b) {
-			if (!Object.prototype.hasOwnProperty.call(b,key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(b,key)) {continue;}
 			if (
-				typeof b[key] == "object" &&
+				typeof b[key] === "object" &&
 		b[key] != null &&
 		!(b[key] instanceof Array) &&
 		(!Object.prototype.hasOwnProperty.call(a,key) ||
-		typeof a[key] != "object" ||
+		typeof a[key] !== "object" ||
 		a[key] == null ||
 		a[key] instanceof Array)
 			)
-				a[key] = {};
+				{a[key] = {};}
 			if (Object.prototype.hasOwnProperty.call(a,key)) {
 				if (
-					typeof a[key] == "object" &&
+					typeof a[key] === "object" &&
 		a[key] != null &&
 		!(a[key] instanceof Array) &&
-		typeof b[key] == "object" &&
+		typeof b[key] === "object" &&
 		b[key] != null &&
 		!(b[key] instanceof Array)
 				)
-					module.exports.weak_deep_assign(a[key], b[key]);
+					{module.exports.weak_deep_assign(a[key], b[key]);}
 			} else {
 				a[key] = b[key];
 			}
@@ -50,9 +50,9 @@ module.exports = {
 	deep_create(obj) {
 		var newobj = Object.create(obj);
 		for (var key in obj) {
-			if (!Object.prototype.hasOwnProperty.call(obj,key)) continue;
-			if (typeof obj[key] == "object" && !(obj[key] instanceof Array))
-				newobj[key] = module.exports.deep_create(obj[key]);
+			if (!Object.prototype.hasOwnProperty.call(obj,key)) {continue;}
+			if (typeof obj[key] === "object" && !(obj[key] instanceof Array))
+				{newobj[key] = module.exports.deep_create(obj[key]);}
 		}
 		return newobj;
 	},
@@ -78,7 +78,7 @@ module.exports = {
   * @returns {Function}
   */
 	chain_func(func1, func2) {
-		if (func2 == undefined) throw new Error("Chaining undefined function!");
+		if (func2 == undefined) {throw new Error("Chaining undefined function!");}
 		function chained_func(...args) {
 			while (
 				chained_func[_chain_parent] &&
@@ -88,12 +88,12 @@ module.exports = {
 		chained_func[_chain_parent][_chain_parent];
 			}
 			let prev = (...override_args) => {
-				if (!chained_func[_chain_parent]) return;
+				if (!chained_func[_chain_parent]) {return;}
 				if (override_args.length)
-					return chained_func[_chain_parent].call(this, ...override_args);
-				else return chained_func[_chain_parent].call(this, ...args);
+					{return chained_func[_chain_parent].call(this, ...override_args);}
+				else {return chained_func[_chain_parent].call(this, ...args);}
 			};
-			if (chained_func[_chain_spliced]) return prev();
+			if (chained_func[_chain_spliced]) {return prev();}
 			return func2.call(this, prev, ...args);
 		}
 		chained_func.splice = function () {
@@ -114,31 +114,31 @@ module.exports = {
 		let init_value = obj[name];
 		let value = null;
 		let event_name = `${name}_changed`;
-		if (typeof check == "string") {
+		if (typeof check === "string") {
 			let type = check;
 			check = function (val) {
-				if (typeof val != type) return true;
+				if (typeof val !== type) {return true;}
 			};
 		}
 		if (check && init_value !== undefined && check(init_value))
-			throw new Error(
+			{throw new Error(
 				`Initial value ${init_value} for ${name} failed type check!`
-			);
+			);}
 		Object.defineProperty(obj, name, {
 			get() {
 				return value;
 			},
 			set(val) {
 				if (check && check(val))
-					throw new Error(`Setting ${name} to ${val} failed type check!`);
-				if (val === value) return;
+					{throw new Error(`Setting ${name} to ${val} failed type check!`);}
+				if (val === value) {return;}
 				let old = value;
 				value = val;
 				obj.emit(event_name, old, val);
 			},
 			enumerable: true,
 		});
-		if (init_value !== undefined) obj[name] = init_value;
+		if (init_value !== undefined) {obj[name] = init_value;}
 	},
 
 	/**
@@ -187,24 +187,24 @@ module.exports = {
 
 	dir_dx(dir) {
 		var dx = 0;
-		if (dir & 4) dx++;
-		if (dir & 8) dx--;
+		if (dir & 4) {dx++;}
+		if (dir & 8) {dx--;}
 		return dx;
 	},
 
 	dir_dy(dir) {
 		var dy = 0;
-		if (dir & 1) dy++;
-		if (dir & 2) dy--;
+		if (dir & 1) {dy++;}
+		if (dir & 2) {dy--;}
 		return dy;
 	},
 
 	dir_to(dx, dy) {
 		let dir = 0;
-		if (dy > 0) dir |= 1;
-		if (dy < 0) dir |= 2;
-		if (dx > 0) dir |= 4;
-		if (dx < 0) dir |= 8;
+		if (dy > 0) {dir |= 1;}
+		if (dy < 0) {dir |= 2;}
+		if (dx > 0) {dir |= 4;}
+		if (dx < 0) {dir |= 8;}
 		return dir;
 	},
 
@@ -270,7 +270,7 @@ module.exports = {
   * @memberof Typespess
   */
 	visible_message(a, ...b) {
-		if (typeof a == "string") {
+		if (typeof a === "string") {
 			return new ChatMessage("see", a);
 		}
 		return module.exports.visible_message(module.exports.format_html(a, ...b));
@@ -284,7 +284,7 @@ module.exports = {
   * @memberof Typespess
   */
 	audible_message(a, ...b) {
-		if (typeof a == "string") {
+		if (typeof a === "string") {
 			return new ChatMessage("hear", a);
 		}
 		return module.exports.audible_message(module.exports.format_html(a, ...b));
@@ -310,10 +310,10 @@ module.exports = {
 	to_chat(a, ...b) {
 		if (a instanceof Atom || a instanceof Client) {
 			var cl;
-			if (a instanceof Client) cl = a;
-			else cl = a.c.Mob.client;
-			if (!cl) return;
-			if (!cl.next_message.to_chat) cl.next_message.to_chat = [];
+			if (a instanceof Client) {cl = a;}
+			else {cl = a.c.Mob.client;}
+			if (!cl) {return;}
+			if (!cl.next_message.to_chat) {cl.next_message.to_chat = [];}
 			cl.next_message.to_chat.push(b.join(""));
 		} else if (
 			a instanceof Array &&
@@ -356,25 +356,25 @@ module.exports = {
 			var is_proper = str_tag.length && str_tag[0] == str_tag[0].toUpperCase();
 			var gender = "neuter";
 			if (tags[i] instanceof Atom) {
-				if (tags[i].force_improper) is_proper = false;
-				if (tags[i].force_proper) is_proper = true;
+				if (tags[i].force_improper) {is_proper = false;}
+				if (tags[i].force_proper) {is_proper = true;}
 				gender = tags[i].gender;
 			}
 			if (is_proper)
-				pre_tag = pre_tag.replace(
+				{pre_tag = pre_tag.replace(
 					/(^|[ \t.,>])(?:the|a) (?=(?:[ \t]|(?:<[^>]+>))*$)/i,
 					"$1"
-				);
+				);}
 			else if (gender == "plural")
-				pre_tag = pre_tag.replace(
+				{pre_tag = pre_tag.replace(
 					/((?:^|[ \t.,>]))a(?= (?:[ \t]|(?:<[^>]+>))*$)/i,
 					"$1some"
-				);
+				);}
 			else if (str_tag.match(/^[aeiou]/i))
-				pre_tag = pre_tag.replace(
+				{pre_tag = pre_tag.replace(
 					/((?:^|[ \t.,>])a)(?= (?:[ \t]|(?:<[^>]+>))*$)/i,
 					"$1n"
-				);
+				);}
 			tags[i] = "" + tags[i];
 			out_str += pre_tag;
 			out_str += module.exports.escape_html(tags[i]);
@@ -390,11 +390,11 @@ module.exports = {
   */
 	escape_html(str) {
 		return str.replace(/[&<>"']/gi, (chr) => {
-			if (chr == "&") return "&amp;";
-			if (chr == "<") return "&lt;";
-			if (chr == ">") return "&gt;";
-			if (chr == "\"") return "&quot;";
-			if (chr == "'") return "&#039;";
+			if (chr == "&") {return "&amp;";}
+			if (chr == "<") {return "&lt;";}
+			if (chr == ">") {return "&gt;";}
+			if (chr == "\"") {return "&quot;";}
+			if (chr == "'") {return "&#039;";}
 		});
 	},
 

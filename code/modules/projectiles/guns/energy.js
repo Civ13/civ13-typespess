@@ -11,7 +11,7 @@ class EnergyGun extends Component {
 	constructor(atom, template) {
 		super(atom, template);
 		if (this.cell_type)
-			this.cell = new Atom(this.a.server, this.cell_type, this.a);
+			{this.cell = new Atom(this.a.server, this.cell_type, this.a);}
 
 		this.ammo_type = [...this.ammo_type];
 		for (let i = 0; i < this.ammo_type.length; i++) {
@@ -91,8 +91,8 @@ class EnergyGun extends Component {
 
 	can_shoot(prev) {
 		let shot = this.ammo_type[this.select];
-		if (!shot || !this.cell) return false;
-		if (this.cell.c.PowerCell.charge < shot.c.EnergyLens.e_cost) return false;
+		if (!shot || !this.cell) {return false;}
+		if (this.cell.c.PowerCell.charge < shot.c.EnergyLens.e_cost) {return false;}
 		return prev();
 	}
 
@@ -127,7 +127,7 @@ class EnergyGun extends Component {
 	}
 
 	select_changed(from, to) {
-		if (this.ammo_type.length <= 0) return; // this shouldn't happen
+		if (this.ammo_type.length <= 0) {return;} // this shouldn't happen
 		if (to >= this.ammo_type.length) {
 			this.select -= this.ammo_type.length;
 			return;

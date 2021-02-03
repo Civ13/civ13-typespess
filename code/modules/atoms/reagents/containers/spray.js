@@ -22,7 +22,7 @@ class SprayBottle extends Component {
 	}
 
 	after_attack(prev, target, user) {
-		if (target == null || target.z != user.z) return prev();
+		if (target == null || target.z != user.z) {return prev();}
 		if (this.a.c.ReagentHolder.total_volume < this.current_amount) {
 			to_chat`<span class='warning'>The ${this.a} is empty!</span>`(user);
 			return;
@@ -97,7 +97,7 @@ class SprayBottle extends Component {
 			await sleep(wait_step);
 
 			for (let atom of [...chempuff.crosses()]) {
-				if (puff_reagent_left <= 0) break;
+				if (puff_reagent_left <= 0) {break;}
 
 				chempuff.c.ReagentHolder.react_atom(atom, "vapor", { volume_modifier });
 				if (has_component(atom, "LivingMob")) {

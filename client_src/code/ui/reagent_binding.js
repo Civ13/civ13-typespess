@@ -1,5 +1,3 @@
-
-
 class ReagentBinding {
 	constructor(panel, elem, props) {
 		Object.assign(
@@ -24,7 +22,7 @@ class ReagentBinding {
 
 	message_handler(obj) {
 		for (let split of this.path.split(".")) {
-			if (!obj || !obj.hasOwnProperty(split)) return;
+			if (!obj || !Object.prototype.hasOwnProperty.call(obj,split)) {return;}
 			obj = obj[split];
 		}
 		if (!obj) {
@@ -35,7 +33,7 @@ class ReagentBinding {
 				e.style.display = null;
 			}
 			for (let e of Object.values(this.reagent_elems)) {
-				if (!e) continue;
+				if (!e) {continue;}
 				this.elem.querySelector(".reagents-list").removeChild(e);
 			}
 			this.reagent_elems = {};

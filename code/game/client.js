@@ -53,8 +53,8 @@ class Client extends EventEmitter {
 		this.socket.on("close", this.disconnect_handler.bind(this));
 
 		if (this.server.dc_mobs[this.key]) {
-			if (this.mob == undefined) this.mob = this.server.dc_mobs[this.key];
-			else this.server.dc_mobs[this.key].c.Mob.key = undefined;
+			if (this.mob == undefined) {this.mob = this.server.dc_mobs[this.key];}
+			else {this.server.dc_mobs[this.key].c.Mob.key = undefined;}
 		}
 
 		if (this.server.demo_stream && !this.server.demo_stream.closed) {
@@ -73,7 +73,7 @@ class Client extends EventEmitter {
 		let found_ip4 = /[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/.exec(
 			this.address
 		);
-		if (found_ip4) this.address = found_ip4[0];
+		if (found_ip4) {this.address = found_ip4[0];}
 
 		this.server.emit("client_login", this);
 
@@ -124,7 +124,7 @@ class Client extends EventEmitter {
 			var obj = JSON.parse(data);
 
 			this.emit("message_pre", obj);
-			if (this.mob) this.mob.c.Mob.emit("message_pre", obj);
+			if (this.mob) {this.mob.c.Mob.emit("message_pre", obj);}
 
 			if (obj.ping) {
 				this.socket.send(
@@ -149,33 +149,33 @@ class Client extends EventEmitter {
 				this.last_click_time = this.server.now();
 
 				let click_prefix = "";
-				if (obj.click_on.ctrlKey) click_prefix += "ctrl_";
-				if (obj.click_on.altKey) click_prefix += "alt_";
-				if (obj.click_on.shiftKey) click_prefix += "shift_";
-				if (obj.click_on.button == 1) click_prefix += "middle_";
+				if (obj.click_on.ctrlKey) {click_prefix += "ctrl_";}
+				if (obj.click_on.altKey) {click_prefix += "alt_";}
+				if (obj.click_on.shiftKey) {click_prefix += "shift_";}
+				if (obj.click_on.button == 1) {click_prefix += "middle_";}
 
 				obj.click_on.atom = this[_netid_to_atom][obj.click_on.atom];
-				if (this.mob) obj.click_on.mob = this.mob;
+				if (this.mob) {obj.click_on.mob = this.mob;}
 				obj.click_on.client = this;
 				this.emit(click_prefix + "click_on", obj.click_on);
 				if (this.mob) {
 					this.mob.c.Mob.emit(click_prefix + "click_on", obj.click_on);
 				}
 				if (obj.click_on.atom)
-					obj.click_on.atom.emit(click_prefix + "clicked", obj.click_on);
+					{obj.click_on.atom.emit(click_prefix + "clicked", obj.click_on);}
 			}
 			if (obj.drag && obj.drag.from && obj.drag.to) {
 				// convert over to netids
 				obj.drag.from.atom = this[_netid_to_atom][obj.drag.from.atom];
 				obj.drag.to.atom = this[_netid_to_atom][obj.drag.to.atom];
-				if (this.mob) obj.drag.mob = this.mob;
+				if (this.mob) {obj.drag.mob = this.mob;}
 				obj.drag.client = this;
 				this.emit("mouse_dragged", obj.drag);
-				if (this.mob) this.mob.c.Mob.emit("mouse_dragged", obj.drag);
+				if (this.mob) {this.mob.c.Mob.emit("mouse_dragged", obj.drag);}
 				if (obj.drag.from.atom)
-					obj.drag.from.atom.emit("mouse_dragged_to", obj.drag);
+					{obj.drag.from.atom.emit("mouse_dragged_to", obj.drag);}
 				if (obj.drag.to.atom)
-					obj.drag.to.atom.emit("mouse_dropped_by", obj.drag);
+					{obj.drag.to.atom.emit("mouse_dropped_by", obj.drag);}
 			}
 			if (obj.panel) {
 				let pm = obj.panel;
@@ -191,14 +191,14 @@ class Client extends EventEmitter {
 				if (pm.close) {
 					for (let id of pm.close) {
 						var panel = this.panels.get(id);
-						if (!panel) continue;
+						if (!panel) {continue;}
 						panel.close(false);
 					}
 				}
 			}
 
 			this.emit("message", obj);
-			if (this.mob) this.mob.c.Mob.emit("message", obj);
+			if (this.mob) {this.mob.c.Mob.emit("message", obj);}
 		} catch (e) {
 			console.error(e);
 		}
@@ -210,9 +210,9 @@ class Client extends EventEmitter {
 			this.mob = null;
 		}
 		if (this.server.clients[this.key] == this)
-			delete this.server.clients[this.key];
+			{delete this.server.clients[this.key];}
 		if (this.server.clients_by_name[this.name] == this)
-			delete this.server.clients_by_name[this.name];
+			{delete this.server.clients_by_name[this.name];}
 		if (mob) {
 			mob.c.Mob.key = this.key;
 		}
@@ -235,18 +235,18 @@ class Client extends EventEmitter {
 		return this[_mob];
 	}
 	set mob(val) {
-		if (val == this[_mob]) return;
+		if (val == this[_mob]) {return;}
 		if (val && !has_component(val, "Mob"))
-			throw new TypeError("Expected object with Mob component");
+			{throw new TypeError("Expected object with Mob component");}
 		if (this[_mob]) {
 			this[_mob].c.Mob[mob_symbols._client] = undefined;
 			this[_mob].c.Mob[mob_symbols._key] = undefined;
 			this.next_message.eye = this.next_message.eye || {};
 			for (let eyeId in this[_mob].c.Mob.eyes) {
-				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) continue;
+				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) {continue;}
 				let eye = this[_mob].c.Mob.eyes[eyeId];
 				for (let netid in eye.c.Eye[mob_symbols._viewing]) {
-					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) continue;
+					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) {continue;}
 					this.enqueue_delete_atom(netid);
 				}
 				for (let tile of eye.c.Eye[mob_symbols._visible_tiles]) {
@@ -261,12 +261,12 @@ class Client extends EventEmitter {
 		this[_mob] = val;
 		if (this[_mob]) {
 			var old_client = this[_mob].c.Mob.client;
-			if (old_client) old_client.mob = null;
+			if (old_client) {old_client.mob = null;}
 			for (let eyeId in this[_mob].c.Mob.eyes) {
-				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) continue;
+				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) {continue;}
 				let eye = this[_mob].c.Mob.eyes[eyeId];
 				for (let netid in eye.c.Eye[mob_symbols._viewing]) {
-					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) continue;
+					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) {continue;}
 					this.enqueue_create_atom(
 						netid,
 						eye.c.Eye[mob_symbols._viewing][netid],
@@ -296,7 +296,7 @@ class Client extends EventEmitter {
 
 	enqueue_update_atom_var(netid, atom, varname, type) {
 		var entry = this[_atom_net_queue][netid];
-		if (!entry) entry = {};
+		if (!entry) {entry = {};}
 		if (entry.create) {
 			// The create packet has not been sent yet. This means there's no point in updating.
 			return;
@@ -306,16 +306,16 @@ class Client extends EventEmitter {
 			entry.update = {};
 			entry.update.atom = atom;
 		}
-		if (typeof type == "string") {
-			if (!entry.update.components) entry.update.components = {};
+		if (typeof type === "string") {
+			if (!entry.update.components) {entry.update.components = {};}
 			if (!entry.update.components[type])
-				entry.update.components[type] = new Set();
+				{entry.update.components[type] = new Set();}
 			entry.update.components[type].add(varname);
 		} else {
 			var subentry = entry.update;
 			var setname =
 		type == 1 ? "appearance_items" : type == 2 ? "overlays" : "items";
-			if (!subentry[setname]) subentry[setname] = new Set();
+			if (!subentry[setname]) {subentry[setname] = new Set();}
 			subentry[setname].add(varname);
 		}
 	}
@@ -328,22 +328,22 @@ class Client extends EventEmitter {
 	enqueue_add_tile(tile) {
 		var strtile = JSON.stringify([tile.x, tile.y, tile.z]);
 		if (!this[_tiles_to_remove].delete(strtile))
-			this[_tiles_to_add].add(strtile);
+			{this[_tiles_to_add].add(strtile);}
 	}
 
 	enqueue_remove_tile(tile) {
 		var strtile = JSON.stringify([tile.x, tile.y, tile.z]);
 		if (!this[_tiles_to_add].delete(strtile))
-			this[_tiles_to_remove].add(strtile);
+			{this[_tiles_to_remove].add(strtile);}
 	}
 
 	send_network_updates() {
-		if (!this.socket || this.socket.readyState != this.socket.OPEN) return;
+		if (!this.socket || this.socket.readyState != this.socket.OPEN) {return;}
 		var message = {};
 		for (let netid in this[_atom_net_queue]) {
 			let entry = this[_atom_net_queue][netid];
 			if (entry.create) {
-				if (!message.create_atoms) message.create_atoms = [];
+				if (!message.create_atoms) {message.create_atoms = [];}
 				let atom = entry.create;
 				let common_visgroups = [];
 				for (let visgroup of atom[mob_symbols._visgroups]) {
@@ -352,7 +352,7 @@ class Client extends EventEmitter {
 							visgroup
 						)
 					)
-						common_visgroups.push(visgroup);
+						{common_visgroups.push(visgroup);}
 				}
 				let submessage = {
 					network_id: netid,
@@ -380,13 +380,13 @@ class Client extends EventEmitter {
 					submessage[key] = atom[key];
 					for (let visgroup of common_visgroups) {
 						if (visgroup.overrides.has(key))
-							submessage[key] = visgroup.overrides.get(key);
+							{submessage[key] = visgroup.overrides.get(key);}
 					}
 				}
 				if (atom.template && atom.template.components) {
 					for (let component_name of atom.template.components) {
 						var component = atom.components[component_name];
-						if (!(component instanceof Component.Networked)) continue;
+						if (!(component instanceof Component.Networked)) {continue;}
 						submessage.components.push(component_name);
 						submessage.component_vars[
 							component_name
@@ -395,7 +395,7 @@ class Client extends EventEmitter {
 				}
 				message.create_atoms.push(submessage);
 			} else if (entry.update) {
-				if (!message.update_atoms) message.update_atoms = [];
+				if (!message.update_atoms) {message.update_atoms = [];}
 				let atom = entry.update.atom;
 				let common_visgroups = [];
 				for (let visgroup of atom[mob_symbols._visgroups]) {
@@ -404,7 +404,7 @@ class Client extends EventEmitter {
 							visgroup
 						)
 					)
-						common_visgroups.push(visgroup);
+						{common_visgroups.push(visgroup);}
 				}
 				let submessage = { network_id: netid };
 				if (entry.update.items) {
@@ -412,9 +412,9 @@ class Client extends EventEmitter {
 						submessage[item] = atom[item];
 						for (let visgroup of common_visgroups) {
 							if (visgroup.overrides.has(item))
-								submessage[item] = visgroup.overrides.get(item);
+								{submessage[item] = visgroup.overrides.get(item);}
 						}
-						if (submessage[item] === undefined) submessage[item] = null;
+						if (submessage[item] === undefined) {submessage[item] = null;}
 					}
 				}
 				if (entry.update.overlays) {
@@ -428,7 +428,7 @@ class Client extends EventEmitter {
 					submessage.components = {};
 					for (let component_name in entry.update.components) {
 						if (!Object.prototype.hasOwnProperty.call(entry.update.components,component_name))
-							continue;
+							{continue;}
 						submessage.components[component_name] = {};
 						for (let item of entry.update.components[component_name]) {
 							submessage.components[component_name][item] =
@@ -438,7 +438,7 @@ class Client extends EventEmitter {
 				}
 				message.update_atoms.push(submessage);
 			} else if (entry.delete) {
-				if (!message.delete_atoms) message.delete_atoms = [];
+				if (!message.delete_atoms) {message.delete_atoms = [];}
 				message.delete_atoms.push(netid);
 			}
 			delete this[_atom_net_queue][netid];
@@ -452,11 +452,11 @@ class Client extends EventEmitter {
 			this[_tiles_to_remove].clear();
 		}
 		for (let key in this.next_message) {
-			if (!Object.prototype.hasOwnProperty.call(this.next_message,key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(this.next_message,key)) {continue;}
 			message[key] = this.next_message[key];
 			delete this.next_message[key];
 		}
-		if (JSON.stringify(message) == "{}") return;
+		if (JSON.stringify(message) == "{}") {return;}
 		message.timestamp = this.server.now();
 		if (this.server.demo_stream && !this.server.demo_stream.closed) {
 			this.server.demo_stream.write(

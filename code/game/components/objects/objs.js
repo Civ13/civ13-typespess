@@ -24,7 +24,7 @@ class Tangible extends Component {
 	) {
 		const PROBABILITY_OFFSET = 25;
 		const PROBABILITY_BASE_PERCENT = 75;
-		if (this.anchored) return false;
+		if (this.anchored) {return false;}
 		if (
 			this.last_high_pressure_movement_air_cycle <
 	this.a.server.air_controller.ticknum
@@ -48,7 +48,7 @@ class Tangible extends Component {
 		speed = this.throw_speed,
 	} = {}) {
 		try {
-			if (!target) return;
+			if (!target) {return;}
 			this.stop_throw();
 
 			let dist_traveled = 0;
@@ -68,7 +68,7 @@ class Tangible extends Component {
 				this.stop_throw();
 				if (speed > 0.5) {
 					if (has_component(target, "Tangible"))
-						target.c.Tangible.emit("throw_impacted_by", this.a);
+						{target.c.Tangible.emit("throw_impacted_by", this.a);}
 					this.emit("throw_impacted", target);
 				}
 			};
@@ -78,7 +78,7 @@ class Tangible extends Component {
 
 			let dx, dy;
 
-			if (typeof target == "number") {
+			if (typeof target === "number") {
 				dx = Math.cos(target);
 				dy = Math.sin(target);
 			} else if (target.x === +target.x && target.y === +target.y) {
@@ -186,12 +186,12 @@ class Examine extends Component {
 	}
 
 	shift_clicked(e) {
-		if (e.mob) this.examine(e.mob);
+		if (e.mob) {this.examine(e.mob);}
 	}
 
 	examine(user) {
 		to_chat`That's <b>${this.a}</b>`(user);
-		if (this.desc) to_chat(user, "<i>"+this.desc+"</i>");
+		if (this.desc) {to_chat(user, "<i>"+this.desc+"</i>");}
 	}
 }
 

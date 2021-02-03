@@ -110,7 +110,7 @@ class NetworkedComponent extends Component {
   * @param {Function} on_set A function that is called when this property gets changed. If it returns falsish, the property does not get set.
   */
 	add_networked_var(name, on_set) {
-		if (Object.prototype.hasOwnProperty.call(this[_networked_vars],name)) return;
+		if (Object.prototype.hasOwnProperty.call(this[_networked_vars],name)) {return;}
 		this[_networked_vars][name] = this[name];
 		Object.defineProperty(this, name, {
 			configurable: false,
@@ -119,8 +119,8 @@ class NetworkedComponent extends Component {
 				return this[_networked_vars][name];
 			},
 			set: (val) => {
-				if (val === this[_networked_vars][name]) return;
-				if (on_set && !on_set(val)) return;
+				if (val === this[_networked_vars][name]) {return;}
+				if (on_set && !on_set(val)) {return;}
 				let old = this[_networked_vars][name];
 				this[_networked_vars][name] = val;
 				this.atom[mob_symbols._update_var](name, this.constructor.name);

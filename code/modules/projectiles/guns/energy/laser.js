@@ -75,4 +75,4 @@ module.exports.templates = {
 		},
 		tree_paths: ["items/gun/energy/laser/retro"],
 	},
-}
+};

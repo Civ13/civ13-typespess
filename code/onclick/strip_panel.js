@@ -16,18 +16,18 @@ class StripPanel extends Panel {
 		!this.cached_covered[msg.slot]
 			) {
 				let slot_to_strip = this.bound_atom.c.MobInventory.slots[msg.slot];
-				if (!slot_to_strip) return;
+				if (!slot_to_strip) {return;}
 				let item_to_strip = slot_to_strip.item;
 				if (item_to_strip)
-					this.bound_mob.c.MobInventory.strip_panel_unequip(
+					{this.bound_mob.c.MobInventory.strip_panel_unequip(
 						this.bound_atom,
 						slot_to_strip
-					);
+					);}
 				else
-					this.bound_mob.c.MobInventory.strip_panel_equip(
+					{this.bound_mob.c.MobInventory.strip_panel_equip(
 						this.bound_atom,
 						slot_to_strip
-					);
+					);}
 			}
 		}
 	}

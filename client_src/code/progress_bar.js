@@ -32,7 +32,7 @@ class ProgressBar extends Component {
 				this.attached_atom_id
 			];
 			if (!this.attached_atom[_progress_bars])
-				this.attached_atom[_progress_bars] = [];
+				{this.attached_atom[_progress_bars] = [];}
 			this.target_offset_y =
 		1 + PROGRESSBAR_HEIGHT * this.attached_atom[_progress_bars].length;
 			if (this.attached_atom[_progress_bars].length) {
@@ -40,9 +40,9 @@ class ProgressBar extends Component {
 					this.attached_atom[_progress_bars].length - 1
 				];
 				if (prev_bar.c.ProgressBar.offset_y)
-					this.offset_y = prev_bar.c.ProgressBar.offset_y + PROGRESSBAR_HEIGHT;
-				else this.offset_y = this.target_offset_y;
-			} else this.offset_y = this.target_offset_y;
+					{this.offset_y = prev_bar.c.ProgressBar.offset_y + PROGRESSBAR_HEIGHT;}
+				else {this.offset_y = this.target_offset_y;}
+			} else {this.offset_y = this.target_offset_y;}
 			this.attached_atom[_progress_bars].push(this.atom);
 		}
 

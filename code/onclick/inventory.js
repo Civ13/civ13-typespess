@@ -481,15 +481,15 @@ class MobInventory extends Component {
 	}
 	set active_hand(value) {
 		if (
-			typeof value != "string" ||
+			typeof value !== "string" ||
 	!this[_slots][value] ||
 	!this[_slots][value].props.is_hand_slot
 		)
-			throw new TypeError(
+			{throw new TypeError(
 				`${value} is not a string referring to a valid hand slot.`
-			);
+			);}
 		if (this[_active_hand])
-			this[_slots][this[_active_hand]].atom.overlays.hand_active = undefined;
+			{this[_slots][this[_active_hand]].atom.overlays.hand_active = undefined;}
 		var old_active_hand = this[_active_hand];
 		this[_active_hand] = value;
 		this[_slots][this[_active_hand]].atom.overlays.hand_active = {icon : "icons/ui/screen_civ13/", icon_state: "hand_active"};
@@ -511,7 +511,7 @@ class MobInventory extends Component {
 		let t_is = this.a.p_are();
 		let covered = this.get_covered_slots();
 		for (let slot of Object.values(this.slots)) {
-			if (!slot.item || covered.has(slot.id)) continue;
+			if (!slot.item || covered.has(slot.id)) {continue;}
 			if (slot.props.visible) {
 				let blood_stained = false;
 				let verb = slot.props.wear_verb
@@ -559,7 +559,7 @@ class MobInventory extends Component {
 	}
 	set throw_mode(val) {
 		val = !!val;
-		if (this[_throw_mode] == val) return;
+		if (this[_throw_mode] == val) {return;}
 		this[_throw_mode] = val;
 		this.a.c.Eye.screen.throw_item.icon_state = val
 			? "act_throw_on"
@@ -568,8 +568,8 @@ class MobInventory extends Component {
 
 	throw_item(target) {
 		this.throw_mode = false;
-		if (!this.slots[this.active_hand].can_unequip()) return;
-		if (!this.slots[this.active_hand].item) return;
+		if (!this.slots[this.active_hand].can_unequip()) {return;}
+		if (!this.slots[this.active_hand].item) {return;}
 		let item = this.slots[this.active_hand].item;
 		this.slots[this.active_hand].item = undefined;
 		visible_message(
@@ -595,7 +595,7 @@ class MobInventory extends Component {
 			return true;
 		}
 		for (slot of Object.values(this[_slots])) {
-			if (!slot.props.is_hand_slot) continue;
+			if (!slot.props.is_hand_slot) {continue;}
 			if (slot.can_accept_item(item)) {
 				slot.item = item;
 				return true;
@@ -606,7 +606,7 @@ class MobInventory extends Component {
 
 	*hand_slots() {
 		for (let slot of Object.values(this[_slots])) {
-			if (slot.props.is_hand_slot) yield slot;
+			if (slot.props.is_hand_slot) {yield slot;}
 		}
 	}
 
@@ -615,11 +615,11 @@ class MobInventory extends Component {
 	}
 	set nohold_counter(val) {
 		let old = this[_nohold_counter];
-		if (val == old) return;
+		if (val == old) {return;}
 		this[_nohold_counter] = val;
 		if (val && !old) {
 			for (let slot of Object.values(this.slots)) {
-				if (slot.props.is_hand_slot && slot.can_unequip()) slot.item = null;
+				if (slot.props.is_hand_slot && slot.can_unequip()) {slot.item = null;}
 			}
 		}
 	}
@@ -677,17 +677,17 @@ class MobInventory extends Component {
 
 	accident() {
 		for (let slot of Object.values(this.slots)) {
-			if (!slot.props.is_hand_slot || !slot.can_unequip()) return;
-			if (!slot.item) continue;
+			if (!slot.props.is_hand_slot || !slot.can_unequip()) {return;}
+			if (!slot.item) {continue;}
 			slot.item = null;
 		}
 	}
 
 	get_id_name(if_no_id = "Unknown") {
 		let id_item = this.slots.id && this.slots.id.item;
-		if (!id_item) return if_no_id;
+		if (!id_item) {return if_no_id;}
 		if (has_component(id_item, "CardId") && id_item.c.CardId.registered_name)
-			return id_item.c.CardId.registered_name;
+			{return id_item.c.CardId.registered_name;}
 		return if_no_id;
 	}
 
@@ -698,7 +698,7 @@ class MobInventory extends Component {
 		has_component(slot.item, slot.props.clothing_slot) &&
 		slot.item.c[slot.props.clothing_slot].hide_face
 			)
-				return false;
+				{return false;}
 		}
 		return prev();
 	}
@@ -710,10 +710,10 @@ class MobInventory extends Component {
 				!slot.props.clothing_slot ||
 		!has_component(slot.item, slot.props.clothing_slot)
 			)
-				continue;
+				{continue;}
 			let covered_slots = slot.item.c[slot.props.clothing_slot].covered_slots;
-			if (!covered_slots) continue;
-			for (let covered of covered_slots) set.add(covered);
+			if (!covered_slots) {continue;}
+			for (let covered of covered_slots) {set.add(covered);}
 		}
 		return set;
 	}
@@ -741,11 +741,11 @@ class MobInventory extends Component {
 	}
 
 	strip_panel_equip(mob, slot) {
-		if (slot.item) return;
+		if (slot.item) {return;}
 		let this_slot = this.slots[this.active_hand];
-		if (!this_slot) return;
+		if (!this_slot) {return;}
 		let this_item = this_slot.item;
-		if (!this_item) return;
+		if (!this_item) {return;}
 
 		if (!this_slot.can_unequip()) {
 			to_chat`<span class='warning'>You can't put the ${this_item} on the ${mob}, it's stuck to your hand!</span>`(
@@ -783,17 +783,17 @@ class MobInventory extends Component {
 		}).then((success) => {
 			if (!success) {
 				if (!slot.props.visible)
-					to_chat`<span class='warning'>You feel your ${slot.props.strip_desc} being fumbled with!</span>`(
+					{to_chat`<span class='warning'>You feel your ${slot.props.strip_desc} being fumbled with!</span>`(
 						mob
-					);
+					);}
 				return;
 			}
-			if (slot.can_accept_item(this_item)) slot.item = this_item;
+			if (slot.can_accept_item(this_item)) {slot.item = this_item;}
 		});
 	}
 	strip_panel_unequip(mob, slot) {
 		let item = slot.item;
-		if (!item) return;
+		if (!item) {return;}
 		if (!slot.can_unequip()) {
 			to_chat`<span class='warning'>You can't remove the ${
 				slot.visible ? item : "item"
@@ -822,12 +822,12 @@ class MobInventory extends Component {
 		}).then((success) => {
 			if (!success) {
 				if (!slot.props.visible)
-					to_chat`<span class='warning'>You feel your ${slot.props.strip_desc} being fumbled with!</span>`(
+					{to_chat`<span class='warning'>You feel your ${slot.props.strip_desc} being fumbled with!</span>`(
 						mob
-					);
+					);}
 				return;
 			}
-			if (slot.can_unequip()) item.loc = mob.fine_loc;
+			if (slot.can_unequip()) {item.loc = mob.fine_loc;}
 		});
 	}
 
@@ -839,10 +839,10 @@ class MobInventory extends Component {
 		extra_checks = null,
 	} = {}) {
 		return new Promise((resolve) => {
-			if (!delay) return true;
+			if (!delay) {return true;}
 			var time_begin = this.a.server.now();
-			if (!target) target = [];
-			if (!(target instanceof Array)) target = [target];
+			if (!target) {target = [];}
+			if (!(target instanceof Array)) {target = [target];}
 			target = target.slice();
 			target.push(this.a);
 			var remove_callbacks = null;
@@ -852,7 +852,7 @@ class MobInventory extends Component {
 			}, delay);
 			var callback_removers = [];
 			remove_callbacks = () => {
-				for (var remover of callback_removers) remover();
+				for (var remover of callback_removers) {remover();}
 			};
 			function cancel() {
 				remove_callbacks();
@@ -937,7 +937,7 @@ class Slot extends EventEmitter {
 	clicked(e) {
 		if (this.props.is_hand_slot) {
 			if (this.mob.c.MobInventory.active_hand == this.id) {
-				if (this.item) this.item.c.Item.attack_self(this.mob);
+				if (this.item) {this.item.c.Item.attack_self(this.mob);}
 			} else {
 				this.mob.c.MobInventory.active_hand = this.id;
 			}
@@ -978,60 +978,60 @@ class Slot extends EventEmitter {
 			let icodir = 1;
 			if (this.mob) {icodir = this.mob.dir;}
 			if (icodir ===1)
-				icodir = 2;
+				{icodir = 2;}
 			else if (icodir ===2)
-				icodir = 1;
+				{icodir = 1;}
 			else if (icodir ===4)
-				icodir = 3;
+				{icodir = 3;}
 			else if (icodir ===8)
-				icodir = 4;
+				{icodir = 4;}
 			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("1.png",`${icodir}.png`);}
 			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("2.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("2.png",`${icodir}.png`);}
 			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("3.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("3.png",`${icodir}.png`);}
 			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("4.png") != -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
+				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("4.png",`${icodir}.png`);}
 		}
 		if (this.props.clothing_slot) {
 			let icodir = 1;
 			if (this.mob) {icodir = this.mob.dir;}
 			if (icodir ===1)
-				icodir = 2;
+				{icodir = 2;}
 			else if (icodir ===2)
-				icodir = 1;
+				{icodir = 1;}
 			else if (icodir ===4)
-				icodir = 3;
+				{icodir = 3;}
 			else if (icodir ===8)
-				icodir = 4;
+				{icodir = 4;}
 			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("1.png") != -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("1.png",`${icodir}.png`)}
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("1.png",`${icodir}.png`);}
 			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("2.png") != -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("2.png",`${icodir}.png`)}
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("2.png",`${icodir}.png`);}
 			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("3.png") != -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("3.png",`${icodir}.png`)}
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("3.png",`${icodir}.png`);}
 			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("4.png") != -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("4.png",`${icodir}.png`)}
+				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("4.png",`${icodir}.png`);}
 
 		}	
 	}
 	can_accept_item(item) {
-		if (!has_component(item, "Item")) return false;
-		if (this.item) return false;
-		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) return false;
+		if (!has_component(item, "Item")) {return false;}
+		if (this.item) {return false;}
+		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return false;}
 		if (this.props.max_size && this.props.max_size < item.c.Item.size)
-			return false;
+			{return false;}
 		if (this.props.is_hand_slot && this.mob.c.MobInventory.nohold_counter)
-			return false;
+			{return false;}
 		if (
 			this.props.clothing_slot &&
 	!has_component(item, this.props.clothing_slot)
 		)
-			return false;
+			{return false;}
 		if (this.props.requires_slot) {
 			let rslot = this.mob.c.MobInventory.slots[this.props.requires_slot];
-			if (!rslot.item) return false;
+			if (!rslot.item) {return false;}
 			if (rslot.props.clothing_slot) {
 				let whitelist =
 		rslot.item.c[rslot.props.clothing_slot][
@@ -1049,11 +1049,11 @@ class Slot extends EventEmitter {
 							break;
 						}
 					}
-					if (!valid) return false;
+					if (!valid) {return false;}
 				}
 				if (blacklist) {
 					for (let comp of blacklist) {
-						if (has_component(item, comp)) return false;
+						if (has_component(item, comp)) {return false;}
 					}
 				}
 			}
@@ -1067,16 +1067,16 @@ class Slot extends EventEmitter {
 
 	equip_or_del(item) {
 		if (!this.can_accept_item(item)) {
-			if (is_atom(item)) item.destroy();
+			if (is_atom(item)) {item.destroy();}
 			return;
 		}
 		this.item = item;
 	}
 
 	set visible(value) {
-		if (typeof value != "boolean")
-			throw new TypeError(`Boolean expected, got ${value}`);
-		if (value === this[_visible]) return;
+		if (typeof value !== "boolean")
+			{throw new TypeError(`Boolean expected, got ${value}`);}
+		if (value === this[_visible]) {return;}
 		this[_visible] = value;
 		if (value) {
 			this.mob.c.Eye.screen[`slot_${this.id}`] = this.atom;
@@ -1095,9 +1095,9 @@ class Slot extends EventEmitter {
 	}
 	set item(value) {
 		if (!has_component(value, "Item") && value != undefined)
-			throw new TypeError(
+			{throw new TypeError(
 				`${value} is not an atom with item component or undefined!`
-			);
+			);}
 		if (this[_item]) {
 			if (this.props.clothing_slot) {
 				this.mob.overlays[`clothing_${this.id}`] = null;
@@ -1111,7 +1111,7 @@ class Slot extends EventEmitter {
 			this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = undefined;
 			for (let slot of Object.values(this.mob.c.MobInventory.slots)) {
 				if (slot.props.requires_slot == this.id) {
-					if (slot.can_unequip()) slot.item = null;
+					if (slot.can_unequip()) {slot.item = null;}
 				}
 			}
 		}
@@ -1129,7 +1129,7 @@ class Slot extends EventEmitter {
 			this[_item].screen_loc_x = this.atom.screen_loc_x;
 			this[_item].screen_loc_y = this.atom.screen_loc_y;
 			if (this.visible)
-				this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = this[_item];
+				{this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = this[_item];}
 			if (
 				this.props.is_hand_slot &&
 		(this[_item].c.Item.inhand_icon_state || this[_item].icon_state)
@@ -1137,13 +1137,13 @@ class Slot extends EventEmitter {
 				let icodir = 1;
 				if (this.mob) {icodir = this.mob.dir;}
 				if (icodir ===1)
-					icodir = 2;
+					{icodir = 2;}
 				else if (icodir ===2)
-					icodir = 1;
+					{icodir = 1;}
 				else if (icodir ===4)
-					icodir = 3;
+					{icodir = 3;}
 				else if (icodir ===8)
-					icodir = 4;
+					{icodir = 4;}
 				this.mob.overlays[`inhand_${this.id}`] = 
 				{
 					icon_state: this[_item].c.Item.inhand_icon_state,
@@ -1155,13 +1155,13 @@ class Slot extends EventEmitter {
 				let icodir = 1;
 				if (this.mob) {icodir = this.mob.dir;}
 				if (icodir ===1)
-					icodir = 2;
+					{icodir = 2;}
 				else if (icodir ===2)
-					icodir = 1;
+					{icodir = 1;}
 				else if (icodir ===4)
-					icodir = 3;
+					{icodir = 3;}
 				else if (icodir ===8)
-					icodir = 4;
+					{icodir = 4;}
 					this.mob.overlays[`clothing_${this.id}`] = {
 					icon_state: this[_item].c[this.props.clothing_slot].worn_icon_state,
 					icon: `${this[_item].c[this.props.clothing_slot].worn_icon}${this[_item].c[this.props.clothing_slot].worn_icon_state}/${this[_item].c[this.props.clothing_slot].worn_icon_state}-dir${icodir}.png`,
@@ -1171,14 +1171,14 @@ class Slot extends EventEmitter {
 			}
 		} else {
 			if (this.props.is_hand_slot)
-				this.mob.overlays[`inhand_${this.id}`] = undefined;
+				{this.mob.overlays[`inhand_${this.id}`] = undefined;}
 		}
-		if (olditem) olditem.c.Item.emit("unequipped", this);
+		if (olditem) {olditem.c.Item.emit("unequipped", this);}
 		this.emit("item_changed", olditem, value);
 		this.mob.c.MobInventory.emit("slot_item_changed", this.id, olditem, value);
 		if (this.id == this.mob.c.MobInventory.active_hand)
-			this.mob.c.MobInventory.emit("active_hand_item_changed", olditem, value);
-		if (value) value.c.Item.emit("equipped", this);
+			{this.mob.c.MobInventory.emit("active_hand_item_changed", olditem, value);}
+		if (value) {value.c.Item.emit("equipped", this);}
 		if (has_component(this.mob, "LivingMob")) {
 			this.mob.c.LivingMob.update_name();
 		}

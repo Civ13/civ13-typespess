@@ -55,12 +55,12 @@ class Panel extends EventEmitter {
   */
 	open() {
 		if (!this.client || !this.client.panels.has(this.id) || this.is_open)
-			throw new Error(
+			{throw new Error(
 				"Reopening a panel is forbidden! Create a new panel instead."
-			);
+			);}
 		var pm =
 	this.client.next_message.panel || (this.client.next_message.panel = {});
-		if (!pm.create) pm.create = {};
+		if (!pm.create) {pm.create = {};}
 		pm.create[this.id] = this.panel_props;
 		this.is_open = true;
 		this.emit("open");
@@ -75,10 +75,10 @@ class Panel extends EventEmitter {
 			console.warn(new Error("Cannot send message on an unopened panel!"));
 			return;
 		}
-		if (!this.client) return;
+		if (!this.client) {return;}
 		var pm =
 	this.client.next_message.panel || (this.client.next_message.panel = {});
-		if (!pm.message) pm.message = [];
+		if (!pm.message) {pm.message = [];}
 		pm.message.push({ id: this.id, contents: message });
 	}
 
@@ -86,11 +86,11 @@ class Panel extends EventEmitter {
   * Closes the panel
   */
 	close(send_message = true) {
-		if (!this.is_open) return;
+		if (!this.is_open) {return;}
 		if (this.client && send_message) {
 			var pm =
 		this.client.next_message.panel || (this.client.next_message.panel = {});
-			if (!pm.close) pm.close = [];
+			if (!pm.close) {pm.close = [];}
 			pm.close.push(this.id);
 		}
 		this.client.panels.delete(this.id);

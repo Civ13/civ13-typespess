@@ -13,10 +13,10 @@ class JobController {
 	}
 
 	assign_role(mind, job, { latejoin = false, run_checks = true } = {}) {
-		if (run_checks && !this.can_be_job(mind, job, { latejoin })) return false;
+		if (run_checks && !this.can_be_job(mind, job, { latejoin })) {return false;}
 		job.current_positions++;
 		this.unassigned.delete(mind);
-		if (!latejoin) this.assigned.add(mind);
+		if (!latejoin) {this.assigned.add(mind);}
 		mind.assigned_role = job;
 		return true;
 	}
@@ -30,19 +30,19 @@ class JobController {
 	// Okay tg was being really retarded and put the same list of checks literally everwhere
 	// so I'm doing this to avoid that bullshit
 	can_be_job(mind, job, { latejoin = false } = {}) {
-		if (mind.restricted_roles.has(job.id)) return false;
+		if (mind.restricted_roles.has(job.id)) {return false;}
 		if (
 			latejoin &&
 	job.total_positions != -1 &&
 	job.current_positions > job.total_positions
 		)
-			return false;
+			{return false;}
 		if (
 			!latejoin &&
 	job.spawn_positions != -1 &&
 	job.current_positions > job.spawn_positions
 		)
-			return false;
+			{return false;}
 		return true;
 	}
 
@@ -52,11 +52,11 @@ class JobController {
 			job.spawn_positions != -1 &&
 	job.current_positions > job.spawn_positions
 		)
-			return candidates; // this ain't gonna be useful so let's get out of here.
+			{return candidates;} // this ain't gonna be useful so let's get out of here.
 		for (let mind of this.unassigned) {
-			if (!this.can_be_job(mind, job)) continue;
+			if (!this.can_be_job(mind, job)) {continue;}
 			if (mind.character_preferences.job_preferences[job.id] >= level)
-				candidates.push(mind);
+				{candidates.push(mind);}
 		}
 		return candidates;
 	}
@@ -69,7 +69,7 @@ class JobController {
 		!job.departments.includes("command") &&
 		this.can_be_job(mind, job)
 			) {
-				if (this.assign_role(mind, job)) return true;
+				if (this.assign_role(mind, job)) {return true;}
 			}
 		}
 		return false;
@@ -79,7 +79,7 @@ class JobController {
 		if (mod) {
 			if (mod.jobs) {
 				for (let [id, job] of Object.entries(mod.jobs)) {
-					if (this.jobs[id]) throw new Error(`Job '${id}' defined!`);
+					if (this.jobs[id]) {throw new Error(`Job '${id}' defined!`);}
 					this.jobs[id] = job;
 					job.id = id;
 				}
@@ -88,7 +88,7 @@ class JobController {
 	}
 
 	divide_occupations() {
-		if (this.unassigned.size == 0) return false;
+		if (this.unassigned.size == 0) {return false;}
 
 		// people who want to be assistants, sure, go on.
 		for (let candidate of this.find_occupation_candidates(this.jobs.nomad,1)) {
@@ -97,8 +97,8 @@ class JobController {
 		for (let level of [3, 2, 1]) {
 			for (let mind of _.shuffle([...this.unassigned])) {
 				for (let job of _.shuffle(Object.values(this.jobs))) {
-					if (!job) continue;
-					if (!this.can_be_job(mind, job)) continue;
+					if (!job) {continue;}
+					if (!this.can_be_job(mind, job)) {continue;}
 					if (mind.character_preferences.job_preferences[job.id] >= level) {
 						this.assign_role(mind, job);
 						break;
@@ -114,18 +114,18 @@ class JobController {
 				!this.can_be_job(mind, this.jobs.nomad) &&
 		mind.character_preferences.jobless_role != "none"
 			)
-				this.give_random_job(mind); // you get to roll for random before everyone else just to be sure you don't get assistant. you're so speshul
+				{this.give_random_job(mind);} // you get to roll for random before everyone else just to be sure you don't get assistant. you're so speshul
 		}
 		for (let mind of [...this.unassigned]) {
 			if (mind.character_preferences.jobless_role == "random")
-				this.give_random_job(mind);
+				{this.give_random_job(mind);}
 		}
 
 		// for those who wanted to be assistant
 		for (let mind of [...this.unassigned]) {
 			if (mind.character_preferences.jobless_role == "nomad")
-				this.assign_role(mind, this.jobs.nomad);
-			else this.reject_player(mind);
+				{this.assign_role(mind, this.jobs.nomad);}
+			else {this.reject_player(mind);}
 		}
 
 		for (let mind of [...this.unassigned]) {
@@ -143,7 +143,7 @@ class JobController {
 	}
 
 	send_to_atom(mob, atom) {
-		if (!atom) return;
+		if (!atom) {return;}
 		if (atom.is_base_loc || atom.is_fine_loc) {mob.loc = atom;}
 		else {mob.loc = atom.base_mover.fine_loc;}
 		mob.force_move(atom.x, atom.y, atom.y, mob.server.station_dim);

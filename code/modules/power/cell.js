@@ -9,7 +9,7 @@ const {
 class PowerCell extends Component {
 	constructor(atom, template) {
 		super(atom, template);
-		if (!this.start_empty) this.charge = this.max_charge;
+		if (!this.start_empty) {this.charge = this.max_charge;}
 		this.on("charge_changed", this.charge_changed.bind(this));
 		this.a.c.Examine.examine = chain_func(
 			this.a.c.Examine.examine,
@@ -20,13 +20,13 @@ class PowerCell extends Component {
 	}
 
 	charge_changed(from, to) {
-		if (to > this.max_charge) this.charge = this.max_charge;
-		if (to < 0) this.charge = 0;
+		if (to > this.max_charge) {this.charge = this.max_charge;}
+		if (to < 0) {this.charge = 0;}
 
-		if (to < 0.01) this.a.overlays.charge_overlay = null;
+		if (to < 0.01) {this.a.overlays.charge_overlay = null;}
 		else if (to / this.max_charge >= 0.995)
-			this.a.overlays.charge_overlay = { icon_state: "cell-o2" };
-		else this.a.overlays.charge_overlay = { icon_state: "cell-o1" };
+			{this.a.overlays.charge_overlay = { icon_state: "cell-o2" };}
+		else {this.a.overlays.charge_overlay = { icon_state: "cell-o1" };}
 	}
 
 	use(amount) {

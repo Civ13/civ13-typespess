@@ -114,4 +114,4 @@ module.exports.templates = {
 		},
 		tree_paths: ["items/ammo_box/n762"],
 	},
-}
+};

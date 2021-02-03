@@ -19,7 +19,7 @@ class Handcuffs extends Component {
 	!has_component(target, "MobInventory") ||
 	!target.c.MobInventory.check_can_handcuff(user)
 		)
-			return;
+			{return;}
 		if (!target.c.MobInventory.handcuffed) {
 			visible_message`<span class='danger'>The ${user} is trying to put the ${this.a} on the ${target}!</span>`
 				.self`<span class='userdanger'>The ${user} is trying to put the ${this.a} on the ${target}!</span>`.emit_from(
@@ -49,17 +49,17 @@ class Handcuffs extends Component {
 	!target.c.MobInventory.check_can_handcuff(user) ||
 	target.c.MobInventory.handcuffed
 		)
-			return;
-		if (this.a.c.Item.slot && !this.a.c.Item.slot.can_unequip) return;
+			{return;}
+		if (this.a.c.Item.slot && !this.a.c.Item.slot.can_unequip) {return;}
 		if (this.single_use) {
-			if (this.used_icon_state) this.a.icon_state = this.used_icon_state;
+			if (this.used_icon_state) {this.a.icon_state = this.used_icon_state;}
 			if (this.used_inhand_icon_state)
-				this.a.c.Item.inhand_icon_state = this.used_inhand_icon_state;
-			if (this.used_name) this.a.name = this.used_name;
-			if (this.used_desc) this.a.c.Examine.desc = this.used_desc;
+				{this.a.c.Item.inhand_icon_state = this.used_inhand_icon_state;}
+			if (this.used_name) {this.a.name = this.used_name;}
+			if (this.used_desc) {this.a.c.Examine.desc = this.used_desc;}
 			this.used = true;
 		}
-		if (this.a.c.Item.slot) this.a.c.Item.slot.item = null;
+		if (this.a.c.Item.slot) {this.a.c.Item.slot.item = null;}
 		this.a.loc = target;
 		target.c.MobInventory.handcuffed = this.a;
 		return;

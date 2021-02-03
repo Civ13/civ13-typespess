@@ -48,7 +48,7 @@ class Rack extends Component {
 	}
 
 	deconstruct() {
-		if (!this.a.loc) return;
+		if (!this.a.loc) {return;}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			this.a.density = 0;
 			new Atom(this.a.server, "rack_parts", this.a.loc);
@@ -82,7 +82,7 @@ class RackParts extends Component {
 		to_chat`<span class='notice'>You start constructing a rack...</span>`(user);
 		user.c.MobInventory.do_after({ delay: 5000, target: this.a }).then(
 			(success) => {
-				if (!success) return;
+				if (!success) {return;}
 				new Atom(this.a.server, "rack", user.loc);
 				this.a.destroy();
 			}

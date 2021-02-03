@@ -21,8 +21,8 @@ class PowerController {
 			let dt = 1;
 			for (let powernet of _.shuffle([...this.powernets])) {
 				if (!powernet.nodes.size && !powernet.cables.size)
-					this.powernets.delete(powernet);
-				else powernet.reset(dt);
+					{this.powernets.delete(powernet);}
+				else {powernet.reset(dt);}
 			}
 			//			let ctr = 0;
 			//			for(let machine of this.server.atoms_for_components.MachineTick) {

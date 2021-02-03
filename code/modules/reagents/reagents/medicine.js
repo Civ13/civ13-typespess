@@ -1069,9 +1069,9 @@ class Haloperidol extends Medicine {
 		}
 		this.holder.c.CarbonMob.drowsiness += 1 * dt;
 		if (this.holder.c.CarbonMob.jitteriness >= 1.5 * dt)
-			this.holder.c.CarbonMob.jitteriness -= 1.5 * dt;
+			{this.holder.c.CarbonMob.jitteriness -= 1.5 * dt;}
 		if (this.holder.c.CarbonMob.hallucination >= 2.5 * dt)
-			this.holder.c.CarbonMob.hallucination -= 2.5 * dt;
+			{this.holder.c.CarbonMob.hallucination -= 2.5 * dt;}
 		if (Math.random() < 0.2) {
 			this.holder.c.LivingMob.adjust_damage("brain", 0.5 * dt);
 		}

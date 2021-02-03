@@ -25,7 +25,7 @@ class VisibilityGroup {
 		this.atoms.add = chain_func(this.atoms.add, (prev, item) => {
 			let ret = prev();
 			if (!item[mob_symbols._visgroups].includes(this))
-				item[mob_symbols._visgroups].push(this);
+				{item[mob_symbols._visgroups].push(this);}
 			this.override_changed(null, { atom: item });
 			return ret;
 		});
@@ -101,16 +101,16 @@ class VisibilityGroup {
 		if (key == "visible") {
 			// Special snowflakey code for when this changes visibility...
 			// which is what this class will probably be used for 99% of the time.
-			if (can_see) viewer.c.Eye[mob_symbols._add_viewing](atom);
-			else viewer.c.Eye[mob_symbols._remove_viewing](atom);
+			if (can_see) {viewer.c.Eye[mob_symbols._add_viewing](atom);}
+			else {viewer.c.Eye[mob_symbols._remove_viewing](atom);}
 			return;
 		}
 
-		if (!can_see) return;
+		if (!can_see) {return;}
 
 		if ((match = key.match(/^([^.]+)$/i))) {
 			let netid = viewer.c.Eye[mob_symbols._server_to_net][atom.object_id];
-			if (netid) viewer.c.Eye.enqueue_update_atom_var(netid, atom, match[1], 0);
+			if (netid) {viewer.c.Eye.enqueue_update_atom_var(netid, atom, match[1], 0);}
 		}
 	}
 }

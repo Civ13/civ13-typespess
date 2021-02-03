@@ -21,7 +21,7 @@ class AreaAmbience extends Component {
 				sound.play_to(atom);
 				atom.c.Mob.client.ambience_sound = sound; // so it can be turned off later if the client wants
 				setTimeout(() => {
-					if (atom.c.Mob.client) atom.c.Mob.client.played_ambience = false;
+					if (atom.c.Mob.client) {atom.c.Mob.client.played_ambience = false;}
 				}, 60000);
 			}
 		}
@@ -71,7 +71,7 @@ class AreaArrivals extends Component {
 	end_touch(item) {
 		if (has_component(item, "Chair")) {
 			let idx = this.chairs.indexOf(item);
-			if (idx != -1) this.chairs.splice(idx, 1);
+			if (idx != -1) {this.chairs.splice(idx, 1);}
 		}
 	}
 }
@@ -87,15 +87,15 @@ class AreaPower extends Component {
 
 	// returns the energy available in joules
 	get_available_power(channel = "equipment") {
-		if (this.infinite_power) return Infinity;
-		if (!this.apc) return 0;
+		if (this.infinite_power) {return Infinity;}
+		if (!this.apc) {return 0;}
 		return this.apc.c.Apc.get_available_power(channel);
 	}
 
 	// uses this amount of energy
 	use_power(amount, channel = "equipment") {
-		if (this.infinite_power) return amount;
-		if (!this.apc) return 0;
+		if (this.infinite_power) {return amount;}
+		if (!this.apc) {return 0;}
 		return this.apc.c.Apc.use_power(amount, channel);
 	}
 }

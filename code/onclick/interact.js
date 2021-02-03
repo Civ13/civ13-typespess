@@ -38,18 +38,18 @@ class MobInteract extends Component {
 			this.move_intent();
 		});
 		this.on("nointeract_counter_changed", (from, to) => {
-			if ((from && !to) || (to && !from)) this.a.c.MobHud.update_buttons();
+			if ((from && !to) || (to && !from)) {this.a.c.MobHud.update_buttons();}
 		});
 	}
 
 	click_on(e) {
-		if (e.ctrlKey || e.altKey || e.shiftKey) return;
+		if (e.ctrlKey || e.altKey || e.shiftKey) {return;}
 		let isliving = has_component(this.a, "LivingMob");
 		let hasinv = has_component(this.a, "MobInventory");
 
-		if (this.next_move > this.a.server.now()) return;
+		if (this.next_move > this.a.server.now()) {return;}
 
-		if (isliving && !this.can_interact()) return;
+		if (isliving && !this.can_interact()) {return;}
 
 		if (hasinv && this.a.c.MobInventory.handcuffed) {
 			return;
@@ -87,7 +87,7 @@ class MobInteract extends Component {
 					active_item.c.Item.melee_attack_chain(this.a, e.atom, e);
 				} else {
 					if (has_component(e.atom, "Mob"))
-						this.change_next_move(combat_defines.CLICK_CD_MELEE);
+						{this.change_next_move(combat_defines.CLICK_CD_MELEE);}
 					this.unarmed_attack(e.atom, e);
 				}
 				return;
@@ -113,12 +113,12 @@ class MobInteract extends Component {
 					this.a.z
 				),
 			};
-			if (active_item) active_item.c.Item.attack_space(target, this.a, flag, e);
+			if (active_item) {active_item.c.Item.attack_space(target, this.a, flag, e);}
 		}
 	}
 
 	can_interact() {
-		if (this.nointeract_counter) return false;
+		if (this.nointeract_counter) {return false;}
 		return true;
 	}
 
@@ -143,7 +143,7 @@ class MobInteract extends Component {
 	}
 
 	resist() {
-		if (this.next_move > this.a.server.now() || !this.can_interact()) return;
+		if (this.next_move > this.a.server.now() || !this.can_interact()) {return;}
 		this.change_next_move(mob_defines.CLICK_CD_RESIST);
 		this.resist_act();
 	}

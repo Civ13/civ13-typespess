@@ -29,11 +29,11 @@ class Door extends Component {
 		};
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 
-		if (this.glass) this.a.let_pass_flags |= pass_flags.PASSGLASS;
+		if (this.glass) {this.a.let_pass_flags |= pass_flags.PASSGLASS;}
 	}
 
 	bumped_by(atom) {
-		if (this.operating) return;
+		if (this.operating) {return;}
 		this.bump_open(atom);
 	}
 
@@ -48,7 +48,7 @@ class Door extends Component {
 	}
 
 	try_to_activate_door(atom) {
-		if (this.operating) return false;
+		if (this.operating) {return false;}
 		if (this.a.c.RequiresAccess.can_access(atom)) {
 			if (this.a.density > 0) {
 				this.open();
@@ -57,17 +57,17 @@ class Door extends Component {
 			}
 			return true;
 		}
-		if (this.a.density > 0) this.deny();
+		if (this.a.density > 0) {this.deny();}
 	}
 
 	can_access(prev) {
-		if (this.emergency) return true;
+		if (this.emergency) {return true;}
 		return prev();
 	}
 
 	async open() {
-		if (this.a.density <= 0) return true;
-		if (this.operating) return;
+		if (this.a.density <= 0) {return true;}
+		if (this.operating) {return;}
 		this.operating = true;
 		this.a.opacity = false;
 		await sleep(500);
@@ -87,8 +87,8 @@ class Door extends Component {
 	}
 
 	async close() {
-		if (this.a.density > 0) return true;
-		if (this.operating) return;
+		if (this.a.density > 0) {return true;}
+		if (this.operating) {return;}
 		if (this.safe) {
 			for (let atom of this.a.crosses()) {
 				if (atom.density > 0) {
@@ -108,7 +108,7 @@ class Door extends Component {
 		this.a.density = 1;
 		await sleep(500);
 		this.a.icon_state = this.closed_state;
-		if (!this.glass) this.a.opacity = true;
+		if (!this.glass) {this.a.opacity = true;}
 		if (this.safe) {
 			for (var atom of this.a.crosses()) {
 				if (has_component(atom, "LivingMob")) {
@@ -152,10 +152,10 @@ class Door extends Component {
 
 	set locked(val) {
 		val = !!val;
-		if (val == this[_locked]) return;
+		if (val == this[_locked]) {return;}
 		this[_locked] = val;
-		if (val) this.emit("locked");
-		else this.emit("unlocked");
+		if (val) {this.emit("locked");}
+		else {this.emit("unlocked");}
 	}
 }
 

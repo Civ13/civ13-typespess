@@ -41,7 +41,7 @@ class Ghost extends Component {
 	}
 
 	reenter_corpse() {
-		if (!this.a.c.Mob.client) return;
+		if (!this.a.c.Mob.client) {return;}
 		if (!this.mind || !this.mind.current || this.mind.current.destroyed) {
 			to_chat`<span class='warning'>You have no body.</span>`(this.a);
 			return;

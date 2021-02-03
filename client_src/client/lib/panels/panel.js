@@ -74,13 +74,13 @@ class Panel extends EventEmitter {
 
 		if (content_class) {
 			let ctor = manager.client.panel_classes[content_class];
-			if (ctor) this.content_controller = new ctor(this, this.manager);
-			else console.warn(`${content_class} is a nonexistent panel class`);
+			if (ctor) {this.content_controller = new ctor(this, this.manager);}
+			else {console.warn(`${content_class} is a nonexistent panel class`);}
 		}
 	}
 
 	_start_drag(e) {
-		if (e.defaultPrevented) return;
+		if (e.defaultPrevented) {return;}
 		if (e.target != this.header_obj) {
 			return;
 		}
@@ -130,10 +130,10 @@ class Panel extends EventEmitter {
 			cursor: "default",
 		};
 		if (e.target == this.container_obj) {
-			if (e.offsetX < pad) out.drag_left = true;
-			if (e.offsetY < pad) out.drag_up = true;
-			if (e.offsetX > width + pad) out.drag_right = true;
-			if (e.offsetY > height + pad) out.drag_down = true;
+			if (e.offsetX < pad) {out.drag_left = true;}
+			if (e.offsetY < pad) {out.drag_up = true;}
+			if (e.offsetX > width + pad) {out.drag_right = true;}
+			if (e.offsetY > height + pad) {out.drag_down = true;}
 			if ((out.drag_left && out.drag_down) || (out.drag_up && out.drag_right)) {
 				out.cursor = "nesw-resize";
 			} else if (
@@ -158,12 +158,12 @@ class Panel extends EventEmitter {
 			this.container_obj !=
 	document.getElementById("uiframes-container").lastChild
 		)
-			document
+			{document
 				.getElementById("uiframes-container")
-				.appendChild(this.container_obj);
+				.appendChild(this.container_obj);}
 
 		var resize_meta = this._resize_meta(e);
-		if (!resize_meta.can_resize) return;
+		if (!resize_meta.can_resize) {return;}
 		var pad = (this.container_obj.offsetWidth - this.panel_obj.offsetWidth) / 2;
 		e.preventDefault();
 		this.panel_obj.focus();
@@ -217,7 +217,7 @@ class Panel extends EventEmitter {
 	}
 
 	send_message(message) {
-		if (!this.id) throw new Error("Cannot send a panel message without an ID!");
+		if (!this.id) {throw new Error("Cannot send a panel message without an ID!");}
 		this.manager.send_message({
 			message: [{ id: this.id, contents: message }],
 		});
@@ -227,7 +227,7 @@ class Panel extends EventEmitter {
 		if (this.id) {
 			this.manager.send_message({ close: [this.id] });
 			if (this.manager.panels[this.id] == this)
-				this.manager.panels[this.id] = null;
+				{this.manager.panels[this.id] = null;}
 		}
 		document
 			.getElementById("uiframes-container")
@@ -258,7 +258,7 @@ class Panel extends EventEmitter {
 				target.classList.toggle("on");
 				let on = target.classList.contains("on");
 				if (target.dataset.toggle != "1" && target.dataset.toggle != "true")
-					this.send_message(build_message(target.dataset.toggle, on));
+					{this.send_message(build_message(target.dataset.toggle, on));}
 			}
 		}
 	}

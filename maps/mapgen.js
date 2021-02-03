@@ -27,14 +27,14 @@ function generateRandomInteger(min, max) {
 	return Math.floor(min + Math.random()*(max + 1 - min));
 }
 function random_floor(prob) {
-	if (Math.random() <= prob / 100) {return "dirt"}
-	else {return "grass"}
+	if (Math.random() <= prob / 100) {return "dirt";}
+	else {return "grass";}
 }
 
 function random_flora() {
-	if (Math.random() <= 0.25) {return {rname:"bush",icon: "icons/obj/flora/bushes/", icon_state:`smallbush${generateRandomInteger(1,44)}`}}
-	else if (Math.random() <= 0.7) {return {rname:"grass",icon: "icons/obj/flora/wild/", icon_state:`tall_grass_${generateRandomInteger(1,9)}`}}
-	else {return {rname:"tree",icon:"icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1,5)}`}}
+	if (Math.random() <= 0.25) {return {rname:"bush",icon: "icons/obj/flora/bushes/", icon_state:`smallbush${generateRandomInteger(1,44)}`};}
+	else if (Math.random() <= 0.7) {return {rname:"grass",icon: "icons/obj/flora/wild/", icon_state:`tall_grass_${generateRandomInteger(1,9)}`};}
+	else {return {rname:"tree",icon:"icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1,5)}`};}
 }
 
 originalLoadedConfigs = load_configs();

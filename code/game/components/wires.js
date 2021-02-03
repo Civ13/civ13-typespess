@@ -36,7 +36,7 @@ class MachineWires extends Component {
 			]);
 			group_def = [];
 			for (let [type, name] of _.shuffle(Object.entries(this.wire_defs))) {
-				if (name === undefined) continue;
+				if (name === undefined) {continue;}
 				let color = colors.pop();
 
 				let template_obj = {
@@ -47,7 +47,7 @@ class MachineWires extends Component {
 				group_def.push(template_obj);
 			}
 			if (this.wire_group)
-				this.a.server.wire_groups[this.wire_group] = group_def;
+				{this.a.server.wire_groups[this.wire_group] = group_def;}
 		} else {
 			group_def = this.a.server.wire_groups[this.wire_group];
 		}
@@ -64,23 +64,23 @@ class MachineWires extends Component {
 				},
 				set: (val) => {
 					val = !!val;
-					if (cut == val) return;
+					if (cut == val) {return;}
 					cut = val;
-					if (cut) this.emit("cut", wire_obj);
-					else this.emit("mend", wire_obj);
+					if (cut) {this.emit("cut", wire_obj);}
+					else {this.emit("mend", wire_obj);}
 				},
 			});
 			wire_obj.pulse = (user) => {
-				if (wire_obj.cut) return;
+				if (wire_obj.cut) {return;}
 				this.emit("pulse", wire_obj, user);
 			};
 			wire_obj.do_cut = (user) => {
-				if (wire_obj.cut) return;
+				if (wire_obj.cut) {return;}
 				cut = true;
 				this.emit("cut", wire_obj, user);
 			};
 			wire_obj.do_mend = (user) => {
-				if (!wire_obj.cut) return;
+				if (!wire_obj.cut) {return;}
 				cut = false;
 				this.emit("mend", wire_obj, user);
 			};
@@ -110,7 +110,7 @@ class MachineWires extends Component {
 	(tool.c.Tool.can_use("Wirecutters", this.bound_mob) ||
 		tool.c.Tool.can_use("Multitool", this.bound_mob))
 		)
-			return true;
+			{return true;}
 		return false;
 	}
 
@@ -188,17 +188,17 @@ class MachineWirePanel extends Panel {
 				this.status_text_changed
 			);
 			if (has_component(this.bound_mob, "MobInventory"))
-				this.bound_mob.c.MobInventory.removeListener(
+				{this.bound_mob.c.MobInventory.removeListener(
 					"active_hand_item_changed",
 					this.active_hand_item_changed
-				);
+				);}
 		});
 		this.on("message", (msg) => {
 			let tool = null;
 			if (has_component(this.bound_mob, "MobInventory"))
-				tool = this.bound_mob.c.MobInventory.slots[
+				{tool = this.bound_mob.c.MobInventory.slots[
 					this.bound_mob.c.MobInventory.active_hand
-				].item;
+				].item;}
 			if (
 				msg.cut &&
 		has_component(tool, "Tool") &&
@@ -207,8 +207,8 @@ class MachineWirePanel extends Panel {
 				tool.c.Tool.used("Wirecutters");
 				let wire = this.bound_atom.c.MachineWires.colors[msg.cut];
 				if (wire) {
-					if (wire.cut) wire.do_mend(this.bound_mob);
-					else wire.do_cut(this.bound_mob);
+					if (wire.cut) {wire.do_mend(this.bound_mob);}
+					else {wire.do_cut(this.bound_mob);}
 				}
 			}
 			if (
@@ -234,12 +234,12 @@ class MachineWirePanel extends Panel {
 			has_component(to, "Tool") &&
 	to.c.Tool.can_use("Wirecutters", this.bound_mob)
 		)
-			item_type = "Wirecutters";
+			{item_type = "Wirecutters";}
 		else if (
 			has_component(to, "Tool") &&
 	to.c.Tool.can_use("Multitool", this.bound_mob)
 		)
-			item_type = "Multitool";
+			{item_type = "Multitool";}
 		this.send_message({ item_type });
 	}
 	wire_cut_changed(wire) {

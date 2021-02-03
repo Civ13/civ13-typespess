@@ -49,12 +49,12 @@ class Apc extends Component {
 				return;
 			}
 			for (let brush of this.a.crosses()) {
-				if (!has_component(brush, "AreaBrush")) continue;
+				if (!has_component(brush, "AreaBrush")) {continue;}
 				let area = brush.c.AreaBrush.area;
 				if (!area) {
 					area = map[_areas][brush.c.AreaBrush.map_id];
 				}
-				if (!area) continue;
+				if (!area) {continue;}
 				if (has_component(area, "AreaPower") && !area.c.AreaPower.apc) {
 					this.area = area;
 				}
@@ -75,29 +75,29 @@ class Apc extends Component {
 	}
 
 	area_changed(from, to) {
-		if (from && from.c.AreaPower.apc == this.a) from.c.AreaPower.apc = null;
+		if (from && from.c.AreaPower.apc == this.a) {from.c.AreaPower.apc = null;}
 		if (to) {
 			if (to.c.AreaPower.apc)
-				console.warn(
+				{console.warn(
 					new Error(
 						`This apc at (${this.a.x},${this.a.y}) was assigned an area that already has one!`
 					)
-				);
+				);}
 			to.c.AreaPower.apc = this.a;
 			this.a.name = to.name + " APC";
 		}
 	}
 
 	get_available_power(channel = "equipment") {
-		if (!this.channel_on[channel]) return 0;
+		if (!this.channel_on[channel]) {return 0;}
 		let available_power = 0;
-		if (this.cell) available_power += this.cell.c.PowerCell.charge * 1000;
+		if (this.cell) {available_power += this.cell.c.PowerCell.charge * 1000;}
 		available_power += this.a.c.PowerNode.surplus;
 		return available_power;
 	}
 
 	use_power(amount, channel = "equipment") {
-		if (!this.channel_on[channel]) return 0;
+		if (!this.channel_on[channel]) {return 0;}
 
 		let powernet_surplus = this.a.c.PowerNode.surplus;
 		let to_use_powernet = Math.min(amount, powernet_surplus);
@@ -151,10 +151,10 @@ class Apc extends Component {
 		) {
 			this.a.overlays.apc_charge = { icon_state: new_icon_state };
 			if (overlay_num == 0)
-				this.a.c.LightSource.color = lighting.LIGHT_COLOR_RED;
+				{this.a.c.LightSource.color = lighting.LIGHT_COLOR_RED;}
 			else if (overlay_num == 1)
-				this.a.c.LightSource.color = lighting.LIGHT_COLOR_BLUE;
-			else this.a.c.LightSource.color = lighting.LIGHT_COLOR_GREEN;
+				{this.a.c.LightSource.color = lighting.LIGHT_COLOR_BLUE;}
+			else {this.a.c.LightSource.color = lighting.LIGHT_COLOR_GREEN;}
 		}
 	}
 }

@@ -6,7 +6,7 @@ class HandItem extends Component {
 	constructor(atom, template) {
 		super(atom, template);
 		if (this.siemens_coefficient instanceof Array)
-			this.siemens_coefficient = _.sample(this.siemens_coefficient);
+			{this.siemens_coefficient = _.sample(this.siemens_coefficient);}
 	}
 }
 

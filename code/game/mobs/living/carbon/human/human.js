@@ -8,7 +8,7 @@ const last_names = require("../../../../../../strings/names/last.json");
 class HumanMob extends Component {
 	constructor(atom, template) {
 		super(atom, template);
-		this.Civilization = ""
+		this.Civilization = "";
 		if (!this.a.name) {
 			let first_name = _.sample(first_names);
 			let last_name = _.sample(last_names);

@@ -17,13 +17,13 @@ class HealthDoll extends Component {
 	update_icon() {
 		for (let zone of ["head", "torso", "l_leg", "r_leg", "l_arm", "r_arm"]) {
 			let bp = this.mob.c.MobBodyParts.limbs[zone];
-			if (!bp) this.a.overlays[zone] = { icon: "icons/ui/screen_gen/", icon_state: `${zone}6` };
+			if (!bp) {this.a.overlays[zone] = { icon: "icons/ui/screen_gen/", icon_state: `${zone}6` };}
 			else
-				this.a.overlays[zone] = {
+				{this.a.overlays[zone] = {
 					icon_state: `${zone}${Math.ceil(
 						((bp.c.BodyPart.brute_damage + bp.c.BodyPart.burn_damage) /
 			bp.c.BodyPart.max_damage) *5)}`,
-				};
+				};}
 		}
 	}
 }

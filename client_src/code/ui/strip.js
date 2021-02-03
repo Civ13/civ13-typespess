@@ -45,7 +45,7 @@ class StripPanel {
 		}
 		if (msg.covered) {
 			for (let [slot, val] of Object.entries(msg.covered)) {
-				if (!this.panel.$(`tr[data-slot=${slot}]`)) continue;
+				if (!this.panel.$(`tr[data-slot=${slot}]`)) {continue;}
 				this.covered[slot] = val;
 				let item_name_elem = this.panel.$(`tr[data-slot=${slot}] .item-name`);
 				let strip_button_elem = this.panel.$(
@@ -62,22 +62,22 @@ class StripPanel {
 		}
 		if (msg.item_names) {
 			for (let [slot, newname] of Object.entries(msg.item_names)) {
-				if (!this.panel.$(`tr[data-slot=${slot}]`)) continue;
+				if (!this.panel.$(`tr[data-slot=${slot}]`)) {continue;}
 				if (!this.covered[slot]) {
 					this.panel.$(`tr[data-slot=${slot}] .item-name`).textContent =
 			newname || "Empty";
 					if (newname)
-						this.panel.$(`tr[data-slot=${slot}] .strip-button`).style.color =
-			"inherit";
+						{this.panel.$(`tr[data-slot=${slot}] .strip-button`).style.color =
+			"inherit";}
 					else
-						this.panel.$(`tr[data-slot=${slot}] .strip-button`).style.color =
-			"grey";
+						{this.panel.$(`tr[data-slot=${slot}] .strip-button`).style.color =
+			"grey";}
 				}
 			}
 		}
 		if (msg.item_appearances) {
 			for (let [slot, newappearance] of Object.entries(msg.item_appearances)) {
-				if (!this.panel.$(`tr[data-slot=${slot}]`)) continue;
+				if (!this.panel.$(`tr[data-slot=${slot}]`)) {continue;}
 				let canvas = this.panel.$(`tr[data-slot=${slot}] .item-appearance`);
 				let do_clear = !this.cached_appearances[slot];
 				this.cached_appearances[slot] = newappearance;
@@ -85,7 +85,7 @@ class StripPanel {
 					canvas.style.display = "inline-block";
 					let ctx = canvas.getContext("2d");
 					let a = new Atom(this.panel.manager.client, newappearance); // quick and dirty
-					if (do_clear) ctx.clearRect(0, 0, 32, 32);
+					if (do_clear) {ctx.clearRect(0, 0, 32, 32);}
 					a.on_render_tick(0);
 					a.fully_load().then(() => {
 						if (newappearance == this.cached_appearances[slot]) {

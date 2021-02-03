@@ -5,8 +5,8 @@ const EventEmitter = require("events");
 class Atom extends EventEmitter {
 	constructor(client, instobj = {}) {
 		super();
-		if (!Object.prototype.hasOwnProperty.call(instobj,"x")) instobj.x = 0;
-		if (!Object.prototype.hasOwnProperty.call(instobj,"y")) instobj.y = 0;
+		if (!Object.prototype.hasOwnProperty.call(instobj,"x")) {instobj.x = 0;}
+		if (!Object.prototype.hasOwnProperty.call(instobj,"y")) {instobj.y = 0;}
 		this.client = client;
 		this.directional = false;
 		this.main_icon_renderer = new IconRenderer(this);
@@ -15,9 +15,9 @@ class Atom extends EventEmitter {
 		this.overlay_renderers = {};
 
 		for (let key in instobj) {
-			if (!Object.prototype.hasOwnProperty.call(instobj,key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(instobj,key)) {continue;}
 			if (key == "overlays" || key == "components" || key == "component_vars")
-				continue;
+				{continue;}
 			this[key] = instobj[key];
 		}
 		this.main_icon_renderer.directional = this.directional;
@@ -29,15 +29,15 @@ class Atom extends EventEmitter {
 
 		this.eye_id = instobj.eye_id || "";
 		this.eye = client.eyes[this.eye_id];
-		if (this.eye) this.eye.atoms.add(this);
+		if (this.eye) {this.eye.atoms.add(this);}
 
 		this.mark_dirty();
 
 		if (instobj.overlays)
-			for (let key in instobj.overlays) {
-				if (!Object.prototype.hasOwnProperty.call(instobj.overlays,key)) continue;
+			{for (let key in instobj.overlays) {
+				if (!Object.prototype.hasOwnProperty.call(instobj.overlays,key)) {continue;}
 				this.set_overlay(key, instobj.overlays[key]);
-			}
+			}}
 
 		this.components = {};
 		for (var component_name of instobj.components || []) {
@@ -60,7 +60,7 @@ class Atom extends EventEmitter {
 		if (this.eye) {
 			this.eye.atoms.delete(this);
 			let plane = this.get_plane();
-			if (plane) plane.atoms.delete(this);
+			if (plane) {plane.atoms.delete(this);}
 		}
 		this.client.atoms.splice(this.client.atoms.indexOf(this), 1);
 		delete this.client.atoms_by_netid[this.network_id];
@@ -70,7 +70,7 @@ class Atom extends EventEmitter {
 	}
 
 	get_plane_id() {
-		if (this.screen_loc_x != null || this.screen_loc_y != null) return "ui";
+		if (this.screen_loc_x != null || this.screen_loc_y != null) {return "ui";}
 		return "";
 	}
 
@@ -80,7 +80,7 @@ class Atom extends EventEmitter {
 
 	mark_dirty() {
 		let plane = this.get_plane();
-		if (plane) plane.dirty_atoms.add(this);
+		if (plane) {plane.dirty_atoms.add(this);}
 	}
 
 	set_overlay(key, value) {
@@ -89,7 +89,7 @@ class Atom extends EventEmitter {
 			delete this.overlays[key];
 			overlay_renderer = this.overlay_renderers[key];
 			var idx = this.overlay_renderers_list.indexOf(overlay_renderer);
-			if (idx != -1) this.overlay_renderers_list.splice(idx, 1);
+			if (idx != -1) {this.overlay_renderers_list.splice(idx, 1);}
 			delete this.overlay_renderers[key];
 			this.mark_dirty();
 			return;
@@ -116,7 +116,7 @@ class Atom extends EventEmitter {
 			"offset_x",
 			"offset_y",
 		])
-			overlay_renderer[prop] = value[prop];
+			{overlay_renderer[prop] = value[prop];}
 		this.overlay_renderers_list.sort((a, b) => {
 			return a.overlay_layer - b.overlay_layer;
 		});
@@ -147,13 +147,13 @@ class Atom extends EventEmitter {
 	}
 
 	update_glide(timestamp) {
-		if (!this.glide) return;
+		if (!this.glide) {return;}
 		this.glide.update(timestamp);
 	}
 
 	is_mouse_over(x, y) {
 		for (var overlay of this.overlay_renderers_list) {
-			if (overlay.is_mouse_over(x, y)) return true;
+			if (overlay.is_mouse_over(x, y)) {return true;}
 		}
 		return this.main_icon_renderer.is_mouse_over(x, y);
 	}
@@ -172,7 +172,7 @@ class Atom extends EventEmitter {
 		var i;
 		for (i = 0; i < this.overlay_renderers_list.length; i++) {
 			let overlay = this.overlay_renderers_list[i];
-			if (overlay.overlay_layer >= 0) break;
+			if (overlay.overlay_layer >= 0) {break;}
 			overlay.draw(ctx, timestamp);
 		}
 		this.main_icon_renderer.draw(ctx, timestamp);
@@ -186,7 +186,7 @@ class Atom extends EventEmitter {
 		var bounds = this.main_icon_renderer.get_bounds();
 		for (var overlay of this.overlay_renderers_list) {
 			var overlay_bounds = overlay.get_bounds();
-			if (!overlay_bounds) continue;
+			if (!overlay_bounds) {continue;}
 			if (!bounds) {
 				bounds = overlay_bounds;
 				continue;
@@ -214,7 +214,7 @@ class Atom extends EventEmitter {
 	get_transformed_bounds(timestamp) {
 		let transform = this.get_transform(timestamp);
 		let bounds = this.get_bounds(timestamp);
-		if (!bounds) return bounds;
+		if (!bounds) {return bounds;}
 		let corners = [
 			[bounds.x, bounds.y],
 			[bounds.x + bounds.width, bounds.y],
@@ -305,9 +305,9 @@ class Glide {
 		1.50001
 		) {
 			var pgx = (object.glide && object.glide.x) || 0;
-			if (Math.sign(pgx) == params.oldx - object.x) pgx = 0;
+			if (Math.sign(pgx) == params.oldx - object.x) {pgx = 0;}
 			var pgy = (object.glide && object.glide.y) || 0;
-			if (Math.sign(pgy) == params.oldy - object.y) pgy = 0;
+			if (Math.sign(pgy) == params.oldy - object.y) {pgy = 0;}
 			Object.assign(this, {
 				x: params.oldx - object.x + pgx,
 				y: params.oldy - object.y + pgy,
@@ -320,7 +320,7 @@ class Glide {
 		var glidex = this.x;
 		var glidey = this.y;
 		var glide_size = +this.object.glide_size;
-		if (glide_size != glide_size) glide_size = this.object.client.glide_size;
+		if (glide_size != glide_size) {glide_size = this.object.client.glide_size;}
 		if (glide_size != glide_size || glide_size == 0) {
 			this.object.glide = null;
 			return;
@@ -339,21 +339,21 @@ class Glide {
 		}
 		this.x = glidex;
 		this.y = glidey;
-		if (glidex == 0 && glidey == 0) this.object.glide = undefined;
+		if (glidex == 0 && glidey == 0) {this.object.glide = undefined;}
 	}
 }
 
 Atom.Glide = Glide;
 
 Atom.atom_comparator = function (a, b) {
-	if (!a && !b) return 0;
-	if (!a) return 1;
-	if (!b) return -1;
+	if (!a && !b) {return 0;}
+	if (!a) {return 1;}
+	if (!b) {return -1;}
 	var comparison = a.layer - b.layer;
-	if (comparison == 0) comparison = b.y - a.y;
+	if (comparison == 0) {comparison = b.y - a.y;}
 	if (comparison == 0)
-		if (a.network_id > b.network_id) comparison = 1;
-		else if (a.network_id < b.network_id) comparison = -1;
+		{if (a.network_id > b.network_id) {comparison = 1;}
+		else if (a.network_id < b.network_id) {comparison = -1;}}
 	return comparison;
 };
 

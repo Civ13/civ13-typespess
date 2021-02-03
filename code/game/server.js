@@ -91,18 +91,18 @@ class Typespess extends EventEmitter {
 						throw new Error(`Component ${componentName} already exists!`);
 					}
 					if (mod.components[componentName].name != componentName)
-						throw new Error(
+						{throw new Error(
 							`Component name mismatch! Named ${componentName} in map and constructor is named ${mod.components[componentName].name}`
-						);
+						);}
 					this.components[componentName] = mod.components[componentName];
 				}
 			}
 		}
 		if (mod.templates) {
 			for (var templateName in mod.templates) {
-				if (!Object.prototype.hasOwnProperty.call(mod.templates,templateName)) continue;
+				if (!Object.prototype.hasOwnProperty.call(mod.templates,templateName)) {continue;}
 				if (this.templates[templateName])
-					throw new Error(`Template ${templateName} already exists!`);
+					{throw new Error(`Template ${templateName} already exists!`);}
 				var template = mod.templates[templateName];
 
 				this.templates[templateName] = template;
@@ -112,8 +112,8 @@ class Typespess extends EventEmitter {
 			mod.now(this);
 		}
 		if (mod.server_start instanceof Function) {
-			if (this.is_server_started) mod.server_start(this);
-			else this.on("server_start", mod.server_start);
+			if (this.is_server_started) {mod.server_start(this);}
+			else {this.on("server_start", mod.server_start);}
 		}
 	}
 
@@ -137,7 +137,7 @@ class Typespess extends EventEmitter {
 
 		setTimeout(this[_net_tick].bind(this), this.net_tick_delay);
 
-		if (demo_stream) this.demo_stream = demo_stream;
+		if (demo_stream) {this.demo_stream = demo_stream;}
 
 		this[_is_server_started] = true;
 		this.emit("server_start", this);
@@ -175,7 +175,7 @@ class Typespess extends EventEmitter {
 			this.clients[username].mob = null;
 			this.clients[username].socket.close();
 			delete this.clients[username];
-			if (mob) mob.c.Mob.key = username;
+			if (mob) {mob.c.Mob.key = username;}
 		}
 		var client = new Client(socket, username, this);
 		this.clients[username] = client;
@@ -185,7 +185,7 @@ class Typespess extends EventEmitter {
 
 	[_net_tick]() {
 		for (let key in this.clients) {
-			if (!Object.prototype.hasOwnProperty.call(this.clients,key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(this.clients,key)) {continue;}
 			let client = this.clients[key];
 			client.send_network_updates();
 		}
@@ -200,7 +200,7 @@ class Typespess extends EventEmitter {
   */
 	compute_inrange_tiles(atom, dist) {
 		var inrange_tiles = new Set();
-		if (atom.base_loc == null) return inrange_tiles;
+		if (atom.base_loc == null) {return inrange_tiles;}
 		for (
 			var x = Math.floor(atom.x + 0.00001 - dist);
 			x <= Math.ceil(atom.x - 0.00001 + dist);
@@ -223,7 +223,7 @@ class Typespess extends EventEmitter {
   * @returns {Set<Location>} A set of tiles a given distance away from the origin that are visible to the origin (not blocked by opaque atoms)
   */
 	compute_visible_tiles(atom, dist) {
-		if (atom.base_loc == null) return new Set();
+		if (atom.base_loc == null) {return new Set();}
 		var ring_tiles = [];
 		var base_x = Math.round(atom.x);
 		var base_y = Math.round(atom.y);
@@ -244,10 +244,10 @@ class Typespess extends EventEmitter {
 		visible_tiles.add(atom.base_loc);
 		var used_tiles = new Set();
 		for (var tile of ring_tiles) {
-			if (used_tiles.has(tile)) continue;
+			if (used_tiles.has(tile)) {continue;}
 			let dx = tile.x - base_x;
 			let dy = tile.y - base_y;
-			if (!tile.opacity) continue;
+			if (!tile.opacity) {continue;}
 			if (tile.y != base_y) {
 				let left = base_x;
 				let right = base_x;
@@ -325,9 +325,9 @@ class Typespess extends EventEmitter {
   * @param {template} template
   */
 	process_template(template) {
-		if (template[_is_template_processed]) return;
+		if (template[_is_template_processed]) {return;}
 		if (template.parent_template) {
-			if (typeof template.parent_template == "string") {
+			if (typeof template.parent_template === "string") {
 				let ptemplate = this.templates[template.parent_template];
 				this.process_template(ptemplate);
 				utils.weak_deep_assign(template, ptemplate);
@@ -347,14 +347,14 @@ class Typespess extends EventEmitter {
 				for (let componentName of template.components) {
 					let component = this.components[componentName];
 					if (component == null)
-						throw new Error(`Component ${componentName} does not exist!`);
+						{throw new Error(`Component ${componentName} does not exist!`);}
 					if (component.depends)
-						for (var depends of component.depends) {
+						{for (var depends of component.depends) {
 							if (!template.components.includes(depends)) {
 								template.components.push(depends);
 								hasAddedDependencies = true;
 							}
-						}
+						}}
 				}
 			}
 			// Sort the dependencies.
@@ -362,15 +362,15 @@ class Typespess extends EventEmitter {
 			for (let componentName of template.components) {
 				let component = this.components[componentName];
 				if (component.loadAfter)
-					for (var after of component.loadAfter) {
+					{for (var after of component.loadAfter) {
 						if (template.components.includes(after))
-							edges.push([componentName, after]);
-					}
+							{edges.push([componentName, after]);}
+					}}
 				if (component.loadBefore)
-					for (var before of component.loadBefore) {
+					{for (var before of component.loadBefore) {
 						if (template.components.includes(before))
-							edges.push([before, componentName]);
-					}
+							{edges.push([before, componentName]);}
+					}}
 			}
 			template.components = toposort.array(template.components, edges);
 
@@ -380,7 +380,7 @@ class Typespess extends EventEmitter {
 				var componentName = template.components[i];
 				var component = this.components[componentName];
 				if (component.template)
-					utils.weak_deep_assign(template, component.template);
+					{utils.weak_deep_assign(template, component.template);}
 			}
 		}
 
@@ -394,15 +394,15 @@ class Typespess extends EventEmitter {
 					let curr_obj = template.vars;
 					for (let j = 0; j < variant.var_path.length - 1; j++) {
 						let next_obj = curr_obj[variant.var_path[j]];
-						if (typeof next_obj != "object" || next_obj instanceof Array) {
+						if (typeof next_obj !== "object" || next_obj instanceof Array) {
 							next_obj = {};
 							curr_obj[variant.var_path[j]] = next_obj;
 						}
 						curr_obj = next_obj;
 					}
 					if (curr_obj)
-						curr_obj[variant.var_path[variant.var_path.length - 1]] =
-			variant.values[0];
+						{curr_obj[variant.var_path[variant.var_path.length - 1]] =
+			variant.values[0];}
 				}
 			}
 		}
@@ -417,7 +417,7 @@ class Typespess extends EventEmitter {
   */
 	get_template_variant(template, variant_leaf_path, instance_vars) {
 		if (!instance_vars && (!variant_leaf_path || variant_leaf_path.length == 0))
-			return template;
+			{return template;}
 		template = utils.weak_deep_assign({}, template);
 		instance_vars = instance_vars
 			? JSON.parse(JSON.stringify(instance_vars))
@@ -425,7 +425,7 @@ class Typespess extends EventEmitter {
 		this.process_template(template);
 		template.is_variant = true;
 		if (template.variants && template.variants.length) {
-			if (!variant_leaf_path) variant_leaf_path = [];
+			if (!variant_leaf_path) {variant_leaf_path = [];}
 			variant_leaf_path.length = template.variants.length;
 			for (var i = 0; i < template.variants.length; i++) {
 				var variant = template.variants[i];
@@ -437,15 +437,15 @@ class Typespess extends EventEmitter {
 					var curr_obj = template.vars;
 					for (var j = 0; j < variant.var_path.length - 1; j++) {
 						var next_obj = curr_obj[variant.var_path[j]];
-						if (typeof next_obj != "object" || next_obj instanceof Array) {
+						if (typeof next_obj !== "object" || next_obj instanceof Array) {
 							next_obj = {};
 							curr_obj[variant.var_path[j]] = next_obj;
 						}
 						curr_obj = next_obj;
 					}
 					if (curr_obj)
-						curr_obj[variant.var_path[variant.var_path.length - 1]] =
-			variant.values[idx];
+						{curr_obj[variant.var_path[variant.var_path.length - 1]] =
+			variant.values[idx];}
 				}
 			}
 		}
@@ -473,13 +473,13 @@ class Typespess extends EventEmitter {
 
  to_global_chat(...b) {
 	for (let key in this.clients) {
-		if (!Object.prototype.hasOwnProperty.call(this.clients,key)) continue;
+		if (!Object.prototype.hasOwnProperty.call(this.clients,key)) {continue;}
 			let client = this.clients[key];
 			var cl;
-			if (client instanceof Client) cl = client;
-			else cl = client.a.c.Mob.client;
-			if (!cl) return;
-			if (!cl.next_message.to_chat) cl.next_message.to_chat = [];
+			if (client instanceof Client) {cl = client;}
+			else {cl = client.a.c.Mob.client;}
+			if (!cl) {return;}
+			if (!cl.next_message.to_chat) {cl.next_message.to_chat = [];}
 			cl.next_message.to_chat.push(b.join(""));
 	}
 }
@@ -494,7 +494,7 @@ class Typespess extends EventEmitter {
 	instance_map_sync(obj, x = 0, y = 0, z = 0, dim) {
 		let inst_list = [];
 		for (var loc in obj.locs) {
-			if (!Object.prototype.hasOwnProperty.call(obj.locs,loc)) continue;
+			if (!Object.prototype.hasOwnProperty.call(obj.locs,loc)) {continue;}
 			for (var instobj of obj.locs[loc]) {
 				let base_template = this.templates[instobj.template_name];
 				if (!base_template) {

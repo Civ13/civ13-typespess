@@ -38,8 +38,8 @@ class Action /*lawsuit*/ extends EventEmitter {
 		});
 	}
 	add_to(mob) {
-		if (!has_component(mob, "MobHud")) return;
-		if (mob.c.MobHud.actions.has(this)) return;
+		if (!has_component(mob, "MobHud")) {return;}
+		if (mob.c.MobHud.actions.has(this)) {return;}
 		mob.c.MobHud.actions.add(this);
 		let button = new Atom(mob.server, {
 			components: ["ActionButton"],
@@ -78,8 +78,8 @@ class Action /*lawsuit*/ extends EventEmitter {
 		mob.c.MobHud.reorganize_buttons();
 	}
 	remove_from(mob) {
-		if (!has_component(mob, "MobHud")) return;
-		if (!mob.c.MobHud.actions.has(this)) return;
+		if (!has_component(mob, "MobHud")) {return;}
+		if (!mob.c.MobHud.actions.has(this)) {return;}
 		mob.c.MobHud.actions.delete(this);
 		let button = mob.c.MobHud.action_buttons.get(this);
 		button.c.ActionButton.action = this;
@@ -89,18 +89,18 @@ class Action /*lawsuit*/ extends EventEmitter {
 			mob.c.Eye.screen["button_" + button.object_id] = null;
 			button.destroy();
 			let idx = this.instanced_buttons.indexOf(button);
-			if (idx != -1) this.instanced_buttons.splice(idx, 1);
+			if (idx != -1) {this.instanced_buttons.splice(idx, 1);}
 		}
 		mob.c.MobHud.reorganize_buttons();
 	}
 	check_mob_use(mob) {
 		if (this.check_conscious) {
-			if (!has_component(mob, "LivingMob")) return false;
-			if (mob.c.LivingMob.stat != combat_defines.CONSCIOUS) return false;
+			if (!has_component(mob, "LivingMob")) {return false;}
+			if (mob.c.LivingMob.stat != combat_defines.CONSCIOUS) {return false;}
 		}
 		if (this.check_interact) {
-			if (!has_component(mob, "MobInteract")) return false;
-			if (mob.c.MobInteract.nointeract_counter) return false;
+			if (!has_component(mob, "MobInteract")) {return false;}
+			if (mob.c.MobInteract.nointeract_counter) {return false;}
 		}
 		return true;
 	}
@@ -123,13 +123,13 @@ class ItemAction extends Action {
 		);
 	}
 	check_mob_use(mob) {
-		if (!super.check_mob_use(mob)) return false;
+		if (!super.check_mob_use(mob)) {return false;}
 		if (
 			!has_component(mob, "MobInventory") ||
 	!this.target ||
 	this.target.loc != mob
 		)
-			return false;
+			{return false;}
 		return true;
 	}
 	click_act(user) {
@@ -149,7 +149,7 @@ class ActionButton extends Component {
 
 	clicked(e) {
 		if (!this.action || !this.action.check_mob_use(e.mob) || e.mob != this.mob)
-			return;
+			{return;}
 		this.action.click_act(e.mob);
 	}
 
@@ -185,7 +185,7 @@ class ItemActions extends Component {
 	}
 
 	moved(e) {
-		if (e.old && e.new && e.old.loc == e.new.loc) return; // nothing changed stop rearranging my buttons ree
+		if (e.old && e.new && e.old.loc == e.new.loc) {return;} // nothing changed stop rearranging my buttons ree
 		if (e.old && has_component(e.old.loc, "MobHud")) {
 			for (let act of this.actions) {
 				act.remove_from(e.old.loc);
@@ -199,21 +199,21 @@ class ItemActions extends Component {
 	}
 
 	add_action(act) {
-		if (this.actions.includes(act) || !act) return act;
+		if (this.actions.includes(act) || !act) {return act;}
 		if (!(act instanceof Action)) {
 			let instobj = act;
 			act = new ItemAction(instobj);
 		}
-		if (!act.target) act.target = this.a;
+		if (!act.target) {act.target = this.a;}
 		this.actions.push(act);
-		if (has_component(this.loc, "MobHud")) act.add_to(this.loc);
+		if (has_component(this.loc, "MobHud")) {act.add_to(this.loc);}
 		return act;
 	}
 	remove_action(act) {
 		let idx = this.actions.indexOf(act);
-		if (idx == -1) return;
+		if (idx == -1) {return;}
 		this.actions.splice(idx, 1);
-		if (has_component(this.loc, "MobHud")) act.remove_from(this.loc);
+		if (has_component(this.loc, "MobHud")) {act.remove_from(this.loc);}
 	}
 }
 

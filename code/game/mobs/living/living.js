@@ -78,12 +78,12 @@ class LivingMob extends Component {
 				return damage_obj.val;
 			},
 			set: (newval, { health_event = true, force = false } = {}) => {
-				if (this.status_flags & combat_defines.GODMODE && !force) return false;
+				if (this.status_flags & combat_defines.GODMODE && !force) {return false;}
 				newval = Math.max(0, newval);
-				if (newval == damage_obj.val) return;
+				if (newval == damage_obj.val) {return;}
 				damage_obj.val = newval;
 				this.emit("damage_changed", name);
-				if (health_event) this.emit("health_changed");
+				if (health_event) {this.emit("health_changed");}
 			},
 			adjust: (amount, props) => {
 				damage_obj.set(damage_obj.get() + amount, props);
@@ -94,7 +94,7 @@ class LivingMob extends Component {
 
 	get_damage(name) {
 		let damage = this.damages[name];
-		if (damage) return damage.get();
+		if (damage) {return damage.get();}
 		return 0;
 	}
 
@@ -120,7 +120,7 @@ class LivingMob extends Component {
 		let h = this.max_health;
 		for (let damage_obj of Object.values(this.damages)) {
 			if (damage_obj && damage_obj.get && damage_obj.affects_health)
-				h -= damage_obj.get();
+				{h -= damage_obj.get();}
 		}
 		return h;
 	}
@@ -132,7 +132,7 @@ class LivingMob extends Component {
 	set stat(val) {
 		let oldstat = this.stat;
 		// eslint-disable-next-line no-setter-return
-		if (val == oldstat) return false;
+		if (val == oldstat) {return false;}
 		this[_stat] = val;
 		this.emit("stat_changed", oldstat, val);
 		if (
@@ -185,15 +185,15 @@ class LivingMob extends Component {
 		blocked = this.run_armor_check(def_zone, "melee")
 	) {
 		var hit_percent = (100 - blocked) / 100;
-		if (!damage || hit_percent <= 0) return false;
+		if (!damage || hit_percent <= 0) {return false;}
 		this.adjust_damage(damagetype, damage * hit_percent);
 		return true;
 	}
 
 	apply_damages(damages, def_zone, blocked) {
-		if (blocked >= 100) return false;
+		if (blocked >= 100) {return false;}
 		for (var key in damages) {
-			if (!Object.prototype.hasOwnProperty.call(damages,key)) continue;
+			if (!Object.prototype.hasOwnProperty.call(damages,key)) {continue;}
 			this.apply_damage(damages[key], key, def_zone, blocked);
 		}
 		return true;
@@ -204,7 +204,7 @@ class LivingMob extends Component {
 		this.life_cycle_num++;
 		this.life(this.life_cycle_num);
 		if (this.stat != combat_defines.DEAD && !this.life_timeout)
-			this.life_timeout = setTimeout(this.run_life.bind(this), 2000);
+			{this.life_timeout = setTimeout(this.run_life.bind(this), 2000);}
 	}
 
 	life() {return;}
@@ -235,14 +235,14 @@ class LivingMob extends Component {
 	}
 
 	move(prev, dx, dy, reason) {
-		if (reason != "walking") return prev();
+		if (reason != "walking") {return prev();}
 
 		if (this.stat == combat_defines.DEAD) {
 			this.ghostize(true);
 			return;
 		}
 
-		if (this.incapacitated()) return;
+		if (this.incapacitated()) {return;}
 
 		this.a.walk_delay = this.movement_delay();
 
@@ -261,14 +261,14 @@ class LivingMob extends Component {
 			msg.message = msg.message.substring(1);
 		}
 
-		if (this.stat >= combat_defines.UNCONSCIOUS) return null;
+		if (this.stat >= combat_defines.UNCONSCIOUS) {return null;}
 
-		if (!msg.message || !msg.message.length) return null;
+		if (!msg.message || !msg.message.length) {return null;}
 		return msg;
 	}
 
 	incapacitated() {
-		if (this.nomove_counter) return true;
+		if (this.nomove_counter) {return true;}
 		return false;
 	}
 
@@ -295,7 +295,7 @@ class LivingMob extends Component {
 	reason != "throw" &&
 	reason != "projectile"
 		)
-			return true;
+			{return true;}
 		return prev();
 	}
 
@@ -321,19 +321,19 @@ class LivingMob extends Component {
 		let zone = random_zone("torso", 65);
 		let volume = 0;
 		if (item.c.Tangible.throw_force && item.c.Item.size)
-			volume = Math.min(
+			{volume = Math.min(
 				Math.max((item.c.Tangible.throw_force + item.c.Item.size) * 0.05, 0.3),
 				1
-			);
+			);}
 		else if (item.c.Item.size)
-			volume = Math.min(Math.max(item.c.Item.size * 0.08, 0.2), 1);
-		else return;
+			{volume = Math.min(Math.max(item.c.Item.size * 0.08, 0.2), 1);}
+		else {return;}
 		if (item.c.Tangible.throw_force > 0) {
 			let sound =
 		item.c.Tangible.throwhitsound ||
 		item.c.Item.hitsound ||
 		"sound/weapons/genhit.ogg";
-			if (!item.c.Tangible.throw_force) sound = "sound/weapons/throwtap.ogg";
+			if (!item.c.Tangible.throw_force) {sound = "sound/weapons/throwtap.ogg";}
 			new Sound(this.a.server, { path: sound, volume, vary: true }).emit_from(
 				this.a
 			);
@@ -377,10 +377,10 @@ class LivingMob extends Component {
 			return;
 		}
 		var message_hit_area = "";
-		if (hit_area) message_hit_area = format_html` in the ${hit_area}`;
+		if (hit_area) {message_hit_area = format_html` in the ${hit_area}`;}
 		var attack_message = `${format_html`The ${this.a}`} has been ${message_verb}${message_hit_area} with ${format_html`the ${item}`}.`;
 		if (this.a.c.Hearer.in_view(user))
-			attack_message = `${format_html`The ${user}`} has ${message_verb} ${format_html`the ${this.a}`}${message_hit_area} with ${format_html`the ${item}`}!`;
+			{attack_message = `${format_html`The ${user}`} has ${message_verb} ${format_html`the ${this.a}`}${message_hit_area} with ${format_html`the ${item}`}!`;}
 		visible_message(
 			`<span class='danger'>${attack_message}</span class='danger'>`
 		)
@@ -391,7 +391,7 @@ class LivingMob extends Component {
 	}
 
 	apply_effect(name, props = {}) {
-		if (props && typeof props != "object") {
+		if (props && typeof props !== "object") {
 			// I fucked this up once, so I'm not letting it get fucked up again.
 			throw new Error(
 				`Expected an object for second argument, instead got a ${typeof props}. You meant to wrap it in a {delay: *number*}, right?`
@@ -406,7 +406,7 @@ class LivingMob extends Component {
 			new status_effects[name]().apply_to(this.a, {});
 			effect = this.effects[name];
 		}
-		if (!effect) return;
+		if (!effect) {return;}
 		effect.adjust(amount);
 	}
 
@@ -424,15 +424,15 @@ class LivingMob extends Component {
 		let id_name = this.get_id_name("");
 		if (face_name) {
 			if (id_name && id_name != face_name)
-				return `${face_name} (as ${id_name})`;
+				{return `${face_name} (as ${id_name})`;}
 			return face_name;
 		}
-		if (id_name) return id_name;
+		if (id_name) {return id_name;}
 		return "Unknown";
 	}
 
 	get_face_name(if_no_face = "Unknown") {
-		if (!this.identifiable()) return if_no_face;
+		if (!this.identifiable()) {return if_no_face;}
 		return this.real_name;
 	}
 	get_id_name(if_no_id = "Unknown") {
@@ -440,13 +440,13 @@ class LivingMob extends Component {
 	}
 
 	bumped(atom, offsetx, offsety) {
-		if (this.buckled || this.now_pushing) return;
+		if (this.buckled || this.now_pushing) {return;}
 		if (has_component(atom, "Tangible")) {
 			if (
 				has_component(atom, "LivingMob") &&
 		this.mob_collide(atom)
 			)
-				return;
+				{return;}
 			if (!atom.c.Tangible.anchored) {
 				this.a.glide_size = atom.glide_size;
 				this.now_pushing = true;
@@ -457,7 +457,7 @@ class LivingMob extends Component {
 		}
 	}
 	mob_collide(atom) {
-		if (this.now_pushing) return true;
+		if (this.now_pushing) {return true;}
 		if (!atom.c.LivingMob.buckled) {
 			let mob_swap = false;
 			let this_intent = has_component(this.a, "MobInteract")
@@ -471,10 +471,10 @@ class LivingMob extends Component {
 		this.a.c.Puller.pulling == atom &&
 		this_intent == "grab"
 			)
-				mob_swap = true;
-			else if (this_intent == "help" || other_intent == "help") mob_swap = true;
+				{mob_swap = true;}
+			else if (this_intent == "help" || other_intent == "help") {mob_swap = true;}
 			if (mob_swap) {
-				if (!this.a.c.Tangible.adjacent(atom)) return;
+				if (!this.a.c.Tangible.adjacent(atom)) {return;}
 				this.now_pushing = true;
 				let oldloc = this.a.fine_loc;
 				let oldloc_other = atom.fine_loc;
@@ -503,7 +503,7 @@ class LivingMob extends Component {
 				atom.pass_flags &= ~pass_flags.PASSMOB;
 				this.a.pass_flags &= ~pass_flags.PASSMOB;
 
-				if (!move_failed) return true;
+				if (!move_failed) {return true;}
 			}
 		}
 	}

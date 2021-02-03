@@ -17,7 +17,7 @@ class AmmoCasing extends Component {
 	}
 
 	update_icon() {
-		if (this.caseless) return;
+		if (this.caseless) {return;}
 		this.a.icon_state = `${this.a.template.vars.icon_state}${
 			this.spent ? "-0" : ""
 		}`;
@@ -34,7 +34,7 @@ class AmmoCasing extends Component {
 		zone_override,
 		spread,
 	} = {}) {
-		if (!user.loc || !user.loc.is_base_loc || this.spent) return;
+		if (!user.loc || !user.loc.is_base_loc || this.spent) {return;}
 		let proj = this.create_projectile({
 			target,
 			user,

@@ -40,7 +40,7 @@ class Wall extends Component {
 	}
 
 	attack_by(prev, item, user) {
-		if (this.try_decon(item, user)) return true;
+		if (this.try_decon(item, user)) {return true;}
 		return prev();
 	}
 
@@ -55,7 +55,7 @@ class Wall extends Component {
 					delay: this.slicing_duration * item.c.Tool.toolspeed,
 					target: this.a,
 				}).then((success) => {
-					if (!success) return;
+					if (!success) {return;}
 					new Sound(this.a.server, {
 						path: "sound/items/welder.ogg",
 						volume: 1,
@@ -72,7 +72,7 @@ class Wall extends Component {
 	}
 
 	deconstruct(prev) {
-		if (!this.a.loc) return;
+		if (!this.a.loc) {return;}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			let sheets = new Atom(this.a.server, this.sheet_type);
 			sheets.c.Stack.amount = this.sheet_amount;

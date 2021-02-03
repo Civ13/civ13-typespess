@@ -31,7 +31,7 @@ class ChatMessage {
   * @returns {Typespess.ChatMessage} (this object)
   */
 	self(a, ...b) {
-		if (typeof a == "string") {
+		if (typeof a === "string") {
 			this.self_message = a;
 			return this;
 		}
@@ -45,7 +45,7 @@ class ChatMessage {
   * @returns {Typespess.ChatMessage} (this object)
   */
 	deaf(a, ...b) {
-		if (typeof a == "string") {
+		if (typeof a === "string") {
 			this.deaf_message = a;
 			return this;
 		}
@@ -59,7 +59,7 @@ class ChatMessage {
   * @returns {Typespess.ChatMessage} (this object)
   */
 	blind(a, ...b) {
-		if (typeof a == "string") {
+		if (typeof a === "string") {
 			this.blind_message = a;
 			return this;
 		}
@@ -82,18 +82,18 @@ class ChatMessage {
   * @returns {Typespess.ChatMessage} (this object)
   */
 	emit_from(atom) {
-		if (!atom) return;
+		if (!atom) {return;}
 		this.emitter = atom;
 		var hearers = new Set();
 		for (var loc of atom.base_mover.partial_locs()) {
-			for (let hearer of loc.hearers) hearers.add(hearer);
+			for (let hearer of loc.hearers) {hearers.add(hearer);}
 		}
 		for (let hearer of hearers) {
 			if (
 				Math.max(Math.abs(hearer.x - atom.x), Math.abs(hearer.y - atom.y)) <=
 		this.msg_range
 			)
-				hearer.c.Hearer.show_message(this);
+				{hearer.c.Hearer.show_message(this);}
 		}
 		return this;
 	}
@@ -105,7 +105,7 @@ class ChatMessage {
   * @returns {Typespess.ChatMessage} (this object)
   */
 	show_directly_to(target, source) {
-		if (!target || !source || !has_component(target, "Hearer")) return;
+		if (!target || !source || !has_component(target, "Hearer")) {return;}
 		this.emitter = source;
 		target.c.Hearer.show_message(this);
 		return this;

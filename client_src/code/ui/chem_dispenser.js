@@ -61,8 +61,8 @@ class ChemDispenserPanel {
 				this.dispense_amount = message.dispense_amount;
 				for (let child of this.dispense_amounts.childNodes) {
 					if (child.dataset.radioValue == this.dispense_amount)
-						child.classList.add("selected");
-					else child.classList.remove("selected");
+						{child.classList.add("selected");}
+					else {child.classList.remove("selected");}
 				}
 			}
 		}

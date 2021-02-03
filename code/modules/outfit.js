@@ -25,18 +25,18 @@ class Outfit {
 
 		if (has_component(target, "MobInventory")) {
 			if (clone.slots.iclothing && target.c.MobInventory.slots.iclothing)
-				target.c.MobInventory.slots.iclothing.equip_or_del(
+				{target.c.MobInventory.slots.iclothing.equip_or_del(
 					new Atom(target.server, clone.slots.iclothing)
-				);
+				);}
 			if (clone.slots.oclothing && target.c.MobInventory.slots.oclothing)
-				target.c.MobInventory.slots.oclothing.equip_or_del(
+				{target.c.MobInventory.slots.oclothing.equip_or_del(
 					new Atom(target.server, clone.slots.oclothing)
-				);
+				);}
 
 			for (let [id, slot] of Object.entries(target.c.MobInventory.slots)) {
-				if (id == "iclothing" || id == "oclothing") continue;
+				if (id == "iclothing" || id == "oclothing") {continue;}
 				if (clone.slots[id])
-					slot.equip_or_del(new Atom(target.server, clone.slots[id]));
+					{slot.equip_or_del(new Atom(target.server, clone.slots[id]));}
 			}
 
 			if (!visuals_only) {

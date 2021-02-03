@@ -76,7 +76,7 @@ class AmmoBox extends Component {
 				if (!casing.projectile) {
 					//Spent ammo.
 					let idx = this.stored_ammo.indexOf(casing);
-					if (idx != -1) this.stored_ammo.splice(idx, 1);
+					if (idx != -1) {this.stored_ammo.splice(idx, 1);}
 					casing.loc = this.a.loc;
 
 					this.stored_ammo.push(ammo_casing);
@@ -100,7 +100,7 @@ class AmmoBox extends Component {
 		for (let ammo of this.stored_ammo) {
 			ammo.loc = this.a.loc;
 			let idx = this.stored_ammo.indexOf(ammo);
-			if (idx != -1) this.stored_ammo.splice(idx, 1);
+			if (idx != -1) {this.stored_ammo.splice(idx, 1);}
 		}
 	}
 
@@ -120,7 +120,7 @@ class AmmoBox extends Component {
 				let did_load = this.give_round(casing, replace_spent);
 				if (did_load) {
 					let idx = item.c.AmmoBox.stored_ammo.indexOf(casing);
-					if (idx != -1) item.c.AmmoBox.stored_ammo.splice(idx, 1);
+					if (idx != -1) {item.c.AmmoBox.stored_ammo.splice(idx, 1);}
 					num_loaded++;
 				}
 				if (!did_load || !this.multiload) {

@@ -37,7 +37,7 @@ class Hearer extends Component {
 	}
 
 	enqueue_update_visible_tiles() {
-		if (this.is_updating_visible_tiles) return;
+		if (this.is_updating_visible_tiles) {return;}
 		process.nextTick(this.update_visible_tiles.bind(this));
 		this.is_updating_visible_tiles = true;
 	}
@@ -80,7 +80,7 @@ class Hearer extends Component {
   */
 	in_view(atom) {
 		for (var tile of atom.partial_locs())
-			if (tile.hearers.includes(this)) return true;
+			{if (tile.hearers.includes(this)) {return true;}}
 		return false;
 	}
 
@@ -91,11 +91,11 @@ class Hearer extends Component {
 	show_message(message) {
 		var can_hear = this.a.c.Hearer.can_hear(message.emitter);
 		var can_see = this.a.c.Hearer.can_see(message.emitter);
-		if (!can_see && !can_hear) return;
-		if (message.type == "see" && !can_see) return message.blind_message;
-		if (message.type == "hear" && !can_hear) return message.deaf_message;
+		if (!can_see && !can_hear) {return;}
+		if (message.type == "see" && !can_see) {return message.blind_message;}
+		if (message.type == "hear" && !can_hear) {return message.deaf_message;}
 		if (message.self_message && message.emitter == this.a)
-			return message.self_message;
+			{return message.self_message;}
 		return message.message;
 	}
 }

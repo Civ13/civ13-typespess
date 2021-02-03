@@ -58,16 +58,16 @@ class PreferencesPanel extends Panel {
 				if (
 					hair_obj && Object.prototype.hasOwnProperty.call(sprite_accessories.hair,msg.char_prefs.hair_style) && (!hair_obj.gender || hair_obj.gender.includes(this.char_prefs.gender))
 				)
-					this.char_prefs.hair_style = msg.char_prefs.hair_style;
+					{this.char_prefs.hair_style = msg.char_prefs.hair_style;}
 			}
 
 			if (msg.char_prefs.skin_tone != null) {
 				if (Object.prototype.hasOwnProperty.call(skin_tones,msg.char_prefs.skin_tone))
-					this.char_prefs.skin_tone = msg.char_prefs.skin_tone;
+					{this.char_prefs.skin_tone = msg.char_prefs.skin_tone;}
 			}
 			if (msg.char_prefs.hair_color != null) {
 				if (Object.prototype.hasOwnProperty.call(hair_colors,msg.char_prefs.hair_color))
-					this.char_prefs.hair_color = msg.char_prefs.hair_color;
+					{this.char_prefs.hair_color = msg.char_prefs.hair_color;}
 			}
 		}
 		if (msg.randomize_name && this.char_prefs) {
@@ -77,10 +77,10 @@ class PreferencesPanel extends Panel {
 		if (msg.job_preferences) {
 			for (let [key, setting] of Object.entries(msg.job_preferences)) {
 				setting = Math.max(Math.min(Math.round(+setting || 0), 3), 0); // sanitize the value
-				if (key == "nomad") setting = +!!setting; // turn it into 0/1 deal
-				if (!this.client.server.job_controller.jobs[key]) continue; // oi that job doesnt exist ree
-				if (setting == 0) delete this.char_prefs.job_preferences[key];
-				else this.char_prefs.job_preferences[key] = setting;
+				if (key == "nomad") {setting = +!!setting;} // turn it into 0/1 deal
+				if (!this.client.server.job_controller.jobs[key]) {continue;} // oi that job doesnt exist ree
+				if (setting == 0) {delete this.char_prefs.job_preferences[key];}
+				else {this.char_prefs.job_preferences[key] = setting;}
 				if (setting == 3) {
 					for (let [otherjob, othersetting] of Object.entries(
 						this.char_prefs.job_preferences
@@ -107,7 +107,7 @@ class PreferencesPanel extends Panel {
 			"hair_style",
 			"hair_color",
 		]) {
-			if (parts && !parts.includes(key)) continue;
+			if (parts && !parts.includes(key)) {continue;}
 			char_prefs_msg[key] = this.char_prefs[key];
 		}
 		this.send_message({ char_prefs: char_prefs_msg });
@@ -146,7 +146,7 @@ class PreferencesPanel extends Panel {
 	}
 
 	static open_for(client, options = {}) {
-		if (client.preferences_panel) return client.preferences_panel;
+		if (client.preferences_panel) {return client.preferences_panel;}
 		let panel = new PreferencesPanel(client, options);
 		panel.open();
 		return panel;

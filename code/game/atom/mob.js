@@ -70,11 +70,11 @@ class Eye extends Component {
 			{
 				set: (target, key, value) => {
 					if (value != undefined && !is_atom(value))
-						throw new TypeError(`${value} is not an atom`);
-					if (target[key] == value) return true;
+						{throw new TypeError(`${value} is not an atom`);}
+					if (target[key] == value) {return true;}
 					if (target[key]) {
 						this[_screen_set].delete(target[key]);
-						if (!this.can_see(target[key])) this[_remove_viewing](target[key]);
+						if (!this.can_see(target[key])) {this[_remove_viewing](target[key]);}
 					}
 					target[key] = value;
 					if (target[key]) {
@@ -92,10 +92,10 @@ class Eye extends Component {
 		);
 
 		if (this.a.c.Hearer)
-			this.a.c.Hearer.show_message = chain_func(
+			{this.a.c.Hearer.show_message = chain_func(
 				this.a.c.Hearer.show_message,
 				this.show_message.bind(this)
-			);
+			);}
 
 		/** @type {boolean} */ this.xray;
 	}
@@ -107,12 +107,12 @@ class Eye extends Component {
 			});
 			return;
 		}
-		if (!is_atom(item)) throw new TypeError(`${item} is not an atom!`);
-		if (this[_viewing][this[_server_to_net][item.object_id]]) return; // We already have this item.
+		if (!is_atom(item)) {throw new TypeError(`${item} is not an atom!`);}
+		if (this[_viewing][this[_server_to_net][item.object_id]]) {return;} // We already have this item.
 		var netid = "NET_" + id_counter++;
 		if (this[_server_to_net][item.object_id])
-			netid = this[_server_to_net][item.object_id];
-		else this[_server_to_net][item.object_id] = netid;
+			{netid = this[_server_to_net][item.object_id];}
+		else {this[_server_to_net][item.object_id] = netid;}
 		this[_viewing][netid] = item;
 		item[_viewers].push(this.atom);
 
@@ -126,35 +126,35 @@ class Eye extends Component {
 			});
 			return;
 		}
-		if (!is_atom(item)) throw new TypeError(`${item} is not an atom!`);
+		if (!is_atom(item)) {throw new TypeError(`${item} is not an atom!`);}
 		var netid = this[_server_to_net][item.object_id];
-		if (!netid) return; // This item is not being tracked, and even if it is there's no way to find out the network id.
+		if (!netid) {return;} // This item is not being tracked, and even if it is there's no way to find out the network id.
 		delete this[_viewing][netid];
 		delete this[_server_to_net][item.object_id];
 		var idx;
 		if ((idx = item[_viewers].indexOf(this.atom)) != -1)
-			item[_viewers].splice(idx, 1);
+			{item[_viewers].splice(idx, 1);}
 
 		this.enqueue_delete_atom(netid);
 	}
 	enqueue_create_atom(netid, atom) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_create_atom(netid, atom, this.a);
 		}
 	}
 	enqueue_update_atom_var(netid, atom, varname, is_appearance) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_update_atom_var(netid, atom, varname, is_appearance);
 		}
 	}
 	enqueue_delete_atom(netid) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_delete_atom(netid);
 		}
 	}
@@ -162,7 +162,7 @@ class Eye extends Component {
 	enqueue_add_tile(tile) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_add_tile(tile);
 		}
 	}
@@ -170,22 +170,22 @@ class Eye extends Component {
 	enqueue_remove_tile(tile) {
 		for (var observer of this[_observers]) {
 			var client = observer.c.Mob.client;
-			if (!client) continue;
+			if (!client) {continue;}
 			client.enqueue_remove_tile(tile);
 		}
 	}
 
 	compute_visible_tiles() {
 		if (this.xray === true)
-			return this.a.server.compute_inrange_tiles(this.a, this.view_range);
-		else return this.a.server.compute_visible_tiles(this.a, this.view_range);
+			{return this.a.server.compute_inrange_tiles(this.a, this.view_range);}
+		else {return this.a.server.compute_visible_tiles(this.a, this.view_range);}
 	}
 
 	recalculate_visible_tiles() {
 		process.nextTick(() => {
 			for (let observer of this[_observers]) {
 				let client = observer.c.Mob.client;
-				if (!client) continue;
+				if (!client) {continue;}
 				client.next_message.eye = client.next_message.eye || {};
 				client.next_message.eye[observer.c.Mob[_eye_to_eyeid].get(this.a)] = {
 					x: this.a.base_mover.x,
@@ -241,7 +241,7 @@ class Eye extends Component {
   * @returns {boolean}
   */
 	can_see(item) {
-		if (this[_screen_set].has(item)) return true;
+		if (this[_screen_set].has(item)) {return true;}
 		let visible_value = item.visible;
 		for (let visgroup of item[_visgroups]) {
 			if (this[_visgroups].has(visgroup) && visgroup.overrides.has("visible")) {
@@ -250,9 +250,9 @@ class Eye extends Component {
 		}
 		var visible = visible_value && this[_common_tiles_count].get(item) > 0;
 		if (visible)
-			return (
+			{return (
 				!item.can_be_seen || item.can_be_seen(this.atom, this[_visible_tiles])
-			);
+			);}
 		return false;
 	}
 	/**
@@ -352,15 +352,15 @@ class Mob extends Component {
 				{
 					set: (target, property, value) => {
 						property = "" + property;
-						if (value instanceof Eye) value = value.atom;
+						if (value instanceof Eye) {value = value.atom;}
 						if (value != undefined && !has_component(value, "Eye"))
-							throw new TypeError("Expected object with Eye component");
+							{throw new TypeError("Expected object with Eye component");}
 						if (value && value.c.Eye[_observers].indexOf(this) != -1)
-							return false;
+							{return false;}
 						var oldEye = target[property];
 						if (oldEye && this.client) {
 							for (let netid in oldEye.c.Eye[_viewing]) {
-								if (!Object.prototype.hasOwnProperty.call(oldEye.c.Eye[_viewing],netid)) continue;
+								if (!Object.prototype.hasOwnProperty.call(oldEye.c.Eye[_viewing],netid)) {continue;}
 								this.client.enqueue_delete_atom(netid);
 							}
 							for (let tile of oldEye.c.Eye[_visible_tiles]) {
@@ -380,7 +380,7 @@ class Mob extends Component {
 						}
 						if (value && this.client) {
 							for (let netid in value.c.Eye[_viewing]) {
-								if (!Object.prototype.hasOwnProperty.call(value.c.Eye[_viewing],netid)) continue;
+								if (!Object.prototype.hasOwnProperty.call(value.c.Eye[_viewing],netid)) {continue;}
 								var atom = value.c.Eye[_viewing][netid];
 								this.client.enqueue_create_atom(netid, atom, value);
 							}
@@ -420,10 +420,10 @@ class Mob extends Component {
 	set key(val) {
 		this.a.server.dc_mobs[this[_key]] = undefined;
 		if (val && val != "") {
-			if (this.a.server.clients[val]) this.client = this.a.server.clients[val];
+			if (this.a.server.clients[val]) {this.client = this.a.server.clients[val];}
 			else {
 				if (this.a.server.dc_mobs[val])
-					this.a.server.dc_mobs[val].c.Mob.key = undefined;
+					{this.a.server.dc_mobs[val].c.Mob.key = undefined;}
 				this.a.server.dc_mobs[val] = this.atom;
 			}
 		}
@@ -469,12 +469,12 @@ class Mob extends Component {
 	}
 
 	basic_panel_read_checks(atom, panel) {
-		if (typeof panel == "object") {
+		if (typeof panel === "object") {
 			if (
 				panel.client != this.client ||
 		(panel.bound_mob && panel.bound_mob != this.a)
 			)
-				return false;
+				{return false;}
 		}
 		return true;
 	}
@@ -491,9 +491,9 @@ class Mob extends Component {
 			atom.can_user_read_panel &&
 	!atom.can_user_read_panel(this.a, panel, key)
 		)
-			return false;
+			{return false;}
 		for (var eye of Object.values(this.eyes))
-			if (eye.c.Eye.can_see(atom)) return true;
+			{if (eye.c.Eye.can_see(atom)) {return true;}}
 		return false;
 	}
 
@@ -508,13 +508,13 @@ class Mob extends Component {
 			!this.basic_panel_read_checks(atom, panel, key) ||
 	!this.can_read_panel(atom, panel, key)
 		)
-			throw new Error(
+			{throw new Error(
 				"Check that your panel can be opened *before* creating and trying to bind it you tit"
-			);
+			);}
 		if (this.get_panel(atom, panel, key))
-			throw new Error(
+			{throw new Error(
 				"A panel of this type has already been opened before for this atom and key"
-			);
+			);}
 
 		panel.bound_atom = atom;
 		var check = () => {
@@ -571,7 +571,7 @@ class Mob extends Component {
 	get_panel(atom, panel, key = "") {
 		return this[_panel_map].get(
 			`${atom.object_id},${
-				typeof panel == "function" ? panel.name : panel.constructor.name
+				typeof panel === "function" ? panel.name : panel.constructor.name
 			},${key}`
 		);
 	}

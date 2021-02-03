@@ -34,14 +34,14 @@ class LatejoinPanel extends Panel {
 				this.client.server.ticker.game_state != "playing" ||
 		this.client.server.ticker.busy
 			)
-				return;
+				{return;}
 			let job = this.client.server.job_controller.jobs[msg.join];
-			if (!job) return;
+			if (!job) {return;}
 			if (
 				job.current_positions >= job.total_positions &&
 		job.total_positions != -1
 			)
-				return;
+				{return;}
 			job.current_positions++;
 			let mob = job.instance(
 				this.client.server,

@@ -20,14 +20,14 @@ class Closet extends Component {
 	}
 
 	open(prev) {
-		if (!prev()) return false;
+		if (!prev()) {return false;}
 		this.a.layer = layers.BELOW_OBJ_LAYER;
 		this.a.overlays.door = { icon_state: "[parent]_open" };
 		return true;
 	}
 
 	close(prev) {
-		if (!prev()) return false;
+		if (!prev()) {return false;}
 		this.a.layer = layers.OBJ_LAYER;
 		this.a.overlays.door = {
 			icon_state: `${this.icon_door || "[parent]"}_door`,

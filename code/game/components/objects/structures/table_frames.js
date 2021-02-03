@@ -37,7 +37,7 @@ class TableFrame extends Component {
 					delay: 3000 * item.c.Tool.toolspeed,
 					target: this.a,
 				}).then((success) => {
-					if (!success) return;
+					if (!success) {return;}
 					this.a.c.Destructible.deconstruct(true);
 				});
 				return true;
@@ -52,7 +52,7 @@ class TableFrame extends Component {
 				);
 				user.c.MobInventory.do_after({ delay: 2000, target: this.a }).then(
 					(success) => {
-						if (!success) return;
+						if (!success) {return;}
 						let table = new Atom(this.a.server, "table");
 						table.loc = this.a.loc;
 						item.c.Stack.use(1);
@@ -74,7 +74,7 @@ class TableFrame extends Component {
 				);
 				user.c.MobInventory.do_after({ delay: 5000, target: this.a }).then(
 					(success) => {
-						if (!success) return;
+						if (!success) {return;}
 						let table = new Atom(this.a.server, "reinforced_table");
 						table.loc = this.a.loc;
 						item.c.Stack.use(1);
@@ -96,7 +96,7 @@ class TableFrame extends Component {
 				);
 				user.c.MobInventory.do_after({ delay: 2000, target: this.a }).then(
 					(success) => {
-						if (!success) return;
+						if (!success) {return;}
 						let table = new Atom(this.a.server, "wood_table");
 						table.loc = this.a.loc;
 						item.c.Stack.use(1);
@@ -113,7 +113,7 @@ class TableFrame extends Component {
 	}
 
 	deconstruct(prev) {
-		if (!this.a.loc) return;
+		if (!this.a.loc) {return;}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			let mat = new Atom(this.a.server, this.frame_material);
 			mat.c.Stack.amount = this.frame_material_amount;

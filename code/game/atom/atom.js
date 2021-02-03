@@ -55,13 +55,13 @@ class Atom extends EventEmitter {
   */
 	constructor(server, template, x, y, z, dim) {
 		var otemp = template;
-		if (typeof template == "string") template = server.templates[template];
+		if (typeof template === "string") {template = server.templates[template];}
 		if (template && template.pick_from) {
 			template =
 		template.pick_from[
 			Math.floor(Math.random() * template.pick_from.length)
 		];
-			if (typeof template == "string") template = server.templates[template];
+			if (typeof template === "string") {template = server.templates[template];}
 		}
 		if (
 			template && template.use_random_variant && !template.is_variant && template.variants && template.variants.length
@@ -78,13 +78,13 @@ class Atom extends EventEmitter {
 		}
 
 		if (!server)
-			throw new Error(
+			{throw new Error(
 				`Invalid arguments while instantiating: server: ${server}`
-			);
+			);}
 		if (!template)
-			throw new Error(
+			{throw new Error(
 				`Invalid arguments while instantiating template: ${otemp}, ${template}`
-			);
+			);}
 		super();
 
 		/**
@@ -204,13 +204,13 @@ class Atom extends EventEmitter {
 				if (
 					!Object.prototype.hasOwnProperty.call(template.vars,key) || key == "appearance" || key == "components" || key == "overlays"
 				)
-					continue;
+					{continue;}
 				this[key] = template.vars[key];
 			}
 		}
 
 		if (template.vars && template.vars.appearance)
-			Object.assign(this, template.vars.appearance);
+			{Object.assign(this, template.vars.appearance);}
 
 		/**
 	* The overlays of this object. They are named, unlike BYOND where it's just a list.
@@ -232,13 +232,13 @@ class Atom extends EventEmitter {
 						this[mob_symbols._update_var](key, 2);
 						return true;
 					}
-					if (typeof value == "string")
-						value = { icon_state: value, overlay_layer: 1 };
-					if (value instanceof Atom) value = value.appearance;
-					if (typeof value != "object")
-						throw new TypeError(
+					if (typeof value === "string")
+						{value = { icon_state: value, overlay_layer: 1 };}
+					if (value instanceof Atom) {value = value.appearance;}
+					if (typeof value !== "object")
+						{throw new TypeError(
 							`Object or string expected for overlay. Got ${value} instead.`
-						);
+						);}
 					value = new Proxy(Object.assign({}, value), {
 						set: (target2, key2, value2) => {
 							target2[key2] = value2;
@@ -263,14 +263,14 @@ class Atom extends EventEmitter {
 			for (let i = 0; i < template.components.length; i++) {
 				let componentName = template.components[i];
 				if (this.components[componentName])
-					throw new Error(
+					{throw new Error(
 						`Template '${template.id}' defines component '${componentName}' multiple times`
-					);
+					);}
 				let componentConstructor = this.server.components[componentName];
 				if (!componentConstructor)
-					throw new Error(
+					{throw new Error(
 						`Template '${template.id}' references non-existent component '${componentName}'`
-					);
+					);}
 				let templateVars = template.vars && template.vars.components && template.vars.components[componentName] ? template.vars.components[componentName]: {};
 				this.components[componentName] = new this.server.components[
 					componentName
@@ -287,9 +287,9 @@ class Atom extends EventEmitter {
 			x = +x;
 			y = +y;
 			z = +z;
-			if (x !== x) x = 0;
-			if (y !== y) y = 0;
-			if (z !== z) z = 0;
+			if (x !== x) {x = 0;}
+			if (y !== y) {y = 0;}
+			if (z !== z) {z = 0;}
 			z = Math.floor(z);
 
 			this[_changeloc](x, y, z, dim.location(x, y, z));
@@ -420,7 +420,7 @@ class Atom extends EventEmitter {
 		if (
 			newLoc && !newLoc.is_base_loc && this[_loc] && !this[_loc].is_base_loc && newLoc == this[_loc]
 		)
-			return;
+			{return;}
 		var old_fine_loc = this.fine_loc;
 		var new_fine_loc = {
 			x: newX,
@@ -450,7 +450,7 @@ class Atom extends EventEmitter {
 		if (
 			newLoc && !newLoc.is_base_loc && this.loc && !this.loc.is_base_loc && newLoc == this.loc
 		)
-			return;
+			{return;}
 		old_fine_loc = this.fine_loc;
 		movement.old = old_fine_loc;
 		if (
@@ -467,14 +467,14 @@ class Atom extends EventEmitter {
 			let fastPointer = newLoc;
 			while (slowPointer != null) {
 				slowPointer = slowPointer[_loc];
-				if (fastPointer) fastPointer = fastPointer[_loc];
-				if (fastPointer) fastPointer = fastPointer[_loc];
+				if (fastPointer) {fastPointer = fastPointer[_loc];}
+				if (fastPointer) {fastPointer = fastPointer[_loc];}
 				if (
 					(fastPointer && fastPointer == slowPointer) || fastPointer == this || slowPointer == this
 				)
-					throw new Error(
+					{throw new Error(
 						`Cycle detected when assigning the location of ${this} to ${newLoc}`
-					);
+					);}
 			}
 		}
 
@@ -488,7 +488,7 @@ class Atom extends EventEmitter {
 		if (this[_loc]) {
 			if (this[_loc].contents) {
 				let idx = this[_loc].contents.indexOf(this);
-				if (idx != -1) this[_loc].contents.splice(idx, 1);
+				if (idx != -1) {this[_loc].contents.splice(idx, 1);}
 			}
 			if (this[_loc].is_base_loc) {
 				for (
@@ -506,13 +506,13 @@ class Atom extends EventEmitter {
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
 						let idx = thisloc.partial_contents.indexOf(this);
-						if (idx != -1) thisloc.partial_contents.splice(idx, 1);
+						if (idx != -1) {thisloc.partial_contents.splice(idx, 1);}
 						thisloc.viewers.forEach((item) => {
 							lost_viewers.push(item);
 						});
 						for (let atom of thisloc.partial_contents) {
 							if (atom != this && atom.does_cross(this)) {
-								if (!lost_crossers.includes(atom)) lost_crossers.push(atom);
+								if (!lost_crossers.includes(atom)) {lost_crossers.push(atom);}
 							}
 						}
 					}
@@ -554,7 +554,7 @@ class Atom extends EventEmitter {
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
 						if (!thisloc.partial_contents.includes(this))
-							thisloc.partial_contents.push(this);
+							{thisloc.partial_contents.push(this);}
 						thisloc.viewers.forEach((item) => {
 							gained_viewers.push(item);
 						});
@@ -566,12 +566,12 @@ class Atom extends EventEmitter {
 										!gained_crossers.includes(atom) &&
 					!common_crossers.includes(atom)
 									)
-										gained_crossers.push(atom);
+										{gained_crossers.push(atom);}
 								} else {
 									lost_crossers.splice(idx, 1);
 									common_crossers.push(atom);
 								}
-								if (!this[_crosses].includes(atom)) this[_crosses].push(atom);
+								if (!this[_crosses].includes(atom)) {this[_crosses].push(atom);}
 							}
 						}
 					}
@@ -580,14 +580,14 @@ class Atom extends EventEmitter {
 		}
 
 		for (let gained of gained_crossers) {
-			if (!gained[_crosses].includes(this)) gained[_crosses].push(this);
+			if (!gained[_crosses].includes(this)) {gained[_crosses].push(this);}
 			this.emit("crossed", gained, movement);
 			gained.emit("crossed_by", this, movement);
 		}
 
 		for (let lost of lost_crossers) {
 			let idx = lost[_crosses].indexOf(this);
-			if (idx != -1) lost[_crosses].splice(idx, 1);
+			if (idx != -1) {lost[_crosses].splice(idx, 1);}
 			this.emit("uncrossed", lost, movement);
 			lost.emit("uncrossed_by", this, movement);
 		}
@@ -605,11 +605,11 @@ class Atom extends EventEmitter {
 		}
 		for (let lost of lost_viewers) {
 			if (!lost.c.Eye.can_see(this))
-				lost.c.Eye[mob_symbols._remove_viewing](this);
+				{lost.c.Eye[mob_symbols._remove_viewing](this);}
 		}
 		for (let gained of gained_viewers) {
 			if (gained.c.Eye.can_see(this))
-				gained.c.Eye[mob_symbols._add_viewing](this);
+				{gained.c.Eye[mob_symbols._add_viewing](this);}
 		}
 
 		this.emit("moved", movement);
@@ -687,7 +687,7 @@ class Atom extends EventEmitter {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
 						for (let atom of thisloc.partial_contents) {
 							if (atom != this && atom.does_cross(this)) {
-								if (!lost_crossers.includes(atom)) lost_crossers.push(atom);
+								if (!lost_crossers.includes(atom)) {lost_crossers.push(atom);}
 							}
 						}
 					}
@@ -716,7 +716,7 @@ class Atom extends EventEmitter {
 										!gained_crossers.includes(atom) &&
 					!common_crossers.includes(atom)
 									)
-										gained_crossers.push(atom);
+										{gained_crossers.push(atom);}
 								} else {
 									lost_crossers.splice(idx, 1);
 									common_crossers.push(atom);
@@ -732,15 +732,15 @@ class Atom extends EventEmitter {
 
 	/** @type {number} */
 	get x() {
-		if (this[_loc] && !this[_loc].is_base_loc) return this[_loc].x;
+		if (this[_loc] && !this[_loc].is_base_loc) {return this[_loc].x;}
 		return this[_x];
 	}
 	set x(newX) {
 		newX = +newX; // cast to number
-		if (newX === this[_x] && this[_loc] && this[_loc].is_base_loc) return;
+		if (newX === this[_x] && this[_loc] && this[_loc].is_base_loc) {return;}
 		if (newX !== newX)
 		// NaN check, NaN != NaN
-			throw new TypeError(`New X value ${newX} is not a number!`);
+			{throw new TypeError(`New X value ${newX} is not a number!`);}
 		this[_changeloc](
 			newX,
 			this[_y],
@@ -751,15 +751,15 @@ class Atom extends EventEmitter {
 
 	/** @type {number} */
 	get y() {
-		if (this[_loc] && !this[_loc].is_base_loc) return this[_loc].y;
+		if (this[_loc] && !this[_loc].is_base_loc) {return this[_loc].y;}
 		return this[_y];
 	}
 	set y(newY) {
 		newY = +newY; // cast to number
-		if (newY === this[_y] && this[_loc] && this[_loc].is_base_loc) return;
+		if (newY === this[_y] && this[_loc] && this[_loc].is_base_loc) {return;}
 		if (newY !== newY)
 		// NaN check, NaN != NaN
-			throw new TypeError(`New Y value ${newY} is not a number!`);
+			{throw new TypeError(`New Y value ${newY} is not a number!`);}
 		this[_changeloc](
 			this[_x],
 			newY,
@@ -770,15 +770,15 @@ class Atom extends EventEmitter {
 
 	/** @type {number} */
 	get z() {
-		if (this[_loc] && !this[_loc].is_base_loc) return this[_loc].z;
+		if (this[_loc] && !this[_loc].is_base_loc) {return this[_loc].z;}
 		return this[_z];
 	}
 	set z(newZ) {
 		newZ = +newZ; // ast to number
-		if (newZ === this[_z] && this[_loc] && this[_loc].is_base_loc) return;
+		if (newZ === this[_z] && this[_loc] && this[_loc].is_base_loc) {return;}
 		if (newZ !== newZ)
 		// NaN check, NaN != NaN
-			throw new TypeError(`New Z value ${newZ} is not a number!`);
+			{throw new TypeError(`New Z value ${newZ} is not a number!`);}
 		this[_changeloc](
 			this[_x],
 			this[_y],
@@ -789,11 +789,11 @@ class Atom extends EventEmitter {
 
 	/** @type {Typespess.Dimension} */
 	get dim() {
-		if (this[_loc] && !this[_loc].is_base_loc) return this[_loc].dim;
+		if (this[_loc] && !this[_loc].is_base_loc) {return this[_loc].dim;}
 		return this[_dim];
 	}
 	set dim(newDim) {
-		if (newDim === this[_dim]) return;
+		if (newDim === this[_dim]) {return;}
 		this[_changeloc](
 			this[_x],
 			this[_y],
@@ -807,13 +807,13 @@ class Atom extends EventEmitter {
 		return this[_loc];
 	}
 	set loc(newLoc) {
-		if (newLoc === this[_loc]) return;
+		if (newLoc === this[_loc]) {return;}
 		if (
 			newLoc !== null && (typeof newLoc !== "object" || (!(newLoc.contents instanceof Array) && !newLoc.is_fine_loc))
 		)
-			throw new TypeError(
+			{throw new TypeError(
 				`New loc '${newLoc}' is not a valid location (null, object with contents list, or fine loc)`
-			);
+			);}
 		if (newLoc !== null && newLoc.is_fine_loc) {
 			if (!Object.prototype.hasOwnProperty.call(newLoc,"x") || !Object.prototype.hasOwnProperty.call(newLoc,"y")) {
 				this.loc = newLoc.loc || null;
@@ -833,7 +833,7 @@ class Atom extends EventEmitter {
 		newLoc.y !== +newLoc.y ||
 		!newLoc.dim
 			)
-				throw new TypeError("new fine loc is invalid");
+				{throw new TypeError("new fine loc is invalid");}
 			var newz = newLoc.z != null ? newLoc.z : this.z;
 			this[_changeloc](
 				newLoc.x,
@@ -901,9 +901,9 @@ class Atom extends EventEmitter {
 	}
 	set bounds_x(newval) {
 		newval = +newval;
-		if (newval == this[_bounds_x]) return;
+		if (newval == this[_bounds_x]) {return;}
 		if (newval != newval)
-			throw new TypeError(`New boundary ${newval} is not a number`);
+			{throw new TypeError(`New boundary ${newval} is not a number`);}
 		this[_changeloc](
 			this[_x],
 			this[_y],
@@ -925,9 +925,9 @@ class Atom extends EventEmitter {
 	}
 	set bounds_y(newval) {
 		newval = +newval;
-		if (newval == this[_bounds_y]) return;
+		if (newval == this[_bounds_y]) {return;}
 		if (newval != newval)
-			throw new TypeError(`New boundary ${newval} is not a number`);
+			{throw new TypeError(`New boundary ${newval} is not a number`);}
 		this[_changeloc](
 			this[_x],
 			this[_y],
@@ -949,9 +949,9 @@ class Atom extends EventEmitter {
 	}
 	set bounds_width(newval) {
 		newval = +newval;
-		if (newval == this[_bounds_width]) return;
+		if (newval == this[_bounds_width]) {return;}
 		if (newval != newval)
-			throw new TypeError(`New boundary ${newval} is not a number`);
+			{throw new TypeError(`New boundary ${newval} is not a number`);}
 		this[_changeloc](
 			this[_x],
 			this[_y],
@@ -973,9 +973,9 @@ class Atom extends EventEmitter {
 	}
 	set bounds_height(newval) {
 		newval = +newval;
-		if (newval == this[_bounds_height]) return;
+		if (newval == this[_bounds_height]) {return;}
 		if (newval != newval)
-			throw new TypeError(`New boundary ${newval} is not a number`);
+			{throw new TypeError(`New boundary ${newval} is not a number`);}
 		this[_changeloc](
 			this[_x],
 			this[_y],
@@ -1012,8 +1012,8 @@ class Atom extends EventEmitter {
   * @param {string} reason
   */
 	move(offsetx, offsety, reason) {
-		if (!this.loc || !this.loc.is_base_loc) return false;
-		if (!this.can_move(offsetx, offsety, reason)) return false;
+		if (!this.loc || !this.loc.is_base_loc) {return false;}
+		if (!this.can_move(offsetx, offsety, reason)) {return false;}
 		let remaining_x = offsetx;
 		let remaining_y = offsety;
 		let move_splits = Math.ceil(
@@ -1040,19 +1040,19 @@ class Atom extends EventEmitter {
 					clang = true;
 				}
 			}
-			if (clang) break;
+			if (clang) {break;}
 			for (let lost of result.lost_crossers) {
 				if (!this.can_uncross(lost, remaining_x, remaining_y, reason)) {
 					clang = true;
 				}
 			}
-			if (clang) break;
+			if (clang) {break;}
 			for (let common of result.common_crossers) {
 				if (!this.can_move_within(common, remaining_x, remaining_y, reason)) {
 					clang = true;
 				}
 			}
-			if (clang) break;
+			if (clang) {break;}
 			cx += step_x;
 			cy += step_y;
 			this[_changeloc](
@@ -1081,7 +1081,7 @@ class Atom extends EventEmitter {
 			let newy =
 		Math.round((cy + step_y * i) * this.movement_granularity) /
 		this.movement_granularity;
-			if (newx == this.x && newy == this.y) break;
+			if (newx == this.x && newy == this.y) {break;}
 			let result = this.test_move(newx, newy);
 			clang = false;
 
@@ -1094,7 +1094,7 @@ class Atom extends EventEmitter {
 					}
 				}
 			}
-			if (clang) continue;
+			if (clang) {continue;}
 			for (let common of result.common_crossers) {
 				if (!this.can_move_within(common, remaining_x, remaining_y, reason)) {
 					clang = true;
@@ -1104,7 +1104,7 @@ class Atom extends EventEmitter {
 					}
 				}
 			}
-			if (clang) continue;
+			if (clang) {continue;}
 			for (let gained of result.gained_crossers) {
 				if (!this.can_cross(gained, remaining_x, remaining_y, reason)) {
 					clang = true;
@@ -1114,7 +1114,7 @@ class Atom extends EventEmitter {
 					}
 				}
 			}
-			if (clang) continue;
+			if (clang) {continue;}
 
 			cx += step_x * i;
 			cy += step_y * i;
@@ -1189,7 +1189,7 @@ class Atom extends EventEmitter {
   * @abstract
   */
 	can_be_crossed(crosser) {
-		if (this.let_pass_flags & crosser.pass_flags) return true;
+		if (this.let_pass_flags & crosser.pass_flags) {return true;}
 		return crosser.density < 0 || this.density <= 0;
 	}
 
@@ -1226,7 +1226,7 @@ class Atom extends EventEmitter {
 		if (
 			!tile.is_base_loc || !this[_loc] || !this[_loc].is_base_loc || this[_z] != tile.z
 		)
-			return false;
+			{return false;}
 		return (
 			this[_x] + this[_bounds_x] - 0.00001 <= tile.x && this[_y] + this[_bounds_y] - 0.00001 <= tile.y && this[_x] + this[_bounds_x] + this[_bounds_width] + 0.00001 >= tile.x + 1 && this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001 >= tile.y + 1
 		);
@@ -1276,14 +1276,14 @@ class Atom extends EventEmitter {
 	}
 
 	[_walk_step]() {
-		if (this[_walk_stepping] || !this[_walking]) return;
+		if (this[_walk_stepping] || !this[_walking]) {return;}
 		this[_walk_stepping] = true;
 		var offsetx = 0;
 		var offsety = 0;
-		if (this.walk_dir & 1) offsety += this.walk_size;
-		if (this.walk_dir & 2) offsety -= this.walk_size;
-		if (this.walk_dir & 4) offsetx += this.walk_size;
-		if (this.walk_dir & 8) offsetx -= this.walk_size;
+		if (this.walk_dir & 1) {offsety += this.walk_size;}
+		if (this.walk_dir & 2) {offsety -= this.walk_size;}
+		if (this.walk_dir & 4) {offsetx += this.walk_size;}
+		if (this.walk_dir & 8) {offsetx -= this.walk_size;}
 		this.glide_size = (this.walk_size / this.walk_delay) * 1000;
 		this.move(offsetx, offsety, this.walk_reason);
 		// in case the move proc cause it to change
@@ -1329,7 +1329,7 @@ class Atom extends EventEmitter {
 	}
 	set dir(val) {
 		let old = this[_dir];
-		if (old == val) return;
+		if (old == val) {return;}
 		this[_dir] = val;
 		this[mob_symbols._update_var]("dir", 0);
 		this.emit("dir_changed", old, val);
@@ -1354,7 +1354,7 @@ class Atom extends EventEmitter {
 		return this[_name];
 	}
 	set name(val) {
-		if (val === undefined) val = null;
+		if (val === undefined) {val = null;}
 		this[_name] = val;
 		this[mob_symbols._update_var]("name", 0);
 	}
@@ -1379,7 +1379,7 @@ class Atom extends EventEmitter {
 		return this[_screen_loc_x];
 	}
 	set screen_loc_x(val) {
-		if (val === undefined) val = null;
+		if (val === undefined) {val = null;}
 		this[_screen_loc_x] = val;
 		this[mob_symbols._update_var]("screen_loc_x", 0);
 	}
@@ -1392,7 +1392,7 @@ class Atom extends EventEmitter {
 		return this[_screen_loc_y];
 	}
 	set screen_loc_y(val) {
-		if (val === undefined) val = null;
+		if (val === undefined) {val = null;}
 		this[_screen_loc_y] = val;
 		this[mob_symbols._update_var]("screen_loc_y", 0);
 	}
@@ -1405,7 +1405,7 @@ class Atom extends EventEmitter {
 		return this[_mouse_opacity];
 	}
 	set mouse_opacity(val) {
-		if (val === undefined) val = null;
+		if (val === undefined) {val = null;}
 		this[_mouse_opacity] = val;
 		this[mob_symbols._update_var]("mouse_opacity", 0);
 	}
@@ -1418,7 +1418,7 @@ class Atom extends EventEmitter {
 		return this[_color];
 	}
 	set color(val) {
-		if (val === undefined) val = null;
+		if (val === undefined) {val = null;}
 		this[_color] = val;
 		this[mob_symbols._update_var]("color", 0);
 	}
@@ -1431,7 +1431,7 @@ class Atom extends EventEmitter {
 		return this[_alpha];
 	}
 	set alpha(val) {
-		if (val === undefined) val = null;
+		if (val === undefined) {val = null;}
 		this[_alpha] = val;
 		this[mob_symbols._update_var]("alpha", 0);
 	}
@@ -1444,7 +1444,7 @@ class Atom extends EventEmitter {
 	return this[_directional];
 }
 set directional(val) {
-	if (val === undefined) val = false;
+	if (val === undefined) {val = false;}
 	this[_directional] = val;
 	this[mob_symbols._update_var]("directional", 0);
 }
@@ -1477,8 +1477,8 @@ set directional(val) {
 						let thisloc = this.dim.location(x, y, this[_z]);
 						for (let atom of thisloc.viewers) {
 							if (atom.c.Eye.can_see(this))
-								atom.c.Eye[mob_symbols._add_viewing](this);
-							else atom.c.Eye[mob_symbols._remove_viewing](this);
+								{atom.c.Eye[mob_symbols._add_viewing](this);}
+							else {atom.c.Eye[mob_symbols._remove_viewing](this);}
 						}
 					}
 				}
@@ -1504,7 +1504,7 @@ set directional(val) {
 		return this[_opacity];
 	}
 	set opacity(val) {
-		if (this[_opacity] == val) return;
+		if (this[_opacity] == val) {return;}
 		this[_opacity] = val;
 		this[mob_symbols._update_var]("opacity", 0);
 		for (let viewer of this[mob_symbols._viewers]) {
@@ -1516,9 +1516,9 @@ set directional(val) {
 			}
 		}
 		for (let loc of this.partial_locs()) {
-			if (!loc.is_base_loc) continue;
+			if (!loc.is_base_loc) {continue;}
 			for (let hearer of loc.hearers)
-				hearer.c.Hearer.enqueue_update_visible_tiles();
+				{hearer.c.Hearer.enqueue_update_visible_tiles();}
 		}
 	}
 
@@ -1551,7 +1551,7 @@ set directional(val) {
   * @yields {Location}
   */
 	partial_locs(base_only = true) {
-		if (!this.loc || !this.loc.is_base_loc) return base_only ? [] : [this.loc];
+		if (!this.loc || !this.loc.is_base_loc) {return base_only ? [] : [this.loc];}
 		let locs = [];
 		for (
 			let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
@@ -1576,7 +1576,7 @@ set directional(val) {
   * @yields {Location}
   */
 	marginal_locs(base_only = true) {
-		if (!this.loc || !this.loc.is_base_loc) return base_only ? [] : [this.loc];
+		if (!this.loc || !this.loc.is_base_loc) {return base_only ? [] : [this.loc];}
 		let locs = [];
 		for (
 			let x = Math.floor(this[_x] + this[_bounds_x] - 0.00001);
@@ -1610,10 +1610,10 @@ set directional(val) {
 		let common_visgroups = [];
 		if (eye) {
 			let visgroups;
-			if (eye instanceof Array) visgroups = new Set(eye);
-			else visgroups = eye.c.Eye[mob_symbols._visgroups];
+			if (eye instanceof Array) {visgroups = new Set(eye);}
+			else {visgroups = eye.c.Eye[mob_symbols._visgroups];}
 			for (let visgroup of this[mob_symbols._visgroups]) {
-				if (visgroups.has(visgroup)) common_visgroups.push(visgroup);
+				if (visgroups.has(visgroup)) {common_visgroups.push(visgroup);}
 			}
 		}
 		let submessage = {
@@ -1644,13 +1644,13 @@ set directional(val) {
 			submessage[key] = this[key];
 			for (let visgroup of common_visgroups) {
 				if (visgroup.overrides.has(key))
-					submessage[key] = visgroup.overrides.get(key);
+					{submessage[key] = visgroup.overrides.get(key);}
 			}
 		}
 		if (this.template && this.template.components) {
 			for (let component_name of this.template.components) {
 				var component = this.components[component_name];
-				if (!(component instanceof Component.Networked)) continue;
+				if (!(component instanceof Component.Networked)) {continue;}
 				submessage.components.push(component_name);
 				submessage.component_vars[
 					component_name
@@ -1670,7 +1670,7 @@ set directional(val) {
 	destroy() {
 		this.destroyed = true;
 		for (var component of Object.values(this.c)) {
-			if (component.destroy) component.destroy();
+			if (component.destroy) {component.destroy();}
 		}
 		this.loc = null;
 		this.server.atoms.delete(this.object_id);
@@ -1679,56 +1679,56 @@ set directional(val) {
 
 	p_they(capitalized, gender = this.gender) {
 		let out = "it";
-		if (gender == "male") out = "he";
-		else if (gender == "female") out = "she";
-		else if (gender == "plural") out = "they";
-		if (capitalized) out = out[0].toUpperCase() + out.substr(1);
+		if (gender == "male") {out = "he";}
+		else if (gender == "female") {out = "she";}
+		else if (gender == "plural") {out = "they";}
+		if (capitalized) {out = out[0].toUpperCase() + out.substr(1);}
 		return out;
 	}
 	p_their(capitalized, gender = this.gender) {
 		let out = "its";
-		if (gender == "male") out = "his";
-		else if (gender == "female") out = "her";
-		else if (gender == "plural") out = "their";
-		if (capitalized) out = out[0].toUpperCase() + out.substr(1);
+		if (gender == "male") {out = "his";}
+		else if (gender == "female") {out = "her";}
+		else if (gender == "plural") {out = "their";}
+		if (capitalized) {out = out[0].toUpperCase() + out.substr(1);}
 		return out;
 	}
 	p_them(capitalized, gender = this.gender) {
 		let out = "it";
-		if (gender == "male") out = "him";
-		else if (gender == "female") out = "her";
-		else if (gender == "plural") out = "them";
-		if (capitalized) out = out[0].toUpperCase() + out.substr(1);
+		if (gender == "male") {out = "him";}
+		else if (gender == "female") {out = "her";}
+		else if (gender == "plural") {out = "them";}
+		if (capitalized) {out = out[0].toUpperCase() + out.substr(1);}
 		return out;
 	}
 	p_have(capitalized, gender = this.gender) {
 		let out = "has";
-		if (gender == "plural") out = "have";
-		if (capitalized) out = out[0].toUpperCase() + out.substr(1);
+		if (gender == "plural") {out = "have";}
+		if (capitalized) {out = out[0].toUpperCase() + out.substr(1);}
 		return out;
 	}
 	p_are(capitalized, gender = this.gender) {
 		let out = "is";
-		if (gender == "plural") out = "are";
-		if (capitalized) out = out[0].toUpperCase() + out.substr(1);
+		if (gender == "plural") {out = "are";}
+		if (capitalized) {out = out[0].toUpperCase() + out.substr(1);}
 		return out;
 	}
 	p_were(capitalized, gender = this.gender) {
 		let out = "was";
-		if (gender == "plural") out = "were";
-		if (capitalized) out = out[0].toUpperCase() + out.substr(1);
+		if (gender == "plural") {out = "were";}
+		if (capitalized) {out = out[0].toUpperCase() + out.substr(1);}
 		return out;
 	}
 	p_do(capitalized, gender = this.gender) {
 		let out = "does";
-		if (gender == "plural") out = "do";
-		if (capitalized) out = out[0].toUpperCase() + out.substr(1);
+		if (gender == "plural") {out = "do";}
+		if (capitalized) {out = out[0].toUpperCase() + out.substr(1);}
 		return out;
 	}
 	p_s(capitalized, gender = this.gender) {
 		let out = "";
-		if (gender != "plural") out = "s";
-		if (capitalized) out = out[0].toUpperCase() + out.substr(1);
+		if (gender != "plural") {out = "s";}
+		if (capitalized) {out = out[0].toUpperCase() + out.substr(1);}
 		return out;
 	}
 }

@@ -81,7 +81,7 @@ class PreferencesPanel {
 
 		let gender_dropdown = this.panel.$(".property-gender");
 		gender_dropdown.addEventListener("click", (e) => {
-			if (e.defaultPrevented) return;
+			if (e.defaultPrevented) {return;}
 			let genders = { male: "Male", female: "Female" };
 			let menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
@@ -106,7 +106,7 @@ class PreferencesPanel {
 
 		let hair_dropdown = this.panel.$(".property-hair");
 		hair_dropdown.addEventListener("click", (e) => {
-			if (e.defaultPrevented) return;
+			if (e.defaultPrevented) {return;}
 			let menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
@@ -139,12 +139,12 @@ class PreferencesPanel {
 				menu.appendChild(item);
 			}
 			dropdown(hair_dropdown, menu);
-			if (sel_elem) sel_elem.scrollIntoView({ behavior: "instant" });
+			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "instant" });}
 		});
 
 		let skin_tone_dropdown = this.panel.$(".property-skin_tone");
 		skin_tone_dropdown.addEventListener("click", (e) => {
-			if (e.defaultPrevented) return;
+			if (e.defaultPrevented) {return;}
 			let menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
@@ -177,11 +177,11 @@ class PreferencesPanel {
 				menu.appendChild(item);
 			}
 			dropdown(skin_tone_dropdown, menu);
-			if (sel_elem) sel_elem.scrollIntoView({ behavior: "instant" });
+			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "instant" });}
 		});
 		let hair_color_dropdown = this.panel.$(".property-hair_color");
 		hair_color_dropdown.addEventListener("click", (e) => {
-			if (e.defaultPrevented) return;
+			if (e.defaultPrevented) {return;}
 			let menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
@@ -209,7 +209,7 @@ class PreferencesPanel {
 				menu.appendChild(item);
 			}
 			dropdown(hair_color_dropdown, menu);
-			if (sel_elem) sel_elem.scrollIntoView({ behavior: "instant" });
+			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "instant" });}
 		});
 
 		this.panel.$(".property-age").addEventListener("input", (e) => {
@@ -240,7 +240,7 @@ class PreferencesPanel {
 			item.style.display = "none";
 		});
 		let tab_obj = this.panel.$(`.tabcontent[data-tab='${tab}']`);
-		if (tab_obj) tab_obj.style.display = "block";
+		if (tab_obj) {tab_obj.style.display = "block";}
 	}
 
 	handle_message(msg) {
@@ -293,32 +293,32 @@ class PreferencesPanel {
 		}
 		if (Object.prototype.hasOwnProperty.call(msg,"name_valid")) {
 			let elem = this.panel.$(".property-name");
-			if (msg.name_valid) elem.classList.remove("red");
-			else elem.classList.add("red");
+			if (msg.name_valid) {elem.classList.remove("red");}
+			else {elem.classList.add("red");}
 		}
 		if (msg.name_correction) {
 			let elem = this.panel.$(".property-name");
 			if (elem.value == msg.name_correction[0])
-				elem.value = msg.name_correction[1];
+				{elem.value = msg.name_correction[1];}
 		}
 		if (msg.job_preferences) {
 			this.job_preferences = msg.job_preferences;
-			if (msg.job_metas) this.job_metas = msg.job_metas;
+			if (msg.job_metas) {this.job_metas = msg.job_metas;}
 			// alright now we order the jobs.
 			let job_order = [...Object.keys(this.job_metas)];
 			job_order.sort((a, b) => {
 				let ameta = this.job_metas[a];
 				let bmeta = this.job_metas[b];
 				let department_diff = department_order.indexOf(ameta.departments[0] || "misc") - department_order.indexOf(bmeta.departments[0] || "misc");
-				if (department_diff != 0) return department_diff;
+				if (department_diff != 0) {return department_diff;}
 				if (
 					ameta.departments.includes("command") && !bmeta.departments.includes("command")
 				)
-					return -1;
+					{return -1;}
 				if (
 					!ameta.departments.includes("command") && bmeta.departments.includes("command")
 				)
-					return 1;
+					{return 1;}
 				return 0;
 			});
 			this.panel.$(".job-list").style.gridTemplateRows = `repeat(${Math.ceil(
@@ -363,7 +363,7 @@ class PreferencesPanel {
 					job_pref_button.style.color = job_pref_colors[setting];
 					job_pref_button.textContent = job_pref_settings[setting];
 					job_pref_button.addEventListener("click", (e) => {
-						if (e.defaultPrevented) return;
+						if (e.defaultPrevented) {return;}
 						let menu = document.createElement("div");
 						menu.classList.add("dropdown-content");
 						for (let i = 0; i <= 3; i++) {
@@ -422,7 +422,7 @@ class PreferencesPanel {
 	} = {}) {
 		let atom = new Atom(this.panel.manager.client, { dir });
 		let prefs = JSON.parse(JSON.stringify(this.char_prefs));
-		if (prefs_modifier) prefs_modifier(prefs);
+		if (prefs_modifier) {prefs_modifier(prefs);}
 		for (let part of ["torso", "groin", "l_arm", "r_arm", "l_leg", "r_leg", "r_hand", "l_hand", "r_foot", "l_foot", "head"]) {
 			let icon_state = part;
 			let partic = part;
@@ -430,7 +430,7 @@ class PreferencesPanel {
 			partic += prefs.gender == "female" ? "_f" : "_m";
 
 			let color = null;
-			if (this.skin_tones) color = this.skin_tones[prefs.skin_tone];
+			if (this.skin_tones) {color = this.skin_tones[prefs.skin_tone];}
 			atom.set_overlay(`limb_${part}`, {
 				icon: `icons/mob/human_body/${partic}/${partic}-dir${dir}.png`,
 				icon_state,
@@ -447,8 +447,8 @@ class PreferencesPanel {
 			});
 		}
 
-		if (modifier) modifier(atom);
-		if (!canvas) canvas = document.createElement("canvas");
+		if (modifier) {modifier(atom);}
+		if (!canvas) {canvas = document.createElement("canvas");}
 		canvas.width = 32;
 		canvas.height = 32;
 		let ts = performance.now();

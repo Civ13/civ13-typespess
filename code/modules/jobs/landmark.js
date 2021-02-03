@@ -4,7 +4,7 @@ class JobLandmark extends Component {
 	constructor(atom, template) {
 		super(atom, template);
 		let job_landmarks = this.a.server.job_controller.job_landmarks;
-		if (!job_landmarks[this.a.name]) job_landmarks[this.a.name] = [];
+		if (!job_landmarks[this.a.name]) {job_landmarks[this.a.name] = [];}
 		job_landmarks[this.a.name].splice(
 			Math.floor(Math.random() * job_landmarks[this.a.name].length),
 			0,
@@ -15,9 +15,9 @@ class JobLandmark extends Component {
 	destroy() {
 		super.destroy();
 		let job_landmarks = this.a.server.job_controller.job_landmarks;
-		if (!job_landmarks[this.a.name]) return;
+		if (!job_landmarks[this.a.name]) {return;}
 		const idx = job_landmarks[this.a.name].indexOf(this.a);
-		if (idx != -1) job_landmarks[this.a.name].splice(idx, 1);
+		if (idx != -1) {job_landmarks[this.a.name].splice(idx, 1);}
 	}
 }
 

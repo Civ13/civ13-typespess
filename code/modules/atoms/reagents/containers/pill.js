@@ -9,12 +9,12 @@ const _ = require("underscore");
 class Pill extends Component {
 	constructor(atom, template) {
 		super(atom, template);
-		if (!this.a.icon_state) this.a.icon_state = `pill${_.random(1, 20)}`;
+		if (!this.a.icon_state) {this.a.icon_state = `pill${_.random(1, 20)}`;}
 		this.a.c.Item.attack = this.attack.bind(this);
 	}
 
 	attack(target, user) {
-		if (!this.a.c.ReagentHolder.can_consume(target, user)) return true;
+		if (!this.a.c.ReagentHolder.can_consume(target, user)) {return true;}
 
 		(async () => {
 			if (target == user) {
@@ -28,7 +28,7 @@ class Pill extends Component {
 							delay: this.self_delay,
 						}))
 					)
-						return;
+						{return;}
 				}
 				to_chat`<span class='notice'>You ${this.apply_method} the ${this.a}.</span>`(
 					user
@@ -39,7 +39,7 @@ class Pill extends Component {
 					target
 				);
 				if (!(await user.c.MobInventory.do_after({ target, delay: 3000 })))
-					return;
+					{return;}
 				visible_message`<span class='danger'>The ${user} forces the ${target} to ${this.apply_method} the ${this.a}.</span>`
 					.self`<span class='userdanger'>The ${user} forces you to ${this.apply_method} the ${this.a}.</span>`.emit_from(
 					target

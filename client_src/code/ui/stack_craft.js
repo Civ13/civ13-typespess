@@ -1,7 +1,7 @@
 class StackCraftPanel {
 	constructor(panel) {
 		this.panel = panel;
-		this.civilization = null
+		this.civilization = null;
 		this.panel.on("message", this.handle_message.bind(this));
 		var amount_elem = document.createElement("div");
 		amount_elem.appendChild(document.createTextNode("amount: "));
@@ -56,32 +56,32 @@ class StackCraftPanel {
 			recipe.res_amount && recipe.res_amount > 1 ? `${recipe.res_amount}x ` : ""
 		}${recipe.name} (costs ${recipe.cost})`;
 		main_button_elem.classList.add("button");
-		if (recipe.build_limit <= 0) main_button_elem.classList.add("disabled");
+		if (recipe.build_limit <= 0) {main_button_elem.classList.add("disabled");}
 		main_button_elem.dataset.message = JSON.stringify({ build: i, amount: 1 });
 		elem.appendChild(main_button_elem);
 	}
 	recipe_check_tech(recipe) {
 		if (!recipe.age1 || !recipe.age2 || !recipe.age2 || !recipe.last_age)
-			{return 0}
+			{return 0;}
 		if (Tworld.age > recipe.last_age)
-			{return 0}
+			{return 0;}
 		if (this.civilization == null || this.civilization == "")
 			{console.log("No civ");if (Tworld.age1>= recipe.age1 && Tworld.age2>= recipe.age2 && Tworld.age3>= recipe.age3)
-				{return 1}
+				{return 1;}
 			else
-				{return 0}
+				{return 0;}
 			}
 		else
 			{console.log("Yes civ");if (Tworld.civilizations[this.civilization])
 				{
 					let currciv = Tworld.civilizations[this.civilization];
 					if (currciv.research_ind >= Tworld.age1 && currciv.research_mil >= Tworld.age1 && currciv.research_hlt >= Tworld.age3)
-						{return 1}
+						{return 1;}
 					else
-						{return 0}
+						{return 0;}
 				}
 			else
-				{return 0}}
+				{return 0;}}
 	}
 }
 

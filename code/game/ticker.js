@@ -31,11 +31,11 @@ class GameTicker extends EventEmitter {
 	start_ticking() {
 		setInterval(this.tick.bind(this), 2000);
 		if (this.total_players)
-			this.start_at =
-		this.server.now() + 3 * 1000;
+			{this.start_at =
+		this.server.now() + 3 * 1000;}
 	}
 	tick() {
-		if (this.busy) return;
+		if (this.busy) {return;}
 		if (this.game_state == "pregame") {
 			if (this.start_at != null) {
 				let time_left = this.start_at - this.server.now();
@@ -49,10 +49,10 @@ class GameTicker extends EventEmitter {
 								this.game_state = "pregame";
 								this.busy = false;
 								if (this.total_players)
-									this.start_at =
+									{this.start_at =
 					this.server.now() +
-					3 * 1000;
-								else this.start_at = null;
+					3 * 1000;}
+								else {this.start_at = null;}
 							}
 						},
 						(err) => {
@@ -80,13 +80,13 @@ class GameTicker extends EventEmitter {
 				// readied up.
 				let mind = new Mind(client.key);
 				if (client.character_preferences)
-					mind.character_preferences = client.character_preferences;
+					{mind.character_preferences = client.character_preferences;}
 				this.server.job_controller.unassigned.add(mind);
 			}
 		}
 		this.server.job_controller.divide_occupations();
 		for (let mind of this.server.job_controller.assigned) {
-			if (!mind.assigned_role) continue; //
+			if (!mind.assigned_role) {continue;} //
 			// alright now spawn everyone in
 			let mob = mind.assigned_role.instance(this.server,mind.character_preferences);
 			mind.transfer_to(mob);
@@ -103,10 +103,10 @@ class GameTicker extends EventEmitter {
 	}
 
 	total_players_changed(from, to) {
-		if (from && !to) this.start_at = null;
+		if (from && !to) {this.start_at = null;}
 		if (to && !from)
-			this.start_at = this.start_at =
-		this.server.now() + 3 * 1000;
+			{this.start_at = this.start_at =
+		this.server.now() + 3 * 1000;}
 	}
 }
 

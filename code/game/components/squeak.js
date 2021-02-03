@@ -29,14 +29,14 @@ class Squeak extends Component {
 
 	play_squeak(prev) {
 		if (Math.random() < this.squeak_chance)
-			new Sound(this.a.server, {
+			{new Sound(this.a.server, {
 				path: this.squeak_sounds[
 					Math.floor(Math.random() * this.squeak_sounds.length)
 				],
 				vary: true,
 				volume: this.volume,
-			}).emit_from(this.a);
-		if (typeof prev == "function") return prev();
+			}).emit_from(this.a);}
+		if (typeof prev === "function") {return prev();}
 	}
 
 	step_squeak() {
@@ -53,11 +53,11 @@ class Squeak extends Component {
 			this.last_use = this.a.server.now();
 			this.play_squeak();
 		}
-		if (typeof prev == "function") return prev();
+		if (typeof prev === "function") {return prev();}
 	}
 
 	equipped(slot) {
-		if (slot.id == "shoes") slot.mob.on("moved", this.step_squeak);
+		if (slot.id == "shoes") {slot.mob.on("moved", this.step_squeak);}
 	}
 	unequipped(slot) {
 		slot.mob.removeListener("moved", this.step_squeak);

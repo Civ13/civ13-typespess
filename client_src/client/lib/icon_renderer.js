@@ -22,7 +22,7 @@ class IconRenderer {
 
 	// Returns a promise that is resolved when the icon is fully loaded (json and image)
 	fully_load() {
-		if (this.icon_meta || !this.icon) return Promise.resolve();
+		if (this.icon_meta || !this.icon) {return Promise.resolve();}
 		if (this.icon && this.icon_state && (this.icon.search(".png") === -1))
 			{
 				if (this.atom.directional === true || this.directional === true || (this.icon.search("icons/mob/") !== -1 && (this.icon.search("icons/mob/under/") === -1))) {
@@ -34,7 +34,7 @@ class IconRenderer {
 	}
 
 	get_bounds() {
-		if (!this.icon_meta || !this.icon_meta) return;
+		if (!this.icon_meta || !this.icon_meta) {return;}
 		let offset = this.get_offset();
 		return {
 			x: offset[0],
@@ -56,7 +56,7 @@ class IconRenderer {
 			this.last_dir = this.dir;
 		}
 		if (this.change_level >= CHANGE_LEVEL_NONE && this.atom)
-			this.atom.mark_dirty();
+			{this.atom.mark_dirty();}
 		if (this.change_level >= CHANGE_LEVEL_DIR) {
 			this.icon_meta = this.atom.client.icon_metas[this.icon];
 			if (this.icon_meta == undefined) {
@@ -71,7 +71,7 @@ class IconRenderer {
 							}
 						}
 				else if (this.icon_state === "") {return;} //if theres no icon state - don't draw.
-				if (!this.icon) {this.icon = "icons/nothing.png"}
+				if (!this.icon) {this.icon = "icons/nothing.png";}
 				this.atom.client
 					.enqueue_icon_meta_load(this.icon)	
 					.then(() => {	
@@ -95,11 +95,11 @@ class IconRenderer {
 
 	draw(ctx) {
 		if (!this.icon_meta || !this.icon_meta.__image_object)
-			return;
+			{return;}
 
 		let image = this.icon_meta.__image_object;
 		let tcolor = null;
-		if (this.color) {tcolor = this.color}
+		if (this.color) {tcolor = this.color;}
 		else if (this.icon_meta.color) {tcolor = this.icon_meta.color;}
 		if (tcolor) {
 			color_canvas.width = Math.max(
@@ -169,7 +169,7 @@ class IconRenderer {
 
 	is_mouse_over(x, y) {
 		if (!this.icon_meta || !this.icon_meta.__image_data)
-			return false;
+			{return false;}
 		let offset = this.get_offset();
 		x -= offset[0];
 		y -= offset[1];
@@ -179,14 +179,14 @@ class IconRenderer {
 		if (
 			pxx < 0 || pxy < 0 || pxx > this.icon_meta.width || pxy > this.icon_meta.height
 		)
-			return false;
+			{return false;}
 		var idx = 3 + 4 *
 		(pxx + (pxy) * this.icon_meta.__image_data.width);
 		return this.icon_meta.__image_data.data[idx] > 0;
 	}
 
 	get icon() {
-		if (this._icon == null && this.parent) return this.parent.icon;
+		if (this._icon == null && this.parent) {return this.parent.icon;}
 		var icon = this._icon;
 		return icon;
 	}
@@ -195,7 +195,7 @@ class IconRenderer {
 	}
 
 	get icon_state() {
-		if (this._icon_state == null && this.parent) return this.parent.icon_state;
+		if (this._icon_state == null && this.parent) {return this.parent.icon_state;}
 		var icon_state = this._icon_state;
 		if (this.parent) {
 			icon_state = ("" + icon_state).replace(
@@ -210,7 +210,7 @@ class IconRenderer {
 	}
 
 	get dir() {
-		if (this._dir == null && this.parent) return this.parent.dir;
+		if (this._dir == null && this.parent) {return this.parent.dir;}
 		var dir = this._dir;
 		return dir;
 	}
@@ -222,26 +222,26 @@ class IconRenderer {
 		return this._overlay_layer;
 	}
 	set overlay_layer(val) {
-		if (val == this._overlay_layer) return;
+		if (val == this._overlay_layer) {return;}
 		this._overlay_layer = val;
-		if (this.atom) this.atom.mark_dirty();
+		if (this.atom) {this.atom.mark_dirty();}
 	}
 
 	get offset_x() {
 		return this._offset_x;
 	}
 	set offset_x(val) {
-		if (val == this._offset_x) return;
+		if (val == this._offset_x) {return;}
 		this._offset_x = +val || 0;
-		if (this.atom) this.atom.mark_dirty();
+		if (this.atom) {this.atom.mark_dirty();}
 	}
 	get offset_y() {
 		return this._offset_y;
 	}
 	set offset_y(val) {
-		if (val == this._offset_y) return;
+		if (val == this._offset_y) {return;}
 		this._offset_y = +val || 0;
-		if (this.atom) this.atom.mark_dirty();
+		if (this.atom) {this.atom.mark_dirty();}
 	}
 
 	get_offset() {
@@ -249,31 +249,31 @@ class IconRenderer {
 		let dy = this.offset_y;
 		if (this.icon_meta && this.icon_meta.directional_offset) {
 			let world_amt = this.icon_meta.directional_offset / 32;
-			if (this.dir & 1) dy += world_amt;
-			if (this.dir & 2) dy -= world_amt;
-			if (this.dir & 4) dx += world_amt;
-			if (this.dir & 8) dx -= world_amt;
+			if (this.dir & 1) {dy += world_amt;}
+			if (this.dir & 2) {dy -= world_amt;}
+			if (this.dir & 4) {dx += world_amt;}
+			if (this.dir & 8) {dx -= world_amt;}
 		}
 		return [dx, dy];
 	}
 
 	get color() {
-		if (this._color == null && this.parent) return this.parent.color;
+		if (this._color == null && this.parent) {return this.parent.color;}
 		return this._color;
 	}
 	set color(val) {
-		if (val == this._color) return;
+		if (val == this._color) {return;}
 		this._color = "" + val;
-		if (this.atom) this.atom.mark_dirty();
+		if (this.atom) {this.atom.mark_dirty();}
 	}
 
 	get alpha() {
 		return this._alpha;
 	}
 	set alpha(val) {
-		if (val == this._alpha) return;
+		if (val == this._alpha) {return;}
 		this._alpha = "" + val;
-		if (this.atom) this.atom.mark_dirty();
+		if (this.atom) {this.atom.mark_dirty();}
 	}
 }
 

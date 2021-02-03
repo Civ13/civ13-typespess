@@ -45,28 +45,28 @@ class Reagent extends EventEmitter {
 		this.holder.c.ReagentHolder.total_volume,
 			amount
 		);
-		if (amount <= 0) return 0;
+		if (amount <= 0) {return 0;}
 		if (reagent) {
 			amount = reagent.remove(amount);
 		}
 		if (this.holder)
-			this.holder.c.ReagentHolder.temperature =
+			{this.holder.c.ReagentHolder.temperature =
 		(this.holder.c.ReagentHolder.temperature *
 		this.holder.c.ReagentHolder.total_volume +
 		amount * temp) /
-		(this.holder.c.ReagentHolder.total_volume + amount);
+		(this.holder.c.ReagentHolder.total_volume + amount);}
 		this.volume += amount;
 		this.emit("added", amount);
-		if (this.holder) this.holder.c.ReagentHolder.emit("added", this, amount);
+		if (this.holder) {this.holder.c.ReagentHolder.emit("added", this, amount);}
 		return amount;
 	}
 
 	remove(amount) {
 		amount = Math.min(this.volume, amount);
-		if (amount <= 0) return 0;
+		if (amount <= 0) {return 0;}
 		this.volume -= amount;
 		this.emit("removed", amount);
-		if (this.holder) this.holder.c.ReagentHolder.emit("removed", this, amount);
+		if (this.holder) {this.holder.c.ReagentHolder.emit("removed", this, amount);}
 		return amount;
 	}
 
@@ -80,30 +80,30 @@ class Reagent extends EventEmitter {
 	addiction_act_stage1(dt) {
 		/* yes I know probabilities don't work like that but I really don't give 2 fucks */
 		if (Math.random() < 0.15 * dt)
-			to_chat`<span class='notice'>You feel like some ${name} right about now.</span>`(
+			{to_chat`<span class='notice'>You feel like some ${name} right about now.</span>`(
 				this.holder
-			);
+			);}
 	}
 
 	addiction_act_stage2(dt) {
 		if (Math.random() < 0.15 * dt)
-			to_chat`<span class='notice'>You feel like you need ${name}. You just can't get enough.</span>`(
+			{to_chat`<span class='notice'>You feel like you need ${name}. You just can't get enough.</span>`(
 				this.holder
-			);
+			);}
 	}
 
 	addiction_act_stage3(dt) {
 		if (Math.random() < 0.15 * dt)
-			to_chat`<span class='danger'>You have an intense craving for ${name}.</span>`(
+			{to_chat`<span class='danger'>You have an intense craving for ${name}.</span>`(
 				this.holder
-			);
+			);}
 	}
 
 	addiction_act_stage4(dt) {
 		if (Math.random() < 0.15 * dt)
-			to_chat`<span class='boldannounce'>You're not feeling good at all! You really need some ${name}.</span>`(
+			{to_chat`<span class='boldannounce'>You're not feeling good at all! You really need some ${name}.</span>`(
 				this.holder
-			);
+			);}
 	}
 
 	mob_life(dt) {
@@ -114,7 +114,7 @@ class Reagent extends EventEmitter {
 	reaction_obj() {return;}
 	reaction_mob(target, { method, volume } = {}) {
 		if (method == "vapor") {
-			if (volume > 0.5) target.c.ReagentHolder.add(this, volume);
+			if (volume > 0.5) {target.c.ReagentHolder.add(this, volume);}
 		}
 	}
 	reaction_turf() {return;}
@@ -144,21 +144,21 @@ class ReagentReaction {
 
 	get_react_status(container) {
 		for (let [req, amount] of Object.entries(this.required_reagents)) {
-			if (container.c.ReagentHolder.volume_of(req) < amount) return 2;
+			if (container.c.ReagentHolder.volume_of(req) < amount) {return 2;}
 		}
 		for (let [req, amount] of Object.entries(this.required_catalysts)) {
-			if (container.c.ReagentHolder.volume_of(req) < amount) return 2;
+			if (container.c.ReagentHolder.volume_of(req) < amount) {return 2;}
 		}
 		if (
 			this.min_temp != null &&
 	container.c.ReagentHolder.temperature < this.min_temp
 		)
-			return 1;
+			{return 1;}
 		if (
 			this.max_temp != null &&
 	container.c.ReagentHolder.temperature > this.max_temp
 		)
-			return 1;
+			{return 1;}
 		return 0;
 	}
 
@@ -176,7 +176,7 @@ class ReagentReaction {
 		let multiplier = Infinity;
 		let single_result_volume = 0;
 		let req_volume = 0;
-		for (let v of Object.values(this.results)) single_result_volume += v;
+		for (let v of Object.values(this.results)) {single_result_volume += v;}
 		//multiplier = (container.c.ReagentHolder.maximum_volume - container.c.ReagentHolder.total_volume) / single_result_volume;
 		for (let [reagent, req] of Object.entries(this.required_reagents)) {
 			multiplier = Math.min(
@@ -206,15 +206,15 @@ class ReagentReaction {
 	}
 	react(container, multiplier = 1) {
 		for (let [reagent, amount] of Object.entries(this.results))
-			container.c.ReagentHolder.add(reagent, amount * multiplier);
+			{container.c.ReagentHolder.add(reagent, amount * multiplier);}
 		if (!has_component(container, "LivingMob") && this.mix_sound)
-			new Sound(container.server, {
+			{new Sound(container.server, {
 				path: this.mix_sound,
 				volume: 0.8,
 				vary: true,
-			}).emit_from(container);
+			}).emit_from(container);}
 		if (this.mix_message)
-			audible_message(this.mix_message).range(4).emit_from(container);
+			{audible_message(this.mix_message).range(4).emit_from(container);}
 	}
 }
 

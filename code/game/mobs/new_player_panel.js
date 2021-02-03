@@ -60,7 +60,7 @@ class NewPlayerPanel extends Panel {
 	}
 
 	closed() {
-		if (this.latejoin_panel) this.latejoin_panel.close();
+		if (this.latejoin_panel) {this.latejoin_panel.close();}
 		this.client.server.ticker.removeListener(
 			"game_state_changed",
 			this.game_state_changed
@@ -73,7 +73,7 @@ class NewPlayerPanel extends Panel {
 
 	game_state_changed(from, to) {
 		this.send_message({ latejoin: to != "pregame" });
-		if (to == "playing" && this.latejoin_panel) this.latejoin_panel.close();
+		if (to == "playing" && this.latejoin_panel) {this.latejoin_panel.close();}
 	}
 	start_at_changed(from, to) {
 		this.send_message({ start_at: to });

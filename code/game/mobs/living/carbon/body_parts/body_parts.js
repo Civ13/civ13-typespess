@@ -39,7 +39,7 @@ class MobBodyParts extends Component {
 				get: () => {
 					let dam = 0;
 					for (let bp of this.limbs_set)
-						if (bp) dam += bp.c.BodyPart[`${type}_damage`];
+						{if (bp) {dam += bp.c.BodyPart[`${type}_damage`];}}
 					return dam;
 				},
 				affects_health: true,
@@ -55,9 +55,9 @@ class MobBodyParts extends Component {
 						only_organic = false,
 					} = {}
 				) => {
-					if (amt == 0) return;
+					if (amt == 0) {return;}
 					if (this.status_flags & combat_defines.GODMODE && !force)
-						return false;
+						{return false;}
 
 					let abs_amt = Math.abs(amt);
 					let sign_amt = Math.sign(amt);
@@ -85,7 +85,7 @@ class MobBodyParts extends Component {
 						abs_amt -= damage_diff * sign_amt;
 					}
 
-					if (health_event) this.a.c.LivingMob.emit("health_changed");
+					if (health_event) {this.a.c.LivingMob.emit("health_changed");}
 				},
 			};
 			this.a.c.LivingMob.damages[type] = obj;
@@ -137,16 +137,16 @@ class MobBodyParts extends Component {
 				)} is missing!</b></span><br>`;
 				continue;
 			}
-			if (t == "l_arm" || t == "l_leg") l_limbs_missing++;
-			else if (t == "r_arm" || t == "r_leg") r_limbs_missing++;
+			if (t == "l_arm" || t == "l_leg") {l_limbs_missing++;}
+			else if (t == "r_arm" || t == "r_leg") {r_limbs_missing++;}
 			msg += format_html`<b>${t_His} ${parse_zone(t)} is missing!</b><br>`;
 		}
 		if (l_limbs_missing >= 2 && r_limbs_missing == 0)
-			msg += format_html`${t_He} look${this.a.p_s()} all right now.<br>`;
+			{msg += format_html`${t_He} look${this.a.p_s()} all right now.<br>`;}
 		else if (l_limbs_missing == 0 && r_limbs_missing >= 2)
-			msg += format_html`${t_He} really keeps to the left.<br>`;
+			{msg += format_html`${t_He} really keeps to the left.<br>`;}
 		else if (l_limbs_missing >= 2 && r_limbs_missing >= 2)
-			msg += format_html`${t_He} ${this.a.p_do()}n't seem all there.<br>`;
+			{msg += format_html`${t_He} ${this.a.p_do()}n't seem all there.<br>`;}
 		msg += "</span>";
 		to_chat(user, msg);
 	}
@@ -158,16 +158,16 @@ class MobBodyParts extends Component {
 		def_zone = null,
 		blocked = this.run_armor_check(def_zone, "melee")
 	) {
-		if (damage_type != "brute" && damage_type != "burn") return prev();
+		if (damage_type != "brute" && damage_type != "burn") {return prev();}
 		let hit_percent = (100 - blocked) / 100;
-		if (!damage || hit_percent < 0) return false;
+		if (!damage || hit_percent < 0) {return false;}
 		let bp = null;
-		if (has_component(def_zone, "BodyPart")) bp = def_zone;
+		if (has_component(def_zone, "BodyPart")) {bp = def_zone;}
 		else {
-			if (!def_zone) def_zone = random_zone(def_zone);
+			if (!def_zone) {def_zone = random_zone(def_zone);}
 			bp = this.limbs[def_zone];
-			if (!bp) bp = this.limbs.torso;
-			if (!bp) return;
+			if (!bp) {bp = this.limbs.torso;}
+			if (!bp) {return;}
 		}
 		bp.c.BodyPart.receive_damage(damage_type, damage * hit_percent);
 	}
@@ -184,12 +184,12 @@ class MobBodyParts extends Component {
 	}
 
 	check_can_handcuff(prev, user) {
-		if (!prev()) return false;
+		if (!prev()) {return false;}
 		if (!this.limbs.l_arm || !this.limbs.r_arm) {
 			if (user)
-				to_chat`<span class='warning'>The ${this.a} doesn't have two hands...</span>`(
+				{to_chat`<span class='warning'>The ${this.a} doesn't have two hands...</span>`(
 					user
-				);
+				);}
 			return false;
 		}
 		return true;
@@ -231,8 +231,8 @@ class BodyPart extends Component {
 	}
 
 	attach(mob) {
-		if (!has_component(mob, "MobBodyParts")) return false;
-		if (mob.c.MobBodyParts.limbs[this.body_zone]) return false;
+		if (!has_component(mob, "MobBodyParts")) {return false;}
+		if (mob.c.MobBodyParts.limbs[this.body_zone]) {return false;}
 		mob.c.MobBodyParts.limbs[this.body_zone] = this.a;
 		mob.c.MobBodyParts.limbs_set.add(this.a);
 		this.a.loc = mob;
@@ -247,14 +247,14 @@ class BodyPart extends Component {
 	}
 
 	apply_overlays(atom) {
-		if (atom == this.a) this.a.icon_state = "";
+		if (atom == this.a) {this.a.icon_state = "";}
 		atom.overlays[`limb_${this.body_zone}`] = this.get_main_overlay();
 		this.apply_damage_overlays(atom);
 	}
 
 	update_overlays() {
 		this.apply_overlays(this.a);
-		if (this.owner) this.apply_overlays(this.owner);
+		if (this.owner) {this.apply_overlays(this.owner);}
 	}
 
 	apply_damage_overlays(atom) {
@@ -277,7 +277,7 @@ class BodyPart extends Component {
 	}
 
 	detach() {
-		if (!this.owner) return;
+		if (!this.owner) {return;}
 		let mob = this.owner;
 		this.a.loc = mob.fine_loc;
 		this.owner = null;
@@ -300,23 +300,23 @@ class BodyPart extends Component {
 	}
 
 	get_main_overlay() {
-		if (!this.owner) return;
+		if (!this.owner) {return;}
 		let mob = this.owner;
 		let icodir = mob.dir;
 		if (icodir ===1)
-			icodir = 2;
+			{icodir = 2;}
 		else if (icodir ===2)
-			icodir = 1;
+			{icodir = 1;}
 		else if (icodir ===4)
-			icodir = 3;
+			{icodir = 3;}
 		else if (icodir ===8)
-			icodir = 4;
+			{icodir = 4;}
 		let overlay = { icon: `icons/mob/human_body/${this.body_zone}_m/${this.body_zone}_m-dir${icodir}.png` };
 		overlay.icon_state = this.body_zone;
 		if (this.species_id)
-			overlay.icon_state = `${this.species_id}_${overlay.icon_state}`;
+			{overlay.icon_state = `${this.species_id}_${overlay.icon_state}`;}
 		if (this.should_draw_gender)
-			overlay.icon_state += `_${this.body_gender == "female" ? "f" : "m"}`;
+			{overlay.icon_state += `_${this.body_gender == "female" ? "f" : "m"}`;}
 		overlay.icon = `icons/mob/human_body/${overlay.icon_state}/${overlay.icon_state}-dir${icodir}.png`;
 		overlay.color = this.get_color();
 		return overlay;
@@ -336,17 +336,17 @@ class BodyPart extends Component {
 		amount = this.multiply_damage(type, amount);
 
 		let can_inflict = this.max_damage - this.brute_damage - this.burn_damage;
-		if (can_inflict <= 0) return false;
+		if (can_inflict <= 0) {return false;}
 
-		if (type == "brute") this.brute_damage += Math.min(can_inflict, amount);
-		else if (type == "burn") this.burn_damage += Math.min(can_inflict, amount);
+		if (type == "brute") {this.brute_damage += Math.min(can_inflict, amount);}
+		else if (type == "burn") {this.burn_damage += Math.min(can_inflict, amount);}
 
 		if (this.owner) {
 			this.owner.c.LivingMob.emit("damage_changed", type);
-			if (health_event) this.owner.c.LivingMob.emit("health_changed", type);
+			if (health_event) {this.owner.c.LivingMob.emit("health_changed", type);}
 		}
 		this.apply_damage_overlays(this.a);
-		if (this.owner) this.apply_damage_overlays(this.owner);
+		if (this.owner) {this.apply_damage_overlays(this.owner);}
 	}
 
 	heal_damage(
@@ -354,18 +354,18 @@ class BodyPart extends Component {
 		amount,
 		{ only_robotic = false, only_organic = true, health_event = true } = {}
 	) {
-		if (only_robotic && this.is_organic) return;
-		if (only_organic && !this.is_organic) return;
+		if (only_robotic && this.is_organic) {return;}
+		if (only_organic && !this.is_organic) {return;}
 		if (type == "brute")
-			this.brute_damage = Math.max(this.brute_damage - amount, 0);
+			{this.brute_damage = Math.max(this.brute_damage - amount, 0);}
 		if (type == "burn")
-			this.burn_damage = Math.max(this.burn_damage - amount, 0);
+			{this.burn_damage = Math.max(this.burn_damage - amount, 0);}
 		if (this.owner) {
 			this.owner.c.LivingMob.emit("damage_changed", type);
-			if (health_event) this.owner.c.LivingMob.emit("health_changed", type);
+			if (health_event) {this.owner.c.LivingMob.emit("health_changed", type);}
 		}
 		this.apply_damage_overlays(this.a);
-		if (this.owner) this.apply_damage_overlays(this.owner);
+		if (this.owner) {this.apply_damage_overlays(this.owner);}
 	}
 }
 

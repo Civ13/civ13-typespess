@@ -38,17 +38,17 @@ class ReagentHolder extends Component {
 
 	add(reagent, amount, { temp } = {}) {
 		let reagent_name =
-	typeof reagent == "string" ? reagent : reagent.constructor.name;
+	typeof reagent === "string" ? reagent : reagent.constructor.name;
 		return this.assume_reagent(reagent_name).add(amount, {
-			reagent: typeof reagent == "object" ? reagent : null,
+			reagent: typeof reagent === "object" ? reagent : null,
 			temp,
 		});
 	}
 
 	remove(reagent, amount) {
-		if (!reagent) return 0;
-		if (typeof reagent == "string") reagent = this.reagents.get(reagent);
-		if (!reagent) return;
+		if (!reagent) {return 0;}
+		if (typeof reagent === "string") {reagent = this.reagents.get(reagent);}
+		if (!reagent) {return;}
 		return reagent.remove(amount);
 	}
 
@@ -81,7 +81,7 @@ class ReagentHolder extends Component {
 
 	added(reagent, amount) {
 		let reactions = reagent.constructor.reactions;
-		if (!reactions) return;
+		if (!reactions) {return;}
 		for (let [reaction, min_amount] of reactions) {
 			if (amount >= min_amount) {
 				reaction.update(this.a);
@@ -96,7 +96,7 @@ class ReagentHolder extends Component {
 		reagent.reactions.get(reagent) &&
 		reagent.reactions.get(reagent) < reagent.volume
 			)
-				this.held_reactions.delete(reaction);
+				{this.held_reactions.delete(reaction);}
 		}
 		if (reagent.volume <= 0) {
 			this.reagents.delete(reagent.constructor.name);
@@ -111,9 +111,9 @@ class ReagentHolder extends Component {
 	}
 
 	volume_of(reagent) {
-		if (typeof reagent == "string") reagent = this.reagents.get(reagent);
-		if (reagent) return reagent.volume;
-		else return 0;
+		if (typeof reagent === "string") {reagent = this.reagents.get(reagent);}
+		if (reagent) {return reagent.volume;}
+		else {return 0;}
 	}
 
 	get temperature() {
@@ -121,20 +121,20 @@ class ReagentHolder extends Component {
 	}
 	set temperature(val) {
 		let old = this[_temperature];
-		if (val == old) return;
+		if (val == old) {return;}
 		this[_temperature] = val;
 
 		this.emit("temperature_changed", old, val);
 	}
 
 	remove_any(amount = 1) {
-		if (amount <= 0) return 0;
+		if (amount <= 0) {return 0;}
 		let total_transferred = 0;
 
 		let reagents_list = [...this.reagents.values()];
 
 		while (total_transferred < amount) {
-			if (!reagents_list.length) break;
+			if (!reagents_list.length) {break;}
 			let rand_idx = Math.floor(Math.random() * reagents_list.length);
 			let reagent = reagents_list[rand_idx];
 			total_transferred += reagent.remove(amount - total_transferred);
@@ -145,7 +145,7 @@ class ReagentHolder extends Component {
 	}
 
 	remove_all(amount = 1) {
-		if (amount <= 0) return 0;
+		if (amount <= 0) {return 0;}
 		let ratio = amount / this.total_volume;
 		let removed = 0;
 		for (let reagent of this.reagents.values()) {
@@ -167,7 +167,7 @@ class ReagentHolder extends Component {
 	}
 
 	transfer_percent_to(target, percent = 1) {
-		if (!has_component(target, "ReagentHolder")) return 0;
+		if (!has_component(target, "ReagentHolder")) {return 0;}
 		percent = Math.min(percent, 1);
 		percent = Math.min(
 			percent,
@@ -175,7 +175,7 @@ class ReagentHolder extends Component {
 		target.c.ReagentHolder.total_volume) /
 		this.total_volume
 		);
-		if (percent <= 0) return 0;
+		if (percent <= 0) {return 0;}
 		let amount_transferred = 0;
 		for (let reagent of this.reagents.values()) {
 			amount_transferred += target.c.ReagentHolder.add(
@@ -197,8 +197,8 @@ class ReagentHolder extends Component {
 		{ volume_modifier = 1, show_message = true } = {}
 	) {
 		let react_function = "reaction_obj";
-		if (has_component(atom, "CarbonMob")) react_function = "reaction_mob";
-		else if (has_component(atom, "Turf")) react_function = "reaction_turf";
+		if (has_component(atom, "CarbonMob")) {react_function = "reaction_mob";}
+		else if (has_component(atom, "Turf")) {react_function = "reaction_turf";}
 		for (let reagent of this.reagents.values()) {
 			reagent[react_function](atom, {
 				method,
@@ -210,12 +210,12 @@ class ReagentHolder extends Component {
 
 	metabolize(dt = 2) {
 		if (!has_component(this.a, "CarbonMob"))
-			throw new Error(
+			{throw new Error(
 				"Oi! Why are you calling metabolize on something that isn't a mob?"
-			);
+			);}
 
 		for (let [key, reagent] of this.reagents) {
-			if (!this.should_metabolize_reagent(key, reagent)) continue;
+			if (!this.should_metabolize_reagent(key, reagent)) {continue;}
 			if (
 				reagent.overdose_threshold &&
 		reagent.volume >= reagent.overdose_threshold &&
@@ -247,7 +247,7 @@ class ReagentHolder extends Component {
 			this.addiction_tick -= 12;
 			for (let [key, addiction] of [...this.addictions]) {
 				addiction.addiction_stage += dt / 2;
-				if (addiction.addiction_stage < 1) continue;
+				if (addiction.addiction_stage < 1) {continue;}
 				let stage = Math.floor(addiction.addiction_stage / 10) + 1;
 				if (stage > 4) {
 					to_chat`<span class='notice'>You feel like you've gotten over your need for ${addiction.name}.</span>`(
@@ -263,7 +263,7 @@ class ReagentHolder extends Component {
 	}
 
 	should_metabolize_reagent(key /*, reagent*/) {
-		if (key == "Blood" && this.a.c.CarbonMob.uses_blood) return false;
+		if (key == "Blood" && this.a.c.CarbonMob.uses_blood) {return false;}
 		return true;
 	}
 
@@ -297,7 +297,7 @@ class ReagentHolder extends Component {
 			let rg = reagent.color[1];
 			let rb = reagent.color[2];
 			let ra = reagent.color[3];
-			if (ra == null) ra = 1;
+			if (ra == null) {ra = 1;}
 			let m = ra * reagent.volume;
 			r += rr * m;
 			g += rg * m;
@@ -314,7 +314,7 @@ class ReagentHolder extends Component {
 	}
 
 	can_consume(eater /*, user*/) {
-		if (!has_component(eater, "CarbonMob")) return false;
+		if (!has_component(eater, "CarbonMob")) {return false;}
 		// TODO mouth cover check
 		return true;
 	}
@@ -342,7 +342,7 @@ function add_items(mod) {
 	if (mod.reagents) {
 		for (let key in mod.reagents) {
 			if (reagent_types[key])
-				throw new Error(`Reagent meta '${key}' defined more than once!`);
+				{throw new Error(`Reagent meta '${key}' defined more than once!`);}
 			reagent_types[key] = mod.reagents[key];
 		}
 	}
@@ -362,18 +362,18 @@ add_items(require("./recipes/recipe_importer.js"));
 for (let reaction of reagent_reactions) {
 	let to_cache = {};
 	for (let [req, amount] of Object.entries(reaction.required_reagents)) {
-		if (!to_cache[req]) to_cache[req] = 0;
+		if (!to_cache[req]) {to_cache[req] = 0;}
 		to_cache[req] = Math.max(to_cache[req], amount);
 	}
 	for (let [reagent_name, amount] of Object.entries(to_cache)) {
 		let reagent_type = reagent_types[reagent_name];
 		if (!reagent_type)
-			throw new Error(
+			{throw new Error(
 				`Reaction ${JSON.stringify(
 					reaction.results
 				)} references unknown reagent ${reagent_name}`
-			);
-		if (!reagent_type.reactions) reagent_type.reactions = new Map();
+			);}
+		if (!reagent_type.reactions) {reagent_type.reactions = new Map();}
 		reagent_type.reactions.set(reaction, amount);
 	}
 }

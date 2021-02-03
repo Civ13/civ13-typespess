@@ -26,11 +26,11 @@ class Tooltip extends Component {
 
 	mouseout() {
 		if (this.alert_div.parentNode && this.alert_div.parentNode.parentNode)
-			this.alert_div.parentNode.parentNode.removeChild(
+			{this.alert_div.parentNode.parentNode.removeChild(
 				this.alert_div.parentNode
-			);
+			);}
 		if (this.alert_div.parentNode)
-			this.alert_div.parentNode.removeChild(this.alert_div);
+			{this.alert_div.parentNode.removeChild(this.alert_div);}
 	}
 
 	mousemove(e) {

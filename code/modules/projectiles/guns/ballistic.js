@@ -52,7 +52,7 @@ class BallisticGun extends Component {
 	}
 
 	chamber_round() {
-		if (this.a.c.Gun.chambered || !this.magazine) return;
+		if (this.a.c.Gun.chambered || !this.magazine) {return;}
 		else if (this.magazine.c.AmmoBox.ammo_count()) {
 			this.a.c.Gun.chambered = this.magazine.c.AmmoBox.get_round();
 			this.a.c.Gun.chambered.loc = this.a;
@@ -86,11 +86,11 @@ class BallisticGun extends Component {
 				}
 
 				if (this.reload_sound)
-					new Sound(this.a.server, {
+					{new Sound(this.a.server, {
 						path: this.reload_sound,
 						volume: 0.6,
 						vary: true,
-					}).emit_from(user);
+					}).emit_from(user);}
 				this.magazine = item;
 				item.loc = this.a;
 				this.chamber_round();
@@ -132,8 +132,8 @@ class BallisticGun extends Component {
 	update_icon(prev) {
 		prev();
 		let state = this.a.template.vars.icon_state;
-		if (this.empty_state && !this.a.c.Gun.chambered) state += "-e";
-		if (this.a.c.Gun.suppressed) state += "-suppressed";
+		if (this.empty_state && !this.a.c.Gun.chambered) {state += "-e";}
+		if (this.a.c.Gun.suppressed) {state += "-suppressed";}
 		this.a.icon_state = state;
 	}
 	examine(prev, user) {
@@ -146,8 +146,8 @@ class BallisticGun extends Component {
 
 	get_ammo({ count_chambered = true } = {}) {
 		let boolets = 0;
-		if (this.a.c.Gun.chambered && count_chambered) boolets++;
-		if (this.magazine) boolets += this.magazine.c.AmmoBox.ammo_count();
+		if (this.a.c.Gun.chambered && count_chambered) {boolets++;}
+		if (this.magazine) {boolets += this.magazine.c.AmmoBox.ammo_count();}
 		return boolets;
 	}
 }

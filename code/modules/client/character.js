@@ -49,13 +49,13 @@ class CharacterPreferences {
 	}
 	randomize_name(type) {
 		if (!type || type == "human")
-			this.name = CharacterPreferences.generate_human_name(this.gender);
+			{this.name = CharacterPreferences.generate_human_name(this.gender);}
 	}
 
 	static generate_human_name(gender) {
 		let first_list = first_names;
-		if (gender == "male") first_list = first_names_male;
-		if (gender == "female") first_list = first_names_female;
+		if (gender == "male") {first_list = first_names_male;}
+		if (gender == "female") {first_list = first_names_female;}
 		let first_name = _.sample(first_list);
 		let last_name = _.sample(last_names);
 		return `${first_name} ${last_name}`;
@@ -65,8 +65,8 @@ class CharacterPreferences {
 		t_in,
 		{ allow_numbers = false, max_length = 42, trim = true } = {}
 	) {
-		if (typeof t_in != "string") return;
-		if (t_in.length > max_length) return;
+		if (typeof t_in !== "string") {return;}
+		if (t_in.length > max_length) {return;}
 		let number_of_alphanumberic = 0;
 		let last_char_group = 0;
 		let t_out = "";
@@ -86,30 +86,30 @@ class CharacterPreferences {
 				number_of_alphanumberic++;
 				last_char_group = 4;
 			} else if (chr >= "0" && chr <= "9") {
-				if (!last_char_group) continue;
-				if (!allow_numbers) continue;
+				if (!last_char_group) {continue;}
+				if (!allow_numbers) {continue;}
 				t_out += chr;
 				number_of_alphanumberic++;
 				last_char_group = 3;
 			} else if ("'-.".includes(chr)) {
-				if (!last_char_group) continue;
+				if (!last_char_group) {continue;}
 				t_out += chr;
 				last_char_group = 2;
 			} else if ("~|@:#$%&*+".includes(chr)) {
-				if (!last_char_group) continue;
-				if (!allow_numbers) continue;
+				if (!last_char_group) {continue;}
+				if (!allow_numbers) {continue;}
 				t_out += chr;
 				last_char_group = 3;
 			} else if (chr == " ") {
-				if (last_char_group <= 1) continue;
+				if (last_char_group <= 1) {continue;}
 				t_out += chr;
 				last_char_group = 1;
 			} else {
 				return;
 			}
 		}
-		if (trim) t_out = t_out.trim();
-		if (number_of_alphanumberic < 2) return;
+		if (trim) {t_out = t_out.trim();}
+		if (number_of_alphanumberic < 2) {return;}
 		if (
 			[
 				"space",
@@ -121,7 +121,7 @@ class CharacterPreferences {
 				"inactive ai",
 			].includes(t_out.toLowerCase())
 		)
-			return;
+			{return;}
 		return t_out;
 	}
 

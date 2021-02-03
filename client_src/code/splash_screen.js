@@ -16,7 +16,7 @@ class SplashScreen extends Component {
 
 	on_render_tick(prev) {
 		prev();
-		if (this.fading) this.a.mark_dirty();
+		if (this.fading) {this.a.mark_dirty();}
 	}
 
 	draw(prev, ctx, timestamp) {

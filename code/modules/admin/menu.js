@@ -24,7 +24,7 @@ class AdminPanel extends Panel {
 		this.client.holder.has_permission(tool.perm_required)
 			) {
 				let func = tool.buttons[msg.button];
-				if (func) func(this.client);
+				if (func) {func(this.client);}
 			}
 		}
 	}
@@ -36,7 +36,7 @@ class AdminPanel extends Panel {
 				!this.client.holder ||
 		!this.client.holder.has_permission(tool.perm_required)
 			)
-				continue;
+				{continue;}
 			tools[key] = {
 				name: tool.name,
 				desc: tool.desc,
@@ -56,7 +56,7 @@ importModule(require("./unsorted_tools.js"));
 function importModule(mod) {
 	if (mod.admin_tools) {
 		for (let [key, tool] of Object.entries(mod.admin_tools)) {
-			if (admin_tools[key]) console.warn(`Admin tool ${key} already exists!`);
+			if (admin_tools[key]) {console.warn(`Admin tool ${key} already exists!`);}
 			admin_tools[key] = tool;
 		}
 	}
@@ -65,7 +65,7 @@ function importModule(mod) {
 module.exports.now = (server) => {
 	server.on("client_login", (client) => {
 		client.on("keydown", (e) => {
-			if (!e) return;
+			if (!e) {return;}
 			if (e.which === 115) {
 				if (client.holder && !client.holder.admin_menu) {
 					let menu = new AdminPanel(client);

@@ -44,7 +44,7 @@ const traverseDir = (dir) =>
 				const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
 				let new_nrec = [];
 				for(let i in nrec)
-					new_nrec.push(i);
+					{new_nrec.push(i);}
 				const nrec_parsed = new ReagentReaction(new_nrec);
 				module.exports.reagent_reactions.push(nrec_parsed);
 			}
@@ -55,7 +55,7 @@ for (const f of traverseDir("./code/")) {
 		const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
 		let new_nrec = [];
 		for(let i in nrec)
-			new_nrec.push(i);
+			{new_nrec.push(i);}
 		const nrec_parsed = new ReagentReaction(new_nrec);
 		module.exports.reagent_reactions.push(nrec_parsed);
 	}

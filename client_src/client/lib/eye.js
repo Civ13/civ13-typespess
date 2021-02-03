@@ -9,7 +9,7 @@ class Eye extends EventEmitter {
 		this.planes = new Map();
 		this.atoms = new Set();
 		this.last_planes = new WeakMap();
-		if (client.eyes[id]) throw new Error(`duplicate plane of id ${id}`);
+		if (client.eyes[id]) {throw new Error(`duplicate plane of id ${id}`);}
 		client.eyes[id] = this;
 
 		for (let atom of client.atoms) {
@@ -33,7 +33,7 @@ class Eye extends EventEmitter {
 	}
 
 	draw(timestamp) {
-		if (!this.canvas) return;
+		if (!this.canvas) {return;}
 		let ctx = this.canvas.getContext("2d");
 		ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 		for (let atom of this.atoms) {
@@ -41,8 +41,8 @@ class Eye extends EventEmitter {
 			let last_plane = this.last_planes.get(atom);
 			let plane = atom.get_plane();
 			if (last_plane != plane) {
-				if (last_plane) last_plane.atoms.delete(atom);
-				if (plane) plane.atoms.add(atom);
+				if (last_plane) {last_plane.atoms.delete(atom);}
+				if (plane) {plane.atoms.add(atom);}
 				this.last_planes.set(atom, plane);
 			}
 		}
@@ -52,7 +52,7 @@ class Eye extends EventEmitter {
 			plane.draw(ctx, timestamp);
 		}
 		if (this.last_mouse_event)
-			this.handle_mousemove(this.last_mouse_event, timestamp);
+			{this.handle_mousemove(this.last_mouse_event, timestamp);}
 	}
 	get_world_draw_pos(x, y, timestamp) {
 		let { dispx, dispy } = (this.origin && this.origin.get_displacement && this.origin.get_displacement(timestamp)) || { dispx: 0, dispy: 0 };
@@ -79,21 +79,21 @@ class Eye extends EventEmitter {
 		for (let plane of [...this.planes.values()].sort((a, b) => {
 			return b.z_index - a.z_index;
 		})) {
-			if (plane.no_click) continue;
+			if (plane.no_click) {continue;}
 			let [originx, originy] = plane.calculate_origin(timestamp);
 			let [offsetx, offsety] = plane.calculate_composite_offset(timestamp);
 			let loc = `[${Math.floor((clickX - offsetx) / 32 + originx)},${Math.floor(
 				(-clickY + plane.canvas.height + offsety) / 32 + originy
 			)}]`;
 			let tile = plane.tiles.get(loc);
-			if (!tile) continue; //there's nothing there.
+			if (!tile) {continue;} //there's nothing there.
 			for (let atom of [...tile].sort((a, b) => {
 				return Atom.atom_comparator(b, a);
 			})) {
 				if (atom.mouse_opacity == undefined) {
 					atom.mouse_opacity = 1;
 				}
-				if (atom.mouse_opacity == 0) continue;
+				if (atom.mouse_opacity == 0) {continue;}
 				var { dispx, dispy } = atom.get_displacement(timestamp);
 				dispx = Math.round(dispx * 32) / 32;
 				dispy = Math.round(dispy * 32) / 32;
@@ -125,7 +125,7 @@ class Eye extends EventEmitter {
 					}
 				}
 			}
-			if (clickedAtom) break;
+			if (clickedAtom) {break;}
 		}
 		let [world_x, world_y] = this.screen_to_world(clickX, clickY, timestamp);
 		return {
@@ -146,19 +146,19 @@ class Eye extends EventEmitter {
 		var start_meta = this.get_mouse_target(e);
 		var start_time = performance.now();
 		var mouseup = (e2) => {
-			if (e2.button != e.button) return;
+			if (e2.button != e.button) {return;}
 			document.removeEventListener("mouseup", mouseup);
 			var end_time = performance.now();
 			var end_meta = this.get_mouse_target(e2);
 			if (end_time - start_time < 200 || end_meta.atom == start_meta.atom) {
 				if (this.client.connection)
-					this.client.connection.send(
+					{this.client.connection.send(
 						JSON.stringify({
 							click_on: Object.assign({}, start_meta, {
 								atom: start_meta && start_meta.atom && start_meta.atom.network_id,
 							}),
 						})
-					);
+					);}
 				return;
 			}
 			this.client.connection.send(
@@ -181,7 +181,7 @@ class Eye extends EventEmitter {
 		this.last_mouse_event = e;
 		let meta = this.get_mouse_target(e);
 		let old = this.mouse_over_atom;
-		if (this.mouse_over_atom) this.mouse_over_atom.emit("mouseout");
+		if (this.mouse_over_atom) {this.mouse_over_atom.emit("mouseout");}
 		this.mouse_over_atom = meta.atom;
 		if (this.mouse_over_atom) {
 			this.mouse_over_atom.emit(
@@ -198,14 +198,14 @@ class Eye extends EventEmitter {
 		}
 		this.mouse_over_atom = null;
 		this.last_mouse_event = null;
-		if (old) this.emit("mouse_over_atom_changed", old, null);
+		if (old) {this.emit("mouse_over_atom_changed", old, null);}
 	}
 
 	handle_mousemove(e, timestamp = performance.now()) {
 		this.last_mouse_event = e;
 		let meta = this.get_mouse_target(e, timestamp);
 		if (meta.atom != this.mouse_over_atom) {
-			if (this.mouse_over_atom) this.mouse_over_atom.emit("mouseout");
+			if (this.mouse_over_atom) {this.mouse_over_atom.emit("mouseout");}
 			let old = this.mouse_over_atom;
 			this.mouse_over_atom = meta.atom;
 			if (this.mouse_over_atom) {
@@ -217,10 +217,10 @@ class Eye extends EventEmitter {
 			this.emit("mouse_over_atom_changed", old, this.mouse_over_atom);
 		} else {
 			if (this.mouse_over_atom)
-				this.mouse_over_atom.emit(
+				{this.mouse_over_atom.emit(
 					"mousemove",
 					Object.assign(meta, { original_event: e })
-				);
+				);}
 		}
 	}
 }
@@ -312,7 +312,7 @@ class Plane {
 					) {
 						let loc = `[${x},${y}]`;
 						let set = this.tiles.get(loc);
-						if (set) set.delete(atom);
+						if (set) {set.delete(atom);}
 					}
 				}
 				this.last_draw.delete(atom);
@@ -345,7 +345,7 @@ class Plane {
 							) {
 								let loc = `[${x},${y}]`;
 								let set = this.tiles.get(loc);
-								if (set) set.delete(atom);
+								if (set) {set.delete(atom);}
 							}
 						}
 						for (
@@ -384,7 +384,7 @@ class Plane {
 						) {
 							let loc = `[${x},${y}]`;
 							let set = this.tiles.get(loc);
-							if (set) set.delete(atom);
+							if (set) {set.delete(atom);}
 						}
 					}
 					this.last_draw.delete(atom);
@@ -411,12 +411,12 @@ class Plane {
 		for (let atom of this.atoms) {
 			let add_to_tiles = false;
 			if (this.last_draw.has(atom)) {
-				if (!this.dirty_atoms.has(atom)) continue;
+				if (!this.dirty_atoms.has(atom)) {continue;}
 			} else {
 				add_to_tiles = true;
 			}
 			let bounds = atom.get_transformed_bounds(timestamp);
-			if (!bounds) continue;
+			if (!bounds) {continue;}
 			let { dispx, dispy } = atom.get_displacement(timestamp);
 			dispx = Math.round(dispx * 32) / 32;
 			dispy = Math.round(dispy * 32) / 32;
@@ -464,9 +464,9 @@ class Plane {
 		}
 
 		for (let atom of [...this.atoms].sort(Atom.atom_comparator)) {
-			if (!atom) continue;
+			if (!atom) {continue;}
 			let bounds = atom.get_transformed_bounds(timestamp);
-			if (!bounds) continue;
+			if (!bounds) {continue;}
 			let { dispx, dispy } = atom.get_displacement(timestamp);
 			dispx = Math.round(dispx * 32) / 32;
 			dispy = Math.round(dispy * 32) / 32;
@@ -488,9 +488,9 @@ class Plane {
 						break;
 					}
 				}
-				if (should_draw) break;
+				if (should_draw) {break;}
 			}
-			if (!should_draw) continue;
+			if (!should_draw) {continue;}
 
 			dispx -= originx;
 			dispy -= originy;

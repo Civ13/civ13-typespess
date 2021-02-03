@@ -103,7 +103,7 @@ class CarbonMob extends Component.Networked {
 	}
 
 	update_stat() {
-		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) return;
+		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {return;}
 		let health = this.a.c.LivingMob.health;
 		if (this.a.c.LivingMob.stat != combat_defines.DEAD) {
 			if (health <= combat_defines.HEALTH_THRESHOLD_DEAD) {
@@ -128,7 +128,7 @@ class CarbonMob extends Component.Networked {
 
 	update_health_hud() {
 		let health_hud = this.a.c.Eye.screen.health;
-		if (!health_hud) return;
+		if (!health_hud) {return;}
 		let health =
 	this.a.c.LivingMob.health - this.a.c.LivingMob.get_damage("stamina");
 		let max_health = this.a.c.LivingMob.max_health;
@@ -164,17 +164,17 @@ class CarbonMob extends Component.Networked {
 		let health = this.a.c.LivingMob.health;
 		if (health <= combat_defines.HEALTH_THRESHOLD_CRIT) {
 			let severity = Math.min(Math.max(Math.floor(-health * 0.1), 0), 10);
-			if (health <= -95) severity = 10;
+			if (health <= -95) {severity = 10;}
 			if (!this.a.c.LivingMob.in_full_crit) {
 				let visionseverity = Math.min(
 					Math.max(Math.floor(-health / 4) + 4, 0),
 					10
 				);
 				if (!this.a.c.Eye.screen.crit_vision)
-					this.a.c.Eye.screen.crit_vision = new Atom(
+					{this.a.c.Eye.screen.crit_vision = new Atom(
 						this.a.server,
 						"screen_crit_vision"
-					);
+					);}
 				this.a.c.Eye.screen.crit_vision.icon_state = `oxydamageoverlay${visionseverity}`;
 			} else {
 				if (this.a.c.Eye.screen.crit_vision) {
@@ -183,7 +183,7 @@ class CarbonMob extends Component.Networked {
 				}
 			}
 			if (!this.a.c.Eye.screen.crit)
-				this.a.c.Eye.screen.crit = new Atom(this.a.server, "screen_crit");
+				{this.a.c.Eye.screen.crit = new Atom(this.a.server, "screen_crit");}
 			this.a.c.Eye.screen.crit.icon_state = `passage${severity}`;
 		} else {
 			if (this.a.c.Eye.screen.crit) {
@@ -199,9 +199,9 @@ class CarbonMob extends Component.Networked {
 		let oxyloss = this.a.c.LivingMob.get_damage("oxy");
 		if (oxyloss) {
 			let severity = Math.max(Math.floor(oxyloss / 10), 0);
-			if (oxyloss >= 45) severity = 7;
+			if (oxyloss >= 45) {severity = 7;}
 			if (!this.a.c.Eye.screen.oxy)
-				this.a.c.Eye.screen.oxy = new Atom(this.a.server, "screen_oxy");
+				{this.a.c.Eye.screen.oxy = new Atom(this.a.server, "screen_oxy");}
 			this.a.c.Eye.screen.oxy.icon_state = `oxydamageoverlay${severity}`;
 		} else {
 			if (this.a.c.Eye.screen.oxy) {
@@ -219,7 +219,7 @@ class CarbonMob extends Component.Networked {
 				severity = Math.min(Math.floor(damage / 15) + 1, 6);
 			}
 			if (!this.a.c.Eye.screen.brute)
-				this.a.c.Eye.screen.brute = new Atom(this.a.server, "screen_brute");
+				{this.a.c.Eye.screen.brute = new Atom(this.a.server, "screen_brute");}
 			this.a.c.Eye.screen.brute.icon_state = `/brutedamageoverlay${severity}`;
 		} else {
 			if (this.a.c.Eye.screen.brute) {
@@ -232,7 +232,7 @@ class CarbonMob extends Component.Networked {
 	movement_delay(prev) {
 		let delay = prev();
 		if (this.a.c.LivingMob.stat == combat_defines.SOFT_CRIT)
-			delay += combat_defines.SOFTCRIT_ADD_SLOWDOWN;
+			{delay += combat_defines.SOFTCRIT_ADD_SLOWDOWN;}
 		let health_deficiency =
 	100 -
 	this.a.c.LivingMob.health +
@@ -248,7 +248,7 @@ class CarbonMob extends Component.Networked {
 	}
 	set lying_counter(val) {
 		let old = this[_lying_counter];
-		if (old == val) return;
+		if (old == val) {return;}
 		this[_lying_counter] = val;
 		this.update_lying(old, val);
 	}
@@ -266,12 +266,12 @@ class CarbonMob extends Component.Networked {
 		let old = this.lying;
 		this.lying = !!this[_lying_counter] && this.a.loc && this.a.loc.is_base_loc;
 		if (has_component(this.a, "MobInventory")) {
-			if (this.lying && !old) this.a.c.MobInventory.nohold_counter++;
-			else if (old && !this.lying) this.a.c.MobInventory.nohold_counter--;
+			if (this.lying && !old) {this.a.c.MobInventory.nohold_counter++;}
+			else if (old && !this.lying) {this.a.c.MobInventory.nohold_counter--;}
 		}
 		if (has_component(this.a, "MobInteract")) {
-			if (this.lying && !old) this.a.c.MobInteract.nointeract_counter++;
-			else if (old && !this.lying) this.a.c.MobInteract.nointeract_counter--;
+			if (this.lying && !old) {this.a.c.MobInteract.nointeract_counter++;}
+			else if (old && !this.lying) {this.a.c.MobInteract.nointeract_counter--;}
 		}
 	}
 
@@ -296,13 +296,13 @@ class CarbonMob extends Component.Networked {
 		// blood in there as another reagent type. Makes more sense, and your syringes will actually
 		// pull out the other reagents in your blood. And you'll actually be able to get drunk
 		// by drinking a drunk person's blood. (please don't try this at home)
-		if (!this.uses_blood) return; // fuck off we have no blood here
+		if (!this.uses_blood) {return;} // fuck off we have no blood here
 		let blood_volume = this.a.c.ReagentHolder.volume_of("Blood");
 		if (blood_volume < mob_defines.BLOOD_VOLUME_SAFE) {
 			let word = _.sample(["dizzy", "woozy", "faint"]);
 			if (blood_volume >= mob_defines.BLOOD_VOLUME_OKAY) {
 				if (Math.random() < 0.05)
-					to_chat`<span class='warning'>You feel ${word}.</span>`(this.a);
+					{to_chat`<span class='warning'>You feel ${word}.</span>`(this.a);}
 				this.a.c.LivingMob.adjust_damage(
 					"oxy",
 					Math.round((mob_defines.BLOOD_VOLUME_NORMAL - blood_volume) * 0.01)
@@ -332,14 +332,14 @@ class CarbonMob extends Component.Networked {
 		if (has_component(this.a, "MobBodyParts")) {
 			for (let limb of this.a.c.MobBodyParts.limbs_set) {
 				if (limb.c.BodyPart.brute_damage > 20)
-					new_bleed_rate += limb.c.BodyPart.brute_damage * 0.013;
+					{new_bleed_rate += limb.c.BodyPart.brute_damage * 0.013;}
 			}
 		} else {
 			if (this.a.c.LivingMob.get_damage("brute") > 20)
-				new_bleed_rate += this.a.c.LivingMob.get_damage("brute") * 0.013;
+				{new_bleed_rate += this.a.c.LivingMob.get_damage("brute") * 0.013;}
 		}
 		this.bleed_rate = Math.max(this.bleed_rate - 0.5, new_bleed_rate);
-		if (this.bleed_rate > 0) this.bleed(this.bleed_rate);
+		if (this.bleed_rate > 0) {this.bleed(this.bleed_rate);}
 	}
 
 	bleed(amt) {
@@ -372,8 +372,8 @@ class CarbonMob extends Component.Networked {
 	}
 
 	add_splatter_floor({ ref = this.a, small_drip = false } = {}) {
-		if (this.get_blood_id() != "blood") return;
-		if (!ref || !ref.base_mover || !ref.base_mover.loc) return;
+		if (this.get_blood_id() != "blood") {return;}
+		if (!ref || !ref.base_mover || !ref.base_mover.loc) {return;}
 
 		let splatter;
 		if (small_drip) {
@@ -400,14 +400,14 @@ class CarbonMob extends Component.Networked {
 		let t_has = this.a.p_have();
 		let t_is = this.a.p_are();
 		if (has_component(this.a, "MobInventory"))
-			this.a.c.MobInventory.examine_slots(user);
+			{this.a.c.MobInventory.examine_slots(user);}
 		let appears_dead = false;
 		if (this.a.c.LivingMob.stat == combat_defines.DEAD) {
 			appears_dead = true;
 			if (this.a.c.LivingMob.suiciding)
-				to_chat`<span class='warning'>${t_He} appear${this.a.p_s()} to have commited suicide... there is no hope of recovery.</span>`(
+				{to_chat`<span class='warning'>${t_He} appear${this.a.p_s()} to have commited suicide... there is no hope of recovery.</span>`(
 					user
-				);
+				);}
 			let departed = "";
 			if (!this.a.c.Mob.key) {
 				let foundghost = false;
@@ -419,70 +419,70 @@ class CarbonMob extends Component.Networked {
 						}
 					}
 				}
-				if (!foundghost) departed = ` and ${t_his} soul has departed`;
+				if (!foundghost) {departed = ` and ${t_his} soul has departed`;}
 			}
 			to_chat`<span class='deadsay'>${t_He} ${t_is} limp and unresponsive; there are no signs of life${departed}...</span>`(
 				user
 			);
 		}
 		if (has_component(this.a, "MobBodyParts"))
-			this.a.c.MobBodyParts.examine_limbs(user);
+			{this.a.c.MobBodyParts.examine_limbs(user);}
 		let bruteloss = this.a.c.LivingMob.get_damage("brute");
 		let burnloss = this.a.c.LivingMob.get_damage("burn");
 		let cloneloss = this.a.c.LivingMob.get_damage("clone");
 		if (bruteloss)
-			if (bruteloss < 30)
-				to_chat`<span class='warning'>${t_He} ${t_has} minor bruising.</span>`(
+			{if (bruteloss < 30)
+				{to_chat`<span class='warning'>${t_He} ${t_has} minor bruising.</span>`(
 					user
-				);
+				);}
 			else
-				to_chat`<span class='warning'><b>${t_He} ${t_has} severe bruising!</b></span>`(
+				{to_chat`<span class='warning'><b>${t_He} ${t_has} severe bruising!</b></span>`(
 					user
-				);
+				);}}
 		if (burnloss)
-			if (burnloss < 30)
-				to_chat`<span class='warning'>${t_He} ${t_has} minor burns.</span>`(
+			{if (burnloss < 30)
+				{to_chat`<span class='warning'>${t_He} ${t_has} minor burns.</span>`(
 					user
-				);
+				);}
 			else
-				to_chat`<span class='warning'><b>${t_He} ${t_has} severe burns!</b></span>`(
+				{to_chat`<span class='warning'><b>${t_He} ${t_has} severe burns!</b></span>`(
 					user
-				);
+				);}}
 		if (cloneloss)
-			if (cloneloss < 30)
-				to_chat`<span class='warning'>${t_He} ${t_has} minor cellular damage.</span>`(
+			{if (cloneloss < 30)
+				{to_chat`<span class='warning'>${t_He} ${t_has} minor cellular damage.</span>`(
 					user
-				);
+				);}
 			else
-				to_chat`<span class='warning'><b>${t_He} ${t_has} severe cellular damage!</b></span>`(
+				{to_chat`<span class='warning'><b>${t_He} ${t_has} severe cellular damage!</b></span>`(
 					user
-				);
+				);}}
 
 		if (
 			this.uses_blood &&
 	this.a.c.ReagentHolder.volume_of("Blood") < mob_defines.BLOOD_VOLUME_SAFE
 		)
-			to_chat`<span class='warning'>${t_He} ${t_has} pale skin.</span>`(user);
+			{to_chat`<span class='warning'>${t_He} ${t_has} pale skin.</span>`(user);}
 
 		if (!appears_dead) {
 			if (this.a.c.LivingMob.stat == combat_defines.UNCONSCIOUS)
-				to_chat`<span class='info'>${t_He} ${t_is}n't responding to anything around ${t_him} and seem${this.a.p_s()} to be asleep.</span>`(
+				{to_chat`<span class='info'>${t_He} ${t_is}n't responding to anything around ${t_him} and seem${this.a.p_s()} to be asleep.</span>`(
 					user
-				);
+				);}
 			else {
 				if (this.a.c.LivingMob.in_crit)
-					to_chat`<span class='info'>${t_He} ${t_is} barely conscious.</span>`(
+					{to_chat`<span class='info'>${t_He} ${t_is} barely conscious.</span>`(
 						user
-					);
+					);}
 			}
 			if (!this.a.c.Mob.key)
-				to_chat`<span class='deadsay'>${t_He} ${t_is} totally catatonic. The stresses of life in deep space must have been too much for ${t_him}. Any recovery is unlikely.</span>`(
+				{to_chat`<span class='deadsay'>${t_He} ${t_is} totally catatonic. The stresses of life in deep space must have been too much for ${t_him}. Any recovery is unlikely.</span>`(
 					user
-				);
+				);}
 			else if (!this.a.c.Mob.client)
-				to_chat`<span class='info'>${t_He} ${t_has} a blank, absent-minded stare and appears completely unresponsive to anything. ${t_He} may snap out of it soon.</span>`(
+				{to_chat`<span class='info'>${t_He} ${t_has} a blank, absent-minded stare and appears completely unresponsive to anything. ${t_He} may snap out of it soon.</span>`(
 					user
-				);
+				);}
 		}
 		to_chat`<span class='info'>*---------*</span>`(user);
 	}

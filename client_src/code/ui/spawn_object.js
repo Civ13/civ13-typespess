@@ -14,8 +14,8 @@ class SpawnObjectPanel {
 			let term = e.target.value;
 			for (let item of this.panel.$$(".template-entry")) {
 				if (item.dataset.searchString.includes(term))
-					item.style.display = "block";
-				else item.style.display = "none";
+					{item.style.display = "block";}
+				else {item.style.display = "none";}
 			}
 		});
 		this.panel.content_obj.addEventListener("click", (e) => {

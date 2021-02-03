@@ -10,7 +10,7 @@ class Knockdown extends StatusEffect.Timed {
 			this.mob.c.LivingMob.nomove_counter++;
 			this.mob.c.LivingMob.nointeract_counter++;
 			if (has_component(this.mob, "CarbonMob"))
-				this.mob.c.CarbonMob.lying_counter++;
+				{this.mob.c.CarbonMob.lying_counter++;}
 		}
 	}
 
@@ -20,7 +20,7 @@ class Knockdown extends StatusEffect.Timed {
 			this.mob.c.LivingMob.nomove_counter--;
 			this.mob.c.LivingMob.nointeract_counter--;
 			if (has_component(this.mob, "CarbonMob"))
-				this.mob.c.CarbonMob.lying_counter--;
+				{this.mob.c.CarbonMob.lying_counter--;}
 		}
 		super.unapply();
 	}
@@ -29,12 +29,12 @@ class Knockdown extends StatusEffect.Timed {
 class Unconscious extends StatusEffect.Timed {
 	apply_to(mob, props) {
 		super.apply_to(mob, props);
-		if (this.mob) this.mob.c.LivingMob.update_stat();
+		if (this.mob) {this.mob.c.LivingMob.update_stat();}
 	}
 
 	unapply() {
 		super.unapply();
-		if (this.mob) this.mob.c.LivingMob.update_stat();
+		if (this.mob) {this.mob.c.LivingMob.update_stat();}
 	}
 }
 

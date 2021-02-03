@@ -34,7 +34,7 @@ class LightingObject extends Component {
 			this.random_angle_offset = Math.random();
 			this.dirty = true;
 		}
-		if (this.dirty) this.a.mark_dirty();
+		if (this.dirty) {this.a.mark_dirty();}
 
 		this.last_color = this.color;
 		this.last_radius = this.radius;
@@ -55,7 +55,7 @@ class LightingObject extends Component {
 		if (
 			this.atom.screen_loc_x != null || this.radius !== +this.radius || !this.enabled
 		)
-			return;
+			{return;}
 
 		if (this.dirty) {
 			this.last_resolution = this.a.client.soft_shadow_resolution;
@@ -70,7 +70,7 @@ class LightingObject extends Component {
 			var { dispx, dispy } = this.atom.get_displacement(timestamp);
 			dispx = Math.round(dispx * 32) / 32;
 			dispy = Math.round(dispy * 32) / 32;
-			if (dispx != +dispx || dispy != +dispy) return;
+			if (dispx != +dispx || dispy != +dispy) {return;}
 
 			let sample_points = [];
 			if (
@@ -115,11 +115,11 @@ class LightingObject extends Component {
 					wall.used_horizontally = false;
 					wall.used_vertically = false;
 					if (wall.x1 < 0 && wall.y1 < 0 && wall.x2 > 0 && wall.y2 > 0)
-						continue;
+						{continue;}
 					let hdist = Math.min(Math.abs(wall.x1), Math.abs(wall.x2));
 					let vdist = Math.min(Math.abs(wall.y1), Math.abs(wall.y2));
-					if (wall.x1 <= 0 && wall.x2 >= 0) hdist = 0;
-					if (wall.y1 <= 0 && wall.y2 >= 0) vdist = 0;
+					if (wall.x1 <= 0 && wall.x2 >= 0) {hdist = 0;}
+					if (wall.y1 <= 0 && wall.y2 >= 0) {vdist = 0;}
 					wall.dist = hdist + vdist;
 					walls.push(wall);
 				}
@@ -150,11 +150,11 @@ class LightingObject extends Component {
 				(wall1.x1 == wall2.x2 || wall1.x2 == wall2.x1))
 						) {
 							if (wall1.x1 == wall2.x1 || wall1.x2 == wall2.x2) {
-								if (wall2.used_vertically) continue;
+								if (wall2.used_vertically) {continue;}
 								wall2.used_vertically = true;
 							}
 							if (wall1.y1 == wall2.y1 || wall1.y2 == wall2.y2) {
-								if (wall2.used_horizontally) continue;
+								if (wall2.used_horizontally) {continue;}
 								wall2.used_horizontally = true;
 							}
 							wall1.x1 = Math.min(wall1.x1, wall2.x1);
@@ -167,7 +167,7 @@ class LightingObject extends Component {
 
 				bctx.beginPath();
 				for (let wall of walls) {
-					if (wall.used_horizontally || wall.used_vertically) continue;
+					if (wall.used_horizontally || wall.used_vertically) {continue;}
 					let sx = 1;
 					let sy = 1;
 					let flip = false;
@@ -230,13 +230,13 @@ class LightingObject extends Component {
 					if (!flip) {
 						// draw it in a way that makes sure it winds in the right direction
 						for (let i = 0; i < path.length; i++) {
-							if (i == 0) bctx.moveTo(path[i][0], path[i][1]);
-							else bctx.lineTo(path[i][0], path[i][1]);
+							if (i == 0) {bctx.moveTo(path[i][0], path[i][1]);}
+							else {bctx.lineTo(path[i][0], path[i][1]);}
 						}
 					} else {
 						for (let i = path.length - 1; i >= 0; i--) {
-							if (i == path.length - 1) bctx.moveTo(path[i][0], path[i][1]);
-							else bctx.lineTo(path[i][0], path[i][1]);
+							if (i == path.length - 1) {bctx.moveTo(path[i][0], path[i][1]);}
+							else {bctx.lineTo(path[i][0], path[i][1]);}
 						}
 					}
 					bctx.closePath();

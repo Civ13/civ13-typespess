@@ -174,7 +174,7 @@ module.exports.facial = {
 		icon: 'icons/mob/human_face/facial_wise_s/facial_wise_s-dir1.png',
 		base_icon: 'icons/mob/human_face/facial_wise_s/'
 	}),
-}
+};
 module.exports.lips = {
 	black: new HairAccessory({
 		name: 'black',
@@ -203,7 +203,7 @@ module.exports.lips = {
 		icon: 'icons/mob/human_face/lips_red/lips_red-dir1.png',
 		base_icon: 'icons/mob/human_face/lips_red/'
 	}),
-}
+};
 
 module.exports.hair = {
 	bald_s: new HairAccessory({
@@ -742,4 +742,4 @@ module.exports.hair = {
 		base_icon: 'icons/mob/human_face/hair_volaju_s/'
 	}),
 
-}
+};

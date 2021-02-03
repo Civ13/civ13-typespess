@@ -165,7 +165,7 @@ if(global.is_bs_editor_env) {
 			let validated = {value: false, name: "none"};
 			const message_handler = (msg) => {
 				const obj = JSON.parse(msg);
-				console.log(obj)
+				console.log(obj);
 				if (obj.request_check === true) {database.authenticate(obj.name,obj.password).then(function(results){validated=results;
 				if (validated.value === true && validated.name === obj.name) {console.log(`DB AUTH: user "${obj.name}" authorized`);ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));}
 				else  {console.log(`DB AUTH: user "${obj.name}" denied`);ws.send(JSON.stringify({ valid: false }));}});}

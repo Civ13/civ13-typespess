@@ -30,7 +30,7 @@ class SpawnObjectPanel extends Panel {
 			if (has_component(obj, "Item") && has_component(mob, "MobInventory")) {
 				mob.c.MobInventory.put_in_hands(obj);
 			}
-			if (!obj.loc) obj.loc = mob.fine_loc;
+			if (!obj.loc) {obj.loc = mob.fine_loc;}
 		}
 	}
 	opened() {
@@ -56,7 +56,7 @@ module.exports.admin_tools = {
 		perm_required: "spawn.atom",
 		buttons: {
 			Open: (client) => {
-				if (opened_panels.get(client)) return;
+				if (opened_panels.get(client)) {return;}
 				let panel = new SpawnObjectPanel(client);
 				panel.open();
 			},

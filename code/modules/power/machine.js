@@ -44,7 +44,7 @@ class ApcPowered extends Component {
   * @return {number} Amount of availible energy in joules
   */
 	get_available_power(channel = this.power_channel) {
-		if (!this.area) return 0;
+		if (!this.area) {return 0;}
 		return this.area.c.AreaPower.get_available_power(channel);
 	}
 
@@ -55,7 +55,7 @@ class ApcPowered extends Component {
   * @return {number} Amount of energy used in joules
   */
 	use_power(amount, channel = this.power_channel) {
-		if (!this.area) return 0;
+		if (!this.area) {return 0;}
 		return this.area.c.AreaPower.use_power(amount, channel);
 	}
 

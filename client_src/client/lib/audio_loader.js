@@ -1,6 +1,6 @@
 function get_audio_buffer(url) {
 	var old_buf = this.audio_buffers.get(url);
-	if (old_buf) return old_buf;
+	if (old_buf) {return old_buf;}
 
 	var promise = new Promise((resolve, reject) => {
 		var xhr = new XMLHttpRequest();
