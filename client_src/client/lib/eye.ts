@@ -1,3 +1,4 @@
+export{};
 const Atom = require("./atom.ts");
 const EventEmitter = require("events");
 
@@ -147,7 +148,7 @@ class Eye extends EventEmitter {
 		e.preventDefault();
 		const start_meta = this.get_mouse_target(e);
 		const start_time = performance.now();
-		var mouseup = (e2: { button: any; }) => {
+		const mouseup = (e2: { button: any; }) => {
 			if (e2.button !== e.button) {return;}
 			document.removeEventListener("mouseup", mouseup);
 			const end_time = performance.now();
@@ -615,7 +616,7 @@ class LightingPlane extends WorldPlane {
 		this.no_click = true;
 	}
 
-	composite_plane(eye_ctx: { canvas: CanvasImageSource; globalCompositeOperation: string; drawImage: (arg0: HTMLCanvasElement, arg1: number, arg2: number) => void; }, timestamp: any) {
+	composite_plane(eye_ctx: { canvas: any; globalCompositeOperation: string; drawImage: (arg0: HTMLCanvasElement, arg1: number, arg2: number) => void; }, timestamp: any) {
 		const dctx = this.draw_canvas.getContext("2d");
 		//let mctx = this.mask_plane.getContext('2d');
 		const ctx = this.canvas.getContext("2d");

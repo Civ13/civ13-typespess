@@ -1,3 +1,4 @@
+export{};
 const { Atom, chain_func, Plane } = require("../client/index.ts");
 
 module.exports.ParallaxPlane = class ParallaxPlane extends Plane {

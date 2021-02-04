@@ -1,4 +1,4 @@
-export {};
+export{};
 const Atom = require("./lib/atom.ts");
 const IconRenderer = require("./lib/icon_renderer.ts");
 const PanelManager = require("./lib/panels/manager.ts");
