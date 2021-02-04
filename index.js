@@ -2,6 +2,7 @@ const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 const World = require("./code/game/world.js");
 const Database = require("./code/database.js");
+const { URLSearchParams } = require("url");
 
 console.log("SERVER: Loading game...");
 
@@ -129,7 +130,6 @@ if(global.is_bs_editor_env) {
 	const https = require("https");
 	const serveStatic = require("serve-static");
 	const fs = require("fs");
-	const url = require("url");
 
 	const database = new Database("typespess");
 
@@ -183,8 +183,7 @@ if(global.is_bs_editor_env) {
 
 	const http_handler = (req, res) => {
 		const done = finalhandler(req, res);
-		// eslint-disable-next-line new-cap
-		const url_obj = url.URL(req.url, true);
+		const url_obj = new URLSearchParams(req.url);
 		if (url_obj.pathname === "/status") {
 			res.setHeader("Access-Control-Allow-Origin", "*");
 			res.writeHead(200, { "Content-Type": "application/json" });
