@@ -8,13 +8,6 @@ const {
 } = require("./../../../../../code/game/server.js");
 const layers = require("../../../../defines/layers.js");
 
-/* Table Frames
- * Contains:
- *		Frames
- *		Wooden Frames
- *		TODO: All the other frame types.
- */
-
 class TableFrame extends Component {
 	constructor(atom, template) {
 		super(atom, template);
