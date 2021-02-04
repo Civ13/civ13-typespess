@@ -1229,7 +1229,7 @@ class Atom extends EventEmitter {
 		)
 			{return false;}
 		return (
-			this[_x] + this[_bounds_x] - 0.00001 <= tile.x && this[_y] + this[_bounds_y] - 0.00001 <= tile.y && this[_x] + this[_bounds_x] + this[_bounds_width] + 0.00001 >= tile.x + 1 && this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001 >= tile.y + 1
+			this[_x] + this[_bounds_x] - 0.0001 <= tile.x && this[_y] + this[_bounds_y] - 0.0001 <= tile.y && this[_x] + this[_bounds_x] + this[_bounds_width] + 0.0001 >= tile.x + 1 && this[_y] + this[_bounds_y] + this[_bounds_height] + 0.0001 >= tile.y + 1
 		);
 	}
 
@@ -1254,7 +1254,7 @@ class Atom extends EventEmitter {
 			atom[_x] === +atom[_x] && atom[_y] === +atom[_y] && atom[_z] === z && this[_loc] && atom[_loc] && this[_loc].is_base_loc && atom[_loc].is_base_loc
 		) {
 			return (
-				x + bounds_x + bounds_width - 0.00001 > atom[_x] + atom[_bounds_x] && x + bounds_x + 0.00001 < atom[_x] + atom[_bounds_x] + atom[_bounds_width] && y + bounds_y + bounds_height - 0.00001 > atom[_y] + atom[_bounds_y] && y + bounds_y + 0.00001 < atom[_y] + atom[_bounds_y] + atom[_bounds_height]
+				x + bounds_x + bounds_width - 0.0001 > atom[_x] + atom[_bounds_x] && x + bounds_x + 0.0001 < atom[_x] + atom[_bounds_x] + atom[_bounds_width] && y + bounds_y + bounds_height - 0.0001 > atom[_y] + atom[_bounds_y] && y + bounds_y + 0.0001 < atom[_y] + atom[_bounds_y] + atom[_bounds_height]
 			);
 		}
 	}

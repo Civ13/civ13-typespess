@@ -65,8 +65,8 @@ class Puller extends Component {
 		}
 		// no diagonal drags if you don't need it
 		if (
-			Math.abs(this[_pulling].x - oldx) < 0.00001 &&
-	Math.abs(this[_pulling].y - oldy) < 0.00001 &&
+			Math.abs(this[_pulling].x - oldx) < 0.0001 &&
+	Math.abs(this[_pulling].y - oldy) < 0.0001 &&
 	Math.abs(this[_pulling].x - this.a.x) <= 1.50001 &&
 	Math.abs(this[_pulling].y - this.a.y) <= 1.50001
 		) {
