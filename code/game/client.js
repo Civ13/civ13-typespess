@@ -145,8 +145,31 @@ class Client extends EventEmitter {
 					this.mob.c.Mob.emit("keyup", obj.keyup);
 				}
 			}
-			if (obj.click_on && this.last_click_time + 50 < this.server.now()) {
-				this.last_click_time = this.server.now();
+			if (obj.click_on && this.last_click_time + 50 < this.server.now()) {this.obj_click(obj);}
+			if (obj.drag && obj.drag.from && obj.drag.to) {this.obj_drag(obj);}
+			if (obj.panel) {this.msg_panel(obj);}
+
+			this.emit("message", obj);
+			if (this.mob) {this.mob.c.Mob.emit("message", obj);}
+		} catch (e) {
+			console.error(e);
+		}
+	}
+	obj_drag(obj) {
+		// convert over to netids
+		obj.drag.from.atom = this[_netid_to_atom][obj.drag.from.atom];
+		obj.drag.to.atom = this[_netid_to_atom][obj.drag.to.atom];
+		if (this.mob) {obj.drag.mob = this.mob;}
+		obj.drag.client = this;
+		this.emit("mouse_dragged", obj.drag);
+		if (this.mob) {this.mob.c.Mob.emit("mouse_dragged", obj.drag);}
+		if (obj.drag.from.atom)
+			{obj.drag.from.atom.emit("mouse_dragged_to", obj.drag);}
+		if (obj.drag.to.atom)
+			{obj.drag.to.atom.emit("mouse_dropped_by", obj.drag);}
+	}
+	obj_click(obj) {
+		this.last_click_time = this.server.now();
 
 				let click_prefix = "";
 				if (obj.click_on.ctrlKey) {click_prefix += "ctrl_";}
@@ -163,47 +186,26 @@ class Client extends EventEmitter {
 				}
 				if (obj.click_on.atom)
 					{obj.click_on.atom.emit(click_prefix + "clicked", obj.click_on);}
-			}
-			if (obj.drag && obj.drag.from && obj.drag.to) {
-				// convert over to netids
-				obj.drag.from.atom = this[_netid_to_atom][obj.drag.from.atom];
-				obj.drag.to.atom = this[_netid_to_atom][obj.drag.to.atom];
-				if (this.mob) {obj.drag.mob = this.mob;}
-				obj.drag.client = this;
-				this.emit("mouse_dragged", obj.drag);
-				if (this.mob) {this.mob.c.Mob.emit("mouse_dragged", obj.drag);}
-				if (obj.drag.from.atom)
-					{obj.drag.from.atom.emit("mouse_dragged_to", obj.drag);}
-				if (obj.drag.to.atom)
-					{obj.drag.to.atom.emit("mouse_dropped_by", obj.drag);}
-			}
-			if (obj.panel) {
-				let pm = obj.panel;
-				if (pm.message) {
-					for (let message of pm.message) {
-						let id = message.id;
-						let panel = this.panels.get(id);
-						if (panel) {
-							panel.emit("message", message.contents);
-						}
-					}
-				}
-				if (pm.close) {
-					for (let id of pm.close) {
-						var panel = this.panels.get(id);
-						if (!panel) {continue;}
-						panel.close(false);
-					}
+	}
+	msg_panel(obj) {
+		let pm = obj.panel;
+		if (pm.message) {
+			for (let message of pm.message) {
+				let id = message.id;
+				let panel = this.panels.get(id);
+				if (panel) {
+					panel.emit("message", message.contents);
 				}
 			}
-
-			this.emit("message", obj);
-			if (this.mob) {this.mob.c.Mob.emit("message", obj);}
-		} catch (e) {
-			console.error(e);
+		}
+		if (pm.close) {
+			for (let id of pm.close) {
+				var panel = this.panels.get(id);
+				if (!panel) {continue;}
+				panel.close(false);
+			}
 		}
 	}
-
 	disconnect_handler() {
 		var mob = this.mob;
 		if (mob) {
@@ -341,107 +343,17 @@ class Client extends EventEmitter {
 		if (!this.socket || this.socket.readyState !== this.socket.OPEN) {return;}
 		var message = {};
 		for (let netid in this[_atom_net_queue]) {
+			if (this[_atom_net_queue][netid]) {
 			let entry = this[_atom_net_queue][netid];
-			if (entry.create) {
-				if (!message.create_atoms) {message.create_atoms = [];}
-				let atom = entry.create;
-				let common_visgroups = [];
-				for (let visgroup of atom[mob_symbols._visgroups]) {
-					if (
-						this[_netid_to_eye][netid].c.Eye[mob_symbols._visgroups].has(
-							visgroup
-						)
-					)
-						{common_visgroups.push(visgroup);}
-				}
-				let submessage = {
-					network_id: netid,
-					component_vars: {},
-					components: [],
-					eye_id: this.mob.c.Mob.get_eyeid_for_eye(this[_netid_to_eye][netid]),
-				};
-				for (var key of [
-					"icon",
-					"icon_state",
-					"dir",
-					"layer",
-					"name",
-					"glide_size",
-					"screen_loc_x",
-					"screen_loc_y",
-					"mouse_opacity",
-					"overlays",
-					"x",
-					"y",
-					"opacity",
-					"color",
-					"alpha",
-				]) {
-					submessage[key] = atom[key];
-					for (let visgroup of common_visgroups) {
-						if (visgroup.overrides.has(key))
-							{submessage[key] = visgroup.overrides.get(key);}
-					}
-				}
-				if (atom.template && atom.template.components) {
-					for (let component_name of atom.template.components) {
-						var component = atom.components[component_name];
-						if (!(component instanceof Component.Networked)) {continue;}
-						submessage.components.push(component_name);
-						submessage.component_vars[
-							component_name
-						] = component.get_networked_vars();
-					}
-				}
-				message.create_atoms.push(submessage);
-			} else if (entry.update) {
-				if (!message.update_atoms) {message.update_atoms = [];}
-				let atom = entry.update.atom;
-				let common_visgroups = [];
-				for (let visgroup of atom[mob_symbols._visgroups]) {
-					if (
-						this[_netid_to_eye][netid].c.Eye[mob_symbols._visgroups].has(
-							visgroup
-						)
-					)
-						{common_visgroups.push(visgroup);}
-				}
-				let submessage = { network_id: netid };
-				if (entry.update.items) {
-					for (let item of entry.update.items) {
-						submessage[item] = atom[item];
-						for (let visgroup of common_visgroups) {
-							if (visgroup.overrides.has(item))
-								{submessage[item] = visgroup.overrides.get(item);}
-						}
-						if (typeof submessage[item] === "undefined") {submessage[item] = null;}
-					}
-				}
-				if (entry.update.overlays) {
-					submessage.overlays = {};
-					for (let item of entry.update.overlays) {
-						submessage.overlays[item] =
-			typeof atom.overlays[item] === "undefined" ? null : atom.overlays[item];
-					}
-				}
-				if (entry.update.components) {
-					submessage.components = {};
-					for (let component_name in entry.update.components) {
-						if (!Object.prototype.hasOwnProperty.call(entry.update.components,component_name))
-							{continue;}
-						submessage.components[component_name] = {};
-						for (let item of entry.update.components[component_name]) {
-							submessage.components[component_name][item] =
-				atom.components[component_name][item];
-						}
-					}
-				}
-				message.update_atoms.push(submessage);
-			} else if (entry.delete) {
+			if (entry.create) {this.network_updates_create(message,entry,netid);}
+			else if (entry.update) {this.network_updates_update(message,entry,netid);}
+			
+			else if (entry.delete) {
 				if (!message.delete_atoms) {message.delete_atoms = [];}
 				message.delete_atoms.push(netid);
 			}
 			delete this[_atom_net_queue][netid];
+		}
 		}
 		if (this[_tiles_to_add].size) {
 			message.add_tiles = [...this[_tiles_to_add]];
@@ -468,6 +380,103 @@ class Client extends EventEmitter {
 			);
 		}
 		this.socket.send(JSON.stringify(message));
+	}
+	network_updates_create(message,entry,netid) {
+	if (!message.create_atoms) {message.create_atoms = [];}
+	let atom = entry.create;
+	let common_visgroups = [];
+	for (let visgroup of atom[mob_symbols._visgroups]) {
+		if (
+			this[_netid_to_eye][netid].c.Eye[mob_symbols._visgroups].has(
+				visgroup
+			)
+		)
+			{common_visgroups.push(visgroup);}
+	}
+	let submessage = {
+		network_id: netid,
+		component_vars: {},
+		components: [],
+		eye_id: this.mob.c.Mob.get_eyeid_for_eye(this[_netid_to_eye][netid]),
+	};
+	for (var key of [
+		"icon",
+		"icon_state",
+		"dir",
+		"layer",
+		"name",
+		"glide_size",
+		"screen_loc_x",
+		"screen_loc_y",
+		"mouse_opacity",
+		"overlays",
+		"x",
+		"y",
+		"opacity",
+		"color",
+		"alpha",
+	]) {
+		submessage[key] = atom[key];
+		for (let visgroup of common_visgroups) {
+			if (visgroup.overrides.has(key))
+				{submessage[key] = visgroup.overrides.get(key);}
+		}
+	}
+	if (atom.template && atom.template.components) {
+		for (let component_name of atom.template.components) {
+			var component = atom.components[component_name];
+			if (!(component instanceof Component.Networked)) {continue;}
+			submessage.components.push(component_name);
+			submessage.component_vars[
+				component_name
+			] = component.get_networked_vars();
+		}
+	}
+	message.create_atoms.push(submessage);
+	}
+	network_updates_update(message,entry,netid) {
+		if (!message.update_atoms) {message.update_atoms = [];}
+		let atom = entry.update.atom;
+		let common_visgroups = [];
+		for (let visgroup of atom[mob_symbols._visgroups]) {
+			if (
+				this[_netid_to_eye][netid].c.Eye[mob_symbols._visgroups].has(
+					visgroup
+				)
+			)
+				{common_visgroups.push(visgroup);}
+		}
+		let submessage = { network_id: netid };
+		if (entry.update.items) {
+			for (let item of entry.update.items) {
+				submessage[item] = atom[item];
+				for (let visgroup of common_visgroups) {
+					if (visgroup.overrides.has(item))
+						{submessage[item] = visgroup.overrides.get(item);}
+				}
+				if (typeof submessage[item] === "undefined") {submessage[item] = null;}
+			}
+		}
+		if (entry.update.overlays) {
+			submessage.overlays = {};
+			for (let item of entry.update.overlays) {
+				submessage.overlays[item] =
+	typeof atom.overlays[item] === "undefined" ? null : atom.overlays[item];
+			}
+		}
+		if (entry.update.components) {
+			submessage.components = {};
+			for (let component_name in entry.update.components) {
+				if (!Object.prototype.hasOwnProperty.call(entry.update.components,component_name))
+					{continue;}
+				submessage.components[component_name] = {};
+				for (let item of entry.update.components[component_name]) {
+					submessage.components[component_name][item] =
+		atom.components[component_name][item];
+				}
+			}
+		}
+		message.update_atoms.push(submessage);
 	}
 }
 

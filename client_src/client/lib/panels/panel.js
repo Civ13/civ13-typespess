@@ -73,8 +73,8 @@ class Panel extends EventEmitter {
 		}
 
 		if (content_class) {
-			let ctor = manager.client.panel_classes[content_class];
-			if (ctor) {this.content_controller = new ctor(this, this.manager);}
+			let Ctor = manager.client.panel_classes[content_class];
+			if (Ctor) {this.content_controller = new Ctor(this, this.manager);}
 			else {console.warn(`${content_class} is a nonexistent panel class`);}
 		}
 	}
@@ -110,18 +110,10 @@ class Panel extends EventEmitter {
 		) + "px";
 			this.emit("move");
 		};
-		var mouseup = () => {
-			document.removeEventListener("mousemove", mousemove);
-			document.removeEventListener("mouseup", mouseup);
-		};
-		document.addEventListener("mousemove", mousemove);
-		document.addEventListener("mouseup", mouseup);
+		this.mouseup(mousemove);
 	}
 
 	_resize_meta(e) {
-		var pad = (this.container_obj.offsetWidth - this.panel_obj.offsetWidth) / 2;
-		var width = this.panel_obj.offsetWidth;
-		var height = this.panel_obj.offsetHeight;
 		var out = {
 			drag_right: false,
 			drag_left: false,
@@ -129,38 +121,31 @@ class Panel extends EventEmitter {
 			drag_down: false,
 			cursor: "default",
 		};
+		this.e_target_in_container(e, out);
+		out.can_resize = out.drag_right || out.drag_left || out.drag_up || out.drag_down;
+		return out;
+	}
+	e_target_in_container(e, out) {
+		var pad = (this.container_obj.offsetWidth - this.panel_obj.offsetWidth) / 2;
+		var width = this.panel_obj.offsetWidth;
+		var height = this.panel_obj.offsetHeight;
 		if (e.target === this.container_obj) {
 			if (e.offsetX < pad) {out.drag_left = true;}
 			if (e.offsetY < pad) {out.drag_up = true;}
 			if (e.offsetX > width + pad) {out.drag_right = true;}
 			if (e.offsetY > height + pad) {out.drag_down = true;}
 			if ((out.drag_left && out.drag_down) || (out.drag_up && out.drag_right)) {
-				out.cursor = "nesw-resize";
-			} else if (
-				(out.drag_left && out.drag_up) ||
-		(out.drag_down && out.drag_right)
-			) {
-				out.cursor = "nwse-resize";
-			} else if (out.drag_left || out.drag_right) {
-				out.cursor = "ew-resize";
-			} else if (out.drag_up || out.drag_down) {
-				out.cursor = "ns-resize";
-			}
+			out.cursor = "nesw-resize";
+		} else if ((out.drag_left && out.drag_up) || (out.drag_down && out.drag_right)) {
+			out.cursor = "nwse-resize";}
+		else if (out.drag_left || out.drag_right) {out.cursor = "ew-resize";}
+		else if (out.drag_up || out.drag_down) {out.cursor = "ns-resize";}
 		}
-		out.can_resize =
-	out.drag_right || out.drag_left || out.drag_up || out.drag_down;
-		return out;
 	}
-
 	_start_resize(e) {
 		// bring the panel into focus
-		if (
-			this.container_obj !=
-	document.getElementById("uiframes-container").lastChild
-		)
-			{document
-				.getElementById("uiframes-container")
-				.appendChild(this.container_obj);}
+		if (this.container_obj !== document.getElementById("uiframes-container").lastChild)
+			{document.getElementById("uiframes-container").appendChild(this.container_obj);}
 
 		var resize_meta = this._resize_meta(e);
 		if (!resize_meta.can_resize) {return;}
@@ -192,6 +177,10 @@ class Panel extends EventEmitter {
 			}
 			this.emit("resize");
 		};
+		this.mouseup(mousemove);
+	}
+
+	mouseup(mousemove) {
 		var mouseup = () => {
 			document.removeEventListener("mousemove", mousemove);
 			document.removeEventListener("mouseup", mouseup);
