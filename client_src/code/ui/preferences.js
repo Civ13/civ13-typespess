@@ -478,7 +478,7 @@ let department_order = [
 
 module.exports.now = (client) => {
 	let shadow_pref = localStorage.getItem("shadow_resolution");
-	if (shadow_pref !== null) {
+	if (typeof shadow_pref !== "undefined") {
 		client.soft_shadow_resolution = +shadow_pref;
 	}
 };

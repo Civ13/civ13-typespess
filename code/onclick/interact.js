@@ -16,10 +16,12 @@ class MobInteract extends Component {
 		make_watched_property(this, "nointeract_counter", "number");
 		if (this.zone_sel_template) {
 			let zone_sel = new Atom(this.a.server, this.zone_sel_template);
+			if (zone_sel.c.ZoneSel) {
 			process.nextTick(() => {
 				zone_sel.c.ZoneSel.set_mob(this.a);
 			});
 			this.a.c.Eye.screen.zone_sel = zone_sel;
+		}
 		}
 
 		this.move_mode = mob_defines.MOVE_INTENT_RUN;

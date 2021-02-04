@@ -29,7 +29,7 @@ class Item extends Component {
 	_attack_hand(prev, user) {
 		if (has_component(user, "MobInventory")) {
 			var slot = user.c.MobInventory.slots[user.c.MobInventory.active_hand];
-			if (slot.item !== null || !slot.can_accept_item(this.a)) {return prev();}
+			if (typeof slot.item !== "undefined" || !slot.can_accept_item(this.a)) {return prev();}
 			slot.item = this.atom;
 			return;
 		}

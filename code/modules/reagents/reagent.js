@@ -147,12 +147,12 @@ class ReagentReaction {
 			if (container.c.ReagentHolder.volume_of(req) < amount) {return 2;}
 		}
 		if (
-			this.min_temp !== null &&
+			typeof this.min_temp !== "undefined" &&
 	container.c.ReagentHolder.temperature < this.min_temp
 		)
 			{return 1;}
 		if (
-			this.max_temp !== null &&
+			typeof this.max_temp !== "undefined" &&
 	container.c.ReagentHolder.temperature > this.max_temp
 		)
 			{return 1;}
