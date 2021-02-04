@@ -12,7 +12,9 @@
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 11
+        "ecmaVersion": 11,
+        "sourceType": "module",
+        "ecmaFeatures": {"modules": true}
     },
     "plugins": ["@typescript-eslint"],
     "rules": {

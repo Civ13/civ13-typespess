@@ -7,9 +7,9 @@ npm install -g ts-node
 npm install -g pouchdb-server
 cd client_src
 echo Generating the preload list...
-echo ts-node preload_assets.js
+echo ts-node preload_assets.ts
 echo Browserifying client...
-ts-node compile.js
+ts-node compile.ts
 cd -
 cd maps
 echo Generating the map...

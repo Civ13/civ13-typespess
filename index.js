@@ -183,8 +183,7 @@ if(global.is_bs_editor_env) {
 
 	const http_handler = (req, res) => {
 		const done = finalhandler(req, res);
-		// eslint-disable-next-line new-cap
-		const url_obj = url.URL(req.url, true);
+		const url_obj = url.parse(req.url, true);
 		if (url_obj.pathname === "/status") {
 			res.setHeader("Access-Control-Allow-Origin", "*");
 			res.writeHead(200, { "Content-Type": "application/json" });
