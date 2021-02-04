@@ -25,7 +25,7 @@ module.exports = {
 		!(b[key] instanceof Array) &&
 		(!Object.prototype.hasOwnProperty.call(a,key) ||
 		typeof a[key] !== "object" ||
-		a[key] === null ||
+		typeof a[key] === "undefined" ||
 		a[key] instanceof Array)
 			)
 				{a[key] = {};}

@@ -12,7 +12,7 @@ const _ = require("underscore");
 class Destructible extends Component {
 	constructor(atom, template) {
 		super(atom, template);
-		if (this.obj_integrity === null) {this.obj_integrity = this.max_integrity;}
+		if (typeof this.obj_integrity === "undefined") {this.obj_integrity = this.max_integrity;}
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 		this.a.c.Tangible.bullet_act = chain_func(
 			this.a.c.Tangible.bullet_act,
@@ -29,6 +29,7 @@ class Destructible extends Component {
 		);
 	}
 
+	// eslint-disable-next-line max-params
 	take_damage(
 		damage_amount,
 		damage_type = "brute",

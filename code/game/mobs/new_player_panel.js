@@ -54,7 +54,7 @@ class NewPlayerPanel extends Panel {
 				ghost.c.Mob.client = this.client;
 			}
 		}
-		if (msg.ready !== null) {
+		if (typeof msg.ready !== "undefined") {
 			this.ready = msg.ready;
 		}
 	}

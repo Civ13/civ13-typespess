@@ -243,5 +243,6 @@ if(global.is_bs_editor_env) {
 	const args = process.argv;
 	if (args[2] === "test") {
 		console.log("test passed.");
+		// eslint-disable-next-line no-process-exit
 		process.exit(0);}
 	}

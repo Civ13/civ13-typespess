@@ -78,7 +78,7 @@ class ProgressBar extends Component {
 		if (this.attached_atom && this.attached_atom[_progress_bars]) {
 			var list = this.attached_atom[_progress_bars];
 			var idx = list.indexOf(this.atom);
-			if (idx != -1) {
+			if (idx !== -1) {
 				list.splice(idx, 1);
 				for (let i = idx; i < list.length; i++) {
 					list[i].components.ProgressBar.target_offset_y -= PROGRESSBAR_HEIGHT;

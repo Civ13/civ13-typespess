@@ -48,10 +48,10 @@ class LatejoinPanel {
 					elem.button = button;
 				}
 				elem.button.textContent = `${job.title} (${job.current_positions}/${
-					job.total_positions != -1 ? job.total_positions : "∞"
+					job.total_positions !== -1 ? job.total_positions : "∞"
 				})`;
 				if (
-					job.current_positions >= job.total_positions && job.total_positions != -1
+					job.current_positions >= job.total_positions && job.total_positions !== -1
 				) {
 					elem.style.display = "none";
 				} else {

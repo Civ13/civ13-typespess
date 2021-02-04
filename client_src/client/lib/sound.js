@@ -45,11 +45,11 @@ class Sound {
 			if (!eye) {return;}
 			let eye_disp = eye.origin.get_displacement(timestamp);
 			if (
-				eye_disp.dispx != +eye_disp.dispx ||
-		eye_disp.dispy != +eye_disp.dispy
+				eye_disp.dispx !== +eye_disp.dispx ||
+		eye_disp.dispy !== +eye_disp.dispy
 			)
 				{return;}
-			if (emitter.x != +emitter.x || emitter.y != +emitter.y) {return;}
+			if (emitter.x !== +emitter.x || emitter.y !== +emitter.y) {return;}
 			this.spatial_node.setPosition(
 				emitter.x - eye_disp.dispx,
 				0,

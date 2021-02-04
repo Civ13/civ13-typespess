@@ -384,7 +384,7 @@ class PreferencesPanel {
 									for (let [otherjob, level] of Object.entries(
 										this.job_preferences
 									)) {
-										if (level === 3 && otherjob != key) {
+										if (level === 3 && otherjob !== key) {
 											this.job_preferences[otherjob] = 2;
 											let otherelem = this.panel.$(
 												`.job-list div[data-job-key="${otherjob}"] .job-selection-button`
@@ -478,7 +478,7 @@ let department_order = [
 
 module.exports.now = (client) => {
 	let shadow_pref = localStorage.getItem("shadow_resolution");
-	if (shadow_pref != null) {
+	if (shadow_pref !== null) {
 		client.soft_shadow_resolution = +shadow_pref;
 	}
 };

@@ -104,7 +104,7 @@ class TypespessClient extends EventEmitter {
 					if (this.components[componentName]) {
 						throw new Error(`Component ${componentName} already exists!`);
 					}
-					if (mod.components[componentName].name != componentName)
+					if (mod.components[componentName].name !== componentName)
 						{throw new Error(
 							`Component name mismatch! Named ${componentName} in map and constructor is named ${mod.components[componentName].name}`
 						);}
@@ -118,7 +118,7 @@ class TypespessClient extends EventEmitter {
 					if (this.panel_classes[class_name]) {
 						throw new Error(`Panel class ${class_name} already exists!`);
 					}
-					if (mod.panel_classes[class_name].name != class_name)
+					if (mod.panel_classes[class_name].name !== class_name)
 						{throw new Error(
 							`Panel class name mismatch! Named ${class_name} in map and constructor is named ${mod.panel_classes[class_name].name}`
 						);}
@@ -345,7 +345,7 @@ const _chain_spliced = Symbol("_chain_spliced");
 			elem2.addEventListener("focusout", () => {
 				setTimeout(() => {
 					if (
-						elem2 != document.activeElement &&
+						elem2 !== document.activeElement &&
 							!elem2.contains(document.activeElement) &&
 							elem1.contains(elem2)
 					) {

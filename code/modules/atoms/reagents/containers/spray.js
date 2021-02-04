@@ -22,7 +22,7 @@ class SprayBottle extends Component {
 	}
 
 	after_attack(prev, target, user) {
-		if (target === null || target.z !== user.z) {return prev();}
+		if (typeof target === "undefined" || target.z !== user.z) {return prev();}
 		if (this.a.c.ReagentHolder.total_volume < this.current_amount) {
 			to_chat`<span class='warning'>The ${this.a} is empty!</span>`(user);
 			return;

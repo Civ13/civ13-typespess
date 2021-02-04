@@ -233,8 +233,7 @@ class CarbonMob extends Component.Networked {
 		let delay = prev();
 		if (this.a.c.LivingMob.stat === combat_defines.SOFT_CRIT)
 			{delay += combat_defines.SOFTCRIT_ADD_SLOWDOWN;}
-		let health_deficiency =
-	100 -
+		let health_deficiency = 100 -
 	this.a.c.LivingMob.health +
 	this.a.c.LivingMob.get_damage("stamina");
 		if (health_deficiency >= 40) {
@@ -255,7 +254,7 @@ class CarbonMob extends Component.Networked {
 
 	moved(e) {
 		if (
-			!!(e.old.loc && e.old.loc.is_base_loc) !=
+			!!(e.old.loc && e.old.loc.is_base_loc) !==
 	!!(e.old.loc && e.old.loc.is_base_loc)
 		) {
 			this.update_lying();
@@ -285,9 +284,11 @@ class CarbonMob extends Component.Networked {
 	}
 
 	handle_organs() {
-		for (let organ of Object.values(this.organs)) {
-			organ.c.Organ.do_life();
-		}
+		if (this.organs) {
+			for (let organ of Object.values(this.organs)) {
+				organ.c.Organ.do_life();
+			}
+	}
 	}
 
 	handle_blood() {
@@ -350,6 +351,7 @@ class CarbonMob extends Component.Networked {
 	}
 
 	handle_liver() {
+		if (!this.organs || !this.organs.liver) {return;}
 		let liver = this.organs.liver;
 		if (!liver || liver.c.OrganLiver.failing) {
 			// liver failure

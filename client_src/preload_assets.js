@@ -45,11 +45,11 @@ var preloadlist = dirIt("../resources/icons/ui/");
 let tdir1 = dirIt("../resources/icons/mob/human_body/");
 let tdir2 = dirIt("../resources/icons/mob/animals/");
 let tdir3 = dirIt("../resources/icons/effects/");
-if (tdir1 != null)
+if (typeof tdir1 !== "undefined")
 	{preloadlist += tdir1;}
-if (tdir2 != null)
+if (typeof tdir2 !== "undefined")
 	{preloadlist += tdir2;}
-if (tdir3 != null)
+if (typeof tdir3 !== "undefined")
 	{preloadlist += tdir3;}
 
 var tloadlist = `var preload_list = [${preloadlist}]; module.exports = preload_list;`;

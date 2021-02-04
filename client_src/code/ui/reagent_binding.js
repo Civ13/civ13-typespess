@@ -45,22 +45,22 @@ class ReagentBinding {
 				e.style.display = "none";
 			}
 
-			if (obj.temperature != null) {
+			if (obj.temperature !== null) {
 				[...this.elem.querySelectorAll(".temperature")].forEach((item) => {
 					item.textContent = +obj.temperature.toFixed(1);
 				});
 			}
-			if (obj.holder_name != null) {
+			if (obj.holder_name !== null) {
 				[...this.elem.querySelectorAll(".holder-name")].forEach((item) => {
 					item.textContent = obj.holder_name;
 				});
 			}
-			if (obj.total_volume != null) {
+			if (obj.total_volume !== null) {
 				[...this.elem.querySelectorAll(".total-volume")].forEach((item) => {
 					item.textContent = obj.total_volume;
 				});
 			}
-			if (obj.maximum_volume != null) {
+			if (obj.maximum_volume !== null) {
 				[...this.elem.querySelectorAll(".maximum-volume")].forEach((item) => {
 					item.textContent = obj.maximum_volume;
 				});

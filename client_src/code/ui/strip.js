@@ -21,7 +21,7 @@ class StripPanel {
 				i++;
 				let tr = document.createElement("tr");
 				table.appendChild(tr);
-				if (slotkey === null) {
+				if (typeof slotkey === "undefined") {
 					tr.innerHTML = "<td colspan=3>&nbsp;</td>";
 					continue;
 				}

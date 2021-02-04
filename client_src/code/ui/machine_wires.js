@@ -42,7 +42,7 @@ class MachineWirePanel {
 							.$(`.wire-color-${wire.color} .wire-cut-button`)
 							.classList.add("disabled");}
 				}
-				if (wire.cut != null)
+				if (typeof wire.cut !== "undefined")
 					{this.panel.$(
 						`.wire-color-${wire.color} .wire-cut-button`
 					).textContent = wire.cut ? "Mend" : "Cut";}
@@ -60,7 +60,7 @@ class MachineWirePanel {
 			}
 		}
 		if (typeof msg.status_text !== "undefined") {
-			if (msg.status_text === null)
+			if (typeof msg.status_text === "undefined")
 				{this.panel.$(".status_text").style.display = "none";}
 			else {this.panel.$(".status_text").style.display = "block";}
 			this.panel.$(".status_text").innerHTML = msg.status_text;

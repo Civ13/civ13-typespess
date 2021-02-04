@@ -81,7 +81,7 @@ class Panel extends EventEmitter {
 
 	_start_drag(e) {
 		if (e.defaultPrevented) {return;}
-		if (e.target != this.header_obj) {
+		if (e.target !== this.header_obj) {
 			return;
 		}
 		var pad = (this.container_obj.offsetWidth - this.panel_obj.offsetWidth) / 2;

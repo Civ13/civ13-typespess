@@ -35,11 +35,8 @@ class Reagent extends EventEmitter {
 		this.subtype = "chemical";
 	}
 	add(amount, { reagent, temp } = {}) {
-		if (temp === null && (reagent === null || reagent.holder === null)) {
-			temp = 300;
-		} else if (temp === null) {
-			temp = reagent.holder.c.ReagentHolder.temperature;
-		}
+		if (!temp) {temp = 300;}
+
 		amount = Math.min(
 			this.holder.c.ReagentHolder.maximum_volume -
 		this.holder.c.ReagentHolder.total_volume,

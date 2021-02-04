@@ -214,7 +214,7 @@ class ChemDispenserPanel extends Panel {
 
 	message_handler(msg) {
 		if (
-			msg.dispense !== null &&
+			typeof msg.dispense !== "undefined" &&
 	this.bound_atom.c.ChemDispenser.dispensable_reagents.includes(
 		msg.dispense
 	) &&

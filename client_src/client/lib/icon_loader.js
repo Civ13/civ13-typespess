@@ -12,7 +12,7 @@ function enqueue_icon_meta_load(newIcon) {
 		let fullpath = this.resRoot + newIcon;
 		meta.__image_object.src = fullpath;
 /*
-		if (fullpath.search("inhands") != -1)
+		if (fullpath.search("inhands") !== -1)
 			{meta.__image_object.src = this.resRoot + "icons/nothing.png";}
 		else
 			{meta.__image_object.src = this.resRoot + "icons/error.png";}

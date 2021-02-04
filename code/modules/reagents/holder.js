@@ -297,7 +297,7 @@ class ReagentHolder extends Component {
 			let rg = reagent.color[1];
 			let rb = reagent.color[2];
 			let ra = reagent.color[3];
-			if (ra === null) {ra = 1;}
+			if (typeof ra === "undefined") {ra = 1;}
 			let m = ra * reagent.volume;
 			r += rr * m;
 			g += rg * m;
@@ -343,7 +343,8 @@ function add_items(mod) {
 		for (let key in mod.reagents) {
 			if (reagent_types[key])
 				{throw new Error(`Reagent meta '${key}' defined more than once!`);}
-			reagent_types[key] = mod.reagents[key];
+			else
+				{reagent_types[key] = mod.reagents[key];}
 		}
 	}
 	if (mod.reagent_reactions) {

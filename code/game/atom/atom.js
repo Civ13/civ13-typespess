@@ -227,7 +227,7 @@ class Atom extends EventEmitter {
 			{},
 			{
 				set: (target, key, value) => {
-					if (typeof value === "undefined" || value === null) {
+					if (typeof value === "undefined" || typeof value === "undefined") {
 						target[key] = void 0;
 						this[mob_symbols._update_var](key, 2);
 						return true;
@@ -293,7 +293,7 @@ class Atom extends EventEmitter {
 			z = Math.floor(z);
 
 			this[_changeloc](x, y, z, dim.location(x, y, z));
-		} else if (typeof x === "object" && x !== null) {
+		} else if (typeof x === "object" && typeof x !== "undefined") {
 			this.loc = x;
 		}
 	}
@@ -820,7 +820,7 @@ class Atom extends EventEmitter {
 				this.loc = newLoc.loc || null;
 				return;
 			}
-			if (newLoc.loc === null) {
+			if (typeof newLoc.loc === "undefined") {
 				this.loc = null;
 				return;
 			}
@@ -844,7 +844,7 @@ class Atom extends EventEmitter {
 			);
 			return;
 		}
-		if (newLoc !== null && newLoc.is_base_loc) {
+		if (typeof newLoc !== "undefined" && newLoc.is_base_loc) {
 			this[_changeloc](newLoc.x, newLoc.y, newLoc.z, newLoc);
 		} else {
 			this[_changeloc](0, 0, 0, newLoc);

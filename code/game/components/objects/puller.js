@@ -44,14 +44,15 @@ class Puller extends Component {
 
 	moved(movement) {
 		if (
-			this[_pulling] === null ||
+			typeof this[_pulling] === "undefined" ||
 	!this.a.loc ||
 	!this.a.loc.is_base_loc ||
+	!this.pulling ||
 	!this.pulling.loc ||
 	!this.pulling.loc.is_base_loc ||
 	!movement.offset ||
 	movement.offset.z !== 0 ||
-	this[_pulling] === null
+	typeof this[_pulling] === "undefined"
 		)
 			{return;}
 		var oldx = this.a.x - movement.offset.x;
@@ -89,7 +90,7 @@ class Puller extends Component {
 	}
 
 	set pulling(val) {
-		if (val !== null && !this.can_pull(val)) {
+		if (typeof val !== "undefined" && !this.can_pull(val)) {
 			if (val !== this[_pulling]) {return;}
 			val = null;
 		}
