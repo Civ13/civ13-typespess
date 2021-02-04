@@ -132,6 +132,79 @@ class TypespessClient extends EventEmitter {
 		}
 	}
 
+	update_atoms(obj: any, timestamp: any) {
+		for (let i = 0; i < obj.update_atoms.length; i++) {
+			const inst = obj.update_atoms[i];
+			const atom = this.atoms_by_netid[inst.network_id];
+			if (!atom) {continue;}
+			const oldx = atom.x;
+			const oldy = atom.y;
+			for (const key in inst) {
+				if (!Object.prototype.hasOwnProperty.call(inst,key)) {continue;}
+				if (
+					key === "appearance" ||
+					key === "network_id" ||
+					key === "overlays" ||
+					key === "components"
+				) {
+					continue;
+				}
+				atom[key] = inst[key];
+			}
+			atom.glide = new Atom.Glide(atom, { oldx, oldy, lasttime: timestamp });
+			if (inst.overlays) {
+				for (const key in inst.overlays) {
+					if (!Object.prototype.hasOwnProperty.call(inst.overlays,key)) {continue;}
+					atom.set_overlay(key, inst.overlays[key]);
+				}
+			}
+			if (inst.components) {this.update_components(inst, atom);}
+		}
+	}
+	update_components(inst: any, atom: any) {
+		for (const component_name in inst.components) {
+			if (!Object.prototype.hasOwnProperty.call(inst.components,component_name)) {continue;}
+			for (const key in inst.components[component_name]) {
+				if (!Object.prototype.hasOwnProperty.call(inst.components[component_name],key))
+					{continue;}
+				atom.components[component_name][key] =
+					inst.components[component_name][key];
+			}
+		}
+	}
+
+	delete_atoms(obj: { delete_atoms: string | any[]; }) {
+		for (let i = 0; i < obj.delete_atoms.length; i++) {
+			const atom = this.atoms_by_netid[obj.delete_atoms[i]];
+			if (!atom) {continue;}
+			atom.del();
+		}
+	}
+	update_eye(obj: any, timestamp: any) {
+	for (const [id, props] of Object.entries(obj.eye)) {
+		const eye = this.eyes[id];
+		if (!eye) {continue;}
+		const oldx = eye.origin.x;
+		const oldy = eye.origin.y;
+		Object.assign(eye.origin, props);
+		eye.origin.glide = new Atom.Glide(eye.origin, {
+			oldx,
+			oldy,
+			lasttime: timestamp,
+		});
+	}
+	}
+	to_chat(obj: any) {
+		const cw = document.getElementById("chatwindow");
+		let do_scroll = false;
+		if (cw.scrollTop + cw.clientHeight >= cw.scrollHeight) {do_scroll = true;}
+		for (const item of obj.to_chat) {
+			const newdiv = document.createElement("div");
+			newdiv.innerHTML = item;
+			document.getElementById("chatwindow").appendChild(newdiv);
+		}
+		if (do_scroll) {cw.scrollTop = cw.scrollHeight - cw.clientHeight;}
+	}
 	handleSocketMessage(event: { data: string; }) {
 		const obj = JSON.parse(event.data);
 		const timestamp = performance.now();
@@ -140,52 +213,10 @@ class TypespessClient extends EventEmitter {
 				new Atom(this, obj.create_atoms[i]);
 			}
 		}
-		if (obj.update_atoms) {
-			for (let i = 0; i < obj.update_atoms.length; i++) {
-				const inst = obj.update_atoms[i];
-				const atom = this.atoms_by_netid[inst.network_id];
-				if (!atom) {continue;}
-				const oldx = atom.x;
-				const oldy = atom.y;
-				for (const key in inst) {
-					if (!Object.prototype.hasOwnProperty.call(inst,key)) {continue;}
-					if (
-						key === "appearance" ||
-						key === "network_id" ||
-						key === "overlays" ||
-						key === "components"
-					) {
-						continue;
-					}
-					atom[key] = inst[key];
-				}
-				atom.glide = new Atom.Glide(atom, { oldx, oldy, lasttime: timestamp });
-				if (inst.overlays) {
-					for (const key in inst.overlays) {
-						if (!Object.prototype.hasOwnProperty.call(inst.overlays,key)) {continue;}
-						atom.set_overlay(key, inst.overlays[key]);
-					}
-				}
-				if (inst.components) {
-					for (const component_name in inst.components) {
-						if (!Object.prototype.hasOwnProperty.call(inst.components,component_name)) {continue;}
-						for (const key in inst.components[component_name]) {
-							if (!Object.prototype.hasOwnProperty.call(inst.components[component_name],key))
-								{continue;}
-							atom.components[component_name][key] =
-								inst.components[component_name][key];
-						}
-					}
-				}
-			}
-		}
-		if (obj.delete_atoms) {
-			for (let i = 0; i < obj.delete_atoms.length; i++) {
-				const atom = this.atoms_by_netid[obj.delete_atoms[i]];
-				if (!atom) {continue;}
-				atom.del();
-			}
-		}
+		if (obj.update_atoms) {this.update_atoms(obj,timestamp);}
+
+		if (obj.delete_atoms) {this.delete_atoms(obj);}
+
 		if (obj.timestamp) {
 			this.server_time_to_client = timestamp - obj.timestamp;
 		}
@@ -199,31 +230,9 @@ class TypespessClient extends EventEmitter {
 				this.visible_tiles.delete(tile);
 			}
 		}
-		if (obj.eye) {
-			for (const [id, props] of Object.entries(obj.eye)) {
-				const eye = this.eyes[id];
-				if (!eye) {continue;}
-				const oldx = eye.origin.x;
-				const oldy = eye.origin.y;
-				Object.assign(eye.origin, props);
-				eye.origin.glide = new Atom.Glide(eye.origin, {
-					oldx,
-					oldy,
-					lasttime: timestamp,
-				});
-			}
-		}
-		if (obj.to_chat) {
-			const cw = document.getElementById("chatwindow");
-			let do_scroll = false;
-			if (cw.scrollTop + cw.clientHeight >= cw.scrollHeight) {do_scroll = true;}
-			for (const item of obj.to_chat) {
-				const newdiv = document.createElement("div");
-				newdiv.innerHTML = item;
-				document.getElementById("chatwindow").appendChild(newdiv);
-			}
-			if (do_scroll) {cw.scrollTop = cw.scrollHeight - cw.clientHeight;}
-		}
+		if (obj.eye) {this.update_eye(obj, timestamp);}
+
+		if (obj.to_chat) {this.to_chat(obj);}
 		if (obj.panel) {
 			this.panel_manager.handle_message(obj.panel);
 		}

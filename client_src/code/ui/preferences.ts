@@ -124,7 +124,7 @@ class PreferencesPanel {
 				const text = document.createElement("span");
 				text.textContent = obj.name;
 				const preview = this.create_preview({
-					prefs_modifier: (prefs: {}) => {
+					prefs_modifier: (prefs: Reference<string,any>) => {
 						prefs.hair_style = id;
 					},
 				});
