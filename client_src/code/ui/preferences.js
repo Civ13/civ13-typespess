@@ -242,7 +242,35 @@ class PreferencesPanel {
 		let tab_obj = this.panel.$(`.tabcontent[data-tab='${tab}']`);
 		if (tab_obj) {tab_obj.style.display = "block";}
 	}
+	msg_char_prefs(msg) {
+		Object.assign(this.char_prefs, msg.char_prefs);
+		if (msg.char_prefs.name) {
+			this.panel.$(".property-name").value = msg.char_prefs.name;
+		}
+		if (msg.char_prefs.gender) {
+			this.panel.$(".property-gender").textContent = msg.char_prefs.gender === "male" ? "Male" : "Female";
+		}
+		if (msg.char_prefs.age) {
+			this.panel.$(".property-age").value = msg.char_prefs.age;
+		}
 
+		if (msg.char_prefs.skin_tone) {
+			this.panel.$(".property-skin_tone").textContent = msg.char_prefs.skin_tone;
+		}
+		if (msg.char_prefs.hair_color) {
+			this.panel.$(
+				".property-hair_color"
+			).style.backgroundColor = msg.char_prefs.hair_color;
+		}
+		if (msg.char_prefs.hair_style) {
+			this.panel.$(
+				".property-hair"
+			).textContent = this.sprite_accessories.hair[
+				msg.char_prefs.hair_style
+			].name;
+		}
+		this.update_previews();
+	}
 	handle_message(msg) {
 		if (msg.sprite_accessories) {
 			this.sprite_accessories = msg.sprite_accessories;
@@ -262,35 +290,8 @@ class PreferencesPanel {
 				.classList.add("selected");
 			this.show_tab(msg.set_tab);
 		}
-		if (msg.char_prefs) {
-			Object.assign(this.char_prefs, msg.char_prefs);
-			if (msg.char_prefs.name) {
-				this.panel.$(".property-name").value = msg.char_prefs.name;
-			}
-			if (msg.char_prefs.gender) {
-				this.panel.$(".property-gender").textContent = msg.char_prefs.gender === "male" ? "Male" : "Female";
-			}
-			if (msg.char_prefs.age) {
-				this.panel.$(".property-age").value = msg.char_prefs.age;
-			}
+		if (msg.char_prefs) {this.msg_char_prefs(msg);}
 
-			if (msg.char_prefs.skin_tone) {
-				this.panel.$(".property-skin_tone").textContent = msg.char_prefs.skin_tone;
-			}
-			if (msg.char_prefs.hair_color) {
-				this.panel.$(
-					".property-hair_color"
-				).style.backgroundColor = msg.char_prefs.hair_color;
-			}
-			if (msg.char_prefs.hair_style) {
-				this.panel.$(
-					".property-hair"
-				).textContent = this.sprite_accessories.hair[
-					msg.char_prefs.hair_style
-				].name;
-			}
-			this.update_previews();
-		}
 		if (Object.prototype.hasOwnProperty.call(msg,"name_valid")) {
 			let elem = this.panel.$(".property-name");
 			if (msg.name_valid) {elem.classList.remove("red");}

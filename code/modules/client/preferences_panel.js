@@ -23,27 +23,32 @@ class PreferencesPanel extends Panel {
 	(client.character_preferences = new CharacterPreferences());
 	}
 
+	check_name(new_name, msg) {
+		if (new_name) {
+			this.send_message({ name_valid: true });
+			let corrected = CharacterPreferences.reject_bad_name(
+				msg.char_prefs.name,
+				{ trim: false }
+			);
+			if (corrected !== msg.char_prefs.name) {
+				this.send_message({
+					name_correction: [msg.char_prefs.name, corrected],
+				});
+			}
+			this.char_prefs.name = new_name;
+		} else {
+			this.send_message({ name_valid: false });
+		}
+	}
+
 	message_handler(msg) {
 		if (msg.char_prefs && this.char_prefs) {
 			if (typeof msg.char_prefs.name !== "undefined") {
 				let new_name = CharacterPreferences.reject_bad_name(
 					msg.char_prefs.name
 				);
-				if (new_name) {
-					this.send_message({ name_valid: true });
-					let corrected = CharacterPreferences.reject_bad_name(
-						msg.char_prefs.name,
-						{ trim: false }
-					);
-					if (corrected !== msg.char_prefs.name) {
-						this.send_message({
-							name_correction: [msg.char_prefs.name, corrected],
-						});
-					}
-					this.char_prefs.name = new_name;
-				} else {
-					this.send_message({ name_valid: false });
-				}
+				this.check_name(new_name, msg);
+
 			}
 			if (typeof msg.char_prefs.gender !== "undefined") {
 				this.char_prefs.gender = msg.char_prefs.gender === "female" ? "female" : "male";
@@ -75,19 +80,22 @@ class PreferencesPanel extends Panel {
 			this.send_prefs(["name"]);
 		}
 		if (msg.job_preferences) {
-			for (let [key, setting] of Object.entries(msg.job_preferences)) {
-				setting = Math.max(Math.min(Math.round(+setting || 0), 3), 0); // sanitize the value
-				if (key === "nomad") {setting = +!!setting;} // turn it into 0/1 deal
-				if (!this.client.server.job_controller.jobs[key]) {continue;} // oi that job doesnt exist ree
-				if (setting === 0) {delete this.char_prefs.job_preferences[key];}
-				else {this.char_prefs.job_preferences[key] = setting;}
-				if (setting === 3) {
-					for (let [otherjob, othersetting] of Object.entries(
-						this.char_prefs.job_preferences
-					)) {
-						if (otherjob !== key && othersetting === 3) {
-							this.char_prefs.job_preferences[otherjob] = 2;
-						}
+			this.check_job_preferences(msg);
+		}
+	}
+	check_job_preferences(msg) {
+		for (let [key, setting] of Object.entries(msg.job_preferences)) {
+			setting = Math.max(Math.min(Math.round(+setting || 0), 3), 0); // sanitize the value
+			if (key === "nomad") {setting = +!!setting;} // turn it into 0/1 deal
+			if (!this.client.server.job_controller.jobs[key]) {continue;} // oi that job doesnt exist ree
+			if (setting === 0) {delete this.char_prefs.job_preferences[key];}
+			else {this.char_prefs.job_preferences[key] = setting;}
+			if (setting === 3) {
+				for (let [otherjob, othersetting] of Object.entries(
+					this.char_prefs.job_preferences
+				)) {
+					if (otherjob !== key && othersetting === 3) {
+						this.char_prefs.job_preferences[otherjob] = 2;
 					}
 				}
 			}

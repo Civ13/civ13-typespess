@@ -57,6 +57,7 @@ class GameTicker extends EventEmitter {
 						},
 						(err) => {
 							console.error(err);
+							// eslint-disable-next-line no-process-exit
 							process.exit(1); // something went horribly wrong, let's gtfo.
 						}
 					);

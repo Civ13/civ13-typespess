@@ -66,28 +66,29 @@ class ReagentBinding {
 				});
 			}
 
-			if (obj.reagents) {
-				let reagents_list = this.elem.querySelector(".reagents-list");
-				for (let [key, robj] of Object.entries(obj.reagents)) {
-					if (!robj) {
-						if (this.reagent_elems[key]) {
-							reagents_list.removeChild(this.reagent_elems[key]);
-							delete this.reagent_elems[key];
-						}
-						continue;
-					}
-					let elem = this.reagent_elems[key];
-					if (!elem) {
-						elem = this.build_entry(key, robj);
-						reagents_list.appendChild(elem);
-						this.reagent_elems[key] = elem;
-					}
-					this.update_entry(key, robj, elem);
-				}
-			}
+			if (obj.reagents) {this.check_reagents(obj);}
 		}
 	}
 
+	check_reagents(obj) {
+		let reagents_list = this.elem.querySelector(".reagents-list");
+		for (let [key, robj] of Object.entries(obj.reagents)) {
+			if (!robj) {
+				if (this.reagent_elems[key]) {
+					reagents_list.removeChild(this.reagent_elems[key]);
+					delete this.reagent_elems[key];
+				}
+				continue;
+			}
+			let elem = this.reagent_elems[key];
+			if (!elem) {
+				elem = this.build_entry(key, robj);
+				reagents_list.appendChild(elem);
+				this.reagent_elems[key] = elem;
+			}
+			this.update_entry(key, robj, elem);
+		}
+	}
 	build_entry(/*id, obj*/) {
 		let elem = document.createElement("div");
 		elem.classList.add("zebrastripe");

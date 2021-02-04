@@ -1,0 +1,119 @@
+
+window:
+    components: ["Window", "TGSmooth"]
+    vars:
+        components:
+            Window:
+                enable_damage_overlay: true
+            
+            Smooth:
+                smooth_with: "window"
+            
+            SmoothGroup:
+                groups: ["window"]
+            
+        
+        icon: "icons/obj/windows/"
+        icon_state: "windownew"
+    
+    tree_paths: ["structures/window"]
+
+window_dir:
+    components: ["Window", "DirectionalWindow"]
+    variants: [
+       
+            type: "single"
+            var_path: ["dir"]
+            values: [2, 1, 4, 8]
+            orientation: "horizontal"
+        
+    ]
+    tree_paths: ["structures/window/directional"]
+
+window_construct:
+    parent_template: "window"
+    vars:
+        components:
+            Window:
+                state: "unscrewed_from_floor"
+            
+        
+    
+    tree_paths: ["structures/window/construct"]
+
+r_window:
+    components: ["ReinforcedWindow", "TGSmooth"]
+    vars:
+        components:
+            Window:
+                enable_damage_overlay: true
+            
+            Smooth:
+                smooth_with: "window"
+            
+            SmoothGroup:
+                groups: ["window"]
+            
+        
+        icon: "icons/obj/windows/"
+        icon_state: "windowmetal"
+    
+    tree_paths: ["structures/window/reinforced"]
+
+r_window_dir:
+    components: ["ReinforcedWindow", "DirectionalWindow"]
+    variants: [
+       
+            type: "single"
+            var_path: ["dir"]
+            values: [2, 1, 4, 8]
+            orientation: "horizontal"
+        
+    ]
+    tree_paths: ["structures/window/reinforced/directional"]
+
+r_window_construct:
+    parent_template: "r_window"
+    vars:
+        components:
+            Window:
+                state: "unscrewed_from_floor"
+            
+        
+    
+    tree_paths: ["structures/window/reinforced/construct"]
+
+shuttle_window:
+    components: ["ReinforcedWindow", "TGSmooth"]
+    vars:
+        components:
+            Smooth:
+                smooth_with: "shuttle_window"
+            
+            SmoothGroup:
+                groups: ["shuttle_window", "titanium_wall"]
+            
+            Destructible:
+                max_integrity: 100
+                armor:
+                    melee: 50
+                    bullet: 0
+                    laser: 0
+                    energy: 0
+                    bomb: 50
+                    bio: 100
+                    rad: 100
+                    fire: 80
+                    acid: 100
+                
+            
+            Examine:
+                desc: "A reinforced, air-locked pod window."
+            
+        
+        name: "shuttle window"
+        icon: "icons/obj/windows/"
+        icon_state: "metal_porthole_full"
+    
+    tree_paths: ["structures/window/shuttle"]
+

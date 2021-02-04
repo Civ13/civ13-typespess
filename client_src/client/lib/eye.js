@@ -40,7 +40,7 @@ class Eye extends EventEmitter {
 			atom.on_render_tick(timestamp);
 			let last_plane = this.last_planes.get(atom);
 			let plane = atom.get_plane();
-			if (last_plane != plane) {
+			if (last_plane !== plane) {
 				if (last_plane) {last_plane.atoms.delete(atom);}
 				if (plane) {plane.atoms.add(atom);}
 				this.last_planes.set(atom, plane);
@@ -148,7 +148,7 @@ class Eye extends EventEmitter {
 		var start_meta = this.get_mouse_target(e);
 		var start_time = performance.now();
 		var mouseup = (e2) => {
-			if (e2.button != e.button) {return;}
+			if (e2.button !== e.button) {return;}
 			document.removeEventListener("mouseup", mouseup);
 			var end_time = performance.now();
 			var end_meta = this.get_mouse_target(e2);
@@ -545,7 +545,7 @@ class Plane {
 
 	size_canvases() {
 		let [width, height] = this.calculate_canvas_size();
-		if (width != this.canvas.width || height != this.canvas.height) {
+		if (width !== this.canvas.width || height !== this.canvas.height) {
 			this.canvas.width = width;
 			this.canvas.height = height;
 			this.draw_canvas.width = width;
