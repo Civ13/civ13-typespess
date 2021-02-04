@@ -1,3 +1,4 @@
+export{};
 const { chain_func, Component } = require("../client/index.ts");
 
 const PROGRESSBAR_HEIGHT = 6 / 32;

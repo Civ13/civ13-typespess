@@ -1,7 +1,8 @@
+export{};
 const { Component, chain_func } = require("../client/index.ts");
 
 class CarbonMob extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.get_transform = chain_func(
 			this.a.get_transform,
@@ -16,7 +17,7 @@ class CarbonMob extends Component {
 		this.last_jitter_y = 0;
 	}
 
-	get_transform(prev, timestamp) {
+	get_transform(prev: () => any, timestamp: number) {
 		let transform = prev();
 		const timestamp_diff = timestamp - this.last_timestamp;
 		if (timestamp_diff > 0) {

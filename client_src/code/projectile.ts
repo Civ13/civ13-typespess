@@ -1,3 +1,4 @@
+export{};
 const { Component, chain_func } = require("../client/index.ts");
 
 class Projectile extends Component {

@@ -1,3 +1,4 @@
+export{};
 const { Component } = require("../client/index.ts");
 
 class Tooltip extends Component {
