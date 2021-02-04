@@ -1,6 +1,8 @@
-function anim_loop(timestamp) {
+function anim_loop(this: any, timestamp: any) {
 	for (const eye of Object.values(this.eyes)) {
-		eye.draw(timestamp);
+		if (eye)
+			{const teye: any = eye;
+			teye.draw(timestamp);}
 	}
 
 	if (this.audio_ctx) {

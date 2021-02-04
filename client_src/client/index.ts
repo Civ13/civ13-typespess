@@ -1,3 +1,4 @@
+export {};
 const Atom = require("./lib/atom.ts");
 const IconRenderer = require("./lib/icon_renderer.ts");
 const PanelManager = require("./lib/panels/manager.ts");
@@ -8,7 +9,7 @@ const Matrix = require("./lib/matrix.ts");
 const { Eye, Plane } = require("./lib/eye.ts");
 
 class TypespessClient extends EventEmitter {
-	constructor(wsurl, resRoot = "") {
+	constructor(wsurl: string, resRoot = "") {
 		super();
 		if (!wsurl) {wsurl = "ws" + window.location.origin.substring(4);}
 		this.resRoot = resRoot;
@@ -131,7 +132,7 @@ class TypespessClient extends EventEmitter {
 		}
 	}
 
-	handleSocketMessage(event) {
+	handleSocketMessage(event: { data: string; }) {
 		const obj = JSON.parse(event.data);
 		const timestamp = performance.now();
 		if (obj.create_atoms) {
@@ -248,16 +249,16 @@ class TypespessClient extends EventEmitter {
 // This is pretty much identical to the function on the server's lib/utils.ts
 const _chain_parent = Symbol("_chain_parent");
 const _chain_spliced = Symbol("_chain_spliced");
-(TypespessClient.chain_func = function (func1, func2) {
+(TypespessClient.chain_func = function (func1: any, func2: { call: (arg0: any, arg1: (...override_args: any[]) => any, arg2: any) => any; }) {
 	if (typeof func2 === "undefined") {throw new Error("Chaining undefined function!");}
-	function chained_func(...args) {
+	function chained_func(this: any, ...args: any[]) {
 		while (
 			chained_func[_chain_parent] &&
 			chained_func[_chain_parent][_chain_spliced]
 		) {
 			chained_func[_chain_parent] = chained_func[_chain_parent][_chain_parent];
 		}
-		const prev = (...override_args) => {
+		const prev = (...override_args: undefined[]) => {
 			if (!chained_func[_chain_parent]) {return;}
 			if (override_args.length)
 				{return chained_func[_chain_parent].call(this, ...override_args);}
@@ -274,9 +275,9 @@ const _chain_spliced = Symbol("_chain_spliced");
 	return chained_func;
 }),
 (TypespessClient.dropdown = function (
-	elem1,
-	elem2,
-	{ point = null, autoremove = true } = {}
+	elem1: { getBoundingClientRect: () => any; appendChild: (arg0: any) => void; classList: { contains: (arg0: string) => any; }; contains: (arg0: any) => any; removeChild: (arg0: any) => void; },
+	elem2: Element,
+	{ point = [], autoremove = true } = {}
 ) {
 	let rect;
 	if (point) {

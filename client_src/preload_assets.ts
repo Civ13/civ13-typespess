@@ -1,5 +1,5 @@
 const { join } = require ("path");
-const fs = require("fs");
+import fs from "fs";
 
 let files = "";
 const dirs: any[] = [];
