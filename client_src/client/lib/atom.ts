@@ -302,7 +302,7 @@ class Glide {
 	params.oldy === +params.oldy &&
 	(params.oldx !== object.x || params.oldy !== object.y) &&
 	Math.abs(Math.max(object.x - params.oldx, object.y - params.oldy)) <=
-		1.50001
+		1.5001
 		) {
 			let pgx = (object.glide && object.glide.x) || 0;
 			if (Math.sign(pgx) === params.oldx - object.x) {pgx = 0;}

@@ -33,27 +33,27 @@ class Smooth extends Component {
 			atom.bounds_x +
 			atom.bounds_width -
 			(this.a.x + this.a.bounds_x)
-		) < 0.00001;
+		) < 0.0001;
 				let right_touch =
 		Math.abs(
 			atom.x +
 			atom.bounds_x -
 			(this.a.x + this.a.bounds_x + this.a.bounds_width)
-		) < 0.00001;
+		) < 0.0001;
 				let top_touch =
 		Math.abs(
 			atom.y +
 			atom.bounds_y -
 			(this.a.y + this.a.bounds_y + this.a.bounds_height)
-		) < 0.00001;
+		) < 0.0001;
 				let bottom_touch =
 		Math.abs(
 			atom.y +
 			atom.bounds_y +
 			atom.bounds_height -
 			(this.a.y + this.a.bounds_y)
-		) < 0.00001;
-				if (Math.abs(atom.x - this.a.x) < 0.00001) {
+		) < 0.0001;
+				if (Math.abs(atom.x - this.a.x) < 0.0001) {
 					if (bottom_touch) {
 						this.adjacent |= 1 << 2;
 					}
@@ -61,7 +61,7 @@ class Smooth extends Component {
 						this.adjacent |= 1 << 1;
 					}
 				}
-				if (Math.abs(atom.y - this.a.y) < 0.00001) {
+				if (Math.abs(atom.y - this.a.y) < 0.0001) {
 					if (left_touch) {
 						this.adjacent |= 1 << 8;
 					}

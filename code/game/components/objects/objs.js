@@ -144,8 +144,8 @@ class Tangible extends Component {
 
 	adjacent(target) {
 		return (
-			Math.abs(target.x - this.a.x) <= 1.50001 &&
-	Math.abs(target.y - this.a.y) <= 1.50001
+			Math.abs(target.x - this.a.x) <= 1.5001 &&
+	Math.abs(target.y - this.a.y) <= 1.5001
 		);
 	}
 	can_reach(target) {

@@ -29,7 +29,7 @@ class Puller extends Component {
 	this.a.z === target.z &&
 	this.a.dim === target.dim &&
 	Math.max(Math.abs(this.a.x - target.x), Math.abs(this.a.y - target.y)) <=
-		1.50001 &&
+		1.5001 &&
 	this.a.loc &&
 	this.a.loc.is_base_loc &&
 	target.loc &&
@@ -58,18 +58,18 @@ class Puller extends Component {
 		var oldx = this.a.x - movement.offset.x;
 		var oldy = this.a.y - movement.offset.y;
 		if (
-			Math.abs(this[_pulling].x - this.a.x) > 2.50001 ||
-	Math.abs(this[_pulling].y - this.a.y) > 2.50001
+			Math.abs(this[_pulling].x - this.a.x) > 2.5001 ||
+	Math.abs(this[_pulling].y - this.a.y) > 2.5001
 		) {
 			this.pulling = null;
 			return;
 		}
 		// no diagonal drags if you don't need it
 		if (
-			Math.abs(this[_pulling].x - oldx) < 0.0001 &&
-	Math.abs(this[_pulling].y - oldy) < 0.0001 &&
-	Math.abs(this[_pulling].x - this.a.x) <= 1.50001 &&
-	Math.abs(this[_pulling].y - this.a.y) <= 1.50001
+			Math.abs(this[_pulling].x - oldx) < 0.001 &&
+	Math.abs(this[_pulling].y - oldy) < 0.001 &&
+	Math.abs(this[_pulling].x - this.a.x) <= 1.5001 &&
+	Math.abs(this[_pulling].y - this.a.y) <= 1.5001
 		) {
 			return;
 		}

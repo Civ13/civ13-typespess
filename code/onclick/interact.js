@@ -82,8 +82,8 @@ class MobInteract extends Component {
 			}
 
 			if (
-				Math.abs(e.atom.x - this.a.x) <= 1.50001 &&
-		Math.abs(e.atom.y - this.a.y) <= 1.50001
+				Math.abs(e.atom.x - this.a.x) <= 1.5001 &&
+		Math.abs(e.atom.y - this.a.y) <= 1.5001
 			) {
 				if (active_item) {
 					active_item.c.Item.melee_attack_chain(this.a, e.atom, e);
@@ -102,8 +102,8 @@ class MobInteract extends Component {
 			}
 		} else {
 			let flag =
-		Math.abs(Math.floor(e.world_x) - this.a.x) <= 1.50001 &&
-		Math.abs(Math.floor(e.world_y) - this.a.y) <= 1.50001;
+		Math.abs(Math.floor(e.world_x) - this.a.x) <= 1.5001 &&
+		Math.abs(Math.floor(e.world_y) - this.a.y) <= 1.5001;
 			let target = {
 				x: e.world_x - 0.5,
 				y: e.world_y - 0.5,
