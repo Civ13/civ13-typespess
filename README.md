@@ -4,6 +4,7 @@
 
 ![CircleCI](https://img.shields.io/circleci/build/github/Civ13/civ13-typespess)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f6b220214aca435c9942bc5cb205d239)](https://app.codacy.com/gh/Civ13/civ13-typespess?utm_source=github.com&utm_medium=referral&utm_content=Civ13/civ13-typespess&utm_campaign=Badge_Grade_Dashboard)
+![License](https://img.shields.io/github/license/civ13/civ13-typespess)
 
 ![GitHub top language](https://img.shields.io/github/languages/top/civ13/civ13-typespess)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/civ13/civ13-typespess)
