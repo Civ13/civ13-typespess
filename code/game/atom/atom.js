@@ -493,15 +493,15 @@ class Atom extends EventEmitter {
 			}
 			if (this[_loc].is_base_loc) {
 				for (
-					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
-					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+					let x = Math.floor(this[_x] + this[_bounds_x] + 0.001);
+					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.001);
 					x++
 				) {
 					for (
-						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
+						let y = Math.floor(this[_y] + this[_bounds_y] + 0.001);
 						y <
 			Math.ceil(
-				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.001
 			);
 						y++
 					) {
@@ -541,15 +541,15 @@ class Atom extends EventEmitter {
 			}
 			if (this[_loc].is_base_loc) {
 				for (
-					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
-					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+					let x = Math.floor(this[_x] + this[_bounds_x] + 0.0001);
+					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.0001);
 					x++
 				) {
 					for (
-						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
+						let y = Math.floor(this[_y] + this[_bounds_y] + 0.0001);
 						y <
 			Math.ceil(
-				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.0001
 			);
 						y++
 					) {
@@ -673,15 +673,15 @@ class Atom extends EventEmitter {
 		if (this[_loc] && this[_loc].is_base_loc) {
 			if (this[_loc].is_base_loc) {
 				for (
-					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
-					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+					let x = Math.floor(this[_x] + this[_bounds_x] + 0.001);
+					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.001);
 					x++
 				) {
 					for (
-						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
+						let y = Math.floor(this[_y] + this[_bounds_y] + 0.001);
 						y <
 			Math.ceil(
-				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.001
 			);
 						y++
 					) {
@@ -697,14 +697,14 @@ class Atom extends EventEmitter {
 
 			if (this[_loc].is_base_loc) {
 				for (
-					let x = Math.floor(newX + this[_bounds_x] + 0.00001);
-					x < Math.ceil(newX + this[_bounds_x] + this[_bounds_width] - 0.00001);
+					let x = Math.floor(newX + this[_bounds_x] + 0.0001);
+					x < Math.ceil(newX + this[_bounds_x] + this[_bounds_width] - 0.0001);
 					x++
 				) {
 					for (
-						let y = Math.floor(newY + this[_bounds_y] + 0.00001);
+						let y = Math.floor(newY + this[_bounds_y] + 0.0001);
 						y <
-			Math.ceil(newY + this[_bounds_y] + this[_bounds_height] - 0.00001);
+			Math.ceil(newY + this[_bounds_y] + this[_bounds_height] - 0.0001);
 						y++
 					) {
 						let thisloc = this[_loc].dim.location(x, y, this[_z]);
@@ -1229,7 +1229,7 @@ class Atom extends EventEmitter {
 		)
 			{return false;}
 		return (
-			this[_x] + this[_bounds_x] - 0.0001 <= tile.x && this[_y] + this[_bounds_y] - 0.0001 <= tile.y && this[_x] + this[_bounds_x] + this[_bounds_width] + 0.0001 >= tile.x + 1 && this[_y] + this[_bounds_y] + this[_bounds_height] + 0.0001 >= tile.y + 1
+			this[_x] + this[_bounds_x] - 0.001 <= tile.x && this[_y] + this[_bounds_y] - 0.001 <= tile.y && this[_x] + this[_bounds_x] + this[_bounds_width] + 0.001 >= tile.x + 1 && this[_y] + this[_bounds_y] + this[_bounds_height] + 0.001 >= tile.y + 1
 		);
 	}
 
@@ -1254,7 +1254,7 @@ class Atom extends EventEmitter {
 			atom[_x] === +atom[_x] && atom[_y] === +atom[_y] && atom[_z] === z && this[_loc] && atom[_loc] && this[_loc].is_base_loc && atom[_loc].is_base_loc
 		) {
 			return (
-				x + bounds_x + bounds_width - 0.0001 > atom[_x] + atom[_bounds_x] && x + bounds_x + 0.0001 < atom[_x] + atom[_bounds_x] + atom[_bounds_width] && y + bounds_y + bounds_height - 0.0001 > atom[_y] + atom[_bounds_y] && y + bounds_y + 0.0001 < atom[_y] + atom[_bounds_y] + atom[_bounds_height]
+				x + bounds_x + bounds_width - 0.001 > atom[_x] + atom[_bounds_x] && x + bounds_x + 0.001 < atom[_x] + atom[_bounds_x] + atom[_bounds_width] && y + bounds_y + bounds_height - 0.001 > atom[_y] + atom[_bounds_y] && y + bounds_y + 0.001 < atom[_y] + atom[_bounds_y] + atom[_bounds_height]
 			);
 		}
 	}
@@ -1463,15 +1463,15 @@ set directional(val) {
 		if (this[_loc] && this[_loc].is_base_loc) {
 			if (this[_loc].is_base_loc) {
 				for (
-					let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
-					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+					let x = Math.floor(this[_x] + this[_bounds_x] + 0.0001);
+					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.0001);
 					x++
 				) {
 					for (
-						let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
+						let y = Math.floor(this[_y] + this[_bounds_y] + 0.0001);
 						y <
 			Math.ceil(
-				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001
+				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.0001
 			);
 						y++
 					) {
@@ -1555,14 +1555,14 @@ set directional(val) {
 		if (!this.loc || !this.loc.is_base_loc) {return base_only ? [] : [this.loc];}
 		let locs = [];
 		for (
-			let x = Math.floor(this[_x] + this[_bounds_x] + 0.00001);
-			x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.00001);
+			let x = Math.floor(this[_x] + this[_bounds_x] + 0.0001);
+			x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.0001);
 			x++
 		) {
 			for (
-				let y = Math.floor(this[_y] + this[_bounds_y] + 0.00001);
+				let y = Math.floor(this[_y] + this[_bounds_y] + 0.0001);
 				y <
-		Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] - 0.00001);
+		Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] - 0.0001);
 				y++
 			) {
 				locs.push(this.dim.location(x, y, this[_z]));
@@ -1580,14 +1580,14 @@ set directional(val) {
 		if (!this.loc || !this.loc.is_base_loc) {return base_only ? [] : [this.loc];}
 		let locs = [];
 		for (
-			let x = Math.floor(this[_x] + this[_bounds_x] - 0.00001);
-			x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] + 0.00001);
+			let x = Math.floor(this[_x] + this[_bounds_x] - 0.0001);
+			x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] + 0.0001);
 			x++
 		) {
 			for (
-				let y = Math.floor(this[_y] + this[_bounds_y] - 0.00001);
+				let y = Math.floor(this[_y] + this[_bounds_y] - 0.0001);
 				y <
-		Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] + 0.00001);
+		Math.ceil(this[_y] + this[_bounds_y] + this[_bounds_height] + 0.0001);
 				y++
 			) {
 				locs.push(this.dim.location(x, y, this[_z]));

@@ -185,8 +185,8 @@ class Cable extends Component {
 				let end_this = this.get_end(n_this);
 				let end_other = other.c.Cable.get_end(n_other);
 				if (
-					Math.abs(end_this[0] - end_other[0]) < 0.0001 &&
-		Math.abs(end_this[1] - end_other[1]) < 0.00001
+					Math.abs(end_this[0] - end_other[0]) < 0.001 &&
+		Math.abs(end_this[1] - end_other[1]) < 0.0001
 				)
 					{return true;}
 			}

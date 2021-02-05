@@ -206,13 +206,13 @@ class Typespess extends EventEmitter {
 		var inrange_tiles = new Set();
 		if (typeof atom.base_loc === "undefined") {return inrange_tiles;}
 		for (
-			var x = Math.floor(atom.x + 0.0001 - dist);
-			x <= Math.ceil(atom.x - 0.0001 + dist);
+			var x = Math.floor(atom.x + 0.001 - dist);
+			x <= Math.ceil(atom.x - 0.001 + dist);
 			x++
 		) {
 			for (
-				var y = Math.floor(atom.y + 0.0001 - dist);
-				y <= Math.ceil(atom.y - 0.0001 + dist);
+				var y = Math.floor(atom.y + 0.001 - dist);
+				y <= Math.ceil(atom.y - 0.001 + dist);
 				y++
 			) {
 				inrange_tiles.add(atom.dim.location(x, y, atom.z));
