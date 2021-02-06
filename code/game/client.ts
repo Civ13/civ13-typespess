@@ -393,30 +393,32 @@ class Client extends EventEmitter {
 		)
 			{common_visgroups.push(visgroup);}
 	}
-	const submessage = {
+	let submessage: Record<string,any> = {};
+	submessage = {
 		network_id: netid,
 		component_vars: {},
-		components: [],
+		components: [{length: 1}],
 		eye_id: this.mob.c.Mob.get_eyeid_for_eye(this[_netid_to_eye][netid]),
 	};
 	for (const key of [
-		"icon",
-		"icon_state",
-		"dir",
-		"layer",
-		"name",
-		"glide_size",
-		"screen_loc_x",
-		"screen_loc_y",
-		"mouse_opacity",
-		"overlays",
-		"x",
-		"y",
-		"opacity",
-		"color",
-		"alpha",
+		'icon',
+		'icon_state',
+		'dir',
+		'layer',
+		'name',
+		'glide_size',
+		'screen_loc_x',
+		'screen_loc_y',
+		'mouse_opacity',
+		'overlays',
+		'x',
+		'y',
+		'opacity',
+		'color',
+		'alpha',
 	]) {
-		submessage[key] = atom[key];
+		const tkey: any = atom[key];
+		submessage[key] = tkey;
 		for (const visgroup of common_visgroups) {
 			if (visgroup.overrides.has(key))
 				{submessage[key] = visgroup.overrides.get(key);}

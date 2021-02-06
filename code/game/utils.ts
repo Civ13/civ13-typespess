@@ -1,4 +1,5 @@
-let Atom, Client, ChatMessage;
+export{};
+let Atom: any, Client: any, ChatMessage: new (arg0: string, arg1: string) => any;
 
 const _chain_parent = Symbol("_chain_parent");
 const _chain_spliced = Symbol("_chain_spliced");
@@ -16,7 +17,7 @@ module.exports = {
   * @param {Object} a
   * @param {Object} b
   */
-	weak_deep_assign(a, b) {
+	weak_deep_assign(a: any, b: any) {
 		for (const key in b) {
 			if (!Object.prototype.hasOwnProperty.call(b,key)) {continue;}
 			if (
@@ -47,7 +48,7 @@ module.exports = {
 	},
 
 	// Recursive version of Object.create()
-	deep_create(obj) {
+	deep_create(obj: Record<string,any>) {
 		const newobj = Object.create(obj);
 		for (const key in obj) {
 			if (!Object.prototype.hasOwnProperty.call(obj,key)) {continue;}
@@ -77,9 +78,9 @@ module.exports = {
   * @param {Function} func2 The function overriding this one. The first argument should be <code>prev</code>
   * @returns {Function}
   */
-	chain_func(func1, func2) {
+	chain_func(func1: any, func2: any) {
 		if (typeof func2 === "undefined") {throw new Error("Chaining undefined function!");}
-		function chained_func(...args) {
+		function chained_func(...args: any[]) {
 			while (
 				chained_func[_chain_parent] &&
 		chained_func[_chain_parent][_chain_spliced]
@@ -87,7 +88,7 @@ module.exports = {
 				chained_func[_chain_parent] =
 		chained_func[_chain_parent][_chain_parent];
 			}
-			const prev = (...override_args) => {
+			const prev = (...override_args: undefined[]) => {
 				if (!chained_func[_chain_parent]) {return;}
 				if (override_args.length)
 					{return chained_func[_chain_parent].call(this, ...override_args);}
@@ -110,13 +111,13 @@ module.exports = {
   * @param {string} name
   * @param {string|((val) => boolean)} check
   */
-	make_watched_property(obj, name, check) {
+	make_watched_property(obj: any, name: string, check: { (arg0: any): any; (val: any): boolean; }) {
 		const init_value = obj[name];
-		let value = null;
+		let value: any = null;
 		const event_name = `${name}_changed`;
 		if (typeof check === "string") {
 			const type = check;
-			check = function (val) {
+			check = function (val: any) {
 				if (typeof val !== type) {return true;}
 			};
 		}
@@ -148,7 +149,7 @@ module.exports = {
   * @param {string} name The name of the component
   * @returns {boolean}
   */
-	has_component(atom, name) {
+	has_component(atom: { components: { [x: string]: any; }; }, name: string | number) {
 		return atom && atom instanceof Atom && !!atom.components[name];
 	},
 
@@ -158,7 +159,7 @@ module.exports = {
   * @param {Typespess.Atom} atom The object to check
   * @returns {boolean}
   */
-	is_atom(atom) {
+	is_atom(atom: any) {
 		return atom && atom instanceof Atom;
 	},
 
@@ -169,7 +170,7 @@ module.exports = {
   * @param {number} angle The angle to turn it by
   * @returns {number} The resulting direction
   */
-	turn_dir(dir, angle) {
+	turn_dir(dir: number, angle: number) {
 		dir = dir & 15;
 		angle = ((angle % 360) + 360) % 360;
 		return [
@@ -185,21 +186,21 @@ module.exports = {
 		][Math.floor(angle / 90) * 2 + (angle % 90 === 0 ? 0 : 1)][dir];
 	},
 
-	dir_dx(dir) {
+	dir_dx(dir: number) {
 		let dx = 0;
 		if (dir & 4) {dx++;}
 		if (dir & 8) {dx--;}
 		return dx;
 	},
 
-	dir_dy(dir) {
+	dir_dy(dir: number) {
 		let dy = 0;
 		if (dir & 1) {dy++;}
 		if (dir & 2) {dy--;}
 		return dy;
 	},
 
-	dir_to(dx, dy) {
+	dir_to(dx: number, dy: number) {
 		let dir = 0;
 		if (dy > 0) {dir |= 1;}
 		if (dy < 0) {dir |= 2;}
@@ -208,7 +209,7 @@ module.exports = {
 		return dir;
 	},
 
-	dir_reverse(dir) {
+	dir_reverse(dir: number) {
 		switch(dir) {
 			case 1: //North
 				dir = 2;
@@ -269,7 +270,7 @@ module.exports = {
   * @returns {Typespess.ChatMessage} (this object)
   * @memberof Typespess
   */
-	visible_message(a, ...b) {
+	visible_message(a: any, ...b: any[]) {
 		if (typeof a === "string") {
 			return new ChatMessage("see", a);
 		}
@@ -283,7 +284,7 @@ module.exports = {
   * @returns {Typespess.ChatMessage} (this object)
   * @memberof Typespess
   */
-	audible_message(a, ...b) {
+	audible_message(a: any, ...b: any[]) {
 		if (typeof a === "string") {
 			return new ChatMessage("hear", a);
 		}
@@ -307,9 +308,9 @@ module.exports = {
   * @param {Typespess.Atom|Client|Array<Typespess.Atom|Client>} target
   * @param {string} message
   */
-	to_chat(a, ...b) {
+	to_chat(a: any, ...b: any) {
 		if (a instanceof Atom || a instanceof Client) {
-			let cl;
+			let cl: any;
 			if (a instanceof Client) {cl = a;}
 			else {cl = a.c.Mob.client;}
 			if (!cl) {return;}
@@ -325,7 +326,7 @@ module.exports = {
 			}
 		} else {
 			const formatted = module.exports.format_html(a, ...b);
-			return (...items) => {
+			return (...items: any) => {
 				module.exports.to_chat(items, formatted);
 			};
 		}
@@ -344,7 +345,7 @@ module.exports = {
   * @returns {string}
   * @memberof Typespess
   */
-	format_html(strs, ...tags) {
+	format_html(strs: string | any[], ...tags: any[]) {
 		let out_str = "";
 		for (let i = 0; i < strs.length; i++) {
 			let pre_tag = strs[i];
@@ -388,8 +389,8 @@ module.exports = {
   * @param {string} str
   * @returns {string}
   */
-	escape_html(str) {
-		return str.replace(/[&<>"']/gi, (chr) => {
+	escape_html(str: string) {
+		return str.replace(/[&<>"']/gi, (chr: string) => {
 			if (chr === "&") {return "&amp;";}
 			if (chr === "<") {return "&lt;";}
 			if (chr === ">") {return "&gt;";}
