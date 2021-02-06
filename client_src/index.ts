@@ -1,3 +1,4 @@
+export{};
 const TypespessClient = require("./client/index.ts");
 
 const { Eye, Plane } = TypespessClient;

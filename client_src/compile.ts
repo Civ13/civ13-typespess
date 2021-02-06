@@ -1,3 +1,4 @@
+export{};
 const browserify = require("browserify");
 const tsify = require("tsify");
 const fs = require("fs");

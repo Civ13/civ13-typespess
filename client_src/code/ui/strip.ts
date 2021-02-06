@@ -1,6 +1,10 @@
+export{};
 const { Atom } = require("../../client/index.ts");
 
 class StripPanel {
+	panel: any;
+	covered: Record<string,unknown>;
+	cached_appearances: Record<string,unknown>;
 	constructor(panel) {
 		this.panel = panel;
 		this.panel.on("message", this.handle_message.bind(this));

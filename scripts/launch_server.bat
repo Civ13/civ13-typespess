@@ -10,5 +10,5 @@ echo Browserifying Client...
 call ts-node compile.ts
 cd..
 echo Launching Server...
-call ts-node index.js
+call ts-node index.ts
 pause

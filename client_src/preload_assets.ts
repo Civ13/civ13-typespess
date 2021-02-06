@@ -53,7 +53,7 @@ if (typeof tdir3 !== "undefined")
 	{preloadlist += tdir3;}
 
 const tloadlist = `var preload_list = [${preloadlist}]; module.exports = preload_list;`;
-fs.writeFile("./code/preloadlist.js", tloadlist, function (err: any) {
+fs.writeFile("./code/preloadlist.ts", tloadlist, function (err: any) {
 	if (err) {
 		return console.error(err);
 	}
