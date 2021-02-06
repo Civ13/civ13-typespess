@@ -72,7 +72,6 @@
 	"exclude": [
 		"node_modules",
 		"**/*.spec.ts",
-		"client_src"
 	],
 	"files": [
 		"src/types/global.d.ts"
