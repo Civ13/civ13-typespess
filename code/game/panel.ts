@@ -1,3 +1,4 @@
+export{};
 const EventEmitter = require("events");
 
 let id_ctr = 0;
@@ -18,7 +19,7 @@ class Panel extends EventEmitter {
   * @param {string} [panel_props.title=""]
   * @param {boolean} [panel_props.can_close=true]
   */
-	constructor(client, panel_props = {}) {
+	constructor(client: any, panel_props: any) {
 		super();
 		/**
 	* @type {Client}
@@ -70,7 +71,7 @@ class Panel extends EventEmitter {
   * Sends a network message to the client about this panel
   * @param {Object} message
   */
-	send_message(message) {
+	send_message(message: any) {
 		if (!this.is_open && this.client) {
 			console.warn(new Error("Cannot send message on an unopened panel!"));
 			return;
