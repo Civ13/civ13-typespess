@@ -3,12 +3,12 @@ const mob_symbols = require("./atom/mob.ts")._symbols;
 const EventEmitter = require("events");
 const Component = require("./atom/component.ts");
 
-const _mob = Symbol("_mob");
-const _atom_net_queue = Symbol("_atom_net_queue");
-const _netid_to_atom = Symbol("_netid_to_atom");
-const _netid_to_eye = Symbol("_netid_to_eye");
-const _tiles_to_add = Symbol("_tiles_to_add");
-const _tiles_to_remove = Symbol("_tiles_to_remove");
+const _mob:any = Symbol("_mob");
+const _atom_net_queue:any = Symbol("_atom_net_queue");
+const _netid_to_atom:any = Symbol("_netid_to_atom");
+const _netid_to_eye:any = Symbol("_netid_to_eye");
+const _tiles_to_add:any = Symbol("_tiles_to_add");
+const _tiles_to_remove:any = Symbol("_tiles_to_remove");
 
 /** @typedef {import("./atom/atom")} Typespess.Atom */
 /** @typedef {import("./server")} Typespess */
@@ -17,7 +17,7 @@ const _tiles_to_remove = Symbol("_tiles_to_remove");
  * @alias Client
  */
 class Client extends EventEmitter {
-	constructor(socket, username, server) {
+	constructor(socket: any, username: any, server: any) {
 		super();
 		this.socket = socket;
 		/**
@@ -119,7 +119,7 @@ class Client extends EventEmitter {
   * @event Client#message_pre
   * @type {Object}
   */
-	message_handler(data) {
+	message_handler(data: string) {
 		try {
 			const obj = JSON.parse(data);
 
@@ -155,7 +155,7 @@ class Client extends EventEmitter {
 			console.error(e);
 		}
 	}
-	obj_drag(obj) {
+	obj_drag(obj: any) {
 		// convert over to netids
 		obj.drag.from.atom = this[_netid_to_atom][obj.drag.from.atom];
 		obj.drag.to.atom = this[_netid_to_atom][obj.drag.to.atom];
@@ -168,7 +168,7 @@ class Client extends EventEmitter {
 		if (obj.drag.to.atom)
 			{obj.drag.to.atom.emit("mouse_dropped_by", obj.drag);}
 	}
-	obj_click(obj) {
+	obj_click(obj: any) {
 		this.last_click_time = this.server.now();
 
 				let click_prefix = "";
@@ -187,7 +187,7 @@ class Client extends EventEmitter {
 				if (obj.click_on.atom)
 					{obj.click_on.atom.emit(click_prefix + "clicked", obj.click_on);}
 	}
-	msg_panel(obj) {
+	msg_panel(obj: { panel: any; }) {
 		const pm = obj.panel;
 		if (pm.message) {
 			for (const message of pm.message) {
@@ -290,13 +290,13 @@ class Client extends EventEmitter {
 			this[_mob].c.Mob.emit("client_changed", old_client, this);
 		}
 	}
-	enqueue_create_atom(netid, atom, eye) {
+	enqueue_create_atom(netid: string, atom: any, eye: any) {
 		this[_atom_net_queue][netid] = { create: atom };
 		this[_netid_to_atom][netid] = atom;
 		this[_netid_to_eye][netid] = eye;
 	}
 
-	enqueue_update_atom_var(netid, atom, varname, type) {
+	enqueue_update_atom_var(netid: string | number, atom: any, varname: any, type: number) {
 		let entry = this[_atom_net_queue][netid];
 		if (!entry) {entry = {};}
 		if (entry.create) {
@@ -321,19 +321,19 @@ class Client extends EventEmitter {
 			subentry[setname].add(varname);
 		}
 	}
-	enqueue_delete_atom(netid) {
+	enqueue_delete_atom(netid: string) {
 		this[_netid_to_atom][netid] = void 0;
 		this[_netid_to_eye][netid] = void 0;
 		this[_atom_net_queue][netid] = { delete: true };
 	}
 
-	enqueue_add_tile(tile) {
+	enqueue_add_tile(tile: { x: any; y: any; z: any; }) {
 		const strtile = JSON.stringify([tile.x, tile.y, tile.z]);
 		if (!this[_tiles_to_remove].delete(strtile))
 			{this[_tiles_to_add].add(strtile);}
 	}
 
-	enqueue_remove_tile(tile) {
+	enqueue_remove_tile(tile: { x: any; y: any; z: any; }) {
 		const strtile = JSON.stringify([tile.x, tile.y, tile.z]);
 		if (!this[_tiles_to_add].delete(strtile))
 			{this[_tiles_to_remove].add(strtile);}
@@ -341,7 +341,7 @@ class Client extends EventEmitter {
 
 	send_network_updates() {
 		if (!this.socket || this.socket.readyState !== this.socket.OPEN) {return;}
-		const message = {};
+		const message: any = {};
 		for (const netid in this[_atom_net_queue]) {
 			if (this[_atom_net_queue][netid]) {
 			const entry = this[_atom_net_queue][netid];
@@ -381,7 +381,7 @@ class Client extends EventEmitter {
 		}
 		this.socket.send(JSON.stringify(message));
 	}
-	network_updates_create(message,entry,netid) {
+	network_updates_create(message: any,entry: any,netid: string) {
 	if (!message.create_atoms) {message.create_atoms = [];}
 	const atom = entry.create;
 	const common_visgroups = [];
@@ -427,14 +427,12 @@ class Client extends EventEmitter {
 			const component = atom.components[component_name];
 			if (!(component instanceof Component.Networked)) {continue;}
 			submessage.components.push(component_name);
-			submessage.component_vars[
-				component_name
-			] = component.get_networked_vars();
+			submessage.component_vars[component_name] = component.get_networked_vars();
 		}
 	}
 	message.create_atoms.push(submessage);
 	}
-	network_updates_update(message,entry,netid) {
+	network_updates_update(message: { update_atoms: any[]; },entry: { update: { atom: any; items: any; overlays: any; components: { [x: string]: any; }; }; },netid: string) {
 		if (!message.update_atoms) {message.update_atoms = [];}
 		const atom = entry.update.atom;
 		const common_visgroups = [];
@@ -446,7 +444,7 @@ class Client extends EventEmitter {
 			)
 				{common_visgroups.push(visgroup);}
 		}
-		const submessage = { network_id: netid };
+		const submessage: any = {};
 		if (entry.update.items) {
 			for (const item of entry.update.items) {
 				submessage[item] = atom[item];

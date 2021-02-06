@@ -11,9 +11,9 @@ const utils = require("./utils.ts");
 const VisibilityGroup = require("./atom/visgroup.ts");
 const Dimension = require("./dimension.ts");
 
-const _net_tick = Symbol("_net_tick");
-const _is_server_started = Symbol("_is_server_started");
-const _construct_time = Symbol("_construct_time");
+const _net_tick: any = Symbol("_net_tick");
+const _is_server_started: any = Symbol("_is_server_started");
+const _construct_time: any = Symbol("_construct_time");
 
 const global = require("../../src/types/global.d.ts");
 /**
@@ -84,7 +84,7 @@ class Typespess extends EventEmitter {
   * @param {Function} [mod.now] A callback which is called immediately with an instance of this server object
   * @param {Function} [mod.server_start] A callback which is called when the server starts (or now if it already has) with an instance of this server object
   */
-	importModule(mod) {
+	importModule(mod: any) {
 		if (mod.components) {this.importComponents(mod);}
 		if (mod.templates) {this.importTemplates(mod);}
 		if (mod.now instanceof Function) {
@@ -127,12 +127,12 @@ class Typespess extends EventEmitter {
   * @param {Object} opts.websocket The parameters passed to the websocket server
   * @param {Object} opts.demo_stream A stream (probably to a file) to log network updates to
   */
-	startServer({ websocket, demo_stream } = {}) {
+	startServer(websocket:any, demo_stream:any) {
 		if(global.is_bs_editor_env)
 			{throw new Error("Server should not be started in editor mode");}
 		this.wss = new WebSocket.Server(websocket);
 
-		this.wss.on("connection", (ws: { on: (arg0: string, arg1: (err: any) => void) => void; }) => {
+		this.wss.on("connection", (ws: Record<string,any>) => {
 			ws.on("error", (err: any) => {
 				console.error(err);
 			});
@@ -152,7 +152,7 @@ class Typespess extends EventEmitter {
   * @param {WebSocket} ws The websocket
   * @abstract
   */
-	handle_login(ws: { removeListener: (arg0: string, arg1: (data: any) => void) => void; on: (arg0: string, arg1: (data: any) => void) => void; send: (arg0: string) => void; }) {
+	handle_login(ws: Record<string,any>) {
 		const handle_message = (data: string) => {
 			const obj = JSON.parse(data);
 
@@ -305,7 +305,7 @@ class Typespess extends EventEmitter {
 		}
 		return visible_tiles;
 	}
-	pushRingTiles (atom: { dim: { location: (arg0: number, arg1: number, arg2: any) => any; }; }, dist: number, ring_tiles: any[], base_x: number, base_y: number, base_z: number) {
+	pushRingTiles (atom: { dim: { location: (arg0: number, arg1: number, arg2: any) => any; }; }, dist: number, ring_tiles: any, base_x: number, base_y: number, base_z: number) {
 		for (let i = 1; i <= dist * 2; i++) {
 			for (
 				let j = Math.max(i - dist, 0);
@@ -334,7 +334,7 @@ class Typespess extends EventEmitter {
   * Usually called internally.
   * @param {template} template
   */
-	process_template(template: { [x: string]: boolean; parent_template: string | any[]; components: any[]; vars: { layer?: any; }; is_variant: any; variants: string | any[]; }) {
+	process_template(template: Record<string,any>) {
 		if (template.is_template_processed) {return;}
 		if (template.parent_template) {
 			if (typeof template.parent_template === "string") {
@@ -350,48 +350,7 @@ class Typespess extends EventEmitter {
 			}
 		}
 		if (template.components) {
-			// Ensure all the component dependencies are added.
-			let hasAddedDependencies = true;
-			while (hasAddedDependencies) {
-				hasAddedDependencies = false;
-				for (const componentName of template.components) {
-					const component = this.components[componentName];
-					if (typeof component === "undefined")
-						{throw new Error(`Component ${componentName} does not exist!`);}
-					if (component.depends)
-						{for (const depends of component.depends) {
-							if (!template.components.includes(depends)) {
-								template.components.push(depends);
-								hasAddedDependencies = true;
-							}
-						}}
-				}
-			}
-			// Sort the dependencies.
-			const edges = [];
-			for (const componentName of template.components) {
-				const component = this.components[componentName];
-				if (component.loadAfter)
-					{for (const after of component.loadAfter) {
-						if (template.components.includes(after))
-							{edges.push([componentName, after]);}
-					}}
-				if (component.loadBefore)
-					{for (const before of component.loadBefore) {
-						if (template.components.includes(before))
-							{edges.push([before, componentName]);}
-					}}
-			}
-			template.components = toposort.array(template.components, edges);
-
-			// Iterate backwards over the list so that the last loaded component gets priority over the default values.
-			// Apply the default values in those components behind this template.
-			for (let i = template.components.length - 1; i >= 0; i--) {
-				const componentName = template.components[i];
-				const component = this.components[componentName];
-				if (component.template)
-					{utils.weak_deep_assign(template, component.template);}
-			}
+			this.import_components(template);
 		}
 
 		template.vars = template.vars || {};
@@ -419,7 +378,55 @@ class Typespess extends EventEmitter {
 
 		template.is_template_processed = true;
 	}
-
+	import_components(template: any) {
+					// Ensure all the component dependencies are added.
+					let hasAddedDependencies = true;
+					while (hasAddedDependencies) {
+						hasAddedDependencies = false;
+						for (const componentName of template.components) {
+							const component = this.components[componentName];
+							if (typeof component === "undefined")
+								{throw new Error(`Component ${componentName} does not exist!`);}
+							if (component.depends)
+							{hasAddedDependencies = this.import_components_dependencies(component.depends, template);}
+						}
+					}
+					// Sort the dependencies.
+					const edges = [];
+					for (const componentName of template.components) {
+						const component = this.components[componentName];
+						if (component.loadAfter)
+							{for (const after of component.loadAfter) {
+								if (template.components.includes(after))
+									{edges.push([componentName, after]);}
+							}}
+						if (component.loadBefore)
+							{for (const before of component.loadBefore) {
+								if (template.components.includes(before))
+									{edges.push([before, componentName]);}
+							}}
+					}
+					template.components = toposort.array(template.components, edges);
+		
+					// Iterate backwards over the list so that the last loaded component gets priority over the default values.
+					// Apply the default values in those components behind this template.
+					for (let i = template.components.length - 1; i >= 0; i--) {
+						const componentName = template.components[i];
+						const component = this.components[componentName];
+						if (component.template)
+							{utils.weak_deep_assign(template, component.template);}
+					}
+	}
+	import_components_dependencies(compdepends:any, template:any) {
+		let hAD = false;
+		for (const depends of compdepends) {
+			if (!template.components.includes(depends)) {
+				template.components.push(depends);
+				hAD = true;
+			}
+		}
+		return true;
+	}
 	/**
   * Extends the template with the given variant.
   * @param {template} template
@@ -484,7 +491,7 @@ class Typespess extends EventEmitter {
 	for (const key in this.clients) {
 		if (!Object.prototype.hasOwnProperty.call(this.clients,key)) {continue;}
 			const client = this.clients[key];
-			var cl;
+			let cl;
 			if (client instanceof Client) {cl = client;}
 			else {cl = client.a.c.Mob.client;}
 			if (!cl) {return;}
