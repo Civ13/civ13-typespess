@@ -11,9 +11,10 @@ const utils = require("./utils.js");
 const VisibilityGroup = require("./atom/visgroup.js");
 const Dimension = require("./dimension.js");
 
-const _net_tick: any = Symbol("_net_tick");
-const _is_server_started: any = Symbol("_is_server_started");
-const _construct_time: any = Symbol("_construct_time");
+const _net_tick = Symbol("_net_tick");
+const _is_template_processed = Symbol("_is_template_processed");
+const _is_server_started = Symbol("_is_server_started");
+const _construct_time = Symbol("_construct_time");
 
 /**
  * @alias Typespess
@@ -83,7 +84,7 @@ class Typespess extends EventEmitter {
   * @param {Function} [mod.now] A callback which is called immediately with an instance of this server object
   * @param {Function} [mod.server_start] A callback which is called when the server starts (or now if it already has) with an instance of this server object
   */
-	importModule(mod: any) {
+	importModule(mod) {
 		if (mod.components) {this.importComponents(mod);}
 		if (mod.templates) {this.importTemplates(mod);}
 		if (mod.now instanceof Function) {
@@ -95,8 +96,8 @@ class Typespess extends EventEmitter {
 		}
 	}
 
-	importComponents(mod: { components: { [x: string]: any; }; }) {
-		for (const componentName in mod.components) {
+	importComponents(mod) {
+		for (var componentName in mod.components) {
 			if (Object.prototype.hasOwnProperty.call(mod.components,componentName)) {
 				if (this.components[componentName]) {
 					throw new Error(`Component ${componentName} already exists!`);
@@ -110,12 +111,12 @@ class Typespess extends EventEmitter {
 		}
 	}
 
-	importTemplates (mod: { templates: { [x: string]: any; }; }) {
-		for (const templateName in mod.templates) {
+	importTemplates (mod) {
+		for (var templateName in mod.templates) {
 			if (!Object.prototype.hasOwnProperty.call(mod.templates,templateName)) {continue;}
 			if (this.templates[templateName])
 				{throw new Error(`Template ${templateName} already exists!`);}
-			const template = mod.templates[templateName];
+			var template = mod.templates[templateName];
 
 			this.templates[templateName] = template;
 		}
@@ -126,13 +127,13 @@ class Typespess extends EventEmitter {
   * @param {Object} opts.websocket The parameters passed to the websocket server
   * @param {Object} opts.demo_stream A stream (probably to a file) to log network updates to
   */
-	startServer(websocket:any, demo_stream:any) {
+	startServer({ websocket, demo_stream } = {}) {
 		if(global.is_bs_editor_env)
 			{throw new Error("Server should not be started in editor mode");}
 		this.wss = new WebSocket.Server(websocket);
 
-		this.wss.on("connection", (ws: Record<string,any>) => {
-			ws.on("error", (err: any) => {
+		this.wss.on("connection", (ws) => {
+			ws.on("error", (err) => {
 				console.error(err);
 			});
 			this.handle_login(ws);
@@ -151,12 +152,12 @@ class Typespess extends EventEmitter {
   * @param {WebSocket} ws The websocket
   * @abstract
   */
-	handle_login(ws: Record<string,any>) {
-		const handle_message = (data: string) => {
-			const obj = JSON.parse(data);
+	handle_login(ws) {
+		let handle_message = (data) => {
+			var obj = JSON.parse(data);
 
 			if (obj.login) {
-				const username = obj.login + "";
+				let username = obj.login + "";
 				ws.removeListener("message", handle_message);
 				this.login(ws, username);
 			}
@@ -173,24 +174,24 @@ class Typespess extends EventEmitter {
   * @returns {Client}
   */
 	// eslint-disable-next-line max-statements
-	login(socket: any, username: string) {
+	login(socket, username) {
 		if (this.clients[username] && this.clients[username].socket) {
-			const mob = this.clients[username].mob;
+			var mob = this.clients[username].mob;
 			this.clients[username].mob = null;
 			this.clients[username].socket.close();
 			delete this.clients[username];
 			if (mob) {mob.c.Mob.key = username;}
 		}
-		const client = new Client(socket, username, this);
+		var client = new Client(socket, username, this);
 		this.clients[username] = client;
 		this.clients_by_name[client.name] = client;
 		return client;
 	}
 
 	[_net_tick]() {
-		for (const key in this.clients) {
+		for (let key in this.clients) {
 			if (!Object.prototype.hasOwnProperty.call(this.clients,key)) {continue;}
-			const client = this.clients[key];
+			let client = this.clients[key];
 			client.send_network_updates();
 		}
 		this.emit("post_net_tick");
@@ -202,16 +203,16 @@ class Typespess extends EventEmitter {
   * @param {number} dist The radius to go out
   * @returns {Set<Location>} A set of tiles a given distance away from the origin
   */
-	compute_inrange_tiles(atom: { base_loc: any; x: number; y: number; dim: { location: (arg0: number, arg1: number, arg2: any) => unknown; }; z: any; }, dist: number) {
-		const inrange_tiles = new Set();
+	compute_inrange_tiles(atom, dist) {
+		var inrange_tiles = new Set();
 		if (typeof atom.base_loc === "undefined") {return inrange_tiles;}
 		for (
-			let x = Math.floor(atom.x + 0.001 - dist);
+			var x = Math.floor(atom.x + 0.001 - dist);
 			x <= Math.ceil(atom.x - 0.001 + dist);
 			x++
 		) {
 			for (
-				let y = Math.floor(atom.y + 0.001 - dist);
+				var y = Math.floor(atom.y + 0.001 - dist);
 				y <= Math.ceil(atom.y - 0.001 + dist);
 				y++
 			) {
@@ -227,22 +228,22 @@ class Typespess extends EventEmitter {
   * @returns {Set<Location>} A set of tiles a given distance away from the origin that are visible to the origin (not blocked by opaque atoms)
   */
 	// eslint-disable-next-line max-statements
-	compute_visible_tiles(atom: { base_loc: any; x: number; y: number; z: number; dim: { location: (arg0: number, arg1: number, arg2: number) => any; }; }, dist: number) {
+	compute_visible_tiles(atom, dist) {
 		if (typeof atom.base_loc === "undefined") {return new Set();}
-		const ring_tiles: Iterable<any> = [];
-		const base_x = Math.round(atom.x);
-		const base_y = Math.round(atom.y);
-		const base_z = Math.floor(atom.z);
+		var ring_tiles = [];
+		var base_x = Math.round(atom.x);
+		var base_y = Math.round(atom.y);
+		var base_z = Math.floor(atom.z);
 
 		this.pushRingTiles(atom, dist, ring_tiles, base_x, base_y, base_z);
 
-		const visible_tiles = new Set(ring_tiles);
+		var visible_tiles = new Set(ring_tiles);
 		visible_tiles.add(atom.base_loc);
-		const used_tiles = new Set();
-		for (const tile of ring_tiles) {
+		var used_tiles = new Set();
+		for (var tile of ring_tiles) {
 			if (used_tiles.has(tile)) {continue;}
-			const dx = tile.x - base_x;
-			const dy = tile.y - base_y;
+			let dx = tile.x - base_x;
+			let dy = tile.y - base_y;
 			if (!tile.opacity) {continue;}
 			if (tile.y !== base_y) {
 				let left = base_x;
@@ -259,9 +260,9 @@ class Typespess extends EventEmitter {
 					//used_tiles.add(iter_tile);
 					iter_tile = iter_tile.get_step(4);
 				}
-				const vdir = tile.y > base_y ? 1 : -1;
-				const left_dx = (left - base_x) / Math.abs(dy);
-				const right_dx = (right - base_x) / Math.abs(dy);
+				let vdir = tile.y > base_y ? 1 : -1;
+				let left_dx = (left - base_x) / Math.abs(dy);
+				let right_dx = (right - base_x) / Math.abs(dy);
 				for (let y = tile.y; Math.abs(y - base_y) <= dist; y += vdir) {
 					if (y !== tile.y) {
 						for (let x = Math.ceil(left); x <= Math.floor(right); x++) {
@@ -288,9 +289,9 @@ class Typespess extends EventEmitter {
 					used_tiles.add(iter_tile);
 					iter_tile = iter_tile.get_step(1);
 				}
-				const hdir = tile.x > base_x ? 1 : -1;
-				const down_dy = (down - base_y) / Math.abs(dx);
-				const up_dy = (up - base_y) / Math.abs(dx);
+				let hdir = tile.x > base_x ? 1 : -1;
+				let down_dy = (down - base_y) / Math.abs(dx);
+				let up_dy = (up - base_y) / Math.abs(dx);
 				for (let x = tile.x; Math.abs(x - base_x) <= dist; x += hdir) {
 					if (x !== tile.x) {
 						for (let y = Math.ceil(down); y <= Math.floor(up); y++) {
@@ -304,7 +305,7 @@ class Typespess extends EventEmitter {
 		}
 		return visible_tiles;
 	}
-	pushRingTiles (atom: { dim: { location: (arg0: number, arg1: number, arg2: any) => any; }; }, dist: number, ring_tiles: any, base_x: number, base_y: number, base_z: number) {
+	pushRingTiles (atom, dist, ring_tiles, base_x, base_y, base_z) {
 		for (let i = 1; i <= dist * 2; i++) {
 			for (
 				let j = Math.max(i - dist, 0);
@@ -324,7 +325,7 @@ class Typespess extends EventEmitter {
   * @returns {number} The timestamp
   */
 	now() {
-		const hr = process.hrtime(this[_construct_time]);
+		var hr = process.hrtime(this[_construct_time]);
 		return hr[0] * 1000 + hr[1] * 0.000001;
 	}
 
@@ -333,23 +334,64 @@ class Typespess extends EventEmitter {
   * Usually called internally.
   * @param {template} template
   */
-	process_template(template: Record<string,any>) {
-		if (template.is_template_processed) {return;}
+	process_template(template) {
+		if (template[_is_template_processed]) {return;}
 		if (template.parent_template) {
 			if (typeof template.parent_template === "string") {
-				const ptemplate = this.templates[template.parent_template];
+				let ptemplate = this.templates[template.parent_template];
 				this.process_template(ptemplate);
 				utils.weak_deep_assign(template, ptemplate);
 			} else if (template.parent_template instanceof Array) {
 				for (let i = template.parent_template.length - 1; i >= 0; i--) {
-					const ptemplate = this.templates[template.parent_template[i]];
+					let ptemplate = this.templates[template.parent_template[i]];
 					this.process_template(ptemplate);
 					utils.weak_deep_assign(template, ptemplate);
 				}
 			}
 		}
 		if (template.components) {
-			this.import_components(template);
+			// Ensure all the component dependencies are added.
+			var hasAddedDependencies = true;
+			while (hasAddedDependencies) {
+				hasAddedDependencies = false;
+				for (let componentName of template.components) {
+					let component = this.components[componentName];
+					if (typeof component === "undefined")
+						{throw new Error(`Component ${componentName} does not exist!`);}
+					if (component.depends)
+						{for (var depends of component.depends) {
+							if (!template.components.includes(depends)) {
+								template.components.push(depends);
+								hasAddedDependencies = true;
+							}
+						}}
+				}
+			}
+			// Sort the dependencies.
+			var edges = [];
+			for (let componentName of template.components) {
+				let component = this.components[componentName];
+				if (component.loadAfter)
+					{for (var after of component.loadAfter) {
+						if (template.components.includes(after))
+							{edges.push([componentName, after]);}
+					}}
+				if (component.loadBefore)
+					{for (var before of component.loadBefore) {
+						if (template.components.includes(before))
+							{edges.push([before, componentName]);}
+					}}
+			}
+			template.components = toposort.array(template.components, edges);
+
+			// Iterate backwards over the list so that the last loaded component gets priority over the default values.
+			// Apply the default values in those components behind this template.
+			for (var i = template.components.length - 1; i >= 0; i--) {
+				var componentName = template.components[i];
+				var component = this.components[componentName];
+				if (component.template)
+					{utils.weak_deep_assign(template, component.template);}
+			}
 		}
 
 		template.vars = template.vars || {};
@@ -357,7 +399,7 @@ class Typespess extends EventEmitter {
 
 		if (!template.is_variant && template.variants && template.variants.length) {
 			for (let i = 0; i < template.variants.length; i++) {
-				const variant = template.variants[i];
+				let variant = template.variants[i];
 				if (variant.type === "single") {
 					let curr_obj = template.vars;
 					for (let j = 0; j < variant.var_path.length - 1; j++) {
@@ -375,63 +417,15 @@ class Typespess extends EventEmitter {
 			}
 		}
 
-		template.is_template_processed = true;
+		template[_is_template_processed] = true;
 	}
-	import_components(template: any) {
-					// Ensure all the component dependencies are added.
-					let hasAddedDependencies = true;
-					while (hasAddedDependencies) {
-						hasAddedDependencies = false;
-						for (const componentName of template.components) {
-							const component = this.components[componentName];
-							if (typeof component === "undefined")
-								{throw new Error(`Component ${componentName} does not exist!`);}
-							if (component.depends)
-							{hasAddedDependencies = this.import_components_dependencies(component.depends, template);}
-						}
-					}
-					// Sort the dependencies.
-					const edges = [];
-					for (const componentName of template.components) {
-						const component = this.components[componentName];
-						if (component.loadAfter)
-							{for (const after of component.loadAfter) {
-								if (template.components.includes(after))
-									{edges.push([componentName, after]);}
-							}}
-						if (component.loadBefore)
-							{for (const before of component.loadBefore) {
-								if (template.components.includes(before))
-									{edges.push([before, componentName]);}
-							}}
-					}
-					template.components = toposort.array(template.components, edges);
-		
-					// Iterate backwards over the list so that the last loaded component gets priority over the default values.
-					// Apply the default values in those components behind this template.
-					for (let i = template.components.length - 1; i >= 0; i--) {
-						const componentName = template.components[i];
-						const component = this.components[componentName];
-						if (component.template)
-							{utils.weak_deep_assign(template, component.template);}
-					}
-	}
-	import_components_dependencies(compdepends:any, template:any) {
-		let hAD = false;
-		for (const depends of compdepends) {
-			if (!template.components.includes(depends)) {
-				template.components.push(depends);
-				hAD = true;
-			}
-		}
-		return true;
-	}
+
 	/**
   * Extends the template with the given variant.
   * @param {template} template
   * @param {Array} variant_leaf_path
   */
-	get_template_variant(template: any, variant_leaf_path: string | any[], instance_vars: any) {
+	get_template_variant(template, variant_leaf_path, instance_vars) {
 		if (!instance_vars && (!variant_leaf_path || variant_leaf_path.length === 0))
 			{return template;}
 		template = utils.weak_deep_assign({}, template);
@@ -442,16 +436,17 @@ class Typespess extends EventEmitter {
 		template.is_variant = true;
 		if (template.variants && template.variants.length) {
 			if (!variant_leaf_path) {variant_leaf_path = [];}
-			for (let i = 0; i < template.variants.length; i++) {
-				const variant = template.variants[i];
+			variant_leaf_path.length = template.variants.length;
+			for (var i = 0; i < template.variants.length; i++) {
+				var variant = template.variants[i];
 				if (variant.type === "single") {
-					let idx = variant.values.indexOf(variant_leaf_path[i]);
+					var idx = variant.values.indexOf(variant_leaf_path[i]);
 					if (idx === -1 || variant_leaf_path.length <= i) {
 						idx = 0;
 					}
-					let curr_obj = template.vars;
-					for (let j = 0; j < variant.var_path.length - 1; j++) {
-						let next_obj = curr_obj[variant.var_path[j]];
+					var curr_obj = template.vars;
+					for (var j = 0; j < variant.var_path.length - 1; j++) {
+						var next_obj = curr_obj[variant.var_path[j]];
 						if (typeof next_obj !== "object" || next_obj instanceof Array) {
 							next_obj = {};
 							curr_obj[variant.var_path[j]] = next_obj;
@@ -486,11 +481,11 @@ class Typespess extends EventEmitter {
   * @param {string} message
   */
 
- to_global_chat(...b: any[]) {
-	for (const key in this.clients) {
+ to_global_chat(...b) {
+	for (let key in this.clients) {
 		if (!Object.prototype.hasOwnProperty.call(this.clients,key)) {continue;}
-			const client = this.clients[key];
-			let cl;
+			let client = this.clients[key];
+			var cl;
 			if (client instanceof Client) {cl = client;}
 			else {cl = client.a.c.Mob.client;}
 			if (!cl) {return;}
@@ -506,25 +501,25 @@ class Typespess extends EventEmitter {
   * @param {number} y
   * @param {number} z
   */
-	instance_map_sync(obj: { locs: { [x: string]: any; }; }, x = 0, y = 0, z = 0, dim: any) {
-		const inst_list = [];
-		for (const loc in obj.locs) {
+	instance_map_sync(obj, x = 0, y = 0, z = 0, dim) {
+		let inst_list = [];
+		for (var loc in obj.locs) {
 			if (!Object.prototype.hasOwnProperty.call(obj.locs,loc)) {continue;}
-			for (const instobj of obj.locs[loc]) {
-				const base_template = this.templates[instobj.template_name];
+			for (var instobj of obj.locs[loc]) {
+				let base_template = this.templates[instobj.template_name];
 				if (!base_template) {
 					console.warn(
 						`Map references unknown template "${instobj.template_name}"`
 					);
 					continue;
 				}
-				const template = this.get_template_variant(
+				let template = this.get_template_variant(
 					base_template,
 					instobj.variant_leaf_path,
 					instobj.instance_vars
 				);
 				utils.weak_deep_assign(template, base_template);
-				const atom = new Atom(
+				let atom = new Atom(
 					this,
 					template,
 					x + instobj.x,
@@ -550,28 +545,27 @@ class Typespess extends EventEmitter {
   * @param {Function} [percentage_callback] A callback that is called periodically with a number 0 to 1 denoting how far along the instancing process is done.
   */
 	// eslint-disable-next-line max-params
-	async instance_map(obj: { locs: { [s: string]: unknown; } | ArrayLike<unknown>; }, x = 0, y = 0, z = 0, dim: any, percentage_callback: (arg0: number) => void) {
-		const locs = [...Object.values(obj.locs)];
-		const inst_list = [];
+	async instance_map(obj, x = 0, y = 0, z = 0, dim, percentage_callback) {
+		let locs = [...Object.values(obj.locs)];
+		let inst_list = [];
 		let idx = 0;
-		for (const loc of locs) {
+		for (let loc of locs) {
 			idx++;
-			const newlocs: any = loc;
-			for (const instobj of newlocs) {
-				const base_template = this.templates[instobj.template_name];
+			for (let instobj of loc) {
+				let base_template = this.templates[instobj.template_name];
 				if (!base_template) {
 					console.warn(
 						`Map references unknown template "${instobj.template_name}"`
 					);
 					continue;
 				}
-				const template = this.get_template_variant(
+				let template = this.get_template_variant(
 					base_template,
 					instobj.variant_leaf_path,
 					instobj.instance_vars
 				);
 				utils.weak_deep_assign(template, base_template);
-				const atom = new Atom(
+				let atom = new Atom(
 					this,
 					template,
 					x + instobj.x,
