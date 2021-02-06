@@ -1,6 +1,6 @@
-const { has_component } = require("./../../../../../code/game/server.ts");
+const { has_component } = require("./../../../../../code/game/server.js");
 
-const StatusEffect = require("./effect.ts");
+const StatusEffect = require("./effect.js");
 
 class Knockdown extends StatusEffect.Timed {
 	apply_to(mob, props) {

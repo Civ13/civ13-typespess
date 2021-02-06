@@ -1,7 +1,7 @@
 
 
-const { Component } = require("./../../../../../../code/game/server.ts");
-const lighting = require("../../../../../defines/lighting.ts");
+const { Component } = require("./../../../../../../code/game/server.js");
+const lighting = require("../../../../../defines/lighting.js");
 
 class Flashlight extends Component {
 	constructor(atom, template) {

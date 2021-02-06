@@ -5,7 +5,7 @@ const {
 	visible_message,
 	to_chat,
 	has_component,
-} = require("./../../../../../code/game/server.ts");
+} = require("./../../../../../code/game/server.js");
 
 class Handcuffs extends Component {
 	constructor(atom, template) {

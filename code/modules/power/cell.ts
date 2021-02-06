@@ -4,7 +4,7 @@ const {
 	chain_func,
 	make_watched_property,
 	to_chat,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 
 class PowerCell extends Component {
 	constructor(atom, template) {

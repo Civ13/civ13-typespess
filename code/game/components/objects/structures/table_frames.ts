@@ -5,8 +5,8 @@ const {
 	Atom,
 	chain_func,
 	to_chat,
-} = require("./../../../../../code/game/server.ts");
-const layers = require("../../../../defines/layers.ts");
+} = require("./../../../../../code/game/server.js");
+const layers = require("../../../../defines/layers.js");
 
 class TableFrame extends Component {
 	constructor(atom, template) {

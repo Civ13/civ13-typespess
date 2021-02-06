@@ -1,5 +1,5 @@
 
-const JobType = require("./job.ts");
+const JobType = require("./job.js");
 
 module.exports.jobs = {};
 

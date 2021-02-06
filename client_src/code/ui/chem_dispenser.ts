@@ -1,5 +1,5 @@
 
-const ReagentBinding = require("./reagent_binding.ts");
+const ReagentBinding = require("./reagent_binding.js");
 
 class ChemDispenserPanel {
 	panel: any;

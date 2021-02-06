@@ -1,4 +1,4 @@
-const {format_html} = require("./utils.ts");
+const {format_html} = require("./utils.js");
 class World {
 	
 	constructor(server) {

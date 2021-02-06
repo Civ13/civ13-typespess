@@ -2,9 +2,9 @@ const {
 	Component,
 	Atom,
 	chain_func,
-} = require("./../../../../../../code/game/server.ts");
+} = require("./../../../../../../code/game/server.js");
 
-const layers = require("../../../../../defines/layers.ts");
+const layers = require("../../../../../defines/layers.js");
 
 class Chair extends Component {
 	constructor(atom, template) {

@@ -1,4 +1,4 @@
-const { Panel } = require("./../../../code/game/server.ts");
+const { Panel } = require("./../../../code/game/server.js");
 
 class LatejoinPanel extends Panel {
 	constructor(client) {

@@ -3,8 +3,8 @@
 const {
 	Component,
 	chain_func,
-} = require("./../../../../../../code/game/server.ts");
-const layers = require("../../../../../defines/layers.ts");
+} = require("./../../../../../../code/game/server.js");
+const layers = require("../../../../../defines/layers.js");
 
 class Closet extends Component {
 	constructor(atom, template) {

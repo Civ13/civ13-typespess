@@ -3,9 +3,9 @@ const {
 	Atom,
 	VisibilityGroup,
 	to_chat,
-} = require("./../../../../code/game/server.ts");
+} = require("./../../../../code/game/server.js");
 
-const layers = require("../../../defines/layers.ts");
+const layers = require("../../../defines/layers.js");
 
 const ghost_group = new VisibilityGroup();
 ghost_group.overrides.set("visible", true);

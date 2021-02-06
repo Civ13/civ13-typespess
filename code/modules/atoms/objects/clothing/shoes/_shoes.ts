@@ -3,7 +3,7 @@ const {
 	Atom,
 	has_component,
 	dir_to,
-} = require("./../../../../../../code/game/server.ts");
+} = require("./../../../../../../code/game/server.js");
 
 const BLOOD_LOSS_PER_STEP = 5;
 const BLOOD_LOSS_IN_SPREAD = 15;

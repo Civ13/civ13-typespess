@@ -1,12 +1,12 @@
 
-const Outfit = require("../../outfit.ts");
+const Outfit = require("../../outfit.js");
 const {
 	weak_deep_assign,
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	has_component,
 	to_chat,
-} = require("./../../../../code/game/server.ts");
-const CharacterPreferences = require("../../client/character.ts");
+} = require("./../../../../code/game/server.js");
+const CharacterPreferences = require("../../client/character.js");
 
 class JobType {
 	constructor(obj) {

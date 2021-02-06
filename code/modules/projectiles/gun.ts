@@ -5,9 +5,9 @@ const {
 	Sound,
 	visible_message,
 	to_chat,
-} = require("./../../../code/game/server.ts");
-const combat_defines = require("../../defines/combat_defines.ts");
-const sounds = require("../../defines/sounds.ts");
+} = require("./../../../code/game/server.js");
+const combat_defines = require("../../defines/combat_defines.js");
+const sounds = require("../../defines/sounds.js");
 
 class Gun extends Component {
 	constructor(atom, template) {

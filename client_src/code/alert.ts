@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("../client/index.ts");
+const { Component } = require("../client/index.js");
 
 class Tooltip extends Component {
 	constructor(atom, template) {

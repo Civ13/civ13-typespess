@@ -3,10 +3,10 @@ const {
 	Atom,
 	has_component,
 	chain_func,
-} = require("./../../../../../../../code/game/server.ts");
+} = require("./../../../../../../../code/game/server.js");
 
 const _ = require("underscore");
-const combat_defines = require("../../../../../../defines/combat_defines.ts");
+const combat_defines = require("../../../../../../defines/combat_defines.js");
 
 class GlassSheet extends Component {
 	constructor(atom, template) {

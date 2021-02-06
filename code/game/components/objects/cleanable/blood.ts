@@ -4,7 +4,7 @@ const {
 	Atom,
 	make_watched_property,
 	has_component,
-} = require("./../../../../../code/game/server.ts");
+} = require("./../../../../../code/game/server.js");
 const _ = require("underscore");
 
 class BloodDecal extends Component {

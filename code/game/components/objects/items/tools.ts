@@ -5,7 +5,7 @@ const {
 	has_component,
 	chain_func,
 	to_chat,
-} = require("./../../../../../code/game/server.ts");
+} = require("./../../../../../code/game/server.js");
 const _ = require("underscore");
 
 const _is_on = Symbol("_is_on");

@@ -3,10 +3,10 @@ const {
 	has_component,
 	to_chat,
 	chain_func,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 
 const _temperature = Symbol("_temperature");
-const { Reagent } = require("./reagent.ts");
+const { Reagent } = require("./reagent.js");
 
 const reagent_types = {};
 const reagent_reactions = [];
@@ -355,8 +355,8 @@ function add_items(mod) {
 }
 
 // Import the reagents and recipes
-add_items(require("./reagents/reagent_importer.ts"));
-add_items(require("./recipes/recipe_importer.ts"));
+add_items(require("./reagents/reagent_importer.js"));
+add_items(require("./recipes/recipe_importer.js"));
 
 // Cache the reactions for the reagents
 

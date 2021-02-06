@@ -1,4 +1,4 @@
-const { Component } = require("../index.ts");
+const { Component } = require("../index.js");
 
 class LightingObject extends Component {
 	constructor(atom, template) {

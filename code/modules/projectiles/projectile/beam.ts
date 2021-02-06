@@ -1,7 +1,7 @@
-const { Component } = require("./../../../../code/game/server.ts");
+const { Component } = require("./../../../../code/game/server.js");
 
-const pass_flags = require("../../../defines/pass_flags.ts");
-const lighting = require("../../../defines/lighting.ts");
+const pass_flags = require("../../../defines/pass_flags.js");
+const lighting = require("../../../defines/lighting.js");
 
 class BeamProjectile extends Component {}
 

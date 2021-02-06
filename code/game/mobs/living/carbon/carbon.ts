@@ -6,12 +6,12 @@ const {
 	chain_func,
 	has_component,
 	to_chat,
-} = require("./../../../../../code/game/server.ts");
+} = require("./../../../../../code/game/server.js");
 const _ = require("underscore");
-const combat_defines = require("../../../../defines/combat_defines.ts");
-const mob_defines = require("../../../../defines/mob_defines.ts");
-const layers = require("../../../../defines/layers.ts");
-const sounds = require("../../../../defines/sounds.ts");
+const combat_defines = require("../../../../defines/combat_defines.js");
+const mob_defines = require("../../../../defines/mob_defines.js");
+const layers = require("../../../../defines/layers.js");
+const sounds = require("../../../../defines/sounds.js");
 
 const _lying_counter = Symbol("_lying_counter");
 

@@ -4,7 +4,7 @@ const tsify = require("tsify");
 const fs = require("fs");
 
 const used_bundler = browserify({
-	entries: "./index.ts",
+	entries: "./index.js",
 	debug: false, //change to true if you want the sourcemaps
 	cache: {},
 	packageCache: {},

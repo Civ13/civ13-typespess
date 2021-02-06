@@ -1,4 +1,4 @@
-const read_config = require("../../config.ts");
+const read_config = require("../../config.js");
 
 const adminlist = read_config("admins.cson");
 class AdminHolder {

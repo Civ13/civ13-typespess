@@ -7,8 +7,8 @@ const {
 	has_component,
 	is_atom,
 	to_chat,
-} = require("./../../../../../code/game/server.ts");
-const sounds = require("../../../../defines/sounds.ts");
+} = require("./../../../../../code/game/server.js");
+const sounds = require("../../../../defines/sounds.js");
 
 const _current_storage_item = Symbol("_current_storage_item");
 const _slots = Symbol("_slots");

@@ -241,7 +241,7 @@ module.exports = {
 		return dir;
 	},
 	/**
-  * Returns a promise that resolves on setImmediate(). Useful for doing expensive things without blocking the node.ts event loop.
+  * Returns a promise that resolves on setImmediate(). Useful for doing expensive things without blocking the node.js event loop.
   * @memberof Typespess
   * @async
   */
@@ -400,9 +400,9 @@ module.exports = {
 	},
 
 	do_require() {
-		Atom = require("./atom/atom.ts");
-		Client = require("./client.ts");
-		ChatMessage = require("./chat_message.ts");
+		Atom = require("./atom/atom.js");
+		Client = require("./client.js");
+		ChatMessage = require("./chat_message.js");
 	},
 
 	/**

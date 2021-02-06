@@ -5,7 +5,7 @@ const {
 	make_watched_property,
 	chain_func,
 	to_chat,
-} = require("./../../../../code/game/server.ts");
+} = require("./../../../../code/game/server.js");
 
 class EnergyGun extends Component {
 	constructor(atom, template) {

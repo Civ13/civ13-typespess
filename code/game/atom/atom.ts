@@ -1,8 +1,8 @@
 export{};
 const EventEmitter = require("events");
-const mob_symbols = require("./mob.ts")._symbols;
-const { has_component } = require("../utils.ts");
-const Component = require("./component.ts");
+const mob_symbols = require("./mob.js")._symbols;
+const { has_component } = require("../utils.js");
+const Component = require("./component.js");
 
 let id_counter = 0;
 

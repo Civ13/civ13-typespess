@@ -2,7 +2,7 @@ const {
 	Component,
 	Atom,
 	has_component,
-} = require("./../../../../../../code/game/server.ts");
+} = require("./../../../../../../code/game/server.js");
 
 const _ = require("underscore");
 

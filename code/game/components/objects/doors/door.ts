@@ -3,10 +3,10 @@ const {
 	chain_func,
 	has_component,
 	sleep,
-} = require("./../../../../../code/game/server.ts");
+} = require("./../../../../../code/game/server.js");
 
-const layers = require("../../../../defines/layers.ts");
-const pass_flags = require("../../../../defines/pass_flags.ts");
+const layers = require("../../../../defines/layers.js");
+const pass_flags = require("../../../../defines/pass_flags.js");
 
 const _locked = Symbol("_locked");
 

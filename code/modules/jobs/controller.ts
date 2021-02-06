@@ -9,7 +9,7 @@ class JobController {
 		this.assigned = new Set(); // those assigned roles that spawn on the station.
 		this.job_landmarks = {};
 
-		this.importModule(require("./job_types/nomad.ts"));
+		this.importModule(require("./job_types/nomad.js"));
 	}
 
 	assign_role(mind, job, { latejoin = false, run_checks = true } = {}) {

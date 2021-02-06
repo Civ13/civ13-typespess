@@ -1,4 +1,4 @@
-const { chain_func, is_atom, to_chat, has_component } = require("../utils.ts");
+const { chain_func, is_atom, to_chat, has_component } = require("../utils.js");
 const _observers = Symbol("_observers");
 const _viewers = Symbol("_viewers");
 const _viewing = Symbol("_viewing");
@@ -30,7 +30,7 @@ module.exports._symbols = {
 	_key,
 };
 
-const Component = require("./component.ts");
+const Component = require("./component.js");
 
 let id_counter = 0;
 

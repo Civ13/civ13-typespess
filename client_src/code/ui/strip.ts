@@ -1,5 +1,5 @@
 export{};
-const { Atom } = require("../../client/index.ts");
+const { Atom } = require("../../client/index.js");
 
 class StripPanel {
 	panel: any;

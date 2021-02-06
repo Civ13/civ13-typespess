@@ -1,6 +1,6 @@
-const { to_chat, has_component } = require("./../../../../code/game/server.ts");
+const { to_chat, has_component } = require("./../../../../code/game/server.js");
 
-const { random_zone } = require("./carbon/body_parts/helpers.ts");
+const { random_zone } = require("./carbon/body_parts/helpers.js");
 
 module.exports = {
 	//Args were rearranged from TG's to be in the same order as the code

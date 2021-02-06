@@ -2,7 +2,7 @@
 const {
 	Component,
 	chain_func,
-} = require("./../../../../../../../code/game/server.ts");
+} = require("./../../../../../../../code/game/server.js");
 
 class StackTile extends Component {
 	constructor(atom, template) {

@@ -2,10 +2,10 @@ const {
 	Component,
 	Sound,
 	Atom,
-} = require("./../../../code/game/server.ts");
-const NewPlayerPanel = require("./new_player_panel.ts");
+} = require("./../../../code/game/server.js");
+const NewPlayerPanel = require("./new_player_panel.js");
 const _ = require("underscore");
-const CharacterPreferences = require("../../modules/client/character.ts");
+const CharacterPreferences = require("../../modules/client/character.js");
 
 class NewPlayer extends Component {
 	constructor(atom, template) {

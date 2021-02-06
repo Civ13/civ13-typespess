@@ -1,4 +1,4 @@
-const { Panel, has_component } = require("./../../code/game/server.ts");
+const { Panel, has_component } = require("./../../code/game/server.js");
 
 class StripPanel extends Panel {
 	constructor(client, { title = "Strip" } = {}) {

@@ -7,8 +7,8 @@ const {
 	has_component,
 	chain_func,
 	to_chat,
-} = require("./../../../code/game/server.ts");
-const SparkSystem = require("../effect_system/sparks.ts");
+} = require("./../../../code/game/server.js");
+const SparkSystem = require("../effect_system/sparks.js");
 
 class LightFixture extends Component {
 	constructor(atom, template) {

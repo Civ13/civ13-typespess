@@ -1,7 +1,7 @@
-const { has_component } = require("./../../../../code/game/server.ts");
+const { has_component } = require("./../../../../code/game/server.js");
 
 const { EventEmitter } = require("events");
-const CharacterPreferences = require("../../../modules/client/character.ts");
+const CharacterPreferences = require("../../../modules/client/character.js");
 
 class Mind extends EventEmitter {
 	constructor(key) {

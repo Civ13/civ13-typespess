@@ -1,12 +1,12 @@
 const {
 	Component,
-} = require("./../../../../code/game/server.ts");
+} = require("./../../../../code/game/server.js");
 
-const combat_defines = require("../../../defines/combat_defines.ts");
-const mob_defines = require("../../../defines/mob_defines.ts");
-const layers = require("../../../defines/layers.ts");
-const pass_flags = require("../../../defines/pass_flags.ts");
-const Typespess = require("./../../../../code/game/server.ts");
+const combat_defines = require("../../../defines/combat_defines.js");
+const mob_defines = require("../../../defines/mob_defines.js");
+const layers = require("../../../defines/layers.js");
+const pass_flags = require("../../../defines/pass_flags.js");
+const Typespess = require("./../../../../code/game/server.js");
 
 const _ = require("underscore");
 const randomDir = [Typespess.NORTH, Typespess.SOUTH, Typespess.EAST, Typespess.WEST];

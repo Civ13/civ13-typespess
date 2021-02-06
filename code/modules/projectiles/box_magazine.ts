@@ -6,7 +6,7 @@ const {
 	has_component,
 	Sound,
 	to_chat,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 
 class AmmoBox extends Component {
 	constructor(atom, template) {

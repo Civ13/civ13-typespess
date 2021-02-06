@@ -4,7 +4,7 @@ const {
 	Atom,
 	has_component,
 	to_chat,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 
 const _has_received_templates = Symbol("_has_received_templates");
 

@@ -4,7 +4,7 @@ const {
 	has_component,
 	make_watched_property,
 	chain_func,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 
 class ApcPowered extends Component {
 	constructor(atom, template) {

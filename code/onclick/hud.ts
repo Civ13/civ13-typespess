@@ -3,7 +3,7 @@ const {
 	Atom,
 	has_component,
 	is_atom,
-} = require("./../../code/game/server.ts");
+} = require("./../../code/game/server.js");
 
 class MobHud extends Component {
 	constructor(atom, template) {

@@ -1,4 +1,4 @@
-const { Atom, has_component } = require("./../../code/game/server.ts");
+const { Atom, has_component } = require("./../../code/game/server.js");
 
 class Outfit {
 	constructor(obj) {

@@ -1,4 +1,4 @@
-const { Component, has_component } = require("./../../../code/game/server.ts");
+const { Component, has_component } = require("./../../../code/game/server.js");
 
 const _smooth_with = Symbol("_smooth_with");
 const _enabled = Symbol("_enabled");

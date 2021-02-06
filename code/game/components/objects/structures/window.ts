@@ -6,10 +6,10 @@ const {
 	has_component,
 	chain_func,
 	to_chat,
-} = require("./../../../../../code/game/server.ts");
-const layers = require("../../../../defines/layers.ts");
-const sounds = require("../../../../defines/sounds.ts");
-const pass_flags = require("../../../../defines/pass_flags.ts");
+} = require("./../../../../../code/game/server.js");
+const layers = require("../../../../defines/layers.js");
+const sounds = require("../../../../defines/sounds.js");
+const pass_flags = require("../../../../defines/pass_flags.js");
 
 const _state = Symbol("_state");
 

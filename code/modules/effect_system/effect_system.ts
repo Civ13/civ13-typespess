@@ -1,6 +1,6 @@
 
 
-const { sleep, dir_dx, dir_dy } = require("./../../../code/game/server.ts");
+const { sleep, dir_dx, dir_dy } = require("./../../../code/game/server.js");
 const _ = require("underscore");
 
 class EffectSystem {

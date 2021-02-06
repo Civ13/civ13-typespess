@@ -4,9 +4,9 @@ const {
 	Atom,
 	has_component,
 	make_watched_property,
-} = require("./../../code/game/server.ts");
-const combat_defines = require("../defines/combat_defines.ts");
-const mob_defines = require("../defines/mob_defines.ts");
+} = require("./../../code/game/server.js");
+const combat_defines = require("../defines/combat_defines.js");
+const mob_defines = require("../defines/mob_defines.js");
 
 class MobInteract extends Component {
 	constructor(atom, template) {

@@ -2,20 +2,19 @@ export{};
 const WebSocket = require("ws");
 const EventEmitter = require("events");
 const toposort = require("toposort");
-const Client = require("./client.ts");
-const Atom = require("./atom/atom.ts");
-const Component = require("./atom/component.ts");
-const Panel = require("./panel.ts");
-const Sound = require("./sound.ts");
-const utils = require("./utils.ts");
-const VisibilityGroup = require("./atom/visgroup.ts");
-const Dimension = require("./dimension.ts");
+const Client = require("./client.js");
+const Atom = require("./atom/atom.js");
+const Component = require("./atom/component.js");
+const Panel = require("./panel.js");
+const Sound = require("./sound.js");
+const utils = require("./utils.js");
+const VisibilityGroup = require("./atom/visgroup.js");
+const Dimension = require("./dimension.js");
 
 const _net_tick: any = Symbol("_net_tick");
 const _is_server_started: any = Symbol("_is_server_started");
 const _construct_time: any = Symbol("_construct_time");
 
-const global = require("../../src/types/global.d.ts");
 /**
  * @alias Typespess
  * @example
@@ -56,9 +55,9 @@ class Typespess extends EventEmitter {
 		this.demo_stream = null;
 
 		// Import default modules
-		this.importModule(require("./atom/mob.ts"));
-		this.importModule(require("./atom/lighting.ts"));
-		this.importModule(require("./atom/hearer.ts"));
+		this.importModule(require("./atom/mob.js"));
+		this.importModule(require("./atom/lighting.js"));
+		this.importModule(require("./atom/hearer.js"));
 
 		this.net_tick_delay = 50;
 

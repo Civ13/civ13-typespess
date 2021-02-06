@@ -1,5 +1,5 @@
 export{};
-const Atom = require("./atom.ts");
+const Atom = require("./atom.js");
 const EventEmitter = require("events");
 
 class Eye extends EventEmitter {

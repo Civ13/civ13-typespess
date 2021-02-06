@@ -4,7 +4,7 @@ const {
 	has_component,
 	visible_message,
 	chain_func,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 
 class Climbable extends Component {
 	constructor(atom, template) {

@@ -5,8 +5,8 @@ const {
 	chain_func,
 	has_component,
 	to_chat,
-} = require("./../../../../../../code/game/server.ts");
-const StackCraftPanel = require("./stack_craft_panel.ts");
+} = require("./../../../../../../code/game/server.js");
+const StackCraftPanel = require("./stack_craft_panel.js");
 
 const _amount = Symbol("_amount");
 const { join } = require ("path");

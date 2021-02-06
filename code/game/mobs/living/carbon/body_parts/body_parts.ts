@@ -6,10 +6,10 @@ const {
 	chain_func,
 	to_chat,
 	format_html,
-} = require("./../../../../../../code/game/server.ts");
-const layers = require("../../../../../defines/layers.ts");
-const combat_defines = require("../../../../../defines/combat_defines.ts");
-const { random_zone, parse_zone } = require("./helpers.ts");
+} = require("./../../../../../../code/game/server.js");
+const layers = require("../../../../../defines/layers.js");
+const combat_defines = require("../../../../../defines/combat_defines.js");
+const { random_zone, parse_zone } = require("./helpers.js");
 
 class MobBodyParts extends Component {
 	constructor(atom, template) {
@@ -196,7 +196,7 @@ class MobBodyParts extends Component {
 	}
 }
 
-Object.assign(MobBodyParts.prototype, require("../../living_defense.ts"));
+Object.assign(MobBodyParts.prototype, require("../../living_defense.js"));
 
 MobBodyParts.template = {
 	vars: {

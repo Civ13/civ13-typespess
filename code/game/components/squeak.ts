@@ -3,7 +3,7 @@ const {
 	Sound,
 	has_component,
 	chain_func,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 
 class Squeak extends Component {
 	constructor(atom, template) {

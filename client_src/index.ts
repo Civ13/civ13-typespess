@@ -1,8 +1,8 @@
 export{};
-const TypespessClient = require("./client/index.ts");
+const TypespessClient = require("./client/index.js");
 
 const { Eye, Plane } = TypespessClient;
-const { ParallaxPlane } = require("./code/parallax.ts");
+const { ParallaxPlane } = require("./code/parallax.js");
 
 // Just a small little polyfill for Edge (fuck you edge by the way)
 
@@ -13,23 +13,23 @@ for (const collection_class of [HTMLCollection, NodeList, DOMTokenList]) {
 
 const client = new TypespessClient();
 
-client.importModule(require("./code/alert.ts"));
-client.importModule(require("./code/carbon_mob.ts"));
-client.importModule(require("./code/hud.ts"));
-client.importModule(require("./code/progress_bar.ts"));
-client.importModule(require("./code/projectile.ts"));
-client.importModule(require("./code/splash_screen.ts"));
-client.importModule(require("./code/text_input.ts"));
-client.importModule(require("./code/ui/admin_menu.ts"));
-client.importModule(require("./code/ui/chem_dispenser.ts"));
-client.importModule(require("./code/ui/latejoin.ts"));
-client.importModule(require("./code/ui/login.ts"));
-client.importModule(require("./code/ui/machine_wires.ts"));
-client.importModule(require("./code/ui/new_player.ts"));
-client.importModule(require("./code/ui/preferences.ts"));
-client.importModule(require("./code/ui/spawn_object.ts"));
-client.importModule(require("./code/ui/stack_craft.ts"));
-client.importModule(require("./code/ui/strip.ts"));
+client.importModule(require("./code/alert.js"));
+client.importModule(require("./code/carbon_mob.js"));
+client.importModule(require("./code/hud.js"));
+client.importModule(require("./code/progress_bar.js"));
+client.importModule(require("./code/projectile.js"));
+client.importModule(require("./code/splash_screen.js"));
+client.importModule(require("./code/text_input.js"));
+client.importModule(require("./code/ui/admin_menu.js"));
+client.importModule(require("./code/ui/chem_dispenser.js"));
+client.importModule(require("./code/ui/latejoin.js"));
+client.importModule(require("./code/ui/login.js"));
+client.importModule(require("./code/ui/machine_wires.js"));
+client.importModule(require("./code/ui/new_player.js"));
+client.importModule(require("./code/ui/preferences.js"));
+client.importModule(require("./code/ui/spawn_object.js"));
+client.importModule(require("./code/ui/stack_craft.js"));
+client.importModule(require("./code/ui/strip.js"));
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -45,7 +45,7 @@ if(global.is_bs_editor_env) {
 			height: 400,
 		});
 	};
-	require("./code/preload.ts")(client);
+	require("./code/preload.js")(client);
 	window.addEventListener("load", () => {
 		const eye = new Eye(client, "");
 		const main_plane = new Plane.World(eye, "");

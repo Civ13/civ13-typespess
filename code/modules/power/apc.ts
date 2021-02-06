@@ -5,10 +5,10 @@ const {
 	make_watched_property,
 	chain_func,
 	has_component,
-} = require("./../../../code/game/server.ts");
-const layers = require("../../defines/layers.ts");
-const lighting = require("../../defines/lighting.ts");
-const { _areas } = require("../../game/area/area.ts").symbols;
+} = require("./../../../code/game/server.js");
+const layers = require("../../defines/layers.js");
+const lighting = require("../../defines/lighting.js");
+const { _areas } = require("../../game/area/area.js").symbols;
 const channels = ["lighting", "equipment", "environment"];
 
 class Apc extends Component {

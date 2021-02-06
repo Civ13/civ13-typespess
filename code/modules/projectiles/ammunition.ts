@@ -5,7 +5,7 @@ const {
 	chain_func,
 	has_component,
 	to_chat,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 const _ = require("underscore");
 
 class AmmoCasing extends Component {

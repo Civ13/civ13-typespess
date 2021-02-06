@@ -5,8 +5,8 @@ const {
 	has_component,
 	to_chat,
 	chain_func,
-} = require("./../../../../../../code/game/server.ts");
-const mob_defines = require("../../../../../defines/mob_defines.ts");
+} = require("./../../../../../../code/game/server.js");
+const mob_defines = require("../../../../../defines/mob_defines.js");
 
 class LargeContainer extends Component {
 	constructor(atom, template) {

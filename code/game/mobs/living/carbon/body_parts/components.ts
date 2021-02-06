@@ -2,10 +2,10 @@ const {
 	Component,
 	chain_func,
 	make_watched_property,
-} = require("./../../../../../../code/game/server.ts");
+} = require("./../../../../../../code/game/server.js");
 
-const { skin_tones } = require("./helpers.ts");
-const sprite_accessories = require("../human/sprite_accessories.ts");
+const { skin_tones } = require("./helpers.js");
+const sprite_accessories = require("../human/sprite_accessories.js");
 
 class BodyPartSkinTone extends Component {
 	constructor(atom, template) {

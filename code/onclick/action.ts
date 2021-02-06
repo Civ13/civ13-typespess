@@ -4,9 +4,9 @@ const {
 	Component,
 	has_component,
 	make_watched_property,
-} = require("./../../code/game/server.ts");
+} = require("./../../code/game/server.js");
 const _ = require("underscore");
-const combat_defines = require("../defines/combat_defines.ts");
+const combat_defines = require("../defines/combat_defines.js");
 const EventEmitter = require("events");
 
 class Action /*lawsuit*/ extends EventEmitter {

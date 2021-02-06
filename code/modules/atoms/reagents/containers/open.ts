@@ -7,7 +7,7 @@ const {
 	to_chat,
 	visible_message,
 	Sound,
-} = require("./../../../../../code/game/server.ts");
+} = require("./../../../../../code/game/server.js");
 
 // Reagent containers where you can pour from one to another.
 class OpenReagentContainer extends Component {

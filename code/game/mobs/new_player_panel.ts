@@ -1,7 +1,7 @@
-const { Atom, Panel, to_chat } = require("./../../../code/game/server.ts");
+const { Atom, Panel, to_chat } = require("./../../../code/game/server.js");
 
 const LatejoinPanel = require("./latejoin_panel");
-const PreferencesPanel = require("../../modules/client/preferences_panel.ts");
+const PreferencesPanel = require("../../modules/client/preferences_panel.js");
 
 class NewPlayerPanel extends Panel {
 	constructor(client) {

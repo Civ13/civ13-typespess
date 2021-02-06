@@ -1,5 +1,5 @@
 const EventEmitter = require("events");
-const mob_symbols = require("./mob.ts")._symbols;
+const mob_symbols = require("./mob.js")._symbols;
 const _networked_vars = Symbol("_networked_vars");
 
 /**

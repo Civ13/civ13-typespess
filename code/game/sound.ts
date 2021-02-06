@@ -1,4 +1,4 @@
-const { is_atom, has_component } = require("./utils.ts");
+const { is_atom, has_component } = require("./utils.js");
 
 let idctr = 0;
 

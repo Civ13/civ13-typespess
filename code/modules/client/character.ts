@@ -1,15 +1,15 @@
 
 
-const { Atom } = require("./../../../code/game/server.ts");
+const { Atom } = require("./../../../code/game/server.js");
 const _ = require("underscore");
 const first_names = require("../../../strings/names/first.json");
 const first_names_male = require("../../../strings/names/first_male.json");
 const first_names_female = require("../../../strings/names/first_female.json");
 const last_names = require("../../../strings/names/last.json");
-const sprite_accessories = require("../../game/mobs/living/carbon/human/sprite_accessories.ts");
+const sprite_accessories = require("../../game/mobs/living/carbon/human/sprite_accessories.js");
 const {
 	skin_tones,hair_colors,
-} = require("../../game/mobs/living/carbon/body_parts/helpers.ts");
+} = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class CharacterPreferences {
 	constructor(obj) {

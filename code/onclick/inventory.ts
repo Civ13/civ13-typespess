@@ -9,12 +9,12 @@ const {
 	make_watched_property,
 	visible_message,
 	to_chat,
-} = require("./../../code/game/server.ts");
-const combat_defines = require("../defines/combat_defines.ts");
+} = require("./../../code/game/server.js");
+const combat_defines = require("../defines/combat_defines.js");
 const EventEmitter = require("events");
-const StripPanel = require("./strip_panel.ts");
+const StripPanel = require("./strip_panel.js");
 const _slots = Symbol("_slots");
-const { _slot } = require("../game/components/objects/items.ts").symbols;
+const { _slot } = require("../game/components/objects/items.js").symbols;
 const _visible = Symbol("_can_see");
 const _item = Symbol("_item");
 const _active_hand = Symbol("_active_hand");

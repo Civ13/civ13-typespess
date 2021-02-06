@@ -2,7 +2,7 @@ const {
 	Component,
 	Sound,
 	has_component,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 
 class AreaAmbience extends Component {
 	constructor(atom, template) {

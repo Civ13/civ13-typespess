@@ -7,14 +7,14 @@ const {
 	format_html,
 	visible_message,
 	has_component,
-} = require("./../../../../code/game/server.ts");
+} = require("./../../../../code/game/server.js");
 const _ = require("underscore");
-const Mind = require("../mind/mind.ts");
-const combat_defines = require("../../../defines/combat_defines.ts");
-const mob_defines = require("../../../defines/mob_defines.ts");
-const { random_zone } = require("./carbon/body_parts/helpers.ts");
-const layers = require("../../../defines/layers.ts");
-const pass_flags = require("../../../defines/pass_flags.ts");
+const Mind = require("../mind/mind.js");
+const combat_defines = require("../../../defines/combat_defines.js");
+const mob_defines = require("../../../defines/mob_defines.js");
+const { random_zone } = require("./carbon/body_parts/helpers.js");
+const layers = require("../../../defines/layers.js");
+const pass_flags = require("../../../defines/pass_flags.js");
 
 const _stat = Symbol("_stat");
 
@@ -512,7 +512,7 @@ class LivingMob extends Component {
 	}
 }
 
-Object.assign(LivingMob.prototype, require("./living_defense.ts"));
+Object.assign(LivingMob.prototype, require("./living_defense.js"));
 
 LivingMob.depends = [
 	"Mob",
@@ -565,6 +565,6 @@ function add_effects(mod = {}) {
 	}
 }
 
-add_effects(require("./effects/incapacitating.ts"));
+add_effects(require("./effects/incapacitating.js"));
 
 module.exports.components = { LivingMob, MovementProxy };

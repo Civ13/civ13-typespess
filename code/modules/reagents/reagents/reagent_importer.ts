@@ -3,7 +3,7 @@ const {readdirSync, statSync } = require ("fs");
 const fs = require("fs");
 const CSON = require("cson");
 
-const { Reagent } = require("../reagent.ts");
+const { Reagent } = require("../reagent.js");
 
 module.exports.reagents = [];
 

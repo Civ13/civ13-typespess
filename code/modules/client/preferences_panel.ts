@@ -1,10 +1,10 @@
-const { Panel } = require("./../../../code/game/server.ts");
+const { Panel } = require("./../../../code/game/server.js");
 
-const CharacterPreferences = require("./character.ts");
-const sprite_accessories = require("../../game/mobs/living/carbon/human/sprite_accessories.ts");
+const CharacterPreferences = require("./character.js");
+const sprite_accessories = require("../../game/mobs/living/carbon/human/sprite_accessories.js");
 const {
 skin_tones, hair_colors,
-} = require("../../game/mobs/living/carbon/body_parts/helpers.ts");
+} = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class PreferencesPanel extends Panel {
 	constructor(client, { start_tab = "character" } = {}) {

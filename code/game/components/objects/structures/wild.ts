@@ -2,14 +2,14 @@
 //trees, bushes, and so on
 ///////////////////////////
 
-const layers = require("../../../../defines/layers.ts");
+const layers = require("../../../../defines/layers.js");
 const {
 	Component,
 	has_component,
 	Atom,
 	chain_func,
 	to_chat,
-} = require("./../../../../../code/game/server.ts");
+} = require("./../../../../../code/game/server.js");
 
 class Wild extends Component {
 	constructor(atom, template) {

@@ -1,12 +1,12 @@
 export{};
-const Atom = require("./lib/atom.ts");
-const IconRenderer = require("./lib/icon_renderer.ts");
-const PanelManager = require("./lib/panels/manager.ts");
-const Component = require("./lib/component.ts");
+const Atom = require("./lib/atom.js");
+const IconRenderer = require("./lib/icon_renderer.js");
+const PanelManager = require("./lib/panels/manager.js");
+const Component = require("./lib/component.js");
 const EventEmitter = require("events");
-const Sound = require("./lib/sound.ts");
-const Matrix = require("./lib/matrix.ts");
-const { Eye, Plane } = require("./lib/eye.ts");
+const Sound = require("./lib/sound.js");
+const Matrix = require("./lib/matrix.js");
+const { Eye, Plane } = require("./lib/eye.js");
 
 class TypespessClient extends EventEmitter {
 	constructor(wsurl: string, resRoot = "") {
@@ -34,7 +34,7 @@ class TypespessClient extends EventEmitter {
 			if(global.AudioContext)
 				{this.audio_ctx = new AudioContext();}
 		}
-		this.importModule(require("./lib/lighting.ts"));
+		this.importModule(require("./lib/lighting.js"));
 	}
 
 	handle_login() {
@@ -255,7 +255,7 @@ class TypespessClient extends EventEmitter {
 	}
 }
 
-// This is pretty much identical to the function on the server's lib/utils.ts
+// This is pretty much identical to the function on the server's lib/utils.js
 const _chain_parent = Symbol("_chain_parent");
 const _chain_spliced = Symbol("_chain_spliced");
 (TypespessClient.chain_func = function (func1: any, func2: { call: (arg0: any, arg1: (...override_args: any[]) => any, arg2: any) => any; }) {
@@ -370,9 +370,9 @@ const _chain_spliced = Symbol("_chain_spliced");
 	if (autoremove) {elem2.focus();}
 });
 
-TypespessClient.prototype.enqueue_icon_meta_load = require("./lib/icon_loader.ts");
-TypespessClient.prototype.anim_loop = require("./lib/renderer.ts");
-TypespessClient.prototype.get_audio_buffer = require("./lib/audio_loader.ts");
+TypespessClient.prototype.enqueue_icon_meta_load = require("./lib/icon_loader.js");
+TypespessClient.prototype.anim_loop = require("./lib/renderer.js");
+TypespessClient.prototype.get_audio_buffer = require("./lib/audio_loader.js");
 
 TypespessClient.Atom = Atom;
 TypespessClient.Component = Component;

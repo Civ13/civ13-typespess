@@ -1,4 +1,4 @@
-const { Component } = require("./../../../../../../code/game/server.ts");
+const { Component } = require("./../../../../../../code/game/server.js");
 
 class Multitool extends Component {
 	constructor(atom, template) {

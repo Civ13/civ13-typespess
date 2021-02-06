@@ -1,4 +1,4 @@
-const { Component } = require("./../../../../../../code/game/server.ts");
+const { Component } = require("./../../../../../../code/game/server.js");
 
 //TODO: var/fire_resist = T0C+100
 //TODO: /obj/item/clothing/suit/worn_overlays(isinhands = FALSE)

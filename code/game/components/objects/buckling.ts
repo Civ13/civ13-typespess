@@ -5,7 +5,7 @@ const {
 	chain_func,
 	has_component,
 	visible_message,
-} = require("./../../../../code/game/server.ts");
+} = require("./../../../../code/game/server.js");
 
 class Buckle extends Component {
 	constructor(atom, template) {

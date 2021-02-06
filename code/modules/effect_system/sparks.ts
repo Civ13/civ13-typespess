@@ -1,10 +1,10 @@
 
 
-const { Component, Sound, Atom } = require("./../../../code/game/server.ts");
-const pass_flags = require("../../defines/pass_flags.ts");
-const sounds = require("../../defines/sounds.ts");
-const layers = require("../../defines/layers.ts");
-const EffectSystem = require("./effect_system.ts");
+const { Component, Sound, Atom } = require("./../../../code/game/server.js");
+const pass_flags = require("../../defines/pass_flags.js");
+const sounds = require("../../defines/sounds.js");
+const layers = require("../../defines/layers.js");
+const EffectSystem = require("./effect_system.js");
 
 class SparkEffect extends Component {
 	constructor(atom, template) {

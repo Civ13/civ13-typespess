@@ -1,7 +1,7 @@
 const {
 	Component,
 	has_component,
-} = require("./../../../../../code/game/server.ts");
+} = require("./../../../../../code/game/server.js");
 
 class Slippery extends Component {
 	constructor(atom, template) {

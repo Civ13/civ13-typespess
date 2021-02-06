@@ -1,4 +1,4 @@
-const { Panel } = require("./../../../code/game/server.ts");
+const { Panel } = require("./../../../code/game/server.js");
 
 const admin_tools = {};
 
@@ -50,8 +50,8 @@ class AdminPanel extends Panel {
 	}
 }
 
-importModule(require("./spawn_object.ts"));
-importModule(require("./unsorted_tools.ts"));
+importModule(require("./spawn_object.js"));
+importModule(require("./unsorted_tools.js"));
 
 function importModule(mod) {
 	if (mod.admin_tools) {

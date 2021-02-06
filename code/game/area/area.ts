@@ -1,6 +1,6 @@
-const { Component, has_component } = require("./../../../code/game/server.ts");
+const { Component, has_component } = require("./../../../code/game/server.js");
 
-const layers = require("../../defines/layers.ts");
+const layers = require("../../defines/layers.js");
 
 const _areas = Symbol("_areas");
 const _area = Symbol("_area");

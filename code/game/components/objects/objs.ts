@@ -3,9 +3,9 @@ const {
 	has_component,
 	to_chat,
 	sleep,
-} = require("./../../../../code/game/server.ts");
+} = require("./../../../../code/game/server.js");
 
-const pass_flags = require("../../../defines/pass_flags.ts");
+const pass_flags = require("../../../defines/pass_flags.js");
 
 class Tangible extends Component {
 	constructor(atom, template) {

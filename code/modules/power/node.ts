@@ -3,9 +3,9 @@ const {
 	Component,
 	has_component,
 	make_watched_property,
-} = require("./../../../code/game/server.ts");
+} = require("./../../../code/game/server.js");
 
-// heh this file is named node.ts
+// heh this file is named node.js
 // pun was not intended
 
 class PowerNode extends Component {

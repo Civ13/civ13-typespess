@@ -1,9 +1,9 @@
 
 export{};
-const { Reagent } = require("../reagent.ts");
-const { atmos_defines } = require("../../../defines/atmos_defines.ts");
-const { combat_defines } = require("../../../defines/combat_defines.ts");
-const { to_chat } = require("./../../../../code/game/server.ts");
+const { Reagent } = require("../reagent.js");
+const { atmos_defines } = require("../../../defines/atmos_defines.js");
+const { combat_defines } = require("../../../defines/combat_defines.js");
+const { to_chat } = require("./../../../../code/game/server.js");
 module.exports.reagents = {};
 
 class Medicine extends Reagent {} // /datum/reagent/medicine

@@ -1,6 +1,6 @@
 export{};
-const IconRenderer = require("./icon_renderer.ts");
-const Matrix = require("./matrix.ts");
+const IconRenderer = require("./icon_renderer.js");
+const Matrix = require("./matrix.js");
 const EventEmitter = require("events");
 
 class Atom extends EventEmitter {

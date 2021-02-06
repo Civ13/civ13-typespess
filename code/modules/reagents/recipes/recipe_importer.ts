@@ -1,5 +1,5 @@
 
-const { ReagentReaction } = require("../reagent.ts");
+const { ReagentReaction } = require("../reagent.js");
 const { join } = require ("path");
 const {readdirSync, statSync } = require ("fs");
 const fs = require("fs");

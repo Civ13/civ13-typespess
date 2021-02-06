@@ -5,8 +5,8 @@ const {
 	has_component,
 	chain_func,
 	visible_message,
-} = require("./../../../../code/game/server.ts");
-const combat_defines = require("../../../defines/combat_defines.ts");
+} = require("./../../../../code/game/server.js");
+const combat_defines = require("../../../defines/combat_defines.js");
 const _ = require("underscore");
 
 class Destructible extends Component {

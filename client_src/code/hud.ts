@@ -1,5 +1,5 @@
 export{};
-const { Component, chain_func } = require("../client/index.ts");
+const { Component, chain_func } = require("../client/index.js");
 
 class GridDisplay extends Component {
 	constructor(atom, template) {

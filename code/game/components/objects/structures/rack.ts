@@ -5,9 +5,9 @@ const {
 	chain_func,
 	to_chat,
 	Atom,
-} = require("./../../../../../code/game/server.ts");
-const pass_flags = require("../../../../defines/pass_flags.ts");
-const layers = require("../../../../defines/layers.ts");
+} = require("./../../../../../code/game/server.js");
+const pass_flags = require("../../../../defines/pass_flags.js");
+const layers = require("../../../../defines/layers.js");
 
 class Rack extends Component {
 	//TODO: attack_hand() and by extension play_attack_sound. Basically, you can't kick racks yet.

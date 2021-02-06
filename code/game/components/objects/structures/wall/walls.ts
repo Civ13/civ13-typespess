@@ -1,5 +1,5 @@
 
-const layers = require("../../../../../defines/layers.ts");
+const layers = require("../../../../../defines/layers.js");
 const {
 	Component,
 	Sound,
@@ -7,7 +7,7 @@ const {
 	Atom,
 	chain_func,
 	to_chat,
-} = require("./../../../../../../code/game/server.ts");
+} = require("./../../../../../../code/game/server.js");
 
 class Wall extends Component {
 	constructor(atom, template) {

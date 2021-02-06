@@ -6,10 +6,10 @@ const {
 	has_component,
 	chain_func,
 	dir_to,
-} = require("./../../../code/game/server.ts");
-const layers = require("../../defines/layers.ts");
+} = require("./../../../code/game/server.js");
+const layers = require("../../defines/layers.js");
 const _ = require("underscore");
-const { display_watts } = require("./helpers.ts");
+const { display_watts } = require("./helpers.js");
 
 const cable_colors = {
 	red: "#ff0000",

@@ -1,7 +1,7 @@
-const { has_component } = require("./utils.ts");
-const mob_symbols = require("./atom/mob.ts")._symbols;
+const { has_component } = require("./utils.js");
+const mob_symbols = require("./atom/mob.js")._symbols;
 const EventEmitter = require("events");
-const Component = require("./atom/component.ts");
+const Component = require("./atom/component.js");
 
 const _mob:any = Symbol("_mob");
 const _atom_net_queue:any = Symbol("_atom_net_queue");

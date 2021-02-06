@@ -1,4 +1,4 @@
-const Panel = require("./panel.ts");
+const Panel = require("./panel.js");
 const EventEmitter = require("events");
 
 class PanelManager extends EventEmitter {

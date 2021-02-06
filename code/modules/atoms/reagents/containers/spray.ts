@@ -8,9 +8,9 @@ const {
 	sleep,
 	dir_to,
 	has_component,
-} = require("./../../../../../code/game/server.ts");
-const combat_defines = require("../../../../defines/combat_defines.ts");
-const pass_flags = require("../../../../defines/pass_flags.ts");
+} = require("./../../../../../code/game/server.js");
+const combat_defines = require("../../../../defines/combat_defines.js");
+const pass_flags = require("../../../../defines/pass_flags.js");
 
 class SprayBottle extends Component {
 	constructor(atom, template) {

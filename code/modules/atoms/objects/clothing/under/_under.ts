@@ -1,4 +1,4 @@
-const { Component } = require("./../../../../../../code/game/server.ts");
+const { Component } = require("./../../../../../../code/game/server.js");
 
 class UniformItem extends Component {
 	constructor(atom, template) {

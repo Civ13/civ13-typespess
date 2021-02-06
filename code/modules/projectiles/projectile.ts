@@ -6,13 +6,13 @@ const {
 	has_component,
 	to_chat,
 	visible_message,
-} = require("./../../../code/game/server.ts");
-const pass_flags = require("../../defines/pass_flags.ts");
-const combat_defines = require("../../defines/combat_defines.ts");
+} = require("./../../../code/game/server.js");
+const pass_flags = require("../../defines/pass_flags.js");
+const combat_defines = require("../../defines/combat_defines.js");
 const {
 	random_zone,
 	parse_zone,
-} = require("../../game/mobs/living/carbon/body_parts/helpers.ts");
+} = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class Projectile extends Component.Networked {
 	constructor(atom, template) {

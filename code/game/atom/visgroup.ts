@@ -1,5 +1,5 @@
-const { chain_func } = require("../utils.ts");
-const mob_symbols = require("./mob.ts")._symbols;
+const { chain_func } = require("../utils.js");
+const mob_symbols = require("./mob.js")._symbols;
 
 /**
  * @typedef {import('./atom')} Typespess.Atom

@@ -1,4 +1,4 @@
-const { Component, Atom } = require("../server.ts");
+const { Component, Atom } = require("../server.js");
 
 const _enabled = Symbol("_enabled");
 const _color = Symbol("_color");
