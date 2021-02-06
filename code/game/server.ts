@@ -1,3 +1,4 @@
+export{};
 const WebSocket = require("ws");
 const EventEmitter = require("events");
 const toposort = require("toposort");
@@ -11,10 +12,10 @@ const VisibilityGroup = require("./atom/visgroup.ts");
 const Dimension = require("./dimension.ts");
 
 const _net_tick = Symbol("_net_tick");
-const _is_template_processed = Symbol("_is_template_processed");
 const _is_server_started = Symbol("_is_server_started");
 const _construct_time = Symbol("_construct_time");
 
+const global = require("../../src/types/global.d.ts");
 /**
  * @alias Typespess
  * @example
@@ -334,7 +335,7 @@ class Typespess extends EventEmitter {
   * @param {template} template
   */
 	process_template(template: { [x: string]: boolean; parent_template: string | any[]; components: any[]; vars: { layer?: any; }; is_variant: any; variants: string | any[]; }) {
-		if (template[_is_template_processed]) {return;}
+		if (template.is_template_processed) {return;}
 		if (template.parent_template) {
 			if (typeof template.parent_template === "string") {
 				const ptemplate = this.templates[template.parent_template];
@@ -416,7 +417,7 @@ class Typespess extends EventEmitter {
 			}
 		}
 
-		template[_is_template_processed] = true;
+		template.is_template_processed = true;
 	}
 
 	/**
@@ -424,7 +425,7 @@ class Typespess extends EventEmitter {
   * @param {template} template
   * @param {Array} variant_leaf_path
   */
-	get_template_variant(template: { is_variant: boolean; variants: string | any[]; vars: any; }, variant_leaf_path: string | any[], instance_vars: any) {
+	get_template_variant(template: any, variant_leaf_path: string | any[], instance_vars: any) {
 		if (!instance_vars && (!variant_leaf_path || variant_leaf_path.length === 0))
 			{return template;}
 		template = utils.weak_deep_assign({}, template);
@@ -435,7 +436,6 @@ class Typespess extends EventEmitter {
 		template.is_variant = true;
 		if (template.variants && template.variants.length) {
 			if (!variant_leaf_path) {variant_leaf_path = [];}
-			variant_leaf_path.length = template.variants.length;
 			for (let i = 0; i < template.variants.length; i++) {
 				const variant = template.variants[i];
 				if (variant.type === "single") {
