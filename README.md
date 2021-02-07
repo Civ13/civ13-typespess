@@ -2,15 +2,15 @@
 
 ![](https://i.imgur.com/napac0L.png)
 
-![CircleCI](https://img.shields.io/circleci/build/github/Civ13/civ13-typespess)
+[![CircleCI](https://img.shields.io/circleci/build/github/Civ13/civ13-typespess)](https://app.circleci.com/pipelines/github/Civ13/civ13-typespess)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f6b220214aca435c9942bc5cb205d239)](https://app.codacy.com/gh/Civ13/civ13-typespess?utm_source=github.com&utm_medium=referral&utm_content=Civ13/civ13-typespess&utm_campaign=Badge_Grade_Dashboard)
-![License](https://img.shields.io/github/license/civ13/civ13-typespess)
+[![License](https://img.shields.io/github/license/civ13/civ13-typespess)](https://github.com/Civ13/civ13-typespess/blob/master/LICENSE)
 
 ![GitHub top language](https://img.shields.io/github/languages/top/civ13/civ13-typespess)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/civ13/civ13-typespess)
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13-typespess)
 
-Welcome! This is an attempt at creating a Civ13 remake using *typescript* and *javascript*.
+Welcome! This is an attempt at creating a Civ13 remake using [TypeScript](https://www.typescriptlang.org/) and *JavaScript*.
 
 Check the original Civ13 that uses BYOND and SS13 code here: https://github.com/civ13/civ13.
 
@@ -43,5 +43,3 @@ You can also use `launch_client.bat` to automatically update the dependencies an
 ## Licenses
 
 All code is licensed under [GNU AGPL v3](https://www.gnu.org/licenses/agpl-3.0.html).
-
-All assets including icons and sound are under a [Creative Commons 3.0 BY-SA license](https://creativecommons.org/licenses/by-sa/3.0/) unless otherwise indicated.
