@@ -1,7 +1,23 @@
+export{};
 const {format_html} = require("./utils.js");
 class World {
+	server: any;
+	servertime: number;
+	season: string;
+	possible_seasons: string[];
+	gametime: number;
+	weather: string;
+	possible_weather: string[];
+	weather_running: boolean;
+	seasons_running: boolean;
+	civilizations: any[];
+	age: number;
+	age1: number;
+	age2: number;
+	age3: number;
+	user: any;
 	
-	constructor(server) {
+	constructor(server: any) {
 		this.server = server;
 		this.servertime = 0; //server time in seconds (1000ms)
 	
@@ -47,9 +63,9 @@ class World {
 
 		return desc_tod;
 	}
-	change_season(new_season) { //sets the season to the input variable, if its in the list of possible_seasons
+	change_season(new_season: string) { //sets the season to the input variable, if its in the list of possible_seasons
 		for (const s of this.possible_seasons)
-			{if (s === new_season) {this.season = s; console.log("WORLD: Changed the season to "+new_season);to_chat(user, format_html`<span class='announce'>It is now ${this.season}.</span>`);return true;}}
+			{if (s === new_season) {this.season = s; console.log("WORLD: Changed the season to "+new_season);to_chat(this.user, format_html`<span class='announce'>It is now ${this.season}.</span>`);return true;}}
 		return false;
 	}
 	advance_season() { //advances to the next season
@@ -60,7 +76,7 @@ class World {
 		this.server.to_global_chat(format_html`<span class='announce'>It is now ${this.season}.</span>`);
 		return true;
 	}
-   change_weather(new_weather) { //sets the weather to the input variable, if its in the list of possible_weather
+   change_weather(new_weather: string) { //sets the weather to the input variable, if its in the list of possible_weather
 		const last_weather = this.weather;
 		for (const w of this.possible_weather)
 			{if (w === new_weather) {this.weather = w; console.log("WORLD: Changed the weather to "+new_weather); return true;}}
@@ -77,7 +93,7 @@ class World {
 		return true;
 	}
 
-	time_scheduler(thisworld) {
+	time_scheduler(thisworld: { servertime: number; gametime: number; time_scheduler: (...args: any[]) => void; }) {
 		thisworld.servertime+=1;
 		thisworld.gametime+=0.25;
 		if (thisworld.gametime >= 1440) {
@@ -86,13 +102,13 @@ class World {
 		setTimeout(thisworld.time_scheduler, 6000, thisworld);
 	} //4 seconds = 1 ingame minute
 
-	season_scheduler(thisworld) {
+	season_scheduler(thisworld: { seasons_running: any; advance_season: () => void; season_scheduler: (...args: any[]) => void; }) {
 		if (thisworld.seasons_running) {
 			thisworld.advance_season();
 			setTimeout(thisworld.season_scheduler, 3600000, thisworld);}
 		}
 
-	weather_scheduler(thisworld) {
+	weather_scheduler(thisworld: { weather_running: any; random_weather: () => void; weather_scheduler: (...args: any[]) => void; }) {
 		if (thisworld.weather_running && Math.random()<=0.18) {
 			thisworld.random_weather();}
 			setTimeout(thisworld.weather_scheduler, 60000, thisworld);

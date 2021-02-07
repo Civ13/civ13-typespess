@@ -90,7 +90,7 @@ class Atom extends EventEmitter {
 			delete this.overlays[key];
 			overlay_renderer = this.overlay_renderers[key];
 			const idx = this.overlay_renderers_list.indexOf(overlay_renderer);
-			if (idx != -1) {this.overlay_renderers_list.splice(idx, 1);}
+			if (idx !== -1) {this.overlay_renderers_list.splice(idx, 1);}
 			delete this.overlay_renderers[key];
 			this.mark_dirty();
 			return;

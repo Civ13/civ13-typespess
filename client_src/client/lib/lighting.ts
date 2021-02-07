@@ -185,7 +185,7 @@ class LightingObject extends Component {
 						[y1, y2] = [-y2, -y1];
 					}
 					if (x1 <= 0 && x2 >= 0) {
-						flip = sx != sy;
+						flip = sx !== sy;
 						path.push([cx + x1 * sx, cy + (y1 + wall.base_height) * sy]);
 						path.push([cx + x1 * sx, cy + y1 * sy]);
 						let scalar = (this.radius * 32 + 48) / y1;
