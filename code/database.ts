@@ -1,19 +1,20 @@
+export{};
 const PouchDB = require("pouchdb");
 class Database {
 	name
 	path
 	db
-	constructor(name) {
+	constructor(name: string) {
 		this.name = name;
 		this.path = `http://localhost:5984/${name}`;
 		this.db = new PouchDB(`http://localhost:5984/${name}`);
 	}
 
 	get_db_info(){
-		this.db.info().then(function (info) {
+		this.db.info().then(function (info: string) {
 			console.log(info);});
 	}
-	async authenticate(tname, tpassword){
+	async authenticate(tname: string, tpassword: string){
 		console.log("Authenticating "+tname+"...");
 		const i = await this.db.get(tname);
 		const accepted = {value: false, name: tname};

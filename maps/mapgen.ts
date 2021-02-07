@@ -1,3 +1,4 @@
+export{};
 const fs = require("fs");
 
 console.log("Loading definitions...");
@@ -6,8 +7,8 @@ let finalData = "";
 
 function load_configs() {
 	fs.readFile("mapdef.txt", function (
-		err,
-		data
+		err: Error,
+		data: any
 	) {
 		if (err) {
 			return console.error(err);
@@ -23,10 +24,10 @@ function load_configs() {
 	});
 	return [100, 100, 25, 20];
 }
-function generateRandomInteger(min, max) {
+function generateRandomInteger(min: number, max: number) {
 	return Math.floor(min + Math.random()*(max + 1 - min));
 }
-function random_floor(prob) {
+function random_floor(prob: number) {
 	if (Math.random() <= prob / 100) {return "dirt";}
 	else {return "grass";}
 }
@@ -124,7 +125,7 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 finalData = finalData + "	}\n";
 finalData = finalData + "}";
 
-fs.writeFile("newmap.bsmap", finalData, function (err) {
+fs.writeFile("newmap.bsmap", finalData, function (err: Error) {
 	if (err) {
 		return console.error(err);
 	}
