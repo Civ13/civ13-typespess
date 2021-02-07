@@ -60,6 +60,7 @@ global.Tserver.importModule(require("./code/game/components/objects/structures/c
 global.Tserver.importModule(require("./code/game/components/objects/structures/crates_lockers/closets/utility.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/wall/walls.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/rack.js"));
+global.Tserver.importModule(require("./code/game/components/objects/structures/structure.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/table_frames.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/table.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/window.js"));
