@@ -140,7 +140,7 @@ class ItemAction extends Action {
 Action.Item = ItemAction;
 
 class ActionButton extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("clicked", this.clicked.bind(this));
 		this.action = null;
@@ -178,7 +178,7 @@ ActionButton.loadBefore = ["Tooltip"];
 ActionButton.depends = ["Tooltip"];
 
 class ItemActions extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("moved", this.moved.bind(this));
 		this.actions = [];

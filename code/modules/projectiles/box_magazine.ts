@@ -9,7 +9,7 @@ const {
 } = require("./../../../code/game/server.js");
 
 class AmmoBox extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 		this.a.c.Item.attack_self = this.attack_self.bind(this);

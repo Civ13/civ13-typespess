@@ -6,7 +6,7 @@ const _radius = Symbol("_radius");
 const _lighting_object = Symbol("_lighting_object");
 
 class LightingObject extends Component.Networked {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.add_networked_var("enabled");
@@ -85,7 +85,7 @@ class LightingObject extends Component.Networked {
  * @extends Typespess.Component
  */
 class LightSource extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this[_lighting_object] = new Atom(this.a.server, {
 			components: ["LightingObject"],

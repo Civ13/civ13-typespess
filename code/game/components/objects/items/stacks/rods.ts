@@ -1,7 +1,7 @@
 const { Component } = require("./../../../../../../code/game/server.js");
 
 class StackRod extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Stack.on("amount_changed", this.amount_changed.bind(this));
 		this.amount_changed();

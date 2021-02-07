@@ -1,7 +1,7 @@
 const { Component, chain_func } = require("./../../../code/game/server.js");
 
 class MobMovement extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.intended_walk_dir = 0;

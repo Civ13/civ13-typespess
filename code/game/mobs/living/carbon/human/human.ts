@@ -6,7 +6,7 @@ const first_names = require("../../../../../../strings/names/first.json");
 const last_names = require("../../../../../../strings/names/last.json");
 
 class HumanMob extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.Civilization = "";
 		if (!this.a.name) {

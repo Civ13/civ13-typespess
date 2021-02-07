@@ -8,7 +8,7 @@ const {
 } = require("./../../../../../code/game/server.js");
 
 class Handcuffs extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Item.attack = this.attack.bind(this);
 	}

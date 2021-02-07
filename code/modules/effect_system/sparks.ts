@@ -7,7 +7,7 @@ const layers = require("../../defines/layers.js");
 const EffectSystem = require("./effect_system.js");
 
 class SparkEffect extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("moved", this.moved.bind(this));
 		this.a.once("moved", () => {

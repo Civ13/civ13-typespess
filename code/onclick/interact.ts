@@ -9,7 +9,7 @@ const combat_defines = require("../defines/combat_defines.js");
 const mob_defines = require("../defines/mob_defines.js");
 
 class MobInteract extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Mob.on("click_on", this.click_on.bind(this));
 		this.next_move = 0;

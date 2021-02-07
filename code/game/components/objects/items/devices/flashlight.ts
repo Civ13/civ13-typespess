@@ -4,7 +4,7 @@ const { Component } = require("./../../../../../../code/game/server.js");
 const lighting = require("../../../../../defines/lighting.js");
 
 class Flashlight extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.ItemActions.add_action({ name: "Toggle Flashlight" });
 		this.a.c.LightSource.on("enabled_changed", this.enabled_changed.bind(this));

@@ -6,7 +6,7 @@ const {
 } = require("./../../../code/game/server.js");
 
 class Squeak extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.play_squeak = this.play_squeak.bind(this);
 		this.step_squeak = this.step_squeak.bind(this);

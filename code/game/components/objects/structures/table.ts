@@ -10,7 +10,7 @@ const pass_flags = require("../../../../defines/pass_flags.js");
 const layers = require("../../../../defines/layers.js");
 
 class Table extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.can_be_crossed = chain_func(
 			this.a.can_be_crossed,

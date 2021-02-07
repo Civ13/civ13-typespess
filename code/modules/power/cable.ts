@@ -23,7 +23,7 @@ const cable_colors = {
 };
 
 class Cable extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		const match = /^([0-9]+)-([0-9]+)$/.exec(this.a.icon_state);
 		const d1 = +match[1];
@@ -228,7 +228,7 @@ Cable.update_map_instance = function (instobj) {
 };
 
 class StackCable extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Stack.on("amount_changed", this.amount_changed.bind(this));
 		this.amount_changed();

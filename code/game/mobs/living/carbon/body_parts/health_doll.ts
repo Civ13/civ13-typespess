@@ -1,7 +1,7 @@
 const { Component } = require("./../../../../../../code/game/server.js");
 
 class HealthDoll extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		for (const zone of ["head", "torso", "l_leg", "r_leg", "l_arm", "r_arm"]) {
 			this.a.overlays[zone] = { icon: "icons/ui/screen_gen/", icon_state: `${zone}6` };

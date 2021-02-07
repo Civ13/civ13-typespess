@@ -3,7 +3,7 @@ const { Component } = require("./../../../../../../code/game/server.js");
 const _ = require("underscore");
 
 class HandItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (this.siemens_coefficient instanceof Array)
 			{this.siemens_coefficient = _.sample(this.siemens_coefficient);}

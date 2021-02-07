@@ -9,7 +9,7 @@ const {
 const mob_defines = require("../../../../../defines/mob_defines.js");
 
 class LargeContainer extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.attack_hand = chain_func(

@@ -5,7 +5,7 @@ const {
 } = require("./../../../../../../../code/game/server.js");
 
 class StackTile extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.once("moved", () => {

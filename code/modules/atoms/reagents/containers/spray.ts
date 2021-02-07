@@ -13,7 +13,7 @@ const combat_defines = require("../../../../defines/combat_defines.js");
 const pass_flags = require("../../../../defines/pass_flags.js");
 
 class SprayBottle extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Item.after_attack = chain_func(
 			this.a.c.Item.after_attack,

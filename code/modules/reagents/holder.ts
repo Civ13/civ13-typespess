@@ -12,7 +12,7 @@ const reagent_types = {};
 const reagent_reactions = [];
 
 class ReagentHolder extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.reagents = new Map();
 		this.addictions = new Map();

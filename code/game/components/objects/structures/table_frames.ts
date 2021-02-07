@@ -1,4 +1,5 @@
 
+export{};
 const {
 	Component,
 	has_component,
@@ -9,7 +10,7 @@ const {
 const layers = require("../../../../defines/layers.js");
 
 class TableFrame extends Component {
-	constructor(atom, template) {
+	constructor(atom:any, template:any) {
 		super(atom, template);
 
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
@@ -19,108 +20,12 @@ class TableFrame extends Component {
 		);
 	}
 
-	attack_by(prev, item, user) {
-		if (has_component(item, "Tool")) {
-			if (item.c.Tool.can_use("Wrench", user)) {
-				item.c.Tool.used("Wrench");
-				to_chat`<span class='notice'>You start disassembling the frame.</span>`(
-					user
-				);
-				user.c.MobInventory.do_after({
-					delay: 3000 * item.c.Tool.toolspeed,
-					target: this.a,
-				}).then((success) => {
-					if (!success) {return;}
-					this.a.c.Destructible.deconstruct(true);
-				});
-				return true;
-			}
-		} else if (
-			has_component(item, "MetalSheet") &&
-	this.frame_material === "stack_rods"
-		) {
-			if (item.c.Stack.amount >= 1) {
-				to_chat`<span class='notice'>You start adding ${item} to ${this.a}...</span>`(
-					user
-				);
-				user.c.MobInventory.do_after({ delay: 2000, target: this.a }).then(
-					(success) => {
-						if (!success) {return;}
-						const table = new Atom(this.a.server, "table");
-						table.loc = this.a.loc;
-						item.c.Stack.use(1);
-						this.a.destroy();
-					}
-				);
-			} else if (item.c.Stack.amount < 1) {
-				to_chat`<span class='notice'>You need one sheet of metal to do this!</span>`(
-					user
-				);
-			}
-		} else if (
-			has_component(item, "PlasteelSheet") &&
-	this.frame_material === "stack_rods"
-		) {
-			if (item.c.Stack.amount >= 1) {
-				to_chat`<span class='notice'>You start adding ${item} to ${this.a}...</span>`(
-					user
-				);
-				user.c.MobInventory.do_after({ delay: 5000, target: this.a }).then(
-					(success) => {
-						if (!success) {return;}
-						const table = new Atom(this.a.server, "reinforced_table");
-						table.loc = this.a.loc;
-						item.c.Stack.use(1);
-						this.a.destroy();
-					}
-				);
-			} else if (item.c.Stack.amount < 1) {
-				to_chat`<span class='notice'>You need one sheet of plasteel to do this!</span>`(
-					user
-				);
-			}
-		} else if (
-			has_component(item, "WoodSheet") &&
-	this.frame_material === "wood_sheet"
-		) {
-			if (item.c.Stack.amount >= 1) {
-				to_chat`<span class='notice'>You start adding ${item} to ${this.a}...</span>`(
-					user
-				);
-				user.c.MobInventory.do_after({ delay: 2000, target: this.a }).then(
-					(success) => {
-						if (!success) {return;}
-						const table = new Atom(this.a.server, "wood_table");
-						table.loc = this.a.loc;
-						item.c.Stack.use(1);
-						this.a.destroy();
-					}
-				);
-			} else if (item.c.Stack.amount < 1) {
-				to_chat`<span class='notice'>You need one sheet of wood to do this!</span>`(
-					user
-				);
-			}
-		}
-		return prev();
-	}
-
-	deconstruct(prev) {
-		if (!this.a.loc) {return;}
-		if (!this.a.c.Destructible.no_deconstruct) {
-			const mat = new Atom(this.a.server, this.frame_material);
-			mat.c.Stack.amount = this.frame_material_amount;
-			mat.loc = this.a.base_mover.loc;
-			this.a.destroy();
-		}
-		prev();
-	}
 }
 
 TableFrame.one_per_tile = true;
 
-TableFrame.depends = ["Destructible"];
-TableFrame.loadBefore = ["Destructible"];
+TableFrame.depends = ["Destructible", "Structure"];
+TableFrame.loadBefore = ["Destructible", "Structure"];
 
 TableFrame.template = {
 	vars: {
@@ -131,6 +36,10 @@ TableFrame.template = {
 			},
 			Destructible: {
 				max_integrity: 100,
+			},
+			Structure: {
+				disassemblable: true,
+				moveable: true,
 			},
 			Tangible: {
 				anchored: true,

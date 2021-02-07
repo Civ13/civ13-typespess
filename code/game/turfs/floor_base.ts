@@ -9,7 +9,7 @@ const _ = require("underscore");
 
 // Component shared by floors and plating
 class FloorBase extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Tangible.ex_act = chain_func(
 			this.a.c.Tangible.ex_act,

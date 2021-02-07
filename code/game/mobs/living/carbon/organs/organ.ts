@@ -4,7 +4,7 @@ const {
 } = require("./../../../../../../code/game/server.js");
 
 class Organ extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.mob = null;
 	}

@@ -11,7 +11,7 @@ const layers = require("../../../../defines/layers.js");
 
 class Rack extends Component {
 	//TODO: attack_hand() and by extension play_attack_sound. Basically, you can't kick racks yet.
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 		this.a.c.Examine.examine = chain_func(
@@ -59,7 +59,7 @@ class Rack extends Component {
 }
 
 class RackParts extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 		this.a.c.Item.attack_self = this.attack_self.bind(this);

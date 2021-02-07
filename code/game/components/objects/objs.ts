@@ -8,7 +8,7 @@ const {
 const pass_flags = require("../../../defines/pass_flags.js");
 
 class Tangible extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.fingerprints = [];
 		this.fingerprints_hidden = [];
@@ -180,7 +180,7 @@ Tangible.template = {
 };
 
 class Examine extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("shift_clicked", this.shift_clicked.bind(this));
 	}

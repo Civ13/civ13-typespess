@@ -8,7 +8,7 @@ const {
 const _ = require("underscore");
 
 class BloodDecal extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -33,7 +33,7 @@ BloodDecal.template = {
 };
 
 class BloodDripsDecal extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		for (let i = 0; i < this.num_drips; i++) {
 			this.a.overlays[`drip_${i}`] = { icon_state: _.sample(this.drip_icons) };
@@ -79,7 +79,7 @@ BloodDripsDecal.template = {
 };
 
 class FootprintsDecal extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.CleanableDecal.merge_group = "footprints_" + this.type;
 		this.on("entered_dirs_changed", this.entered_dirs_changed.bind(this));

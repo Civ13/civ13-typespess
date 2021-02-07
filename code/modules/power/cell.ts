@@ -7,7 +7,7 @@ const {
 } = require("./../../../code/game/server.js");
 
 class PowerCell extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (!this.start_empty) {this.charge = this.max_charge;}
 		this.on("charge_changed", this.charge_changed.bind(this));

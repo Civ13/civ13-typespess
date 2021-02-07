@@ -4,7 +4,7 @@ const _smooth_with = Symbol("_smooth_with");
 const _enabled = Symbol("_enabled");
 
 class Smooth extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.adjacent = 0;
 		this.a.on("moved", this.rebuild_smooth.bind(this));
@@ -117,7 +117,7 @@ Smooth.template = {
 };
 
 class SmoothGroup extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("before_move", this.before_move.bind(this));
 		this.a.on("moved", this.moved.bind(this));
@@ -174,7 +174,7 @@ SmoothGroup.template = {
 
 // TG shitcode smoothing
 class TGSmooth extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Smooth.redraw_smoothing = this.redraw_smoothing.bind(this);
 	}

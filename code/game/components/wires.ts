@@ -9,7 +9,7 @@ const {
 const _ = require("underscore");
 
 class MachineWires extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.wires = [];
 		this.colors = {};

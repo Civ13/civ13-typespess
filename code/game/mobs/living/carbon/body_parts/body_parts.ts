@@ -12,7 +12,7 @@ const combat_defines = require("../../../../../defines/combat_defines.js");
 const { random_zone, parse_zone } = require("./helpers.js");
 
 class MobBodyParts extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.limbs = Object.create({
 			get eyes() {
@@ -224,7 +224,7 @@ MobBodyParts.depends = ["LivingMob"];
 MobBodyParts.loadBefore = ["LivingMob", "CarbonMob", "MobInventory"];
 
 class BodyPart extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.owner = null;
 		this.embedded_objects = new Set();

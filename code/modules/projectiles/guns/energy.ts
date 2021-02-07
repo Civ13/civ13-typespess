@@ -8,7 +8,7 @@ const {
 } = require("./../../../../code/game/server.js");
 
 class EnergyGun extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (this.cell_type)
 			{this.cell = new Atom(this.a.server, this.cell_type, this.a);}

@@ -10,7 +10,7 @@ const combat_defines = require("../../defines/combat_defines.js");
 const sounds = require("../../defines/sounds.js");
 
 class Gun extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.chambered = null;
 		this.firing_burst = null;

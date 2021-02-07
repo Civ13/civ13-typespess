@@ -7,7 +7,7 @@ const _area = Symbol("_area");
 const _area_brushes = Symbol("_area_brushes");
 
 class Area extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.area_brushes = new Set();
 		this.touching = new Set();
@@ -50,7 +50,7 @@ Area.update_map_instance = function (instobj) {
 };
 
 class AreaBrush extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this[_area] = null;
 		this.a.once("map_instance_done", (map) => {

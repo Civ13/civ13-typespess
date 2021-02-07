@@ -11,7 +11,7 @@ const _ = require("underscore");
 const _is_on = Symbol("_is_on");
 
 class Tool extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 
@@ -48,7 +48,7 @@ Tool.template = {
 };
 
 class Wrench extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -78,7 +78,7 @@ Wrench.template = {
 };
 
 class Screwdriver extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -114,7 +114,7 @@ Screwdriver.template = {
 };
 
 class Wirecutters extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (this.random_color)
 			{this.a.icon_state = `cutters_${_.sample(["yellow", "red"])}`;}
@@ -151,7 +151,7 @@ Wirecutters.template = {
 };
 
 class Axe extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -194,7 +194,7 @@ Axe.template = {
 };
 
 class Crowbar extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -233,7 +233,7 @@ Crowbar.template = {
 };
 
 class WeldingTool extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.c.ReagentHolder.on("removed", this.update_fuel.bind(this));

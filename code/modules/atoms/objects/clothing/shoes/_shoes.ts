@@ -9,7 +9,7 @@ const BLOOD_LOSS_PER_STEP = 5;
 const BLOOD_LOSS_IN_SPREAD = 15;
 
 class FootItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.footprint_amounts = {};
 		this.mob_crossed = this.mob_crossed.bind(this);

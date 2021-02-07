@@ -22,7 +22,7 @@ const status_effects = {};
 
 class LivingMob extends Component {
 	// eslint-disable-next-line max-statements
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.damages = {};

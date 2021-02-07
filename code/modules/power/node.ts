@@ -9,7 +9,7 @@ const {
 // pun was not intended
 
 class PowerNode extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		make_watched_property(this, "powernet");
 		this.cable = null;

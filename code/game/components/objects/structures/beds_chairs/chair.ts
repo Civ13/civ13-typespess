@@ -7,7 +7,7 @@ const {
 const layers = require("../../../../../defines/layers.js");
 
 class Chair extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Destructible.deconstruct = chain_func(
 			this.a.c.Destructible.deconstruct,

@@ -5,7 +5,7 @@ const { Component, has_component } = require("./../../../../code/game/server.js"
 const _pulling = Symbol("_pulling");
 
 class Puller extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this[_pulling] = null;
 		this.a.on("before_move", this.before_move.bind(this));

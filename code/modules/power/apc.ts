@@ -12,7 +12,7 @@ const { _areas } = require("../../game/area/area.js").symbols;
 const channels = ["lighting", "equipment", "environment"];
 
 class Apc extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.channel_on = {};

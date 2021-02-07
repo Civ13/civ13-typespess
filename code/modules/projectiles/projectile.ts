@@ -15,7 +15,7 @@ const {
 } = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class Projectile extends Component.Networked {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.add_networked_var("angle");
 		this.add_networked_var("speed");

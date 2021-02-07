@@ -7,7 +7,7 @@ const {
 } = require("./../../../code/game/server.js");
 
 class Climbable extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.climbers = [];
 		this.a.on("mouse_dropped_by", this.mouse_dropped_by.bind(this));

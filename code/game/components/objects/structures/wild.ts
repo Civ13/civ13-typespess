@@ -12,7 +12,7 @@ const {
 } = require("./../../../../../code/game/server.js");
 
 class Wild extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));

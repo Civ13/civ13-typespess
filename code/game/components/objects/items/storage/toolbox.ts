@@ -4,7 +4,7 @@ const _ = require("underscore");
 const { cable_colors } = require("../../../../../modules/power/cable.js");
 
 class Toolbox extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (this.has_latches) {
 			let latches = "single_latch";

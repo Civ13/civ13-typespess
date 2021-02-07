@@ -11,7 +11,7 @@ const combat_defines = require("../../../defines/combat_defines.js");
 const pass_flags = require("../../../defines/pass_flags.js");
 
 class Item extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_hand = chain_func(
 			this.a.attack_hand,

@@ -8,7 +8,7 @@ const { skin_tones } = require("./helpers.js");
 const sprite_accessories = require("../human/sprite_accessories.js");
 
 class BodyPartSkinTone extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.BodyPart.get_color = this.get_color.bind(this);
 		this.a.c.BodyPart.get_main_overlay = chain_func(
@@ -54,7 +54,7 @@ BodyPartSkinTone.template = {
 };
 
 class BodyPartHumanHair extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.BodyPart.apply_prefs = chain_func(
 			this.a.c.BodyPart.apply_prefs,

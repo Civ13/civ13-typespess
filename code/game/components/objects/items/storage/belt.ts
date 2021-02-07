@@ -7,7 +7,7 @@ const {
 const _ = require("underscore");
 
 class Belt extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("entered", this.entered.bind(this));
 		this.a.on("exited", this.exited.bind(this));

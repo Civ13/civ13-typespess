@@ -7,7 +7,7 @@ const _visible_tiles = Symbol("_visible_tiles");
  */
 // This is used for seeing and hearing text. Relevant to
 class Hearer extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this[_visible_tiles] = new Set();
 		this.update_visible_tiles();

@@ -16,7 +16,7 @@ const sounds = require("../../../../defines/sounds.js");
 const _lying_counter = Symbol("_lying_counter");
 
 class CarbonMob extends Component.Networked {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.on("moved", this.moved.bind(this));

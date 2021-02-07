@@ -18,7 +18,7 @@ const _old_layers = Symbol("_old_layers");
 const _close_button = Symbol("_close_button");
 
 class StorageItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("entered", this.entered.bind(this));
 		this.a.on("exited", this.exited.bind(this));

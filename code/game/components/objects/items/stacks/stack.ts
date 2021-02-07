@@ -46,7 +46,7 @@ const traverseDir = (dir) =>
 	);
 
 class Stack extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.on("amount_changed", this.amount_changed.bind(this));
 		this.user = null;

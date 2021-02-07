@@ -7,7 +7,7 @@ const {
 const layers = require("../../../../defines/layers.js");
 
 class CleanableDecal extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("crossed", this.crossed.bind(this));
 	}

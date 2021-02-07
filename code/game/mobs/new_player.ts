@@ -8,7 +8,7 @@ const _ = require("underscore");
 const CharacterPreferences = require("../../modules/client/character.js");
 
 class NewPlayer extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Mob.on("client_changed", this.client_changed.bind(this));
 

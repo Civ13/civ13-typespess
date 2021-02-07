@@ -7,7 +7,7 @@ const {
 } = require("./../../../code/game/server.js");
 
 class ApcPowered extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("start_touch_area", this.start_touch_area.bind(this));
 		this.a.on("end_touch_area", this.end_touch_area.bind(this));

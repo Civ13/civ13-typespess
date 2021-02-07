@@ -2,7 +2,7 @@ export{};
 const { Component } = require("../client/index.js");
 
 class Tooltip extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("mouseover", this.mouseover.bind(this));
 		this.a.on("mouseout", this.mouseout.bind(this));

@@ -11,7 +11,7 @@ const {
 const SparkSystem = require("../effect_system/sparks.js");
 
 class LightFixture extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.tube = new Atom(this.a.server, this.default_tube, this.a);
 		this.a.c.ApcPowered.on("powered_changed", this.update_on.bind(this));
@@ -178,7 +178,7 @@ LightFixture.template = {
 };
 
 class LightTube extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.on("broken_changed", this.update_broken.bind(this));
 		this.on("burned_changed", this.update_broken.bind(this));

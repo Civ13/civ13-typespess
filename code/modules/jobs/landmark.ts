@@ -1,7 +1,7 @@
 const { Component } = require("./../../../code/game/server.js");
 
 class JobLandmark extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		const job_landmarks = this.a.server.job_controller.job_landmarks;
 		if (!job_landmarks[this.a.name]) {job_landmarks[this.a.name] = [];}

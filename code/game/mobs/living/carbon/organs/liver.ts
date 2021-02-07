@@ -8,7 +8,7 @@ const {
 const _ = require("underscore");
 
 class OrganLiver extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Organ.do_life = chain_func(
 			this.a.c.Organ.do_life,

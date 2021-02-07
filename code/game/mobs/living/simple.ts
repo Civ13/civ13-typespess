@@ -11,7 +11,7 @@ const Typespess = require("./../../../../code/game/server.js");
 const _ = require("underscore");
 const randomDir = [Typespess.NORTH, Typespess.SOUTH, Typespess.EAST, Typespess.WEST];
 class SimpleMob extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.owner = this.a.c.Mob;
@@ -107,7 +107,7 @@ class SimpleMob extends Component {
 }
 
 class mobAI extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.behaviour = "scared";
 		this.behaviour_timeout = null;

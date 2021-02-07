@@ -2,7 +2,7 @@ export{};
 const { Component, chain_func } = require("../client/index.js");
 
 class SplashScreen extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.fading = false;
 		this.fade_start = 0;

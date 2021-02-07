@@ -6,7 +6,7 @@ const { Component } = require("./../../../../../../code/game/server.js");
 //TODO: Update the suit_storage_whitelist once internals are added
 
 class SuitItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }

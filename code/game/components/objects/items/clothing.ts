@@ -1,7 +1,7 @@
 const { Component } = require("./../../../../../code/game/server.js");
 
 class WearableItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -47,7 +47,7 @@ WearableItem.depends = ["Item"];
 WearableItem.loadBefore = ["Item"];
 
 class BackItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -67,7 +67,7 @@ BackItem.depends = ["WearableItem"];
 BackItem.loadBefore = ["WearableItem"];
 
 class BeltItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -87,7 +87,7 @@ BeltItem.depends = ["WearableItem"];
 BeltItem.loadBefore = ["WearableItem"];
 
 class EarItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -107,7 +107,7 @@ EarItem.depends = ["WearableItem"];
 EarItem.loadBefore = ["WearableItem"];
 
 class EyeItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -127,7 +127,7 @@ EyeItem.depends = ["WearableItem"];
 EyeItem.loadBefore = ["WearableItem"];
 
 class NeckItem extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }

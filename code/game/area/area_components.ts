@@ -5,7 +5,7 @@ const {
 } = require("./../../../code/game/server.js");
 
 class AreaAmbience extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.c.Area.on("start_touch", this.start_touch.bind(this));
@@ -55,7 +55,7 @@ AreaAmbience.depends = ["Area"];
 AreaAmbience.loadBefore = ["Area"];
 
 class AreaArrivals extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.server.job_controller.arrivals_area = this.a;
 		this.chairs = [];
@@ -80,7 +80,7 @@ AreaArrivals.depends = ["Area"];
 AreaArrivals.loadBefore = ["Area"];
 
 class AreaPower extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.apc = null;
 	}

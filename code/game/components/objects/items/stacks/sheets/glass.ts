@@ -9,7 +9,7 @@ const _ = require("underscore");
 const combat_defines = require("../../../../../../defines/combat_defines.js");
 
 class GlassSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 	}
@@ -72,7 +72,7 @@ GlassSheet.template = {
 };
 
 class RGlassSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -125,7 +125,7 @@ RGlassSheet.template = {
 };
 
 class GlassShard extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.icon_state = _.sample(["small", "medium", "large"]);

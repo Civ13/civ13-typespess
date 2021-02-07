@@ -1,7 +1,7 @@
 const { Component } = require("./../../../../../../code/game/server.js");
 
 class Multitool extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.buffer = null; // Simple machine buffer for device linkage

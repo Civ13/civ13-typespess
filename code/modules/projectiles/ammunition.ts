@@ -9,7 +9,7 @@ const {
 const _ = require("underscore");
 
 class AmmoCasing extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 		this.a.dir = _.sample([1, 2, 4, 8, 5, 6, 9, 10]);

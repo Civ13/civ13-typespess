@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	Atom,
@@ -11,10 +11,10 @@ const layers = require("../../../../defines/layers.js");
 const sounds = require("../../../../defines/sounds.js");
 const pass_flags = require("../../../../defines/pass_flags.js");
 
-const _state = Symbol("_state");
+const _state: any = Symbol("_state");
 
 class Window extends Component {
-	constructor(atom, template) {
+	constructor(atom:any, template:any) {
 		super(atom, template);
 
 		this.a.c.Destructible.play_attack_sound = this.play_attack_sound.bind(this);
@@ -26,12 +26,12 @@ class Window extends Component {
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 	}
 
-	take_damage(prev) {
+	take_damage(prev: any) {
 		prev();
 		this.update_damage_overlay();
 	}
 
-	play_attack_sound(damage_amount, damage_type = "brute") {
+	play_attack_sound(damage_amount: number, damage_type = "brute") {
 		if (damage_type === "brute") {
 			if (damage_amount)
 				{new Sound(this.a.server, {
@@ -67,100 +67,6 @@ class Window extends Component {
 				icon_state: `damage${ratio}`,
 				overlay_layer: -1,
 			};}
-	}
-
-	attack_by(prev, item, user) {
-		if (has_component(item, "Tool")) {
-			if (item.c.Tool.can_use("WeldingTool")) {
-				if (
-					this.a.c.Destructible.obj_integrity >=
-		this.a.c.Destructible.max_integrity
-				) {
-					to_chat`<span class='warning'>The ${this.a} is already in good condition!</span>`(
-						user
-					);
-					return true;
-				}
-				item.c.Tool.used("WeldingTool");
-				to_chat`<span class='notice'>You begin repairing the ${this.a}</span>`(
-					user
-				);
-				user.c.MobInventory.do_after({
-					delay: 4000 * item.c.Tool.toolspeed,
-					target: this.a,
-				}).then((success) => {
-					if (!success) {return;}
-					new Sound(this.a.server, {
-						path: "sound/items/Welder2.ogg",
-						volume: 0.5,
-						vary: true,
-					}).emit_from(this.a);
-					this.a.c.Destructible.obj_integrity = this.a.c.Destructible.max_integrity;
-					this.update_damage_overlay();
-					to_chat`<span class='notice'>You repair the ${this.a}</span>`(user);
-				});
-				return true;
-			}
-			if (this.state === "screwed_to_floor") {
-				if (item.c.Tool.can_use("Screwdriver", user)) {
-					item.c.Tool.used("Screwdriver");
-					to_chat`<span class='notice'>You begin to unscrew the window from the floor...</span>`(
-						user
-					);
-					user.c.MobInventory.do_after({
-						delay: this.decon_speed * item.c.Tool.toolspeed,
-						target: this.a,
-					}).then((success) => {
-						if (!success || this.state !== "screwed_to_floor") {return;}
-						this.state = "unscrewed_from_floor";
-						to_chat`<span class='notice'>You unfasten the window from the floor...</span>`(
-							user
-						);
-					});
-					return true;
-				}
-			} else if (this.state === "unscrewed_from_floor") {
-				if (item.c.Tool.can_use("Screwdriver", user)) {
-					item.c.Tool.used("Screwdriver");
-					to_chat`<span class='notice'>You begin to screw the window to the floor...</span>`(
-						user
-					);
-					user.c.MobInventory.do_after({
-						delay: this.decon_speed * item.c.Tool.toolspeed,
-						target: this.a,
-					}).then((success) => {
-						if (!success || this.state !== "unscrewed_from_floor") {return;}
-						this.state = "screwed_to_floor";
-						to_chat`<span class='notice'>You fasten the window to the floor...</span>`(
-							user
-						);
-					});
-					return true;
-				} else if (item.c.Tool.can_use("Wrench", user)) {
-					item.c.Tool.used("Wrench");
-					to_chat`<span class='notice'>You begin to disassemble the ${this.a}...</span>`(
-						user
-					);
-					user.c.MobInventory.do_after({
-						delay: this.decon_speed * item.c.Tool.toolspeed,
-						target: this.a,
-					}).then((success) => {
-						if (!success || this.state !== "unscrewed_from_floor") {return;}
-						new Sound(this.a.server, {
-							path: "sound/items/Deconstruct.ogg",
-							volume: 0.5,
-							vary: true,
-						}).emit_from(this.a);
-						to_chat`<span class='notice'>You successfully disassemble the ${this.a}.</span>`(
-							user
-						);
-						this.a.c.Destructible.deconstruct(true);
-					});
-					return true;
-				}
-			}
-		}
-		return prev();
 	}
 
 	make_debris() {
@@ -212,8 +118,8 @@ class Window extends Component {
 
 Window.one_per_tile = true;
 
-Window.depends = ["Destructible"];
-Window.loadBefore = ["Destructible"];
+Window.depends = ["Destructible", "Structure"];
+Window.loadBefore = ["Destructible", "Structure"];
 
 Window.template = {
 	vars: {
@@ -259,7 +165,7 @@ Window.template = {
 };
 
 class ReinforcedWindow extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 		this.a.c.Window.make_debris = chain_func(
@@ -268,7 +174,7 @@ class ReinforcedWindow extends Component {
 		);
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "Tool")) {
 			if (this.a.c.Window.state === "screwed_to_floor") {
 				if (item.c.Tool.can_use("Crowbar", user)) {
@@ -279,7 +185,7 @@ class ReinforcedWindow extends Component {
 					user.c.MobInventory.do_after({
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
-					}).then((success) => {
+					}).then((success: any) => {
 						if (!success || this.a.c.Window.state !== "screwed_to_floor") {return;}
 						this.a.c.Window.state = "in_frame";
 						to_chat`<span class='notice'>You pry the window into the frame.</span>`(
@@ -297,7 +203,7 @@ class ReinforcedWindow extends Component {
 					user.c.MobInventory.do_after({
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
-					}).then((success) => {
+					}).then((success: any) => {
 						if (!success || this.a.c.Window.state !== "in_frame") {return;}
 						this.a.c.Window.state = "screwed_to_floor";
 						to_chat`<span class='notice'>You pry the window out of the frame.</span>`(
@@ -313,7 +219,7 @@ class ReinforcedWindow extends Component {
 					user.c.MobInventory.do_after({
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
-					}).then((success) => {
+					}).then((success: any) => {
 						if (!success || this.a.c.Window.state !== "in_frame") {return;}
 						this.a.c.Window.state = "screwed_to_frame";
 						to_chat`<span class='notice'>You fasten the window to the frame.</span>`(
@@ -331,7 +237,7 @@ class ReinforcedWindow extends Component {
 					user.c.MobInventory.do_after({
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
-					}).then((success) => {
+					}).then((success: any) => {
 						if (!success || this.a.c.Window.state !== "screwed_to_frame") {return;}
 						this.a.c.Window.state = "in_frame";
 						to_chat`<span class='notice'>You unfasten the window from the frame.</span>`(
@@ -345,7 +251,7 @@ class ReinforcedWindow extends Component {
 		return prev();
 	}
 
-	make_debris(prev) {
+	make_debris(prev: any) {
 		prev();
 		const rod = new Atom(this.a.server, "stack_rods");
 		rod.c.Stack.amount = this.a.c.Window.glass_amount;
@@ -378,6 +284,10 @@ ReinforcedWindow.template = {
 				},
 				max_integrity: 50,
 			},
+			Structure: {
+				disassemblable: true,
+				moveable: true,
+			},
 			Examine: {
 				desc: "A window that is reinforced with metal rods.",
 			},
@@ -389,7 +299,7 @@ ReinforcedWindow.template = {
 };
 
 class DirectionalWindow extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.can_crosser_move_within = chain_func(
 			this.a.can_crosser_move_within,
@@ -405,7 +315,7 @@ class DirectionalWindow extends Component {
 		);
 	}
 
-	can_be_crossed(prev, crosser, dx, dy) {
+	can_be_crossed(prev: any, crosser: any, dx: any, dy: any) {
 		if (dx < 0 && this.a.dir & 4) {return prev();}
 		if (dx > 0 && this.a.dir & 8) {return prev();}
 		if (dy < 0 && this.a.dir & 1) {return prev();}
@@ -413,7 +323,7 @@ class DirectionalWindow extends Component {
 		return true;
 	}
 
-	can_crosser_move_within(prev, atom, dx, dy) {
+	can_crosser_move_within(prev: any, atom: any, dx: any, dy: any) {
 		if (this.a.let_pass_flags & atom.pass_flags) {return prev();}
 		if (atom.density < 0 || this.a.density <= 0) {return prev();}
 		if (dx > 0 && this.a.dir & 4) {

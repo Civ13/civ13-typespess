@@ -22,7 +22,7 @@ const _nohold_counter = Symbol("_nohold_counter");
 const _throw_mode = Symbol("_throw_mode");
 
 class MobInventory extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.c.Mob.on("keydown", this.keydown.bind(this));
@@ -1244,7 +1244,7 @@ MobInventory.template = {
 };
 
 class ProgressBar extends Component.Networked {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.add_networked_var("time_begin");
 		this.add_networked_var("delay");

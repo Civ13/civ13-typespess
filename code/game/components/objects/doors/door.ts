@@ -11,7 +11,7 @@ const pass_flags = require("../../../../defines/pass_flags.js");
 const _locked = Symbol("_locked");
 
 class Door extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.seconds_electrified = 0;

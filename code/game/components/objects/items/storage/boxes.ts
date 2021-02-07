@@ -3,7 +3,7 @@ const { Component, Atom } = require("./../../../../../../code/game/server.js");
 //TODO: Folding up boxes
 
 class Box extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (this.illustration) {
 			this.a.overlays.illustration = this.illustration;

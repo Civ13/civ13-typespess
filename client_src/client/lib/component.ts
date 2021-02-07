@@ -1,7 +1,7 @@
 const EventEmitter = require("events");
 
 class Component extends EventEmitter {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super();
 		if (template) {
 			Object.assign(this, template);

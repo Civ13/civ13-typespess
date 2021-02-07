@@ -13,7 +13,7 @@ const _beaker = Symbol("_beaker");
 const _dispense_amount = Symbol("_dispense_amount");
 
 class ChemDispenser extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 		this.a.attack_hand = chain_func(

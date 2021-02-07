@@ -6,7 +6,7 @@ const {
 } = require("./../../code/game/server.js");
 
 class MobHud extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.alerts = {};
 		this.actions = new Set();
@@ -137,7 +137,7 @@ class MobHud extends Component {
 MobHud.depends = ["Mob"];
 
 class Tooltip extends Component.Networked {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.add_networked_var("desc");
 		this.add_networked_var("theme");
@@ -156,7 +156,7 @@ Tooltip.template = {
 };
 
 class Alert extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("clicked", this.clicked.bind(this));
 		this.mob_viewer = null;
@@ -190,7 +190,7 @@ Alert.depends = ["Tooltip"];
 Alert.loadBefore = ["Tooltip"];
 
 class GridDisplay extends Component.Networked {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.add_networked_var("width");
 		this.add_networked_var("height");

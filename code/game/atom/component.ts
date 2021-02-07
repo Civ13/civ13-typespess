@@ -16,7 +16,7 @@ class Component extends EventEmitter {
   * @param {Typespess.Atom} atom
   * @param {template} template
   */
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super();
 		Object.defineProperty(this, "atom", {
 			enumerable: false,
@@ -99,7 +99,7 @@ class Component extends EventEmitter {
  * @alias Typespess.Component.Networked
  */
 class NetworkedComponent extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this[_networked_vars] = {};
 	}

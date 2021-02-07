@@ -41,7 +41,7 @@ let id_counter = 0;
  * @extends Typespess.Component
  */
 class Eye extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this[_observers] = [];
 
@@ -327,7 +327,7 @@ Eye.loadBefore = ["Hearer"];
  * @extends Typespess.Component
  */
 class Mob extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this[_client] = void 0;

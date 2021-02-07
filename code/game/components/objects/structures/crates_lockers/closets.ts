@@ -7,7 +7,7 @@ const {
 const layers = require("../../../../../defines/layers.js");
 
 class Closet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.LargeContainer.open = chain_func(
 			this.a.c.LargeContainer.open,

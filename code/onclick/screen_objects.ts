@@ -1,7 +1,7 @@
 const { Component } = require("./../../code/game/server.js");
 
 class ZoneSel extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("clicked", this.clicked.bind(this));
 	}

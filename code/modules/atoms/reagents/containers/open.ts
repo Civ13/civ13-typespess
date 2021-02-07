@@ -11,7 +11,7 @@ const {
 
 // Reagent containers where you can pour from one to another.
 class OpenReagentContainer extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.Item.attack = this.attack.bind(this);
 		this.a.c.Tangible.on("throw_finished", () => {
@@ -98,7 +98,7 @@ OpenReagentContainer.template = {
 };
 
 class ReagentReceiver extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 	}
@@ -145,7 +145,7 @@ ReagentReceiver.template = {
 };
 
 class GlassBeaker extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.c.ReagentHolder.on("added", this.update_filling.bind(this));
 		this.a.c.ReagentHolder.on("removed", this.update_filling.bind(this));

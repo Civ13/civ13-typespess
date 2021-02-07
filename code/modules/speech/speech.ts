@@ -8,7 +8,7 @@ const {
 } = require("./../../../code/game/server.js");
 
 class SpeechEmitter extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (has_component(this.a, "Mob")) {
 			this.a.c.Mob.on("message", (obj) => {
@@ -114,7 +114,7 @@ const freqtospan = {
 };
 
 class SpeechHearer extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 	hear_message(message, emitter) {

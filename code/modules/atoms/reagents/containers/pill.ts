@@ -7,7 +7,7 @@ const {
 const _ = require("underscore");
 
 class Pill extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (!this.a.icon_state) {this.a.icon_state = `pill${_.random(1, 20)}`;}
 		this.a.c.Item.attack = this.attack.bind(this);

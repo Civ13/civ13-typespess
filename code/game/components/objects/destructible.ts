@@ -10,7 +10,7 @@ const combat_defines = require("../../../defines/combat_defines.js");
 const _ = require("underscore");
 
 class Destructible extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (typeof this.obj_integrity === "undefined") {this.obj_integrity = this.max_integrity;}
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));

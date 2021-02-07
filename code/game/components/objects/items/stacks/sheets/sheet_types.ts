@@ -1,7 +1,8 @@
+export{};
 const { Component } = require("./../../../../../../../code/game/server.js");
 
 class MetalSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -45,7 +46,7 @@ MetalSheet.template = {
 };
 
 class WoodSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -89,7 +90,7 @@ WoodSheet.template = {
 };
 
 class StrawSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -129,7 +130,7 @@ StrawSheet.template = {
 	},
 };
 class ClothSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -173,7 +174,7 @@ ClothSheet.template = {
 };
 
 class CardboardSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -218,7 +219,7 @@ CardboardSheet.template = {
 };
 
 class BoneSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -261,7 +262,7 @@ BoneSheet.template = {
 };
 
 class PlasticSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }
@@ -304,7 +305,7 @@ PlasticSheet.template = {
 };
 
 class PaperframeSheet extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
 }

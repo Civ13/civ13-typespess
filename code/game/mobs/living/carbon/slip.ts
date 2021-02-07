@@ -4,7 +4,7 @@ const {
 } = require("./../../../../../code/game/server.js");
 
 class Slippery extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.on("crossed_by", (mob) => {
 			this.slip(mob);

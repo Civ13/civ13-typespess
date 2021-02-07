@@ -4,7 +4,7 @@ const Matrix = require("./matrix.js");
 const EventEmitter = require("events");
 
 class Atom extends EventEmitter {
-	constructor(client: { eyes: { [x: string]: any; }; components: { [x: string]: any; }; }, instobj = {}) {
+	constructor(client: any, instobj: Record<string,any>) {
 		super();
 		if (!Object.prototype.hasOwnProperty.call(instobj,"x")) {instobj.x = 0;}
 		if (!Object.prototype.hasOwnProperty.call(instobj,"y")) {instobj.y = 0;}
@@ -65,7 +65,8 @@ class Atom extends EventEmitter {
 		}
 		this.client.atoms.splice(this.client.atoms.indexOf(this), 1);
 		delete this.client.atoms_by_netid[this.network_id];
-		for (const component of Object.values(this.components)) {
+		for (const tcomponent of Object.values(this.components)) {
+			const component: any = tcomponent;
 			component.destroy();
 		}
 	}
@@ -143,7 +144,7 @@ class Atom extends EventEmitter {
 		return { dispx, dispy };
 	}
 
-	get_transform() {
+	get_transform(timestamp: any) {
 		return Matrix.identity;
 	}
 
@@ -183,7 +184,7 @@ class Atom extends EventEmitter {
 		}
 	}
 
-	get_bounds() {
+	get_bounds(timestamp: any) {
 		let bounds = this.main_icon_renderer.get_bounds();
 		for (const overlay of this.overlay_renderers_list) {
 			const overlay_bounds = overlay.get_bounds();
@@ -293,7 +294,11 @@ class Atom extends EventEmitter {
 }
 
 class Glide {
-	constructor(object: { x: number; y: number; glide: Glide; }, params: { lasttime: number; oldx: number; oldy: number; }) {
+	object: any;
+	lasttime: any;
+	x: number;
+	y: number;
+	constructor(object: any, params: any) {
 		this.object = object;
 		this.lasttime = params.lasttime || performance.now();
 		this.x = 0;
