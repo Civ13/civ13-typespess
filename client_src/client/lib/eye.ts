@@ -3,7 +3,7 @@ const Atom = require("./atom.js");
 const EventEmitter = require("events");
 
 class Eye extends EventEmitter {
-	constructor(client, id: string | number) {
+	constructor(client: any, id: string | number) {
 		super();
 		this.client = client;
 		this.id = id;
@@ -244,7 +244,7 @@ class Plane {
 	last_originy: any;
 	static World: typeof WorldPlane;
 	static Lighting: typeof LightingPlane;
-	constructor(eye, id: any) {
+	constructor(eye: any, id: any) {
 		this.z_index = 0;
 		this.canvas = document.createElement("canvas");
 		this.draw_canvas = document.createElement("canvas");
