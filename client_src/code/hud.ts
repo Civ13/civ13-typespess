@@ -1,8 +1,8 @@
 export{};
-const { Component, chain_func } = require("../client/index.ts");
+const { Component, chain_func } = require("../client/index.js");
 
 class GridDisplay extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.get_bounds = chain_func(
 			this.a.get_bounds,

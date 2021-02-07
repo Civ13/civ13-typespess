@@ -1,4 +1,4 @@
-const { Atom, dropdown } = require("../../client/index.ts");
+const { Atom, dropdown } = require("../../client/index.js");
 
 const job_pref_settings = ["NEVER", "Low", "Medium", "High"];
 const job_pref_colors = ["red", "orange", "green", "slateblue"];

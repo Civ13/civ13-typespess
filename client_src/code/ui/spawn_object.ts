@@ -1,6 +1,9 @@
-const { Atom } = require("../../client/index.ts");
+export{};
+const { Atom } = require("../../client/index.js");
 
 class SpawnObjectPanel {
+	panel: any;
+	templates: any;
 	constructor(panel) {
 		this.panel = panel;
 		this.panel.on("message", this.message_handler.bind(this));

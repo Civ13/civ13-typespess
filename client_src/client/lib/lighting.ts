@@ -1,7 +1,8 @@
-const { Component } = require("../index.ts");
+export{};
+const { Component } = require("../index.js");
 
 class LightingObject extends Component {
-	constructor(atom, template) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.atom.draw = this.draw.bind(this);
 		this.atom.get_bounds = this.get_bounds.bind(this);
@@ -18,7 +19,7 @@ class LightingObject extends Component {
 		this.soft_shadow_radius = 1 / 8;
 	}
 
-	on_render_tick(timestamp) {
+	on_render_tick(timestamp: any) {
 		const disp = this.a.get_displacement(timestamp);
 		if (this.color !== this.last_color) {
 			this.dirty = true;
@@ -51,7 +52,7 @@ class LightingObject extends Component {
 		};
 	}
 
-	draw(ctx, timestamp) {
+	draw(ctx: { globalCompositeOperation: string; drawImage: (arg0: any, arg1: number, arg2: number) => void; }, timestamp: any) {
 		if (
 			this.atom.screen_loc_x != null || this.radius !== +this.radius || !this.enabled
 		)
@@ -105,7 +106,7 @@ class LightingObject extends Component {
 				const wall_offset_y = Math.round(16 + point_y * 32);
 				const walls = [];
 				for (const shadow of this.shadows_list) {
-					const wall = {};
+					const wall: Record<string,any> = {};
 					wall.x1 = shadow.x1 * 32 + wall_offset_x;
 					wall.y1 = -shadow.y2 * 32 + wall_offset_y;
 					wall.x2 = shadow.x2 * 32 + wall_offset_x;
@@ -185,7 +186,7 @@ class LightingObject extends Component {
 						[y1, y2] = [-y2, -y1];
 					}
 					if (x1 <= 0 && x2 >= 0) {
-						flip = sx != sy;
+						flip = sx !== sy;
 						path.push([cx + x1 * sx, cy + (y1 + wall.base_height) * sy]);
 						path.push([cx + x1 * sx, cy + y1 * sy]);
 						let scalar = (this.radius * 32 + 48) / y1;

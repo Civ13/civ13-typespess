@@ -1,9 +1,9 @@
 export{};
-const Atom = require("./atom.ts");
+const Atom = require("./atom.js");
 const EventEmitter = require("events");
 
 class Eye extends EventEmitter {
-	constructor(client, id: string | number) {
+	constructor(client: any, id: string | number) {
 		super();
 		this.client = client;
 		this.id = id;
@@ -144,15 +144,15 @@ class Eye extends EventEmitter {
 		};
 	}
 
-	handle_mousedown(e: { preventDefault: () => void; button: any; }) {
+	handle_mousedown(e: any) {
 		e.preventDefault();
-		const start_meta = this.get_mouse_target(e);
+		const start_meta: any = this.get_mouse_target(e);
 		const start_time = performance.now();
-		const mouseup = (e2: { button: any; }) => {
+		const mouseup = (e2: any) => {
 			if (e2.button !== e.button) {return;}
 			document.removeEventListener("mouseup", mouseup);
-			const end_time = performance.now();
-			const end_meta = this.get_mouse_target(e2);
+			const end_time: any = performance.now();
+			const end_meta: any = this.get_mouse_target(e2);
 			if (end_time - start_time < 200 || end_meta.atom === start_meta.atom) {
 				if (this.client.connection)
 					{this.client.connection.send(
@@ -244,7 +244,7 @@ class Plane {
 	last_originy: any;
 	static World: typeof WorldPlane;
 	static Lighting: typeof LightingPlane;
-	constructor(eye, id: any) {
+	constructor(eye: any, id: any) {
 		this.z_index = 0;
 		this.canvas = document.createElement("canvas");
 		this.draw_canvas = document.createElement("canvas");
@@ -260,7 +260,7 @@ class Plane {
 	}
 
 	draw(eye_ctx: any, timestamp: any) {
-		this.size_canvases(timestamp);
+		this.size_canvases();
 		this.draw_objects(timestamp);
 		this.composite_plane(eye_ctx, timestamp);
 	}
@@ -426,7 +426,8 @@ class Plane {
 			}
 		}
 
-		for (const atom of this.atoms) {
+		for (const natom of this.atoms) {
+			let atom: any = natom;
 			let add_to_tiles = false;
 			if (this.last_draw.has(atom)) {
 				if (!this.dirty_atoms.has(atom)) {continue;}
@@ -471,7 +472,8 @@ class Plane {
 		mctx.clearRect(0, 0, this.mask_canvas.width, this.mask_canvas.height);
 
 		mctx.fillStyle = "#ffffff";
-		for (const tile of dirty_tiles) {
+		for (const ntile of dirty_tiles) {
+			const tile: any = ntile;
 			const [x, y] = JSON.parse(tile);
 			mctx.fillRect(
 				(x - originx) * 32,
@@ -481,8 +483,9 @@ class Plane {
 			);
 		}
 
-		for (const atom of [...this.atoms].sort(Atom.atom_comparator)) {
-			if (!atom) {continue;}
+		for (const natom of [...this.atoms].sort(Atom.atom_comparator)) {
+			if (!natom) {continue;}
+			let atom: any = natom;
 			const bounds = atom.get_transformed_bounds(timestamp);
 			if (!bounds) {continue;}
 			let { dispx, dispy } = atom.get_displacement(timestamp);
@@ -543,7 +546,7 @@ class Plane {
 		return [0, 0];
 	}
 
-	calculate_composite_offset() {
+	calculate_composite_offset(timestamp: any) {
 		return [0, 0];
 	}
 

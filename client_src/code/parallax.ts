@@ -1,5 +1,5 @@
 export{};
-const { Atom, chain_func, Plane } = require("../client/index.ts");
+const { Atom, chain_func, Plane } = require("../client/index.js");
 
 module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 	constructor(eye, id) {

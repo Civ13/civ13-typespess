@@ -1,9 +1,10 @@
-const IconRenderer = require("./icon_renderer.ts");
-const Matrix = require("./matrix.ts");
+export{};
+const IconRenderer = require("./icon_renderer.js");
+const Matrix = require("./matrix.js");
 const EventEmitter = require("events");
 
 class Atom extends EventEmitter {
-	constructor(client, instobj = {}) {
+	constructor(client: any, instobj: Record<string,any>) {
 		super();
 		if (!Object.prototype.hasOwnProperty.call(instobj,"x")) {instobj.x = 0;}
 		if (!Object.prototype.hasOwnProperty.call(instobj,"y")) {instobj.y = 0;}
@@ -64,7 +65,8 @@ class Atom extends EventEmitter {
 		}
 		this.client.atoms.splice(this.client.atoms.indexOf(this), 1);
 		delete this.client.atoms_by_netid[this.network_id];
-		for (const component of Object.values(this.components)) {
+		for (const tcomponent of Object.values(this.components)) {
+			const component: any = tcomponent;
 			component.destroy();
 		}
 	}
@@ -83,13 +85,13 @@ class Atom extends EventEmitter {
 		if (plane) {plane.dirty_atoms.add(this);}
 	}
 
-	set_overlay(key, value) {
+	set_overlay(key: string, value: { [x: string]: any; overlay_layer: number; }) {
 		let overlay_renderer;
 		if (this.overlays[key] && !value) {
 			delete this.overlays[key];
 			overlay_renderer = this.overlay_renderers[key];
 			const idx = this.overlay_renderers_list.indexOf(overlay_renderer);
-			if (idx != -1) {this.overlay_renderers_list.splice(idx, 1);}
+			if (idx !== -1) {this.overlay_renderers_list.splice(idx, 1);}
 			delete this.overlay_renderers[key];
 			this.mark_dirty();
 			return;
@@ -117,12 +119,12 @@ class Atom extends EventEmitter {
 			"offset_y",
 		])
 			{overlay_renderer[prop] = value[prop];}
-		this.overlay_renderers_list.sort((a, b) => {
+		this.overlay_renderers_list.sort((a: { overlay_layer: number; }, b: { overlay_layer: number; }) => {
 			return a.overlay_layer - b.overlay_layer;
 		});
 	}
 
-	get_displacement(timestamp) {
+	get_displacement(timestamp: any) {
 		let dispx = 0;
 		let dispy = 0;
 		if (this.screen_loc_x != null) {
@@ -142,30 +144,30 @@ class Atom extends EventEmitter {
 		return { dispx, dispy };
 	}
 
-	get_transform() {
+	get_transform(timestamp: any) {
 		return Matrix.identity;
 	}
 
-	update_glide(timestamp) {
+	update_glide(timestamp: any) {
 		if (!this.glide) {return;}
 		this.glide.update(timestamp);
 	}
 
-	is_mouse_over(x, y) {
+	is_mouse_over(x: any, y: any) {
 		for (const overlay of this.overlay_renderers_list) {
 			if (overlay.is_mouse_over(x, y)) {return true;}
 		}
 		return this.main_icon_renderer.is_mouse_over(x, y);
 	}
 
-	on_render_tick(timestamp) {
+	on_render_tick(timestamp: any) {
 		for (const overlay of this.overlay_renderers_list) {
 			overlay.on_render_tick(timestamp);
 		}
 		return this.main_icon_renderer.on_render_tick(timestamp);
 	}
 
-	draw(ctx, timestamp) {
+	draw(ctx: any, timestamp: any) {
 		for (const overlay of this.overlay_renderers_list) {
 			overlay.draw(ctx, timestamp);
 		}
@@ -182,7 +184,7 @@ class Atom extends EventEmitter {
 		}
 	}
 
-	get_bounds() {
+	get_bounds(timestamp: any) {
 		let bounds = this.main_icon_renderer.get_bounds();
 		for (const overlay of this.overlay_renderers_list) {
 			const overlay_bounds = overlay.get_bounds();
@@ -211,7 +213,7 @@ class Atom extends EventEmitter {
 		return bounds;
 	}
 
-	get_transformed_bounds(timestamp) {
+	get_transformed_bounds(timestamp: any) {
 		const transform = this.get_transform(timestamp);
 		const bounds = this.get_bounds(timestamp);
 		if (!bounds) {return bounds;}
@@ -292,7 +294,11 @@ class Atom extends EventEmitter {
 }
 
 class Glide {
-	constructor(object, params) {
+	object: any;
+	lasttime: any;
+	x: number;
+	y: number;
+	constructor(object: any, params: any) {
 		this.object = object;
 		this.lasttime = params.lasttime || performance.now();
 		this.x = 0;
@@ -316,7 +322,7 @@ class Glide {
 		}
 		return object.glide;
 	}
-	update(timestamp) {
+	update(timestamp: number) {
 		let glidex = this.x;
 		let glidey = this.y;
 		let glide_size = +this.object.glide_size;
@@ -345,7 +351,7 @@ class Glide {
 
 Atom.Glide = Glide;
 
-Atom.atom_comparator = function (a, b) {
+Atom.atom_comparator = function (a: { layer: number; y: number; network_id: number; }, b: { layer: number; y: number; network_id: number; }) {
 	if (!a && !b) {return 0;}
 	if (!a) {return 1;}
 	if (!b) {return -1;}

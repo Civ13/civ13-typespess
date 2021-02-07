@@ -9,6 +9,8 @@ call ts-node preload_assets.ts
 echo Browserifying Client...
 call ts-node compile.ts
 cd..
+echo Transpiling Server...
+call tsc -p tsconfig.json
 echo Launching Server...
-call ts-node index.js
+call node index.js
 pause
