@@ -1,14 +1,15 @@
+export{};
 const { has_component } = require("./utils.js");
 const mob_symbols = require("./atom/mob.js")._symbols;
 const EventEmitter = require("events");
 const Component = require("./atom/component.js");
 
-const _mob:any = Symbol("_mob");
-const _atom_net_queue:any = Symbol("_atom_net_queue");
-const _netid_to_atom:any = Symbol("_netid_to_atom");
-const _netid_to_eye:any = Symbol("_netid_to_eye");
-const _tiles_to_add:any = Symbol("_tiles_to_add");
-const _tiles_to_remove:any = Symbol("_tiles_to_remove");
+const _mob = Symbol("_mob");
+const _atom_net_queue = Symbol("_atom_net_queue");
+const _netid_to_atom = Symbol("_netid_to_atom");
+const _netid_to_eye = Symbol("_netid_to_eye");
+const _tiles_to_add = Symbol("_tiles_to_add");
+const _tiles_to_remove = Symbol("_tiles_to_remove");
 
 /** @typedef {import("./atom/atom")} Typespess.Atom */
 /** @typedef {import("./server")} Typespess */
@@ -17,7 +18,7 @@ const _tiles_to_remove:any = Symbol("_tiles_to_remove");
  * @alias Client
  */
 class Client extends EventEmitter {
-	constructor(socket: any, username: any, server: any) {
+	constructor(socket, username, server) {
 		super();
 		this.socket = socket;
 		/**
@@ -70,7 +71,7 @@ class Client extends EventEmitter {
 
 		this.address = this.socket._socket.remoteAddress;
 		// for some reason ipv4 addresses are sometimes formated as ::ffff:12.34.56.78
-		const found_ip4 = /[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/.exec(
+		let found_ip4 = /[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/.exec(
 			this.address
 		);
 		if (found_ip4) {this.address = found_ip4[0];}
@@ -119,9 +120,9 @@ class Client extends EventEmitter {
   * @event Client#message_pre
   * @type {Object}
   */
-	message_handler(data: string) {
+	message_handler(data) {
 		try {
-			const obj = JSON.parse(data);
+			var obj = JSON.parse(data);
 
 			this.emit("message_pre", obj);
 			if (this.mob) {this.mob.c.Mob.emit("message_pre", obj);}
@@ -155,7 +156,7 @@ class Client extends EventEmitter {
 			console.error(e);
 		}
 	}
-	obj_drag(obj: any) {
+	obj_drag(obj) {
 		// convert over to netids
 		obj.drag.from.atom = this[_netid_to_atom][obj.drag.from.atom];
 		obj.drag.to.atom = this[_netid_to_atom][obj.drag.to.atom];
@@ -168,7 +169,7 @@ class Client extends EventEmitter {
 		if (obj.drag.to.atom)
 			{obj.drag.to.atom.emit("mouse_dropped_by", obj.drag);}
 	}
-	obj_click(obj: any) {
+	obj_click(obj) {
 		this.last_click_time = this.server.now();
 
 				let click_prefix = "";
@@ -187,27 +188,27 @@ class Client extends EventEmitter {
 				if (obj.click_on.atom)
 					{obj.click_on.atom.emit(click_prefix + "clicked", obj.click_on);}
 	}
-	msg_panel(obj: { panel: any; }) {
-		const pm = obj.panel;
+	msg_panel(obj) {
+		let pm = obj.panel;
 		if (pm.message) {
-			for (const message of pm.message) {
-				const id = message.id;
-				const panel = this.panels.get(id);
+			for (let message of pm.message) {
+				let id = message.id;
+				let panel = this.panels.get(id);
 				if (panel) {
 					panel.emit("message", message.contents);
 				}
 			}
 		}
 		if (pm.close) {
-			for (const id of pm.close) {
-				const panel = this.panels.get(id);
+			for (let id of pm.close) {
+				var panel = this.panels.get(id);
 				if (!panel) {continue;}
 				panel.close(false);
 			}
 		}
 	}
 	disconnect_handler() {
-		const mob = this.mob;
+		var mob = this.mob;
 		if (mob) {
 			this.mob = null;
 		}
@@ -244,14 +245,14 @@ class Client extends EventEmitter {
 			this[_mob].c.Mob[mob_symbols._client] = void 0;
 			this[_mob].c.Mob[mob_symbols._key] = void 0;
 			this.next_message.eye = this.next_message.eye || {};
-			for (const eyeId in this[_mob].c.Mob.eyes) {
+			for (let eyeId in this[_mob].c.Mob.eyes) {
 				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) {continue;}
-				const eye = this[_mob].c.Mob.eyes[eyeId];
-				for (const netid in eye.c.Eye[mob_symbols._viewing]) {
+				let eye = this[_mob].c.Mob.eyes[eyeId];
+				for (let netid in eye.c.Eye[mob_symbols._viewing]) {
 					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) {continue;}
 					this.enqueue_delete_atom(netid);
 				}
-				for (const tile of eye.c.Eye[mob_symbols._visible_tiles]) {
+				for (let tile of eye.c.Eye[mob_symbols._visible_tiles]) {
 					this.enqueue_remove_tile(tile);
 				}
 			}
@@ -262,12 +263,12 @@ class Client extends EventEmitter {
 		}
 		this[_mob] = val;
 		if (this[_mob]) {
-			const old_client = this[_mob].c.Mob.client;
+			var old_client = this[_mob].c.Mob.client;
 			if (old_client) {old_client.mob = null;}
-			for (const eyeId in this[_mob].c.Mob.eyes) {
+			for (let eyeId in this[_mob].c.Mob.eyes) {
 				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes,eyeId)) {continue;}
-				const eye = this[_mob].c.Mob.eyes[eyeId];
-				for (const netid in eye.c.Eye[mob_symbols._viewing]) {
+				let eye = this[_mob].c.Mob.eyes[eyeId];
+				for (let netid in eye.c.Eye[mob_symbols._viewing]) {
 					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing],netid)) {continue;}
 					this.enqueue_create_atom(
 						netid,
@@ -275,7 +276,7 @@ class Client extends EventEmitter {
 						eye
 					);
 				}
-				for (const tile of eye.c.Eye[mob_symbols._visible_tiles]) {
+				for (let tile of eye.c.Eye[mob_symbols._visible_tiles]) {
 					this.enqueue_add_tile(tile);
 				}
 				this.next_message.eye = this.next_message.eye || {};
@@ -290,14 +291,14 @@ class Client extends EventEmitter {
 			this[_mob].c.Mob.emit("client_changed", old_client, this);
 		}
 	}
-	enqueue_create_atom(netid: string, atom: any, eye: any) {
+	enqueue_create_atom(netid, atom, eye) {
 		this[_atom_net_queue][netid] = { create: atom };
 		this[_netid_to_atom][netid] = atom;
 		this[_netid_to_eye][netid] = eye;
 	}
 
-	enqueue_update_atom_var(netid: string | number, atom: any, varname: any, type: number) {
-		let entry = this[_atom_net_queue][netid];
+	enqueue_update_atom_var(netid, atom, varname, type) {
+		var entry = this[_atom_net_queue][netid];
 		if (!entry) {entry = {};}
 		if (entry.create) {
 			// The create packet has not been sent yet. This means there's no point in updating.
@@ -314,37 +315,37 @@ class Client extends EventEmitter {
 				{entry.update.components[type] = new Set();}
 			entry.update.components[type].add(varname);
 		} else {
-			const subentry = entry.update;
-			const setname =
+			var subentry = entry.update;
+			var setname =
 		type === 1 ? "appearance_items" : type === 2 ? "overlays" : "items";
 			if (!subentry[setname]) {subentry[setname] = new Set();}
 			subentry[setname].add(varname);
 		}
 	}
-	enqueue_delete_atom(netid: string) {
+	enqueue_delete_atom(netid) {
 		this[_netid_to_atom][netid] = void 0;
 		this[_netid_to_eye][netid] = void 0;
 		this[_atom_net_queue][netid] = { delete: true };
 	}
 
-	enqueue_add_tile(tile: { x: any; y: any; z: any; }) {
-		const strtile = JSON.stringify([tile.x, tile.y, tile.z]);
+	enqueue_add_tile(tile) {
+		var strtile = JSON.stringify([tile.x, tile.y, tile.z]);
 		if (!this[_tiles_to_remove].delete(strtile))
 			{this[_tiles_to_add].add(strtile);}
 	}
 
-	enqueue_remove_tile(tile: { x: any; y: any; z: any; }) {
-		const strtile = JSON.stringify([tile.x, tile.y, tile.z]);
+	enqueue_remove_tile(tile) {
+		var strtile = JSON.stringify([tile.x, tile.y, tile.z]);
 		if (!this[_tiles_to_add].delete(strtile))
 			{this[_tiles_to_remove].add(strtile);}
 	}
 
 	send_network_updates() {
 		if (!this.socket || this.socket.readyState !== this.socket.OPEN) {return;}
-		const message: any = {};
-		for (const netid in this[_atom_net_queue]) {
+		var message = {};
+		for (let netid in this[_atom_net_queue]) {
 			if (this[_atom_net_queue][netid]) {
-			const entry = this[_atom_net_queue][netid];
+			let entry = this[_atom_net_queue][netid];
 			if (entry.create) {this.network_updates_create(message,entry,netid);}
 			else if (entry.update) {this.network_updates_update(message,entry,netid);}
 			
@@ -363,7 +364,7 @@ class Client extends EventEmitter {
 			message.remove_tiles = [...this[_tiles_to_remove]];
 			this[_tiles_to_remove].clear();
 		}
-		for (const key in this.next_message) {
+		for (let key in this.next_message) {
 			if (!Object.prototype.hasOwnProperty.call(this.next_message,key)) {continue;}
 			message[key] = this.next_message[key];
 			delete this.next_message[key];
@@ -381,11 +382,11 @@ class Client extends EventEmitter {
 		}
 		this.socket.send(JSON.stringify(message));
 	}
-	network_updates_create(message: any,entry: any,netid: string) {
+	network_updates_create(message,entry,netid) {
 	if (!message.create_atoms) {message.create_atoms = [];}
-	const atom = entry.create;
-	const common_visgroups = [];
-	for (const visgroup of atom[mob_symbols._visgroups]) {
+	let atom = entry.create;
+	let common_visgroups = [];
+	for (let visgroup of atom[mob_symbols._visgroups]) {
 		if (
 			this[_netid_to_eye][netid].c.Eye[mob_symbols._visgroups].has(
 				visgroup
@@ -393,52 +394,52 @@ class Client extends EventEmitter {
 		)
 			{common_visgroups.push(visgroup);}
 	}
-	let submessage: Record<string,any> = {};
-	submessage = {
+	let submessage = {
 		network_id: netid,
 		component_vars: {},
-		components: [{length: 1}],
+		components: [],
 		eye_id: this.mob.c.Mob.get_eyeid_for_eye(this[_netid_to_eye][netid]),
 	};
-	for (const key of [
-		'icon',
-		'icon_state',
-		'dir',
-		'layer',
-		'name',
-		'glide_size',
-		'screen_loc_x',
-		'screen_loc_y',
-		'mouse_opacity',
-		'overlays',
-		'x',
-		'y',
-		'opacity',
-		'color',
-		'alpha',
+	for (var key of [
+		"icon",
+		"icon_state",
+		"dir",
+		"layer",
+		"name",
+		"glide_size",
+		"screen_loc_x",
+		"screen_loc_y",
+		"mouse_opacity",
+		"overlays",
+		"x",
+		"y",
+		"opacity",
+		"color",
+		"alpha",
 	]) {
-		const tkey: any = atom[key];
-		submessage[key] = tkey;
-		for (const visgroup of common_visgroups) {
+		submessage[key] = atom[key];
+		for (let visgroup of common_visgroups) {
 			if (visgroup.overrides.has(key))
 				{submessage[key] = visgroup.overrides.get(key);}
 		}
 	}
 	if (atom.template && atom.template.components) {
-		for (const component_name of atom.template.components) {
-			const component = atom.components[component_name];
+		for (let component_name of atom.template.components) {
+			var component = atom.components[component_name];
 			if (!(component instanceof Component.Networked)) {continue;}
 			submessage.components.push(component_name);
-			submessage.component_vars[component_name] = component.get_networked_vars();
+			submessage.component_vars[
+				component_name
+			] = component.get_networked_vars();
 		}
 	}
 	message.create_atoms.push(submessage);
 	}
-	network_updates_update(message: { update_atoms: any[]; },entry: { update: { atom: any; items: any; overlays: any; components: { [x: string]: any; }; }; },netid: string) {
+	network_updates_update(message,entry,netid) {
 		if (!message.update_atoms) {message.update_atoms = [];}
-		const atom = entry.update.atom;
-		const common_visgroups = [];
-		for (const visgroup of atom[mob_symbols._visgroups]) {
+		let atom = entry.update.atom;
+		let common_visgroups = [];
+		for (let visgroup of atom[mob_symbols._visgroups]) {
 			if (
 				this[_netid_to_eye][netid].c.Eye[mob_symbols._visgroups].has(
 					visgroup
@@ -446,11 +447,11 @@ class Client extends EventEmitter {
 			)
 				{common_visgroups.push(visgroup);}
 		}
-		const submessage: any = {};
+		let submessage = { network_id: netid };
 		if (entry.update.items) {
-			for (const item of entry.update.items) {
+			for (let item of entry.update.items) {
 				submessage[item] = atom[item];
-				for (const visgroup of common_visgroups) {
+				for (let visgroup of common_visgroups) {
 					if (visgroup.overrides.has(item))
 						{submessage[item] = visgroup.overrides.get(item);}
 				}
@@ -459,18 +460,18 @@ class Client extends EventEmitter {
 		}
 		if (entry.update.overlays) {
 			submessage.overlays = {};
-			for (const item of entry.update.overlays) {
+			for (let item of entry.update.overlays) {
 				submessage.overlays[item] =
 	typeof atom.overlays[item] === "undefined" ? null : atom.overlays[item];
 			}
 		}
 		if (entry.update.components) {
 			submessage.components = {};
-			for (const component_name in entry.update.components) {
+			for (let component_name in entry.update.components) {
 				if (!Object.prototype.hasOwnProperty.call(entry.update.components,component_name))
 					{continue;}
 				submessage.components[component_name] = {};
-				for (const item of entry.update.components[component_name]) {
+				for (let item of entry.update.components[component_name]) {
 					submessage.components[component_name][item] =
 		atom.components[component_name][item];
 				}

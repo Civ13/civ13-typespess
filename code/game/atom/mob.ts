@@ -1,20 +1,21 @@
+export{};
 const { chain_func, is_atom, to_chat, has_component } = require("../utils.js");
-const _observers = Symbol("_observers");
-const _viewers = Symbol("_viewers");
-const _viewing = Symbol("_viewing");
-const _key = Symbol("_key");
-const _client = Symbol("_client");
-const _server_to_net = Symbol("_server_to_net");
-const _visible_tiles = Symbol("_visible_tiles");
-const _directional = Symbol("_directional");
-const _screen_set = Symbol("_screen_set");
-const _update_var = Symbol("_update_var");
-const _add_viewing = Symbol("_add_viewing");
-const _remove_viewing = Symbol("_remove_viewing");
-const _common_tiles_count = Symbol("_common_tiles_count");
-const _panel_map = Symbol("_panel_map");
-const _visgroups = Symbol("_visgroups");
-const _eye_to_eyeid = Symbol("_eye_to_eyeid");
+const _observers:any = Symbol("_observers");
+const _viewers:any = Symbol("_viewers");
+const _viewing:any = Symbol("_viewing");
+const _key:any = Symbol("_key");
+const _client:any = Symbol("_client");
+const _server_to_net:any = Symbol("_server_to_net");
+const _visible_tiles:any = Symbol("_visible_tiles");
+const _directional:any = Symbol("_directional");
+const _screen_set:any = Symbol("_screen_set");
+const _update_var:any = Symbol("_update_var");
+const _add_viewing:any = Symbol("_add_viewing");
+const _remove_viewing:any = Symbol("_remove_viewing");
+const _common_tiles_count:any = Symbol("_common_tiles_count");
+const _panel_map:any = Symbol("_panel_map");
+const _visgroups:any = Symbol("_visgroups");
+const _eye_to_eyeid:any = Symbol("_eye_to_eyeid");
 module.exports._symbols = {
 	_observers,
 	_client,
@@ -68,7 +69,7 @@ class Eye extends Component {
 		this.screen = new Proxy(
 			{},
 			{
-				set: (target, key, value) => {
+				set: (target:any, key:any, value:any) => {
 					if (typeof value !== "undefined" && !is_atom(value))
 						{throw new TypeError(`${value} is not an atom`);}
 					if (target[key] === value) {return true;}
@@ -84,7 +85,7 @@ class Eye extends Component {
 					return true;
 				},
 				deleteProperty: (target, key) => {
-					this.screen[key] = null;
+					this.screen[key] = void 0;
 					delete target[key];
 					return true;
 				},
@@ -100,9 +101,9 @@ class Eye extends Component {
 		/** @type {boolean} */ this.xray;
 	}
 
-	[_add_viewing](item) {
+	[_add_viewing](item:any) {
 		if (item instanceof Array || item instanceof Set) {
-			item.forEach((i) => {
+			item.forEach((i:any) => {
 				this[_add_viewing](i);
 			});
 			return;
@@ -119,9 +120,9 @@ class Eye extends Component {
 		this.enqueue_create_atom(netid, item);
 	}
 
-	[_remove_viewing](item) {
+	[_remove_viewing](item:any) {
 		if (item instanceof Array || item instanceof Set) {
-			item.forEach((i) => {
+			item.forEach((i:any) => {
 				this[_remove_viewing](i);
 			});
 			return;
@@ -137,21 +138,21 @@ class Eye extends Component {
 
 		this.enqueue_delete_atom(netid);
 	}
-	enqueue_create_atom(netid, atom) {
+	enqueue_create_atom(netid:any, atom:any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
 			if (!client) {continue;}
 			client.enqueue_create_atom(netid, atom, this.a);
 		}
 	}
-	enqueue_update_atom_var(netid, atom, varname, is_appearance) {
+	enqueue_update_atom_var(netid:any, atom:any, varname:any, is_appearance:any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
 			if (!client) {continue;}
 			client.enqueue_update_atom_var(netid, atom, varname, is_appearance);
 		}
 	}
-	enqueue_delete_atom(netid) {
+	enqueue_delete_atom(netid:any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
 			if (!client) {continue;}
@@ -159,7 +160,7 @@ class Eye extends Component {
 		}
 	}
 
-	enqueue_add_tile(tile) {
+	enqueue_add_tile(tile:any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
 			if (!client) {continue;}
@@ -167,7 +168,7 @@ class Eye extends Component {
 		}
 	}
 
-	enqueue_remove_tile(tile) {
+	enqueue_remove_tile(tile:any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
 			if (!client) {continue;}
@@ -240,7 +241,7 @@ class Eye extends Component {
   * @param {Typespess.Atom} item
   * @returns {boolean}
   */
-	can_see(item) {
+	can_see(item:any) {
 		if (this[_screen_set].has(item)) {return true;}
 		let visible_value = item.visible;
 		for (const visgroup of item[_visgroups]) {
@@ -259,10 +260,10 @@ class Eye extends Component {
   * @param {Typespess.Atom} item
   * @returns {string}
   */
-	get_netid_for_atom(atom) {
+	get_netid_for_atom(atom:any) {
 		return this[_server_to_net][atom.object_id];
 	}
-	show_message(prev) {
+	show_message(prev:any) {
 		const to_show = prev();
 		to_chat(this.a, to_show);
 		return to_show;
@@ -351,7 +352,7 @@ class Mob extends Component {
 				{},
 				{
 					set: (target, property, value) => {
-						property = "" + property;
+						property = String(property);
 						if (value instanceof Eye) {value = value.atom;}
 						if (typeof value !== "undefined" && !has_component(value, "Eye"))
 							{throw new TypeError("Expected object with Eye component");}
@@ -399,9 +400,10 @@ class Mob extends Component {
 					defineProperty: () => {
 						throw new Error("Cannot define property on eyes map");
 					},
-					deleteProperty: (target, property) => {
+					deleteProperty: (target:any, property:string|number|symbol) => {
 						this.eyes[property] = void 0;
 						delete target[property];
+						return true;
 					},
 				}
 			),
@@ -453,7 +455,7 @@ class Mob extends Component {
   * @param {Typespess.Atom<Eye>}
   * @returns {string}
   */
-	get_eyeid_for_eye(eye) {
+	get_eyeid_for_eye(eye:any) {
 		return this[_eye_to_eyeid].get(eye);
 	}
 
@@ -464,11 +466,11 @@ class Mob extends Component {
   * @returns {boolean}
   * @abstract
   */
-	can_interact_with_panel() {
+	can_interact_with_panel(atom:any, panel:any, key:any) {
 		return true;
 	}
 
-	basic_panel_read_checks(atom, panel) {
+	basic_panel_read_checks(atom:any, panel:any, key:any) {
 		if (typeof panel === "object") {
 			if (
 				panel.client !== this.client ||
@@ -486,14 +488,14 @@ class Mob extends Component {
   * @returns {boolean}
   * @abstract
   */
-	can_read_panel(atom, panel, key = "") {
+	can_read_panel(atom:any, panel:any, key = "") {
 		if (
 			atom.can_user_read_panel &&
 	!atom.can_user_read_panel(this.a, panel, key)
 		)
 			{return false;}
-		for (const eye of Object.values(this.eyes))
-			{if (eye.c.Eye.can_see(atom)) {return true;}}
+		for (const teye of Object.values(this.eyes))
+			{const eye:any = teye;if (eye.c.Eye.can_see(atom)) {return true;}}
 		return false;
 	}
 
@@ -503,7 +505,7 @@ class Mob extends Component {
   * @param {Typespess.Panel} panel
   * @param {string} [key=""]
   */
-	bind_panel(atom, panel, key = "") {
+	bind_panel(atom:any, panel:any, key = "") {
 		if (
 			!this.basic_panel_read_checks(atom, panel, key) ||
 	!this.can_read_panel(atom, panel, key)
@@ -568,7 +570,7 @@ class Mob extends Component {
   * @param {Constructor} panel
   * @param {string} [key=""]
   */
-	get_panel(atom, panel, key = "") {
+	get_panel(atom:any, panel:any, key = "") {
 		return this[_panel_map].get(
 			`${atom.object_id},${
 				typeof panel === "function" ? panel.name : panel.constructor.name
