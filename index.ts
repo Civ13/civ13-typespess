@@ -95,14 +95,11 @@ global.Tserver.importModule(require("./code/modules/projectiles/ammunition/ammo_
 global.Tserver.importModule(require("./code/modules/projectiles/ammunition/energy.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/boxes_magazines/ammo_boxes.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/boxes_magazines/external_mag.js"));
-global.Tserver.importModule(require("./code/modules/projectiles/guns/ballistic/pistol.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/guns/energy/laser.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/guns/energy/stun.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/guns/ballistic.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/guns/energy.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/projectile/beam.js"));
-global.Tserver.importModule(require("./code/modules/projectiles/projectile/bullets.js"));
-global.Tserver.importModule(require("./code/modules/projectiles/projectile/energy.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/ammunition.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/box_magazine.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/gun.js"));

@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	has_component,
@@ -17,7 +17,7 @@ class Gun extends Component {
 		this.a.c.Item.after_attack = this.after_attack.bind(this);
 	}
 
-	after_attack(target, user, prox, e) {
+	after_attack(target: any, user: any, prox: any, e: any) {
 		if (this.firing_burst || !target.loc || !target.loc.is_base_loc) {return;}
 		if (prox) {
 			if (!has_component(target, "LivingMob")) {return;}
@@ -59,20 +59,20 @@ class Gun extends Component {
 		this.fire({ target, user, e, bonus_spread });
 	}
 
-	fire(opts) {
+	fire(opts: any) {
 		this.fire_one(opts);
 	}
 
 	// fires one bullet.
-	fire_one({
-		target,
-		user,
+	fire_one(
+		target: any,
+		user: any = null,
 		message = true,
-		e,
-		zone_override = null,
+		e: any = null,
+		zone_override: any = null,
 		bonus_spread = 0,
 		angle_offset = 0,
-	} = {}) {
+	) {
 		const dx = target.x + ((e && e.x - 0.5) || 0) - user.x;
 		const dy = target.y + ((e && e.y - 0.5) || 0) - user.y;
 		const angle = angle_offset + (Math.atan2(dy, dx) * 180) / Math.PI;
@@ -116,7 +116,7 @@ class Gun extends Component {
 		return true;
 	}
 
-	shoot_live_shot({ user, point_blank = null, message = true } = {}) {
+	shoot_live_shot(user: any, point_blank: number = null, message = true) {
 		new Sound(this.a.server, {
 			path: this.fire_sound,
 			volume: this.suppressed ? 0.1 : 0.5,
@@ -134,7 +134,7 @@ class Gun extends Component {
 		}
 	}
 
-	shoot_with_empty_chamber({ user } = {}) {
+	shoot_with_empty_chamber(user: any) {
 		to_chat`<span class='danger'>*click*</span>`(user);
 		new Sound(this.a.server, {
 			path: "sound/weapons/empty.ogg",
@@ -145,7 +145,7 @@ class Gun extends Component {
 
 	// Fun fact this is an item proc on tg. On all items. For guns.
 	// whether the user can trigger this gun
-	can_trigger(user) {
+	can_trigger(user: any) {
 		if (
 			!has_component(user, "MobInventory") ||
 	!user.c.MobInventory.can_use_guns(this.a)

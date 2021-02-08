@@ -1,3 +1,4 @@
+export{};
 const { Component } = require("./../../../../code/game/server.js");
 
 const pass_flags = require("../../../defines/pass_flags.js");
@@ -30,43 +31,6 @@ BeamProjectile.template = {
 		icon_state: "laser",
 		pass_flags:
 	pass_flags.PASSTABLE | pass_flags.PASSGLASS,
-	},
-};
-
-module.exports.templates = {
-	beam_laser: {
-		components: ["BeamProjectile"],
-		tree_paths: ["effects/projectiles/beam_laser"]
-	},
-	beam_laser_practice: {
-		parent_template: "beam_laser",
-		vars: {
-			components: {
-				Projectile: {
-					damage: 0,
-					no_damage: true,
-				},
-			},
-			name: "practice laser",
-		},
-	},
-
-	beam_disabler: {
-		components: ["BeamProjectile"],
-		tree_paths: ["effects/projectiles/beam_disabler"],
-		vars: {
-			components: {
-				Projectile: {
-					damage: 36,
-					damage_type: "stamina",
-					hitsound: "sound/weapons/tap.ogg",
-				},
-				LightSource: {
-					color: lighting.LIGHT_COLOR_BLUE,
-				},
-			},
-			name: "disabler beam",
-		},
 	},
 };
 

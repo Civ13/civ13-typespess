@@ -1,4 +1,4 @@
-
+export{};
 const layers = require("../../../../../defines/layers.js");
 const {
 	Component,
@@ -28,23 +28,23 @@ class Wall extends Component {
 		);
 	}
 
-	examine(prev, user) {
+	examine(prev: any, user: any) {
 		prev();
 		this.deconstruction_hints(user);
 	}
 
-	deconstruction_hints(user) {
+	deconstruction_hints(user: any) {
 		to_chat`<span class='notice'>The outer plating is <b>welded</b> firmly in place.</span>`(
 			user
 		);
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (this.try_decon(item, user)) {return true;}
 		return prev();
 	}
 
-	try_decon(item, user) {
+	try_decon(item: any, user: any) {
 		if (has_component(item, "Tool")) {
 			if (item.c.Tool.can_use("WeldingTool", user)) {
 				item.c.Tool.used("WeldingTool");
@@ -54,7 +54,7 @@ class Wall extends Component {
 				user.c.MobInventory.do_after({
 					delay: this.slicing_duration * item.c.Tool.toolspeed,
 					target: this.a,
-				}).then((success) => {
+				}).then((success: any) => {
 					if (!success) {return;}
 					new Sound(this.a.server, {
 						path: "sound/items/welder.ogg",
@@ -71,7 +71,7 @@ class Wall extends Component {
 		}
 	}
 
-	deconstruct(prev) {
+	deconstruct(prev: any) {
 		if (!this.a.loc) {return;}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			const sheets = new Atom(this.a.server, this.sheet_type);
@@ -82,7 +82,7 @@ class Wall extends Component {
 		prev();
 	}
 
-	ex_act(prev, severity) {
+	ex_act(prev: any, severity: any) {
 		if (severity === 2) {
 			if (Math.random() < 0.5) {
 				this.a.c.Destructible.deconstruct(false);
@@ -129,55 +129,6 @@ Wall.template = {
 		layer: layers.WALL_LAYER,
 		density: 1,
 		opacity: true,
-	},
-};
-
-module.exports.templates = {
-	wall: {
-		components: ["Wall", "TGSmooth"],
-		vars: {
-			components: {
-				Smooth: {
-					smooth_with: "wall",
-				},
-				SmoothGroup: {
-					groups: ["wall"],
-				},
-			},
-			name: "wall",
-			icon_state: "0",
-		},
-		tree_paths: ["walls/wall"],
-		requires_under: {
-			component: "FloorBase",
-			default: "dirt",
-		},
-	},
-	wall_titanium: {
-		components: ["TGSmooth"],
-		vars: {
-			components: {
-				TGSmooth: {
-					diagonal: true,
-				},
-				Smooth: {
-					smooth_with: "titanium_wall",
-				},
-				SmoothGroup: {
-					groups: ["titanium_wall"],
-				},
-			},
-			icon: "icons/turf/walls/",
-			icon_state: "0",
-			layer: layers.WALL_LAYER,
-			density: 1,
-			opacity: true,
-		},
-		tree_paths: ["walls/titanium"],
-		requires_under: {
-			component: "FloorBase",
-			default: "dirt",
-		},
 	},
 };
 

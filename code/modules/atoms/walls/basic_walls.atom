@@ -1,0 +1,71 @@
+wall_titanium:
+	components: ["Wall", "TGSmooth"]
+	vars:
+		components:
+			TGSmooth:
+				diagonal: true,
+			
+			Smooth:
+				smooth_with: "titanium_wall"
+			
+			SmoothGroup:
+				groups: ["titanium_wall"]
+			
+		name: "titanium wall"
+		icon: "icons/turf/walls/"
+		icon_state: "0"
+	
+	tree_paths: ["walls/titanium"]
+	requires_under:
+		component: "FloorBase"
+		default: "dirt"
+
+wall_wood:
+	components: ["Wall", "TGSmooth"]
+	vars:
+		components:
+			TGSmooth:
+				diagonal: true,
+			
+			Smooth:
+				smooth_with: "wood_wall"
+			
+			SmoothGroup:
+				groups: ["wood_wall"]
+			
+			Examine:
+				desc: "A soft wood plank wall."
+
+		name: "wood wall"
+		icon: "icons/turf/walls/"
+		icon_state: "b_wood_wall"
+	
+	tree_paths: ["walls/wood"]
+	requires_under:
+		component: "FloorBase"
+		default: "dirt"
+
+wall_stone:
+	components: ["Wall", "TGSmooth"]
+	vars:
+		components:
+			TGSmooth:
+				diagonal: true,
+			
+			Smooth:
+				smooth_with: "stone_wall"
+			
+			SmoothGroup:
+				groups: ["stone_wall"]
+				
+			Examine:
+				desc: "A solid stone wall."
+
+		name: "stone wall"
+		icon: "icons/turf/walls/"
+		icon_state: "b_stone_wall"
+	
+	tree_paths: ["walls/stone"]
+	requires_under:
+		component: "FloorBase"
+		default: "dirt"

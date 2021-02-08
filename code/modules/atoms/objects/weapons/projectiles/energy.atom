@@ -1,0 +1,16 @@
+	energy_projectile:
+		components: ["Projectile"]
+		tree_paths: ["effects/projectiles/energy_projectile"]
+		vars:
+			components:
+				Projectile:
+					damage: 0
+					damage_type: "burn"
+					flag: "energy"
+				
+			
+			name: "energy"
+			icon_state: "laser"
+		
+	
+

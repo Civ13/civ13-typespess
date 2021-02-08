@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	Atom,
@@ -80,7 +80,7 @@ class EnergyGun extends Component {
 		}
 	}
 
-	process_chamber(prev) {
+	process_chamber(prev: any) {
 		prev();
 		if (this.a.c.Gun.chambered) {
 			this.cell.c.PowerCell.use(
@@ -89,7 +89,7 @@ class EnergyGun extends Component {
 		}
 	}
 
-	can_shoot(prev) {
+	can_shoot(prev: any) {
 		const shot = this.ammo_type[this.select];
 		if (!shot || !this.cell) {return false;}
 		if (this.cell.c.PowerCell.charge < shot.c.EnergyLens.e_cost) {return false;}
@@ -100,7 +100,7 @@ class EnergyGun extends Component {
 		this.update_charge_overlay();
 	}
 
-	cell_changed(from, to) {
+	cell_changed(from: any, to: any) {
 		if (from) {
 			from.c.PowerCell.removeListener(
 				"charge_changed",
@@ -110,11 +110,11 @@ class EnergyGun extends Component {
 		if (to) {
 			to.c.PowerCell.on("charge_changed", this.cell_charge_changed);
 		} else if (from) {
-			this.cell_charge_changed(from.c.PowerCell.charge, 0);
+			this.cell_charge_changed();
 		}
 	}
 
-	attack_self(user) {
+	attack_self(user: any) {
 		if (this.ammo_type.length > 1) {
 			this.select++;
 			const shot = this.a.c.Gun.chambered;
@@ -126,7 +126,7 @@ class EnergyGun extends Component {
 		}
 	}
 
-	select_changed(from, to) {
+	select_changed(from: any, to: any) {
 		if (this.ammo_type.length <= 0) {return;} // this shouldn't happen
 		if (to >= this.ammo_type.length) {
 			this.select -= this.ammo_type.length;
@@ -143,7 +143,7 @@ class EnergyGun extends Component {
 		this.update_charge_overlay();
 	}
 
-	check_can_charge(user) {
+	check_can_charge(user: any) {
 		if (!this.can_charge) {
 			to_chat`<span class='notice'>Your gun has no external power connector</span>`(
 				user

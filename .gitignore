@@ -65,6 +65,7 @@ typings/
 .env
 Windows PowerShell.lnk
 .jshintrc
+.eslintrc
 *.code-workspace
 maps/newmap.bsmap
 quick_launch.bat

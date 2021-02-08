@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	Sound,
@@ -31,7 +31,7 @@ class Projectile extends Component.Networked {
 		this.a.on("bumped", this.bumped.bind(this));
 	}
 
-	bumped(target, dx, dy, reason) {
+	bumped(target: any, dx: any, dy: any, reason: any) {
 		if (reason !== "projectile") {return;}
 		if (this.collide(target)) {
 			this.a.destroy();
@@ -41,12 +41,12 @@ class Projectile extends Component.Networked {
 		}
 	}
 
-	add_spread(amt) {
+	add_spread(amt: any) {
 		// Adds spread to the projectile using proper normal distribution math
 		this.spread = Math.sqrt(this.spread * this.spread + amt * amt);
 	}
 
-	fire(angle, direct_target) {
+	fire(angle: any, direct_target: any) {
 		if (direct_target && this.prehit(direct_target)) {
 			direct_target.bullet_act(this.a, this.def_zone);
 			this.a.destroy();
@@ -98,7 +98,7 @@ class Projectile extends Component.Networked {
 		}
 	}
 
-	can_cross(prev, target, dx, dy, reason) {
+	can_cross(prev: any, target: any, dx: any, dy: any, reason: any) {
 		if (reason !== "projectile") {return prev();}
 		if (this.permuted.has(target))
 		// We've already hit the thing, so let's go through it now.
@@ -119,11 +119,11 @@ class Projectile extends Component.Networked {
 		}
 	}
 
-	prehit(/*target*/) {
+	prehit(target: any) {
 		return true;
 	}
 
-	hit(target, blocked = 0, def_zone) {
+	hit(target: any, blocked = 0, def_zone: any) {
 		if (
 			has_component(target, "Wall") &&
 	["brute", "burn"].includes(this.damage_type) &&
@@ -173,7 +173,7 @@ class Projectile extends Component.Networked {
 		return 0;
 	}
 
-	collide(target) {
+	collide(target: any) {
 		const dist = Math.sqrt(
 			(this.starting[0] - this.a.x) ** 2 + (this.starting[1] - this.a.y) ** 2
 		); // Get the distance between the turf shot from and the mob we hit and use that for the calculations.
@@ -197,7 +197,7 @@ class Projectile extends Component.Networked {
 		if (permutation === -1 || this.force_dodge) {
 			return false;
 		} else {
-			const alt = this.select_target(target);
+			const alt: any = this.select_target(target);
 			if (alt) {
 				if (!this.prehit(alt)) {return false;}
 				if (has_component(alt, "Tangible"))
@@ -208,7 +208,7 @@ class Projectile extends Component.Networked {
 		return true;
 	}
 
-	select_target() {
+	select_target(target: any) {
 		return;
 	}
 

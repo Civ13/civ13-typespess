@@ -6,7 +6,25 @@ const CHANGE_LEVEL_ICON = 3;
 const color_canvas = document.createElement("canvas");
 
 class IconRenderer {
-	constructor(obj) {
+	client: Record<string, any>;
+	atom: Record<string, any>;
+	_overlay_layer: number;
+	change_level: number;
+	_offset_x: number;
+	_offset_y: number;
+	icon_meta: Record<string,any>;
+	directional: boolean;
+	last_icon: string;
+	last_icon_state: string;
+	last_dir: number;
+	icon_frame: number;
+	_icon: string;
+	parent: any;
+	_icon_state: string;
+	_dir: number;
+	_color: any;
+	_alpha: any;
+	constructor(obj: Record<string,any>) {
 		if (!obj.client) {
 			this.client = obj;
 		} else {
@@ -79,7 +97,7 @@ class IconRenderer {
 							this.change_level = CHANGE_LEVEL_ICON;	
 						}	
 					})	
-					.catch((err) => {	
+					.catch((err: Error) => {	
 						console.error(err);	
 					});
 
@@ -93,7 +111,7 @@ class IconRenderer {
 		this.icon_frame = 0;
 	}
 
-	draw(ctx) {
+	draw(ctx: any) {
 		if (!this.icon_meta || !this.icon_meta.__image_object)
 			{return;}
 
@@ -167,7 +185,7 @@ class IconRenderer {
 		);
 	}
 
-	is_mouse_over(x, y) {
+	is_mouse_over(x: number, y: number) {
 		if (!this.icon_meta || !this.icon_meta.__image_data)
 			{return false;}
 		const offset = this.get_offset();

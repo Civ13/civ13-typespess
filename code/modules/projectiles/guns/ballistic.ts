@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	Atom,
@@ -35,7 +35,7 @@ class BallisticGun extends Component {
 		this.a.c.Gun.update_icon();
 	}
 
-	process_chamber(prev) {
+	process_chamber(prev: any) {
 		prev();
 		const ammo = this.a.c.Gun.chambered;
 		if (has_component(ammo, "AmmoCasing")) {
@@ -59,7 +59,7 @@ class BallisticGun extends Component {
 		}
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (
 			has_component(item, "GunMagazine") &&
 	!has_component(item, "InternalMagazine") &&
@@ -106,7 +106,7 @@ class BallisticGun extends Component {
 		return prev();
 	}
 
-	attack_self(user) {
+	attack_self(user: any) {
 		if (this.magazine) {
 			this.magazine.loc = this.a.base_mover.fine_loc;
 			user.c.MobInventory.put_in_hands(this.magazine);
@@ -129,14 +129,14 @@ class BallisticGun extends Component {
 		this.a.c.Gun.update_icon();
 	}
 
-	update_icon(prev) {
+	update_icon(prev: any) {
 		prev();
 		let state = this.a.template.vars.icon_state;
 		if (this.empty_state && !this.a.c.Gun.chambered) {state += "-e";}
 		if (this.a.c.Gun.suppressed) {state += "-suppressed";}
 		this.a.icon_state = state;
 	}
-	examine(prev, user) {
+	examine(prev: any, user: any) {
 		prev();
 		const ammo_count = this.get_ammo();
 		to_chat`It has ${ammo_count} round${ammo_count === 1 ? "" : "s"} remaining.`(
