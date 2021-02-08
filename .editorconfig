@@ -1,5 +1,5 @@
 root = true
 
-[*.{html,css,js,json}]
+[*.{html,css,js,ts,json,cson,atom,recipes,crafting}]
 indent_style = space
 indent_size = 3
