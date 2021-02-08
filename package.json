@@ -21,7 +21,7 @@
 		"@types/underscore": "^1.10.24",
 		"@types/ws": "^7.4.0",
 		"@typescript-eslint/eslint-plugin": "^3.10.1",
-		"@typescript-eslint/experimental-utils": "^4.14.2",
+		"@typescript-eslint/experimental-utils": "^4.15.0",
 		"@typescript-eslint/parser": "^3.10.1",
 		"browserify": "^17.0.0",
 		"cson": "^7.20.0",
@@ -30,9 +30,9 @@
 		"finalhandler": "^1.1.2",
 		"node-fetch": "^2.6.1",
 		"pouchdb": "^7.2.2",
+		"pouchdb-server": "^4.2.0",
 		"serve-static": "^1.14.1",
 		"toposort": "^2.0.2",
-		"tsify": "^4.0.2",
 		"typescript": "^3.9.7",
 		"underscore": "^1.12.0",
 		"ws": "^7.4.3"
@@ -57,26 +57,41 @@
 		"parserOptions": {
 			"ecmaVersion": 11,
 			"sourceType": "module",
-			"ecmaFeatures": {"modules": true}
+			"ecmaFeatures": {
+				"modules": true
+			}
 		},
-		"plugins": ["@typescript-eslint"],
-		"eslint.validate": [
-			"javascript",
-			"javascriptreact",
-			"typescript",
-			"typescriptreact"
-		  ],
+		"plugins": [
+			"@typescript-eslint"
+		],
 		"rules": {
 			"@typescript-eslint/no-var-requires": 0,
 			"@typescript-eslint/no-explicit-any": 0,
 			"node/no-unsupported-features/es-syntax": 0,
-	
-			"complexity": ["warn", 20],
-			"max-depth": ["warn", 4],
-			"max-params": ["warn", 4],
-			"max-nested-callbacks": ["warn", 10],
-			"max-lines": ["error", {"max": 500, "skipComments": true, "skipBlankLines": true}],
-	
+			"complexity": [
+				"warn",
+				20
+			],
+			"max-depth": [
+				"warn",
+				4
+			],
+			"max-params": [
+				"warn",
+				4
+			],
+			"max-nested-callbacks": [
+				"warn",
+				10
+			],
+			"max-lines": [
+				"error",
+				{
+					"max": 500,
+					"skipComments": true,
+					"skipBlankLines": true
+				}
+			],
 			"curly": "error",
 			"block-scoped-var": "error",
 			"eqeqeq": "error",
@@ -85,13 +100,13 @@
 			"no-caller": "error",
 			"no-class-assign": "error",
 			"no-cond-assign": "error",
-			"no-const-assign":"error",
+			"no-const-assign": "error",
 			"no-constant-condition": "warn",
 			"no-delete-var": "error",
 			"no-dupe-args": "error",
 			"no-duplicate-case": "warn",
 			"no-empty": "warn",
-			"no-extra-semi":"warn",
+			"no-extra-semi": "warn",
 			"no-func-assign": "error",
 			"no-iterator": "error",
 			"no-loop-func": "error",
@@ -103,6 +118,6 @@
 			"use-isnan": "error",
 			"valid-typeof": "error",
 			"wrap-iife": "error"
-			}
+		}
 	}
 }

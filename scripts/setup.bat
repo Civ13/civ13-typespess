@@ -3,18 +3,16 @@ title Typespess Installation
 echo Installing packages...
 cd..
 call npm install
-call npm install -g typescript
-call npm install -g ts-node
-call npm install -g pouchdb-server
-echo Packages installed.
+echo Transpiling to JavaScript...
+call npx tsc -p tsconfig.json
 cd client_src
 echo Generating the preload list...
-call ts-node preload_assets.ts
+call node preload_assets.js
 echo Browserifying client...
-call ts-node compile.ts
+call node compile.js
 echo Generating the map...
 cd..
 cd maps
-call ts-node mapgen.js
+call node mapgen.js
 echo Everything is done.
 pause

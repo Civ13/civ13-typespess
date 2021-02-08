@@ -1,12 +1,12 @@
 #!/bin/bash
 cd -
+echo npx tsc -p tsconfig.json
 cd maps
-echo ts-node mapgen.js
+echo node mapgen.js
 cd -
 cd client_src
-echo ts-node preload_assets.ts
-echo ts-node compile.ts
+echo node preload_assets.js
+echo node compile.js
 cd -
-echo tsc -p tsconfig.json
 echo node index.js test
 

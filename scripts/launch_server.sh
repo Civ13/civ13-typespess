@@ -1,12 +1,12 @@
 #!/bin/bash
 cd -
+echo Transpiling Server...
+npx tsc -p tsconfig.json
 cd client_src
 echo Generating the preload list...
-ts-node preload_assets.ts
+node preload_assets.js
 echo Browserifying Client...
-ts-node compile.ts
+node compile.js
 cd -
-echo Transpiling Server...
-tsc -p tsconfig.json
 echo Launching Server...
 node index.js
