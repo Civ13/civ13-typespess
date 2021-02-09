@@ -327,8 +327,8 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-			"There's highly flammable, toxic plasma in the air and you're breathing it in. Find some fresh air. \
-		The box in your backpack has an oxygen tank and gas mask in it.",
+			"There's highly flammable, toxic plasma in the air and you're breathing it in. Find some fresh air." +
+			"The box in your backpack has an oxygen tank and gas mask in it.",
 				},
 			},
 			name: "Choking (Plasma)",
@@ -441,8 +441,8 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-			"You can't see! This may be caused by a genetic defect, eye trauma, being unconscious, \
-		or something covering your eyes.",
+			"You can't see! This may be caused by a genetic defect, eye trauma, being unconscious," +
+			"or something covering your eyes.",
 				},
 			},
 			name: "Blind",
@@ -486,8 +486,8 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-			"Something got lodged into your flesh and is causing major bleeding. It might fall out with time, but surgery is the safest way. \
-		If you're feeling frisky, click yourself in help intent to pull the object out.",
+			"Something got lodged into your flesh and is causing major bleeding. It might fall out with time, but surgery is the safest way." +
+			"If you're feeling frisky, click yourself in help intent to pull the object out.",
 				},
 			},
 			name: "Embedded Object",
@@ -501,10 +501,10 @@ module.exports.templates = {
 			components: {
 				Tooltip: {
 					desc:
-			"Gravity has ceased affecting you, and you're floating around aimlessly. You'll need something large and heavy, like a \
-		wall or lattice, to push yourself off if you want to move. A jetpack would enable free range of motion. A pair of \
-		magboots would let you walk around normally on the floor. Barring those, you can throw things, use a fire extinguisher, \
-		or shoot a gun to move around via Newton's 3rd Law of Motion.",
+			"Gravity has ceased affecting you, and you're floating around aimlessly. You'll need something large and heavy, like a" +
+			"wall or lattice, to push yourself off if you want to move. A jetpack would enable free range of motion. A pair of" +
+			"magboots would let you walk around normally on the floor. Barring those, you can throw things, use a fire extinguisher," +
+			"or shoot a gun to move around via Newton's 3rd Law of Motion.",
 				},
 			},
 			name: "Weightless",
