@@ -1,5 +1,4 @@
-
-
+export{};
 const EventEmitter = require("events");
 const {
 	Sound,

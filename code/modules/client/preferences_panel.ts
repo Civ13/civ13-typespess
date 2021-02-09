@@ -1,3 +1,4 @@
+export{};
 const { Panel } = require("./../../../code/game/server.js");
 
 const CharacterPreferences = require("./character.js");

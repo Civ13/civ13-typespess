@@ -1,3 +1,4 @@
+export{};
 const { join } = require ("path");
 const {readdirSync, statSync } = require ("fs");
 const fs = require("fs");

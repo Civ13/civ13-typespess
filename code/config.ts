@@ -1,3 +1,4 @@
+export{};
 const { weak_deep_assign } = require("./../code/game/server.js");
 const fs = require("fs");
 const CSON = require("cson");

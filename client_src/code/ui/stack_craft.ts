@@ -51,7 +51,7 @@ class StackCraftPanel {
 			}
 		}
 	}
-	build_recipe(i) {
+	build_recipe(i:any) {
 		const elem = this.recipes_elem.childNodes[i];
 		if (elem.innerHTML) {elem.innerHTML = "";}
 		const recipe = this.recipes[i];

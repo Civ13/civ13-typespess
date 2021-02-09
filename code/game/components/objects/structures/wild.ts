@@ -1,7 +1,7 @@
 
 //trees, bushes, and so on
 ///////////////////////////
-
+export{};
 const layers = require("../../../../defines/layers.js");
 const {
 	Component,

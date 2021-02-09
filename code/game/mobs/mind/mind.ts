@@ -1,3 +1,4 @@
+export{};
 const { has_component } = require("./../../../../code/game/server.js");
 
 const { EventEmitter } = require("events");

@@ -1,4 +1,5 @@
 "use strict";
+export{};
 const _ = require("underscore");
 
 class JobController {

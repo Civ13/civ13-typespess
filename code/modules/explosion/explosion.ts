@@ -1,3 +1,4 @@
+export{};
 const {
 	Sound,
 	has_component,

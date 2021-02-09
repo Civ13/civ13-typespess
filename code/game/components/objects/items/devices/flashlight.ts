@@ -1,5 +1,4 @@
-
-
+export{};
 const { Component } = require("./../../../../../../code/game/server.js");
 const lighting = require("../../../../../defines/lighting.js");
 

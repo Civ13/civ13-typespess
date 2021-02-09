@@ -1,5 +1,4 @@
-
-
+export{};
 const { Component, Sound, Atom } = require("./../../../code/game/server.js");
 const pass_flags = require("../../defines/pass_flags.js");
 const sounds = require("../../defines/sounds.js");

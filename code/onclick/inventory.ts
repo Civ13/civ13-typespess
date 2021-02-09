@@ -1,7 +1,4 @@
-/* eslint-disable max-lines */
-
-
-export{};
+/* eslint-disable max-lines */export{};
 const {
 	Component,
 	Atom,

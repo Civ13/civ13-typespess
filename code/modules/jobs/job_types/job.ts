@@ -1,4 +1,4 @@
-
+export{};
 const Outfit = require("../../outfit.js");
 const {
 	weak_deep_assign,

@@ -1,5 +1,5 @@
-const _locations = Symbol("_locations");
-const _step_cache = Symbol("_step_cache");
+const _locations: any = Symbol("_locations");
+const _step_cache: any = Symbol("_step_cache");
 
 /** @typedef {import('./server')} Typespess */
 /** @typedef {import('./atom/atom')} Typespess.Atom */
@@ -145,7 +145,7 @@ class Location {
   * @param {number} dir
   * @returns {Location}
   */
-	get_step(dir) {
+	get_step(dir: number) {
 		if ((dir & 3) === 3) {dir &= ~3;}
 		if ((dir & 12) === 12) {dir &= ~12;}
 		const cached = this[_step_cache][dir];

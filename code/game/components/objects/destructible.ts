@@ -1,4 +1,3 @@
-
 export{};
 const {
 	Component,
@@ -32,21 +31,19 @@ class Destructible extends Component {
 
 	// eslint-disable-next-line max-params
 	take_damage(
-		damage_amount,
+		damage_amount: number,
 		damage_type = "brute",
-		damage_flag,
+		damage_flag: string,
 		sound_effect = true,
-		attack_dir
 	) {
 		if (sound_effect)
-			{this.play_attack_sound(damage_amount, damage_type, damage_flag);}
+			{this.play_attack_sound(damage_amount, damage_type);}
 		if (this.indestructible || this.obj_integrity <= 0) {return;}
 
 		damage_amount = this.run_obj_armor(
 			damage_amount,
 			damage_type,
 			damage_flag,
-			attack_dir
 		);
 		if (damage_amount < 0.1) {return;}
 		const old_integ = this.obj_integrity;
@@ -61,14 +58,14 @@ class Destructible extends Component {
 		}
 	}
 
-	run_obj_armor(damage_amount, damage_type, damage_flag) {
+	run_obj_armor(damage_amount: number, damage_type: string, damage_flag: string | number) {
 		if (damage_type !== "brute" && damage_type !== "burn") {return 0;}
 		let protection = 0;
 		if (damage_flag && this.armor) {protection = this.armor[damage_flag] || 0;}
 		return Math.floor(damage_amount * (100 - protection) * 0.1) * 0.1;
 	}
 
-	play_attack_sound(damage_amount, damage_type = "brute") {
+	play_attack_sound(damage_amount: any, damage_type = "brute") {
 		if (damage_type === "brute")
 			{if (damage_amount)
 				{new Sound(this.a.server, {
@@ -100,11 +97,11 @@ class Destructible extends Component {
 		this.deconstruct(false);
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: () => any, item: { c: { Item: { attack_obj: (arg0: any, arg1: any) => any; }; }; }, user: any) {
 		return prev() || (this.can_be_hit && item.c.Item.attack_obj(this.a, user));
 	}
 
-	attacked_by(item, user) {
+	attacked_by(item: { c: { Item: { force: any; damtype: string; }; }; }, user: any) {
 		if (item.c.Item.force)
 			{visible_message`<span class='danger'>The ${user} has hit the ${this.a} with the ${item}!</span>`.emit_from(
 				this.a
@@ -113,12 +110,12 @@ class Destructible extends Component {
 		this.take_damage(item.c.Item.force, item.c.Item.damtype, "melee", true);
 	}
 
-	throw_impacted_by(obj) {
+	throw_impacted_by(obj: { c: { Tangible: { throw_force: any; }; }; }) {
 		if (!has_component(obj, "Tangible")) {return;}
 		this.take_damage(obj.c.Tangible.throw_force, "brute", "melee", true);
 	}
 
-	bullet_act(prev, projectile) {
+	bullet_act(prev: () => any, projectile: { c: { Projectile: { hitsound: any; no_damage: any; damage: any; damage_type: string; flag: any; }; }; }) {
 		const ret = prev();
 		if (!has_component(this.a, "Wall"))
 			{new Sound(this.a.server, {
@@ -137,7 +134,7 @@ class Destructible extends Component {
 		return ret;
 	}
 
-	ex_act(prev, severity) {
+	ex_act(prev: () => void, severity: number) {
 		prev();
 		if (severity === 1) {
 			this.obj_integrity = 0;

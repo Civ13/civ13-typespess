@@ -1,3 +1,4 @@
+export{};
 const { Component, chain_func } = require("./../../../code/game/server.js");
 
 class MobMovement extends Component {

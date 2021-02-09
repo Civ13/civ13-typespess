@@ -1,3 +1,4 @@
+export{};
 const { Component } = require("./../../../../../../code/game/server.js");
 
 //TODO: var/fire_resist = T0C+100

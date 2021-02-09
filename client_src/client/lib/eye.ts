@@ -1,5 +1,4 @@
-/* eslint-disable max-lines */
-export{};
+/* eslint-disable max-lines */export{};
 const Atom = require("./atom.js");
 const EventEmitter = require("events");
 

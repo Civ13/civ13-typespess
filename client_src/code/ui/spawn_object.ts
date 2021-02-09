@@ -4,7 +4,7 @@ const { Atom } = require("../../client/index.js");
 class SpawnObjectPanel {
 	panel: any;
 	templates: any;
-	constructor(panel) {
+	constructor(panel: Record<string,any>) {
 		this.panel = panel;
 		this.panel.on("message", this.message_handler.bind(this));
 

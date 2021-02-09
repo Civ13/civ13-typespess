@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	has_component,

@@ -1,4 +1,5 @@
-const { Panel } = require("./../../../../../../code/game/server.js");
+export{};
+ } = require("./../../../../../../code/game/server.js");
 
 class StackCraftPanel extends Panel {
 	constructor(client, panel_props, civilization) {

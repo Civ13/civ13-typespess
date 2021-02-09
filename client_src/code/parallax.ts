@@ -2,7 +2,7 @@ export{};
 const { Atom, chain_func, Plane } = require("../client/index.js");
 
 module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
-	constructor(eye, id) {
+	constructor(eye: any, id: any) {
 		super(eye, id);
 		this.no_click = true;
 
@@ -71,7 +71,7 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 		super.draw_objects(timestamp);
 	}
 
-	composite_plane(eye_ctx, timestamp) {
+	composite_plane(eye_ctx: any, timestamp: any) {
 		const mctx = this.mask_canvas.getContext("2d");
 		mctx.clearRect(0, 0, eye_ctx.canvas.width, eye_ctx.canvas.height);
 		mctx.fillStyle = "#ffffff";

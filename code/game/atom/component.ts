@@ -10,8 +10,7 @@ const _networked_vars:any = Symbol("_networked_vars");
  * Should never be instanced directly.
  * @memberof Typespess
  * @abstract
- */
-export{};
+ */export{};
 class Component extends EventEmitter {
 	/**
   * @param {Typespess.Atom} atom

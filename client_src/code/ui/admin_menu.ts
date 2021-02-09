@@ -21,7 +21,7 @@ class AdminPanel {
 		});
 	}
 
-	message_handler(msg) {
+	message_handler(msg: Record<string,any>) {
 		if (msg.tools) {
 			this.tools = msg.tools;
 			this.populate_tools();

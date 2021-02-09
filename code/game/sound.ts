@@ -3,8 +3,8 @@ const { is_atom, has_component } = require("./utils.js");
 
 let idctr = 0;
 
-const _playing = Symbol("_playing");
-const _clients = Symbol("_clients");
+const _playing:any = Symbol("_playing");
+const _clients:any = Symbol("_clients");
 
 /**
  * @memberof Typespess

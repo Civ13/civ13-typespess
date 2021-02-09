@@ -1,6 +1,6 @@
+export{};
 const {
 	Component,
-	Atom,
 	has_component,
 } = require("./../../../../../../code/game/server.js");
 
@@ -13,7 +13,7 @@ class Belt extends Component {
 		this.a.on("exited", this.exited.bind(this));
 	}
 
-	entered(movement) {
+	entered(movement: Record<string,any>) {
 		const item = movement.atom;
 		if (has_component(item, "Item") && this.content_overlays)
 			{item.c.Item.apply_belt_overlay(this.a);}

@@ -1,5 +1,4 @@
-
-
+export{};
 const { Atom } = require("./../../../code/game/server.js");
 const _ = require("underscore");
 const first_names = require("../../../strings/names/first.json");
@@ -12,7 +11,7 @@ const {
 } = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class CharacterPreferences {
-	constructor(obj) {
+	constructor(obj: Record<string,any>) {
 		Object.assign(this, {
 			name: "asdf",
 			be_random_name: false,

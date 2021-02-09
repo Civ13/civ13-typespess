@@ -1,3 +1,4 @@
+export{};
 const { to_chat } = require("./../../../code/game/server.js");
 
 module.exports.now = function (server) {

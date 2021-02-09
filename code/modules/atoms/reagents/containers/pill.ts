@@ -1,3 +1,4 @@
+export{};
 const {
 	Component,
 	visible_message,

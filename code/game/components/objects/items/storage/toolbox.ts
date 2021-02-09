@@ -1,7 +1,6 @@
-const { Component, Atom } = require("./../../../../../../code/game/server.js");
+export{};
+const { Component} = require("./../../../../../../code/game/server.js");
 
-const _ = require("underscore");
-const { cable_colors } = require("../../../../../modules/power/cable.js");
 
 class Toolbox extends Component {
 	constructor(atom: any, template: any) {

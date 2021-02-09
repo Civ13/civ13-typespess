@@ -1,3 +1,4 @@
+export{};
 const { Component } = require("./../../../../../code/game/server.js");
 
 class BaseballBat extends Component {
