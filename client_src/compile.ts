@@ -8,9 +8,9 @@ const used_bundler = browserify({
 	cache: {},
 	packageCache: {},
 });
-used_bundler.bundle(function (err: Error, buf: any) {
-	if (err) {return console.log(err);}
-	fs.writeFile("../resources/client.js", buf, function (err: Error) {
-		if (err) {return console.log(err);}});
+used_bundler.bundle(function (err: string, buf: any) {
+	if (err) {throw new Error(err);}
+	fs.writeFile("../resources/client.js", buf, function (err: string) {
+		if (err) {throw new Error(err);}});
 });
 console.log("COMPILE: done.");

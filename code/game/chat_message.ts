@@ -7,6 +7,13 @@ const { format_html, has_component } = require("./utils.js");
  * @memberof Typespess
  */
 class ChatMessage {
+	msg_range: number;
+	type: any;
+	message: any;
+	self_message: string;
+	deaf_message: string;
+	blind_message: string;
+	emitter: any;
 	constructor(type, message) {
 		/**
 	* Should be 'see' or 'hear'

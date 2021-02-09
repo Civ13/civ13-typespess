@@ -1,4 +1,4 @@
-function enqueue_icon_meta_load(newIcon) {
+function enqueue_icon_meta_load(newIcon: string) {
 	if (!newIcon)
 		{newIcon = "icons/error.png";console.log("MISSING ICON: Icon not defined!");}
 	if (this.icon_meta_load_queue[newIcon]) {

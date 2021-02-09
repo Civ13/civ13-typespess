@@ -8,6 +8,8 @@ class PreferencesPanel {
 	panel: any;
 	char_prefs: any;
 	sprite_accessories: any;
+	job_preferences: any;
+	job_metas: any;
 	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.header_obj.classList.add("center");
@@ -237,6 +239,12 @@ class PreferencesPanel {
 		this.panel.on("message", this.handle_message.bind(this));
 
 		this.char_prefs = {};
+	}
+	skin_tones(skin_tones: any) {
+		throw new Error("Method not implemented.");
+	}
+	hair_colors(hair_colors: any) {
+		throw new Error("Method not implemented.");
 	}
 
 	show_tab(tab: any) {

@@ -98,7 +98,7 @@ class TypespessClient extends EventEmitter {
 		});
 	}
 
-	importModule(mod) {
+	importModule(mod: any) {
 		if (mod.components) {
 			for (const componentName in mod.components) {
 				if (Object.prototype.hasOwnProperty.call(mod.components,componentName)) {

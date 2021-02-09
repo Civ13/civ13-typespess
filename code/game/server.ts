@@ -98,7 +98,7 @@ class Typespess extends EventEmitter {
 	}
 
 	importComponents(mod: any) {
-		for (let componentName in mod.components) {
+		for (const componentName in mod.components) {
 			if (Object.prototype.hasOwnProperty.call(mod.components,componentName)) {
 				if (this.components[componentName]) {
 					throw new Error(`Component ${componentName} already exists!`);
@@ -113,11 +113,11 @@ class Typespess extends EventEmitter {
 	}
 
 	importTemplates (mod: any) {
-		for (let templateName in mod.templates) {
+		for (const templateName in mod.templates) {
 			if (!Object.prototype.hasOwnProperty.call(mod.templates,templateName)) {continue;}
 			if (this.templates[templateName])
 				{throw new Error(`Template ${templateName} already exists!`);}
-			var template = mod.templates[templateName];
+			const template = mod.templates[templateName];
 
 			this.templates[templateName] = template;
 		}

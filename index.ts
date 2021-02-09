@@ -91,12 +91,7 @@ global.Tserver.importModule(require("./code/modules/power/controller.js"));
 global.Tserver.importModule(require("./code/modules/power/lighting.js"));
 global.Tserver.importModule(require("./code/modules/power/machine.js"));
 global.Tserver.importModule(require("./code/modules/power/node.js"));
-global.Tserver.importModule(require("./code/modules/projectiles/ammunition/ammo_casings.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/ammunition/energy.js"));
-global.Tserver.importModule(require("./code/modules/projectiles/boxes_magazines/ammo_boxes.js"));
-global.Tserver.importModule(require("./code/modules/projectiles/boxes_magazines/external_mag.js"));
-global.Tserver.importModule(require("./code/modules/projectiles/guns/energy/laser.js"));
-global.Tserver.importModule(require("./code/modules/projectiles/guns/energy/stun.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/guns/ballistic.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/guns/energy.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/projectile/beam.js"));
@@ -164,7 +159,6 @@ if(global.is_bs_editor_env) {
 			let validated = {value: false, name: "none"};
 			const message_handler = (msg: string) => {
 				const obj = JSON.parse(msg);
-				console.log(obj);
 				if (obj.request_check === true) {database.authenticate(obj.name,obj.password).then(function(results: { value: boolean; name: string; }){validated=results;
 				if (validated.value === true && validated.name === obj.name) {console.log(`DB AUTH: user "${obj.name}" authorized`);ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));}
 				else  {console.log(`DB AUTH: user "${obj.name}" denied`);ws.send(JSON.stringify({ valid: false }));}});}

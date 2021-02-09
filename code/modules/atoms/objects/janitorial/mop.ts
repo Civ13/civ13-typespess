@@ -109,11 +109,4 @@ Mop.template = {
 	},
 };
 
-module.exports.templates = {
-	mop: {
-		components: ["Mop"],
-		tree_paths: ["items/mop"],
-	},
-};
-
 module.exports.components = { Mop };

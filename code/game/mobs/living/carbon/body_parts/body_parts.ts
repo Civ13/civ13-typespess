@@ -311,7 +311,7 @@ class BodyPart extends Component {
 			{icodir = 3;}
 		else if (icodir ===8)
 			{icodir = 4;}
-		const overlay = { icon: `icons/mob/human_body/${this.body_zone}_m/${this.body_zone}_m-dir${icodir}.png` };
+		const overlay = { icon: `icons/mob/human_body/${this.body_zone}_m/${this.body_zone}_m-dir${icodir}.png`, icon_state: "" };
 		overlay.icon_state = this.body_zone;
 		if (this.species_id)
 			{overlay.icon_state = `${this.species_id}_${overlay.icon_state}`;}

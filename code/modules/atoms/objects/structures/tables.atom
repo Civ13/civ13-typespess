@@ -1,0 +1,72 @@
+module.exports.templates =
+	table:
+		components: ["TGSmooth", "Table"]
+		tree_paths: ["structures/table"]
+	
+	wood_table:
+		components: ["TGSmooth", "Table"]
+		vars:
+			components:
+				Table:
+					frame: "wood_table_frame"
+					table_material: "wood_sheet"
+				
+				Smooth:
+					smooth_with: "table_wood"
+				
+				SmoothGroup:
+					groups: ["table_wood"]
+				
+				Destructible:
+					max_integrity: 70
+				
+				Examine:
+					desc: "Do not apply fire to this. Rumour says it burns easily."
+				
+			
+			name: "wooden table"
+			icon: "icons/obj/structures/tables/"
+			icon_state: "wood_table"
+		
+		tree_paths: ["structures/table/wood"]
+	
+	reinforced_table:
+		components: ["TGSmooth", "Table"]
+		vars:
+			components:
+				Table:
+					deconstruction_ready: false
+					table_material: "plasteel_sheet"
+					reinforced: true
+				
+				Smooth:
+					smooth_with: "table_reinforced"
+				
+				SmoothGroup:
+					groups: ["table_reinforced"]
+				
+				Destructible:
+					max_integrity: 200
+					integrity_failure: 50
+					armor:
+						melee: 10
+						bullet: 30
+						laser: 30
+						energy: 100
+						bomb: 20
+						bio: 0
+						rad: 0
+						fire: 80
+						acid: 70
+					
+				
+				Examine:
+					desc: "A reinforced version of the four legged table."
+				
+			
+			name: "reinforced table"
+			icon: "icons/obj/structures/tables/"
+			icon_state: "reinftable"
+		
+		tree_paths: ["structures/table/reinforced"]
+	

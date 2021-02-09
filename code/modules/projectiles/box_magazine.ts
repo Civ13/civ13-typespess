@@ -227,11 +227,5 @@ GunMagazine.template = {
 	},
 };
 
-module.exports.templates = {
-	ammo_box: {
-		components: ["AmmoBox"],
-		tree_paths: ["items/ammo_box"],
-	},
-};
 
 module.exports.components = { AmmoBox, GunMagazine };

@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 
 
 export{};
@@ -679,7 +680,8 @@ class MobInventory extends Component {
 
 
 	accident() {
-		for (const slot of Object.values(this.slots)) {
+		for (const tslot of Object.values(this.slots)) {
+			const slot: any = tslot;
 			if (!slot.props.is_hand_slot || !slot.can_unequip()) {return;}
 			if (!slot.item) {continue;}
 			slot.item = null;
@@ -708,7 +710,8 @@ class MobInventory extends Component {
 
 	get_covered_slots() {
 		const set = new Set();
-		for (const slot of Object.values(this.slots)) {
+		for (const nslot of Object.values(this.slots)) {
+			const slot: any = nslot;
 			if (
 				!slot.props.clothing_slot ||
 		!has_component(slot.item, slot.props.clothing_slot)
@@ -722,7 +725,7 @@ class MobInventory extends Component {
 	}
 
 
-	mouse_dragged_to(e: { mob: { c: { Tangible: { can_reach: (arg0: any) => any; }; }; }; from: { atom: any; }; to: { atom: any; }; }) {
+	mouse_dragged_to(e: any) {
 		const user = e.mob;
 		if (
 			e.from.atom === this.a &&

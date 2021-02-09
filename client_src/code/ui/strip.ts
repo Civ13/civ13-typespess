@@ -15,8 +15,7 @@ class StripPanel {
 		this.cached_appearances = {};
 	}
 
-	handle_message(msg) {
-		console.log(msg);
+	handle_message(msg: any) {
 		if (msg.layout) {
 			const table = this.panel.$(".item-table");
 			let i = 0;

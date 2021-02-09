@@ -17,8 +17,7 @@ class MachineWirePanel {
 		`;
 	}
 
-	handle_message(msg) {
-		console.log(msg);
+	handle_message(msg: any) {
 		if (msg.wires) {
 			for (const wire of msg.wires) {
 				if (!this.panel.$(`.wire-color-${wire.color}`)) {

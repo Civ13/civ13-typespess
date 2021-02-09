@@ -35,10 +35,7 @@ function dirIt(directory: string) {
 
 		return files;
 
-	} catch(ex) {
-		console.log(ex);
-		return "";
-	}
+	} catch(ex) {throw new Error(ex);}
 }
 
 let preloadlist = dirIt("../resources/icons/ui/");

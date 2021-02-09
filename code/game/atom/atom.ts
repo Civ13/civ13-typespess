@@ -1623,10 +1623,8 @@ set directional(val) {
 		const submessage = {
 			component_vars: {},
 			components: [],
-			toString() {
-				return JSON.stringify(this);
-			},
-		};
+			toString() {return JSON.stringify(this);},
+};
 		for (const key of [
 			"icon",
 			"icon_state",
@@ -1664,9 +1662,7 @@ set directional(val) {
 		return submessage;
 	}
 
-	toString() {
-		return this.name;
-	}
+	toString() {return this.name;}
 
 	/**
   * Deletes this object from the world.

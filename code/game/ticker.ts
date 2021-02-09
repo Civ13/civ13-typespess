@@ -73,7 +73,8 @@ class GameTicker extends EventEmitter {
 			Object.values(this.server.clients)
 		);
 		stoplag();
-		for (const client of Object.values(this.server.clients)) {
+		for (const tclient of Object.values(this.server.clients)) {
+			const client: Record<string,any> = tclient;
 			if (
 				has_component(client.mob, "NewPlayer") &&
 		client.mob.c.NewPlayer.new_player_panel &&

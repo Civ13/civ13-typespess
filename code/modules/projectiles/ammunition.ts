@@ -144,11 +144,5 @@ AmmoCasing.template = {
 	},
 };
 
-module.exports.templates = {
-	ammo_casing: {
-		components: ["AmmoCasing"],
-		tree_paths: ["items/ammo_casing"],
-	},
-};
 
 module.exports.components = { AmmoCasing };
