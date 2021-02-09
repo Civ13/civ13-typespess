@@ -1,3 +1,4 @@
+export{};
 const { Component, Atom } = require("../server.js");
 
 const _enabled = Symbol("_enabled");

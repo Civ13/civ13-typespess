@@ -1,5 +1,5 @@
+export{};
 const EventEmitter = require("events");
-
 class Component extends EventEmitter {
 	constructor(atom: any, template: any) {
 		super();

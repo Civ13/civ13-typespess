@@ -48,8 +48,8 @@ class Atom extends EventEmitter {
 				);
 				continue;
 			}
-			const ctor = client.components[component_name];
-			this.components[component_name] = new ctor(
+			const Ctor = client.components[component_name];
+			this.components[component_name] = new Ctor(
 				this,
 				instobj.component_vars ? instobj.component_vars[component_name] : {}
 			);
@@ -72,6 +72,7 @@ class Atom extends EventEmitter {
 	}
 
 	get_plane_id() {
+		// eslint-disable-next-line eqeqeq -- otherwise it wont work
 		if (this.screen_loc_x != null || this.screen_loc_y != null) {return "ui";}
 		return "";
 	}
@@ -127,6 +128,7 @@ class Atom extends EventEmitter {
 	get_displacement(timestamp: any) {
 		let dispx = 0;
 		let dispy = 0;
+		// eslint-disable-next-line eqeqeq
 		if (this.screen_loc_x != null) {
 			dispx = this.screen_loc_x;
 			dispy = this.screen_loc_y;
@@ -144,7 +146,7 @@ class Atom extends EventEmitter {
 		return { dispx, dispy };
 	}
 
-	get_transform(timestamp: any) {
+	get_transform() {
 		return Matrix.identity;
 	}
 
@@ -184,7 +186,7 @@ class Atom extends EventEmitter {
 		}
 	}
 
-	get_bounds(timestamp: any) {
+	get_bounds() {
 		let bounds = this.main_icon_renderer.get_bounds();
 		for (const overlay of this.overlay_renderers_list) {
 			const overlay_bounds = overlay.get_bounds();
@@ -213,9 +215,9 @@ class Atom extends EventEmitter {
 		return bounds;
 	}
 
-	get_transformed_bounds(timestamp: any) {
-		const transform = this.get_transform(timestamp);
-		const bounds = this.get_bounds(timestamp);
+	get_transformed_bounds() {
+		const transform = this.get_transform();
+		const bounds = this.get_bounds();
 		if (!bounds) {return bounds;}
 		const corners = [
 			[bounds.x, bounds.y],
@@ -225,7 +227,7 @@ class Atom extends EventEmitter {
 		];
 		let [left, right, top, bottom] = [Infinity, -Infinity, -Infinity, Infinity];
 		for (const corner of corners) {
-			const transformed_corner = transform.multiply([
+			const transformed_corner = transform.multiply_array([
 				corner[0] - 0.5,
 				corner[1] - 0.5,
 			]);

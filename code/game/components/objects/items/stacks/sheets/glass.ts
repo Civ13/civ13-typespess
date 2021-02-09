@@ -1,3 +1,4 @@
+export{};
 const {
 	Component,
 	Atom,

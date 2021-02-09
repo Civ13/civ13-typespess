@@ -1,4 +1,4 @@
-const defines = {};
+const defines: Record<string,any> = {};
 defines.R_IDEAL_GAS_EQUATION = 8.31; // kPa*L/(K*mol)
 defines.ONE_ATMOSPHERE = 101.325; //kPa
 defines.T0C = 273.15; // 0degC

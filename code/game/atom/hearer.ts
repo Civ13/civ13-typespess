@@ -1,3 +1,4 @@
+export{};
 const Component = require("./component.js");
 
 const _visible_tiles = Symbol("_visible_tiles");

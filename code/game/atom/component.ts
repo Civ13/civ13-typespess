@@ -11,6 +11,7 @@ const _networked_vars = Symbol("_networked_vars");
  * @memberof Typespess
  * @abstract
  */
+export{};
 class Component extends EventEmitter {
 	/**
   * @param {Typespess.Atom} atom

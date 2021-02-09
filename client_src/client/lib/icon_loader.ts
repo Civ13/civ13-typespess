@@ -5,7 +5,7 @@ function enqueue_icon_meta_load(newIcon) {
 		return this.icon_meta_load_queue[newIcon];
 	}
 	const promise = new Promise((resolve, reject) => {	
-		const meta = {};
+		const meta: Record<string,any> = {};
 		meta.width = 32;
 		meta.height = 32;
 		meta.__image_object = new Image();

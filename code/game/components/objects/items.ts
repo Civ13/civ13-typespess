@@ -1,4 +1,5 @@
 
+export{};
 const _slot = Symbol("_slot");
 const {
 	Component,

@@ -1,3 +1,4 @@
+export{};
 const { format_html, has_component } = require("./utils.js");
 
 /** @typedef {ChatMessage} Typespess.ChatMessage */

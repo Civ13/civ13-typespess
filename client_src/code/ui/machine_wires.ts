@@ -1,6 +1,8 @@
 
 
 class MachineWirePanel {
+	panel: any;
+	item_type: string;
 	constructor(panel) {
 		this.panel = panel;
 		this.panel.on("message", this.handle_message.bind(this));

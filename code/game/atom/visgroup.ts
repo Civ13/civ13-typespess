@@ -1,3 +1,4 @@
+export{};
 const { chain_func } = require("../utils.js");
 const mob_symbols = require("./mob.js")._symbols;
 

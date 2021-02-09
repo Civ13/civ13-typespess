@@ -1,3 +1,4 @@
+export{};
 const Panel = require("./panel.js");
 const EventEmitter = require("events");
 

@@ -1,3 +1,4 @@
+export{};
 class ReagentBinding {
 	constructor(panel, elem, props) {
 		Object.assign(

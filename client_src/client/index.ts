@@ -210,6 +210,7 @@ class TypespessClient extends EventEmitter {
 		const timestamp = performance.now();
 		if (obj.create_atoms) {
 			for (let i = 0; i < obj.create_atoms.length; i++) {
+				// eslint-disable-next-line no-new
 				new Atom(this, obj.create_atoms[i]);
 			}
 		}

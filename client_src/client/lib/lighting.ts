@@ -54,6 +54,7 @@ class LightingObject extends Component {
 
 	draw(ctx: { globalCompositeOperation: string; drawImage: (arg0: any, arg1: number, arg2: number) => void; }, timestamp: any) {
 		if (
+			// eslint-disable-next-line eqeqeq
 			this.atom.screen_loc_x != null || this.radius !== +this.radius || !this.enabled
 		)
 			{return;}
@@ -206,6 +207,7 @@ class LightingObject extends Component {
 						path.push([cx + x1 * sx, cy + y2 * sy]);
 						path.push([cx + (x1 + wall.base_width) * sx, cy + y2 * sy]);
 					} else {
+						// eslint-disable-next-line eqeqeq
 						flip = sx != sy;
 						path.push([
 							cx + (x1 + wall.base_width) * sx,

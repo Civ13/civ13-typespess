@@ -1,4 +1,4 @@
-function get_audio_buffer(url) {
+function get_audio_buffer(url: any) {
 	const old_buf = this.audio_buffers.get(url);
 	if (old_buf) {return old_buf;}
 

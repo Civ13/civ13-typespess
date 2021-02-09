@@ -1,6 +1,5 @@
-const {
-	Component,
-} = require("./../../../../code/game/server.js");
+export{};
+const {Component} = require("./../../../../code/game/server.js");
 
 const combat_defines = require("../../../defines/combat_defines.js");
 const mob_defines = require("../../../defines/mob_defines.js");

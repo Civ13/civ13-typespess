@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
-
+export{};
 class LatejoinPanel {
 	panel: any;
 	job_elems: {};

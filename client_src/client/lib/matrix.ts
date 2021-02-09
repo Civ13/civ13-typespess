@@ -24,9 +24,7 @@ class Matrix {
 			d1 = this.d,
 			e1 = this.e,
 			f1 = this.f;
-		if (m2 instanceof Array) {
-			return [m2[0] * a1 + m2[1] * c1 + e1, m2[0] * b1 + m2[1] * d1 + f1];
-		}
+
 		const a2 = m2.a,
 			b2 = m2.b,
 			c2 = m2.c,
@@ -43,7 +41,17 @@ class Matrix {
 			b1 * e2 + f1 + d1 * f2
 		);
 	}
-
+	multiply_array(m2: Array<number>) {
+		const a1 = this.a,
+			b1 = this.b,
+			c1 = this.c,
+			d1 = this.d,
+			e1 = this.e,
+			f1 = this.f;
+		if (m2 instanceof Array) {
+			return [m2[0] * a1 + m2[1] * c1 + e1, m2[0] * b1 + m2[1] * d1 + f1];
+		}
+	}
 	inverse() {
 		const a = this.a,
 			b = this.b,

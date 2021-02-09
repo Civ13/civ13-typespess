@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 export{};
 const Atom = require("./atom.js");
 const EventEmitter = require("events");
@@ -112,7 +113,7 @@ class Eye extends EventEmitter {
 				[localX, localY] = atom
 					.get_transform(timestamp)
 					.inverse()
-					.multiply([localX - 0.5, localY - 0.5]);
+					.multiply_array([localX - 0.5, localY - 0.5]);
 				localX += 0.5;
 				localY += 0.5;
 				const bounds = atom.get_bounds(timestamp);
@@ -427,7 +428,7 @@ class Plane {
 		}
 
 		for (const natom of this.atoms) {
-			let atom: any = natom;
+			const atom: any = natom;
 			let add_to_tiles = false;
 			if (this.last_draw.has(atom)) {
 				if (!this.dirty_atoms.has(atom)) {continue;}
@@ -485,7 +486,7 @@ class Plane {
 
 		for (const natom of [...this.atoms].sort(Atom.atom_comparator)) {
 			if (!natom) {continue;}
-			let atom: any = natom;
+			const atom: any = natom;
 			const bounds = atom.get_transformed_bounds(timestamp);
 			if (!bounds) {continue;}
 			let { dispx, dispy } = atom.get_displacement(timestamp);

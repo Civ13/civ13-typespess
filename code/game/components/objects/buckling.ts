@@ -1,5 +1,6 @@
 
 
+export{};
 const {
 	Component,
 	chain_func,

@@ -1,5 +1,6 @@
 
 
+export{};
 const { Component, has_component } = require("./../../../../code/game/server.js");
 
 const _pulling = Symbol("_pulling");

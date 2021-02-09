@@ -1,4 +1,4 @@
-
+export{};
 const ReagentBinding = require("./reagent_binding.js");
 
 class ChemDispenserPanel {

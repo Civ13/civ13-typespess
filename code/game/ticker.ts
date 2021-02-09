@@ -1,4 +1,5 @@
 
+export{};
 const EventEmitter = require("events");
 const {
 	make_watched_property,
