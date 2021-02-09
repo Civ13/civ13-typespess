@@ -6,7 +6,8 @@ class Matrix {
 	d;
 	e;
 	f;
-	constructor(a, b, c, d, e, f) {
+	static identity: Matrix;
+	constructor(a: number, b: number, c: number, d: number, e: number, f: number) {
 		this.a = a;
 		this.b = b;
 		this.c = c;
@@ -16,7 +17,7 @@ class Matrix {
 		Object.freeze(this);
 	}
 
-	multiply(m2) {
+	multiply(m2: Matrix) {
 		const a1 = this.a,
 			b1 = this.b,
 			c1 = this.c,
@@ -61,11 +62,11 @@ class Matrix {
 		);
 	}
 
-	translate(dx = 0, dy) {
+	translate(dx = 0, dy: number) {
 		return this.multiply(new Matrix(1, 0, 0, 1, dx, dy));
 	}
 
-	rotate(angle, ox = 0, oy = 0) {
+	rotate(angle: number, ox = 0, oy = 0) {
 		const c = Math.cos(angle);
 		const s = Math.sin(angle);
 		return this.translate(-ox, -oy)
@@ -73,14 +74,14 @@ class Matrix {
 			.translate(ox, oy);
 	}
 
-	scale(sx, sy, ox = 0, oy = 0) {
+	scale(sx: any, sy: any, ox = 0, oy = 0) {
 		if (typeof sy === "undefined") {sy = sx;}
 		return this.translate(-ox, -oy)
 			.multiply(new Matrix(sx, 0, 0, sy, 0, 0))
 			.translate(ox, oy);
 	}
 
-	equals(other) {
+	equals(other: { a: any; b: any; c: any; d: any; e: any; f: any; }) {
 		return (
 			other.a === this.a &&
 			other.b === this.b &&

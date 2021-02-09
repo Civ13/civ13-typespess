@@ -110,6 +110,7 @@
 			"no-func-assign": "error",
 			"no-iterator": "error",
 			"no-loop-func": "error",
+			"no-new": "error",
 			"no-mixed-spaces-and-tabs": "error",
 			"no-redeclare": "error",
 			"no-undefined": "warn",

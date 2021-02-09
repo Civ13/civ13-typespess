@@ -1,15 +1,15 @@
+export{};
 const EventEmitter = require("events");
-
 class Panel extends EventEmitter {
 	constructor(
-		manager,
-		id,
+		manager: any,
+		id: string | number,
 		{
 			width = 400,
 			height = 400,
 			title = "",
 			can_close = true,
-			content_class,
+			content_class = "",
 		} = {}
 	) {
 		super();
@@ -67,7 +67,7 @@ class Panel extends EventEmitter {
 			this.close_button.addEventListener("click", () => {
 				this.close();
 			});
-			this.close_button.addEventListener("mousedown", (e) => {
+			this.close_button.addEventListener("mousedown", (e: any) => {
 				e.preventDefault();
 			});
 		}
@@ -79,7 +79,7 @@ class Panel extends EventEmitter {
 		}
 	}
 
-	_start_drag(e) {
+	_start_drag(e: any) {
 		if (e.defaultPrevented) {return;}
 		if (e.target !== this.header_obj) {
 			return;
@@ -89,7 +89,7 @@ class Panel extends EventEmitter {
 		this.panel_obj.focus();
 		let lastclientx = e.clientX;
 		let lastclienty = e.clientY;
-		const mousemove = (e) => {
+		const mousemove = (e: any) => {
 			const dx = e.clientX - lastclientx;
 			const dy = e.clientY - lastclienty;
 			lastclientx = e.clientX;
@@ -113,19 +113,20 @@ class Panel extends EventEmitter {
 		this.mouseup(mousemove);
 	}
 
-	_resize_meta(e) {
+	_resize_meta(e: any) {
 		const out = {
 			drag_right: false,
 			drag_left: false,
 			drag_up: false,
 			drag_down: false,
 			cursor: "default",
+			can_resize: false,
 		};
 		this.e_target_in_container(e, out);
 		out.can_resize = out.drag_right || out.drag_left || out.drag_up || out.drag_down;
 		return out;
 	}
-	e_target_in_container(e, out) {
+	e_target_in_container(e: any, out: Record<string,any>) {
 		const pad = (this.container_obj.offsetWidth - this.panel_obj.offsetWidth) / 2;
 		const width = this.panel_obj.offsetWidth;
 		const height = this.panel_obj.offsetHeight;
@@ -142,7 +143,7 @@ class Panel extends EventEmitter {
 		else if (out.drag_up || out.drag_down) {out.cursor = "ns-resize";}
 		}
 	}
-	_start_resize(e) {
+	_start_resize(e: any) {
 		// bring the panel into focus
 		if (this.container_obj !== document.getElementById("uiframes-container").lastChild)
 			{document.getElementById("uiframes-container").appendChild(this.container_obj);}
@@ -154,7 +155,7 @@ class Panel extends EventEmitter {
 		this.panel_obj.focus();
 		let lastclientx = e.clientX;
 		let lastclienty = e.clientY;
-		const mousemove = (e) => {
+		const mousemove = (e: any) => {
 			const dx = e.clientX - lastclientx;
 			const dy = e.clientY - lastclienty;
 			lastclientx = e.clientX;
@@ -180,8 +181,8 @@ class Panel extends EventEmitter {
 		this.mouseup(mousemove);
 	}
 
-	mouseup(mousemove) {
-		var mouseup = () => {
+	mouseup(mousemove: any) {
+		const mouseup = () => {
 			document.removeEventListener("mousemove", mousemove);
 			document.removeEventListener("mouseup", mouseup);
 		};
@@ -189,7 +190,7 @@ class Panel extends EventEmitter {
 		document.addEventListener("mouseup", mouseup);
 	}
 
-	_container_mousemove(e) {
+	_container_mousemove(e:any) {
 		const resize_meta = this._resize_meta(e);
 		this.container_obj.style.cursor = resize_meta.cursor;
 	}
@@ -205,7 +206,7 @@ class Panel extends EventEmitter {
 		this.title_node.textContent = val;
 	}
 
-	send_message(message) {
+	send_message(message: Record<string,unknown>) {
 		if (!this.id) {throw new Error("Cannot send a panel message without an ID!");}
 		this.manager.send_message({
 			message: [{ id: this.id, contents: message }],
@@ -224,7 +225,7 @@ class Panel extends EventEmitter {
 		this.emit("close");
 	}
 
-	click(e) {
+	click(e:any) {
 		const target = e.target.closest(".button");
 		if (this.is_valid_button(target)) {
 			if (target.dataset.message) {
@@ -252,7 +253,7 @@ class Panel extends EventEmitter {
 		}
 	}
 
-	is_valid_button(elem) {
+	is_valid_button(elem: any) {
 		return (
 			elem &&
 	elem.classList &&
@@ -262,21 +263,20 @@ class Panel extends EventEmitter {
 		);
 	}
 
-	$(sel) {
+	$(sel: any) {
 		return this.content_obj.querySelector(sel);
 	}
-	$$(sel) {
+	$$(sel: any) {
 		return this.content_obj.querySelectorAll(sel);
 	}
 }
 
-function build_message(path, val) {
-	let obj = {};
+function build_message(path: string, val: any) {
+	let obj: Record<string,any>;
 	const ret_obj = obj;
 	const split = path.split(/./g);
-	for (let i = 0; i < split.length - 1; i++) {
-		obj[split[i]] = obj = {};
-	}
+	for (let i = 0; i < split.length - 1; i++)
+		{obj[split[i]] = obj = {};}
 	obj[split[split.length - 1]] = val;
 	return ret_obj;
 }
