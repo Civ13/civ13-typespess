@@ -1,6 +1,6 @@
 export{};
 class Sound {
-	emit_from(a: any) {
+	emit_from() {
 		throw new Error("Method not implemented.");
 	}
 	client: any;

@@ -2,7 +2,7 @@
 	"name": "civ13",
 	"version": "0.0.1",
 	"description": "civ13 in typespess",
-	"main": "index.ts",
+	"main": "index.js",
 	"author": "taislin",
 	"license": "AGPL-3.0",
 	"repository": {
@@ -74,11 +74,11 @@
 			],
 			"max-depth": [
 				"warn",
-				4
+				5
 			],
 			"max-params": [
 				"warn",
-				4
+				6
 			],
 			"max-nested-callbacks": [
 				"warn",
@@ -117,7 +117,8 @@
 			"semi": "error",
 			"use-isnan": "error",
 			"valid-typeof": "error",
-			"wrap-iife": "error"
+			"wrap-iife": "error",
+			"node/no-unpublished-require": 0
 		}
 	}
 }
