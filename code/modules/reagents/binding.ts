@@ -7,7 +7,7 @@ class ReagentBinding {
 	include_holder_name: any;
 	sent_props: any;
 	path: any;
-	constructor(panel, holder, props) {
+	constructor(panel: any, holder: any, props: any) {
 		this.panel = panel;
 		this.reagent_holder = holder;
 		Object.assign(
@@ -64,7 +64,7 @@ class ReagentBinding {
 		});
 	}
 
-	added(reagent) {
+	added(reagent: { [x: string]: any; constructor: { name: string | number; }; }) {
 		if (
 			!this.reagent_holder.c.ReagentHolder.reagents.has(
 				reagent.constructor.name
@@ -102,7 +102,7 @@ class ReagentBinding {
 		if (this.panel.is_open) {this.send_message(msg);}
 	}
 
-	send_message(obj) {
+	send_message(obj: { temperature?: any; total_volume?: any; maximum_volume?: any; reagents?: {} | {}; }) {
 		const sent_obj = {};
 		let curr_obj = sent_obj;
 		const split = this.path.split(".");

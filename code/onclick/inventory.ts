@@ -477,7 +477,7 @@ class MobInventory extends Component {
 		make_watched_property(this, "handcuffed");
 	}
 
-	add_slot(id, appearance, props) {
+	add_slot(id: string, appearance: { icon: string; icon_state: string; screen_loc_x: number; screen_loc_y: number; layer: number; name: string; }, props: { is_hand_slot?: boolean; worn_layer?: number; visible?: boolean; wear_verb?: string; wear_prep?: string; wear_noun?: string; strip_panel_name?: string; clothing_slot?: string; requires_slot?: string; max_size?: number; requires_slot_prefix?: string; strip_desc?: string; wear_noun_slot?: string; }) {
 		const slotatom = new Atom(this.a.server, { vars: appearance });
 		this[_slots][id] = new Slot(this.atom, id, slotatom, props);
 	}
@@ -506,7 +506,7 @@ class MobInventory extends Component {
 		return this[_active_hand];
 	}
 
-	examine_slots(user) {
+	examine_slots(user: any) {
 		const t_He = this.a.p_they(true);
 		const t_his = this.a.p_their();
 		const t_has = this.a.p_have();
@@ -533,7 +533,7 @@ class MobInventory extends Component {
 		}
 	}
 
-	keydown(e) {
+	keydown(e: any) {
 		if (e.which === 88) {
 			// x
 			this.swap_hands();
@@ -569,7 +569,7 @@ class MobInventory extends Component {
 			: "act_throw_off";
 	}
 
-	throw_item(target) {
+	throw_item(target: any) {
 		this.throw_mode = false;
 		if (!this.slots[this.active_hand].can_unequip()) {return;}
 		if (!this.slots[this.active_hand].item) {return;}
@@ -591,7 +591,7 @@ class MobInventory extends Component {
 		}
 	}
 
-	put_in_hands(item) {
+	put_in_hands(item: any) {
 		let slot = this[_slots][this.active_hand];
 		if (slot.can_accept_item(item)) {
 			slot.item = item;
@@ -627,7 +627,7 @@ class MobInventory extends Component {
 		}
 	}
 
-	can_use_guns(gun) {
+	can_use_guns(gun: { c: { Gun: { trigger_guard: any; }; }; }) {
 		if (
 			gun.c.Gun.trigger_guard !== combat_defines.TRIGGER_GUARD_ALLOW_ALL &&
 	!this.a.c.MobInteract.advanced_tool_user
@@ -644,7 +644,7 @@ class MobInventory extends Component {
 		return this.handcuffable;
 	}
 
-	handcuffed_changed(from, to) {
+	handcuffed_changed(from: any, to: any) {
 		if (from) {
 			this.a.c.MobHud.clear_alert("handcuffed");
 			this.a.overlays.handcuffed = null;
@@ -694,7 +694,7 @@ class MobInventory extends Component {
 		return if_no_id;
 	}
 
-	identifiable(prev) {
+	identifiable(prev: () => any) {
 		for (const slot of Object.values(this.slots)) {
 			if (
 				slot.props.clothing_slot &&
@@ -722,7 +722,7 @@ class MobInventory extends Component {
 	}
 
 
-	mouse_dragged_to(e) {
+	mouse_dragged_to(e: { mob: { c: { Tangible: { can_reach: (arg0: any) => any; }; }; }; from: { atom: any; }; to: { atom: any; }; }) {
 		const user = e.mob;
 		if (
 			e.from.atom === this.a &&
@@ -743,7 +743,7 @@ class MobInventory extends Component {
 		}
 	}
 
-	strip_panel_equip(mob, slot) {
+	strip_panel_equip(mob: any, slot: { item: any; can_accept_item: (arg0: any) => any; props: { visible: any; strip_desc: any; }; on: (arg0: string, arg1: any) => void; removeListener: (arg0: string, arg1: any) => void; }) {
 		if (slot.item) {return;}
 		const this_slot = this.slots[this.active_hand];
 		if (!this_slot) {return;}
@@ -777,7 +777,7 @@ class MobInventory extends Component {
 		this.do_after({
 			delay,
 			target: mob,
-			extra_checks: (cancel) => {
+			extra_checks: (cancel: any) => {
 				slot.on("item_changed", cancel);
 				return () => {
 					slot.removeListener("item_changed", cancel);
@@ -794,7 +794,7 @@ class MobInventory extends Component {
 			if (slot.can_accept_item(this_item)) {slot.item = this_item;}
 		});
 	}
-	strip_panel_unequip(mob, slot) {
+	strip_panel_unequip(mob: { fine_loc: any; }, slot: { item: any; can_unequip: () => any; visible: any; props: { visible: any; strip_desc: any; }; on: (arg0: string, arg1: any) => void; removeListener: (arg0: string, arg1: any) => void; }) {
 		const item = slot.item;
 		if (!item) {return;}
 		if (!slot.can_unequip()) {
@@ -816,7 +816,7 @@ class MobInventory extends Component {
 		this.do_after({
 			delay: item.c.Item.strip_delay,
 			target: mob,
-			extra_checks: (cancel) => {
+			extra_checks: (cancel: any) => {
 				slot.on("item_changed", cancel);
 				return () => {
 					slot.removeListener("item_changed", cancel);
@@ -848,12 +848,12 @@ class MobInventory extends Component {
 			if (!(target instanceof Array)) {target = [target];}
 			target = target.slice();
 			target.push(this.a);
-			let remove_callbacks = null;
+			let remove_callbacks: { (): void; (): void; } = null;
 			const timeout = setTimeout(() => {
 				remove_callbacks();
 				resolve(true);
 			}, delay);
-			const callback_removers = [];
+			const callback_removers: { (): void; (): void; (): void; }[] = [];
 			remove_callbacks = () => {
 				for (const remover of callback_removers) {remover();}
 			};
@@ -911,7 +911,7 @@ Atom.prototype.attack_hand = () => {return;};
 Atom.prototype.attack_by = () => {return;};
 
 class Slot extends EventEmitter {
-	constructor(mob, id, atom, props) {
+	constructor(mob: any, id: any, atom: any, props: any) {
 		super();
 		Object.defineProperty(this, "mob", {
 			enumerable: false,
@@ -937,7 +937,7 @@ class Slot extends EventEmitter {
 		this.atom.on("mouse_dropped_by", this.mouse_dropped_by.bind(this));
 	}
 
-	clicked(e) {
+	clicked(e: any) {
 		if (this.props.is_hand_slot) {
 			if (this.mob.c.MobInventory.active_hand === this.id) {
 				if (this.item) {this.item.c.Item.attack_self(this.mob);}
@@ -963,7 +963,7 @@ class Slot extends EventEmitter {
 		}
 	}
 
-	mouse_dropped_by(e) {
+	mouse_dropped_by(e: { from: { atom: { c: { Item: { slot: { mob: any; }; }; }; }; }; }) {
 		if (
 			this.props.is_hand_slot &&
 	this.can_accept_item(e.from.atom) &&
@@ -1019,7 +1019,7 @@ class Slot extends EventEmitter {
 
 		}	
 	}
-	can_accept_item(item) {
+	can_accept_item(item: { c: { Item: { slot: { can_unequip: () => any; }; size: number; }; }; }) {
 		if (!has_component(item, "Item")) {return false;}
 		if (this.item) {return false;}
 		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return false;}
@@ -1068,7 +1068,7 @@ class Slot extends EventEmitter {
 		return true;
 	}
 
-	equip_or_del(item) {
+	equip_or_del(item: { destroy: () => void; }) {
 		if (!this.can_accept_item(item)) {
 			if (is_atom(item)) {item.destroy();}
 			return;

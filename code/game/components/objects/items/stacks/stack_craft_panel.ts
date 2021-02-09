@@ -14,7 +14,7 @@ class StackCraftPanel extends Panel {
 		this.amount_changed = this.amount_changed.bind(this);
 	}
 
-	recipe_build_limit_changed(e) {
+	recipe_build_limit_changed(e: any) {
 		this.send_message({
 			build_limit: { index: e.index, build_limit: e.recipe.build_limit },
 		});

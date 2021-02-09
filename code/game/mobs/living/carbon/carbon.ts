@@ -252,7 +252,7 @@ class CarbonMob extends Component.Networked {
 		this.update_lying(old, val);
 	}
 
-	moved(e) {
+	moved(e: any) {
 		if (
 			!!(e.old.loc && e.old.loc.is_base_loc) !==
 	!!(e.old.loc && e.old.loc.is_base_loc)

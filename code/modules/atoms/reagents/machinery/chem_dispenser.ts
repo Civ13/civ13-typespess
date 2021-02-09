@@ -83,7 +83,7 @@ class ChemDispenser extends Component {
 		this.emit("dispense_amount_changed", old, val);
 	}
 
-	exited(e) {
+	exited(e: any) {
 		if (e.atom === this.beaker) {this.beaker = null;}
 	}
 }

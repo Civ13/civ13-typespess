@@ -40,12 +40,12 @@ class MobInteract extends Component {
 		this.a.c.Eye.screen.move_intent.on("clicked", () => {
 			this.move_intent();
 		});
-		this.on("nointeract_counter_changed", (from, to) => {
+		this.on("nointeract_counter_changed", (from: any, to: any) => {
 			if ((from && !to) || (to && !from)) {this.a.c.MobHud.update_buttons();}
 		});
 	}
 
-	click_on(e) {
+	click_on(e: any) {
 		if (e.ctrlKey || e.altKey || e.shiftKey) {return;}
 		const isliving = has_component(this.a, "LivingMob");
 		const hasinv = has_component(this.a, "MobInventory");
@@ -135,13 +135,13 @@ class MobInteract extends Component {
 		}
 	}
 
-	change_next_move(num) {
+	change_next_move(num: any) {
 		this.next_move =
 	this.a.server.now() +
 	(num + this.next_move_adjust) * this.next_move_modifier;
 	}
 
-	unarmed_attack(target, e) {
+	unarmed_attack(target: any, e: any) {
 		target.attack_hand(this.a, e);
 	}
 

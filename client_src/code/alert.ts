@@ -15,7 +15,7 @@ class Tooltip extends Component {
 		this.desc_elem = this.alert_div.querySelector(".desc");
 	}
 
-	mouseover(e) {
+	mouseover(e:any) {
 		this.title_elem.textContent = this.a.name;
 		this.desc_elem.textContent = this.desc;
 		const elem = document.createElement("div");

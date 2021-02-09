@@ -45,7 +45,7 @@ module.exports = {
 		return armor;
 	},
 
-	get_armor(def_zone, type) {
+	get_armor(def_zone: any, type: any) {
 		let armorval = 0;
 		let organnum = 0;
 
@@ -65,7 +65,7 @@ module.exports = {
 		return armorval / Math.max(organnum, 1);
 	},
 
-	check_armor(def_zone, d_type) {
+	check_armor(def_zone: any, d_type: string | number) {
 		if (!d_type || !has_component(this.a, "MobInventory")) {
 			return 0;
 		}
@@ -82,7 +82,7 @@ module.exports = {
 		return protection;
 	},
 
-	bullet_act(projectile, def_zone) {
+	bullet_act(projectile: { c: { Projectile: { flag: any; armour_penetration: any; no_damage: any; damage: any; damage_type: any; hit: (arg0: any, arg1: any, arg2: any) => any; }; }; }, def_zone: any) {
 		const armor = this.run_armor_check(def_zone, projectile.c.Projectile.flag, {
 			armour_penetration: projectile.c.Projectile.armour_penetration,
 		});
