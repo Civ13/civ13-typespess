@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	Sound,
@@ -8,15 +8,15 @@ const {
 	visible_message,
 	has_component,
 } = require("./../../../../code/game/server.js");
-const _ = require("underscore");
-const Mind = require("../mind/mind.js");
-const combat_defines = require("../../../defines/combat_defines.js");
-const mob_defines = require("../../../defines/mob_defines.js");
-const { random_zone } = require("./carbon/body_parts/helpers.js");
-const layers = require("../../../defines/layers.js");
-const pass_flags = require("../../../defines/pass_flags.js");
+const _:any = require("underscore");
+const Mind:any = require("../mind/mind.js");
+const combat_defines:any = require("../../../defines/combat_defines.js");
+const mob_defines:any = require("../../../defines/mob_defines.js");
+const { random_zone }:any = require("./carbon/body_parts/helpers.js");
+const layers:any = require("../../../defines/layers.js");
+const pass_flags:any = require("../../../defines/pass_flags.js");
 
-const _stat = Symbol("_stat");
+const _stat:any = Symbol("_stat");
 
 const status_effects = {};
 

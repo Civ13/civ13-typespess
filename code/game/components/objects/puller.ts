@@ -3,7 +3,7 @@
 export{};
 const { Component, has_component } = require("./../../../../code/game/server.js");
 
-const _pulling = Symbol("_pulling");
+const _pulling:any = Symbol("_pulling");
 
 class Puller extends Component {
 	constructor(atom: any, template: any) {

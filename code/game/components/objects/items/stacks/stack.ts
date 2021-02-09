@@ -9,13 +9,13 @@ const {
 } = require("./../../../../../../code/game/server.js");
 const StackCraftPanel = require("./stack_craft_panel.js");
 
-const _amount = Symbol("_amount");
+const _amount:any = Symbol("_amount");
 const { join } = require ("path");
 const {readdirSync, statSync } = require ("fs");
 const fs = require("fs");
 const CSON = require("cson");
 
-function getFileExtension(filename) {
+function getFileExtension(filename: string) {
 	const a = filename.split(".");
 	if( a.length === 1 || ( a[0] === "" && a.length === 2 ) ) {
 		return "";

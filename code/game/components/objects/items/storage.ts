@@ -10,16 +10,18 @@ const {
 } = require("./../../../../../code/game/server.js");
 const sounds = require("../../../../defines/sounds.js");
 
-const _current_storage_item = Symbol("_current_storage_item");
-const _slots = Symbol("_slots");
-const _viewers = Symbol("_viewers");
-const _grid = Symbol("_grid");
-const _old_layers = Symbol("_old_layers");
-const _close_button = Symbol("_close_button");
+const _current_storage_item:any = Symbol("_current_storage_item");
+const _slots:any = Symbol("_slots");
+const _viewers:any = Symbol("_viewers");
+const _grid:any = Symbol("_grid");
+const _old_layers:any = Symbol("_old_layers");
+const _close_button:any = Symbol("_close_button");
 
 class StorageItem extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
+		this.pop_contents = [];
+		this.pop_contents_nr = [];
 		this.a.on("entered", this.entered.bind(this));
 		this.a.on("exited", this.exited.bind(this));
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
@@ -62,10 +64,19 @@ class StorageItem extends Component {
 		for (const item of this.a.contents) {
 			this.entered({ atom: item });
 		}
-		if (this.populate_contents) {this.populate_contents();}
+		if (this.pop_contents) {this.populate_contents();}
 	}
-
-	entered(movement) {
+	populate_contents() {
+		if (this.pop_contents.length !== this.pop_contents_nr.length) {return;}
+		if (this.pop_contents.length === 0 || this.pop_contents_nr.length === 0) {return;}
+		for (let i = 0; i < this.pop_contents.length; i++) {
+			for (let j = 0; j < this.pop_contents_nr[i]; j++) {
+				// eslint-disable-next-line no-new
+				new Atom(this.a.server, this.pop_contents[i], this.a);
+			}
+		}
+	}
+	entered(movement: any) {
 		const prev_rows = this.rows;
 		const slot = [movement.atom];
 		const slotnum = this[_slots].length;

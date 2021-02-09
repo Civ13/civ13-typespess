@@ -14,13 +14,14 @@ const {
 const combat_defines = require("../defines/combat_defines.js");
 const EventEmitter = require("events");
 const StripPanel = require("./strip_panel.js");
-const _slots = Symbol("_slots");
+
 const { _slot } = require("../game/components/objects/items.js").symbols;
-const _visible = Symbol("_can_see");
-const _item = Symbol("_item");
-const _active_hand = Symbol("_active_hand");
-const _nohold_counter = Symbol("_nohold_counter");
-const _throw_mode = Symbol("_throw_mode");
+const _slots:any = Symbol("_slots");
+const _visible:any = Symbol("_can_see");
+const _item:any = Symbol("_item");
+const _active_hand:any = Symbol("_active_hand");
+const _nohold_counter:any = Symbol("_nohold_counter");
+const _throw_mode:any = Symbol("_throw_mode");
 
 class MobInventory extends Component {
 	constructor(atom: any, template: any) {
@@ -511,7 +512,8 @@ class MobInventory extends Component {
 		const t_has = this.a.p_have();
 		const t_is = this.a.p_are();
 		const covered = this.get_covered_slots();
-		for (const slot of Object.values(this.slots)) {
+		for (const nslot of Object.values(this.slots)) {
+			const slot: Record<string,any> = nslot;
 			if (!slot.item || covered.has(slot.id)) {continue;}
 			if (slot.props.visible) {
 				const blood_stained = false;

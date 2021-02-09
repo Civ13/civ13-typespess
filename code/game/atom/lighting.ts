@@ -1,10 +1,10 @@
 export{};
 const { Component, Atom } = require("../server.js");
 
-const _enabled = Symbol("_enabled");
-const _color = Symbol("_color");
-const _radius = Symbol("_radius");
-const _lighting_object = Symbol("_lighting_object");
+const _enabled:any = Symbol("_enabled");
+const _color:any = Symbol("_color");
+const _radius:any = Symbol("_radius");
+const _lighting_object:any = Symbol("_lighting_object");
 
 class LightingObject extends Component.Networked {
 	constructor(atom: any, template: any) {

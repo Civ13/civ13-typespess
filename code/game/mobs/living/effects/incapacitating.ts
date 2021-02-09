@@ -1,9 +1,12 @@
+export{};
 const { has_component } = require("./../../../../../code/game/server.js");
 
 const StatusEffect = require("./effect.js");
 
 class Knockdown extends StatusEffect.Timed {
-	apply_to(mob, props) {
+	mob: any;
+	lying: any;
+	apply_to(mob: any, props: any) {
 		super.apply_to(mob, props);
 		if (this.mob && !this.lying) {
 			this.lying = true;
@@ -27,6 +30,7 @@ class Knockdown extends StatusEffect.Timed {
 }
 
 class Unconscious extends StatusEffect.Timed {
+	mob: any;
 	apply_to(mob, props) {
 		super.apply_to(mob, props);
 		if (this.mob) {this.mob.c.LivingMob.update_stat();}
@@ -39,6 +43,8 @@ class Unconscious extends StatusEffect.Timed {
 }
 
 class Stun extends StatusEffect.Timed {
+	mob: boolean;
+	lying: any;
 	apply_to(mob, props) {
 		super.apply_to(mob, props);
 		if (this.mob && !this.lying) {

@@ -6,39 +6,39 @@ const Component = require("./component.js");
 
 let id_counter = 0;
 
-const _loc = Symbol("_loc");
-const _x = Symbol("_x");
-const _y = Symbol("_y");
-const _z = Symbol("_z");
-const _dim = Symbol("_dim");
-const _bounds_x = Symbol("_bounds_x");
-const _bounds_y = Symbol("_bounds_y");
-const _bounds_width = Symbol("_bounds_width");
-const _bounds_height = Symbol("_bounds_height");
-const _crosses = Symbol("_crosses");
+const _loc:any = Symbol("_loc");
+const _x:any = Symbol("_x");
+const _y:any = Symbol("_y");
+const _z:any = Symbol("_z");
+const _dim:any = Symbol("_dim");
+const _bounds_x:any = Symbol("_bounds_x");
+const _bounds_y:any = Symbol("_bounds_y");
+const _bounds_width:any = Symbol("_bounds_width");
+const _bounds_height:any = Symbol("_bounds_height");
+const _crosses:any = Symbol("_crosses");
 
-const _walking = Symbol("_walking");
-const _walk_stepping = Symbol("_walk_stepping");
-const _walk_step = Symbol("_walk_step");
+const _walking:any = Symbol("_walking");
+const _walk_stepping:any = Symbol("_walk_stepping");
+const _walk_step:any = Symbol("_walk_step");
 
-const _directional = Symbol("_directional");
-const _icon = Symbol("_icon");
-const _icon_state = Symbol("_icon_state");
-const _dir = Symbol("_dir");
-const _layer = Symbol("_layer");
-const _name = Symbol("_name");
-const _glide_size = Symbol("_glide_size");
-const _screen_loc_x = Symbol("_screen_loc_x");
-const _screen_loc_y = Symbol("_screen_loc_y");
-const _mouse_opacity = Symbol("_mouse_opacity");
-const _color = Symbol("_color");
-const _alpha = Symbol("_alpha");
-const _visible = Symbol("_visible");
+const _directional:any = Symbol("_directional");
+const _icon:any = Symbol("_icon");
+const _icon_state:any = Symbol("_icon_state");
+const _dir:any = Symbol("_dir");
+const _layer:any = Symbol("_layer");
+const _name:any = Symbol("_name");
+const _glide_size:any = Symbol("_glide_size");
+const _screen_loc_x:any = Symbol("_screen_loc_x");
+const _screen_loc_y:any = Symbol("_screen_loc_y");
+const _mouse_opacity:any = Symbol("_mouse_opacity");
+const _color:any = Symbol("_color");
+const _alpha:any = Symbol("_alpha");
+const _visible:any = Symbol("_visible");
 
-const _opacity = Symbol("_opacity");
+const _opacity:any = Symbol("_opacity");
 
-const _changeloc = Symbol("_changeloc");
-const _emit_parent_move = Symbol("_emit_parent_move");
+const _changeloc:any = Symbol("_changeloc");
+const _emit_parent_move:any = Symbol("_emit_parent_move");
 
 /** @typedef {import('../server')} Typespess */
 /** @typedef {import('./component')} Typespess.Component */
@@ -54,7 +54,7 @@ class Atom extends EventEmitter {
   * @param {template} template The template
   * @param {Location|Typespess.Atom|null} location The starting location. You can also add 3 arguments x,y,z alternatively
   */
-	constructor(server, template: string | number, x: number, y: number, z: number, dim: { location: (arg0: any, arg1: any, arg2: any) => any; }) {
+	constructor(server, template: any, x: number, y: number, z: number, dim: { location: (arg0: any, arg1: any, arg2: any) => any; }) {
 		const otemp = template;
 		if (typeof template === "string") {template = server.templates[template];}
 		if (template && template.pick_from) {
@@ -431,7 +431,9 @@ class Atom extends EventEmitter {
 			loc: newLoc,
 			is_fine_loc: true,
 		};
-		const movement = { old: old_fine_loc, new: new_fine_loc };
+		const movement: Record<string,any> = {};
+		movement.old = old_fine_loc;
+		movement.new = new_fine_loc;
 		if (
 			old_fine_loc.loc && old_fine_loc.loc.is_base_loc && new_fine_loc.loc && new_fine_loc.loc.is_base_loc
 		) {
@@ -1608,7 +1610,7 @@ set directional(val) {
 		}
 	}
 
-	network_encode(eye: Iterable<any>) {
+	network_encode(eye: any) {
 		const common_visgroups = [];
 		if (eye) {
 			let visgroups;

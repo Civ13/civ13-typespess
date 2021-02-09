@@ -3,9 +3,9 @@ const { Component, has_component } = require("./../../../code/game/server.js");
 
 const layers = require("../../defines/layers.js");
 
-const _areas = Symbol("_areas");
-const _area = Symbol("_area");
-const _area_brushes = Symbol("_area_brushes");
+const _areas:any = Symbol("_areas");
+const _area:any = Symbol("_area");
+const _area_brushes:any = Symbol("_area_brushes");
 
 class Area extends Component {
 	constructor(atom: any, template: any) {

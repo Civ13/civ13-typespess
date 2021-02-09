@@ -2,7 +2,13 @@
 const _ = require("underscore");
 
 class JobController {
-	constructor(server) {
+	server: any;
+	jobs: Record<string,any>;
+	unassigned: Set<unknown>;
+	assigned: Set<unknown>;
+	job_landmarks: Record<string,any>;
+	arrivals_area: any;
+	constructor(server: Record<string,any>) {
 		this.server = server;
 		this.jobs = {};
 		this.unassigned = new Set();

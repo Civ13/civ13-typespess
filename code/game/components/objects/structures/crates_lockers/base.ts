@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	Sound,
@@ -40,7 +40,7 @@ class LargeContainer extends Component {
 	}
 	populate_contents() {return;}
 
-	examine(prev, user) {
+	examine(prev:any, user:any) {
 		prev();
 		if (this.a.c.Tangible.anchored)
 			{to_chat`<span class='notice'>It is <b>bolted</b> to the ground.</span>`(
@@ -52,7 +52,7 @@ class LargeContainer extends Component {
 			);}
 	}
 
-	can_open(user) {
+	can_open(user:any = null) {
 		for (const atom of this.a.crosses()) {
 			if (!has_component(atom, "LivingMob")) {continue;}
 			if (
@@ -71,7 +71,7 @@ class LargeContainer extends Component {
 		return true;
 	}
 
-	can_close(user) {
+	can_close(user:any = null) {
 		for (const atom of this.a.crosses()) {
 			if (!has_component(atom, "LivingMob")) {continue;}
 			if (

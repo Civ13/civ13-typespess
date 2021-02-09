@@ -1,7 +1,10 @@
 
 
 class StatusEffect {
-	apply_to(mob, props = {}) {
+	static Timed: any;
+	mob: any;
+	overwrite_mode: string;
+	apply_to(mob: Record<string,any>, props = {}) {
 		if (this.mob && this.mob !== mob)
 			{throw new Error(
 				`This status effect has already been applied to ${this.mob}! Can't apply to ${mob} as well. Make a new status effect instead`
@@ -31,6 +34,8 @@ class StatusEffect {
 StatusEffect.prototype.overwrite_mode = "update";
 
 class TimedEffect extends StatusEffect {
+	target_time: number;
+	timeout: any;
 	apply_to(mob, props = {}) {
 		const new_target_time = mob.server.now() + (props.delay || 0);
 		if (new_target_time <= (this.target_time || 0)) {return;}

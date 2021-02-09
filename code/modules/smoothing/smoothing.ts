@@ -1,7 +1,8 @@
+export{};
 const { Component, has_component } = require("./../../../code/game/server.js");
 
-const _smooth_with = Symbol("_smooth_with");
-const _enabled = Symbol("_enabled");
+const _smooth_with:any = Symbol("_smooth_with");
+const _enabled:any = Symbol("_enabled");
 
 class Smooth extends Component {
 	constructor(atom: any, template: any) {

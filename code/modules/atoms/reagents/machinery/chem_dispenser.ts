@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	chain_func,
@@ -9,8 +9,8 @@ const {
 const { reagent_types } = require("../../../reagents/holder.js");
 const ReagentBinding = require("../../../reagents/binding.js");
 
-const _beaker = Symbol("_beaker");
-const _dispense_amount = Symbol("_dispense_amount");
+const _beaker:any = Symbol("_beaker");
+const _dispense_amount:any = Symbol("_dispense_amount");
 
 class ChemDispenser extends Component {
 	constructor(atom: any, template: any) {

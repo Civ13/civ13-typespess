@@ -1,4 +1,4 @@
-
+export{};
 const {
 	Component,
 	Atom,
@@ -8,12 +8,12 @@ const {
 	to_chat,
 } = require("./../../../../../code/game/server.js");
 const _ = require("underscore");
-const combat_defines = require("../../../../defines/combat_defines.js");
-const mob_defines = require("../../../../defines/mob_defines.js");
-const layers = require("../../../../defines/layers.js");
-const sounds = require("../../../../defines/sounds.js");
+const combat_defines:any = require("../../../../defines/combat_defines.js");
+const mob_defines:any = require("../../../../defines/mob_defines.js");
+const layers:any = require("../../../../defines/layers.js");
+const sounds:any = require("../../../../defines/sounds.js");
 
-const _lying_counter = Symbol("_lying_counter");
+const _lying_counter:any = Symbol("_lying_counter");
 
 class CarbonMob extends Component.Networked {
 	constructor(atom: any, template: any) {

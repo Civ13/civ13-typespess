@@ -1,6 +1,8 @@
 
 class AdminPanel {
-	constructor(panel) {
+	panel: any;
+	tools: any;
+	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.on("message", this.message_handler.bind(this));
 

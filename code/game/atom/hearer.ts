@@ -1,7 +1,7 @@
 export{};
 const Component = require("./component.js");
 
-const _visible_tiles = Symbol("_visible_tiles");
+const _visible_tiles:any = Symbol("_visible_tiles");
 
 /**
  * @alias Hearer

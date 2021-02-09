@@ -1,0 +1,12 @@
+
+utility_belt:
+    components: ["Belt"]
+    vars:
+        components:
+            Belt:
+                content_overlays: true
+            
+            StorageItem:
+                can_hold: ["Tool", "Analyzer", "Flashlight", "StackCable", "HandItem"]
+            
+    tree_paths: ["items/storage/belt/utility"]

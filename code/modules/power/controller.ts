@@ -3,6 +3,10 @@ const _ = require("underscore");
 //const {stoplag} = require('typespess');
 
 class PowerController {
+	server: any;
+	powernets: Set<unknown>;
+	machines: Set<unknown>;
+	last_tick_time: any;
 	constructor(server) {
 		this.server = server;
 		this.powernets = new Set();
@@ -38,7 +42,7 @@ class PowerController {
 	}
 }
 
-module.exports.now = (server) => {
+module.exports.now = (server: any) => {
 	server.power_controller = new PowerController(server);
 };
 

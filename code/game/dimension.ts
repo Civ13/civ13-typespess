@@ -5,6 +5,7 @@ const _step_cache = Symbol("_step_cache");
 /** @typedef {import('./atom/atom')} Typespess.Atom */
 
 class Dimension {
+	server: any;
 	constructor(server) {
 		this.server = server;
 		this[_locations] = new Map();
@@ -50,6 +51,16 @@ class Dimension {
  * @property {Typespess} server A reference to the server object
  */
 class Location {
+	x: any;
+	y: any;
+	z: any;
+	dim: any;
+	is_base_loc: any;
+	partial_contents: any;
+	contents: any;
+	viewers: any;
+	hearers: any;
+	server: any;
 	constructor(x, y, z, dim, server) {
 		// Define these so that they can't be changed.
 		Object.defineProperty(this, "x", {

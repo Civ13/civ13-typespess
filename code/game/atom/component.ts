@@ -1,6 +1,6 @@
 const EventEmitter = require("events");
 const mob_symbols = require("./mob.js")._symbols;
-const _networked_vars = Symbol("_networked_vars");
+const _networked_vars:any = Symbol("_networked_vars");
 
 /**
  * @typedef {import("./atom")} Typespess.Atom

@@ -1,0 +1,34 @@
+toolbox_mechanical:
+	components: ["Toolbox"]
+	vars:
+		components:
+			Item:
+				inhand_icon_state: "toolbox_blue"
+			
+			StorageItem:
+				pop_contents: ["screwdriver", "wrench", "welding_tool", "crowbar", "wirecutters"]
+				pop_contents_nr: [1, 1, 1, 1, 1, 1]
+			
+		
+		icon_state: "toolbox_blue"
+		name: "mechanical toolbox"
+	
+	tree_paths: ["items/storage/toolbox/mechanical"]
+
+toolbox_electrical:
+	components: ["Toolbox"]
+	vars:
+		components:
+			Item:
+				inhand_icon_state: "toolbox_yellow"
+			
+			StorageItem:
+				pop_contents: ["screwdriver", "wirecutters", "crowbar"]
+				pop_contents_nr: [1, 1, 1]
+
+				
+			
+		icon_state: "toolbox_yellow"
+		name: "electrical toolbox"
+	
+	tree_paths: ["items/storage/toolbox/electrical"]

@@ -1,6 +1,6 @@
 
 export{};
-const _slot = Symbol("_slot");
+const _slot:any = Symbol("_slot");
 const {
 	Component,
 	Sound,

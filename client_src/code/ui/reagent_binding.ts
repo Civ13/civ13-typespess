@@ -1,6 +1,10 @@
 export{};
 class ReagentBinding {
-	constructor(panel, elem, props) {
+	elem: any;
+	panel: any;
+	reagent_elems: Record<string,any>;
+	path: any;
+	constructor(panel: any, elem: any, props: any) {
 		Object.assign(
 			this,
 			{

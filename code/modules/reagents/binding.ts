@@ -1,6 +1,12 @@
 
 
 class ReagentBinding {
+	panel: any;
+	reagent_holder: any;
+	include_temperature: any;
+	include_holder_name: any;
+	sent_props: any;
+	path: any;
 	constructor(panel, holder, props) {
 		this.panel = panel;
 		this.reagent_holder = holder;
@@ -78,7 +84,7 @@ class ReagentBinding {
 		this.send_message(msg);
 	}
 
-	removed(reagent) {
+	removed(reagent: Record<string,any>) {
 		const msg = {
 			total_volume: this.reagent_holder.c.ReagentHolder.total_volume,
 			maximum_volume: this.reagent_holder.c.ReagentHolder.maximum_volume,

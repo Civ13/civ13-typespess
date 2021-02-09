@@ -9,6 +9,12 @@ const {
 const CharacterPreferences = require("../../client/character.js");
 
 class JobType {
+	name_override: any;
+	title: any;
+	description: any;
+	req_admin_notify: any;
+	outfit: any;
+	static Outfit: typeof JobOutfit;
 	constructor(obj) {
 		Object.assign(
 			this,
@@ -56,6 +62,11 @@ class JobType {
 }
 
 class JobOutfit extends Outfit {
+	jobtype: any;
+	slots: any;
+	backpack: any;
+	box: any;
+	backpack_contents: any;
 	constructor(obj) {
 		super(obj);
 		weak_deep_assign(this, {

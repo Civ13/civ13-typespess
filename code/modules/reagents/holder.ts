@@ -1,3 +1,4 @@
+export{};
 const {
 	Component,
 	has_component,
@@ -5,11 +6,11 @@ const {
 	chain_func,
 } = require("./../../../code/game/server.js");
 
-const _temperature = Symbol("_temperature");
+const _temperature:any = Symbol("_temperature");
 const { Reagent } = require("./reagent.js");
 
 const reagent_types = {};
-const reagent_reactions = [];
+const reagent_reactions: any[] = [];
 
 class ReagentHolder extends Component {
 	constructor(atom: any, template: any) {

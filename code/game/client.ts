@@ -4,12 +4,12 @@ const mob_symbols = require("./atom/mob.js")._symbols;
 const EventEmitter = require("events");
 const Component = require("./atom/component.js");
 
-const _mob = Symbol("_mob");
-const _atom_net_queue = Symbol("_atom_net_queue");
-const _netid_to_atom = Symbol("_netid_to_atom");
-const _netid_to_eye = Symbol("_netid_to_eye");
-const _tiles_to_add = Symbol("_tiles_to_add");
-const _tiles_to_remove = Symbol("_tiles_to_remove");
+const _mob:any = Symbol("_mob");
+const _atom_net_queue:any = Symbol("_atom_net_queue");
+const _netid_to_atom:any = Symbol("_netid_to_atom");
+const _netid_to_eye:any = Symbol("_netid_to_eye");
+const _tiles_to_add:any = Symbol("_tiles_to_add");
+const _tiles_to_remove:any = Symbol("_tiles_to_remove");
 
 /** @typedef {import("./atom/atom")} Typespess.Atom */
 /** @typedef {import("./server")} Typespess */
@@ -342,7 +342,7 @@ class Client extends EventEmitter {
 
 	send_network_updates() {
 		if (!this.socket || this.socket.readyState !== this.socket.OPEN) {return;}
-		var message = {};
+		const message: Record<string,any> = {};
 		for (let netid in this[_atom_net_queue]) {
 			if (this[_atom_net_queue][netid]) {
 			let entry = this[_atom_net_queue][netid];
@@ -447,7 +447,7 @@ class Client extends EventEmitter {
 			)
 				{common_visgroups.push(visgroup);}
 		}
-		let submessage = { network_id: netid };
+		const submessage: Record<string,any> = { network_id: netid };
 		if (entry.update.items) {
 			for (let item of entry.update.items) {
 				submessage[item] = atom[item];

@@ -54,10 +54,8 @@ module.exports.templates = {
 					desc: "It contains essential survival equipment.",
 				},
 				StorageItem: {
-					populate_contents() {
-						new Atom(this.a.server, "mask_breath", this.a);
-						// TODO medipen
-					},
+					pop_contents: ["mask_breath"],
+					pop_contents_nr: [1]
 				},
 			},
 			name: "survival box",
@@ -75,11 +73,8 @@ module.exports.templates = {
 					desc: "This contains beakers, apparently.",
 				},
 				StorageItem: {
-					populate_contents() {
-						for (let i = 0; i < 7; i++) {
-							new Atom(this.a.server, "beaker", this.a);
-						}
-					},
+					pop_contents: ["beaker"],
+					pop_contents_nr: [7]
 				},
 			},
 			name: "box of beakers",
@@ -102,11 +97,8 @@ module.exports.templates = {
 					storage_slots: 21,
 					can_hold: ["LightTube"],
 					use_to_pickup: true,
-					populate_contents() {
-						for (let i = 0; i < 21; i++) {
-							new Atom(this.a.server, "light_tube_small", this.a);
-						}
-					},
+					pop_contents: ["light_tube_small"],
+					pop_contents_nr: [21]
 				},
 			},
 			name: "box of replacement bulbs",
@@ -121,11 +113,8 @@ module.exports.templates = {
 					illustration: "lighttube",
 				},
 				StorageItem: {
-					populate_contents() {
-						for (let i = 0; i < 21; i++) {
-							new Atom(this.a.server, "light_tube", this.a);
-						}
-					},
+					pop_contents: ["light_tube"],
+					pop_contents_nr: [21]
 				},
 			},
 			name: "box of replacement tubes",
@@ -140,14 +129,8 @@ module.exports.templates = {
 					illustration: "lightmixed",
 				},
 				StorageItem: {
-					populate_contents() {
-						for (let i = 0; i < 14; i++) {
-							new Atom(this.a.server, "light_tube", this.a);
-						}
-						for (let i = 0; i < 7; i++) {
-							new Atom(this.a.server, "light_tube_small", this.a);
-						}
-					},
+					pop_contents: ["light_tube","light_tube_small"],
+					pop_contents_nr: [14,7]
 				},
 			},
 			name: "box of replacement lights",

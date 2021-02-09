@@ -118,6 +118,10 @@ class Reagent extends EventEmitter {
 }
 
 class ReagentReaction {
+	min_temp: any;
+	max_temp: any;
+	mix_sound: boolean;
+	mix_message: any;
 	constructor(obj) {
 		Object.assign(
 			this,
@@ -139,7 +143,7 @@ class ReagentReaction {
 		);
 	}
 
-	get_react_status(container) {
+	get_react_status(container: Record<string,any>) {
 		for (const [req, amount] of Object.entries(this.required_reagents)) {
 			if (container.c.ReagentHolder.volume_of(req) < amount) {return 2;}
 		}
@@ -157,6 +161,12 @@ class ReagentReaction {
 		)
 			{return 1;}
 		return 0;
+	}
+	required_reagents(required_reagents: any) {
+		throw new Error("Method not implemented.");
+	}
+	required_catalysts(required_catalysts: any) {
+		throw new Error("Method not implemented.");
 	}
 
 	update(container) {
@@ -200,6 +210,9 @@ class ReagentReaction {
 			container.c.ReagentHolder.remove(reagent, req * multiplier);
 		}
 		this.react(container, multiplier);
+	}
+	results(results: any) {
+		throw new Error("Method not implemented.");
 	}
 	react(container, multiplier = 1) {
 		for (const [reagent, amount] of Object.entries(this.results))

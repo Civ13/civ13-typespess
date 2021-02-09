@@ -1,4 +1,9 @@
 class StackCraftPanel {
+	panel: any;
+	civilization: any;
+	amount_node: Text;
+	recipes_elem: HTMLDivElement;
+	recipes: any;
 	constructor(panel) {
 		this.panel = panel;
 		this.civilization = null;

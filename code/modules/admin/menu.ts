@@ -1,9 +1,10 @@
+export{};
 const { Panel } = require("./../../../code/game/server.js");
 
 const admin_tools = {};
 
 class AdminPanel extends Panel {
-	constructor(client) {
+	constructor(client: Record<string,any>) {
 		super(client, {
 			width: 500,
 			height: 400,

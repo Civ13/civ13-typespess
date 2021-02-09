@@ -8,7 +8,7 @@ const {
 const layers = require("../../../../defines/layers.js");
 const pass_flags = require("../../../../defines/pass_flags.js");
 
-const _locked = Symbol("_locked");
+const _locked:any = Symbol("_locked");
 
 class Door extends Component {
 	constructor(atom: any, template: any) {

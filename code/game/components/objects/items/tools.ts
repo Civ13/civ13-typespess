@@ -9,7 +9,7 @@ const {
 } = require("./../../../../../code/game/server.js");
 const _ = require("underscore");
 
-const _is_on = Symbol("_is_on");
+const _is_on:any = Symbol("_is_on");
 
 class Tool extends Component {
 	constructor(atom: any, template: any) {
