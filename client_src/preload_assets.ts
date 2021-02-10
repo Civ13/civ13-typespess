@@ -38,7 +38,8 @@ function dirIt(directory: string) {
 	} catch(ex) {throw new Error(ex);}
 }
 
-let preloadlist = dirIt("../resources/icons/ui/");
+const preloadlist = dirIt("../resources/icons/ui/");
+/*
 const tdir1 = dirIt("../resources/icons/mob/human_body/");
 const tdir2 = dirIt("../resources/icons/mob/animals/");
 const tdir3 = dirIt("../resources/icons/effects/");
@@ -48,7 +49,7 @@ if (typeof tdir2 !== "undefined")
 	{preloadlist += tdir2;}
 if (typeof tdir3 !== "undefined")
 	{preloadlist += tdir3;}
-
+*/
 const tloadlist = `var preload_list = [${preloadlist}]; module.exports = preload_list;`;
 fs.writeFile("./code/preloadlist.js", tloadlist, function (err: any) {
 	if (err) {

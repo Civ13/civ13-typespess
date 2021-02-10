@@ -48,7 +48,7 @@ class IconRenderer {
 				}
 				else {this.icon = `${this.icon}${this.icon_state}.png`;}
 			}
-		return this.client.enqueue_icon_meta_load(this.icon);
+		return this.client.enqueue_icon_meta_load(this.client,this.icon);
 	}
 
 	get_bounds() {
@@ -91,7 +91,7 @@ class IconRenderer {
 				else if (this.icon_state === "") {return;} //if theres no icon state - don't draw.
 				if (!this.icon) {this.icon = "icons/nothing.png";}
 				this.atom.client
-					.enqueue_icon_meta_load(this.icon)	
+					.enqueue_icon_meta_load(this.atom.client,this.icon)	
 					.then(() => {	
 						if (this.icon === enqueued_icon) {	
 							this.change_level = CHANGE_LEVEL_ICON;	

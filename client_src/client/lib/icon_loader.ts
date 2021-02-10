@@ -1,21 +1,21 @@
-function enqueue_icon_meta_load(newIcon: string) {
+function enqueue_icon_meta_load(client: Record<string,any>,newIcon: string) {
 	if (!newIcon)
 		{newIcon = "icons/error.png";console.log("MISSING ICON: Icon not defined!");}
-	if (this.icon_meta_load_queue[newIcon]) {
-		return this.icon_meta_load_queue[newIcon];
+	if (client.icon_meta_load_queue[newIcon]) {
+		return client.icon_meta_load_queue[newIcon];
 	}
-	const promise = new Promise((resolve, reject) => {	
+	const promise = new Promise<void>((resolve, reject) => {	
 		const meta: Record<string,any> = {};
 		meta.width = 32;
 		meta.height = 32;
 		meta.__image_object = new Image();
-		const fullpath: string = this.resRoot + newIcon;
+		const fullpath: string = client.resRoot + newIcon;
 		meta.__image_object.src = fullpath;
 /*
 		if (fullpath.search("inhands") !== -1)
-			{meta.__image_object.src = this.resRoot + "icons/nothing.png";}
+			{meta.__image_object.src = client.resRoot + "icons/nothing.png";}
 		else
-			{meta.__image_object.src = this.resRoot + "icons/error.png";}
+			{meta.__image_object.src = client.resRoot + "icons/error.png";}
 */
 		
 		meta.__image_object.addEventListener("load", () => {
@@ -28,15 +28,15 @@ function enqueue_icon_meta_load(newIcon: string) {
 			meta.width = meta.__image_object.width;
 			meta.height = meta.__image_object.height;
 			resolve();
-			this.icon_meta_load_queue[newIcon] = void 0;
+			client.icon_meta_load_queue[newIcon] = void 0;
 		});
 		meta.__image_object.addEventListener("error", (error: Error) => {	
 			reject(error || new Error(`Loading failed for ${newIcon}`));	
 		});
-		this.icon_metas[newIcon] = meta;
+		client.icon_metas[newIcon] = meta;
 
 	});
-	this.icon_meta_load_queue[newIcon] = promise;
+	client.icon_meta_load_queue[newIcon] = promise;
 	return promise;
 }
 
