@@ -412,7 +412,7 @@ class Atom extends EventEmitter {
 		newX: any,
 		newY: any,
 		newZ = this[_z],
-		newLoc: { is_base_loc: any; dim: any; },
+		newLoc: Record<string,any>,
 		newBounds_x: any,
 		newBounds_y: any,
 		newBounds_width: any,
@@ -628,7 +628,7 @@ class Atom extends EventEmitter {
 		this[mob_symbols._update_var]("y", 0);
 	}
 
-	force_move(x: any, y: any, z: any, dim: { location: (arg0: any, arg1: any, arg2: any) => any; }, bounds_x: any, bounds_y: any, bounds_width: any, bounds_height: any) {
+	force_move(x: any, y: any, z: any, dim: any, bounds_x: any, bounds_y: any, bounds_width: any, bounds_height: any) {
 		this[_changeloc](
 			x,
 			y,

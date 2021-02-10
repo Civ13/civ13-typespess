@@ -34,12 +34,12 @@ class Wild extends Component {
 		prev();
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (this.try_decon(item, user)) {return true;}
 		return prev();
 	}
 
-	try_decon(item, user) {
+	try_decon(item: any, user: any) {
 		if (has_component(item, "Tool")) {
 			if (item.c.Tool.can_use("Axe", user)) {
 				item.c.Tool.used("Axe");
@@ -47,7 +47,7 @@ class Wild extends Component {
 				user.c.MobInventory.do_after({
 					delay: this.slicing_duration * item.c.Tool.toolspeed,
 					target: this.a,
-				}).then((success) => {
+				}).then((success: any) => {
 					if (!success) {return;}
 					this.a.c.Destructible.deconstruct(true);
 					to_chat`<span class='notice'>You chop down the ${this.a.name}!</span>`(user);

@@ -44,7 +44,7 @@ const traverseDir = (dir) =>
 				const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
 				const new_nrec = [];
 				for(const i in nrec)
-					{new_nrec.push(i);}
+					{if (i) {new_nrec.push(i);}}
 				const nrec_parsed = new ReagentReaction(new_nrec);
 				module.exports.reagent_reactions.push(nrec_parsed);
 			}

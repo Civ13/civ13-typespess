@@ -23,14 +23,14 @@ class Table extends Component {
 		);
 	}
 
-	can_be_crossed(prev, mover) {
+	can_be_crossed(prev: any, mover: any) {
 		for (const crosser of mover.crosses()) {
 			if (has_component(crosser, "Table")) {return true;}
 		}
 		return prev();
 	}
 
-	attack_by(prev, item, user, e) {
+	attack_by(prev: any, item: any, user: any, e: any) {
 		if (has_component(item, "Tool")) {
 			if (item.c.Tool.can_use("Wrench", user) && this.deconstruction_ready) {
 				item.c.Tool.used("Wrench");
@@ -40,7 +40,7 @@ class Table extends Component {
 				user.c.MobInventory.do_after({
 					delay: 4000 * item.c.Tool.toolspeed,
 					target: this.a,
-				}).then((success) => {
+				}).then((success: any) => {
 					if (!success) {return;}
 					this.a.c.Destructible.deconstruct(true, true);
 				});
@@ -56,7 +56,7 @@ class Table extends Component {
 				user.c.MobInventory.do_after({
 					delay: 2000 * item.c.Tool.toolspeed,
 					target: this.a,
-				}).then((success) => {
+				}).then((success: any) => {
 					if (!success) {return;}
 					this.a.c.Destructible.deconstruct(true, false);
 				});
@@ -70,7 +70,7 @@ class Table extends Component {
 					user.c.MobInventory.do_after({
 						delay: 5000 * item.c.Tool.toolspeed,
 						target: this.a,
-					}).then((success) => {
+					}).then((success: any) => {
 						if (!success) {return;}
 						to_chat`<span class='notice'>You strengthen the ${this.a}.</span>`(
 							user
@@ -84,7 +84,7 @@ class Table extends Component {
 					user.c.MobInventory.do_after({
 						delay: 5000 * item.c.Tool.toolspeed,
 						target: this.a,
-					}).then((success) => {
+					}).then((success: any) => {
 						if (!success) {return;}
 						to_chat`<span class='notice'>You weaken the ${this.a}.</span>`(
 							user
@@ -104,7 +104,7 @@ class Table extends Component {
 		}
 	}
 
-	deconstruct(prev, disassembled, wrench_disassembly = false) {
+	deconstruct(prev: any, disassembled: any, wrench_disassembly = false) {
 		if (!this.a.loc) {return;}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			if (wrench_disassembly) {

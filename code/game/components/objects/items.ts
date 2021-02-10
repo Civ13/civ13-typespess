@@ -26,7 +26,7 @@ class Item extends Component {
 
 	attack_self() {return;}
 
-	_attack_hand(prev, user) {
+	_attack_hand(prev: any, user: any) {
 		if (has_component(user, "MobInventory")) {
 			const slot = user.c.MobInventory.slots[user.c.MobInventory.active_hand];
 			if (typeof slot.item !== "undefined" || !slot.can_accept_item(this.a)) {return prev();}
@@ -46,7 +46,7 @@ class Item extends Component {
 		}
 	}
 
-	examine(prev, user) {
+	examine(prev: any, user: any) {
 		prev();
 		to_chat`${
 			this.a.gender === "plural" ? "They are" : "It is"

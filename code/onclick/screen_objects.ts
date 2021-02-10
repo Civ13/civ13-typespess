@@ -46,7 +46,7 @@ class ZoneSel extends Component {
 		this.update_selected();
 	}
 
-	set_mob(mob) {
+	set_mob(mob: any) {
 		this.mob = mob;
 		this.update_selected();
 	}

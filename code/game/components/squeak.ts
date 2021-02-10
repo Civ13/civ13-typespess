@@ -28,7 +28,7 @@ class Squeak extends Component {
 		}
 	}
 
-	play_squeak(prev) {
+	play_squeak(prev: any = null) {
 		if (Math.random() < this.squeak_chance)
 			{new Sound(this.a.server, {
 				path: this.squeak_sounds[
@@ -49,7 +49,7 @@ class Squeak extends Component {
 		}
 	}
 
-	use_squeak(prev) {
+	use_squeak(prev: any) {
 		if (this.last_use + this.use_delay < this.a.server.now()) {
 			this.last_use = this.a.server.now();
 			this.play_squeak();
@@ -57,10 +57,10 @@ class Squeak extends Component {
 		if (typeof prev === "function") {return prev();}
 	}
 
-	equipped(slot) {
+	equipped(slot: any) {
 		if (slot.id === "shoes") {slot.mob.on("moved", this.step_squeak);}
 	}
-	unequipped(slot) {
+	unequipped(slot: any) {
 		slot.mob.removeListener("moved", this.step_squeak);
 	}
 }

@@ -24,7 +24,7 @@ class Rack extends Component {
 		);
 	}
 
-	examine(prev, user) {
+	examine(prev: any, user: any) {
 		prev();
 		to_chat`<span class='notice'>It's held together by a couple of <b>bolts</b>.</span>`(
 			user
@@ -65,7 +65,7 @@ class RackParts extends Component {
 		this.a.c.Item.attack_self = this.attack_self.bind(this);
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "Tool")) {
 			if (item.c.Tool.can_use("Wrench", user)) {
 				item.c.Tool.used("Wrench");

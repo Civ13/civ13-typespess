@@ -15,7 +15,7 @@ class GlassSheet extends Component {
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "StackRod")) {
 			const rglass = new Atom(this.a.server, "rglass_sheet");
 			rglass.loc = user.base_mover.fine_loc;

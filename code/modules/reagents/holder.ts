@@ -278,7 +278,7 @@ class ReagentHolder extends Component {
 		// Whether or not the contents of this container are visible. Not if the individual reagents can be identified.
 		return this.reagents_visible;
 	}
-	examine(prev, user) {
+	examine(prev: any, user: any) {
 		prev();
 		if (this.can_see_reagents(user)) {
 			to_chat`It contains:`(user);

@@ -17,7 +17,7 @@ class Buckle extends Component {
 		this.buckled_mobs = [];
 	}
 
-	attack_hand(prev, user) {
+	attack_hand(prev: any, user: any) {
 		if (this.can_buckle && this.has_buckled_mobs()) {
 			if (this.buckled_mobs.length > 1) {
 				//TODO: implement this correctly like on TG

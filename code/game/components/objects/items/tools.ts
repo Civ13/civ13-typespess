@@ -276,7 +276,7 @@ class WeldingTool extends Component {
 		return this.is_on && this.get_fuel() > 0;
 	}
 
-	use_fuel(amount, user) {
+	use_fuel(amount: number, user: any) {
 		if (!this.a.c.Tool.can_use("WeldingTool", user)) {return false;}
 		if (this.get_fuel() >= amount) {
 			this.a.c.ReagentHolder.remove("WeldingFuel", amount);
@@ -289,7 +289,7 @@ class WeldingTool extends Component {
 		}
 	}
 
-	can_use_fuel(amount, user) {
+	can_use_fuel(amount: number, user: any) {
 		return (
 			this.get_fuel() >= amount && this.a.c.Tool.can_use("WeldingTool", user)
 		);

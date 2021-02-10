@@ -9,7 +9,7 @@ function enqueue_icon_meta_load(newIcon: string) {
 		meta.width = 32;
 		meta.height = 32;
 		meta.__image_object = new Image();
-		const fullpath = this.resRoot + newIcon;
+		const fullpath: string = this.resRoot + newIcon;
 		meta.__image_object.src = fullpath;
 /*
 		if (fullpath.search("inhands") !== -1)
@@ -30,7 +30,7 @@ function enqueue_icon_meta_load(newIcon: string) {
 			resolve();
 			this.icon_meta_load_queue[newIcon] = void 0;
 		});
-		meta.__image_object.addEventListener("error", (error) => {	
+		meta.__image_object.addEventListener("error", (error: Error) => {	
 			reject(error || new Error(`Loading failed for ${newIcon}`));	
 		});
 		this.icon_metas[newIcon] = meta;

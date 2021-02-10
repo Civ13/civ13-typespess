@@ -183,7 +183,7 @@ class MobBodyParts extends Component {
 		}
 	}
 
-	check_can_handcuff(prev, user) {
+	check_can_handcuff(prev: any, user: any) {
 		if (!prev()) {return false;}
 		if (!this.limbs.l_arm || !this.limbs.r_arm) {
 			if (user)

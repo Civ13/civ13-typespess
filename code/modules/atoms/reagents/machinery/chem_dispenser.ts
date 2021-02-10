@@ -23,7 +23,7 @@ class ChemDispenser extends Component {
 		this.a.on("exited", this.exited.bind(this));
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "OpenReagentContainer")) {
 			if (this.beaker) {
 				to_chat`<span class='warning'>A container is already loaded into the ${this.a}</span>`(
@@ -41,7 +41,7 @@ class ChemDispenser extends Component {
 		return prev();
 	}
 
-	attack_hand(prev, user) {
+	attack_hand(prev: any, user: any) {
 		if (
 			user.c.Mob.get_panel(this.a, ChemDispenserPanel) ||
 	!user.c.Mob.can_read_panel(this.a, ChemDispenserPanel)

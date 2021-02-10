@@ -16,7 +16,7 @@ class Sound {
 		this.emitter = sndobj.emitter;
 		this.id = sndobj.id || "id" + Math.random();
 		this.client.playing_sounds.set(this.id, this);
-		this.buffer_promise = this.client.get_audio_buffer(sndobj.path);
+		this.buffer_promise = this.client.get_audio_buffer(client,sndobj.path);
 		if (!this.client.audio_ctx) {return;}
 		this.source = this.client.audio_ctx.createBufferSource();
 		if (sndobj.detune) {this.source.detune.value = sndobj.detune;}

@@ -5,7 +5,7 @@ class StripPanel {
 	panel: any;
 	covered: Record<string,unknown>;
 	cached_appearances: Record<string,unknown>;
-	constructor(panel) {
+	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.on("message", this.handle_message.bind(this));
 		this.panel.content_obj.innerHTML = `

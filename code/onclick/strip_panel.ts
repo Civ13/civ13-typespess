@@ -2,7 +2,7 @@ export{};
 const { Panel, has_component } = require("./../../code/game/server.js");
 
 class StripPanel extends Panel {
-	constructor(client, { title = "Strip" } = {}) {
+	constructor(client: Record<string,any>, { title = "Strip" } = {}) {
 		super(client, { width: 440, height: 600, title, can_close: true });
 		this.on("message", this.message_handler.bind(this));
 		this.on("close", this.closed.bind(this));
@@ -10,7 +10,7 @@ class StripPanel extends Panel {
 		this.slot_item_changed = this.slot_item_changed.bind(this);
 	}
 
-	message_handler(msg) {
+	message_handler(msg: Record<string,any>) {
 		if (msg.slot) {
 			if (
 				has_component(this.bound_mob, "MobInventory") &&
@@ -35,17 +35,18 @@ class StripPanel extends Panel {
 	opened() {
 		const layout = this.bound_atom.c.MobInventory.strip_layout;
 		const layout_names = this.bound_atom.c.MobInventory.strip_names;
-		const covered = {};
+		const covered: Record<string,any> = {};
 		const covered_set = this.bound_atom.c.MobInventory.get_covered_slots();
 		for (const slotname of Object.keys(this.bound_atom.c.MobInventory.slots)) {
 			covered[slotname] = covered_set.has(slotname);
 		}
 		this.cached_covered = covered;
-		const item_names = {};
-		const item_appearances = {};
-		for (const [slotname, slot] of Object.entries(
+		const item_names: Record<string,any> = {};
+		const item_appearances: Record<string,any> = {};
+		for (const [slotname, tslot] of Object.entries(
 			this.bound_atom.c.MobInventory.slots
 		)) {
+			const slot: any = tslot;
 			if (!slot.item || covered[slotname]) {
 				item_names[slotname] = null;
 				item_appearances[slotname] = null;

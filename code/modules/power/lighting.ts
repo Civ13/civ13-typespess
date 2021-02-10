@@ -52,7 +52,7 @@ class LightFixture extends Component {
 		}
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "LightTube")) {
 			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return true;}
 			if (

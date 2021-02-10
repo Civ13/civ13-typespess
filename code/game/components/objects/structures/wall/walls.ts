@@ -125,7 +125,7 @@ Wall.template = {
 			},
 		},
 		icon: "icons/turf/walls/",
-		icon_state: "0",
+		icon_state: "b_stone_wall",
 		layer: layers.WALL_LAYER,
 		density: 1,
 		opacity: true,

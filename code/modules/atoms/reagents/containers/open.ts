@@ -102,7 +102,7 @@ class ReagentReceiver extends Component {
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "OpenReagentContainer")) {
 			if (!item.c.ReagentHolder.total_volume) {
 				to_chat`<span class='warning'>The ${item} is empty!</span>`(user);

@@ -25,7 +25,7 @@ class ReagentBinding {
 		}
 	}
 
-	message_handler(obj) {
+	message_handler(obj: Record<string,any>) {
 		for (const split of this.path.split(".")) {
 			if (!obj || !Object.prototype.hasOwnProperty.call(obj,split)) {return;}
 			obj = obj[split];
@@ -75,7 +75,7 @@ class ReagentBinding {
 		}
 	}
 
-	check_reagents(obj) {
+	check_reagents(obj: Record<string,any>) {
 		const reagents_list = this.elem.querySelector(".reagents-list");
 		for (const [key, robj] of Object.entries(obj.reagents)) {
 			if (!robj) {
@@ -100,7 +100,7 @@ class ReagentBinding {
 		elem.style.padding = "2px 0";
 		return elem;
 	}
-	update_entry(id, obj, elem) {
+	update_entry(id: any, obj: Record<string,any>, elem: any) {
 		elem.textContent = `${+obj.volume.toFixed(2)} unit${
 			obj.volume === 1 ? "" : "s"
 		} of ${obj.name}`;

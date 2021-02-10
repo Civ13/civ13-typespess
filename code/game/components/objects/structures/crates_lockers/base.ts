@@ -159,12 +159,12 @@ class LargeContainer extends Component {
 		else {return this.open(user);}
 	}
 
-	attack_hand(prev, user) {
+	attack_hand(prev: any, user: any) {
 		prev();
 		this.toggle(user);
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (user.loc === this.a) {return;}
 		if (this.opened) {
 			if (item.c.Item.slot && item.c.Item.slot.can_unequip()) {

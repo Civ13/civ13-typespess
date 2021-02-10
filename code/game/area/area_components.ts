@@ -64,12 +64,12 @@ class AreaArrivals extends Component {
 		this.a.c.Area.on("end_touch", this.end_touch.bind(this));
 	}
 
-	start_touch(item) {
+	start_touch(item: any) {
 		if (has_component(item, "Chair")) {
 			this.chairs.push(item);
 		}
 	}
-	end_touch(item) {
+	end_touch(item: any) {
 		if (has_component(item, "Chair")) {
 			const idx = this.chairs.indexOf(item);
 			if (idx !== -1) {this.chairs.splice(idx, 1);}

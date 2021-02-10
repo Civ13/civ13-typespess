@@ -157,7 +157,7 @@ class StorageItem extends Component {
 		this[_grid].c.GridDisplay.height = this.rows + 1;
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (!this.can_be_inserted(item, user)) {return prev();}
 		this.insert_item(item, user);
 		return true;

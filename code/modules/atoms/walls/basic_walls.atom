@@ -1,15 +1,15 @@
 wall_titanium:
 	components: ["Wall", "TGSmooth"]
 	vars:
-		components:
-			TGSmooth:
-				diagonal: true,
+#		components:
+#			TGSmooth:
+#				diagonal: true,
 			
-			Smooth:
-				smooth_with: "titanium_wall"
+#			Smooth:
+#				smooth_with: "titanium_wall"
 			
-			SmoothGroup:
-				groups: ["titanium_wall"]
+#			SmoothGroup:
+#				groups: ["titanium_wall"]
 			
 		name: "titanium wall"
 		icon: "icons/turf/walls/"
@@ -21,17 +21,17 @@ wall_titanium:
 		default: "dirt"
 
 wall_wood:
-	components: ["Wall", "TGSmooth"]
+	components: ["Wall"]
 	vars:
 		components:
-			TGSmooth:
-				diagonal: true,
+#			TGSmooth:
+#				diagonal: true,
 			
-			Smooth:
-				smooth_with: "wood_wall"
+#			Smooth:
+#				smooth_with: "wood_wall"
 			
-			SmoothGroup:
-				groups: ["wood_wall"]
+#			SmoothGroup:
+#				groups: ["wood_wall"]
 			
 			Examine:
 				desc: "A soft wood plank wall."
@@ -46,18 +46,9 @@ wall_wood:
 		default: "dirt"
 
 wall_stone:
-	components: ["Wall", "TGSmooth"]
+	components: ["Wall"]
 	vars:
 		components:
-			TGSmooth:
-				diagonal: true,
-			
-			Smooth:
-				smooth_with: "stone_wall"
-			
-			SmoothGroup:
-				groups: ["stone_wall"]
-				
 			Examine:
 				desc: "A solid stone wall."
 

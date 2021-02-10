@@ -6,7 +6,6 @@ const {
 	chain_func,
 	to_chat,
 } = require("./../../../../../code/game/server.js");
-const layers = require("../../../../defines/layers.js");
 
 class Structure extends Component {
 	constructor(atom: any, template: any) {
@@ -21,6 +20,7 @@ class Structure extends Component {
 		);
 	}
 
+	// eslint-disable-next-line complexity
 	attack_by(prev: any, item: any, user: any) {
 		if (this.moveable === true) {
 		if (has_component(item, "Tool")) {

@@ -133,14 +133,14 @@ class Stack extends Component {
 		return transfer;
 	}
 
-	examine(prev, user) {
+	examine(prev: any, user: any) {
 		prev();
 		to_chat`There ${this.amount === 1 ? "is" : "are"} ${this.amount} ${
 			this.singular_name || ""
 		}s in the stack.`(user);
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (this.merge_type && has_component(item, this.merge_type)) {
 			this.user = user;
 			if (this.merge(item))
@@ -152,7 +152,7 @@ class Stack extends Component {
 		}
 	}
 
-	attack_hand(prev, user) {
+	attack_hand(prev: any, user: any) {
 		this.user = user;
 		const slot = this.a.c.Item.slot;
 		if (
@@ -167,7 +167,7 @@ class Stack extends Component {
 		}
 	}
 
-	attack_self(prev, user) {
+	attack_self(prev: any, user: any) {
 		this.user = user;
 		if (
 			!this.recipes ||

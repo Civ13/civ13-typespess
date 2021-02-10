@@ -46,8 +46,10 @@ class World {
 		const hours = Math.floor(this.gametime/60);
 		const minutes = Math.floor((this.gametime%60)*60);
 
-		if (hours < 10) {var nhours = "0"+String(hours);}
-		if (minutes < 10) {var nminutes = "0"+String(minutes);}
+		let nhours = "0";
+		let nminutes = "0";
+		if (hours < 10) {nhours = "0"+String(hours);}
+		if (minutes < 10) {nminutes = "0"+String(minutes);}
 		return `${nhours}:${nminutes}`;
 	}
 	get_descriptive_tod() { //gets the time of day in a string, like "Night", "Morning", and so on

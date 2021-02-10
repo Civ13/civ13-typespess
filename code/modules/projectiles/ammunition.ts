@@ -65,7 +65,7 @@ class AmmoCasing extends Component {
 		return proj;
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "AmmoBox")) {
 			if (this.a.loc && this.a.loc.is_base_loc) {
 				let boolets = 0;

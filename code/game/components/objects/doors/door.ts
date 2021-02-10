@@ -135,7 +135,7 @@ class Door extends Component {
 
 	try_to_weld(/*tool, user*/) {return;}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "Tool") && item.c.Tool.can_use("Crowbar")) {
 			this.try_to_crowbar(item, user);
 			return true;

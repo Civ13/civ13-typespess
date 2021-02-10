@@ -48,7 +48,7 @@ class PowerCell extends Component {
 		this.charge = (val * this.max_charge) / 100;
 	}
 
-	examine(prev, user) {
+	examine(prev: any, user: any) {
 		prev();
 		// TODO rigged
 		to_chat`The charge meter reads ${Math.round(this.percent)}%.`(user);

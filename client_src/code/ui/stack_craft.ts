@@ -4,7 +4,7 @@ class StackCraftPanel {
 	amount_node: Text;
 	recipes_elem: HTMLDivElement;
 	recipes: any;
-	constructor(panel) {
+	constructor(panel: Record<string,any>) {
 		this.panel = panel;
 		this.civilization = null;
 		this.panel.on("message", this.handle_message.bind(this));

@@ -16,3 +16,8 @@ interface Element {
     focus: any,
     getContext: any,
 }
+
+interface EventTarget {
+    localName: any,
+    id: any,
+}

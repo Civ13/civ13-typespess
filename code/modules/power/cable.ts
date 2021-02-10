@@ -52,7 +52,7 @@ class Cable extends Component {
 		);
 	}
 
-	attack_by(prev, item, user) {
+	attack_by(prev: any, item: any, user: any) {
 		if (
 			has_component(item, "Tool") &&
 	item.c.Tool.can_use("Wirecutters", user)

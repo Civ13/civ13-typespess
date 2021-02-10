@@ -2,7 +2,7 @@ class NewPlayerPanel {
 	panel: any;
 	start_at: any;
 	timer_timeout: NodeJS.Timeout;
-	constructor(panel) {
+	constructor(panel: Record<string,any>) {
 		this.panel = panel;
 		this.panel.on("message", this.handle_message.bind(this));
 		this.build_content();
@@ -10,7 +10,7 @@ class NewPlayerPanel {
 		this.update_timer();
 	}
 
-	handle_message(message) {
+	handle_message(message: Record<string,any>) {
 		if (typeof message.latejoin !== "undefined") {
 			[...this.panel.content_obj.getElementsByClassName("pregame")].forEach(
 				(item) => (item.style.display = message.latejoin ? "none" : "block")
