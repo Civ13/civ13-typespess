@@ -80,6 +80,7 @@ SpeechEmitter.template = {
 };
 
 class SpeechMessage {
+	message: any;
 	constructor(obj: Record<string,any>) {
 		Object.assign(
 			this,

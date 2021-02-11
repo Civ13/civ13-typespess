@@ -11,6 +11,12 @@ const {
 } = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class CharacterPreferences {
+	gender: string;
+	age: number;
+	skin_tone: any;
+	hair_style: any;
+	hair_color: any;
+	name: string;
 	constructor(obj: Record<string,any>) {
 		Object.assign(this, {
 			name: "asdf",

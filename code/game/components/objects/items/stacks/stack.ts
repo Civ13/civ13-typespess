@@ -213,15 +213,15 @@ class Stack extends Component {
 		}
 	}
 
-	can_user_read_panel(user) {
+	can_user_read_panel(user: any) {
 		return this.a.c.Item.slot && this.a.c.Item.slot.mob === user;
 	}
-	import_recipes(material) {
+	import_recipes(material: any) {
 		const recList = [];
 		for (const f of traverseDir("./code/modules/crafting/")) {
 			if (getFileExtension(f) === "crafting" && f.search(material) !== -1) {
 				const nrec = CSON.parse(fs.readFileSync(f, "utf8"));
-				for(const i in nrec) {recList.push(nrec[i]);}}
+				for(const i in nrec) {if (i) {recList.push(nrec[i]);}}}
 		}
 		this.recipes = recList;
 

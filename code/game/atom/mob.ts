@@ -519,7 +519,7 @@ class Mob extends Component {
 			);}
 
 		panel.bound_atom = atom;
-		var check = () => {
+		const check = () => {
 			if (
 				panel.is_open &&
 		this.basic_panel_read_checks(atom, panel, key) &&

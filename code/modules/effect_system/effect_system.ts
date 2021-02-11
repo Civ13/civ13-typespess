@@ -3,6 +3,12 @@ const { sleep, dir_dx, dir_dy } = require("./../../../code/game/server.js");
 const _ = require("underscore");
 
 class EffectSystem {
+	server: any;
+	number: number;
+	cardinals: boolean;
+	location: any;
+	total_effects: number;
+	holder: any;
 	constructor(server, n = 3, c = false, loc) {
 		this.server = server;
 		if (n > 10) {n = 10;}

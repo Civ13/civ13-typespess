@@ -21,3 +21,11 @@ interface EventTarget {
     localName: any,
     id: any,
 }
+
+interface HTMLElement {
+    value: any,
+}
+
+interface ChildNode {
+    classList: any,
+}

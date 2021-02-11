@@ -154,7 +154,7 @@ class Typespess extends EventEmitter {
   */
 	handle_login(ws: any) {
 		let handle_message = (data: any) => {
-			var obj = JSON.parse(data);
+			let obj = JSON.parse(data);
 
 			if (obj.login) {
 				let username = obj.login + "";
@@ -176,13 +176,13 @@ class Typespess extends EventEmitter {
 	// eslint-disable-next-line max-statements
 	login(socket: any, username: any) {
 		if (this.clients[username] && this.clients[username].socket) {
-			var mob = this.clients[username].mob;
+			let mob = this.clients[username].mob;
 			this.clients[username].mob = null;
 			this.clients[username].socket.close();
 			delete this.clients[username];
 			if (mob) {mob.c.Mob.key = username;}
 		}
-		var client = new Client(socket, username, this);
+		let client = new Client(socket, username, this);
 		this.clients[username] = client;
 		this.clients_by_name[client.name] = client;
 		return client;
@@ -204,15 +204,15 @@ class Typespess extends EventEmitter {
   * @returns {Set<Location>} A set of tiles a given distance away from the origin
   */
 	compute_inrange_tiles(atom: any, dist: any) {
-		var inrange_tiles = new Set();
+		let inrange_tiles = new Set();
 		if (typeof atom.base_loc === "undefined") {return inrange_tiles;}
 		for (
-			var x = Math.floor(atom.x + 0.001 - dist);
+			let x = Math.floor(atom.x + 0.001 - dist);
 			x <= Math.ceil(atom.x - 0.001 + dist);
 			x++
 		) {
 			for (
-				var y = Math.floor(atom.y + 0.001 - dist);
+				let y = Math.floor(atom.y + 0.001 - dist);
 				y <= Math.ceil(atom.y - 0.001 + dist);
 				y++
 			) {
@@ -230,16 +230,16 @@ class Typespess extends EventEmitter {
 	// eslint-disable-next-line max-statements
 	compute_visible_tiles(atom: any, dist: any) {
 		if (typeof atom.base_loc === "undefined") {return new Set();}
-		var ring_tiles: any[] = [];
-		var base_x = Math.round(atom.x);
-		var base_y = Math.round(atom.y);
-		var base_z = Math.floor(atom.z);
+		let ring_tiles: any[] = [];
+		let base_x = Math.round(atom.x);
+		let base_y = Math.round(atom.y);
+		let base_z = Math.floor(atom.z);
 
 		this.pushRingTiles(atom, dist, ring_tiles, base_x, base_y, base_z);
 
-		var visible_tiles = new Set(ring_tiles);
+		let visible_tiles = new Set(ring_tiles);
 		visible_tiles.add(atom.base_loc);
-		var used_tiles = new Set();
+		let used_tiles = new Set();
 		for (let tile of ring_tiles) {
 			if (used_tiles.has(tile)) {continue;}
 			let dx = tile.x - base_x;
@@ -325,7 +325,7 @@ class Typespess extends EventEmitter {
   * @returns {number} The timestamp
   */
 	now() {
-		var hr = process.hrtime(this[_construct_time]);
+		let hr = process.hrtime(this[_construct_time]);
 		return hr[0] * 1000 + hr[1] * 0.000001;
 	}
 
@@ -351,7 +351,7 @@ class Typespess extends EventEmitter {
 		}
 		if (template.components) {
 			// Ensure all the component dependencies are added.
-			var hasAddedDependencies = true;
+			let hasAddedDependencies = true;
 			while (hasAddedDependencies) {
 				hasAddedDependencies = false;
 				for (let componentName of template.components) {
@@ -368,7 +368,7 @@ class Typespess extends EventEmitter {
 				}
 			}
 			// Sort the dependencies.
-			var edges = [];
+			let edges = [];
 			for (let componentName of template.components) {
 				let component = this.components[componentName];
 				if (component.loadAfter)
@@ -387,8 +387,8 @@ class Typespess extends EventEmitter {
 			// Iterate backwards over the list so that the last loaded component gets priority over the default values.
 			// Apply the default values in those components behind this template.
 			for (let i = template.components.length - 1; i >= 0; i--) {
-				var componentName = template.components[i];
-				var component = this.components[componentName];
+				let componentName = template.components[i];
+				let component = this.components[componentName];
 				if (component.template)
 					{utils.weak_deep_assign(template, component.template);}
 			}
@@ -438,15 +438,15 @@ class Typespess extends EventEmitter {
 			if (!variant_leaf_path) {variant_leaf_path = [];}
 			variant_leaf_path.length = template.variants.length;
 			for (let i = 0; i < template.variants.length; i++) {
-				var variant = template.variants[i];
+				let variant = template.variants[i];
 				if (variant.type === "single") {
-					var idx = variant.values.indexOf(variant_leaf_path[i]);
+					let idx = variant.values.indexOf(variant_leaf_path[i]);
 					if (idx === -1 || variant_leaf_path.length <= i) {
 						idx = 0;
 					}
-					var curr_obj = template.vars;
+					let curr_obj = template.vars;
 					for (let j = 0; j < variant.var_path.length - 1; j++) {
-						var next_obj = curr_obj[variant.var_path[j]];
+						let next_obj = curr_obj[variant.var_path[j]];
 						if (typeof next_obj !== "object" || next_obj instanceof Array) {
 							next_obj = {};
 							curr_obj[variant.var_path[j]] = next_obj;
@@ -482,10 +482,10 @@ class Typespess extends EventEmitter {
   */
 
  to_global_chat(...b: any) {
-	for (let key in this.clients) {
+	for (const key in this.clients) {
 		if (!Object.prototype.hasOwnProperty.call(this.clients,key)) {continue;}
-			let client = this.clients[key];
-			var cl;
+			const client = this.clients[key];
+			let cl;
 			if (client instanceof Client) {cl = client;}
 			else {cl = client.a.c.Mob.client;}
 			if (!cl) {return;}

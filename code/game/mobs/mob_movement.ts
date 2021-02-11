@@ -8,7 +8,7 @@ class MobMovement extends Component {
 		this.intended_walk_dir = 0;
 		this.last_axis = 3;
 
-		this.atom.c.Mob.on("keydown", (e) => {
+		this.atom.c.Mob.on("keydown", (e: any) => {
 			if (!e) {return;}
 			if (e.which === 65 || e.which === 37) {
 				this.intended_walk_dir |= 8;
@@ -59,7 +59,7 @@ class MobMovement extends Component {
 		this.a.walk_dir = walk_dir;
 		this.a.walking = !!walk_dir;
 	}
-	move(prev, dx, dy) {
+	move(prev: any, dx: number, dy: number) {
 		let dir = 0;
 		if (dx > 0) {dir |= 4;}
 		if (dx < 0) {dir |= 8;}
@@ -71,7 +71,7 @@ class MobMovement extends Component {
 				if (this.atom.c.MobBodyParts.limbs[tlimb]) {
 					this.atom.c.MobBodyParts.limbs[tlimb].c.BodyPart.update_overlays();}
 			}
-			for (const i in this.atom.c.MobInventory.slots)  {this.atom.c.MobInventory.slots[i].update_icons();}
+			for (const i in this.atom.c.MobInventory.slots)  {if (i) {this.atom.c.MobInventory.slots[i].update_icons();}}
 	}
 		return prev();
 	}
