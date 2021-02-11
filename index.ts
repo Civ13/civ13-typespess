@@ -77,6 +77,7 @@ global.Tserver.importModule(require("./code/modules/atoms/objects/clothing/glove
 global.Tserver.importModule(require("./code/modules/atoms/objects/clothing/head/_head.js"));
 global.Tserver.importModule(require("./code/modules/atoms/objects/clothing/masks/_masks.js"));
 global.Tserver.importModule(require("./code/game/importer.js"));
+global.Tserver.importModule(require("./code/game/importer_tools.js"));
 global.Tserver.importModule(require("./code/modules/atoms/objects/clothing/under/_under.js"));
 global.Tserver.importModule(require("./code/modules/atoms/objects/clothing/suits/_suits.js"));
 global.Tserver.importModule(require("./code/modules/atoms/objects/clothing/shoes/_shoes.js"));

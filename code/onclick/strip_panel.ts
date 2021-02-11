@@ -76,7 +76,7 @@ class StripPanel extends Panel {
 		);
 	}
 
-	slot_item_changed(slotid, from, to) {
+	slot_item_changed(slotid: string | number, from: any, to: { name: any; network_encode: (arg0: any) => any; }) {
 		const slot = this.bound_atom.c.MobInventory.slots[slotid];
 		const new_covered_set = this.bound_atom.c.MobInventory.get_covered_slots();
 		const new_covered_msg = {};

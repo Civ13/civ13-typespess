@@ -9,31 +9,11 @@ const {
 const StackCraftPanel = require("./stack_craft_panel.js");
 
 const _amount:any = Symbol("_amount");
-const { join } = require ("path");
-const {readdirSync, statSync } = require ("fs");
+const {getFileExtension, relativePaths, unfold, None} = require("./../../../../../../code/game/importer_tools.js");
 const fs = require("fs");
 const CSON = require("cson");
 
-function getFileExtension(filename: string) {
-	const a = filename.split(".");
-	if( a.length === 1 || ( a[0] === "" && a.length === 2 ) ) {
-		return "";
-	}
-	return a.pop().toLowerCase();
-}
-
-const unfold = (f, initState) =>
-	f ( (value, nextState) => [ value, ...unfold (f, nextState) ]
-		, () => []
-		, initState
-	);
-
-const None = Symbol ();
-
-const relativePaths = (path = ".") =>
-	readdirSync (path) .map (p => join (path, p));
-
-const traverseDir = (dir) =>
+const traverseDir = (dir: string) =>
 	unfold( (next, done, [ path = None, ...rest ]) =>
 		path === None
 			? done ()
