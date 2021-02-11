@@ -1,5 +1,5 @@
 class SpriteAccessory {
-	constructor(obj) {
+	constructor(obj: Record<string,any>) {
 		Object.assign(
 			this,
 			{

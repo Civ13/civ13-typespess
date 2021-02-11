@@ -428,7 +428,7 @@ class PreferencesPanel {
 	}
 
 	create_preview({
-		canvas,
+		canvas = null,
 		dir = 1,
 		modifier = null,
 		prefs_modifier = null,

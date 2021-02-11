@@ -58,11 +58,6 @@ lasergun_retro:
 	
 	tree_paths: ["items/gun/energy/laser/retro"]
 
-
-
-
-
-module.exports.templates =
 hybrid_taser:
 	components: ["EnergyGun", "BeltItem"]
 	vars:

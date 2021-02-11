@@ -6,10 +6,10 @@ const { random_zone } = require("./carbon/body_parts/helpers.js");
 module.exports = {
 	//Args were rearranged from TG's to be in the same order as the code
 	run_armor_check(
-		def_zone = null,
+		def_zone: any = null,
 		attack_flag = "melee",
 		{
-			armour_penetration,
+			armour_penetration = 0,
 			penetrated_text = null,
 			absorb_text = null,
 			soften_text = null,

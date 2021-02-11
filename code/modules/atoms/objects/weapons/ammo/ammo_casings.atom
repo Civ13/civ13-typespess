@@ -1,5 +1,3 @@
-
-module.exports.templates =
 # .357 (Syndie Revolver)
 casing_a357:
 	components: ["AmmoCasing"]

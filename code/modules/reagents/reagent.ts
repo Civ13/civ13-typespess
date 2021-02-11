@@ -121,7 +121,7 @@ class ReagentReaction {
 	max_temp: any;
 	mix_sound: boolean;
 	mix_message: any;
-	constructor(obj) {
+	constructor(obj: Record<string,any>) {
 		Object.assign(
 			this,
 			{

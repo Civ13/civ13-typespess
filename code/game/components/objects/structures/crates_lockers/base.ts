@@ -116,7 +116,7 @@ class LargeContainer extends Component {
 		return true;
 	}
 
-	insert(atom) {
+	insert(atom: Record<string,any>) {
 		if (this.a.contents.length >= this.storage_capacity) {return -1;}
 		if (has_component(atom, "LivingMob")) {
 			if (atom.c.Tangible.anchored) {return;}

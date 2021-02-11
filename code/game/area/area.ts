@@ -12,7 +12,7 @@ class Area extends Component {
 		super(atom, template);
 		this.area_brushes = new Set();
 		this.touching = new Set();
-		this.a.once("map_instanced", (map) => {
+		this.a.once("map_instanced", (map: any) => {
 			if (!this.map_id) {return;}
 			map[_areas] = map[_areas] || {};
 			map[_areas][this.map_id] = this.a;
@@ -37,7 +37,7 @@ Area.template = {
 	},
 };
 
-Area.update_map_instance = function (instobj) {
+Area.update_map_instance = function (instobj: any) {
 	const id = instobj.computed_vars.components.Area.map_id;
 	if (!id) {return;}
 	instobj.map[_areas] = instobj.map[_areas] || {};
@@ -54,7 +54,7 @@ class AreaBrush extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		this[_area] = null;
-		this.a.once("map_instance_done", (map) => {
+		this.a.once("map_instance_done", (map: any) => {
 			if (!this.map_id) {return;}
 			map[_areas] = map[_areas] || {};
 			const area = map[_areas][this.map_id];
@@ -70,7 +70,7 @@ class AreaBrush extends Component {
 		this.a.on("uncrossed_by", this.uncrossed.bind(this));
 	}
 
-	crossed(atom) {
+	crossed(atom: Record<string,any>) {
 		if (!this.area) {return;}
 		if (!this.area.c.Area.touching.has(atom)) {
 			this.area.c.Area.touching.add(atom);
@@ -79,7 +79,7 @@ class AreaBrush extends Component {
 		}
 	}
 
-	uncrossed(atom) {
+	uncrossed(atom: Record<string,any>) {
 		if (!this.area) {return;}
 		for (const brush of atom.crosses()) {
 			if (
@@ -137,55 +137,6 @@ AreaBrush.update_map_instance = function (instobj) {
 		instobj.client_atom.icon_state =
 	area.computed_vars.components.Area.brush_icon_state;
 	}
-};
-
-module.exports.templates = {
-	area: {
-		components: ["Area", "AreaAmbience", "AreaPower"],
-		tree_paths: ["areas"],
-	},
-	area_outside: {
-		components: ["Area", "AreaAmbience", "AreaPower"],
-		tree_paths: ["areas/outside"],
-		vars: {
-			components: {
-				AreaPower: {
-					infinite_power: true,
-				},
-			},
-		},
-	},
-	area_outside_arrivals: {
-		components: ["Area", "AreaAmbience", "AreaArrivals", "AreaPower"],
-		tree_paths: ["areas/outside/arrivals"],
-		vars: {
-			components: {
-				AreaPower: {
-					infinite_power: true,
-				},
-			},
-		},
-	},
-	area_arrivals: {
-		components: [
-			"Area",
-			"AreaAmbience",
-			"AreaArrivals",
-			"AreaPower",
-		],
-		vars: {
-			components: {
-				AreaPower: {
-					infinite_power: true,
-				},
-			},
-		},
-		tree_paths: ["areas/arrivals"],
-	},
-	area_brush: {
-		components: ["AreaBrush"],
-		tree_paths: ["areas/brush"],
-	},
 };
 
 module.exports.components = { Area, AreaBrush };

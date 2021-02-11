@@ -1,0 +1,72 @@
+
+
+cell:
+	components: ["PowerCell"]
+	tree_paths: ["items/stock_parts/cell"]
+
+cell_empty:
+	components: ["PowerCell"]
+	vars:
+		components:
+			PowerCell:
+				start_empty: true
+	tree_paths: ["items/stock_parts/cell"]
+
+cell_upgraded:
+	components: ["PowerCell"]
+	vars:
+		components:
+			PowerCell:
+				max_charge: 2500
+				charge_rate: 500
+			
+			Examine:
+				desc: "A power cell with a slightly higher capacity than normal!"
+			
+		
+		name: "high-capacity power cell"
+		icon_state: "icell"
+	
+	tree_paths: ["items/stock_parts/cell/upgraded"]
+
+light:
+	components: ["LightFixture"]
+	tree_paths: ["structures/lighting/light"]
+
+light_small:
+	components: ["LightFixture"]
+	tree_paths: ["structures/lighting/light_small"]
+	vars:
+		icon_state: "lbulb"
+		components:
+			LightFixture:
+				default_tube: "light_tube_small"
+				tube_type: "bulb"
+				base_state: "bulb"
+			
+			LightSource:
+				radius: 4
+				color: "#ccbbaa"
+
+light_tube:
+	components: ["LightTube"]
+	tree_paths: ["items/lighting/light_tube"]
+
+light_tube_small:
+	components: ["LightTube"]
+	tree_paths: ["items/lighting/light_tube"]
+	vars:
+		components:
+			LightTube:
+				tube_type: "bulb"
+				broken_desc: "A broken light bulb"
+				burned_desc: "A burnt-out light bulb."
+				broken_icon_state: "lbulb-broken"
+				burned_icon_state: "lbulb-burned"
+			
+			Examine:
+				desc: "A replacement light bulb."
+			
+		
+		name: "light bulb"
+		icon_state: "lbulb"

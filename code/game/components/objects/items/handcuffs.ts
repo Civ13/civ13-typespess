@@ -115,11 +115,5 @@ Handcuffs.template = {
 	},
 };
 
-module.exports.templates = {
-	handcuffs: {
-		components: ["Handcuffs"],
-		tree_paths: ["items/handcuffs"],
-	},
-};
 
 module.exports.components = { Handcuffs };

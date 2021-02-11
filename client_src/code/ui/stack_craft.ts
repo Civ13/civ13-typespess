@@ -65,7 +65,7 @@ class StackCraftPanel {
 		main_button_elem.dataset.message = JSON.stringify({ build: i, amount: 1 });
 		elem.appendChild(main_button_elem);
 	}
-	recipe_check_tech(recipe) {
+	recipe_check_tech(recipe: Record<string,any>) {
 		if (!recipe.age1 || !recipe.age2 || !recipe.age2 || !recipe.last_age)
 			{return 0;}
 		if (global.Tworld.age > recipe.last_age)

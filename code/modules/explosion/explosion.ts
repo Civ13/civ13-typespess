@@ -139,8 +139,8 @@ async function explosion({
 }
 
 explosion.dyn_explosion = function dyn_explosion({
-	epicenter,
-	power,
+	epicenter = null,
+	power = null,
 	flash_range = 0.25,
 	admin_log = true,
 	ignore_cap = true,

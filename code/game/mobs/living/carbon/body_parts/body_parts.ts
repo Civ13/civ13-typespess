@@ -246,7 +246,7 @@ class BodyPart extends Component {
 		mob.c.MobBodyParts.emit("limb_attached", this.a);
 	}
 
-	apply_overlays(atom) {
+	apply_overlays(atom: Record<string,any>) {
 		if (atom === this.a) {this.a.icon_state = "";}
 		atom.overlays[`limb_${this.body_zone}`] = this.get_main_overlay();
 		this.apply_damage_overlays(atom);
@@ -257,7 +257,7 @@ class BodyPart extends Component {
 		if (this.owner) {this.apply_overlays(this.owner);}
 	}
 
-	apply_damage_overlays(atom) {
+	apply_damage_overlays(atom: Record<string,any>) {
 		const brutestate = Math.ceil((this.brute_damage / this.max_damage) * 3);
 		const burnstate = Math.ceil((this.burn_damage / this.max_damage) * 3);
 		atom.overlays[`limb_${this.body_zone}_brute`] = brutestate
@@ -293,7 +293,7 @@ class BodyPart extends Component {
 		mob.c.MobBodyParts.emit("limb_detached", this.a);
 	}
 
-	remove_overlays(atom) {
+	remove_overlays(atom: Record<string,any>) {
 		atom.overlays[`limb_${this.body_zone}`] = void 0;
 		atom.overlays[`limb_${this.body_zone}_brute`] = void 0;
 		atom.overlays[`limb_${this.body_zone}_burn`] = void 0;

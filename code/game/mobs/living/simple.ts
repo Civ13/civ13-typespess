@@ -85,7 +85,7 @@ class SimpleMob extends Component {
 		return;
 	}
 
-	remove_overlays(atom) {
+	remove_overlays(atom: Record<string,any>) {
 		atom.overlays["mob_icon"] = void 0;
 	}
 

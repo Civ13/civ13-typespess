@@ -60,20 +60,4 @@ StackRod.template = {
 StackRod.depends = ["Stack"];
 StackRod.loadBefore = ["Stack"];
 
-module.exports.templates = {
-	stack_rods: {
-		components: ["StackRod"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/rods"],
-	},
-};
-
 module.exports.components = { StackRod };

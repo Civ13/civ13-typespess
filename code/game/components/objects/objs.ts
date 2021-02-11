@@ -44,7 +44,7 @@ class Tangible extends Component {
 	}
 
 	async throw_at({
-		target,
+		target = null,
 		range = this.throw_range,
 		speed = this.throw_speed,
 	} = {}) {

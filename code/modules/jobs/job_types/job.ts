@@ -15,7 +15,7 @@ class JobType {
 	req_admin_notify: any;
 	outfit: any;
 	static Outfit: typeof JobOutfit;
-	constructor(obj) {
+	constructor(obj: Record<string,any>) {
 		Object.assign(
 			this,
 			{
@@ -67,7 +67,7 @@ class JobOutfit extends Outfit {
 	backpack: any;
 	box: any;
 	backpack_contents: any;
-	constructor(obj) {
+	constructor(obj: Record<string,any>) {
 		super(obj);
 		weak_deep_assign(this, {
 			name: "Standard Gear",

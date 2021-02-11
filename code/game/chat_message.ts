@@ -14,7 +14,7 @@ class ChatMessage {
 	deaf_message: string;
 	blind_message: string;
 	emitter: any;
-	constructor(type, message) {
+	constructor(type: any, message: any) {
 		/**
 	* Should be 'see' or 'hear'
 	* @type {string}
@@ -89,7 +89,7 @@ class ChatMessage {
   * @param {Typespess.Atom} atom
   * @returns {Typespess.ChatMessage} (this object)
   */
-	emit_from(atom) {
+	emit_from(atom: Record<string,any>) {
 		if (!atom) {return;}
 		this.emitter = atom;
 		const hearers = new Set();
@@ -112,7 +112,7 @@ class ChatMessage {
   * @param {Typespess.Atom} source
   * @returns {Typespess.ChatMessage} (this object)
   */
-	show_directly_to(target, source) {
+	show_directly_to(target: any, source: any) {
 		if (!target || !source || !has_component(target, "Hearer")) {return;}
 		this.emitter = source;
 		target.c.Hearer.show_message(this);

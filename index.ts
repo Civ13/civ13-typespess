@@ -57,7 +57,6 @@ global.Tserver.importModule(require("./code/game/components/objects/items/weapon
 global.Tserver.importModule(require("./code/game/components/objects/structures/beds_chairs/chair.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/crates_lockers/base.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/crates_lockers/closets.js"));
-global.Tserver.importModule(require("./code/game/components/objects/structures/crates_lockers/closets/utility.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/wall/walls.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/rack.js"));
 global.Tserver.importModule(require("./code/game/components/objects/structures/structure.js"));

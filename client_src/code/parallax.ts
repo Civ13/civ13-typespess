@@ -22,9 +22,7 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 					parallax_atom.get_plane_id = () => {
 						return "parallax";
 					};
-					parallax_atom.get_displacement = function get_displacement(
-						timestamp
-					) {
+					parallax_atom.get_displacement = function get_displacement(timestamp: any) {
 						const origin_disp =
 							this.eye &&
 							this.eye.origin &&
@@ -49,8 +47,8 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 						return { dispx, dispy };
 					};
 					parallax_atom.draw = chain_func(parallax_atom.draw, function (
-						prev,
-						ctx
+						prev: any,
+						ctx: any
 					) {
 						ctx.globalCompositeOperation = "lighten";
 						prev();
@@ -61,7 +59,7 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 		}
 	}
 
-	draw_objects(timestamp) {
+	draw_objects(timestamp: any) {
 		if (this.parallax_velocity_lasttimestamp !== -1) {
 			const diff = (timestamp - this.parallax_velocity_lasttimestamp) / 1000;
 			this.parallax_offset[0] += this.parallax_velocity[0] * diff;

@@ -123,13 +123,13 @@ class Item extends Component {
 		target.c.Destructible.attacked_by(this.a, user);
 	}
 
-	apply_belt_overlay(item) {
+	apply_belt_overlay(item: Record<string,any>) {
 		item.overlays[`belt_${this.a.object_id}`] = {
 			icon: "icons/mob/worn/belt_overlays/",
 			icon_state: this.a.icon_state,
 		};
 	}
-	unapply_belt_overlay(item) {
+	unapply_belt_overlay(item: Record<string,any>) {
 		item.overlays[`belt_${this.a.object_id}`] = null;
 	}
 }
@@ -164,22 +164,6 @@ Item.template = {
 		bounds_width: 0.125,
 		bounds_height: 0.125,
 		pass_flags: pass_flags.PASSTABLE,
-	},
-};
-
-module.exports.templates = {
-	cablecuffs: {
-		components: ["Item"],
-		tree_paths: ["items/handcuffs/cablecuffs"],
-		vars: {
-			icon: "icons/obj/misc/",
-			icon_state: "coil",
-			components: {
-				Item: {
-					inhand_icon_state: "coil_red",
-				},
-			},
-		},
 	},
 };
 

@@ -1,0 +1,44 @@
+area:
+	components: ["Area", "AreaAmbience", "AreaPower"]
+	tree_paths: ["areas"]
+
+area_outside:
+	components: ["Area", "AreaAmbience", "AreaPower"]
+	tree_paths: ["areas/outside"]
+	vars:
+		components:
+			AreaPower:
+				infinite_power: true
+		
+	
+
+
+area_outside_arrivals:
+	components: ["Area", "AreaAmbience", "AreaArrivals", "AreaPower"]
+	tree_paths: ["areas/outside/arrivals"]
+	vars:
+		components:
+			AreaPower:
+				infinite_power: true
+
+
+area_arrivals:
+	components: [
+		"Area"
+		"AreaAmbience"
+		"AreaArrivals"
+		"AreaPower"
+	]
+	vars:
+		components:
+			AreaPower:
+				infinite_power: true
+		
+	
+
+	tree_paths: ["areas/arrivals"]
+
+area_brush:
+	components: ["AreaBrush"]
+	tree_paths: ["areas/brush"]
+

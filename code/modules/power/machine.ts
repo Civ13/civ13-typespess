@@ -19,12 +19,12 @@ class ApcPowered extends Component {
 		);
 	}
 
-	start_touch_area(atom) {
+	start_touch_area(atom: Record<string,any>) {
 		if (has_component(atom, "AreaPower")) {
 			this.area = atom;
 		}
 	}
-	end_touch_area(atom) {
+	end_touch_area(atom: Record<string,any>) {
 		if (atom === this.area) {
 			for (const brush of this.a.crosses()) {
 				if (

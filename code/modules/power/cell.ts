@@ -89,39 +89,4 @@ PowerCell.template = {
 	},
 };
 
-module.exports.templates = {
-	cell: {
-		components: ["PowerCell"],
-		tree_paths: ["items/stock_parts/cell"],
-	},
-	cell_empty: {
-		components: ["PowerCell"],
-		vars: {
-			components: {
-				PowerCell: {
-					start_empty: true,
-				},
-			},
-		},
-		tree_paths: ["items/stock_parts/cell"],
-	},
-	cell_upgraded: {
-		components: ["PowerCell"],
-		vars: {
-			components: {
-				PowerCell: {
-					max_charge: 2500,
-					charge_rate: 500,
-				},
-				Examine: {
-					desc: "A power cell with a slightly higher capacity than normal!",
-				},
-			},
-			name: "high-capacity power cell",
-			icon_state: "icell",
-		},
-		tree_paths: ["items/stock_parts/cell/upgraded"],
-	},
-};
-
 module.exports.components = { PowerCell };

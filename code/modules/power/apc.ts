@@ -197,20 +197,5 @@ Apc.template = {
 	},
 };
 
-module.exports.templates = {
-	apc: {
-		components: ["Apc"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["dir"],
-				values: [1, 2, 4, 8],
-				orientation: "horizontal",
-			},
-		],
-		tree_path: ["structures/apc"],
-	},
-};
-
 module.exports.components = { Apc };
 module.exports.channels = channels;

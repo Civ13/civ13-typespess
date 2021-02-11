@@ -18,7 +18,7 @@ const _tiles_to_remove:any = Symbol("_tiles_to_remove");
  * @alias Client
  */
 class Client extends EventEmitter {
-	constructor(socket, username, server) {
+	constructor(socket: any, username: string, server: any) {
 		super();
 		this.socket = socket;
 		/**
@@ -120,9 +120,9 @@ class Client extends EventEmitter {
   * @event Client#message_pre
   * @type {Object}
   */
-	message_handler(data) {
+	message_handler(data: any) {
 		try {
-			var obj = JSON.parse(data);
+			const obj = JSON.parse(data);
 
 			this.emit("message_pre", obj);
 			if (this.mob) {this.mob.c.Mob.emit("message_pre", obj);}
@@ -156,7 +156,7 @@ class Client extends EventEmitter {
 			console.error(e);
 		}
 	}
-	obj_drag(obj) {
+	obj_drag(obj: Record<string,any>) {
 		// convert over to netids
 		obj.drag.from.atom = this[_netid_to_atom][obj.drag.from.atom];
 		obj.drag.to.atom = this[_netid_to_atom][obj.drag.to.atom];
@@ -169,7 +169,7 @@ class Client extends EventEmitter {
 		if (obj.drag.to.atom)
 			{obj.drag.to.atom.emit("mouse_dropped_by", obj.drag);}
 	}
-	obj_click(obj) {
+	obj_click(obj: Record<string,any>) {
 		this.last_click_time = this.server.now();
 
 				let click_prefix = "";
@@ -188,7 +188,7 @@ class Client extends EventEmitter {
 				if (obj.click_on.atom)
 					{obj.click_on.atom.emit(click_prefix + "clicked", obj.click_on);}
 	}
-	msg_panel(obj) {
+	msg_panel(obj: Record<string,any>) {
 		let pm = obj.panel;
 		if (pm.message) {
 			for (let message of pm.message) {

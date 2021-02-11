@@ -1,7 +1,7 @@
 class LoginPanel {
 	panel;
 	connection;
-	constructor(panel) {
+	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.content_obj.classList.add("center");
 		this.panel.header_obj.classList.add("center");
@@ -10,7 +10,7 @@ class LoginPanel {
 		this.connection.addEventListener("message", this.message_handler);
 	}
 
-	message_handler(e) {
+	message_handler(e: any) {
 		const obj = JSON.parse(e.data);
 		if (obj.login_type === "debug") {
 			let div = document.createElement("div");

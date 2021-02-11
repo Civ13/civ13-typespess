@@ -72,14 +72,14 @@ class Hearer extends Component {
   * @param {Typespess.Atom} origin
   * @abstract
   */
-	can_see(atom) {
+	can_see(atom: Record<string,any>) {
 		return atom && atom.loc && atom.loc === atom.base_loc;
 	}
 
 	/**
   * @param {Typespess.Atom} atom
   */
-	in_view(atom) {
+	in_view(atom: Record<string,any>) {
 		for (const tile of atom.partial_locs())
 			{if (tile.hearers.includes(this)) {return true;}}
 		return false;

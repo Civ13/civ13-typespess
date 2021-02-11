@@ -56,29 +56,4 @@ TableFrame.template = {
 	},
 };
 
-module.exports.templates = {
-	table_frame: {
-		components: ["TableFrame"],
-		tree_paths: ["structures/table_frame"],
-	},
-	wood_table_frame: {
-		components: ["TableFrame"],
-		vars: {
-			components: {
-				TableFrame: {
-					frame_material: "wood_sheet",
-				},
-				Examine: {
-					desc:
-			"Four wooden legs with four framing wooden rods for a wooden table. You could easily pass through this.",
-				},
-			},
-			name: "wooden table frame",
-			icon: "icons/obj/structures/tables/",
-			icon_state: "wood_frame",
-		},
-		tree_paths: ["structures/table_frame/wood"],
-	},
-};
-
 module.exports.components = { TableFrame };

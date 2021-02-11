@@ -91,7 +91,7 @@ class Sound {
   * Emits the sound from the given atom
   * @param {Typespess.Atom} emitter
   */
-	emit_from(atom) {
+	emit_from(atom: Record<string,any>) {
 		if (!this.emitter) {this.emitter = { x: atom.x, y: atom.y };}
 		const hearers = new Set();
 		for (const loc of atom.base_mover.partial_locs()) {

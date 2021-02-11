@@ -2,7 +2,7 @@ export{};
 const { Atom, has_component } = require("./../../code/game/server.js");
 
 class Outfit {
-	constructor(obj) {
+	constructor(obj: Record<string,any>) {
 		Object.assign(
 			this,
 			{

@@ -15,12 +15,12 @@ class SplashScreen extends Component {
 		this.a.draw = chain_func(this.a.draw, this.draw.bind(this));
 	}
 
-	on_render_tick(prev) {
+	on_render_tick(prev: any) {
 		prev();
 		if (this.fading) {this.a.mark_dirty();}
 	}
 
-	draw(prev, ctx, timestamp) {
+	draw(prev: any, ctx: any, timestamp: any) {
 		const old_alpha = ctx.globalAlpha;
 		if (this.fading) {
 			ctx.globalAlpha *=
@@ -30,7 +30,7 @@ class SplashScreen extends Component {
 		ctx.globalAlpha = old_alpha;
 	}
 
-	del(prev) {
+	del(prev: any) {
 		this.fading = true;
 		this.fade_start = performance.now();
 		setTimeout(prev, this.fade_len);

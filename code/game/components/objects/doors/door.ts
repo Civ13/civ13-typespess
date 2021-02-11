@@ -33,12 +33,12 @@ class Door extends Component {
 		if (this.glass) {this.a.let_pass_flags |= pass_flags.PASSGLASS;}
 	}
 
-	bumped_by(atom) {
+	bumped_by(atom: Record<string,any>) {
 		if (this.operating) {return;}
 		this.bump_open(atom);
 	}
 
-	bump_open(atom) {
+	bump_open(atom: Record<string,any>) {
 		if (this.a.density > 0 && has_component(atom, "LivingMob")) {
 			if (this.a.c.RequiresAccess.can_access(atom)) {
 				this.open();
@@ -48,7 +48,7 @@ class Door extends Component {
 		}
 	}
 
-	try_to_activate_door(atom) {
+	try_to_activate_door(atom: Record<string,any>) {
 		if (this.operating) {return false;}
 		if (this.a.c.RequiresAccess.can_access(atom)) {
 			if (this.a.density > 0) {

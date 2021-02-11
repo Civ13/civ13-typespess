@@ -24,7 +24,7 @@ class LightingObject extends Component.Networked {
 		this.update_shadows_string();
 	}
 
-	crossed(item) {
+	crossed(item: Record<string,any>) {
 		if (!item.opacity) {return;}
 		if (this.shadows.has(item)) {return;}
 		const move_callback = this.update_shadow.bind(this, item);
@@ -39,7 +39,7 @@ class LightingObject extends Component.Networked {
 		this.update_shadows_string();
 	}
 
-	uncrossed(item) {
+	uncrossed(item: Record<string,any>) {
 		if (!this.shadows.has(item)) {return;}
 		const move_callback = this.move_callbacks.get(item);
 		if (move_callback) {
@@ -49,7 +49,7 @@ class LightingObject extends Component.Networked {
 		this.update_shadows_string();
 	}
 
-	update_shadow(item) {
+	update_shadow(item: Record<string,any>) {
 		if (!item.opacity) {return this.uncrossed(item);}
 		const shadow = this.shadows.get(item);
 		if (!shadow) {return this.crossed(item);}

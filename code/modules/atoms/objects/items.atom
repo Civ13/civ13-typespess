@@ -1,0 +1,20 @@
+
+cablecuffs:
+	components: ["Item"]
+	tree_paths: ["items/handcuffs/cablecuffs"]
+	vars:
+		icon: "icons/obj/misc/"
+		icon_state: "coil"
+		components:
+			Item:
+				inhand_icon_state: "coil_red"
+			
+handcuffs:
+	components: ["Handcuffs"]
+	tree_paths: ["items/handcuffs"]
+
+
+apc:
+	components: ["Apc"]
+	tree_path: ["structures/apc"]
+

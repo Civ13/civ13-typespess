@@ -386,7 +386,7 @@ class CarbonMob extends Component.Networked {
 		splatter.fine_loc = ref.base_mover.fine_loc;
 	}
 
-	slip(obj) {
+	slip(obj: Record<string,any>) {
 		this.a.c.LivingMob.apply_effect("Knockdown", {
 			delay: obj.c.Slippery.knockdown_amount,
 		});

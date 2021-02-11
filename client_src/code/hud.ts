@@ -15,7 +15,7 @@ class GridDisplay extends Component {
 		);
 	}
 
-	get_bounds(prev) {
+	get_bounds(prev: any) {
 		const bounds = prev();
 		if (!bounds) {return bounds;}
 		bounds.width += (this.width - 1) * this.offset_x * 32;
@@ -23,7 +23,7 @@ class GridDisplay extends Component {
 		return bounds;
 	}
 
-	draw(prev, ctx) {
+	draw(prev: any, ctx: any) {
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
 				ctx.save();
