@@ -175,36 +175,3 @@ SimpleMob.depends = ["MobMovement", "Hearer", "Mob", "LivingMob", "Examine", "Sp
 SimpleMob.loadBefore = ["Mob", "LivingMob", "Examine", "SpeechHearer"];
 
 module.exports.components = { SimpleMob , mobAI };
-
-module.exports.templates = {
-	pigeon: {
-		components: ["Mob", "LivingMob", "mobAI", "SimpleMob"],
-		tree_paths: ["mobs/animals/pigeon"],
-		vars: {
-			components: {
-				LivingMob: {
-					max_health: 30,
-					mob_size: mob_defines.MOB_SIZE_SMALL,
-					real_name: "pigeon"
-				},
-				Examine: {
-					desc: "A simple animal. Pretty generic.",
-				},
-				mobAI: {
-					behaviour: "scared",
-				},
-				Atom: {
-					directional: true,
-				},
-				SimpleMob: {
-					base_icon_state: "pigeon_grey",
-				},
-			},
-			name: "pigeon",
-			icon: "icons/mob/animals/",
-			icon_state: "pigeon_grey",
-			walk_delay: 700,
-
-		}
-	}
-};

@@ -1,0 +1,52 @@
+
+bush:
+    components: ["Wild"]
+    vars:
+        name: "small bush"
+        icon: "icons/obj/flora/bushes/"
+        icon_state: ""
+        density: 0
+        opacity: false
+        layer: layers.BELOW_MOB_LAYER
+        components:
+            Examine:
+                desc: "A small bush."
+            
+            Wild:
+                slicing_duration: 7000
+                sheet_type: "straw_sheet"
+                sheet_amount: 1
+
+    tree_paths: ["structures/flora/bush"]
+
+tree:
+    components: ["Wild"]
+    vars:
+        name: "tree"
+        icon: "icons/obj/flora/bigtrees/"
+        icon_state: ""
+        density: 1
+        components:
+            Examine:
+                desc: "A large temperate tree."
+            
+    tree_paths: ["structures/flora/tree"]
+
+grass:
+    components: ["Wild"]
+    vars:
+        name: "grass"
+        icon: "icons/obj/flora/wild/"
+        icon_state: ""
+        density: 0
+        opacity: false
+        components:
+            Examine:
+                desc: "A patch of grass."
+            
+            Wild:
+                slicing_duration: 7000
+                sheet_type: "straw_sheet"
+                sheet_amount: 1
+
+    tree_paths: ["structures/flora/grass"]

@@ -88,11 +88,4 @@ OrganLiver.template = {
 	},
 };
 
-module.exports.templates = {
-	organ_liver: {
-		components: ["OrganLiver"],
-		tree_paths: ["items/bodyparts/organ_liver"],
-	},
-};
-
 module.exports.components = { OrganLiver };

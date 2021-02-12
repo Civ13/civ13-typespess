@@ -1,0 +1,75 @@
+
+decal_blood:
+    components: ["BloodDecal"]
+    tree_paths: ["effects/blood/decal_blood"]
+    variants: [
+        
+            type: "single"
+            var_path: ["icon_state"]
+            values: [
+                "floor1"
+                "floor2"
+                "floor3"
+                "floor4"
+                "floor5"
+                "floor6"
+                "floor7"
+            ]
+            label: true
+            orientation: "vertical"
+        
+    ]
+    use_random_variant: true
+
+decal_blood_old:
+    components: ["BloodDecal"]
+    tree_paths: ["effects/blood/decal_blood_old"]
+    vars:
+        components:
+            CleanableDecal:
+                footprint_amount: 0
+            
+            Examine:
+                desc: "Looks like it's been here a while. Eew."
+            
+        
+        name: "dried blood"
+    
+    variants: [
+        
+            type: "single"
+            var_path: ["icon_state"]
+            values: [
+                "floor1-old"
+                "floor2-old"
+                "floor3-old"
+                "floor4-old"
+                "floor5-old"
+                "floor6-old"
+                "floor7-old"
+            ]
+            label: true
+            orientation: "vertical"
+        
+    ]
+    use_random_variant: true
+
+decal_blood_splatter:
+    components: ["BloodDecal"]
+    tree_paths: ["effects/blood/decal_blood_splatter"]
+    variants: [
+        
+            type: "single"
+            var_path: ["icon_state"]
+            values: ["gibbl1", "gibbl2", "gibbl3", "gibbl4", "gibbl5"]
+            label: true
+            orientation: "vertical"
+        
+    ]
+    use_random_variant: true
+
+decal_blood_drips:
+    components: ["BloodDripsDecal"]
+    tree_paths: ["effects/blood/decal_blood_drips"]
+
+;

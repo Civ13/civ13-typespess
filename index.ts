@@ -31,7 +31,6 @@ global.Tserver.importModule(require("./code/game/mobs/living/carbon/body_parts/h
 global.Tserver.importModule(require("./code/game/mobs/living/carbon/body_parts/health_doll.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/carbon/body_parts/zones.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/carbon/human/human.js"));
-global.Tserver.importModule(require("./code/game/mobs/living/carbon/human/human_parts.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/carbon/organs/liver.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/carbon/organs/lungs.js"));
 global.Tserver.importModule(require("./code/game/mobs/living/carbon/organs/organ.js"));
