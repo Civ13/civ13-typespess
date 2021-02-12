@@ -228,7 +228,7 @@ class PreferencesPanel {
 		shadow_quality_slider.addEventListener("input", () => {
 			const desired_res = +shadow_quality_slider.value;
 			this.panel.manager.client.soft_shadow_resolution = desired_res;
-			localStorage.setItem("shadow_resolution", desired_res);
+			localStorage.setItem("shadow_resolution", String(desired_res));
 			for (const atom of this.panel.manager.client.atoms) {
 				if (atom && atom.c && atom.c.LightingObject) {
 					atom.mark_dirty();

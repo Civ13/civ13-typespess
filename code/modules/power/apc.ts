@@ -96,7 +96,7 @@ class Apc extends Component {
 		return available_power;
 	}
 
-	use_power(amount, channel = "equipment") {
+	use_power(amount: number, channel = "equipment") {
 		if (!this.channel_on[channel]) {return 0;}
 
 		const powernet_surplus = this.a.c.PowerNode.surplus;

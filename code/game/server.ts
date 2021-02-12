@@ -153,7 +153,7 @@ class Typespess extends EventEmitter {
   * @abstract
   */
 	handle_login(ws: any) {
-		let handle_message = (data: any) => {
+		const handle_message = (data: any) => {
 			let obj = JSON.parse(data);
 
 			if (obj.login) {
@@ -176,22 +176,22 @@ class Typespess extends EventEmitter {
 	// eslint-disable-next-line max-statements
 	login(socket: any, username: any) {
 		if (this.clients[username] && this.clients[username].socket) {
-			let mob = this.clients[username].mob;
+			const mob = this.clients[username].mob;
 			this.clients[username].mob = null;
 			this.clients[username].socket.close();
 			delete this.clients[username];
 			if (mob) {mob.c.Mob.key = username;}
 		}
-		let client = new Client(socket, username, this);
+		const client = new Client(socket, username, this);
 		this.clients[username] = client;
 		this.clients_by_name[client.name] = client;
 		return client;
 	}
 
 	[_net_tick]() {
-		for (let key in this.clients) {
+		for (const key in this.clients) {
 			if (!Object.prototype.hasOwnProperty.call(this.clients,key)) {continue;}
-			let client = this.clients[key];
+			const client = this.clients[key];
 			client.send_network_updates();
 		}
 		this.emit("post_net_tick");
@@ -204,7 +204,7 @@ class Typespess extends EventEmitter {
   * @returns {Set<Location>} A set of tiles a given distance away from the origin
   */
 	compute_inrange_tiles(atom: any, dist: any) {
-		let inrange_tiles = new Set();
+		const inrange_tiles = new Set();
 		if (typeof atom.base_loc === "undefined") {return inrange_tiles;}
 		for (
 			let x = Math.floor(atom.x + 0.001 - dist);
@@ -230,20 +230,20 @@ class Typespess extends EventEmitter {
 	// eslint-disable-next-line max-statements
 	compute_visible_tiles(atom: any, dist: any) {
 		if (typeof atom.base_loc === "undefined") {return new Set();}
-		let ring_tiles: any[] = [];
-		let base_x = Math.round(atom.x);
-		let base_y = Math.round(atom.y);
-		let base_z = Math.floor(atom.z);
+		const ring_tiles: any[] = [];
+		const base_x = Math.round(atom.x);
+		const base_y = Math.round(atom.y);
+		const base_z = Math.floor(atom.z);
 
 		this.pushRingTiles(atom, dist, ring_tiles, base_x, base_y, base_z);
 
-		let visible_tiles = new Set(ring_tiles);
+		const visible_tiles = new Set(ring_tiles);
 		visible_tiles.add(atom.base_loc);
-		let used_tiles = new Set();
-		for (let tile of ring_tiles) {
+		const used_tiles = new Set();
+		for (const tile of ring_tiles) {
 			if (used_tiles.has(tile)) {continue;}
-			let dx = tile.x - base_x;
-			let dy = tile.y - base_y;
+			const dx = tile.x - base_x;
+			const dy = tile.y - base_y;
 			if (!tile.opacity) {continue;}
 			if (tile.y !== base_y) {
 				let left = base_x;
@@ -260,9 +260,9 @@ class Typespess extends EventEmitter {
 					//used_tiles.add(iter_tile);
 					iter_tile = iter_tile.get_step(4);
 				}
-				let vdir = tile.y > base_y ? 1 : -1;
-				let left_dx = (left - base_x) / Math.abs(dy);
-				let right_dx = (right - base_x) / Math.abs(dy);
+				const vdir = tile.y > base_y ? 1 : -1;
+				const left_dx = (left - base_x) / Math.abs(dy);
+				const right_dx = (right - base_x) / Math.abs(dy);
 				for (let y = tile.y; Math.abs(y - base_y) <= dist; y += vdir) {
 					if (y !== tile.y) {
 						for (let x = Math.ceil(left); x <= Math.floor(right); x++) {
@@ -289,9 +289,9 @@ class Typespess extends EventEmitter {
 					used_tiles.add(iter_tile);
 					iter_tile = iter_tile.get_step(1);
 				}
-				let hdir = tile.x > base_x ? 1 : -1;
-				let down_dy = (down - base_y) / Math.abs(dx);
-				let up_dy = (up - base_y) / Math.abs(dx);
+				const hdir = tile.x > base_x ? 1 : -1;
+				const down_dy = (down - base_y) / Math.abs(dx);
+				const up_dy = (up - base_y) / Math.abs(dx);
 				for (let x = tile.x; Math.abs(x - base_x) <= dist; x += hdir) {
 					if (x !== tile.x) {
 						for (let y = Math.ceil(down); y <= Math.floor(up); y++) {
@@ -325,7 +325,7 @@ class Typespess extends EventEmitter {
   * @returns {number} The timestamp
   */
 	now() {
-		let hr = process.hrtime(this[_construct_time]);
+		const hr = process.hrtime(this[_construct_time]);
 		return hr[0] * 1000 + hr[1] * 0.000001;
 	}
 
@@ -338,12 +338,12 @@ class Typespess extends EventEmitter {
 		if (template[_is_template_processed]) {return;}
 		if (template.parent_template) {
 			if (typeof template.parent_template === "string") {
-				let ptemplate = this.templates[template.parent_template];
+				const ptemplate = this.templates[template.parent_template];
 				this.process_template(ptemplate);
 				utils.weak_deep_assign(template, ptemplate);
 			} else if (template.parent_template instanceof Array) {
 				for (let i = template.parent_template.length - 1; i >= 0; i--) {
-					let ptemplate = this.templates[template.parent_template[i]];
+					const ptemplate = this.templates[template.parent_template[i]];
 					this.process_template(ptemplate);
 					utils.weak_deep_assign(template, ptemplate);
 				}
@@ -354,12 +354,12 @@ class Typespess extends EventEmitter {
 			let hasAddedDependencies = true;
 			while (hasAddedDependencies) {
 				hasAddedDependencies = false;
-				for (let componentName of template.components) {
-					let component = this.components[componentName];
+				for (const componentName of template.components) {
+					const component = this.components[componentName];
 					if (typeof component === "undefined")
 						{throw new Error(`Component ${componentName} does not exist!`);}
 					if (component.depends)
-						{for (let depends of component.depends) {
+						{for (const depends of component.depends) {
 							if (!template.components.includes(depends)) {
 								template.components.push(depends);
 								hasAddedDependencies = true;
@@ -368,16 +368,16 @@ class Typespess extends EventEmitter {
 				}
 			}
 			// Sort the dependencies.
-			let edges = [];
-			for (let componentName of template.components) {
-				let component = this.components[componentName];
+			const edges = [];
+			for (const componentName of template.components) {
+				const component = this.components[componentName];
 				if (component.loadAfter)
-					{for (let after of component.loadAfter) {
+					{for (const after of component.loadAfter) {
 						if (template.components.includes(after))
 							{edges.push([componentName, after]);}
 					}}
 				if (component.loadBefore)
-					{for (let before of component.loadBefore) {
+					{for (const before of component.loadBefore) {
 						if (template.components.includes(before))
 							{edges.push([before, componentName]);}
 					}}
@@ -387,8 +387,8 @@ class Typespess extends EventEmitter {
 			// Iterate backwards over the list so that the last loaded component gets priority over the default values.
 			// Apply the default values in those components behind this template.
 			for (let i = template.components.length - 1; i >= 0; i--) {
-				let componentName = template.components[i];
-				let component = this.components[componentName];
+				const componentName = template.components[i];
+				const component = this.components[componentName];
 				if (component.template)
 					{utils.weak_deep_assign(template, component.template);}
 			}
@@ -399,7 +399,7 @@ class Typespess extends EventEmitter {
 
 		if (!template.is_variant && template.variants && template.variants.length) {
 			for (let i = 0; i < template.variants.length; i++) {
-				let variant = template.variants[i];
+				const variant = template.variants[i];
 				if (variant.type === "single") {
 					let curr_obj = template.vars;
 					for (let j = 0; j < variant.var_path.length - 1; j++) {
@@ -438,7 +438,7 @@ class Typespess extends EventEmitter {
 			if (!variant_leaf_path) {variant_leaf_path = [];}
 			variant_leaf_path.length = template.variants.length;
 			for (let i = 0; i < template.variants.length; i++) {
-				let variant = template.variants[i];
+				const variant = template.variants[i];
 				if (variant.type === "single") {
 					let idx = variant.values.indexOf(variant_leaf_path[i]);
 					if (idx === -1 || variant_leaf_path.length <= i) {
@@ -502,24 +502,24 @@ class Typespess extends EventEmitter {
   * @param {number} z
   */
 	instance_map_sync(obj: any, x = 0, y = 0, z = 0, dim: any) {
-		let inst_list = [];
-		for (let loc in obj.locs) {
+		const inst_list = [];
+		for (const loc in obj.locs) {
 			if (!Object.prototype.hasOwnProperty.call(obj.locs,loc)) {continue;}
-			for (let instobj of obj.locs[loc]) {
-				let base_template = this.templates[instobj.template_name];
+			for (const instobj of obj.locs[loc]) {
+				const base_template = this.templates[instobj.template_name];
 				if (!base_template) {
 					console.warn(
 						`Map references unknown template "${instobj.template_name}"`
 					);
 					continue;
 				}
-				let template = this.get_template_variant(
+				const template = this.get_template_variant(
 					base_template,
 					instobj.variant_leaf_path,
 					instobj.instance_vars
 				);
 				utils.weak_deep_assign(template, base_template);
-				let atom = new Atom(
+				const atom = new Atom(
 					this,
 					template,
 					x + instobj.x,
@@ -546,27 +546,27 @@ class Typespess extends EventEmitter {
   */
 	// eslint-disable-next-line max-params
 	async instance_map(obj: any, x = 0, y = 0, z = 0, dim: any, percentage_callback: any) {
-		let locs = [...Object.values(obj.locs)];
-		let inst_list = [];
+		const locs = [...Object.values(obj.locs)];
+		const inst_list = [];
 		let idx = 0;
-		for (let loc of locs) {
+		for (const loc of locs) {
 			idx++;
-			let nLoc: any = loc;
-			for (let instobj of nLoc) {
-				let base_template = this.templates[instobj.template_name];
+			const nLoc: any = loc;
+			for (const instobj of nLoc) {
+				const base_template = this.templates[instobj.template_name];
 				if (!base_template) {
 					console.warn(
 						`Map references unknown template "${instobj.template_name}"`
 					);
 					continue;
 				}
-				let template = this.get_template_variant(
+				const template = this.get_template_variant(
 					base_template,
 					instobj.variant_leaf_path,
 					instobj.instance_vars
 				);
 				utils.weak_deep_assign(template, base_template);
-				let atom = new Atom(
+				const atom = new Atom(
 					this,
 					template,
 					x + instobj.x,

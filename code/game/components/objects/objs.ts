@@ -18,9 +18,9 @@ class Tangible extends Component {
 	}
 
 	experience_pressure_difference(
-		difference,
-		dx,
-		dy,
+		difference: number,
+		dx: number,
+		dy: number,
 		pressure_resistance_prob_delta = 0
 	) {
 		const PROBABILITY_OFFSET = 25;
@@ -65,7 +65,7 @@ class Tangible extends Component {
 				this.stop_throw = function () {return;};
 			};
 
-			const throw_impact = (target) => {
+			const throw_impact = (target: { c: { Tangible: { emit: (arg0: string, arg1: any) => void; }; }; }) => {
 				this.stop_throw();
 				if (speed > 0.5) {
 					if (has_component(target, "Tangible"))
@@ -123,7 +123,7 @@ class Tangible extends Component {
 		this.emit("throw_finished");
 	}
 
-	bullet_act(projectile, def_zone) {
+	bullet_act(projectile: { c: { Projectile: { hit: (arg0: any, arg1: number, arg2: any) => any; }; }; }, def_zone: any) {
 		return projectile.c.Projectile.hit(this.a, 0, def_zone);
 	}
 
@@ -143,13 +143,13 @@ class Tangible extends Component {
 		// This is basically for legit attacks
 	}
 
-	adjacent(target) {
+	adjacent(target: { x: number; y: number; }) {
 		return (
 			Math.abs(target.x - this.a.x) <= 1.5001 &&
 	Math.abs(target.y - this.a.y) <= 1.5001
 		);
 	}
-	can_reach(target) {
+	can_reach(target: any) {
 		return this.adjacent(target);
 	}
 }
@@ -186,11 +186,11 @@ class Examine extends Component {
 		this.a.on("shift_clicked", this.shift_clicked.bind(this));
 	}
 
-	shift_clicked(e) {
+	shift_clicked(e: { mob: any; }) {
 		if (e.mob) {this.examine(e.mob);}
 	}
 
-	examine(user) {
+	examine(user: any) {
 		to_chat`That's <b>${this.a}</b>`(user);
 		if (this.desc) {to_chat(user, "<i>"+this.desc+"</i>");}
 	}

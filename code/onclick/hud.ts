@@ -16,8 +16,8 @@ class MobHud extends Component {
 	}
 
 	throw_alert(
-		category,
-		template,
+		category: string | number,
+		template: string | number,
 		{ severity, new_master, override = false } = {}
 	) {
 		/* Proc to create or update an alert. Returns the alert if the alert is new or updated, 0 if it was thrown already
@@ -38,7 +38,7 @@ class MobHud extends Component {
 		this.a.server.process_template(template);
 		if (!template.components.includes("Alert"))
 			{throw new TypeError("Template provided is missing an Alert component.");}
-		let thealert;
+		let thealert: { c: { Alert: { override_alerts: boolean; master: any; severity: any; timeout: number; mob_viewer: any; }; }; template: { vars: { icon_state: any; }; }; overlays: { alert_master: { icon: any; icon_state: any; color: any; }; }; icon_state: string; };
 		if (this.alerts[category]) {
 			thealert = this.alerts[category];
 			if (thealert.c.Alert.override_alerts) {return;}
@@ -91,7 +91,7 @@ class MobHud extends Component {
 			}, thealert.c.Alert.timeout);
 		}
 	}
-	clear_alert(category, clear_override = false) {
+	clear_alert(category: string | number, clear_override = false) {
 		const alert = this.alerts[category];
 		if (!alert) {return false;}
 		if (alert.c.Alert.override_alerts && !clear_override) {return false;}

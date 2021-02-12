@@ -93,7 +93,7 @@ class AreaBrush extends Component {
 		atom.emit("end_touch_area", this.area);
 	}
 
-	assign_area(area) {
+	assign_area(area: any) {
 		if (this.area)
 			{throw new Error("This brush already has an area associated with it!");}
 		this[_area] = area;
@@ -125,7 +125,7 @@ AreaBrush.template = {
 	},
 };
 
-AreaBrush.update_map_instance = function (instobj) {
+AreaBrush.update_map_instance = function (instobj: Record<string,any>) {
 	const id = instobj.computed_vars.components.AreaBrush.map_id;
 	if (!id) {return;}
 	instobj.map[_area_brushes] = instobj.map[_area_brushes] || {};

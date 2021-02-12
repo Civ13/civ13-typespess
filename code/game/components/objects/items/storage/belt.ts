@@ -4,8 +4,6 @@ const {
 	has_component,
 } = require("./../../../../../../code/game/server.js");
 
-const _ = require("underscore");
-
 class Belt extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);

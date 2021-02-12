@@ -94,7 +94,7 @@ class AreaPower extends Component {
 	}
 
 	// uses this amount of energy
-	use_power(amount, channel = "equipment") {
+	use_power(amount: number, channel = "equipment") {
 		if (this.infinite_power) {return amount;}
 		if (!this.apc) {return 0;}
 		return this.apc.c.Apc.use_power(amount, channel);

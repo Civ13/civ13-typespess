@@ -30,7 +30,7 @@ class LightingObject extends Component.Networked {
 		const move_callback = this.update_shadow.bind(this, item);
 		this.move_callbacks.set(item, move_callback);
 		item.on("moved", move_callback);
-		const shadow = {};
+		const shadow: Record<string,any> = {};
 		shadow.x1 = item.x + item.bounds_x;
 		shadow.y1 = item.y + item.bounds_y;
 		shadow.x2 = item.x + item.bounds_x + item.bounds_width;

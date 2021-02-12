@@ -201,7 +201,7 @@ class StorageItem extends Component {
 		user.c.Eye[_current_storage_item] = this.a;
 	}
 
-	hide_from(user) {
+	hide_from(user: Record<string,any>) {
 		if (!has_component(user, "Eye")) {return;}
 		if (user.c.Eye[_current_storage_item] !== this.a) {return;}
 		this[_viewers].delete(user);
@@ -213,7 +213,7 @@ class StorageItem extends Component {
 		user.c.Eye.screen.storage_close_button = null;
 	}
 
-	can_be_inserted(item, user, stop_messages = false) {
+	can_be_inserted(item: any, user: any, stop_messages = false) {
 		if (!has_component(item, "Item")) {return;} // not an item
 		if (this.a.loc === item) {return false;}
 
@@ -287,7 +287,7 @@ class StorageItem extends Component {
 		return true;
 	}
 
-	insert_item(item, user, prevent_warning = false) {
+	insert_item(item: any, user: any, prevent_warning = false) {
 		if (!has_component(item, "Item")) {return false;}
 		if (item.c.Item.slot) {item.c.Item.slot.item = null;}
 		item.loc = this.a;

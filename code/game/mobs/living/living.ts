@@ -434,13 +434,10 @@ class LivingMob extends Component {
 
 	get_face_name(if_no_face = "Unknown") {
 		if (!this.identifiable()) {return if_no_face;}
-		return this.real_name;
-	}
-	get_id_name(if_no_id = "Unknown") {
-		return if_no_id;
-	}
+		return this.real_name;}
+	get_id_name(if_no_id = "Unknown") {return if_no_id;}
 
-	bumped(atom: { c: { Tangible: { anchored: any; }; }; }, offsetx: any, offsety: any) {
+	bumped(atom: Record<string,any>, offsetx: any, offsety: any) {
 		if (this.buckled || this.now_pushing) {return;}
 		if (has_component(atom, "Tangible")) {
 			if (
@@ -559,7 +556,7 @@ LivingMob.template = {
 
 class MovementProxy extends Component {}
 
-function add_effects(mod = {}) {
+function add_effects(mod: Record<string,any> = {}) {
 	if (mod.status_effects) {
 		Object.assign(status_effects, mod.status_effects);
 	}

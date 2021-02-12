@@ -36,7 +36,7 @@ StatusEffect.prototype.overwrite_mode = "update";
 class TimedEffect extends StatusEffect {
 	target_time: number;
 	timeout: any;
-	apply_to(mob, props = {}) {
+	apply_to(mob: Record<string,any>, props: Record<string,any> = {}) {
 		const new_target_time = mob.server.now() + (props.delay || 0);
 		if (new_target_time <= (this.target_time || 0)) {return;}
 		super.apply_to(mob, props);

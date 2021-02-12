@@ -20,7 +20,7 @@ class ReagentBinding {
 			},
 			props
 		);
-		const obj = {};
+		const obj: Record<string,any> = {};
 		if (this.include_temperature)
 			{obj.temperature = this.reagent_holder.c.ReagentHolder.temperature;}
 		if (this.include_holder_name) {obj.holder_name = this.reagent_holder.name;}

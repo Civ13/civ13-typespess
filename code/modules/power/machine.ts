@@ -54,12 +54,12 @@ class ApcPowered extends Component {
   * @param {string} channel
   * @return {number} Amount of energy used in joules
   */
-	use_power(amount, channel = this.power_channel) {
+	use_power(amount: number, channel = this.power_channel) {
 		if (!this.area) {return 0;}
 		return this.area.c.AreaPower.use_power(amount, channel);
 	}
 
-	process(prev, dt) {
+	process(prev: any, dt: number) {
 		prev();
 		let new_powered = false;
 		if (!this.using_idle_power) {

@@ -33,16 +33,15 @@ class Reagent extends EventEmitter {
 		this.toxpwr = 0;
 		this.subtype = "chemical";
 	}
-	add(amount, { reagent, temp } = {}) {
-		if (!temp) {temp = 300;}
-
+	add(amount: number, {nreagent = "", temp = 300} = {}) {
 		amount = Math.min(
 			this.holder.c.ReagentHolder.maximum_volume -
 		this.holder.c.ReagentHolder.total_volume,
 			amount
 		);
 		if (amount <= 0) {return 0;}
-		if (reagent) {
+		if (typeof nreagent !== "string") {
+			const reagent: Record<string,any> = nreagent;
 			amount = reagent.remove(amount);
 		}
 		if (this.holder)
@@ -57,7 +56,7 @@ class Reagent extends EventEmitter {
 		return amount;
 	}
 
-	remove(amount) {
+	remove(amount: number) {
 		amount = Math.min(this.volume, amount);
 		if (amount <= 0) {return 0;}
 		this.volume -= amount;
@@ -73,7 +72,7 @@ class Reagent extends EventEmitter {
 		);
 	}
 
-	addiction_act_stage1(dt) {
+	addiction_act_stage1(dt: number) {
 		/* yes I know probabilities don't work like that but I really don't give 2 fucks */
 		if (Math.random() < 0.15 * dt)
 			{to_chat`<span class='notice'>You feel like some ${name} right about now.</span>`(
@@ -81,34 +80,34 @@ class Reagent extends EventEmitter {
 			);}
 	}
 
-	addiction_act_stage2(dt) {
+	addiction_act_stage2(dt: number) {
 		if (Math.random() < 0.15 * dt)
 			{to_chat`<span class='notice'>You feel like you need ${name}. You just can't get enough.</span>`(
 				this.holder
 			);}
 	}
 
-	addiction_act_stage3(dt) {
+	addiction_act_stage3(dt: number) {
 		if (Math.random() < 0.15 * dt)
 			{to_chat`<span class='danger'>You have an intense craving for ${name}.</span>`(
 				this.holder
 			);}
 	}
 
-	addiction_act_stage4(dt) {
+	addiction_act_stage4(dt: number) {
 		if (Math.random() < 0.15 * dt)
 			{to_chat`<span class='boldannounce'>You're not feeling good at all! You really need some ${name}.</span>`(
 				this.holder
 			);}
 	}
 
-	mob_life(dt) {
+	mob_life(dt: number) {
 		this.time_in_mob += dt;
 		this.remove(this.metabolization_rate * dt);
 	}
 
 	reaction_obj() {return;}
-	reaction_mob(target, { method, volume } = {}) {
+	reaction_mob(target: any, method: string, volume: number) {
 		if (method === "vapor") {
 			if (volume > 0.5) {target.c.ReagentHolder.add(this, volume);}
 		}

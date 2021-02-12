@@ -11,7 +11,7 @@ class SpeechEmitter extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (has_component(this.a, "Mob")) {
-			this.a.c.Mob.on("message", (obj) => {
+			this.a.c.Mob.on("message", (obj: { say_message: string; }) => {
 				if (obj.say_message) {
 					const client = this.a.c.Mob.client;
 					if (
@@ -34,7 +34,7 @@ class SpeechEmitter extends Component {
 		if (!msg.message || !msg.message.length) {return null;}
 		return msg;
 	}
-	emit_message(message) {
+	emit_message(message: SpeechMessage) {
 		if (!message) {return;}
 		const hearers = new Set();
 		for (const loc of this.a.base_mover.partial_locs()) {
@@ -118,7 +118,7 @@ class SpeechHearer extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
-	hear_message(message, emitter) {
+	hear_message(message: { speaker: { c: { SpeechEmitter: { verb_say: any; }; }; }; radio_freq: any; }, emitter: any) {
 		let deaf_message = null;
 		if (message.speaker !== this.a) {
 			if (!message.radio_freq)
@@ -134,7 +134,7 @@ class SpeechHearer extends Component {
 		shown_message.show_directly_to(this.a, emitter);
 	}
 
-	compose_message(message) {
+	compose_message(message: { radio_freq: string | number; speaker: { name: any; c: { SpeechEmitter: { verb_say: any; }; }; }; message: any; }) {
 		const spanpart1 = `<span class='${
 			message.radio_freq
 				? freqtospan[message.radio_freq] || "radio"

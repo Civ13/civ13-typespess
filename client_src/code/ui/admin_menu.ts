@@ -29,7 +29,13 @@ class AdminPanel {
 	}
 
 	populate_tools() {
-		for (const [key, val] of Object.entries(this.tools).sort((a, b) => {
+		let key: any;
+		let val: Record<string,any>;
+		for (const [tkey, tval] of Object.entries(this.tools).sort((ta, tb) => {
+			key = tkey;
+			val = tval;
+			const a: Record<string,any> = ta;
+			const b: Record<string,any> = tb;
 			return a[1].name > b[1].name ? 1 : a[1].name === b[1].name ? 0 : -1;
 		})) {
 			const template_elem = document.createElement("div");

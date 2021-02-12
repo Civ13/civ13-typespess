@@ -37,7 +37,7 @@ class CharacterPreferences {
 			jobless_role: "random", // assistant, random, or none
 		});
 		this.randomize_body();
-		this.randomize_name();
+		this.randomize_name("human");
 		Object.assign(this, obj);
 	}
 
@@ -46,18 +46,18 @@ class CharacterPreferences {
 		this.age = Math.floor(Math.random() ** 2 * 69) + 17; // Square the random number so that it's biased toward smaller numbers
 		this.skin_tone = _.sample(Object.keys(skin_tones));
 		this.hair_style = _.sample(
-			[...Object.entries(sprite_accessories.hair)].filter((item) => {
+			[...Object.entries(sprite_accessories.hair)].filter((item: Array<any>) => {
 				return !item[0].gender || item[0].gender.includes(this.gender);
 			})
 		)[0];
 		this.hair_color = _.sample(Object.keys(hair_colors));
 	}
-	randomize_name(type) {
+	randomize_name(type: string) {
 		if (!type || type === "human")
 			{this.name = CharacterPreferences.generate_human_name(this.gender);}
 	}
 
-	static generate_human_name(gender) {
+	static generate_human_name(gender: string) {
 		let first_list = first_names;
 		if (gender === "male") {first_list = first_names_male;}
 		if (gender === "female") {first_list = first_names_female;}
@@ -130,10 +130,10 @@ class CharacterPreferences {
 		return t_out;
 	}
 
-	instance_human(server) {
+	instance_human(server: any) {
 		const template = {
 			components: ["HumanMob"],
-			vars: { components: { LivingMob: {} } },
+			vars: { gender: "neuter", components: { LivingMob: { real_name: ""} } },
 		};
 		template.vars.components.LivingMob.real_name = this.name;
 		template.vars.gender = this.gender;

@@ -89,13 +89,13 @@ class Stack extends Component {
 		this.update_recipes();
 	}
 
-	use(used) {
+	use(used: any) {
 		if (this.amount < used) {return false;}
 		this.amount -= used;
 		return true;
 	}
 
-	merge(S) {
+	merge(S: any) {
 		// merge into S, as much as possible
 		if (
 			!has_component(S, "Stack") ||
@@ -166,7 +166,7 @@ class Stack extends Component {
 		panel.open();
 	}
 
-	split(user, amount) {
+	split(user: any, amount: number) {
 		if (amount <= 0) {return;}
 		this.user = user;
 		if (amount >= this.amount) {
@@ -238,7 +238,7 @@ class Stack extends Component {
 		}
 	}
 
-	async build_recipe(recipe, amount, user) {
+	async build_recipe(recipe, amount: any, user) {
 		if (!has_component(user, "MobInventory") || !recipe) {return;}
 		this.update_recipes();
 		amount = Math.min(Math.max(+amount || 1, 1), recipe.build_limit); // no trust clients

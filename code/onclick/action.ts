@@ -11,7 +11,7 @@ const combat_defines = require("../defines/combat_defines.js");
 const EventEmitter = require("events");
 
 class Action /*lawsuit*/ extends EventEmitter {
-	constructor(inst) {
+	constructor(inst: any) {
 		super();
 		Object.assign(
 			this,
@@ -32,7 +32,7 @@ class Action /*lawsuit*/ extends EventEmitter {
 		);
 		this.instanced_buttons = [];
 		make_watched_property(this, "bg_icon_state", "string");
-		this.on("bg_icon_state_changed", (from, to) => {
+		this.on("bg_icon_state_changed", (from: any, to: any) => {
 			for (const button of this.instanced_buttons) {
 				button.icon_state = to;
 			}
@@ -94,7 +94,7 @@ class Action /*lawsuit*/ extends EventEmitter {
 		}
 		mob.c.MobHud.reorganize_buttons();
 	}
-	check_mob_use(mob) {
+	check_mob_use(mob: { c: { LivingMob: { stat: any; }; MobInteract: { nointeract_counter: any; }; }; }) {
 		if (this.check_conscious) {
 			if (!has_component(mob, "LivingMob")) {return false;}
 			if (mob.c.LivingMob.stat !== combat_defines.CONSCIOUS) {return false;}
@@ -110,7 +110,7 @@ class Action /*lawsuit*/ extends EventEmitter {
 }
 
 class ItemAction extends Action {
-	constructor(inst) {
+	constructor(inst: any) {
 		super(
 			Object.assign(
 				{},
@@ -123,7 +123,7 @@ class ItemAction extends Action {
 			)
 		);
 	}
-	check_mob_use(mob) {
+	check_mob_use(mob: any) {
 		if (!super.check_mob_use(mob)) {return false;}
 		if (
 			!has_component(mob, "MobInventory") ||
@@ -133,7 +133,7 @@ class ItemAction extends Action {
 			{return false;}
 		return true;
 	}
-	click_act(user) {
+	click_act(user: any) {
 		this.target.c.Item.attack_self(user);
 	}
 }
@@ -148,7 +148,7 @@ class ActionButton extends Component {
 		this.mob = null;
 	}
 
-	clicked(e) {
+	clicked(e: { mob: any; }) {
 		if (!this.action || !this.action.check_mob_use(e.mob) || e.mob !== this.mob)
 			{return;}
 		this.action.click_act(e.mob);
@@ -185,7 +185,7 @@ class ItemActions extends Component {
 		this.actions = [];
 	}
 
-	moved(e) {
+	moved(e: { old: { loc: any; }; new: { loc: any; }; }) {
 		if (e.old && e.new && e.old.loc === e.new.loc) {return;} // nothing changed stop rearranging my buttons ree
 		if (e.old && has_component(e.old.loc, "MobHud")) {
 			for (const act of this.actions) {
@@ -199,7 +199,7 @@ class ItemActions extends Component {
 		}
 	}
 
-	add_action(act) {
+	add_action(act: ItemAction) {
 		if (this.actions.includes(act) || !act) {return act;}
 		if (!(act instanceof Action)) {
 			const instobj = act;
@@ -210,7 +210,7 @@ class ItemActions extends Component {
 		if (has_component(this.loc, "MobHud")) {act.add_to(this.loc);}
 		return act;
 	}
-	remove_action(act) {
+	remove_action(act: { remove_from: (arg0: any) => void; }) {
 		const idx = this.actions.indexOf(act);
 		if (idx === -1) {return;}
 		this.actions.splice(idx, 1);
