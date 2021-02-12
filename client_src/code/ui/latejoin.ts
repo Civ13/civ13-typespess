@@ -26,7 +26,7 @@ class LatejoinPanel {
 		}
 	}
 
-	handle_message(message: { jobs: { [x: string]: any; }; }) {
+	handle_message(message: Record<string,any>) {
 		if (message.jobs) {
 			for (const id of Object.keys(message.jobs)) {
 				const job = this.jobs[id] || {};

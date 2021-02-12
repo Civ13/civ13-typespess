@@ -119,7 +119,8 @@ class LivingMob extends Component {
 
 	get health() {
 		let h = this.max_health;
-		for (const damage_obj of Object.values(this.damages)) {
+		for (const tdamage_obj of Object.values(this.damages)) {
+			const damage_obj: Record<string,any> = tdamage_obj;
 			if (damage_obj && damage_obj.get && damage_obj.affects_health)
 				{h -= damage_obj.get();}
 		}

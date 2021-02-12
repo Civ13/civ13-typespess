@@ -116,7 +116,8 @@ class PreferencesPanel {
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
-			for (const [id, obj] of Object.entries(this.sprite_accessories.hair)) {
+			for (const [id, tobj] of Object.entries(this.sprite_accessories.hair)) {
+				const obj: Record<string,any> = tobj;
 				const item = document.createElement("div");
 				item.classList.add("button", "dropdown-item");
 				item.style.height = "64px";
@@ -239,12 +240,6 @@ class PreferencesPanel {
 		this.panel.on("message", this.handle_message.bind(this));
 
 		this.char_prefs = {};
-	}
-	skin_tones(skin_tones: any) {
-		throw new Error("Method not implemented.");
-	}
-	hair_colors(hair_colors: any) {
-		throw new Error("Method not implemented.");
 	}
 
 	show_tab(tab: any) {

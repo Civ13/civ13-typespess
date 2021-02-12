@@ -606,7 +606,8 @@ class MobInventory extends Component {
 	}
 
 	*hand_slots() {
-		for (const slot of Object.values(this[_slots])) {
+		for (const tslot of Object.values(this[_slots])) {
+			const slot: any = tslot;
 			if (slot.props.is_hand_slot) {yield slot;}
 		}
 	}
@@ -619,7 +620,8 @@ class MobInventory extends Component {
 		if (val === old) {return;}
 		this[_nohold_counter] = val;
 		if (val && !old) {
-			for (const slot of Object.values(this.slots)) {
+			for (const tslot of Object.values(this.slots)) {
+				const slot: Record<string,any> = tslot;
 				if (slot.props.is_hand_slot && slot.can_unequip()) {slot.item = null;}
 			}
 		}
@@ -694,7 +696,8 @@ class MobInventory extends Component {
 	}
 
 	identifiable(prev: () => any) {
-		for (const slot of Object.values(this.slots)) {
+		for (const tslot of Object.values(this.slots)) {
+			const slot: Record<string,any> = tslot;
 			if (
 				slot.props.clothing_slot &&
 		has_component(slot.item, slot.props.clothing_slot) &&

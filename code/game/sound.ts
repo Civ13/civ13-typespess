@@ -10,6 +10,10 @@ const _clients:any = Symbol("_clients");
  * @memberof Typespess
  */
 class Sound {
+	vary: any;
+	playback_rate: any;
+	path: ArrayConstructor;
+	emitter: any;
 	/**
   * @param {Typespess} server
   * @param {Object} sndobj
@@ -17,7 +21,7 @@ class Sound {
   * @param {number} sndobj.playback_rate How fast to play it, also affects pitch
   * @param {boolean} sndobj.vary Multiplies playback_rate by a number between 0.75 and 1.25
   */
-	constructor(server, sndobj) {
+	constructor(server: any, sndobj: any) {
 		Object.assign(this, sndobj);
 		Object.defineProperty(this, "id", {
 			enumerable: true,
@@ -44,7 +48,7 @@ class Sound {
 		if (typeof this.path === "string") {
 			this.path = this.path.replace(
 				/{([0-9]+)-([0-9]+)}/g,
-				(match, from, to) => {
+				(match: any, from: any, to: any) => {
 					const result =
 			"" + (Math.floor(Math.random() * (1 + +to - +from)) + +from);
 					// Hey idiots making libraries on NPM
@@ -60,7 +64,7 @@ class Sound {
 	/**
   * @param {Array<Typespess.Atom<Mob>|Client>|Typespess.Atom<Mob>|Client} mobs
   */
-	play_to(mobs) {
+	play_to(mobs: Record<string,any>) {
 		if (!(mobs instanceof Array)) {mobs = [mobs];}
 		if (this.playing !== null)
 			{throw new Error(
@@ -122,6 +126,9 @@ class Sound {
 			if (!client.next_message.sound.stop) {client.next_message.sound.stop = [];}
 			client.next_message.sound.stop.push(this.id);
 		}
+	}
+	id(id: any) {
+		throw new Error("Method not implemented.");
 	}
 
 	/**

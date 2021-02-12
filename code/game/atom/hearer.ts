@@ -89,7 +89,7 @@ class Hearer extends Component {
   * @param {Typespess.ChatMessage} message
   * @returns {string} The message this atom will be shown
   */
-	show_message(message) {
+	show_message(message: Record<string,any>) {
 		const can_hear = this.a.c.Hearer.can_hear(message.emitter);
 		const can_see = this.a.c.Hearer.can_see(message.emitter);
 		if (!can_see && !can_hear) {return;}

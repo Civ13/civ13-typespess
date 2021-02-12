@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 export{};
 const EventEmitter = require("events");
 const mob_symbols = require("./mob.js")._symbols;
@@ -1017,7 +1018,7 @@ class Atom extends EventEmitter {
   */
 	move(offsetx: number, offsety: number, reason: any) {
 		if (!this.loc || !this.loc.is_base_loc) {return false;}
-		if (!this.can_move(offsetx, offsety, reason)) {return false;}
+		if (!this.can_move()) {return false;}
 		let remaining_x = offsetx;
 		let remaining_y = offsety;
 		const move_splits = Math.ceil(
@@ -1169,7 +1170,7 @@ class Atom extends EventEmitter {
   * @param {string} reason
   * @abstract
   */
-	can_uncross(uncrossing, offsetx: any, offsety: any, reason: any) {
+	can_uncross(uncrossing: Record<string,any>, offsetx: any, offsety: any, reason: any) {
 		return uncrossing.can_be_uncrossed(this, offsetx, offsety, reason);
 	}
 
@@ -1669,7 +1670,8 @@ set directional(val) {
   */
 	destroy() {
 		this.destroyed = true;
-		for (const component of Object.values(this.c)) {
+		for (const tcomponent of Object.values(this.c)) {
+			const component: Record<string,any> = tcomponent;
 			if (component.destroy) {component.destroy();}
 		}
 		this.loc = null;

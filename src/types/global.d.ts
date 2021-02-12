@@ -29,4 +29,5 @@ interface HTMLElement {
 interface ChildNode {
 	classList: any,
 	dataset: any,
+	innerHTML: string,
 }

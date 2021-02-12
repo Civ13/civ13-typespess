@@ -79,13 +79,15 @@ class StripPanel extends Panel {
 	slot_item_changed(slotid: string | number, from: any, to: { name: any; network_encode: (arg0: any) => any; }) {
 		const slot = this.bound_atom.c.MobInventory.slots[slotid];
 		const new_covered_set = this.bound_atom.c.MobInventory.get_covered_slots();
-		const new_covered_msg = {};
-		const new_item_names_msg = {};
-		const new_item_appearances_msg = {};
-		for (const [otherslotname, otherslot] of Object.entries(
+		const new_covered_msg: Record<string,any> = {};
+		const new_item_names_msg: Record<string,any> = {};
+		const new_item_appearances_msg: Record<string,any> = {};
+		for (const [totherslotname, totherslot] of Object.entries(
 			this.bound_atom.c.MobInventory.slots
 		)) {
-			const new_covered = new_covered_set.has(otherslotname);
+			const otherslotname: string = totherslotname;
+			const otherslot: Record<string,any> = totherslot;
+			const new_covered: boolean = new_covered_set.has(otherslotname);
 			if (this.cached_covered[otherslotname] !== new_covered) {
 				new_covered_msg[otherslotname] = new_covered;
 				this.cached_covered[otherslotname] = new_covered;

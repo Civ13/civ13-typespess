@@ -43,9 +43,9 @@ class Unconscious extends StatusEffect.Timed {
 }
 
 class Stun extends StatusEffect.Timed {
-	mob: boolean;
+	mob: Record<string,any>;
 	lying: any;
-	apply_to(mob, props) {
+	apply_to(mob: Record<string,any>, props: any) {
 		super.apply_to(mob, props);
 		if (this.mob && !this.lying) {
 			this.lying = true;

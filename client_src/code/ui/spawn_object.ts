@@ -44,9 +44,11 @@ class SpawnObjectPanel {
 	}
 
 	populate_templates() {
-		for (const [key, val] of Object.entries(this.templates).sort((a, b) => {
+		for (const [tkey, tval] of Object.entries(this.templates).sort((a, b) => {
 			return a[0] > b[0] ? 1 : a[0] === b[0] ? 0 : -1;
 		})) {
+			const key: any = tkey;
+			const val: Record<string,any> = tval;
 			const template_elem = document.createElement("div");
 			template_elem.classList.add("template-entry");
 			template_elem.style.borderBottom = "1px solid grey";

@@ -16,7 +16,7 @@ class StackCraftPanel {
 		this.panel.content_obj.appendChild(this.recipes_elem);
 	}
 
-	handle_message(message) {
+	handle_message(message: Record<string,any>) {
 		if (message.civilization) {
 			this.civilization = message.civilization;
 		}
