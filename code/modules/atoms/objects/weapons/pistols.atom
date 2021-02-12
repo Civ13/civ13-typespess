@@ -1,51 +1,51 @@
 
-    stechkin_pistol:
-        components: ["BallisticGun", "BeltItem"]
-        vars:
-            components:
-                BallisticGun:
-                    tactical_reloads: true
-                    mag_caliber: "10mm"
-                    mag_form_factor: "pistol"
-                    reload_sound: "sound/weapons/autoguninsert.ogg"
-                    can_suppress: true
-                    empty_state: true
-                
-                Examine:
-                    desc: "A small, easily concealable 10mm handgun."
-                
-                Item:
-                    size: 2
-                
-            
-            name: "stechkin pistol"
-            icon: 'icons/obj/guns/pistols/'
-            icon_state: "ruby"
-        
-        tree_paths: ["items/gun/ballistic/automatic/pistol"]
-    
-    glock17:
-        components: ["BallisticGun", "BeltItem"]
-        vars:
-            components:
-                BallisticGun:
-                    spawn_mag: "mag_glock17"
-                    mag_caliber: "9mm"
-                    mag_form_factor: "pistol"
-                    tactical_reloads: true
-                    reload_sound: "sound/weapons/autoguninsert.ogg"
-                    can_suppress: false
-                    mag_state: true
-                
-                Examine:
-                    desc: "A simple 9mm Parabellum handgun."
-                
-                Item:
-                    size: 2
-                
-            
-            name: "glock 17"
-            icon: 'icons/obj/guns/pistols/'
-            icon_state: "glock17"
-        
-        tree_paths: ["items/gun/ballistic/automatic/pistol/glock17"]
+stechkin_pistol:
+	components: ["BallisticGun", "BeltItem"]
+	vars:
+		components:
+			BallisticGun:
+				tactical_reloads: true
+				mag_caliber: "10mm"
+				mag_form_factor: "pistol"
+				reload_sound: "sound/weapons/autoguninsert.ogg"
+				can_suppress: true
+				empty_state: true
+			
+			Examine:
+				desc: "A small, easily concealable 10mm handgun."
+			
+			Item:
+				size: 2
+			
+		
+		name: "stechkin pistol"
+		icon: 'icons/obj/guns/pistols/'
+		icon_state: "ruby"
+	
+	tree_paths: ["items/gun/ballistic/automatic/pistol"]
+
+glock17:
+	components: ["BallisticGun", "BeltItem"]
+	vars:
+		components:
+			BallisticGun:
+				spawn_mag: "mag_glock17"
+				mag_caliber: "9mm"
+				mag_form_factor: "pistol"
+				tactical_reloads: true
+				reload_sound: "sound/weapons/autoguninsert.ogg"
+				can_suppress: false
+				mag_state: true
+			
+			Examine:
+				desc: "A simple 9mm Parabellum handgun."
+			
+			Item:
+				size: 2
+			
+		
+		name: "glock 17"
+		icon: 'icons/obj/guns/pistols/'
+		icon_state: "glock17"
+	
+	tree_paths: ["items/gun/ballistic/automatic/pistol/glock17"]

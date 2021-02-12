@@ -1,4 +1,4 @@
 
 analyzer:
-    components: ["Analyzer"]
-    tree_paths: ["items/tools/analyzer"]
+	components: ["Analyzer"]
+	tree_paths: ["items/tools/analyzer"]

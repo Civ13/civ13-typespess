@@ -25,7 +25,7 @@ beam_disabler:
 				hitsound: "sound/weapons/tap.ogg"
 		
 			LightSource:
-				color: lighting.LIGHT_COLOR_BLUE
+				color: "#6496FA" #light_color_blue
 
 		name: "disabler beam"
 	
