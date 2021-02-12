@@ -70,16 +70,16 @@ class MachineWires extends Component {
 					else {this.emit("mend", wire_obj);}
 				},
 			});
-			wire_obj.pulse = (user) => {
+			wire_obj.pulse = (user: any) => {
 				if (wire_obj.cut) {return;}
 				this.emit("pulse", wire_obj, user);
 			};
-			wire_obj.do_cut = (user) => {
+			wire_obj.do_cut = (user: any) => {
 				if (wire_obj.cut) {return;}
 				cut = true;
 				this.emit("cut", wire_obj, user);
 			};
-			wire_obj.do_mend = (user) => {
+			wire_obj.do_mend = (user: any) => {
 				if (!wire_obj.cut) {return;}
 				cut = false;
 				this.emit("mend", wire_obj, user);
@@ -140,7 +140,7 @@ MachineWires.template = {
 };
 
 class MachineWirePanel extends Panel {
-	constructor(client, obj) {
+	constructor(client: any, obj: Record<string,any>) {
 		super(client, obj);
 
 		this.wire_cut_changed = this.wire_cut_changed.bind(this);

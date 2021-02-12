@@ -11,7 +11,7 @@ class Smooth extends Component {
 		this.a.on("moved", this.rebuild_smooth.bind(this));
 	}
 
-	rebuild_smooth(exclude) {
+	rebuild_smooth(exclude: Record<string,any>) {
 		this.adjacent = 0;
 		if (!this.enabled) {
 			if (this.use_soft_disable) {this.a.icon_state = "";}

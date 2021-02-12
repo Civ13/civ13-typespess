@@ -38,7 +38,7 @@ class Action /*lawsuit*/ extends EventEmitter {
 			}
 		});
 	}
-	add_to(mob) {
+	add_to(mob: Record<string,any>) {
 		if (!has_component(mob, "MobHud")) {return;}
 		if (mob.c.MobHud.actions.has(this)) {return;}
 		mob.c.MobHud.actions.add(this);
@@ -78,7 +78,7 @@ class Action /*lawsuit*/ extends EventEmitter {
 		mob.c.MobHud.action_buttons.set(this, button);
 		mob.c.MobHud.reorganize_buttons();
 	}
-	remove_from(mob) {
+	remove_from(mob: Record<string,any>) {
 		if (!has_component(mob, "MobHud")) {return;}
 		if (!mob.c.MobHud.actions.has(this)) {return;}
 		mob.c.MobHud.actions.delete(this);

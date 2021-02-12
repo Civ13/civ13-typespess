@@ -54,7 +54,7 @@ class AdminPanel extends Panel {
 importModule(require("./spawn_object.js"));
 importModule(require("./unsorted_tools.js"));
 
-function importModule(mod) {
+function importModule(mod: Record<string,any>) {
 	if (mod.admin_tools) {
 		for (const [key, tool] of Object.entries(mod.admin_tools)) {
 			if (admin_tools[key]) {console.warn(`Admin tool ${key} already exists!`);}
@@ -63,7 +63,7 @@ function importModule(mod) {
 	}
 }
 
-module.exports.now = (server) => {
+module.exports.now = (server:any) => {
 	server.on("client_login", (client) => {
 		client.on("keydown", (e) => {
 			if (!e) {return;}

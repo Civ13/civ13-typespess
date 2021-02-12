@@ -3,6 +3,7 @@ const {
 	Component,
 	has_component,
 	Atom,
+	Sound,
 	chain_func,
 	to_chat,
 } = require("./../../../../../code/game/server.js");

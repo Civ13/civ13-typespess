@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-types */export{};
 class LatejoinPanel {
 	panel: any;
-	job_elems: {};
-	jobs: {};
-	department_elems: {};
+	job_elems: Record<string,any>;
+	jobs: Record<string,any>;
+	department_elems: Record<string,any>;
 	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.on("message", this.handle_message.bind(this));

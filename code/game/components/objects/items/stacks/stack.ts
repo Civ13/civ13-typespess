@@ -1,3 +1,5 @@
+import { statSync } from "fs";
+
 export{};
 const {
 	Component,
@@ -14,7 +16,7 @@ const fs = require("fs");
 const CSON = require("cson");
 
 const traverseDir = (dir: string) =>
-	unfold( (next, done, [ path = None, ...rest ]) =>
+	unfold( (next: any, done: any, [ path = None, ...rest ]) =>
 		path === None
 			? done ()
 			: next ( path

@@ -22,9 +22,10 @@ const traverseDir = (dir: string) =>
 	if(global.is_bs_editor_env) {
 		const appDir = global.workspaceDir;
 		for (const f of traverseDir(`${appDir}code/`)) {
-			if (getFileExtension(f) === "reagents") {
-				const nrea = CSON.parse(fs.readFileSync(f, "utf8"));
-				for(const j in nrea) {
+			if (getFileExtension(f) !== "reagents") {continue;}
+			const nrea = CSON.parse(fs.readFileSync(f, "utf8"));
+			for(const j in nrea) {
+				if (typeof j === "string") {
 					const nrea_new = new Reagent();
 					if (j === "subtype" && nrea[j] === "drug") {
 						nrea_new.name = "Drug";
@@ -52,9 +53,10 @@ const traverseDir = (dir: string) =>
 		}
 	} else {
 for (const f of traverseDir("./code/")) {
-	if (getFileExtension(f) === "reagents") {
-		const nrea = CSON.parse(fs.readFileSync(f, "utf8"));
-		for(const j in nrea) {
+	if (getFileExtension(f) !== "reagents") {continue;}
+	const nrea = CSON.parse(fs.readFileSync(f, "utf8"));
+	for(const j in nrea) {
+		if (typeof j === "string") {
 			const nrea_new = new Reagent();
 			if (j === "subtype" && nrea[j] === "drug") {
 				nrea_new.name = "Drug";

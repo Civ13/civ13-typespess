@@ -37,7 +37,7 @@ class ReagentHolder extends Component {
 		}
 	}
 
-	add(reagent, amount, { temp } = {}) {
+	add(reagent: any, amount: number, { temp = 300 } = {}) {
 		const reagent_name =
 	typeof reagent === "string" ? reagent : reagent.constructor.name;
 		return this.assume_reagent(reagent_name).add(amount, {
@@ -46,7 +46,7 @@ class ReagentHolder extends Component {
 		});
 	}
 
-	remove(reagent, amount) {
+	remove(reagent: any, amount: number) {
 		if (!reagent) {return 0;}
 		if (typeof reagent === "string") {reagent = this.reagents.get(reagent);}
 		if (!reagent) {return;}
@@ -61,7 +61,7 @@ class ReagentHolder extends Component {
 		return removed;
 	}
 
-	assume_reagent(reagent_name) {
+	assume_reagent(reagent_name: string) {
 		if (!this.reagents.has(reagent_name)) {
 			const reagent = new Reagent();
 			for(const i in reagent_types[reagent_name]) {
@@ -80,7 +80,7 @@ class ReagentHolder extends Component {
 		return v;
 	}
 
-	added(reagent, amount) {
+	added(reagent: any, amount: number) {
 		const reactions = reagent.constructor.reactions;
 		if (!reactions) {return;}
 		for (const [reaction, min_amount] of reactions) {
@@ -90,7 +90,7 @@ class ReagentHolder extends Component {
 		}
 	}
 
-	removed(reagent) {
+	removed(reagent: any) {
 		for (const reaction of this.held_reactions) {
 			if (
 				reagent.reactions &&
@@ -111,7 +111,7 @@ class ReagentHolder extends Component {
 		}
 	}
 
-	volume_of(reagent) {
+	volume_of(reagent: any) {
 		if (typeof reagent === "string") {reagent = this.reagents.get(reagent);}
 		if (reagent) {return reagent.volume;}
 		else {return 0;}
@@ -167,7 +167,7 @@ class ReagentHolder extends Component {
 		return master;
 	}
 
-	transfer_percent_to(target, percent = 1) {
+	transfer_percent_to(target: Record<string,any>, percent = 1) {
 		if (!has_component(target, "ReagentHolder")) {return 0;}
 		percent = Math.min(percent, 1);
 		percent = Math.min(
@@ -187,13 +187,13 @@ class ReagentHolder extends Component {
 		return amount_transferred;
 	}
 
-	transfer_to(target, amount) {
+	transfer_to(target: any, amount: number) {
 		const percent = amount / this.total_volume;
 		return this.transfer_percent_to(target, percent);
 	}
 
 	react_atom(
-		atom,
+		atom: Record<string,any>,
 		method = "touch",
 		{ volume_modifier = 1, show_message = true } = {}
 	) {
@@ -263,7 +263,7 @@ class ReagentHolder extends Component {
 		this.addiction_tick += dt;
 	}
 
-	should_metabolize_reagent(key /*, reagent*/) {
+	should_metabolize_reagent(key: string /*, reagent*/) {
 		if (key === "Blood" && this.a.c.CarbonMob.uses_blood) {return false;}
 		return true;
 	}
@@ -280,7 +280,7 @@ class ReagentHolder extends Component {
 	}
 	examine(prev: any, user: any) {
 		prev();
-		if (this.can_see_reagents(user)) {
+		if (this.can_see_reagents()) {
 			to_chat`It contains:`(user);
 			to_chat`${this.total_volume} units of various reagents`(user);
 		}
@@ -314,7 +314,7 @@ class ReagentHolder extends Component {
 		return [r, g, b, a];
 	}
 
-	can_consume(eater /*, user*/) {
+	can_consume(eater: Record<string,any> /*, user*/) {
 		if (!has_component(eater, "CarbonMob")) {return false;}
 		// TODO mouth cover check
 		return true;
@@ -339,7 +339,7 @@ ReagentHolder.template = {
 	},
 };
 
-function add_items(mod) {
+function add_items(mod: Record<string,any>) {
 	if (mod.reagents) {
 		for (const key in mod.reagents) {
 			if (reagent_types[key])

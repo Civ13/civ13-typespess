@@ -35,7 +35,7 @@ class CarbonMob extends Component.Networked {
 		this.a.c.LivingMob.add_splatter_floor = this.add_splatter_floor.bind(this);
 		this.a.c.Examine.examine = this.examine.bind(this);
 
-		this.add_networked_var("lying", (newval) => {
+		this.add_networked_var("lying", (newval:any) => {
 			if (newval) {
 				this.a.density = 0;
 				this.a.layer = layers.LYING_MOB_LAYER;
@@ -66,7 +66,7 @@ class CarbonMob extends Component.Networked {
 		new Atom(this.a.server, "organ_liver").c.Organ.insert(this.a);
 	}
 
-	stat_changed(oldstat, newstat) {
+	stat_changed(oldstat: any, newstat: any) {
 		if (!oldstat && newstat) {
 			this.lying_counter++;
 		} else if (oldstat && !newstat) {
@@ -79,7 +79,7 @@ class CarbonMob extends Component.Networked {
 		this.update_health_hud();
 	}
 
-	damage_changed(type) {
+	damage_changed(type: string) {
 		if (type === "stamina") {
 			this.update_stamina();
 		}
@@ -229,7 +229,7 @@ class CarbonMob extends Component.Networked {
 		}
 	}
 
-	movement_delay(prev) {
+	movement_delay(prev: any) {
 		let delay = prev();
 		if (this.a.c.LivingMob.stat === combat_defines.SOFT_CRIT)
 			{delay += combat_defines.SOFTCRIT_ADD_SLOWDOWN;}
@@ -274,7 +274,7 @@ class CarbonMob extends Component.Networked {
 		}
 	}
 
-	life(prev) {
+	life(prev: any) {
 		prev();
 
 		this.handle_organs();
@@ -343,7 +343,7 @@ class CarbonMob extends Component.Networked {
 		if (this.bleed_rate > 0) {this.bleed(this.bleed_rate);}
 	}
 
-	bleed(amt) {
+	bleed(amt: number) {
 		amt = this.a.c.ReagentHolder.remove("Blood", amt);
 		if (this.a.loc && this.a.loc.is_base_loc) {
 			this.a.c.LivingMob.add_splatter_floor({ small_drip: amt < 10 });
@@ -392,7 +392,7 @@ class CarbonMob extends Component.Networked {
 		});
 	}
 
-	examine(user) {
+	examine(user: any) {
 		to_chat`<span class='info'>*---------*<br>This is <em>${this.a.name}</em>!</span>`(
 			user
 		);

@@ -1,5 +1,6 @@
 export{};
 const {format_html} = require("./utils.js");
+const {to_chat} = require("./server.js");
 class World {
 	server: any;
 	servertime: number;

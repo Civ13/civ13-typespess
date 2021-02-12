@@ -7,7 +7,7 @@ const _step_cache: any = Symbol("_step_cache");
 
 class Dimension {
 	server: any;
-	constructor(server) {
+	constructor(server: any) {
 		this.server = server;
 		this[_locations] = new Map();
 	}
@@ -19,7 +19,7 @@ class Dimension {
   * @param {number} z
   * @return {Location} The location object.
   */
-	location(x, y, z) {
+	location(x: number, y: number, z: number) {
 		if (x !== +x || y !== +y || z !== +z) {
 			// OI THERE NUMBERS only
 			// This will catch them being not numbers, and also them being NaN
@@ -52,9 +52,9 @@ class Dimension {
  * @property {Typespess} server A reference to the server object
  */
 class Location {
-	x: any;
-	y: any;
-	z: any;
+	x: number;
+	y: number;
+	z: number;
 	dim: any;
 	is_base_loc: any;
 	partial_contents: any;
@@ -62,7 +62,7 @@ class Location {
 	viewers: any;
 	hearers: any;
 	server: any;
-	constructor(x, y, z, dim, server) {
+	constructor(x: number, y: number, z: number, dim: any, server: any) {
 		// Define these so that they can't be changed.
 		Object.defineProperty(this, "x", {
 			enumerable: true,

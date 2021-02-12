@@ -26,7 +26,7 @@ class BodyPartSkinTone extends Component {
 		});
 	}
 
-	apply_prefs(prev, prefs) {
+	apply_prefs(prev: any, prefs: any) {
 		prev();
 		this.skin_tone = prefs.skin_tone;
 	}
@@ -35,7 +35,7 @@ class BodyPartSkinTone extends Component {
 		return skin_tones[this.skin_tone];
 	}
 
-	get_main_overlay(prev) {
+	get_main_overlay(prev: any) {
 		const overlay = prev();
 		return overlay;
 	}
@@ -80,7 +80,7 @@ class BodyPartHumanHair extends Component {
 		});
 	}
 
-	apply_overlays(prev, atom) {
+	apply_overlays(prev: any, atom: any) {
 		prev();
 		const hair_obj = sprite_accessories.hair[this.hair_style];
 		if (hair_obj) {
@@ -90,7 +90,7 @@ class BodyPartHumanHair extends Component {
 		}
 	}
 
-	get_main_overlay(atm = null) {
+	get_main_overlay(atm: Record<string,any> = null) {
 		let icodir = 1;
 		if (atm) {icodir = atm.dir;}
 		const hair_obj = sprite_accessories.hair[this.hair_style];
@@ -110,12 +110,12 @@ class BodyPartHumanHair extends Component {
 		};
 		return overlay;
 	}
-	remove_overlays(prev, atom) {
+	remove_overlays(prev: any, atom: Record<string,any>) {
 		prev();
 		atom.overlays[`limb_${this.a.c.BodyPart.body_zone}_brute`] = null;
 	}
 
-	apply_prefs(prev, prefs) {
+	apply_prefs(prev: any, prefs: any) {
 		prev();
 		this.hair_style = prefs.hair_style;
 		this.hair_color = prefs.hair_color;
