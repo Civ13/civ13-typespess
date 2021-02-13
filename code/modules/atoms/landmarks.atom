@@ -1,0 +1,4 @@
+
+job_landmark:
+	components: ["JobLandmark"]
+	tree_paths: ["effects/job_landmark"]

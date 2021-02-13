@@ -34,11 +34,5 @@ BaseballBat.template = {
 	},
 };
 
-module.exports.templates = {
-	baseball_bat: {
-		components: ["BaseballBat"],
-		tree_paths: ["items/melee/baseball_bat"],
-	},
-};
 
 module.exports.components = { BaseballBat };

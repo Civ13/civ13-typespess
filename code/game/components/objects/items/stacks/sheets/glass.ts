@@ -186,37 +186,4 @@ GlassShard.template = {
 	},
 };
 
-module.exports.templates = {
-	glass_sheet: {
-		components: ["GlassSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/glass"],
-	},
-	rglass_sheet: {
-		components: ["RGlassSheet"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/sheet/rglass"],
-	},
-	glass_shard: {
-		components: ["GlassShard"],
-		tree_paths: ["items/shard"],
-	},
-};
-
 module.exports.components = { GlassShard, GlassSheet, RGlassSheet };

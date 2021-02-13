@@ -1,0 +1,3 @@
+chem_dispenser:
+	components: ["ChemDispenser"]
+	tree_paths: ["structures/machinery/chem_dispenser"]

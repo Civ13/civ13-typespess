@@ -86,3 +86,73 @@ paperframe_sheet:
 			orientation: "vertical"
 	]
 	tree_paths: ["items/stack/sheet/paperframes"]
+
+wood_tile:
+	components: ["WoodTile"]
+	variants: [
+		
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50, 60]
+			label: true
+			orientation: "vertical"
+		
+	]
+	tree_paths: ["items/stack/tile/wood"]
+
+carpet_tile:
+	components: ["CarpetTile"]
+	variants: [
+		
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50, 60]
+			label: true
+			orientation: "vertical"
+		
+	]
+	tree_paths: ["items/stack/tile/carpet"]
+
+plasteel_tile:
+	components: ["PlasteelTile"]
+	variants: [
+		
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50, 60]
+			label: true
+			orientation: "vertical"
+		
+	]
+	tree_paths: ["items/stack/tile"]
+
+glass_sheet:
+	components: ["GlassSheet"]
+	variants: [
+		
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+		
+	]
+	tree_paths: ["items/stack/sheet/glass"]
+
+rglass_sheet:
+	components: ["RGlassSheet"]
+	variants: [
+		
+			type: "single"
+			var_path: ["components", "Stack", "amount"]
+			values: [1, 5, 10, 20, 30, 40, 50]
+			label: true
+			orientation: "vertical"
+		
+	]
+	tree_paths: ["items/stack/sheet/rglass"]
+
+glass_shard:
+	components: ["GlassShard"]
+	tree_paths: ["items/shard"]
+

@@ -148,7 +148,7 @@ ChemDispenser.template = {
 };
 
 class ChemDispenserPanel extends Panel {
-	constructor(client, panel_props) {
+	constructor(client: any, panel_props: any) {
 		super(client, panel_props);
 		this.on("open", this.opened.bind(this));
 		this.on("close", this.closed.bind(this));
@@ -159,7 +159,7 @@ class ChemDispenserPanel extends Panel {
 		this.dispense_amount_changed = this.dispense_amount_changed.bind(this);
 	}
 
-	beaker_changed(old_beaker, new_beaker) {
+	beaker_changed(old_beaker: any, new_beaker: any) {
 		if (this.container_binding) {
 			this.container_binding.close();
 			this.container_binding = null;
@@ -169,7 +169,7 @@ class ChemDispenserPanel extends Panel {
 		}
 	}
 
-	dispense_amount_changed(old, val) {
+	dispense_amount_changed(old: number, val: number) {
 		this.send_message({ dispense_amount: val });
 	}
 
@@ -212,7 +212,7 @@ class ChemDispenserPanel extends Panel {
 		}
 	}
 
-	message_handler(msg) {
+	message_handler(msg: Record<string,any>) {
 		if (
 			typeof msg.dispense !== "undefined" &&
 	this.bound_atom.c.ChemDispenser.dispensable_reagents.includes(
@@ -236,12 +236,5 @@ class ChemDispenserPanel extends Panel {
 		}
 	}
 }
-
-module.exports.templates = {
-	chem_dispenser: {
-		components: ["ChemDispenser"],
-		tree_paths: ["structures/machinery/chem_dispenser"],
-	},
-};
 
 module.exports.components = { ChemDispenser };

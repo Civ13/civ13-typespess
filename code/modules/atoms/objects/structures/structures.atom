@@ -1,0 +1,7 @@
+rack:
+	components: ["Rack"]
+	tree_paths: ["structures/rack"]
+
+rack_parts:
+	components: ["RackParts"]
+	tree_paths: ["items/rack_parts"]

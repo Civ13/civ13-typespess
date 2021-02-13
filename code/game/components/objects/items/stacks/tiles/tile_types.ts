@@ -21,7 +21,7 @@ class StackTile extends Component {
 		);
 	}
 
-	pre_attack(prev) {
+	pre_attack(prev: any) {
 		return prev();
 	}
 }
@@ -142,48 +142,6 @@ PlasteelTile.template = {
 		},
 		name: "floor tile",
 		icon_state: "tile",
-	},
-};
-
-module.exports.templates = {
-	wood_tile: {
-		components: ["WoodTile"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50, 60],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/tile/wood"],
-	},
-	carpet_tile: {
-		components: ["CarpetTile"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50, 60],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/tile/carpet"],
-	},
-	plasteel_tile: {
-		components: ["PlasteelTile"],
-		variants: [
-			{
-				type: "single",
-				var_path: ["components", "Stack", "amount"],
-				values: [1, 5, 10, 20, 30, 40, 50, 60],
-				label: true,
-				orientation: "vertical",
-			},
-		],
-		tree_paths: ["items/stack/tile"],
 	},
 };
 

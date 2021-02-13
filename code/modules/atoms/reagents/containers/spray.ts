@@ -157,22 +157,4 @@ SprayBottle.template = {
 	},
 };
 
-module.exports.templates = {
-	spray_spacecleaner: {
-		components: ["SprayBottle"],
-		tree_paths: ["items/spray_spacecleaner"],
-		vars: {
-			components: {
-				ReagentHolder: {
-					init_reagents: { SpaceCleaner: 250 },
-				},
-				Examine: {
-					desc: "BLAM!-brand non-foaming space cleaner!",
-				},
-			},
-			name: "space cleaner",
-		},
-	},
-};
-
 module.exports.components = { SprayBottle };

@@ -18,3 +18,15 @@ apc:
 	components: ["Apc"]
 	tree_path: ["structures/apc"]
 
+spray_spacecleaner:
+	components: ["SprayBottle"]
+	tree_paths: ["items/spray_spacecleaner"]
+	vars:
+		components:
+			ReagentHolder:
+				init_reagents:
+					spaceCleaner: 250
+			Examine:
+				desc: "BLAM!-brand non-foaming space cleaner!"
+
+		name: "space cleaner"

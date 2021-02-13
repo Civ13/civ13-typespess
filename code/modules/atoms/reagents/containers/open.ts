@@ -206,30 +206,6 @@ GlassBeaker.template = {
 	},
 };
 
-module.exports.templates = {
-	beaker: {
-		components: ["GlassBeaker"],
-		tree_paths: ["items/beaker"],
-	},
-	beaker_large: {
-		components: ["GlassBeaker"],
-		vars: {
-			components: {
-				ReagentHolder: {
-					maximum_volume: 100,
-				},
-				Examine: {
-					desc: "A large beaker. It can hold up to 100 units.",
-				},
-			},
-			name: "large beaker",
-			icon: "icons/obj/chemical/",
-			icon_state: "beakerlarge",
-		},
-		tree_paths: ["items/beaker/large"],
-	},
-};
-
 module.exports.components = {
 	OpenReagentContainer,
 	GlassBeaker,
