@@ -82,7 +82,7 @@ class LightFixture extends Component {
 		}
 		return prev();
 	}
-	attack_hand(user) {
+	attack_hand(user: Record<string,any>) {
 		if (!this.tube) {
 			to_chat`There is no ${this.tube_type} in this light.`(user);
 			return;
@@ -120,7 +120,7 @@ class LightFixture extends Component {
 		}
 	}
 
-	take_damage(prev, damage_amount) {
+	take_damage(prev: any, damage_amount: number) {
 		const dot = prev();
 		if (!this.a.destroyed) {
 			if (Math.random() < damage_amount * 0.05) {this.break_light_tube();}

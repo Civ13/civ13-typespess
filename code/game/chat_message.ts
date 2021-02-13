@@ -38,7 +38,7 @@ class ChatMessage {
   * @param {string} message
   * @returns {Typespess.ChatMessage} (this object)
   */
-	self(a, ...b) {
+	self(a: string, ...b: any) {
 		if (typeof a === "string") {
 			this.self_message = a;
 			return this;
@@ -96,7 +96,8 @@ class ChatMessage {
 		for (const loc of atom.base_mover.partial_locs()) {
 			for (const hearer of loc.hearers) {hearers.add(hearer);}
 		}
-		for (const hearer of hearers) {
+		for (const thearer of hearers) {
+			const hearer: Record<string,any> = thearer;
 			if (
 				Math.max(Math.abs(hearer.x - atom.x), Math.abs(hearer.y - atom.y)) <=
 		this.msg_range

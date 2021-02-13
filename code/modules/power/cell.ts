@@ -19,7 +19,7 @@ class PowerCell extends Component {
 		make_watched_property(this, "charge", "number");
 	}
 
-	charge_changed(from, to) {
+	charge_changed(from: any, to: any) {
 		if (to > this.max_charge) {this.charge = this.max_charge;}
 		if (to < 0) {this.charge = 0;}
 

@@ -18,7 +18,7 @@ class MobHud extends Component {
 	throw_alert(
 		category: string | number,
 		template: string | number,
-		{ severity, new_master, override = false } = {}
+		{ severity, new_master, override = false }: Record<string,any> = {}
 	) {
 		/* Proc to create or update an alert. Returns the alert if the alert is new or updated, 0 if it was thrown already
 		category is a text string. Each mob may only have one alert per category; the previous one will be replaced

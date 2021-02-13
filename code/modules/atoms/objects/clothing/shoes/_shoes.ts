@@ -32,7 +32,7 @@ class FootItem extends Component {
 			}
 		});
 	}
-	mob_crossed(obj, movement) {
+	mob_crossed(obj: Record<string,any>, movement: any) {
 		if (has_component(obj, "CleanableDecal")) {
 			if (
 				obj.c.CleanableDecal.footprint_amount &&

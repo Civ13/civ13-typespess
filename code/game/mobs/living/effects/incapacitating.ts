@@ -31,7 +31,7 @@ class Knockdown extends StatusEffect.Timed {
 
 class Unconscious extends StatusEffect.Timed {
 	mob: any;
-	apply_to(mob, props) {
+	apply_to(mob: Record<string,any>, props: any) {
 		super.apply_to(mob, props);
 		if (this.mob) {this.mob.c.LivingMob.update_stat();}
 	}

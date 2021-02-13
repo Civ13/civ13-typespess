@@ -104,7 +104,7 @@ class GameTicker extends EventEmitter {
 		return true;
 	}
 
-	total_players_changed(from, to) {
+	total_players_changed(from: any, to: any) {
 		if (from && !to) {this.start_at = null;}
 		if (to && !from)
 			{this.start_at = this.start_at =

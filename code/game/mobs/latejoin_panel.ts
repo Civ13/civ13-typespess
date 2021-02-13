@@ -1,7 +1,7 @@
 const { Panel } = require("./../../../code/game/server.js");
 
 class LatejoinPanel extends Panel {
-	constructor(client) {
+	constructor(client: Record<string,any>) {
 		super(client, {
 			width: 660,
 			height: 500,
@@ -27,7 +27,7 @@ class LatejoinPanel extends Panel {
 		this.send_message({ jobs: jobs_msg });
 	}
 
-	message_handler(msg) {
+	message_handler(msg: Record<string,any>) {
 		if (msg.join) {
 			if (
 				this.client.server.ticker.game_state !== "playing" ||

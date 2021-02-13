@@ -16,12 +16,12 @@ class OpenReagentContainer extends Component {
 		this.a.c.Tangible.on("throw_finished", () => {
 			this.splash();
 		});
-		this.a.c.Tangible.on("throw_impacted", (target) => {
+		this.a.c.Tangible.on("throw_impacted", (target: Record<string,any>) => {
 			this.splash(target);
 		});
 	}
 
-	attack(target, user) {
+	attack(target: Record<string,any>, user: Record<string,any>) {
 		if (!this.a.c.ReagentHolder.can_consume(target, user)) {return;}
 
 		if (this.a.c.ReagentHolder.total_volume <= 0) {
@@ -57,7 +57,7 @@ class OpenReagentContainer extends Component {
 		})();
 	}
 
-	splash(target) {
+	splash(target: Record<string,any> = null) {
 		if (this.a.c.ReagentHolder.total_volume <= 0) {return;}
 		if (!target) {
 			for (const crosser of this.a.crosses()) {

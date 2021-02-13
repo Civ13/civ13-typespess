@@ -16,7 +16,7 @@ class AdminPanel extends Panel {
 		this.on("close", this.closed.bind(this));
 	}
 
-	message_handler(msg) {
+	message_handler(msg: Record<string,any>) {
 		if (msg.button_tool && msg.button) {
 			const tool = admin_tools[msg.button_tool];
 			if (

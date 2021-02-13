@@ -42,7 +42,7 @@ class PreferencesPanel extends Panel {
 		}
 	}
 
-	message_handler(msg) {
+	message_handler(msg: Record<string,any>) {
 		if (msg.char_prefs && this.char_prefs) {
 			if (typeof msg.char_prefs.name !== "undefined") {
 				const new_name = CharacterPreferences.reject_bad_name(
@@ -84,7 +84,7 @@ class PreferencesPanel extends Panel {
 			this.check_job_preferences(msg);
 		}
 	}
-	check_job_preferences(msg) {
+	check_job_preferences(msg: Record<string,any>) {
 		for (let [key, setting] of Object.entries(msg.job_preferences)) {
 			setting = Math.max(Math.min(Math.round(+setting || 0), 3), 0); // sanitize the value
 			if (key === "nomad") {setting = +!!setting;} // turn it into 0/1 deal
@@ -103,7 +103,7 @@ class PreferencesPanel extends Panel {
 		}
 	}
 
-	send_prefs(parts) {
+	send_prefs(parts: any = null) {
 		const char_prefs_msg = {};
 		for (const key of [
 			"name",

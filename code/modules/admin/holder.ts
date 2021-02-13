@@ -2,7 +2,7 @@ const read_config = require("../../config.js");
 
 const adminlist = read_config("admins.cson");
 class AdminHolder {
-	constructor(client) {
+	constructor(client: Record<string,any>) {
 		client.holder = this;
 		this.client = client;
 	}

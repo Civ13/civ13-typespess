@@ -88,7 +88,7 @@ class FootprintsDecal extends Component {
 		make_watched_property(this, "exited_dirs", "number");
 	}
 
-	entered_dirs_changed(from, to) {
+	entered_dirs_changed(from: any, to: any) {
 		for (const dir of [1, 2, 4, 8]) {
 			if (from & dir && !(to & dir)) {this.a.overlays[`entered_${dir}`] = null;}
 			else if (to & dir && !(from & dir))
@@ -100,7 +100,7 @@ class FootprintsDecal extends Component {
 		}
 	}
 
-	exited_dirs_changed(from, to) {
+	exited_dirs_changed(from: any, to: any) {
 		for (const dir of [1, 2, 4, 8]) {
 			if (from & dir && !(to & dir)) {this.a.overlays[`exited_${dir}`] = null;}
 			else if (to & dir && !(from & dir))

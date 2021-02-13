@@ -50,11 +50,11 @@ class Destructible extends Component {
 		this.obj_integrity = Math.max(old_integ - damage_amount, 0);
 		if (this.obj_integrity <= 0) {
 			if (this.integrity_failure && old_integ > this.integrity_failure)
-				{this.obj_break(damage_flag);}
-			this.obj_destruction(damage_flag);
+				{this.obj_break(/*damage_flag*/);}
+			this.obj_destruction(/*damage_flag*/);
 		} else if (this.integrity_failure) {
 			if (this.obj_integrity <= this.integrity_failure)
-				{this.obj_break(damage_flag);}
+				{this.obj_break(/*damage_flag*/);}
 		}
 	}
 

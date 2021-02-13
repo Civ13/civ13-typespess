@@ -88,7 +88,7 @@ class MachineWires extends Component {
 		make_watched_property(this, "status_text", "string");
 	}
 
-	show_ui(user) {
+	show_ui(user: Record<string,any>) {
 		if (
 			user.c.Mob.get_panel(this.a, MachineWirePanel) ||
 	!user.c.Mob.can_read_panel(this.a, MachineWirePanel)
@@ -228,7 +228,7 @@ class MachineWirePanel extends Panel {
 			}
 		});
 	}
-	active_hand_item_changed(from, to) {
+	active_hand_item_changed(from: any, to: any) {
 		let item_type = null;
 		if (
 			has_component(to, "Tool") &&
@@ -245,7 +245,7 @@ class MachineWirePanel extends Panel {
 	wire_cut_changed(wire) {
 		this.send_message({ wires: [{ color: wire.color, cut: wire.cut }] });
 	}
-	status_text_changed(from, to) {
+	status_text_changed(from: any, to: any) {
 		this.send_message({ status_text: to });
 	}
 }

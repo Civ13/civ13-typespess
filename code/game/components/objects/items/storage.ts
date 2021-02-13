@@ -163,7 +163,7 @@ class StorageItem extends Component {
 		return true;
 	}
 
-	attack_hand(prev, mob) {
+	attack_hand(prev: any, mob: Record<string,any>) {
 		if (
 			this.a.c.Item.slot &&
 	this.a.c.Item.slot.mob === mob &&
@@ -186,7 +186,7 @@ class StorageItem extends Component {
 		}
 	}
 
-	show_to(user) {
+	show_to(user: Record<string,any>) {
 		if (!has_component(user, "Eye")) {return;}
 		if (user.c.Eye[_current_storage_item] === this.a) {return;}
 		if (user.c.Eye[_current_storage_item])
@@ -302,7 +302,7 @@ class StorageItem extends Component {
 		return true;
 	}
 
-	insert_item_or_del(item, user, prevent_warning = false) {
+	insert_item_or_del(item: any, user: Record<string,any>, prevent_warning = false) {
 		if (!this.insert_item(item, user, prevent_warning) && is_atom(item))
 			{item.destroy();}
 	}

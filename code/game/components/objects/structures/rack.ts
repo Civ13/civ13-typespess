@@ -31,7 +31,7 @@ class Rack extends Component {
 		);
 	}
 
-	attack_by(prev, item, user, e) {
+	attack_by(prev: any, item: Record<string,any>, user: Record<string,any>, e: Record<string,any>) {
 		if (has_component(item, "Tool") && item.c.Tool.can_use("Wrench", user)) {
 			item.c.Tool.used("Wrench");
 			this.a.c.Destructible.deconstruct();
@@ -78,7 +78,7 @@ class RackParts extends Component {
 		}
 	}
 
-	attack_self(user) {
+	attack_self(user: Record<string,any>) {
 		to_chat`<span class='notice'>You start constructing a rack...</span>`(user);
 		user.c.MobInventory.do_after({ delay: 5000, target: this.a }).then(
 			(success) => {

@@ -4,7 +4,7 @@
   * @param {number} interval
   */
 function Scheduler(fn: Function, interval: number) {
-	let ninterval = interval * 1000;
+	const ninterval = interval * 1000;
   fn();
   setTimeout(Scheduler, ninterval);
 	}

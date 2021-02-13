@@ -105,7 +105,7 @@ class MobBodyParts extends Component {
 		}
 	}
 
-	examine_limbs(user) {
+	examine_limbs(user: Record<string,any>) {
 		const t_He = this.a.p_they(true);
 		const t_His = this.a.p_their(true);
 		const t_his = this.a.p_their();
@@ -154,10 +154,10 @@ class MobBodyParts extends Component {
 	}
 
 	apply_damage(
-		prev,
-		damage,
+		prev: any,
+		damage: number,
 		damage_type = "brute",
-		def_zone = null,
+		def_zone: Record<string,any> = null,
 		blocked = this.run_armor_check(def_zone, "melee")
 	) {
 		if (damage_type !== "brute" && damage_type !== "burn") {return prev();}
@@ -352,8 +352,8 @@ class BodyPart extends Component {
 	}
 
 	heal_damage(
-		type,
-		amount,
+		type: string,
+		amount: number,
 		{ only_robotic = false, only_organic = true, health_event = true } = {}
 	) {
 		if (only_robotic && this.is_organic) {return;}

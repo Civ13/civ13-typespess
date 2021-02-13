@@ -74,7 +74,7 @@ class Apc extends Component {
 		make_watched_property(this, "area");
 	}
 
-	area_changed(from, to) {
+	area_changed(from: any, to: any) {
 		if (from && from.c.AreaPower.apc === this.a) {from.c.AreaPower.apc = null;}
 		if (to) {
 			if (to.c.AreaPower.apc)
@@ -114,7 +114,7 @@ class Apc extends Component {
 		return to_use_powernet + to_use_cell;
 	}
 
-	process(prev, dt) {
+	process(prev: any, dt) {
 		if (this.cell) {
 			let to_charge = Math.min(
 				this.cell.c.PowerCell.max_charge - this.cell.c.PowerCell.charge,

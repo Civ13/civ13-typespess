@@ -108,7 +108,7 @@ class LivingMob extends Component {
 		return false;
 	}
 
-	adjust_damage(name: string, val: number, props: undefined) {
+	adjust_damage(name: string, val: number, props: undefined = null) {
 		const damage = this.damages[name];
 		if (damage) {
 			damage.adjust(val, props);

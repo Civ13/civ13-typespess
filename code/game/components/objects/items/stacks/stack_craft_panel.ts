@@ -49,7 +49,7 @@ class StackCraftPanel extends Panel {
 		);
 	}
 
-	message_handler(msg) {
+	message_handler(msg: Record<string,any>) {
 		if (typeof msg.build !== "undefined") {
 			msg.build = +msg.build || 0;
 			this.bound_atom.c.Stack.build_recipe(

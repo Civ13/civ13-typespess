@@ -5,7 +5,7 @@ const LatejoinPanel = require("./latejoin_panel");
 const PreferencesPanel = require("../../modules/client/preferences_panel.js");
 
 class NewPlayerPanel extends Panel {
-	constructor(client) {
+	constructor(client: Record<string,any>) {
 		super(client, {
 			width: 200,
 			height: 230,
@@ -29,7 +29,7 @@ class NewPlayerPanel extends Panel {
 		this.client.server.ticker.on("start_at_changed", this.start_at_changed);
 	}
 
-	message_handler(msg) {
+	message_handler(msg: Record<string,any>) {
 		if (msg.latejoin) {
 			if (!this.latejoin_panel) {
 				const panel = new LatejoinPanel(this.client);
@@ -72,11 +72,11 @@ class NewPlayerPanel extends Panel {
 		);
 	}
 
-	game_state_changed(from, to) {
+	game_state_changed(from: any, to: any) {
 		this.send_message({ latejoin: to !== "pregame" });
 		if (to === "playing" && this.latejoin_panel) {this.latejoin_panel.close();}
 	}
-	start_at_changed(from, to) {
+	start_at_changed(from: any, to: any) {
 		this.send_message({ start_at: to });
 	}
 }

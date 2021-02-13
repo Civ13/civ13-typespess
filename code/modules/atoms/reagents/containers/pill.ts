@@ -14,7 +14,7 @@ class Pill extends Component {
 		this.a.c.Item.attack = this.attack.bind(this);
 	}
 
-	attack(target, user) {
+	attack(target: Record<string,any>, user: Record<string,any>) {
 		if (!this.a.c.ReagentHolder.can_consume(target, user)) {return true;}
 
 		(async () => {

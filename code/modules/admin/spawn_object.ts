@@ -9,7 +9,7 @@ const {
 const _has_received_templates = Symbol("_has_received_templates");
 
 class SpawnObjectPanel extends Panel {
-	constructor(client) {
+	constructor(client: Record<string,any>) {
 		super(client, {
 			width: 400,
 			height: 600,
@@ -20,7 +20,7 @@ class SpawnObjectPanel extends Panel {
 		this.on("open", this.opened.bind(this));
 		this.on("close", this.closed.bind(this));
 	}
-	message_handler(msg) {
+	message_handler(msg: Record<string,any>) {
 		if (msg.spawn) {
 			const obj = new Atom(this.client.server, msg.spawn);
 			const mob = this.client.mob;

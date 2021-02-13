@@ -18,7 +18,7 @@ class FloorBase extends Component {
 		);
 	}
 
-	ex_act(prev, severity) {
+	ex_act(prev: any, severity: number) {
 		prev();
 		const shielded = this.is_shielded();
 		if (severity !== 1 && shielded) {return;}

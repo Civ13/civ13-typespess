@@ -55,7 +55,7 @@ class Atom extends EventEmitter {
   * @param {template} template The template
   * @param {Location|Typespess.Atom|null} location The starting location. You can also add 3 arguments x,y,z alternatively
   */
-	constructor(server, template: any, x: number, y: number, z: number, dim: { location: (arg0: any, arg1: any, arg2: any) => any; }) {
+	constructor(server: any, template: any, x: number, y: number, z: number, dim: { location: (arg0: any, arg1: any, arg2: any) => any; }) {
 		const otemp = template;
 		if (typeof template === "string") {template = server.templates[template];}
 		if (template && template.pick_from) {
@@ -228,7 +228,7 @@ class Atom extends EventEmitter {
 		this.overlays = new Proxy(
 			{},
 			{
-				set: (target, key, value) => {
+				set: (target: any, key: any, value: any) => {
 					if (typeof value === "undefined" || typeof value === "undefined") {
 						target[key] = void 0;
 						this[mob_symbols._update_var](key, 2);

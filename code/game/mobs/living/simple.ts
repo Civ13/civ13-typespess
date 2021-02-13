@@ -52,7 +52,7 @@ class SimpleMob extends Component {
 			}
 		}
 	}
-	move_ai (movedir) {
+	move_ai (movedir: number) {
 		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {return;}
 		if (!(movedir in [1,2,4,8])) {movedir = _.sample([1,2,4,8]);}
 		this.a.dir = movedir;
@@ -118,7 +118,7 @@ class mobAI extends Component {
 	run_behaviour() {
 		this.behaviour_timeout = null;
 		this.behaviour_cycle_num++;
-		this.do_behaviour(this.behaviour_cycle_num);
+		this.do_behaviour();
 		if (this.stat !== combat_defines.DEAD && !this.behaviour_timeout)
 			{this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 1000);}
 	}

@@ -16,7 +16,7 @@ async function explosion({
 	flash_range = devastation_range,
 	flame_range = light_impact_range,
 	silent = false,
-} = {}) {
+}: Record<string,any> = {}) {
 	if (!epicenter.dim)
 	// fuck off there's no place to explode into
 		{return;}

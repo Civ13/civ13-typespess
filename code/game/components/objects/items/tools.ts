@@ -187,7 +187,7 @@ Axe.template = {
 		icon_state: "bonehatchet",
 		name: "hatchet",
 	},
-	can_use(prev, tool) {
+	can_use(prev: any, tool: string) {
 		if (!prev()) {return false;}
 		if (tool !== "Axe") {return true;}
 	}
@@ -270,7 +270,7 @@ class WeldingTool extends Component {
 		this.is_on = this.get_fuel() > 0 && !this.is_on;
 	}
 
-	can_use(prev, tool) {
+	can_use(prev: any, tool: string) {
 		if (!prev()) {return false;}
 		if (tool !== "WeldingTool") {return true;}
 		return this.is_on && this.get_fuel() > 0;

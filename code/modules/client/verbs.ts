@@ -2,7 +2,7 @@ export{};
 const { to_chat } = require("./../../../code/game/server.js");
 
 module.exports.now = function (server) {
-	server.on("client_login", function (client) {
+	server.on("client_login", function (client: Record<string,any>) {
 		client.on("message", (obj) => {
 			if (obj.ooc_message) {
 				if (

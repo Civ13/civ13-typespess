@@ -17,7 +17,7 @@ class Mop extends Component {
 		);
 	}
 
-	after_attack(prev, target, user, prox) {
+	after_attack(prev: any, target: Record<string,any>, user: Record<string,any>, prox: any) {
 		if (!prox) {return prev();}
 
 		if (has_component(target, "OpenReagentContainer")) {

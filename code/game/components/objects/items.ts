@@ -78,22 +78,22 @@ class Item extends Component {
 		}
 	}
 
-	pre_attack() {return;}
+	pre_attack() {return true;}
 
-	after_attack() {return;}
+	after_attack() {return true;}
 
-	attack_space() {return;}
+	attack_space() {return true;}
 
-	melee_attack_chain(user, target, e) {
-		if (!this.pre_attack(target, user, e)) {
+	melee_attack_chain(user: Record<string,any>, target: any, e: any) {
+		if (!this.pre_attack(/*target, user, e*/)) {
 			const resolved = target.attack_by(this.a, user, e);
 			if (!resolved && !target.destroyed && !this.a.destroyed) {
-				this.after_attack(target, user, true, e);
+				this.after_attack(/*target, user, true, e*/);
 			}
 		}
 	}
 
-	attack(target, user) {
+	attack(target: any, user: Record<string,any>) {
 		if (this.no_bludgeon) {return;}
 		if (!this.force)
 			{new Sound(this.a.server, {
@@ -116,7 +116,7 @@ class Item extends Component {
 		// TODO logs and fingerprints
 	}
 
-	attack_obj(target, user) {
+	attack_obj(target: Record<string,any>, user: Record<string,any>) {
 		if (this.no_bludgeon) {return;}
 		user.c.MobInteract.change_next_move(combat_defines.CLICK_CD_MELEE);
 		user.c.Tangible.do_attack_animation(target);

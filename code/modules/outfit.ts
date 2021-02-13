@@ -19,7 +19,7 @@ class Outfit {
 	pre_equip() {return;}
 	post_equip() {return;}
 
-	equip(target, visuals_only = false) {
+	equip(target: Record<string,any>, visuals_only = false) {
 		const clone = Object.create(this);
 		Object.assign(clone, JSON.parse(JSON.stringify(this)));
 		clone.pre_equip(target, visuals_only);

@@ -25,7 +25,7 @@ class Door extends Component {
 			this.a.c.RequiresAccess.can_access,
 			this.can_access
 		);
-		this.a.attack_hand = (user) => {
+		this.a.attack_hand = (user: Record<string,any>) => {
 			this.try_to_activate_door(user);
 		};
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
@@ -135,13 +135,13 @@ class Door extends Component {
 
 	try_to_weld(/*tool, user*/) {return;}
 
-	attack_by(prev: any, item: any, user: any) {
+	attack_by(prev: any, item: any/*, user: any*/) {
 		if (has_component(item, "Tool") && item.c.Tool.can_use("Crowbar")) {
-			this.try_to_crowbar(item, user);
+			this.try_to_crowbar(/*item, user*/);
 			return true;
 		}
 		if (has_component(item, "Tool") && item.c.Tool.can_use("Welder")) {
-			this.try_to_weld(item, user);
+			this.try_to_weld(/*item, user*/);
 			return true;
 		}
 		return prev();

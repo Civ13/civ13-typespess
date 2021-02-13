@@ -243,7 +243,7 @@ class StackCable extends Component {
 		this.a.c.Item.inhand_icon_state = `coil_${this.cable_color}`;
 	}
 
-	pre_attack(prev, target, user) {
+	pre_attack(prev: any, target: Record<string,any>, user: Record<string,any>) {
 		if (this.a.c.Stack.amount < 1) {return true;}
 		// The cable we will be merging with
 		let target_cable = null;

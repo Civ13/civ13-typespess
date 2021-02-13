@@ -17,7 +17,7 @@ class Climbable extends Component {
 		);
 	}
 
-	can_be_crossed(prev, atom, dx, dy, reason) {
+	can_be_crossed(prev: any, atom: Record<string,any>, dx: number, dy: number, reason: string) {
 		if (reason === "climb") {return true;}
 		return prev();
 	}

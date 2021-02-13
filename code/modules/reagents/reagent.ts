@@ -167,7 +167,7 @@ class ReagentReaction {
 		throw new Error("Method not implemented.");
 	}
 
-	update(container) {
+	update(container: Record<string,any>) {
 		const react_status = this.get_react_status(container);
 		if (react_status === 2) {
 			container.c.ReagentHolder.held_reactions.delete(this);

@@ -10,6 +10,8 @@ class PreferencesPanel {
 	sprite_accessories: any;
 	job_preferences: any;
 	job_metas: any;
+	hair_colors: Record<string,any>;
+	skin_tones: Record<string,any>;
 	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.header_obj.classList.add("center");

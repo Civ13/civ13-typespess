@@ -47,7 +47,7 @@ class Tangible extends Component {
 		target = null,
 		range = this.throw_range,
 		speed = this.throw_speed,
-	} = {}) {
+	}: Record<string,any> = {}) {
 		try {
 			if (!target) {return;}
 			this.stop_throw();

@@ -13,7 +13,7 @@ class Handcuffs extends Component {
 		this.a.c.Item.attack = this.attack.bind(this);
 	}
 
-	attack(target, user) {
+	attack(target: Record<string,any>, user: Record<string,any>) {
 		if (
 			this.used ||
 	!has_component(target, "MobInventory") ||
@@ -43,7 +43,7 @@ class Handcuffs extends Component {
 		}
 	}
 
-	apply(target, user) {
+	apply(target: Record<string,any>, user: Record<string,any>) {
 		if (
 			this.used ||
 	!target.c.MobInventory.check_can_handcuff(user) ||

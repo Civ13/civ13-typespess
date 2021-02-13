@@ -216,7 +216,7 @@ class ReagentHolder extends Component {
 			);}
 
 		for (const [key, reagent] of this.reagents) {
-			if (!this.should_metabolize_reagent(key, reagent)) {continue;}
+			if (!this.should_metabolize_reagent(key/*, reagent*/)) {continue;}
 			if (
 				reagent.overdose_threshold &&
 		reagent.volume >= reagent.overdose_threshold &&

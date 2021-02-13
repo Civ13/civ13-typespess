@@ -40,7 +40,7 @@ class JobType {
 		);
 	}
 
-	instance(server, prefs) {
+	instance(server: any, prefs: typeof CharacterPreferences) {
 		if (!prefs) {prefs = new CharacterPreferences();}
 		const mob = prefs.instance_human(server, {
 			name_override: this.name_override,
@@ -49,14 +49,14 @@ class JobType {
 		return mob;
 	}
 
-	after_spawn(user) {
+	after_spawn(user: Record<string,any>) {
 		to_chat`<b>You job title is ${""}${this.title}.</b>`(user);
 		to_chat`Your role is ${this.description}`(user);
 		if (this.req_admin_notify)
 			{to_chat`<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>`(user);}
 	}
 
-	equip(mob) {
+	equip(mob: Record<string,any>) {
 		if (this.outfit) {this.outfit.equip(mob);}
 	}
 }
@@ -100,7 +100,7 @@ class JobOutfit extends Outfit {
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	post_equip(target, visuals_only = false) {return;}
+	post_equip(target: Record<string,any>, visuals_only = false) {return;}
 }
 
 JobType.Outfit = JobOutfit;

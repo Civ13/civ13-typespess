@@ -33,7 +33,7 @@ class AmmoCasing extends Component {
 		suppressed = false,
 		zone_override,
 		spread,
-	} = {}) {
+	}: Record<string,any> = {}) {
 		if (!user.loc || !user.loc.is_base_loc || this.spent) {return;}
 		const proj = this.create_projectile({
 			target,

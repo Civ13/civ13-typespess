@@ -328,13 +328,13 @@ class Client extends EventEmitter {
 		this[_atom_net_queue][netid] = { delete: true };
 	}
 
-	enqueue_add_tile(tile: any) {
+	enqueue_add_tile(tile: Record<string,any>) {
 		const strtile = JSON.stringify([tile.x, tile.y, tile.z]);
 		if (!this[_tiles_to_remove].delete(strtile))
 			{this[_tiles_to_add].add(strtile);}
 	}
 
-	enqueue_remove_tile(tile) {
+	enqueue_remove_tile(tile: Record<string,any>) {
 		const strtile = JSON.stringify([tile.x, tile.y, tile.z]);
 		if (!this[_tiles_to_add].delete(strtile))
 			{this[_tiles_to_remove].add(strtile);}
@@ -382,7 +382,7 @@ class Client extends EventEmitter {
 		}
 		this.socket.send(JSON.stringify(message));
 	}
-	network_updates_create(message,entry,netid) {
+	network_updates_create(message: Record<string,any>,entry: Record<string,any>,netid: any) {
 	if (!message.create_atoms) {message.create_atoms = [];}
 	const atom = entry.create;
 	const common_visgroups = [];
@@ -435,7 +435,7 @@ class Client extends EventEmitter {
 	}
 	message.create_atoms.push(submessage);
 	}
-	network_updates_update(message,entry,netid) {
+	network_updates_update(message: Record<string,any>,entry: Record<string,any>,netid: any) {
 		if (!message.update_atoms) {message.update_atoms = [];}
 		const atom = entry.update.atom;
 		const common_visgroups = [];

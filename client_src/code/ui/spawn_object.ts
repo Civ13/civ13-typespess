@@ -68,7 +68,7 @@ class SpawnObjectPanel {
 			setTimeout(() => {
 				// alright we need to build some images
 				const instobj = Object.assign({}, val.vars);
-				instobj.components = (val.components || []).filter((i) => {
+				instobj.components = (val.components || []).filter((i: string | number) => {
 					return this.panel.manager.client.components[i];
 				});
 				instobj.component_vars = val.vars.components;

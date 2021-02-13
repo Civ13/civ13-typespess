@@ -68,7 +68,7 @@ class Wild extends Component {
 		prev();
 	}
 
-	ex_act(prev, severity) {
+	ex_act(prev: any, severity: number) {
 		if (severity >= 1) {
 			if (Math.random() < this.hardness) {
 				this.a.c.Destructible.deconstruct(false);

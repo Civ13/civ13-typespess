@@ -122,7 +122,7 @@ class Buckle extends Component {
 	}
 
 	//Wrappers that handle sanity and user feedback
-	user_buckle_mob(buckling, user, check_loc = true) {
+	user_buckle_mob(buckling: Record<string,any>, user: Record<string,any>, check_loc = true) {
 		//This proc is unfinished placeholder, using it for testing.
 		//TODO: range/stat/restrained checks
 
@@ -141,7 +141,7 @@ class Buckle extends Component {
 		}
 	}
 
-	user_unbuckle_mob(unbuckling, user) {
+	user_unbuckle_mob(unbuckling: Record<string,any>, user: Record<string,any>) {
 		this.unbuckle_mob(unbuckling);
 		if (unbuckling !== user) {
 			visible_message`<span class='notice'>${user} unbuckles ${unbuckling} from ${this.a}.</span>`

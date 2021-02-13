@@ -20,7 +20,7 @@ class Puller extends Component {
 		}
 	}
 
-	can_pull(target) {
+	can_pull(target: Record<string,any>) {
 		return (
 			target !== this.a &&
 	has_component(target, "Tangible") &&

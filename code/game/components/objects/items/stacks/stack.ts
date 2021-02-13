@@ -16,7 +16,7 @@ const fs = require("fs");
 const CSON = require("cson");
 
 const traverseDir = (dir: string) =>
-	unfold( (next: any, done: any, [ path = None, ...rest ]) =>
+	unfold( (next: any, done: any, [ path = None, ...rest ]: Array<any>) =>
 		path === None
 			? done ()
 			: next ( path
@@ -178,14 +178,14 @@ class Stack extends Component {
 		}
 		const new_stack = new Atom(this.a.server, this.a.template);
 		new_stack.c.Stack.amount = amount;
-		this.use(amount, true);
+		this.use(amount);
 		if (has_component(user, "MobInventory")) {
 			user.c.MobInventory.put_in_hands(new_stack);
 		}
 		// TODO evidence
 	}
 
-	crossed_by(target) {
+	crossed_by(target: Record<string,any>) {
 		if (
 			this.merge_type &&
 	has_component(target, this.merge_type) &&
@@ -240,7 +240,7 @@ class Stack extends Component {
 		}
 	}
 
-	async build_recipe(recipe, amount: any, user) {
+	async build_recipe(recipe: Record<string,any>, amount: any, user: Record<string,any>) {
 		if (!has_component(user, "MobInventory") || !recipe) {return;}
 		this.update_recipes();
 		amount = Math.min(Math.max(+amount || 1, 1), recipe.build_limit); // no trust clients

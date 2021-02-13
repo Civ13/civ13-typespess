@@ -105,14 +105,14 @@ class AmmoBox extends Component {
 	}
 
 	attack_by(
-		prev,
-		item,
-		user,
-		e,
+		prev: any,
+		item: any,
+		user: Record<string,any>,
+		e: any,
 		{ silent = false, replace_spent = false } = {}
 	) {
 		let num_loaded = 0;
-		if (!this.can_load(user)) {
+		if (!this.can_load()) {
 			return;
 		}
 		if (has_component(item, "AmmoBox")) {
@@ -151,7 +151,7 @@ class AmmoBox extends Component {
 		return prev();
 	}
 
-	attack_self(user) {
+	attack_self(user: Record<string,any>) {
 		const casing = this.get_round();
 		if (casing) {
 			if (!user.c.MobInventory.put_in_hands(casing)) {

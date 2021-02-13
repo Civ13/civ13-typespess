@@ -127,14 +127,14 @@ class SpeechHearer extends Component {
 			deaf_message = "<span class='notice'>You can't hear yourself!</span>";
 		}
 
-		const composed = this.compose_message(message, emitter);
+		const composed = this.compose_message(message);
 		if (!composed) {return;}
 		const shown_message = audible_message(composed);
 		if (deaf_message) {shown_message.deaf(deaf_message);}
 		shown_message.show_directly_to(this.a, emitter);
 	}
 
-	compose_message(message: { radio_freq: string | number; speaker: { name: any; c: { SpeechEmitter: { verb_say: any; }; }; }; message: any; }) {
+	compose_message(message: { speaker: any; radio_freq: any; message?: any; }) {
 		const spanpart1 = `<span class='${
 			message.radio_freq
 				? freqtospan[message.radio_freq] || "radio"

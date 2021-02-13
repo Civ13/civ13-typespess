@@ -577,7 +577,7 @@ class MobInventory extends Component {
 			`<span class='danger'>The ${this.a} has thrown the ${item}</span class='danger'>`
 		).emit_from(this.a);
 		this.a.server.once("post_net_tick", () => {
-			item.c.Tangible.throw_at({ target });
+			item.c.Tangible.throw_at({target});
 		});
 	}
 

@@ -103,8 +103,8 @@ class LargeContainer extends Component {
 		}
 	}
 
-	open(user) {
-		if (this.opened || !this.can_open(user)) {return;}
+	open(user: Record<string,any> = null) {
+		if (this.opened || (user && !this.can_open(user))) {return;}
 		new Sound(this.a.server, {
 			path: this.open_sound,
 			volume: 0.15,
@@ -141,8 +141,8 @@ class LargeContainer extends Component {
 		atom.loc = this.a;
 	}
 
-	close(user) {
-		if (!this.opened || !this.can_close(user)) {return;}
+	close(user: Record<string,any> = null) {
+		if (!this.opened || (user && !this.can_close(user))) {return;}
 		this.take_contents();
 		new Sound(this.a.server, {
 			path: this.close_sound,
@@ -154,7 +154,7 @@ class LargeContainer extends Component {
 		return true;
 	}
 
-	toggle(user) {
+	toggle(user: Record<string,any>) {
 		if (this.opened) {return this.close(user);}
 		else {return this.open(user);}
 	}
