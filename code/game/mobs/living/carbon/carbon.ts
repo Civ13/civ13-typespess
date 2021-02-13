@@ -249,7 +249,7 @@ class CarbonMob extends Component.Networked {
 		const old = this[_lying_counter];
 		if (old === val) {return;}
 		this[_lying_counter] = val;
-		this.update_lying(old, val);
+		this.update_lying(/*old, val*/);
 	}
 
 	moved(e: any) {

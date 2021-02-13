@@ -70,7 +70,7 @@ class Matrix {
 		);
 	}
 
-	translate(dx = 0, dy: number) {
+	translate(dx = 0, dy = 0) {
 		return this.multiply(new Matrix(1, 0, 0, 1, dx, dy));
 	}
 

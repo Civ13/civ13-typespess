@@ -86,8 +86,9 @@ class LivingMob extends Component {
 				this.emit("damage_changed", name);
 				if (health_event) {this.emit("health_changed");}
 			},
-			adjust: (amount: number, props: { health_event?: boolean; force?: boolean; }) => {
-				damage_obj.set(damage_obj.get() + amount, props);
+			adjust: (amount: number, props: { health_event: true, force: false; }) => {
+				if (props) {damage_obj.set(damage_obj.get() + amount, props);}
+				else {damage_obj.set(damage_obj.get() + amount, { health_event: true, force: false });}
 			},
 		};
 		this.damages[name] = damage_obj;
@@ -204,7 +205,7 @@ class LivingMob extends Component {
 	run_life() {
 		this.life_timeout = null;
 		this.life_cycle_num++;
-		this.life(this.life_cycle_num);
+		this.life(/*this.life_cycle_num*/);
 		if (this.stat !== combat_defines.DEAD && !this.life_timeout)
 			{this.life_timeout = setTimeout(this.run_life.bind(this), 2000);}
 	}

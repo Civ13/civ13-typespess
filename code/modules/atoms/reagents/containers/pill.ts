@@ -29,7 +29,7 @@ class Pill extends Component {
 							delay: this.self_delay,
 						}))
 					)
-						{return;}
+						{return false;}
 				}
 				to_chat`<span class='notice'>You ${this.apply_method} the ${this.a}.</span>`(
 					user
@@ -40,7 +40,7 @@ class Pill extends Component {
 					target
 				);
 				if (!(await user.c.MobInventory.do_after({ target, delay: 3000 })))
-					{return;}
+					{return false;}
 				visible_message`<span class='danger'>The ${user} forces the ${target} to ${this.apply_method} the ${this.a}.</span>`
 					.self`<span class='userdanger'>The ${user} forces you to ${this.apply_method} the ${this.a}.</span>`.emit_from(
 					target

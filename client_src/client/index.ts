@@ -283,7 +283,7 @@ const _chain_spliced = Symbol("_chain_spliced");
 	chained_func[_chain_spliced] = false;
 	chained_func[_chain_parent] = func1;
 	return chained_func;
-}),
+});
 (TypespessClient.dropdown = function (
 	elem1: { getBoundingClientRect: () => any; appendChild: (arg0: any) => void; classList: { contains: (arg0: string) => any; }; contains: (arg0: any) => any; removeChild: (arg0: any) => void; },
 	elem2: Element,

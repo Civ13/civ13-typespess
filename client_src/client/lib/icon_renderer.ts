@@ -52,7 +52,7 @@ class IconRenderer {
 	}
 
 	get_bounds() {
-		if (!this.icon_meta || !this.icon_meta) {return;}
+		if (!this.icon_meta) {return;}
 		const offset = this.get_offset();
 		return {
 			x: offset[0],

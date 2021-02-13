@@ -53,7 +53,7 @@ class AmmoBox extends Component {
 		return round;
 	}
 
-	give_round(ammo_casing, replace_spent = false) {
+	give_round(ammo_casing: any, replace_spent = false) {
 		// Boxes don't have a caliber type, magazines do. Not sure if it's intended or not, but if we fail to find a caliber, then we fall back to ammo_type.
 		if (!has_component(ammo_casing, "AmmoCasing")) {
 			return false;

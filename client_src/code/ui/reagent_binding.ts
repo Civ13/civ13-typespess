@@ -87,7 +87,7 @@ class ReagentBinding {
 			}
 			let elem = this.reagent_elems[key];
 			if (!elem) {
-				elem = this.build_entry(key, robj);
+				elem = this.build_entry(/*key, robj*/);
 				reagents_list.appendChild(elem);
 				this.reagent_elems[key] = elem;
 			}

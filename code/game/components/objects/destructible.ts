@@ -94,7 +94,7 @@ class Destructible extends Component {
 
 	obj_break() {return;}
 	obj_destruction() {
-		this.deconstruct(false);
+		this.deconstruct(/*false*/);
 	}
 
 	attack_by(prev: () => any, item: { c: { Item: { attack_obj: (arg0: any, arg1: any) => any; }; }; }, user: any) {

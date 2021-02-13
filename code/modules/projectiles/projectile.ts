@@ -119,7 +119,7 @@ class Projectile extends Component.Networked {
 		}
 	}
 
-	prehit(target: any) {
+	prehit(/*target: any*/) {
 		return true;
 	}
 
@@ -170,7 +170,7 @@ class Projectile extends Component.Networked {
 			const real_props = Object.assign({}, props, { blocked });
 			target.c.LivingMob.apply_effect(effect, real_props);
 		}
-		return 0;
+		return 1;
 	}
 
 	collide(target: any) {

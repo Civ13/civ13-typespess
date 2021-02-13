@@ -102,7 +102,7 @@ class ReagentBinding {
 		if (this.panel.is_open) {this.send_message(msg);}
 	}
 
-	send_message(obj: { temperature?: any; total_volume?: any; maximum_volume?: any; reagents?: {} | {}; }) {
+	send_message(obj: { temperature?: any; total_volume?: any; maximum_volume?: any; reagents?: any; }) {
 		const sent_obj = {};
 		let curr_obj = sent_obj;
 		const split = this.path.split(".");

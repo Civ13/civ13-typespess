@@ -29,7 +29,7 @@ class EffectSystem {
 
 	async generate_effect() {
 		if (this.holder) {this.location = this.holder.base_loc;}
-		const effect = this.create_effect_atom(this.location);
+		const effect = this.create_effect_atom(/*this.location*/);
 		effect.glide_size = 2;
 		this.total_effects++;
 		let dir;

@@ -97,7 +97,7 @@ class MobInteract extends Component {
 				if (active_item) {
 					active_item.c.Item.after_attack(e.atom, this.a, false, e);
 				} else {
-					this.ranged_attack(e.atom, e);
+					this.ranged_attack(/*e.atom, e*/);
 				}
 			}
 		} else {
