@@ -1,7 +1,19 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
+  sonarcloud: sonarsource/sonarcloud@1.0.1
 jobs:
+  build:
+    docker:
+      - image: cimg/base:2020.01
+    steps:
+      - checkout
+      - run:
+          command: sudo sh scripts/setup.sh
+      - run:
+          command: sudo sh scripts/launch_test.sh
+          no_output_timeout: 2m
+      - sonarcloud/scan
   build-and-test:
     executor:
       name: node/default
@@ -15,6 +27,10 @@ jobs:
                 command: sudo sh scripts/launch_test.sh
                 no_output_timeout: 2m
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
+  build-and-test:
+    jobs:
+      - build-and-test
