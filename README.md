@@ -4,9 +4,18 @@
 
 [![CircleCI](https://img.shields.io/circleci/build/github/Civ13/civ13-typespess)](https://app.circleci.com/pipelines/github/Civ13/civ13-typespess)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f6b220214aca435c9942bc5cb205d239)](https://app.codacy.com/gh/Civ13/civ13-typespess?utm_source=github.com&utm_medium=referral&utm_content=Civ13/civ13-typespess&utm_campaign=Badge_Grade_Dashboard)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=alert_status)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=bugs)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=code_smells)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=security_rating)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
+
 [![License](https://img.shields.io/github/license/civ13/civ13-typespess)](https://github.com/Civ13/civ13-typespess/blob/master/LICENSE)
 
 ![GitHub top language](https://img.shields.io/github/languages/top/civ13/civ13-typespess)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=ncloc)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/civ13/civ13-typespess)
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13-typespess)
 
