@@ -108,11 +108,6 @@ class Atom extends EventEmitter {
 			writable: false,
 			value: server,
 		});
-		/**
-	* The server object
-	* @type {Typespess}
-	*/
-		this.server;
 		Object.defineProperty(this, "object_id", {
 			enumerable: true,
 			configurable: false,

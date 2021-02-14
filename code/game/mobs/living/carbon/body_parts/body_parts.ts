@@ -43,11 +43,11 @@ class MobBodyParts extends Component {
 					return dam;
 				},
 				affects_health: true,
-				set: (val, props) => {
+				set: (val:number, props: any) => {
 					obj.adjust(val - obj.get(), props);
 				},
 				adjust: (
-					amt,
+					amt: number,
 					{
 						health_event = true,
 						force = false,

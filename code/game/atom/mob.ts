@@ -98,7 +98,6 @@ class Eye extends Component {
 				this.show_message.bind(this)
 			);}
 
-		/** @type {boolean} */ this.xray;
 	}
 
 	[_add_viewing](item:any) {

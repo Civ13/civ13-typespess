@@ -55,13 +55,13 @@ class Location {
 	x: number;
 	y: number;
 	z: number;
-	dim: any;
-	is_base_loc: any;
-	partial_contents: any;
-	contents: any;
-	viewers: any;
-	hearers: any;
-	server: any;
+	dim: Dimension;
+	is_base_loc: boolean;
+	partial_contents: Array<any>;
+	contents: Array<any>;
+	viewers: Array<any>;
+	hearers: Array<any>;
+	server: Record<string,any>;
 	constructor(x: number, y: number, z: number, dim: any, server: any) {
 		// Define these so that they can't be changed.
 		Object.defineProperty(this, "x", {
@@ -129,16 +129,6 @@ class Location {
 		});
 		this[_step_cache] = new Array(16);
 
-		/** @type {number} */ this.x;
-		/** @type {number} */ this.y;
-		/** @type {number} */ this.z;
-		/** @type {Dimension} */ this.dim;
-		/** @type {boolean} */ this.is_base_loc;
-		/** @type {Array<Typespess.Atom>} */ this.partial_contents;
-		/** @type {Array<Typespess.Atom>} */ this.contents;
-		/** @type {Array<Typespess.Atom>} */ this.viewers;
-		/** @type {Array<Typespess.Atom>} */ this.hearers;
-		/** @type {Typespess} */ this.server;
 	}
 
 	/**

@@ -108,7 +108,7 @@ class Apc extends Component {
 		if (this.cell) {
 			to_use_cell = Math.min(amount, this.cell.c.PowerCell.charge * 1000);
 			to_use_cell = this.cell.c.PowerCell.use(to_use_cell / 1000) * 1000;
-			amount -= to_use_cell;
+			//amount -= to_use_cell;
 		}
 
 		return to_use_powernet + to_use_cell;

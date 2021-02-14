@@ -24,7 +24,7 @@ class TypespessClient extends EventEmitter {
 		this.components = {};
 		this.panel_classes = {};
 		this.eyes = {};
-		this.server_time_to_client;
+		this.server_time_to_client = 0;
 		this.audio_buffers = new Map();
 		this.playing_sounds = new Map();
 

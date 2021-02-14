@@ -28,7 +28,6 @@ class Component extends EventEmitter {
 	* The atom this component belongs to
 	* @type {Typespess.Atom}
 	*/
-		this.atom;
 		if (!this.a.server.atoms_for_components[this.constructor.name]) {
 			this.a.server.atoms_for_components[this.constructor.name] = new Set();
 		}
