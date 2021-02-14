@@ -51,6 +51,7 @@ class Rack extends Component {
 		if (!this.a.loc) {return;}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			this.a.density = 0;
+			// eslint-disable-next-line no-new
 			new Atom(this.a.server, "rack_parts", this.a.loc);
 			//TODO: fingerprints
 			this.a.destroy();
@@ -81,8 +82,9 @@ class RackParts extends Component {
 	attack_self(user: Record<string,any>) {
 		to_chat`<span class='notice'>You start constructing a rack...</span>`(user);
 		user.c.MobInventory.do_after({ delay: 5000, target: this.a }).then(
-			(success) => {
+			(success: any) => {
 				if (!success) {return;}
+				// eslint-disable-next-line no-new
 				new Atom(this.a.server, "rack", user.loc);
 				this.a.destroy();
 			}

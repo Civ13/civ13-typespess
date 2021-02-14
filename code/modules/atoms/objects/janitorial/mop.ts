@@ -54,7 +54,7 @@ class Mop extends Component {
 			user.c.MobInventory.do_after({
 				delay: this.mop_speed,
 				target: turf,
-			}).then((success) => {
+			}).then((success: Record<string,any>) => {
 				if (!success) {return;}
 				to_chat`<span class='notice'>You finish mopping.</span>`(user);
 				if (this.a.c.ReagentHolder.volume_of("Water") >= 1) {

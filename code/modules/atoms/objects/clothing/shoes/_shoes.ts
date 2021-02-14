@@ -17,14 +17,14 @@ class FootItem extends Component {
 		this.mob_uncrossed = this.mob_uncrossed.bind(this);
 		this.mob_moved = this.mob_moved.bind(this);
 		// hey check this shit out you can put code related to shoes in shoe code instead of mob code.
-		this.a.c.Item.on("equipped", (slot) => {
+		this.a.c.Item.on("equipped", (slot: Record<string,any>) => {
 			if (!slot.props.is_hand_slot) {
 				slot.mob.on("crossed", this.mob_crossed);
 				slot.mob.on("uncrossed", this.mob_uncrossed);
 				slot.mob.on("moved", this.mob_moved);
 			}
 		});
-		this.a.c.Item.on("unequipped", (slot) => {
+		this.a.c.Item.on("unequipped", (slot: Record<string,any>) => {
 			if (!slot.props.is_hand_slot) {
 				slot.mob.removeListener("crossed", this.mob_crossed);
 				slot.mob.removeListener("uncrossed", this.mob_uncrossed);
@@ -66,7 +66,7 @@ class FootItem extends Component {
 			}
 		}
 	}
-	mob_uncrossed(obj, movement) {
+	mob_uncrossed(obj: Record<string,any>, movement: Record<string,any>) {
 		if (has_component(obj, "FootprintsDecal") && movement.offset) {
 			const amount = +this.footprint_amounts[obj.c.FootprintsDecal.type] || 0;
 			if (amount > 0) {
@@ -82,8 +82,9 @@ class FootItem extends Component {
 			}
 		}
 	}
-	mob_moved(movement) {
+	mob_moved(movement: Record<string,any>) {
 		if (!movement.offset) {return;}
+		// eslint-disable-next-line prefer-const
 		for (let [type, amount] of Object.entries(this.footprint_amounts)) {
 			if (amount <= 0) {continue;}
 			let valid = true;

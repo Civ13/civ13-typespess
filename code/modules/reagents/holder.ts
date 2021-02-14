@@ -1,3 +1,5 @@
+import { any } from "underscore";
+
 export{};
 const {
 	Component,
@@ -9,10 +11,11 @@ const {
 const _temperature:any = Symbol("_temperature");
 const { Reagent } = require("./reagent.js");
 
-const reagent_types = {};
+const reagent_types: Record<string,any> = {};
 const reagent_reactions: any[] = [];
 
 class ReagentHolder extends Component {
+	init_reagents: Record<string,number>;
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.reagents = new Map();
@@ -362,8 +365,9 @@ add_items(require("./recipes/recipe_importer.js"));
 // Cache the reactions for the reagents
 
 for (const reaction of reagent_reactions) {
-	const to_cache = {};
-	for (const [req, amount] of Object.entries(reaction.required_reagents)) {
+	const to_cache: Record<string,any> = {};
+	for (const [req, tamount] of Object.entries(reaction.required_reagents)) {
+		const amount: any = tamount;
 		if (!to_cache[req]) {to_cache[req] = 0;}
 		to_cache[req] = Math.max(to_cache[req], amount);
 	}

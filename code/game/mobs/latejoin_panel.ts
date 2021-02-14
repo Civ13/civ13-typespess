@@ -13,7 +13,7 @@ class LatejoinPanel extends Panel {
 
 	open() {
 		super.open();
-		const jobs_msg = {};
+		const jobs_msg: Record<string,any> = {};
 		for (const [id, njob] of Object.entries(this.client.server.job_controller.jobs)) {
 			const job: any = njob;
 			jobs_msg[id] = {

@@ -8,7 +8,7 @@ const {
 } = require("./../../code/game/server.js");
 const Mind = require("./mobs/mind/mind.js");
 class GameTicker extends EventEmitter {
-	constructor(server) {
+	constructor(server: Record<string,any>) {
 		super();
 		this.server = server;
 		this.server.ticker = this;
@@ -112,10 +112,10 @@ class GameTicker extends EventEmitter {
 	}
 }
 
-module.exports.now = (server) => {
+module.exports.now = (server: Record<string,any>) => {
 	server.ticker = new GameTicker(server);
 };
 
-module.exports.server_start = (server) => {
+module.exports.server_start = (server: Record<string,any>) => {
 	server.ticker.start_ticking();
 };

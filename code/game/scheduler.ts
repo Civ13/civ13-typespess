@@ -3,6 +3,7 @@
   * @param {function} _fn
   * @param {number} interval
   */
+// eslint-disable-next-line @typescript-eslint/ban-types
 function Scheduler(fn: Function, interval: number) {
 	const ninterval = interval * 1000;
   fn();

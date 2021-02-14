@@ -2,7 +2,7 @@ export{};
 const { Panel } = require("./../../../../../../code/game/server.js");
 
 class StackCraftPanel extends Panel {
-	constructor(client, panel_props, civilization) {
+	constructor(client: Record<string,any>, panel_props: any, civilization: string) {
 		super(client, panel_props);
 		this.civilization = civilization;
 		this.on("open", this.opened.bind(this));

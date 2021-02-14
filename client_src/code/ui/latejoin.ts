@@ -65,7 +65,7 @@ class LatejoinPanel {
 	}
 }
 
-const departments = {
+const departments: Record<string,any> = {
 	misc: {
 		name: "Miscellaneous",
 		color: "#ffffff",

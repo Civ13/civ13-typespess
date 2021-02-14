@@ -67,7 +67,7 @@ class CharacterPreferences {
 	}
 
 	static reject_bad_name(
-		t_in,
+		t_in: string | any[],
 		{ allow_numbers = false, max_length = 42, trim = true } = {}
 	) {
 		if (typeof t_in !== "string") {return;}

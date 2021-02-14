@@ -41,7 +41,7 @@ class BloodDripsDecal extends Component {
 		this.a.icon_state = null;
 		this.a.c.CleanableDecal.on("merged", this.merged.bind(this));
 	}
-	merged(other) {
+	merged(other: Record<string,any>) {
 		if (has_component(other, "BloodDripsDecal")) {
 			const old_drips = this.num_drips;
 			this.num_drips += other.c.BloodDripsDecal.num_drips;

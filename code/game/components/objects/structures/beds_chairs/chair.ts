@@ -20,7 +20,7 @@ class Chair extends Component {
 		);
 	}
 
-	deconstruct(prev) {
+	deconstruct(prev: any) {
 		if (
 			!this.a.c.Destructible.no_deconstruct &&
 	this.a.base_loc &&
@@ -42,7 +42,7 @@ class Chair extends Component {
 		}
 	}
 
-	post_buckle_mob(prev) {
+	post_buckle_mob(prev: any) {
 		this.handle_layer();
 		return prev();
 	}

@@ -160,10 +160,10 @@ class ReagentReaction {
 			{return 1;}
 		return 0;
 	}
-	required_reagents(required_reagents: any) {
+	required_reagents(/*required_reagents: any*/) {
 		throw new Error("Method not implemented.");
 	}
-	required_catalysts(required_catalysts: any) {
+	required_catalysts(/*required_catalysts: any*/) {
 		throw new Error("Method not implemented.");
 	}
 
@@ -209,10 +209,10 @@ class ReagentReaction {
 		}
 		this.react(container, multiplier);
 	}
-	results(results: any) {
+	results(/*results: any*/) {
 		throw new Error("Method not implemented.");
 	}
-	react(container, multiplier = 1) {
+	react(container: Record<string,any>, multiplier = 1) {
 		for (const [reagent, amount] of Object.entries(this.results))
 			{container.c.ReagentHolder.add(reagent, amount * multiplier);}
 		if (!has_component(container, "LivingMob") && this.mix_sound)

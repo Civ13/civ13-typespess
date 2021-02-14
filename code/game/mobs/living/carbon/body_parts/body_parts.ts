@@ -230,7 +230,7 @@ class BodyPart extends Component {
 		this.embedded_objects = new Set();
 	}
 
-	attach(mob) {
+	attach(mob: Record<string,any>) {
 		if (!has_component(mob, "MobBodyParts")) {return false;}
 		if (mob.c.MobBodyParts.limbs[this.body_zone]) {return false;}
 		mob.c.MobBodyParts.limbs[this.body_zone] = this.a;
@@ -328,11 +328,11 @@ class BodyPart extends Component {
 
 	apply_prefs(/*prefs*/) {return;}
 
-	multiply_damage(type, amount) {
+	multiply_damage(type: string, amount: number) {
 		return amount;
 	}
 
-	receive_damage(type, amount, { health_event = true } = {}) {
+	receive_damage(type: string, amount: number, { health_event = true } = {}) {
 		amount = this.multiply_damage(type, amount);
 
 		const can_inflict = this.max_damage - this.brute_damage - this.burn_damage;

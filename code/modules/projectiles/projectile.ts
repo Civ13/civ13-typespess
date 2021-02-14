@@ -47,7 +47,7 @@ class Projectile extends Component.Networked {
 	}
 
 	fire(angle: any, direct_target: any) {
-		if (direct_target && this.prehit(direct_target)) {
+		if (direct_target && this.prehit(/*direct_target*/)) {
 			direct_target.bullet_act(this.a, this.def_zone);
 			this.a.destroy();
 			return;
@@ -188,7 +188,7 @@ class Projectile extends Component.Networked {
 			}).emit_from(target);
 		}
 
-		if (!this.prehit(target)) {
+		if (!this.prehit(/*target*/)) {
 			return false;
 		}
 		if (!has_component(target, "Tangible")) {return true;}
@@ -197,9 +197,9 @@ class Projectile extends Component.Networked {
 		if (permutation === -1 || this.force_dodge) {
 			return false;
 		} else {
-			const alt: any = this.select_target(target);
+			const alt: any = this.select_target(/*target*/);
 			if (alt) {
-				if (!this.prehit(alt)) {return false;}
+				if (!this.prehit(/*alt*/)) {return false;}
 				if (has_component(alt, "Tangible"))
 					{alt.c.Tangible.bullet_act(this.a, this.def_zone);}
 			}
@@ -208,7 +208,7 @@ class Projectile extends Component.Networked {
 		return true;
 	}
 
-	select_target(target: any) {
+	select_target(/*target: any*/) {
 		return;
 	}
 

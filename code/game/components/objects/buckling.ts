@@ -30,7 +30,7 @@ class Buckle extends Component {
 		return prev();
 	}
 
-	mouse_dropped_by(e) {
+	mouse_dropped_by(e: Record<string,any>) {
 		const buckling = e.from.atom;
 		const user = e.mob;
 		if (this.can_buckle && has_component(buckling, "LivingMob")) {
@@ -47,7 +47,7 @@ class Buckle extends Component {
 		return false;
 	}
 
-	buckle_mob(buckling, force = false, check_loc = true) {
+	buckle_mob(buckling: Record<string,any>, force = false, check_loc = true) {
 		if (!this.buckled_mobs) {
 			this.buckled_mobs = [];
 		}
@@ -85,7 +85,7 @@ class Buckle extends Component {
 
 	//TODO: Handle igniting mobs buckled to flaming things. see /obj/buckle_mob() in TG code
 
-	unbuckle_mob(unbuckling, force = false) {
+	unbuckle_mob(unbuckling: Record<string,any>, force = false) {
 		if (
 			(has_component(unbuckling, "LivingMob") &&
 		unbuckling.c.LivingMob.buckled === this.atom) ||
@@ -132,11 +132,13 @@ class Buckle extends Component {
 					.self`<span class='notice'>You buckle yourself to ${this.a}.</span>`.emit_from(
 					this.a
 				);
+				return true;
 			} else {
 				visible_message`<span class='warning'>${user} buckles ${buckling} to ${this.a}.</span>`
 					.self`<span class='warning'>${user} buckles you to ${this.a}.</span>`.emit_from(
 					this.a
 				);
+				return true;
 			}
 		}
 	}
@@ -148,11 +150,13 @@ class Buckle extends Component {
 				.self`<span class='notice'>${user} unbuckles you from ${this.a}.</span>`.emit_from(
 				this.a
 			);
+			return true;
 		} else {
 			visible_message`<span class='warning'>${unbuckling} unbuckles themself from ${this.a}.</span>`
 				.self`<span class='warning'>You unbuckle yourself from ${this.a}.</span>`.emit_from(
 				this.a
 			);
+			return true;
 		}
 	}
 }

@@ -71,6 +71,7 @@ class Window extends Component {
 
 	make_debris() {
 		for (let i = 0; i < this.glass_amount; i++) {
+			// eslint-disable-next-line no-new
 			new Atom(this.a.server, this.shard_type, this.a.base_loc);
 		}
 	}

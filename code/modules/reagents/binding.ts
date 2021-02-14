@@ -103,8 +103,8 @@ class ReagentBinding {
 	}
 
 	send_message(obj: { temperature?: any; total_volume?: any; maximum_volume?: any; reagents?: any; }) {
-		const sent_obj = {};
-		let curr_obj = sent_obj;
+		const sent_obj: Record<string,any> = {};
+		let curr_obj: Record<string,any> = sent_obj;
 		const split = this.path.split(".");
 		for (let i = 0; i < split.length - 1; i++) {
 			curr_obj[split[i]] = curr_obj = {};

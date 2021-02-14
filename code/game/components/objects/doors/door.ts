@@ -61,7 +61,7 @@ class Door extends Component {
 		if (this.a.density > 0) {this.deny();}
 	}
 
-	can_access(prev) {
+	can_access(prev: any) {
 		if (this.emergency) {return true;}
 		return prev();
 	}

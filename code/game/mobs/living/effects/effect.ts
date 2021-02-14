@@ -46,7 +46,7 @@ class TimedEffect extends StatusEffect {
 		this.timeout = setTimeout(this.unapply.bind(this), props.delay || 0);
 	}
 
-	adjust(amount) {
+	adjust(amount: number) {
 		if (this.timeout && this.mob) {
 			clearTimeout(this.timeout);
 			this.target_time += amount;

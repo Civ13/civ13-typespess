@@ -64,7 +64,7 @@ class LightingObject extends Component.Networked {
 		this.shadows_list = Array.from(this.shadows.values());
 	}
 
-	change_radius(newval) {
+	change_radius(newval: number) {
 		if (newval === +newval) {
 			this.a.bounds_x = -newval;
 			this.a.bounds_y = -newval;

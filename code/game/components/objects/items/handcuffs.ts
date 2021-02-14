@@ -31,7 +31,7 @@ class Handcuffs extends Component {
 				vary: true,
 				range: 5,
 			}).emit_from(target);
-			user.c.MobInventory.do_after({ target, delay: 3000 }).then((success) => {
+			user.c.MobInventory.do_after({ target, delay: 3000 }).then((success: any) => {
 				if (!success) {
 					to_chat`<span class='warning'>You fail to handcuff the ${target}</span>`(
 						user

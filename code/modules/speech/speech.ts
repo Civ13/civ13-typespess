@@ -41,7 +41,8 @@ class SpeechEmitter extends Component {
 			for (const hearer of loc.hearers)
 				{if (has_component(hearer, "SpeechHearer")) {hearers.add(hearer);}}
 		}
-		for (const hearer of hearers) {
+		for (const thearer of hearers) {
+			const hearer: Record<string,any> = thearer;
 			if (
 				Math.max(
 					Math.abs(hearer.x - this.a.x),
@@ -53,7 +54,7 @@ class SpeechEmitter extends Component {
 		if (message.mode === "radio" && !message.radio_freq) {
 			// TODO make this less hacky
 			const new_message = message.clone();
-			new_message.radio_freq = 1459;
+			new_message.radio_freq = `1459`;
 			for (const target of this.a.server.atoms_for_components["SpeechHearer"] ||
 		[]) {
 				target.c.SpeechHearer.hear_message(new_message, target);
@@ -80,7 +81,11 @@ SpeechEmitter.template = {
 };
 
 class SpeechMessage {
-	message: any;
+	message: string;
+	mode: string;
+	speaker: any;
+	range: number;
+	radio_freq: string;
 	constructor(obj: Record<string,any>) {
 		Object.assign(
 			this,
@@ -99,7 +104,7 @@ class SpeechMessage {
 	}
 }
 
-const freqtospan = {
+const freqtospan: Record<string,string> = {
 	"1351": "sciradio",
 	"1355": "medradio",
 	"1357": "engradio",
@@ -134,7 +139,7 @@ class SpeechHearer extends Component {
 		shown_message.show_directly_to(this.a, emitter);
 	}
 
-	compose_message(message: { speaker: any; radio_freq: any; message?: any; }) {
+	compose_message(message: { speaker: any; radio_freq: string; message?: any; }) {
 		const spanpart1 = `<span class='${
 			message.radio_freq
 				? freqtospan[message.radio_freq] || "radio"

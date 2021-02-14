@@ -127,7 +127,7 @@ class Sound {
 			client.next_message.sound.stop.push(this.id);
 		}
 	}
-	id(id: any) {
+	id(/*id: any*/) {
 		throw new Error("Method not implemented.");
 	}
 

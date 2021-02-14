@@ -285,7 +285,8 @@ class CarbonMob extends Component.Networked {
 
 	handle_organs() {
 		if (this.organs) {
-			for (const organ of Object.values(this.organs)) {
+			for (const torgan of Object.values(this.organs)) {
+				const organ: Record<string,any> = torgan;
 				organ.c.Organ.do_life();
 			}
 	}

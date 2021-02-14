@@ -13,7 +13,7 @@ class Puller extends Component {
 			{this.a.c.Mob.on("ctrl_click_on", this.ctrl_click_on.bind(this));}
 	}
 
-	ctrl_click_on(e) {
+	ctrl_click_on(e: Record<string,any>) {
 		if (e.atom) {
 			if (this.pulling === e.atom) {this.pulling = null;}
 			else {this.pulling = e.atom;}
@@ -41,7 +41,7 @@ class Puller extends Component {
 		this.pulling = this.pulling; // refresh the pullability;
 	}
 
-	moved(movement) {
+	moved(movement: Record<string,any>) {
 		if (
 			typeof this[_pulling] === "undefined" ||
 	!this.a.loc ||

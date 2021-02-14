@@ -1,10 +1,7 @@
 export{};
 const {
 	Component,
-	has_component,
-	Atom,
 	chain_func,
-	to_chat,
 } = require("./../../../../../code/game/server.js");
 const layers = require("../../../../defines/layers.js");
 

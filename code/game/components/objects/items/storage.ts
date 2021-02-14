@@ -95,7 +95,7 @@ class StorageItem extends Component {
 		this[_grid].c.GridDisplay.height = this.rows + 1;
 	}
 
-	set_screen_loc_for_slot_num(item, num) {
+	set_screen_loc_for_slot_num(item: Record<string,any>, num: number) {
 		item.screen_loc_x = (num % this.columns) + 3.5;
 		item.screen_loc_y = this.rows - Math.floor(num / this.columns) + 1.5;
 	}
@@ -104,7 +104,7 @@ class StorageItem extends Component {
 		return Math.floor(Math.max(this[_slots].length - 1, 0) / this.columns);
 	}
 
-	exited(movement) {
+	exited(movement: Record<string,any>) {
 		const prev_rows = this.rows;
 		let i;
 		for (i = 0; i < this[_slots].length; i++) {
@@ -179,7 +179,7 @@ class StorageItem extends Component {
 		}
 	}
 
-	mouse_dragged_to(e) {
+	mouse_dragged_to(e: Record<string,any>) {
 		if (e.to.atom === e.mob) {
 			this.show_to(e.mob);
 			return;

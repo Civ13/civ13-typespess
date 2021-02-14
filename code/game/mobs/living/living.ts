@@ -135,7 +135,7 @@ class LivingMob extends Component {
 	set stat(val) {
 		const oldstat = this.stat;
 		// eslint-disable-next-line no-setter-return
-		if (val === oldstat) {return false;}
+		if (val === oldstat) {return;}
 		this[_stat] = val;
 		this.emit("stat_changed", oldstat, val);
 		if (

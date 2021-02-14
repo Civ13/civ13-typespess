@@ -9,7 +9,7 @@ const { Reagent } = require("../reagent.js");
 module.exports.reagents = [];
 
 const traverseDir = (dir: string) =>
-	unfold( (next, done, [ path = None, ...rest ]) =>
+	unfold( (next: any, done: any, [ path = None, ...rest ]: any) =>
 		path === None
 			? done ()
 			: next ( path

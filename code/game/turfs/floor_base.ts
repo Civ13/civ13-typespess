@@ -31,6 +31,7 @@ class FloorBase extends Component {
 				this.break_tile();
 			}
 			if (Math.random() < 0.33)
+				// eslint-disable-next-line no-new
 				{new Atom(this.a.server, "metal_sheet", this.a.loc);}
 		} else {
 			if (Math.random() < 0.5) {this.break_tile();}

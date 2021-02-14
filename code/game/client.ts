@@ -394,7 +394,7 @@ class Client extends EventEmitter {
 		)
 			{common_visgroups.push(visgroup);}
 	}
-	const submessage = {
+	const submessage: Record<string,any> = {
 		network_id: netid,
 		component_vars: {},
 		components: [],

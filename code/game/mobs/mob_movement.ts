@@ -29,7 +29,7 @@ class MobMovement extends Component {
 			this.update_walk();
 		});
 
-		this.atom.c.Mob.on("keyup", (e) => {
+		this.atom.c.Mob.on("keyup", (e: Record<string,any>) => {
 			if (!e) {return;}
 			if (e.which === 65 || e.which === 37) {
 				this.intended_walk_dir &= ~8;

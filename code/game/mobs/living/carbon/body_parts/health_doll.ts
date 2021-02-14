@@ -9,7 +9,7 @@ class HealthDoll extends Component {
 		}
 	}
 
-	bind_mob(mob) {
+	bind_mob(mob: Record<string,any>) {
 		this.mob = mob;
 		this.mob.c.LivingMob.on("health_changed", this.update_icon.bind(this));
 		this.update_icon();

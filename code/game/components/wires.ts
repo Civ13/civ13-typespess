@@ -104,7 +104,7 @@ class MachineWires extends Component {
 		panel.open();
 	}
 
-	is_wire_tool(tool) {
+	is_wire_tool(tool: Record<string,any>) {
 		if (
 			has_component(tool, "Tool") &&
 	(tool.c.Tool.can_use("Wirecutters", this.bound_mob) ||
@@ -166,7 +166,7 @@ class MachineWirePanel extends Panel {
 					].item
 				);
 			}
-			const wires_obj = this.bound_atom.c.MachineWires.wires.map((wire) => {
+			const wires_obj = this.bound_atom.c.MachineWires.wires.map((wire: any) => {
 				return _.pick(wire, "color", "cut");
 			});
 			this.send_message({
@@ -193,7 +193,7 @@ class MachineWirePanel extends Panel {
 					this.active_hand_item_changed
 				);}
 		});
-		this.on("message", (msg) => {
+		this.on("message", (msg: any) => {
 			let tool = null;
 			if (has_component(this.bound_mob, "MobInventory"))
 				{tool = this.bound_mob.c.MobInventory.slots[
@@ -242,7 +242,7 @@ class MachineWirePanel extends Panel {
 			{item_type = "Multitool";}
 		this.send_message({ item_type });
 	}
-	wire_cut_changed(wire) {
+	wire_cut_changed(wire: any) {
 		this.send_message({ wires: [{ color: wire.color, cut: wire.cut }] });
 	}
 	status_text_changed(from: any, to: any) {
@@ -250,7 +250,7 @@ class MachineWirePanel extends Panel {
 	}
 }
 
-module.exports.now = (server) => {
+module.exports.now = (server: Record<string,any>) => {
 	server.wire_groups = {};
 };
 

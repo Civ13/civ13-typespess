@@ -19,7 +19,7 @@ class JobController {
 		this.importModule(require("./job_types/nomad.js"));
 	}
 
-	assign_role(mind, job, { latejoin = false, run_checks = true } = {}) {
+	assign_role(mind: Record<string,any>, job: any, { latejoin = false, run_checks = true } = {}) {
 		if (run_checks && !this.can_be_job(mind, job, { latejoin })) {return false;}
 		job.current_positions++;
 		this.unassigned.delete(mind);
@@ -28,7 +28,7 @@ class JobController {
 		return true;
 	}
 
-	reject_player(mind) {
+	reject_player(mind: Record<string,any>) {
 		// oof
 		// TODO make antags not
 		this.unassigned.delete(mind);
@@ -36,7 +36,7 @@ class JobController {
 
 	// Okay tg was being really retarded and put the same list of checks literally everwhere
 	// so I'm doing this to avoid that bullshit
-	can_be_job(mind, job, { latejoin = false } = {}) {
+	can_be_job(mind: Record<string,any>, job: Record<string,any>, { latejoin = false } = {}) {
 		if (mind.restricted_roles.has(job.id)) {return false;}
 		if (
 			latejoin &&
@@ -53,14 +53,15 @@ class JobController {
 		return true;
 	}
 
-	find_occupation_candidates(job, level) {
-		const candidates = [];
+	find_occupation_candidates(job: any, level: any) {
+		const candidates: any[] = [];
 		if (
 			job.spawn_positions !== -1 &&
 	job.current_positions > job.spawn_positions
 		)
 			{return candidates;} // this ain't gonna be useful so let's get out of here.
-		for (const mind of this.unassigned) {
+		for (const tmind of this.unassigned) {
+			const mind: Record<string,any> = tmind;
 			if (!this.can_be_job(mind, job)) {continue;}
 			if (mind.character_preferences.job_preferences[job.id] >= level)
 				{candidates.push(mind);}
@@ -68,7 +69,7 @@ class JobController {
 		return candidates;
 	}
 
-	give_random_job(mind) {
+	give_random_job(mind: Record<string,any>) {
 		for (const job of _.shuffle(Object.values(this.jobs))) {
 			if (
 				job &&
@@ -82,10 +83,11 @@ class JobController {
 		return false;
 	}
 
-	importModule(mod) {
+	importModule(mod: Record<string,any>) {
 		if (mod) {
 			if (mod.jobs) {
-				for (const [id, job] of Object.entries(mod.jobs)) {
+				for (const [id, tjob] of Object.entries(mod.jobs)) {
+					const job: any = tjob;
 					if (this.jobs[id]) {throw new Error(`Job '${id}' defined!`);}
 					this.jobs[id] = job;
 					job.id = id;
@@ -149,20 +151,20 @@ class JobController {
 		return true;
 	}
 
-	send_to_atom(mob, atom) {
+	send_to_atom(mob: Record<string,any>, atom: Record<string,any>) {
 		if (!atom) {return;}
 		if (atom.is_base_loc || atom.is_fine_loc) {mob.loc = atom;}
 		else {mob.loc = atom.base_mover.fine_loc;}
 		mob.force_move(atom.x, atom.y, atom.y, mob.server.station_dim);
 	}
 
-	send_to_late_join(mob) {
+	send_to_late_join(mob: Record<string,any>) {
 		if (this.arrivals_area) {
 			mob.force_move(0,0,0, mob.server.station_dim);
 		}
 	}
 
-	send_to_spawn(mob,job_desc) {
+	send_to_spawn(mob: Record<string,any>,job_desc: string) {
 		const landmarks_list = this.job_landmarks[job_desc];
 		if (landmarks_list && landmarks_list.length) {
 			const landmark = landmarks_list.shift(); // we rotate through the landmarks. If we have more jobs than landmarks, I guess people can spawn on top of each other.
@@ -174,6 +176,6 @@ class JobController {
 	}
 }
 
-module.exports.now = function (server) {
+module.exports.now = function (server: Record<string,any>) {
 	server.job_controller = new JobController(server);
 };

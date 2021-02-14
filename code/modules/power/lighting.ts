@@ -92,7 +92,7 @@ class LightFixture extends Component {
 		if (user.c.MobInventory.put_in_hands(this.tube)) {this.tube = null;}
 	}
 
-	play_attack_sound(damage_amount, damage_type = "brute") {
+	play_attack_sound(damage_amount: number, damage_type = "brute") {
 		if (damage_type === "brute") {
 			if (!this.tube)
 				{new Sound(this.a.server, {

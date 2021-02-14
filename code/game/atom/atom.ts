@@ -1158,7 +1158,7 @@ class Atom extends EventEmitter {
   * @param {string} reason
   * @abstract
   */
-	can_cross(crossing, offsetx: any, offsety: any, reason: any) {
+	can_cross(crossing: Record<string,any>, offsetx: any, offsety: any, reason: any) {
 		return crossing.can_be_crossed(this, offsetx, offsety, reason);
 	}
 
@@ -1621,7 +1621,7 @@ set directional(val) {
 				if (visgroups.has(visgroup)) {common_visgroups.push(visgroup);}
 			}
 		}
-		const submessage = {
+		const submessage: Record<string,any> = {
 			component_vars: {},
 			components: [],
 			toString() {return JSON.stringify(this);},

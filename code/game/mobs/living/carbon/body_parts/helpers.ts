@@ -35,7 +35,7 @@ module.exports = {
 		"Green": "#4b7248",
 		"Blue": "#5ea4e7",
 	},
-	random_zone(zone, prob = 0.8) {
+	random_zone(zone: string, prob = 0.8) {
 		if (zone && Math.random() < prob) {return zone;}
 
 		const t = Math.floor(Math.random() * 18);
@@ -48,7 +48,7 @@ module.exports = {
 
 		return zone;
 	},
-	parse_zone(zone) {
+	parse_zone(zone: string) {
 		if (zone === "r_hand") {return "right hand";}
 		else if (zone === "l_hand") {return "left hand";}
 		else if (zone === "l_arm") {return "left arm";}

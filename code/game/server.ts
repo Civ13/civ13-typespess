@@ -154,10 +154,10 @@ class Typespess extends EventEmitter {
   */
 	handle_login(ws: any) {
 		const handle_message = (data: any) => {
-			let obj = JSON.parse(data);
+			const obj = JSON.parse(data);
 
 			if (obj.login) {
-				let username = obj.login + "";
+				const username = obj.login + "";
 				ws.removeListener("message", handle_message);
 				this.login(ws, username);
 			}

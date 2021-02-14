@@ -22,7 +22,7 @@ class Climbable extends Component {
 		return prev();
 	}
 
-	mouse_dropped_by(e) {
+	mouse_dropped_by(e: Record<string,any>) {
 		const user = e.mob;
 		const from = e.from.atom;
 		if (
@@ -42,7 +42,7 @@ class Climbable extends Component {
 			user.c.MobInventory.do_after({
 				delay: adjusted_climb_time,
 				target: [user, this.a],
-			}).then((success) => {
+			}).then((success: any) => {
 				const idx = this.climbers.indexOf(user);
 				if (idx !== -1) {this.climbers.splice(idx, 1);}
 				if (!success) {return;}

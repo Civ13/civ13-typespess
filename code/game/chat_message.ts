@@ -1,6 +1,5 @@
 export{};
 const { format_html, has_component } = require("./utils.js");
-
 /** @typedef {ChatMessage} Typespess.ChatMessage */
 
 /**
@@ -38,7 +37,7 @@ class ChatMessage {
   * @param {string} message
   * @returns {Typespess.ChatMessage} (this object)
   */
-	self(a: string, ...b: any) {
+	self(a: string, ...b: any): ChatMessage {
 		if (typeof a === "string") {
 			this.self_message = a;
 			return this;
@@ -52,7 +51,7 @@ class ChatMessage {
   * @param {string} message
   * @returns {Typespess.ChatMessage} (this object)
   */
-	deaf(a, ...b) {
+	deaf(a: any, ...b: any): ChatMessage {
 		if (typeof a === "string") {
 			this.deaf_message = a;
 			return this;
@@ -66,7 +65,7 @@ class ChatMessage {
   * @param {string} message
   * @returns {Typespess.ChatMessage} (this object)
   */
-	blind(a, ...b) {
+	blind(a:any, ...b:any): ChatMessage {
 		if (typeof a === "string") {
 			this.blind_message = a;
 			return this;
@@ -79,7 +78,7 @@ class ChatMessage {
   * @param {number} range
   * @returns {Typespess.ChatMessage} (this object)
   */
-	range(num) {
+	range(num: number) {
 		this.msg_range = num;
 		return this;
 	}

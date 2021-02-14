@@ -30,7 +30,7 @@ class Wild extends Component {
 		);
 	}
 
-	examine(prev) {
+	examine(prev: any) {
 		prev();
 	}
 
@@ -57,7 +57,7 @@ class Wild extends Component {
 		}
 	}
 
-	deconstruct(prev) {
+	deconstruct(prev: any) {
 		if (!this.a.loc) {return;}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			const sheets = new Atom(this.a.server, this.sheet_type);

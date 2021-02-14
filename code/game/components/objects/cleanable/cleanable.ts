@@ -10,7 +10,7 @@ class CleanableDecal extends Component {
 		super(atom, template);
 		this.a.on("crossed", this.crossed.bind(this));
 	}
-	crossed(other) {
+	crossed(other: Record<string,any>) {
 		if (
 			this.merge_group &&
 	has_component(other, "CleanableDecal") &&

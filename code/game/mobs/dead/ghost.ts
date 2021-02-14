@@ -33,7 +33,7 @@ class Ghost extends Component {
 		});
 	}
 
-	client_changed(old_client, new_client) {
+	client_changed(old_client: any, new_client: any) {
 		if (new_client) {
 			ghost_group.atoms.add(this.a);
 		} else {

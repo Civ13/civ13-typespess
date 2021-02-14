@@ -176,7 +176,7 @@ class LargeContainer extends Component {
 		return prev();
 	}
 
-	child_moved(child) {
+	child_moved(child: any) {
 		this.open(child);
 		if (this.opened) {
 			child.loc = this.a.fine_loc;

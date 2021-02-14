@@ -28,7 +28,7 @@ class Apc extends Component {
 			this.cell.charge = this.cell.max_charge * this.start_charge;
 		}
 
-		this.a.once("map_instance_done", (map) => {
+		this.a.once("map_instance_done", (map: Record<string,any>) => {
 			if (this.area_override_id && map[_areas]) {
 				const area = map[_areas][this.area_override_id];
 				if (!area || !has_component(area, "AreaPower")) {
@@ -114,7 +114,7 @@ class Apc extends Component {
 		return to_use_powernet + to_use_cell;
 	}
 
-	process(prev: any, dt) {
+	process(prev: any, dt: any) {
 		if (this.cell) {
 			let to_charge = Math.min(
 				this.cell.c.PowerCell.max_charge - this.cell.c.PowerCell.charge,

@@ -18,14 +18,14 @@ class Closet extends Component {
 		);
 	}
 
-	open(prev) {
+	open(prev: any) {
 		if (!prev()) {return false;}
 		this.a.layer = layers.BELOW_OBJ_LAYER;
 		this.a.overlays.door = { icon_state: "[parent]_open" };
 		return true;
 	}
 
-	close(prev) {
+	close(prev: any) {
 		if (!prev()) {return false;}
 		this.a.layer = layers.OBJ_LAYER;
 		this.a.overlays.door = {

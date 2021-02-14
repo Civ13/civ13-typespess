@@ -8,7 +8,7 @@ skin_tones, hair_colors,
 } = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class PreferencesPanel extends Panel {
-	constructor(client, { start_tab = "character" } = {}) {
+	constructor(client: Record<string,any>, { start_tab = "character" } = {}) {
 		super(client, {
 			width: 640,
 			height: 550,
@@ -24,7 +24,7 @@ class PreferencesPanel extends Panel {
 	(client.character_preferences = new CharacterPreferences());
 	}
 
-	check_name(new_name, msg) {
+	check_name(new_name: string, msg: any) {
 		if (new_name) {
 			this.send_message({ name_valid: true });
 			const corrected = CharacterPreferences.reject_bad_name(
@@ -85,6 +85,7 @@ class PreferencesPanel extends Panel {
 		}
 	}
 	check_job_preferences(msg: Record<string,any>) {
+		// eslint-disable-next-line prefer-const
 		for (let [key, setting] of Object.entries(msg.job_preferences)) {
 			setting = Math.max(Math.min(Math.round(+setting || 0), 3), 0); // sanitize the value
 			if (key === "nomad") {setting = +!!setting;} // turn it into 0/1 deal
@@ -104,7 +105,7 @@ class PreferencesPanel extends Panel {
 	}
 
 	send_prefs(parts: any = null) {
-		const char_prefs_msg = {};
+		const char_prefs_msg: Record<string,any> = {};
 		for (const key of [
 			"name",
 			"be_random_name",
@@ -123,11 +124,12 @@ class PreferencesPanel extends Panel {
 	}
 
 	send_job_prefs() {
-		const prefs = {};
-		const meta = {};
-		for (const [key, job] of Object.entries(
+		const prefs: Record<string,any> = {};
+		const meta: Record<string,any> = {};
+		for (const [key, tjob] of Object.entries(
 			this.client.server.job_controller.jobs
 		)) {
+			const job: Record<string,any> = tjob;
 			prefs[key] = this.char_prefs.job_preferences[key] || 0;
 			meta[key] = {
 				selection_color: job.selection_color,
@@ -154,7 +156,7 @@ class PreferencesPanel extends Panel {
 		this.send_job_prefs();
 	}
 
-	static open_for(client, options = {}) {
+	static open_for(client: Record<string,any>, options = {}) {
 		if (client.preferences_panel) {return client.preferences_panel;}
 		const panel = new PreferencesPanel(client, options);
 		panel.open();

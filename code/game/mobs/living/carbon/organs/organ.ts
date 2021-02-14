@@ -12,7 +12,7 @@ class Organ extends Component {
 
 	do_life() {return;}
 
-	insert(mob) {
+	insert(mob: Record<string,any>) {
 		if (!has_component(mob, "CarbonMob")) {return false;}
 		this.mob = mob;
 		mob.c.CarbonMob.organs[this.slot] = this.a;

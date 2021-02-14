@@ -16,7 +16,7 @@ class Belt extends Component {
 		if (has_component(item, "Item") && this.content_overlays)
 			{item.c.Item.apply_belt_overlay(this.a);}
 	}
-	exited(movement) {
+	exited(movement: Record<string,any>) {
 		const item = movement.atom;
 		if (has_component(item, "Item") && this.content_overlays)
 			{item.c.Item.unapply_belt_overlay(this.a);}

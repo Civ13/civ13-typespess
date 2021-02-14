@@ -9,7 +9,7 @@ class EffectSystem {
 	location: any;
 	total_effects: number;
 	holder: any;
-	constructor(server, n = 3, c = false, loc) {
+	constructor(server: Record<string,any>, n = 3, c = false, loc: Record<string,any>) {
 		this.server = server;
 		if (n > 10) {n = 10;}
 		this.number = n;

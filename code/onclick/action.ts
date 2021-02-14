@@ -106,7 +106,7 @@ class Action /*lawsuit*/ extends EventEmitter {
 		return true;
 	}
 
-	click_act(/*user*/) {return;}
+	click_act(user: Record<string,any>) {if (typeof user === "object") {return;}}
 }
 
 class ItemAction extends Action {

@@ -2,8 +2,6 @@ export{};
 const Typespess = require("./../code/game/server.js");
 const read_config = require("./../code/config.js");
 const World = require("./../code/game/world.js");
-const Database = require("./../code/database.js");
-const { URLSearchParams } = require("url");
 
 console.log("SERVER: Loading game...");
 
@@ -114,12 +112,8 @@ global.Tserver.importModule(require("./../code/onclick/screen_objects.js"));
 global.Tserver.importModule(require("./../code/modules/admin/holder.js"));
 global.Tserver.importModule(require("./../code/modules/admin/menu.js"));
 global.Tserver.config = read_config("config.cson");
-const finalhandler = require("finalhandler");
-const http = require("http");
-const serveStatic = require("serve-static");
-const fs = require("fs");
 
-const database = new Database("typespess");
+const fs = require("fs");
 
 const server_config = read_config("server.cson");
 const map = server_config.maps.current_map;

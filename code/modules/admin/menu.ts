@@ -31,8 +31,9 @@ class AdminPanel extends Panel {
 	}
 	opened() {
 		this.client.holder.admin_menu = this;
-		const tools = {};
-		for (const [key, tool] of Object.entries(admin_tools)) {
+		const tools: Record<string,any> = {};
+		for (const [key, ttool] of Object.entries(admin_tools)) {
+			const tool: Record<string,any> = ttool;
 			if (
 				!this.client.holder ||
 		!this.client.holder.has_permission(tool.perm_required)
@@ -64,8 +65,8 @@ function importModule(mod: Record<string,any>) {
 }
 
 module.exports.now = (server:any) => {
-	server.on("client_login", (client) => {
-		client.on("keydown", (e) => {
+	server.on("client_login", (client: Record<string,any>) => {
+		client.on("keydown", (e: Record<string,any>) => {
 			if (!e) {return;}
 			if (e.which === 115) {
 				if (client.holder && !client.holder.admin_menu) {

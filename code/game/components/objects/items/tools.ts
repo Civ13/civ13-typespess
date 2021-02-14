@@ -15,7 +15,7 @@ class Tool extends Component {
 		super(atom, template);
 	}
 
-	can_use(cname) {
+	can_use(cname: any) {
 		return has_component(this.a, cname);
 	}
 	used() {

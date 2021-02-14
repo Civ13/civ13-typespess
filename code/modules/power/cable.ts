@@ -73,7 +73,7 @@ class Cable extends Component {
 		return prev();
 	}
 
-	deconstruct(prev) {
+	deconstruct(prev: any) {
 		if (!this.a.c.Destructible.no_deconstruct && this.a.loc) {
 			const amount = this.d1 === 0 ? 1 : 2;
 			const newstack = new Atom(this.a.server, {
@@ -178,7 +178,7 @@ class Cable extends Component {
 		}
 	}
 
-	does_connect_to(other) {
+	does_connect_to(other: Record<string,any>) {
 		if (other === this.a) {return false;}
 		if (!has_component(other, "Cable")) {return false;}
 		for (const n_this of [1, 2]) {
@@ -223,7 +223,7 @@ Cable.template = {
 	},
 };
 
-Cable.update_map_instance = function (instobj) {
+Cable.update_map_instance = function (instobj: Record<string,any>) {
 	instobj.client_atom.color =
 	cable_colors[instobj.computed_vars.components.Cable.cable_color];
 };
@@ -330,7 +330,7 @@ StackCable.template = {
 StackCable.depends = ["Stack", "BeltItem"];
 StackCable.loadBefore = ["Stack", "BeltItem"];
 
-StackCable.update_map_instance = function (instobj) {
+StackCable.update_map_instance = function (instobj: Record<string,any>) {
 	const cc = instobj.computed_vars.components.StackCable.cable_color;
 	if (cc !== "random") {instobj.client_atom.color = cable_colors[cc];}
 	else {

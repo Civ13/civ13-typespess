@@ -7,7 +7,7 @@ class PowerController {
 	powernets: Set<unknown>;
 	machines: Set<unknown>;
 	last_tick_time: any;
-	constructor(server) {
+	constructor(server: Record<string,any>) {
 		this.server = server;
 		this.powernets = new Set();
 		this.machines = new Set();
@@ -46,6 +46,6 @@ module.exports.now = (server: any) => {
 	server.power_controller = new PowerController(server);
 };
 
-module.exports.server_start = (server) => {
+module.exports.server_start = (server: Record<string,any>) => {
 	server.power_controller.start();
 };

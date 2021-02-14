@@ -26,7 +26,7 @@ class NewPlayer extends Component {
 		this.a.c.Eye.screen.splash_screen = this.splash_screen;
 	}
 
-	client_changed(old_client, new_client) {
+	client_changed(old_client: any, new_client: any) {
 		if (old_client) {
 			this.new_player_panel.close();
 			this.lobby_music_sound.stop();
@@ -61,6 +61,6 @@ NewPlayer.loadBefore = ["Mob"];
 class SplashScreen extends Component.Networked {}
 
 module.exports.components = { NewPlayer, SplashScreen };
-module.exports.now = function (server) {
+module.exports.now = function (server: Record<string,any>) {
 	server.lobby_music = _.sample(["sound/music/words_through_the_sky.ogg"]);
 };

@@ -5,7 +5,7 @@ module.exports.admin_tools = {
 		name: "Start Game",
 		perm_required: "server.lobby_timer",
 		buttons: {
-			"Start Game": (client) => {
+			"Start Game": (client: Record<string,any>) => {
 				client.server.ticker.start_at = 1;
 			},
 		},

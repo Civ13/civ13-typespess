@@ -37,9 +37,9 @@ class MobInventory extends Component {
 		this.next_move = 0;
 		this[_slots] = {};
 		this.slots = new Proxy(this[_slots], {
-			set: () => {return;},
-			deleteProperty: () => {return;},
-			defineProperty: () => {return;},
+			set: () => {return false;},
+			deleteProperty: () => {return false;},
+			defineProperty: () => {return false;},
 		});
 		this.add_slot(
 			"lhand",
@@ -746,7 +746,7 @@ class MobInventory extends Component {
 		}
 	}
 
-	strip_panel_equip(mob: any, slot: { item: any; can_accept_item: (arg0: any) => any; props: { visible: any; strip_desc: any; }; on: (arg0: string, arg1: any) => void; removeListener: (arg0: string, arg1: any) => void; }) {
+	strip_panel_equip(mob: any, slot: Record<string,any>) {
 		if (slot.item) {return;}
 		const this_slot = this.slots[this.active_hand];
 		if (!this_slot) {return;}
@@ -797,7 +797,7 @@ class MobInventory extends Component {
 			if (slot.can_accept_item(this_item)) {slot.item = this_item;}
 		});
 	}
-	strip_panel_unequip(mob: { fine_loc: any; }, slot: { item: any; can_unequip: () => any; visible: any; props: { visible: any; strip_desc: any; }; on: (arg0: string, arg1: any) => void; removeListener: (arg0: string, arg1: any) => void; }) {
+	strip_panel_unequip(mob: Record<string,any>, slot: Record<string,any>) {
 		const item = slot.item;
 		if (!item) {return;}
 		if (!slot.can_unequip()) {
@@ -966,7 +966,7 @@ class Slot extends EventEmitter {
 		}
 	}
 
-	mouse_dropped_by(e: { from: { atom: { c: { Item: { slot: { mob: any; }; }; }; }; }; }) {
+	mouse_dropped_by(e: Record<string,any>) {
 		if (
 			this.props.is_hand_slot &&
 	this.can_accept_item(e.from.atom) &&
@@ -1022,7 +1022,7 @@ class Slot extends EventEmitter {
 
 		}	
 	}
-	can_accept_item(item: { c: { Item: { slot: { can_unequip: () => any; }; size: number; }; }; }) {
+	can_accept_item(item: Record<string,any>) {
 		if (!has_component(item, "Item")) {return false;}
 		if (this.item) {return false;}
 		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return false;}
@@ -1071,7 +1071,7 @@ class Slot extends EventEmitter {
 		return true;
 	}
 
-	equip_or_del(item: { destroy: () => void; }) {
+	equip_or_del(item: Record<string,any>) {
 		if (!this.can_accept_item(item)) {
 			if (is_atom(item)) {item.destroy();}
 			return;
@@ -1115,7 +1115,8 @@ class Slot extends EventEmitter {
 			this[_item].glide_size = 0;
 			this[_item].loc = this.mob.fine_loc;
 			this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = void 0;
-			for (const slot of Object.values(this.mob.c.MobInventory.slots)) {
+			for (const tslot of Object.values(this.mob.c.MobInventory.slots)) {
+				const slot: Record<string,any> = tslot;
 				if (slot.props.requires_slot === this.id) {
 					if (slot.can_unequip()) {slot.item = null;}
 				}
