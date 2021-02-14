@@ -36,10 +36,7 @@ class Puller extends Component {
 		);
 	}
 
-	before_move() {
-		// eslint-disable-next-line no-self-assign
-		this.pulling = this.pulling; // refresh the pullability;
-	}
+	before_move() {return;}
 
 	moved(movement: Record<string,any>) {
 		if (

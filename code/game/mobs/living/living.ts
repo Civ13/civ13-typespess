@@ -451,14 +451,14 @@ class LivingMob extends Component {
 
 		}
 	}
-	set_anchored(atom: { glide_size: any; move: (arg0: number, arg1: number, arg2: string) => void; }, offsetx: number, offsety: number) {
+	set_anchored(atom: Record<string,any>, offsetx: number, offsety: number) {
 		this.a.glide_size = atom.glide_size;
 		this.now_pushing = true;
 		atom.move(Math.sign(offsetx), Math.sign(offsety), "bumped");
 		this.a.move(offsetx, offsety, "pushing");
 		this.now_pushing = false;
 	}
-	mob_collide(atom: { c: { LivingMob: { buckled: any; }; MobInteract: { act_intent: any; }; }; fine_loc: any; x: number; y: number; pass_flags: number; glide_size: any; move: (arg0: number, arg1: number, arg2: string) => any; loc: any; }) {
+	mob_collide(atom: Record<string,any>) {
 		if (this.now_pushing) {return true;}
 		if (!atom.c.LivingMob.buckled) {
 			let mob_swap = false;

@@ -118,20 +118,23 @@ class JobController {
 		// Hand out random jobs to those who didn't in the last check
 		// also makes sure to get their preference correct
 
-		for (const mind of [...this.unassigned]) {
+		for (const tmind of [...this.unassigned]) {
+			const mind: Record<string,any> = tmind;
 			if (
 				!this.can_be_job(mind, this.jobs.nomad) &&
 		mind.character_preferences.jobless_role !== "none"
 			)
 				{this.give_random_job(mind);} // you get to roll for random before everyone else just to be sure you don't get assistant. you're so speshul
 		}
-		for (const mind of [...this.unassigned]) {
+		for (const tmind of [...this.unassigned]) {
+			const mind: Record<string,any> = tmind;
 			if (mind.character_preferences.jobless_role === "random")
 				{this.give_random_job(mind);}
 		}
 
 		// for those who wanted to be assistant
-		for (const mind of [...this.unassigned]) {
+		for (const tmind of [...this.unassigned]) {
+			const mind: Record<string,any> = tmind;
 			if (mind.character_preferences.jobless_role === "nomad")
 				{this.assign_role(mind, this.jobs.nomad);}
 			else {this.reject_player(mind);}

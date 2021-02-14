@@ -843,7 +843,7 @@ class MobInventory extends Component {
 		target = null,
 		progress = true,
 		extra_checks = null,
-	} = {}) {
+	}: Record<string,any> = {}) {
 		return new Promise((resolve) => {
 			if (!delay) {return true;}
 			const time_begin = this.a.server.now();

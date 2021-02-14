@@ -224,7 +224,7 @@ class Atom extends EventEmitter {
 			{},
 			{
 				set: (target: any, key: any, value: any) => {
-					if (typeof value === "undefined" || typeof value === "undefined") {
+					if (typeof value === "undefined") {
 						target[key] = void 0;
 						this[mob_symbols._update_var](key, 2);
 						return true;
@@ -856,7 +856,7 @@ class Atom extends EventEmitter {
   */
 	get base_loc() {
 		// gets the Location object this belongs to
-		while (this && !this.is_base_loc) {const a = this.loc; return a;}
+		if (this && !this.is_base_loc) {const a = this.loc; return a;}
 		return this;
 	}
 
@@ -866,7 +866,7 @@ class Atom extends EventEmitter {
   */
 	get base_mover() {
 		// gets the lowest atom
-		while (this.loc && !this.loc.is_base_loc) {const a = this.loc; return a;}
+		if (this.loc && !this.loc.is_base_loc) {const a = this.loc; return a;}
 		return this;
 	}
 

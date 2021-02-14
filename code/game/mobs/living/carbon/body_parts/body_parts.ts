@@ -15,12 +15,8 @@ class MobBodyParts extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.limbs = Object.create({
-			get eyes() {
-				return this.head;
-			},
-			get mouth() {
-				return this.head;
-			},
+			get eyes() {return this.head;},
+			get mouth() {return this.head;},
 		});
 		this.limbs_set = new Set();
 
