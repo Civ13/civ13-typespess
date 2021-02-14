@@ -78,3 +78,4 @@ code/preloadlist.txt
 client_src/code/preloadlist.js
 ts-built/
 *.js
+reports/test-report.xml
