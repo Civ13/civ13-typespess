@@ -94,13 +94,13 @@ class LivingMob extends Component {
 		this.damages[name] = damage_obj;
 	}
 
-	get_damage(name: string | number) {
+	get_damage(name: string) {
 		const damage = this.damages[name];
 		if (damage) {return damage.get();}
 		return 0;
 	}
 
-	set_damage(name: string | number, val: any, props: any) {
+	set_damage(name: string, val: any, props: any) {
 		const damage = this.damages[name];
 		if (damage) {
 			damage.set(val, props);
@@ -354,7 +354,7 @@ class LivingMob extends Component {
 
 	add_splatter_floor(/*{turf, small_drip = false} = {}*/) {return;}
 
-	attacked_by(item: { c: { Item: { force: number; damage_type: string; }; }; }, user: { c: { MobInteract: { zone_sel: any; }; }; }) {
+	attacked_by(item: Record<string,any>, user: Record<string,any>) {
 		const zone = random_zone(user.c.MobInteract.zone_sel);
 		const bp = has_component(this.a, "MobBodyParts") &&
 			(this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.torso);
@@ -372,7 +372,7 @@ class LivingMob extends Component {
 		}
 	}
 
-	send_item_attack_message(item: { c: { Item: { attack_verb: string | any[]; force: any; }; }; }, user: any, hit_area: any) {
+	send_item_attack_message(item: Record<string,any>, user: any, hit_area: any) {
 		let message_verb = "attacked";
 		if (item.c.Item.attack_verb && item.c.Item.attack_verb.length) {
 			message_verb = format_html`${_.sample(item.c.Item.attack_verb)}`;
@@ -393,7 +393,7 @@ class LivingMob extends Component {
 		return true;
 	}
 
-	apply_effect(name: string | number, props = {}) {
+	apply_effect(name: string, props = {}) {
 		if (props && typeof props !== "object") {
 			// I fucked this up once, so I'm not letting it get fucked up again.
 			throw new Error(
@@ -403,7 +403,7 @@ class LivingMob extends Component {
 		new status_effects[name]().apply_to(this.a, props);
 	}
 
-	adjust_effect(name: string | number, amount: any) {
+	adjust_effect(name: string, amount: any) {
 		let effect = this.effects[name];
 		if (!effect) {
 			new status_effects[name]().apply_to(this.a, {});

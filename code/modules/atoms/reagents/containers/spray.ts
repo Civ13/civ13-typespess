@@ -81,7 +81,7 @@ class SprayBottle extends Component {
 		chempuff,
 		range,
 		puff_reagent_left,
-	} = {}) {
+	}: Record<string,any> = {}) {
 		let range_left = range;
 		await sleep(100);
 		const volume_modifier = 1 / puff_reagent_left;

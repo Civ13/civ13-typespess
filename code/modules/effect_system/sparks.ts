@@ -43,7 +43,7 @@ SparkEffect.template = {
 };
 
 class SparkSystem extends EffectSystem {
-	create_effect_atom(location) {
+	create_effect_atom(location: any) {
 		return new Atom(this.server, { components: ["SparkEffect"] }, location);
 	}
 }

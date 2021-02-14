@@ -149,7 +149,7 @@ module.exports = {
   * @param {string} name The name of the component
   * @returns {boolean}
   */
-	has_component(atom: { components: { [x: string]: any; }; }, name: string | number) {
+	has_component(atom: { components: { [x: string]: any; }; }, name: string) {
 		return atom && atom instanceof Atom && !!atom.components[name];
 	},
 

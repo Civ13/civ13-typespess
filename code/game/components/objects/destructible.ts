@@ -97,11 +97,11 @@ class Destructible extends Component {
 		this.deconstruct(/*false*/);
 	}
 
-	attack_by(prev: () => any, item: { c: { Item: { attack_obj: (arg0: any, arg1: any) => any; }; }; }, user: any) {
+	attack_by(prev: () => any, item: Record<string,any>, user: any) {
 		return prev() || (this.can_be_hit && item.c.Item.attack_obj(this.a, user));
 	}
 
-	attacked_by(item: { c: { Item: { force: any; damtype: string; }; }; }, user: any) {
+	attacked_by(item: Record<string,any>, user: any) {
 		if (item.c.Item.force)
 			{visible_message`<span class='danger'>The ${user} has hit the ${this.a} with the ${item}!</span>`.emit_from(
 				this.a

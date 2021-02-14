@@ -55,7 +55,7 @@ class AmmoCasing extends Component {
 		return true;
 	}
 
-	create_projectile({ target, user, quiet = false, zone_override } = {}) {
+	create_projectile({ target, user, quiet = false, zone_override }: Record<string,any> = {}) {
 		//Different from tg. Fuck tg by the way.
 		const proj = new Atom(this.a.server, this.projectile_type, this.a);
 		proj.c.Projectile.target = target;

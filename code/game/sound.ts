@@ -83,7 +83,8 @@ class Sound {
 				{if (mob.c.Hearer.can_hear_sound(this) && mob.c.Mob.client)
 					{clients.add(mob.c.Mob.client);}}
 		}
-		for (const client of clients) {
+		for (const tclient of clients) {
+			const client: Record<string,any> = tclient;
 			if (!client.next_message.sound) {client.next_message.sound = {};}
 			if (!client.next_message.sound.play) {client.next_message.sound.play = [];}
 			client.next_message.sound.play.push(this);

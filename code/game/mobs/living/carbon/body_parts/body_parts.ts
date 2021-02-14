@@ -151,7 +151,7 @@ class MobBodyParts extends Component {
 		prev: any,
 		damage: number,
 		damage_type = "brute",
-		def_zone: Record<string,any> = null,
+		def_zone: any = null,
 		blocked = this.run_armor_check(def_zone, "melee")
 	) {
 		if (damage_type !== "brute" && damage_type !== "burn") {return prev();}
@@ -168,7 +168,7 @@ class MobBodyParts extends Component {
 		bp.c.BodyPart.receive_damage(damage_type, damage * hit_percent);
 	}
 
-	get_bodypart(zone) {
+	get_bodypart(zone: string) {
 		if (!zone) {
 			zone = "torso";
 		}

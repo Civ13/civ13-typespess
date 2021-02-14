@@ -71,7 +71,8 @@ module.exports = {
 			return 0;
 		}
 		let protection = 0;
-		for (const slot of Object.values(this.a.c.MobInventory.slots)) {
+		for (const tslot of Object.values(this.a.c.MobInventory.slots)) {
+			const slot: Record<string,any> = tslot;
 			if (slot.props.is_hand_slot) {continue;}
 			const item = slot.item;
 			if (has_component(item, "WearableItem")) {
