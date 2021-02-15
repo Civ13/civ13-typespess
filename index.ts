@@ -111,7 +111,7 @@ global.Tserver.importModule(require("./code/onclick/interact.js"));
 global.Tserver.importModule(require("./code/onclick/inventory.js"));
 global.Tserver.importModule(require("./code/onclick/screen_objects.js"));
 
-if(global.is_bs_editor_env) {
+if(global.is_bs_editor_env || global.is_test_env) {
 	module.exports = global.Tserver;
 } else {
 	global.Tserver.importModule(require("./code/modules/admin/holder.js"));

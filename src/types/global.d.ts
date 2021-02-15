@@ -5,6 +5,7 @@ declare namespace NodeJS {
 		Tserver: Tserver,
 		Tworld: Tworld,
 		is_bs_editor_env: boolean,
+		is_test_env: boolean,
 		workspaceDir: string,
 	}
 }
