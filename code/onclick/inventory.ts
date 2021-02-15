@@ -531,7 +531,7 @@ class MobInventory extends Component {
 		}
 	}
 
-	keydown(e: any) {
+	keydown(e: Record<string,any>) {
 		if (e.which === 88) {
 			// x
 			this.swap_hands();
@@ -725,7 +725,7 @@ class MobInventory extends Component {
 	}
 
 
-	mouse_dragged_to(e: any) {
+	mouse_dragged_to(e: Record<string,any>) {
 		const user = e.mob;
 		if (
 			e.from.atom === this.a &&
@@ -940,7 +940,7 @@ class Slot extends EventEmitter {
 		this.atom.on("mouse_dropped_by", this.mouse_dropped_by.bind(this));
 	}
 
-	clicked(e: any) {
+	clicked(e: Record<string,any>) {
 		if (this.props.is_hand_slot) {
 			if (this.mob.c.MobInventory.active_hand === this.id) {
 				if (this.item) {this.item.c.Item.attack_self(this.mob);}

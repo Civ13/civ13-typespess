@@ -44,7 +44,7 @@ class MobInteract extends Component {
 		});
 	}
 
-	click_on(e: any) {
+	click_on(e: Record<string,any>) {
 		if (e.ctrlKey || e.altKey || e.shiftKey) {return;}
 		const isliving = has_component(this.a, "LivingMob");
 		const hasinv = has_component(this.a, "MobInventory");
@@ -71,20 +71,16 @@ class MobInteract extends Component {
 			return;
 		}
 
-		const active_item = hasinv
-			? this.a.c.MobInventory.slots[this.a.c.MobInventory.active_hand].item
-			: null;
+		this.interact_with_atom(e, hasinv);
 
+	}
+
+	interact_with_atom(e: Record<string,any>, hasinv: any) {
+		const active_item = hasinv ? this.a.c.MobInventory.slots[this.a.c.MobInventory.active_hand].item: null;
 		if (e.atom) {
-			if (active_item === e.atom) {
-				active_item.c.Item.attack_self(this.a);
-				return;
-			}
+			if (active_item === e.atom) {active_item.c.Item.attack_self(this.a); return;}
 
-			if (
-				Math.abs(e.atom.x - this.a.x) <= 1.5001 &&
-		Math.abs(e.atom.y - this.a.y) <= 1.5001
-			) {
+			if (Math.abs(e.atom.x - this.a.x) <= 1.5001 && Math.abs(e.atom.y - this.a.y) <= 1.5001) {
 				if (active_item) {
 					active_item.c.Item.melee_attack_chain(this.a, e.atom, e);
 				} else {

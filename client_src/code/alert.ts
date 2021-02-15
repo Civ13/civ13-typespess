@@ -34,7 +34,7 @@ class Tooltip extends Component {
 			{this.alert_div.parentNode.removeChild(this.alert_div);}
 	}
 
-	mousemove(e: any) {
+	mousemove(e: Record<string,any>) {
 		if (this.alert_div.parentNode) {
 			this.alert_div.parentNode.style.left = e.original_event.clientX + "px";
 			this.alert_div.parentNode.style.top = e.original_event.clientY + "px";

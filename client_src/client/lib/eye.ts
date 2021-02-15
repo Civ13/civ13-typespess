@@ -71,7 +71,7 @@ class Eye extends EventEmitter {
 		this.canvas.addEventListener("mousemove", this.handle_mousemove.bind(this));
 		this.canvas.addEventListener("mouseout", this.handle_mouseout.bind(this));
 	}
-	get_mouse_target(e: { target: { getBoundingClientRect: () => any; width: number; height: number; }; clientX: number; clientY: number; ctrlKey: any; shiftKey: any; altKey: any; button: any; }, timestamp = performance.now()) {
+	get_mouse_target(e: Record<string,any>, timestamp = performance.now()) {
 		const rect = e.target.getBoundingClientRect();
 		const clickX = ((e.clientX - rect.left) / rect.width) * e.target.width;
 		const clickY = ((e.clientY - rect.top) / rect.height) * e.target.height;
@@ -144,7 +144,7 @@ class Eye extends EventEmitter {
 		};
 	}
 
-	handle_mousedown(e: any) {
+	handle_mousedown(e: Record<string,any>) {
 		e.preventDefault();
 		const start_meta: any = this.get_mouse_target(e);
 		const start_time = performance.now();
@@ -180,7 +180,7 @@ class Eye extends EventEmitter {
 		document.addEventListener("mouseup", mouseup);
 	}
 
-	handle_mouseover(e: any) {
+	handle_mouseover(e: Record<string,any>) {
 		this.last_mouse_event = e;
 		const meta = this.get_mouse_target(e);
 		const old = this.mouse_over_atom;

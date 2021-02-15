@@ -170,11 +170,7 @@ class Alert extends Component {
 	}
 
 	clicked() {
-		if (
-			this.resist_alert &&
-	this.mob_viewer &&
-	has_component(this.mob_viewer, "MobInteract")
-		)
+		if (this.resist_alert && this.mob_viewer && has_component(this.mob_viewer, "MobInteract"))
 			{this.mob_viewer.c.MobInteract.resist();}
 	}
 }

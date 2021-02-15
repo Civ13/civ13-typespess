@@ -501,7 +501,7 @@ class Typespess extends EventEmitter {
   * @param {number} y
   * @param {number} z
   */
-	instance_map_sync(obj: any, x = 0, y = 0, z = 0, dim: any) {
+	instance_map_sync(obj: any, x: number, y: number, z: number, dim: any) {
 		const inst_list = [];
 		for (const loc in obj.locs) {
 			if (!Object.prototype.hasOwnProperty.call(obj.locs,loc)) {continue;}
@@ -545,7 +545,7 @@ class Typespess extends EventEmitter {
   * @param {Function} [percentage_callback] A callback that is called periodically with a number 0 to 1 denoting how far along the instancing process is done.
   */
 	// eslint-disable-next-line max-params
-	async instance_map(obj: any, x = 0, y = 0, z = 0, dim: any, percentage_callback: any) {
+	async instance_map(obj: any, x: number, y: number, z: number, dim: any, percentage_callback: any) {
 		const locs = [...Object.values(obj.locs)];
 		const inst_list = [];
 		let idx = 0;

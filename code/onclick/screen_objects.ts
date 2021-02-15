@@ -7,7 +7,7 @@ class ZoneSel extends Component {
 		this.a.on("clicked", this.clicked.bind(this));
 	}
 
-	clicked(e: any) {
+	clicked(e: Record<string,any>) {
 		if (!this.mob) {return;}
 		const px = e.x * 32;
 		const py = e.y * 32;

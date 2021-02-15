@@ -8,7 +8,7 @@ class MobMovement extends Component {
 		this.intended_walk_dir = 0;
 		this.last_axis = 3;
 
-		this.atom.c.Mob.on("keydown", (e: any) => {
+		this.atom.c.Mob.on("keydown", (e: Record<string,any>) => {
 			if (!e) {return;}
 			if (e.which === 65 || e.which === 37) {
 				this.intended_walk_dir |= 8;

@@ -13,7 +13,7 @@ class SpawnObjectPanel {
 <div class='templates-list'>
 </div>
 `;
-		this.panel.$(".search-field").addEventListener("input", (e: any) => {
+		this.panel.$(".search-field").addEventListener("input", (e: Record<string,any>) => {
 			const term = e.target.value;
 			for (const item of this.panel.$$(".template-entry")) {
 				if (item.dataset.searchString.includes(term))
@@ -21,7 +21,7 @@ class SpawnObjectPanel {
 				else {item.style.display = "none";}
 			}
 		});
-		this.panel.content_obj.addEventListener("click", (e: any) => {
+		this.panel.content_obj.addEventListener("click", (e: Record<string,any>) => {
 			const button = e.target.closest(".spawn-button");
 			if (button) {
 				const template_name = button.closest(".template-entry").dataset

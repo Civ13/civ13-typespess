@@ -10,7 +10,7 @@ class LoginPanel {
 		this.connection.addEventListener("message", this.message_handler);
 	}
 
-	message_handler(e: any) {
+	message_handler(e: Record<string,any>) {
 		const obj = JSON.parse(e.data);
 		if (obj.login_type === "debug") {
 			let div = document.createElement("div");

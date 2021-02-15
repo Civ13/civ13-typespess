@@ -1,11 +1,5 @@
 export{};
-const {
-	Component,
-	Sound,
-	has_component,
-	chain_func,
-	visible_message,
-} = require("./../../../../code/game/server.js");
+const {Component,Sound,has_component,chain_func,visible_message} = require("./../../../../code/game/server.js");
 const combat_defines = require("../../../defines/combat_defines.js");
 const _ = require("underscore");
 

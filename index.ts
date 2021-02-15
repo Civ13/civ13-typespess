@@ -130,7 +130,7 @@ if(global.is_bs_editor_env || global.is_test_env) {
 	const map = server_config.maps.current_map;
 	console.log("SERVER: Loading map " + map + "...");
 	global.Tserver.station_dim = new Typespess.Dimension(global.Tserver);
-	global.Tserver.instance_map_sync(	JSON.parse(fs.readFileSync("maps/" + map + ".bsmap", "utf8")),
+	global.Tserver.instance_map_sync(JSON.parse(fs.readFileSync("maps/" + map + ".bsmap", "utf8")),
 		0,
 		0,
 		0,

@@ -67,7 +67,7 @@ class Panel extends EventEmitter {
 			this.close_button.addEventListener("click", () => {
 				this.close();
 			});
-			this.close_button.addEventListener("mousedown", (e: any) => {
+			this.close_button.addEventListener("mousedown", (e: Record<string,any>) => {
 				e.preventDefault();
 			});
 		}
@@ -79,7 +79,7 @@ class Panel extends EventEmitter {
 		}
 	}
 
-	_start_drag(e: any) {
+	_start_drag(e: Record<string,any>) {
 		if (e.defaultPrevented) {return;}
 		if (e.target !== this.header_obj) {
 			return;
@@ -89,7 +89,7 @@ class Panel extends EventEmitter {
 		this.panel_obj.focus();
 		let lastclientx = e.clientX;
 		let lastclienty = e.clientY;
-		const mousemove = (e: any) => {
+		const mousemove = (e: Record<string,any>) => {
 			const dx = e.clientX - lastclientx;
 			const dy = e.clientY - lastclienty;
 			lastclientx = e.clientX;
@@ -113,7 +113,7 @@ class Panel extends EventEmitter {
 		this.mouseup(mousemove);
 	}
 
-	_resize_meta(e: any) {
+	_resize_meta(e: Record<string,any>) {
 		const out = {
 			drag_right: false,
 			drag_left: false,
@@ -143,7 +143,7 @@ class Panel extends EventEmitter {
 		else if (out.drag_up || out.drag_down) {out.cursor = "ns-resize";}
 		}
 	}
-	_start_resize(e: any) {
+	_start_resize(e: Record<string,any>) {
 		// bring the panel into focus
 		if (this.container_obj !== document.getElementById("uiframes-container").lastChild)
 			{document.getElementById("uiframes-container").appendChild(this.container_obj);}
@@ -155,7 +155,7 @@ class Panel extends EventEmitter {
 		this.panel_obj.focus();
 		let lastclientx = e.clientX;
 		let lastclienty = e.clientY;
-		const mousemove = (e: any) => {
+		const mousemove = (e: Record<string,any>) => {
 			const dx = e.clientX - lastclientx;
 			const dy = e.clientY - lastclienty;
 			lastclientx = e.clientX;

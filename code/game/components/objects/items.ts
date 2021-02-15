@@ -78,7 +78,7 @@ class Item extends Component {
 		}
 	}
 
-	pre_attack() {return true;}
+	pre_attack() {return false;}
 
 	after_attack() {return true;}
 

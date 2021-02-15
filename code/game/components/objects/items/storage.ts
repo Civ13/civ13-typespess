@@ -314,10 +314,10 @@ class StorageItem extends Component {
 		);
 	}
 
-	close_button_clicked(e: any) {
+	close_button_clicked(e: Record<string,any>) {
 		this.hide_from(e.mob);
 	}
-	grid_clicked(e: any) {
+	grid_clicked(e: Record<string,any>) {
 		if (!e.mob) {return;}
 		const slot = (this.rows - Math.floor(e.y)) * 7 + Math.floor(e.x);
 		let target_atom;

@@ -11,7 +11,7 @@ class AdminPanel {
 <div class='tools-list'>
 </div>
 `;
-		this.panel.$(".search-field").addEventListener("input", (e: any) => {
+		this.panel.$(".search-field").addEventListener("input", (e: Record<string,any>) => {
 			const term = e.target.value;
 			for (const item of this.panel.$$(".tool-entry")) {
 				if (item.dataset.searchString.includes(term))
