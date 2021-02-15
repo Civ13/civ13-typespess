@@ -14,7 +14,7 @@
 		"@types/cson": "0.0.31",
 		"@types/eslint": "^7.2.6",
 		"@types/finalhandler": "^1.1.0",
-		"@types/node": "^14.14.25",
+		"@types/node": "^14.14.28",
 		"@types/pouchdb": "^6.4.0",
 		"@types/serve-static": "^1.13.9",
 		"@types/toposort": "^2.0.2",
@@ -139,7 +139,11 @@
 		"testEnvironment": "node",
 		"collectCoverage": true,
 		"testResultsProcessor": "jest-sonar-reporter",
-		"coveragePathIgnorePatterns": ["/node_modules/"],
-		"testMatch": ["<rootDir>/scripts/test.test.js"]
-	  }
+		"coveragePathIgnorePatterns": [
+			"/node_modules/"
+		],
+		"testMatch": [
+			"<rootDir>/scripts/test.test.js"
+		]
+	}
 }
