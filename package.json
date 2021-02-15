@@ -133,13 +133,13 @@
 		"indent": 4
 	},
 	"scripts": {
-		"test": "jest scripts/test.js --coverage --detectOpenHandles --forceExit"
+		"test": "jest scripts/test.test.js --coverage --detectOpenHandles --forceExit"
 	},
 	"jest": {
 		"testEnvironment": "node",
 		"collectCoverage": true,
 		"testResultsProcessor": "jest-sonar-reporter",
 		"coveragePathIgnorePatterns": ["/node_modules/"],
-		"testMatch": ["<rootDir>/scripts/test.js"]
+		"testMatch": ["<rootDir>/scripts/test.test.js"]
 	  }
 }
