@@ -232,14 +232,14 @@ class LightingObject extends Component {
 					}
 					if (!flip) {
 						// draw it in a way that makes sure it winds in the right direction
-						for (let i = 0; i < path.length; i++) {
-							if (i === 0) {bctx.moveTo(path[i][0], path[i][1]);}
-							else {bctx.lineTo(path[i][0], path[i][1]);}
+						for (let j = 0; j < path.length; j++) {
+							if (j === 0) {bctx.moveTo(path[j][0], path[j][1]);}
+							else {bctx.lineTo(path[j][0], path[j][1]);}
 						}
 					} else {
-						for (let i = path.length - 1; i >= 0; i--) {
-							if (i === path.length - 1) {bctx.moveTo(path[i][0], path[i][1]);}
-							else {bctx.lineTo(path[i][0], path[i][1]);}
+						for (let j = path.length - 1; j >= 0; j--) {
+							if (j === path.length - 1) {bctx.moveTo(path[j][0], path[j][1]);}
+							else {bctx.lineTo(path[j][0], path[j][1]);}
 						}
 					}
 					bctx.closePath();

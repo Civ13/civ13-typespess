@@ -381,8 +381,8 @@ class Mob extends Component {
 						if (value && this.client) {
 							for (const netid in value.c.Eye[_viewing]) {
 								if (!Object.prototype.hasOwnProperty.call(value.c.Eye[_viewing],netid)) {continue;}
-								const atom = value.c.Eye[_viewing][netid];
-								this.client.enqueue_create_atom(netid, atom, value);
+								const tatom = value.c.Eye[_viewing][netid];
+								this.client.enqueue_create_atom(netid, tatom, value);
 							}
 							for (const tile of value.c.Eye[_visible_tiles]) {
 								this.client.enqueue_add_tile(tile);

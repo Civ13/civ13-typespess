@@ -9,7 +9,7 @@ class EffectSystem {
 	location: any;
 	total_effects: number;
 	holder: any;
-	constructor(server: Record<string,any>, n = 3, c = false, loc: Record<string,any>) {
+	constructor(server: Record<string,any> = null, n = 3, c = false, loc: Record<string,any>) {
 		this.server = server;
 		if (n > 10) {n = 10;}
 		this.number = n;
@@ -29,7 +29,7 @@ class EffectSystem {
 
 	async generate_effect() {
 		if (this.holder) {this.location = this.holder.base_loc;}
-		const effect = this.create_effect_atom(/*this.location*/);
+		const effect: Record<string,any> = this.create_effect_atom(/*this.location*/);
 		effect.glide_size = 2;
 		this.total_effects++;
 		let dir;
@@ -45,7 +45,7 @@ class EffectSystem {
 		this.total_effects--;
 	}
 
-	create_effect_atom() {return;}
+	create_effect_atom() {return {};}
 }
 
 module.exports = EffectSystem;

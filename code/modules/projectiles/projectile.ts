@@ -123,7 +123,7 @@ class Projectile extends Component.Networked {
 		return true;
 	}
 
-	hit(target: any, blocked = 0, def_zone: any) {
+	hit(target: any, def_zone: any, blocked=0) {
 		if (
 			has_component(target, "Wall") &&
 	["brute", "burn"].includes(this.damage_type) &&

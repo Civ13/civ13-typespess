@@ -31,9 +31,9 @@ class Destructible extends Component {
 
 	// eslint-disable-next-line max-params
 	take_damage(
-		damage_amount: number,
+		damage_amount = 0,
 		damage_type = "brute",
-		damage_flag: string,
+		damage_flag = "melee",
 		sound_effect = true,
 	) {
 		if (sound_effect)

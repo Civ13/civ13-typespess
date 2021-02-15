@@ -157,15 +157,14 @@ class MobBodyParts extends Component {
 		if (damage_type !== "brute" && damage_type !== "burn") {return prev();}
 		const hit_percent = (100 - blocked) / 100;
 		if (!damage || hit_percent < 0) {return false;}
-		let bp = null;
-		if (has_component(def_zone, "BodyPart")) {bp = def_zone;}
-		else {
+		if (!(has_component(def_zone, "BodyPart"))) {
+			let bp = null;
 			if (!def_zone) {def_zone = random_zone(def_zone);}
 			bp = this.limbs[def_zone];
 			if (!bp) {bp = this.limbs.torso;}
 			if (!bp) {return;}
 		}
-		bp.c.BodyPart.receive_damage(damage_type, damage * hit_percent);
+		def_zone.c.BodyPart.receive_damage(damage_type, damage * hit_percent);
 	}
 
 	get_bodypart(zone: string) {

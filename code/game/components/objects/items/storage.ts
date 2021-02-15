@@ -264,7 +264,7 @@ class StorageItem extends Component {
 		}
 
 		let sum_size = item.c.Item.size;
-		for (const item of this.a.contents) {sum_size += item.c.Item.size;}
+		for (const titem of this.a.contents) {sum_size += titem.c.Item.size;}
 
 		if (sum_size > this.max_combined_size) {
 			if (user && !stop_messages)

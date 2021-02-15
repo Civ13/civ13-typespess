@@ -64,19 +64,19 @@ class ReagentBinding {
 		});
 	}
 
-	added(reagent: { [x: string]: any; constructor: { name: string; }; }) {
+	added(reagent: Record<string,any>) {
 		if (
 			!this.reagent_holder.c.ReagentHolder.reagents.has(
 				reagent.constructor.name
 			)
 		)
 			{return;}
-		const msg = {
+		const msg: Record<string,any> = {
 			total_volume: this.reagent_holder.c.ReagentHolder.total_volume,
 			maximum_volume: this.reagent_holder.c.ReagentHolder.maximum_volume,
 			reagents: { reagent_constructor: {name: ""}},
 		};
-		const robj = {};
+		const robj: Record<string,any> = {};
 		for (const prop of this.sent_props) {
 			robj[prop] = reagent[prop];
 		}
@@ -85,7 +85,7 @@ class ReagentBinding {
 	}
 
 	removed(reagent: Record<string,any>) {
-		const msg = {
+		const msg: Record<string,any> = {
 			total_volume: this.reagent_holder.c.ReagentHolder.total_volume,
 			maximum_volume: this.reagent_holder.c.ReagentHolder.maximum_volume,
 			reagents: {},

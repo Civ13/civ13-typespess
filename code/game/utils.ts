@@ -74,10 +74,8 @@ module.exports = {
   * console.log(foo("bar")); // logs "bar"
   * @memberof! Typespess
   * @static
-  * @param {Function} func1 The original Function
-  * @param {Function} func2 The function overriding this one. The first argument should be <code>prev</code>
-  * @returns {Function}
   */
+	// eslint-disable-next-line @typescript-eslint/ban-types
 	chain_func(func1: any, func2: any) {
 		if (typeof func2 === "undefined") {throw new Error("Chaining undefined function!");}
 		function chained_func(...args: any[]) {

@@ -14,14 +14,8 @@ class Sound {
 	playback_rate: any;
 	path: ArrayConstructor;
 	emitter: any;
-	/**
-  * @param {Typespess} server
-  * @param {Object} sndobj
-  * @param {string} sndobj.path
-  * @param {number} sndobj.playback_rate How fast to play it, also affects pitch
-  * @param {boolean} sndobj.vary Multiplies playback_rate by a number between 0.75 and 1.25
-  */
-	constructor(server: any, sndobj: any) {
+
+	constructor(server: any, sndobj: {path: string, playback_rate: number, vary: boolean}) {
 		Object.assign(this, sndobj);
 		Object.defineProperty(this, "id", {
 			enumerable: true,
@@ -61,10 +55,7 @@ class Sound {
 		}
 	}
 
-	/**
-  * @param {Array<Typespess.Atom<Mob>|Client>|Typespess.Atom<Mob>|Client} mobs
-  */
-	play_to(mobs: Record<string,any>) {
+	play_to(mobs: any) {
 		if (!(mobs instanceof Array)) {mobs = [mobs];}
 		if (this.playing !== null)
 			{throw new Error(
@@ -72,7 +63,8 @@ class Sound {
 			);}
 		this[_playing] = true;
 		const clients = new Set();
-		for (const mob of mobs) {
+		for (const tmob of mobs) {
+			const mob: Record<string,any> = tmob;
 			if (!is_atom(mob) && mob && mob.mob) {clients.add(mob);}
 			if (!has_component(mob, "Eye")) {continue;}
 			for (const observer of mob.c.Eye.observers()) {
@@ -105,7 +97,8 @@ class Sound {
 			}
 		}
 		const clients = [];
-		for (const hearer of hearers) {
+		for (const thearer of hearers) {
+			const hearer: Record<string,any> = thearer;
 			if (
 				has_component(hearer, "Mob") &&
 		hearer.c.Hearer.can_hear_sound(this)

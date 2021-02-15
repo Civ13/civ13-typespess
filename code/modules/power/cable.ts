@@ -12,7 +12,7 @@ const layers = require("../../defines/layers.js");
 const _ = require("underscore");
 const { display_watts } = require("./helpers.js");
 
-const cable_colors = {
+const cable_colors: Record<string,any> = {
 	red: "#ff0000",
 	yellow: "#ffff00",
 	green: "#00aa00",
@@ -24,6 +24,7 @@ const cable_colors = {
 };
 
 class Cable extends Component {
+	cable_color: string;
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		const match = /^([0-9]+)-([0-9]+)$/.exec(this.a.icon_state);
@@ -90,7 +91,7 @@ class Cable extends Component {
 		prev();
 	}
 
-	get_end(n) {
+	get_end(n: number) {
 		// where n is 1 or 2 for d1 and d2
 		if (n !== 1 && n !== 2)
 			{throw new Error(`Invalid n value ${n}, should be 1 or 2`);}

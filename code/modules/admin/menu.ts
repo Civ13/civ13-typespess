@@ -1,7 +1,7 @@
 export{};
 const { Panel } = require("./../../../code/game/server.js");
 
-const admin_tools = {};
+const admin_tools: Record<string,any> = {};
 
 class AdminPanel extends Panel {
 	constructor(client: Record<string,any>) {

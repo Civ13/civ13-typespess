@@ -97,6 +97,6 @@ module.exports = {
 			);
 			// TODO dismemberment
 		}
-		return projectile.c.Projectile.hit(this.a, armor, def_zone);
+		return projectile.c.Projectile.hit(this.a, def_zone, armor,);
 	},
 };

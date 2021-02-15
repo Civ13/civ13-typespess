@@ -18,7 +18,7 @@ const pass_flags:any = require("../../../defines/pass_flags.js");
 
 const _stat:any = Symbol("_stat");
 
-const status_effects = {};
+const status_effects: Record<string,any> = {};
 
 class LivingMob extends Component {
 	// eslint-disable-next-line max-statements
@@ -184,7 +184,7 @@ class LivingMob extends Component {
 	apply_damage(
 		damage = 0,
 		damagetype = "brute",
-		def_zone: any,
+		def_zone: any = null,
 		blocked = this.run_armor_check(def_zone, "melee")
 	) {
 		const hit_percent = (100 - blocked) / 100;
@@ -468,13 +468,8 @@ class LivingMob extends Component {
 			const other_intent = has_component(atom, "MobInteract")
 				? atom.c.MobInteract.act_intent
 				: "harm";
-			if (
-				has_component(this.a, "Puller") &&
-		this.a.c.Puller.pulling === atom &&
-		this_intent === "grab"
-			)
+			if ((has_component(this.a, "Puller") && this.a.c.Puller.pulling === atom && this_intent === "grab") || (this_intent === "help" || other_intent === "help"))
 				{mob_swap = true;}
-			else if (this_intent === "help" || other_intent === "help") {mob_swap = true;}
 			if (mob_swap) {
 				if (!this.a.c.Tangible.adjacent(atom)) {return;}
 				this.now_pushing = true;
@@ -494,7 +489,6 @@ class LivingMob extends Component {
 					!atom.move(-dx, -dy, "push_swap") ||
 		!this.a.move(dx, dy, "push_swap")
 				) {
-					move_failed = true;
 					this.a.loc = oldloc;
 					atom.loc = oldloc_other;
 					move_failed = true;

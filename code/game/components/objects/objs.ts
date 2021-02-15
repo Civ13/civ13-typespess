@@ -65,7 +65,7 @@ class Tangible extends Component {
 				this.stop_throw = function () {return;};
 			};
 
-			const throw_impact = (target: { c: { Tangible: { emit: (arg0: string, arg1: any) => void; }; }; }) => {
+			const throw_impact = (target: Record<string,any>) => {
 				this.stop_throw();
 				if (speed > 0.5) {
 					if (has_component(target, "Tangible"))
@@ -124,7 +124,7 @@ class Tangible extends Component {
 	}
 
 	bullet_act(projectile: { c: { Projectile: { hit: (arg0: any, arg1: number, arg2: any) => any; }; }; }, def_zone: any) {
-		return projectile.c.Projectile.hit(this.a, 0, def_zone);
+		return projectile.c.Projectile.hit(this.a, def_zone, 0);
 	}
 
 	stop_throw() {return;} // This only has actual code once throw_at is called
