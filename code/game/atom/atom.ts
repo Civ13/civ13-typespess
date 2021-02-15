@@ -856,7 +856,7 @@ class Atom extends EventEmitter {
   */
 	get base_loc() {
 		// gets the Location object this belongs to
-		if (this && !this.is_base_loc) {const a = this.loc; return a;}
+		if (this && !this.is_base_loc) {return this.loc;}
 		return this;
 	}
 
@@ -866,7 +866,7 @@ class Atom extends EventEmitter {
   */
 	get base_mover() {
 		// gets the lowest atom
-		if (this.loc && !this.loc.is_base_loc) {const a = this.loc; return a;}
+		if (this.loc && !this.loc.is_base_loc) {return this.loc;}
 		return this;
 	}
 

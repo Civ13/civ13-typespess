@@ -554,9 +554,6 @@ class Plane {
 	composite_plane(eye_ctx: { drawImage: (arg0: HTMLCanvasElement, arg1: number, arg2: number) => void; }, timestamp: any) {
 		const [ox, oy] = this.calculate_composite_offset(timestamp);
 		eye_ctx.drawImage(this.canvas, ox, oy);
-		//eye_ctx.globalAlpha = 0.5;
-		//eye_ctx.drawImage(this.mask_canvas, 0, 0);
-		//eye_ctx.globalAlpha = 1;
 	}
 
 	calculate_canvas_size() {
@@ -622,7 +619,6 @@ class LightingPlane extends WorldPlane {
 
 	composite_plane(eye_ctx: { canvas: any; globalCompositeOperation: string; drawImage: (arg0: HTMLCanvasElement, arg1: number, arg2: number) => void; }, timestamp: any) {
 		const dctx = this.draw_canvas.getContext("2d");
-		//let mctx = this.mask_plane.getContext('2d');
 		const ctx = this.canvas.getContext("2d");
 		ctx.globalCompositeOperation = "destination-over";
 		ctx.fillStyle = "#000000";

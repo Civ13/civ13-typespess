@@ -205,8 +205,7 @@ class IconRenderer {
 
 	get icon() {
 		if (this._icon === null && this.parent) {return this.parent.icon;}
-		const icon = this._icon;
-		return icon;
+		return this._icon;
 	}
 	set icon(val) {
 		this._icon = val;
@@ -229,8 +228,7 @@ class IconRenderer {
 
 	get dir() {
 		if (this._dir === null && this.parent) {return this.parent.dir;}
-		const dir = this._dir;
-		return dir;
+		return this._dir;
 	}
 	set dir(val) {
 		this._dir = val;

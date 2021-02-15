@@ -36,8 +36,7 @@ class BodyPartSkinTone extends Component {
 	}
 
 	get_main_overlay(prev: any) {
-		const overlay = prev();
-		return overlay;
+		return prev();
 	}
 }
 
@@ -102,13 +101,13 @@ class BodyPartHumanHair extends Component {
 			{icodir = 3;}
 		else if (icodir ===8)
 			{icodir = 4;}
-		const overlay = {
+
+		return {
 			icon: `icons/mob/human_face/${hair_obj.icon_state}/${hair_obj.icon_state}-dir${icodir}.png`,
 			icon_state: hair_obj.icon_state,
 			color: this.hair_color,
 			overlay_layer: 14,
 		};
-		return overlay;
 	}
 	remove_overlays(prev: any, atom: Record<string,any>) {
 		prev();

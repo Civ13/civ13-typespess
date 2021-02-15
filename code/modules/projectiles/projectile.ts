@@ -94,7 +94,6 @@ class Projectile extends Component.Networked {
 		this.range -= dist_to_move;
 		if (this.range <= 0) {
 			this.a.destroy();
-			return;
 		}
 	}
 

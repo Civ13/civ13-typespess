@@ -252,7 +252,7 @@ class CarbonMob extends Component.Networked {
 		this.update_lying(/*old, val*/);
 	}
 
-	moved(e: Record<string,any>) {this.update_lying();}
+	moved(/*e: Record<string,any>*/) {this.update_lying();}
 
 	update_lying() {
 		const old = this.lying;

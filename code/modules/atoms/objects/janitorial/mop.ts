@@ -61,7 +61,6 @@ class Mop extends Component {
 					for (const crosser of [...turf.crosses()]) {
 						if (has_component(crosser, "CleanableDecal")) {
 							crosser.destroy();
-							continue;
 						}
 					}
 				}

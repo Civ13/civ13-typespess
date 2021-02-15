@@ -42,17 +42,14 @@ module.exports.now = function (client: { connection: { send: (arg0: string) => v
 				e.preventDefault();
 			} else if (e.which === 13) {
 				// enter
-				if (input_elem.dataset.inputting === "ooc") {
-					if (client.connection)
-						{client.connection.send(
-							JSON.stringify({ ooc_message: input_elem.value })
-						);}
-				} else if (input_elem.dataset.inputting === "say") {
-					if (client.connection)
-						{client.connection.send(
-							JSON.stringify({ say_message: input_elem.value })
-						);}
-				}
+				if (client.connection && input_elem.dataset.inputting === "ooc") {
+					client.connection.send(
+						JSON.stringify({ ooc_message: input_elem.value })
+					);}
+				else if (client.connection && input_elem.dataset.inputting === "say") {
+					client.connection.send(
+						JSON.stringify({ say_message: input_elem.value })
+					);}
 
 				input_elem.blur();
 				input_elem.dataset.inputting = null;

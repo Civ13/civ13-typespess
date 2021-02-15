@@ -108,9 +108,7 @@ class Reagent extends EventEmitter {
 
 	reaction_obj() {return;}
 	reaction_mob(target: any, method: string, volume: number) {
-		if (method === "vapor") {
-			if (volume > 0.5) {target.c.ReagentHolder.add(this, volume);}
-		}
+		if (method === "vapor" && volume > 0.5) {target.c.ReagentHolder.add(this, volume);}
 	}
 	reaction_turf() {return;}
 }

@@ -62,7 +62,6 @@ class Handcuffs extends Component {
 		if (this.a.c.Item.slot) {this.a.c.Item.slot.item = null;}
 		this.a.loc = target;
 		target.c.MobInventory.handcuffed = this.a;
-		return;
 	}
 }
 

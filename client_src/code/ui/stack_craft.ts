@@ -40,7 +40,6 @@ class StackCraftPanel {
 			const recipe = this.recipes[i];
 			if (typeof recipe === "undefined") {
 				this.recipes_elem.appendChild(document.createElement("hr"));
-				continue;
 			}
 			//else if (this.recipe_check_tech(recipe) === 1) {
 			else {

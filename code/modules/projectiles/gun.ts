@@ -33,11 +33,9 @@ class Gun extends Component {
 			return;
 		}
 
-		if (prox) {
-			if (user.zone_selected === "mouth") {
+		if (prox && user.zone_selected === "mouth") {
 				// TODO suicide
 				return;
-			}
 		}
 
 		if (this.weapon_weight === combat_defines.WEAPON_HEAVY) {

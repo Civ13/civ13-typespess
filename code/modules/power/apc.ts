@@ -63,7 +63,6 @@ class Apc extends Component {
 				console.warn(
 					new Error(`APC at (${this.a.x}, ${this.a.y}) has no valid area!`)
 				);
-				return;
 			}
 		});
 		this.on("area_changed", this.area_changed.bind(this));

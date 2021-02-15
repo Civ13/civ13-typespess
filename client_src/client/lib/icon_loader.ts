@@ -11,12 +11,6 @@ function enqueue_icon_meta_load(client: Record<string,any>,newIcon: string) {
 		meta.__image_object = new Image();
 		const fullpath: string = client.resRoot + newIcon;
 		meta.__image_object.src = fullpath;
-/*
-		if (fullpath.search("inhands") !== -1)
-			{meta.__image_object.src = client.resRoot + "icons/nothing.png";}
-		else
-			{meta.__image_object.src = client.resRoot + "icons/error.png";}
-*/
 		
 		meta.__image_object.addEventListener("load", () => {
 			meta.__image_object.canvas = document.createElement("canvas");

@@ -182,7 +182,6 @@ class StorageItem extends Component {
 	mouse_dragged_to(e: Record<string,any>) {
 		if (e.to.atom === e.mob) {
 			this.show_to(e.mob);
-			return;
 		}
 	}
 

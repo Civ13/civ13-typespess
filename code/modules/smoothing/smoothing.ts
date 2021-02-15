@@ -239,9 +239,8 @@ class TGSmooth extends Component {
 			if (corner & 4 && adjacent & (1 << 4)) {dir_string += "e";}
 			if (corner & 8 && adjacent & (1 << 8)) {dir_string += "w";}
 			if (dir_string.length === 0) {dir_string = "i";}
-			else if (dir_string.length >= 2) {
-				if (adjacent & (1 << corner)) {dir_string = "f";}
-			}
+			else if (dir_string.length >= 2 && adjacent & (1 << corner))
+				{dir_string = "f";}
 			this.a.overlays[`smoothing_corner_${i}`] = {
 				icon_state: `${i}-${dir_string}`,
 			};
