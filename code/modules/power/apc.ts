@@ -197,5 +197,5 @@ Apc.template = {
 	},
 };
 
-module.exports.components = { Apc };
+module.exports.components = Apc;
 module.exports.channels = channels;

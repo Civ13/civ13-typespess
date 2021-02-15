@@ -1,9 +1,9 @@
 export{};
 const PouchDB = require("pouchdb");
 class Database {
-	name
-	path
-	db
+	name: string
+	path: string
+	db: any
 	constructor(name: string) {
 		this.name = name;
 		this.path = `http://localhost:5984/${name}`;

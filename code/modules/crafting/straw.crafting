@@ -1,0 +1,10 @@
+straw_wall:
+	name: "straw wall"
+	template_name: "straw_wall"
+	cost: 6
+	time: 5000
+	on_floor: true
+	age1: 0
+	age2: 0
+	age3: 0
+	last_age: 2

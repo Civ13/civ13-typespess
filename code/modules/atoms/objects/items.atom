@@ -13,11 +13,6 @@ handcuffs:
 	components: ["Handcuffs"]
 	tree_paths: ["items/handcuffs"]
 
-
-apc:
-	components: ["Apc"]
-	tree_path: ["structures/apc"]
-
 spray_spacecleaner:
 	components: ["SprayBottle"]
 	tree_paths: ["items/spray_spacecleaner"]

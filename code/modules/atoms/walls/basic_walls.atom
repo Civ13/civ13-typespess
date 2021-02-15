@@ -45,6 +45,31 @@ wall_wood:
 		component: "FloorBase"
 		default: "dirt"
 
+wall_straw:
+	components: ["Wall"]
+	vars:
+		components:
+#			TGSmooth:
+#				diagonal: true,
+			
+#			Smooth:
+#				smooth_with: "straw_wall"
+			
+#			SmoothGroup:
+#				groups: ["straw_wall"]
+			
+			Examine:
+				desc: "A soft straw wall wall. Doesn't look very resistant."
+
+		name: "straw wall"
+		icon: "icons/turf/walls/"
+		icon_state: "b_straw_wall"
+	
+	tree_paths: ["walls/wood"]
+	requires_under:
+		component: "FloorBase"
+		default: "dirt"
+
 wall_stone:
 	components: ["Wall"]
 	vars:

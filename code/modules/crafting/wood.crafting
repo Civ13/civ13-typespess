@@ -10,17 +10,6 @@ closet:
 	age3: 0
 	last_age: 8
 
-wood_tiles:
-	name: "floor tiles"
-	template_name: "plasteel_tile"
-	cost: 1
-	res_amount: 4
-	time: 2000
-	age1: 0
-	age2: 0
-	age3: 0
-	last_age: 8
-
 stool:
 	name: "stool"
 	template_name: "stool"
