@@ -17,6 +17,8 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13-typespess)
 [![License](https://img.shields.io/github/license/civ13/civ13-typespess)](https://github.com/Civ13/civ13-typespess/blob/master/LICENSE)
 
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Civ13/civ13-typespess)
+
 Welcome! This is an attempt at creating a Civ13 remake using [TypeScript](https://www.typescriptlang.org/) and *JavaScript*.
 
 Check the original Civ13 that uses BYOND and SS13 code here: https://github.com/civ13/civ13.
