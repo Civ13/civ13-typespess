@@ -34,7 +34,8 @@ class Outfit {
 					new Atom(target.server, clone.slots.oclothing)
 				);}
 
-			for (const [id, slot] of Object.entries(target.c.MobInventory.slots)) {
+			for (const [id, tslot] of Object.entries(target.c.MobInventory.slots)) {
+				const slot: Record<string,any> = tslot;
 				if (id === "iclothing" || id === "oclothing") {continue;}
 				if (clone.slots[id])
 					{slot.equip_or_del(new Atom(target.server, clone.slots[id]));}

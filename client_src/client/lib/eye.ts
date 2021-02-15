@@ -546,6 +546,7 @@ class Plane {
 		return [0, 0];
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	calculate_composite_offset(timestamp: any) {
 		return [0, 0];
 	}

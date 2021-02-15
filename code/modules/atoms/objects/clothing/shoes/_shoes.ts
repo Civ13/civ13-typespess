@@ -85,7 +85,8 @@ class FootItem extends Component {
 	mob_moved(movement: Record<string,any>) {
 		if (!movement.offset) {return;}
 		// eslint-disable-next-line prefer-const
-		for (let [type, amount] of Object.entries(this.footprint_amounts)) {
+		for (let [type, tamount] of Object.entries(this.footprint_amounts)) {
+			let amount = Number(tamount);
 			if (amount <= 0) {continue;}
 			let valid = true;
 			for (const obj of this.a.crosses()) {

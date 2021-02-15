@@ -28,7 +28,7 @@ class ReagentBinding {
 		obj.maximum_volume = this.reagent_holder.c.ReagentHolder.maximum_volume;
 		obj.reagents = {};
 		for (const [key, reagent] of this.reagent_holder.c.ReagentHolder.reagents) {
-			const robj = {};
+			const robj: Record<string,any> = {};
 			for (const prop of this.sent_props) {
 				robj[prop] = reagent[prop];
 			}
