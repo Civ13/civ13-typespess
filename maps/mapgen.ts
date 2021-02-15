@@ -14,13 +14,13 @@ function load_configs() {
 			return console.error(err);
 		}
 		const tempConfigs = (data.toString()).split(",", 4);
-		const loadedConfigs = [
+
+		return [
 			Number(tempConfigs[0]),
 			Number(tempConfigs[1]),
 			Number(tempConfigs[2]),
 			Number(tempConfigs[3]),
 		];
-		return loadedConfigs;
 	});
 	return [100, 100, 25, 20];
 }

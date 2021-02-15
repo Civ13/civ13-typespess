@@ -19,21 +19,10 @@ class Pill extends Component {
 
 		(async () => {
 			if (target === user) {
-				visible_message`<span class='notice'>The ${user} attempts to ${this.apply_method} the ${this.a}</span>`.emit_from(
-					target
-				);
-				if (this.self_delay) {
-					if (
-						!(await user.c.MobInventory.do_after({
-							target,
-							delay: this.self_delay,
-						}))
-					)
+				visible_message`<span class='notice'>The ${user} attempts to ${this.apply_method} the ${this.a}</span>`.emit_from(target);
+				if (this.self_delay &&  !(await user.c.MobInventory.do_after({target, delay: this.self_delay,})))
 						{return false;}
-				}
-				to_chat`<span class='notice'>You ${this.apply_method} the ${this.a}.</span>`(
-					user
-				);
+				to_chat`<span class='notice'>You ${this.apply_method} the ${this.a}.</span>`(user);
 			} else {
 				visible_message`<span class='danger'>The ${user} attempts to force the ${target} to ${this.apply_method} the ${this.a}.</span>`
 					.self`<span class='userdanger'>The ${user} attempts to force you to ${this.apply_method} the ${this.a}.</span>`.emit_from(

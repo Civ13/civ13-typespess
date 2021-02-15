@@ -49,19 +49,16 @@ class MobHud extends Component {
 
 				this.clear_alert(category);
 				// eslint-disable-next-line prefer-rest-params
-				const alert: any = this.throw_alert(...arguments);
-				return alert;
+				return this.throw_alert(...arguments);
 			} else if (thealert.template !== template) {
 				this.clear_alert(category);
 				// eslint-disable-next-line prefer-rest-params
-				const alert: any = this.throw_alert(...arguments);
-				return alert;
+				return this.throw_alert(...arguments);
 			} else if (!severity || severity === thealert.c.Alert.severity) {
 				if (thealert.c.Alert.timeout) {
 					this.clear_alert(category);
 					// eslint-disable-next-line prefer-rest-params
-					const alert: any = this.throw_alert(...arguments);
-					return alert;
+					return this.throw_alert(...arguments);
 				} else {
 					//no need to update
 					return false;

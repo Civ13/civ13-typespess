@@ -3,8 +3,8 @@ const { is_atom, has_component } = require("./utils.js");
 
 let idctr = 0;
 
-const _playing:any = Symbol("_playing");
-const _clients:any = Symbol("_clients");
+const _playing = Symbol("_playing");
+const _clients = Symbol("_clients");
 
 /**
  * @memberof Typespess
@@ -12,9 +12,11 @@ const _clients:any = Symbol("_clients");
 class Sound {
 	vary: any;
 	playback_rate: any;
-	path: ArrayConstructor;
+	path: ArrayConstructor | string;
 	emitter: any;
-
+	[_playing]: any;
+	[_clients]: any;
+	
 	constructor(server: any, sndobj: {path: string, playback_rate: number, vary: boolean}) {
 		Object.assign(this, sndobj);
 		Object.defineProperty(this, "id", {
@@ -40,7 +42,8 @@ class Sound {
 			this.path = this.path[Math.floor(Math.random() * this.path.length)];
 		}
 		if (typeof this.path === "string") {
-			this.path = this.path.replace(
+			const npath:string = this.path;
+			this.path = npath.replace(
 				/{([0-9]+)-([0-9]+)}/g,
 				(match: any, from: any, to: any) => {
 					const result =
@@ -71,10 +74,13 @@ class Sound {
 				if (observer.c.Hearer.can_hear_sound(this) && observer.c.Mob.client)
 					{clients.add(observer.c.Mob.client);}
 			}
-			if (has_component(mob, "Mob"))
-				{if (mob.c.Hearer.can_hear_sound(this) && mob.c.Mob.client)
-					{clients.add(mob.c.Mob.client);}}
+			if (has_component(mob, "Mob") && mob.c.Hearer.can_hear_sound(this) && mob.c.Mob.client)
+					{clients.add(mob.c.Mob.client);}
 		}
+		this.check_clients(clients);
+	}
+
+	check_clients(clients: any) {
 		for (const tclient of clients) {
 			const client: Record<string,any> = tclient;
 			if (!client.next_message.sound) {client.next_message.sound = {};}
@@ -83,7 +89,6 @@ class Sound {
 		}
 		this[_clients] = clients;
 	}
-
 	/**
   * Emits the sound from the given atom
   * @param {Typespess.Atom} emitter

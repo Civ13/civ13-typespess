@@ -92,12 +92,13 @@ class MobInteract extends Component {
 			} else {
 				if (active_item) {
 					active_item.c.Item.after_attack(e.atom, this.a, false, e);
-				} else {
-					this.ranged_attack(/*e.atom, e*/);
-				}
+				} else {this.ranged_attack(/*e.atom, e*/);}
 			}
-		} else {
-			const flag =
+		} else {this.no_atom(e, active_item);}
+	}
+
+	no_atom(e: Record<string,any>, active_item: Record<string,any>) {
+		const flag =
 		Math.abs(Math.floor(e.world_x) - this.a.x) <= 1.5001 &&
 		Math.abs(Math.floor(e.world_y) - this.a.y) <= 1.5001;
 			const target = {
@@ -112,7 +113,6 @@ class MobInteract extends Component {
 				),
 			};
 			if (active_item) {active_item.c.Item.attack_space(target, this.a, flag, e);}
-		}
 	}
 
 	can_interact() {

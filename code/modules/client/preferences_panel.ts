@@ -67,14 +67,11 @@ class PreferencesPanel extends Panel {
 					{this.char_prefs.hair_style = msg.char_prefs.hair_style;}
 			}
 
-			if (typeof msg.char_prefs.skin_tone !== "undefined") {
-				if (Object.prototype.hasOwnProperty.call(skin_tones,msg.char_prefs.skin_tone))
+			if (typeof msg.char_prefs.skin_tone !== "undefined" && Object.prototype.hasOwnProperty.call(skin_tones,msg.char_prefs.skin_tone))
 					{this.char_prefs.skin_tone = msg.char_prefs.skin_tone;}
-			}
-			if (typeof msg.char_prefs.hair_color !== "undefined") {
-				if (Object.prototype.hasOwnProperty.call(hair_colors,msg.char_prefs.hair_color))
+
+			if (typeof msg.char_prefs.hair_color !== "undefined" && Object.prototype.hasOwnProperty.call(hair_colors,msg.char_prefs.hair_color))
 					{this.char_prefs.hair_color = msg.char_prefs.hair_color;}
-			}
 		}
 		if (msg.randomize_name && this.char_prefs) {
 			this.char_prefs.randomize_name(msg.randomize_name);

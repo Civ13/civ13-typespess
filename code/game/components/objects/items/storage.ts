@@ -290,13 +290,12 @@ class StorageItem extends Component {
 		if (!has_component(item, "Item")) {return false;}
 		if (item.c.Item.slot) {item.c.Item.slot.item = null;}
 		item.loc = this.a;
-		if (user && !prevent_warning) {
-			if (this.rustle_jimmies)
-				{new Sound(this.a.server, {
-					path: sounds.rustle,
-					volume: 1,
-					vary: true,
-				}).emit_from(this.a.base_mover);}
+		if (user && !prevent_warning && this.rustle_jimmies) {
+			new Sound(this.a.server, {
+				path: sounds.rustle,
+				volume: 1,
+				vary: true,
+			}).emit_from(this.a.base_mover);
 		}
 		return true;
 	}
