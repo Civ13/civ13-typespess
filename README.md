@@ -2,8 +2,8 @@
 
 ![](https://i.imgur.com/napac0L.png)
 
-[![CircleCI](https://img.shields.io/circleci/build/github/Civ13/civ13-typespess)](https://app.circleci.com/pipelines/github/Civ13/civ13-typespess)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=alert_status)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Civ13/civ13-typespess)
 
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
@@ -16,8 +16,6 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/civ13/civ13-typespess)
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13-typespess)
 [![License](https://img.shields.io/github/license/civ13/civ13-typespess)](https://github.com/Civ13/civ13-typespess/blob/master/LICENSE)
-
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Civ13/civ13-typespess)
 
 Welcome! This is an attempt at creating a Civ13 remake using [TypeScript](https://www.typescriptlang.org/) and *JavaScript*.
 
