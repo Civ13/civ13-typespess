@@ -479,11 +479,11 @@ class Atom extends EventEmitter {
 		}
 
 		const lost_viewers: any[] = [];
-		const gained_viewers: any[] = [];
+		let gained_viewers: any[] = [];
 
-		const lost_crossers: any[] = [];
-		const gained_crossers: any[] = [];
-		const common_crossers: any[] = [];
+		let lost_crossers: any[] = [];
+		let gained_crossers: any[] = [];
+		let common_crossers: any[] = [];
 
 		if (this[_loc]) {
 			if (this[_loc].contents) {
@@ -539,43 +539,7 @@ class Atom extends EventEmitter {
 				this[_loc].contents.push(this);
 			}
 			if (this[_loc].is_base_loc) {
-				for (
-					let x = Math.floor(this[_x] + this[_bounds_x] + 0.0001);
-					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.0001);
-					x++
-				) {
-					for (
-						let y = Math.floor(this[_y] + this[_bounds_y] + 0.0001);
-						y <
-			Math.ceil(
-				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.0001
-			);
-						y++
-					) {
-						const thisloc = this[_loc].dim.location(x, y, this[_z]);
-						if (!thisloc.partial_contents.includes(this))
-							{thisloc.partial_contents.push(this);}
-						thisloc.viewers.forEach((item: any) => {
-							gained_viewers.push(item);
-						});
-						for (const atom of thisloc.partial_contents) {
-							if (atom !== this && this.does_cross(atom)) {
-								const idx = lost_crossers.indexOf(atom);
-								if (idx === -1) {
-									if (
-										!gained_crossers.includes(atom) &&
-					!common_crossers.includes(atom)
-									)
-										{gained_crossers.push(atom);}
-								} else {
-									lost_crossers.splice(idx, 1);
-									common_crossers.push(atom);
-								}
-								if (!this[_crosses].includes(atom)) {this[_crosses].push(atom);}
-							}
-						}
-					}
-				}
+				[gained_viewers, gained_crossers, lost_crossers, common_crossers] = this.do_base_loc(gained_viewers, gained_crossers, lost_crossers, common_crossers);
 			}
 		}
 
@@ -624,6 +588,47 @@ class Atom extends EventEmitter {
 		this[mob_symbols._update_var]("y", 0);
 	}
 
+	do_base_loc(gained_viewers: any, gained_crossers: any, lost_crossers: any, common_crossers: any) {
+		for (
+			let x = Math.floor(this[_x] + this[_bounds_x] + 0.0001);
+			x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.0001);
+			x++
+		) {
+			for (
+				let y = Math.floor(this[_y] + this[_bounds_y] + 0.0001);
+				y <
+	Math.ceil(
+		this[_y] + this[_bounds_y] + this[_bounds_height] - 0.0001
+	);
+				y++
+			) {
+				const thisloc = this[_loc].dim.location(x, y, this[_z]);
+				if (!thisloc.partial_contents.includes(this))
+					{thisloc.partial_contents.push(this);}
+				thisloc.viewers.forEach((item: any) => {
+					gained_viewers.push(item);
+				});
+				for (const atom of thisloc.partial_contents) {
+					if (atom !== this && this.does_cross(atom)) {
+						const idx = lost_crossers.indexOf(atom);
+						if (idx === -1) {
+							if (
+								!gained_crossers.includes(atom) &&
+			!common_crossers.includes(atom)
+							)
+								{gained_crossers.push(atom);}
+						} else {
+							lost_crossers.splice(idx, 1);
+							common_crossers.push(atom);
+						}
+						if (!this[_crosses].includes(atom)) {this[_crosses].push(atom);}
+					}
+				}
+			}
+		}
+		return [gained_viewers, gained_crossers, lost_crossers, common_crossers];
+	}
+
 	force_move(x: any, y: any, z: any, dim: any, bounds_x: any, bounds_y: any, bounds_width: any, bounds_height: any) {
 		this[_changeloc](
 			x,
@@ -669,25 +674,23 @@ class Atom extends EventEmitter {
 		const gained_crossers: any[] = [];
 		const common_crossers: any[] = [];
 
-		if (this[_loc] && this[_loc].is_base_loc) {
-			if (this[_loc].is_base_loc) {
+		if (this[_loc] && this[_loc].is_base_loc && this[_loc].is_base_loc) {
+			for (
+				let x = Math.floor(this[_x] + this[_bounds_x] + 0.001);
+				x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.001);
+				x++
+			) {
 				for (
-					let x = Math.floor(this[_x] + this[_bounds_x] + 0.001);
-					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.001);
-					x++
+					let y = Math.floor(this[_y] + this[_bounds_y] + 0.001);
+					y <
+		Math.ceil(
+			this[_y] + this[_bounds_y] + this[_bounds_height] - 0.001
+		);
+					y++
 				) {
-					for (
-						let y = Math.floor(this[_y] + this[_bounds_y] + 0.001);
-						y <
-			Math.ceil(
-				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.001
-			);
-						y++
-					) {
-						const thisloc = this[_loc].dim.location(x, y, this[_z]);
-						for (const atom of thisloc.partial_contents)
-							if (atom !== this && atom.does_cross(this) && !lost_crossers.includes(atom)) {lost_crossers.push(atom);}
-						}
+					const thisloc = this[_loc].dim.location(x, y, this[_z]);
+					for (const atom of thisloc.partial_contents)
+						{if (atom !== this && atom.does_cross(this) && !lost_crossers.includes(atom)) {lost_crossers.push(atom);}}
 					}
 				}
 			}
@@ -1456,27 +1459,25 @@ set directional(val) {
 	set visible(val) {
 		val = !!val; // cast to boolean
 		this[_visible] = val;
-		if (this[_loc] && this[_loc].is_base_loc) {
-			if (this[_loc].is_base_loc) {
+		if (this[_loc] && this[_loc].is_base_loc && this[_loc].is_base_loc) {
+			for (
+				let x = Math.floor(this[_x] + this[_bounds_x] + 0.0001);
+				x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.0001);
+				x++
+			) {
 				for (
-					let x = Math.floor(this[_x] + this[_bounds_x] + 0.0001);
-					x < Math.ceil(this[_x] + this[_bounds_x] + this[_bounds_width] - 0.0001);
-					x++
+					let y = Math.floor(this[_y] + this[_bounds_y] + 0.0001);
+					y <
+		Math.ceil(
+			this[_y] + this[_bounds_y] + this[_bounds_height] - 0.0001
+		);
+					y++
 				) {
-					for (
-						let y = Math.floor(this[_y] + this[_bounds_y] + 0.0001);
-						y <
-			Math.ceil(
-				this[_y] + this[_bounds_y] + this[_bounds_height] - 0.0001
-			);
-						y++
-					) {
-						const thisloc = this.dim.location(x, y, this[_z]);
-						for (const atom of thisloc.viewers) {
-							if (atom.c.Eye.can_see(this))
-								{atom.c.Eye[mob_symbols._add_viewing](this);}
-							else {atom.c.Eye[mob_symbols._remove_viewing](this);}
-						}
+					const thisloc = this.dim.location(x, y, this[_z]);
+					for (const atom of thisloc.viewers) {
+						if (atom.c.Eye.can_see(this))
+							{atom.c.Eye[mob_symbols._add_viewing](this);}
+						else {atom.c.Eye[mob_symbols._remove_viewing](this);}
 					}
 				}
 			}

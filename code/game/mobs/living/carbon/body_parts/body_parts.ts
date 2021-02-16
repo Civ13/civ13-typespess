@@ -15,8 +15,8 @@ class MobBodyParts extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.limbs = Object.create({
-			get eyes() {return this.head;},
-			get mouth() {return this.head;},
+			get eyes() {return;},
+			get mouth() {return;},
 		});
 		this.limbs_set = new Set();
 
@@ -29,7 +29,22 @@ class MobBodyParts extends Component {
 			const new_limb = new Atom(this.a.server, init);
 			new_limb.c.BodyPart.attach(this.a);
 		}
+		this.damage_set();
 
+		this.a.c.Eye.screen.health_doll = new Atom(
+			this.a.server,
+			"human_health_doll"
+		);
+		this.a.c.Eye.screen.health_doll.c.HealthDoll.bind_mob(this.a);
+		if (has_component(this.a, "MobInventory")) {
+			this.a.c.MobInventory.check_can_handcuff = chain_func(
+				this.a.c.MobInventory.check_can_handcuff,
+				this.check_can_handcuff.bind(this)
+			);
+		}
+	}
+
+	damage_set() {
 		for (const type of ["brute", "burn"]) {
 			const obj = {
 				get: () => {
@@ -59,7 +74,6 @@ class MobBodyParts extends Component {
 					const sign_amt = Math.sign(amt);
 
 					const limbs = [...this.limbs_set];
-
 					while (limbs.length && abs_amt > 0) {
 						const idx = Math.floor(Math.random() * limbs.length);
 						const limb = limbs[idx];
@@ -85,17 +99,6 @@ class MobBodyParts extends Component {
 				},
 			};
 			this.a.c.LivingMob.damages[type] = obj;
-		}
-		this.a.c.Eye.screen.health_doll = new Atom(
-			this.a.server,
-			"human_health_doll"
-		);
-		this.a.c.Eye.screen.health_doll.c.HealthDoll.bind_mob(this.a);
-		if (has_component(this.a, "MobInventory")) {
-			this.a.c.MobInventory.check_can_handcuff = chain_func(
-				this.a.c.MobInventory.check_can_handcuff,
-				this.check_can_handcuff.bind(this)
-			);
 		}
 	}
 

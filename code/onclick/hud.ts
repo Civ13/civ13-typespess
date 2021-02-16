@@ -19,7 +19,7 @@ class MobHud extends Component {
 		category: string | number = null,
 		template: any = null,
 		{ severity, new_master, override = false }: Record<string,any> = {}
-	) {
+	): boolean {
 		/* Proc to create or update an alert. Returns the alert if the alert is new or updated, 0 if it was thrown already
 		category is a text string. Each mob may only have one alert per category; the previous one will be replaced
 		path is a type path of the actual alert type to throw
@@ -40,30 +40,7 @@ class MobHud extends Component {
 			{throw new TypeError("Template provided is missing an Alert component.");}
 		let thealert: { c: { Alert: { override_alerts: boolean; master: any; severity: any; timeout: number; mob_viewer: any; }; }; template: { vars: { icon_state: any; }; }; overlays: { alert_master: { icon: any; icon_state: any; color: any; }; }; icon_state: string; };
 		if (this.alerts[category]) {
-			thealert = this.alerts[category];
-			if (thealert.c.Alert.override_alerts) {return false;}
-			if (new_master && new_master !== thealert.c.Alert.master) {
-				console.warn(
-					`${this} threw alert ${category} with new_master ${new_master} while already having that alert with master ${thealert.c.Alert.master}`
-				);
-
-				this.clear_alert(category);
-				// eslint-disable-next-line prefer-rest-params
-				return this.throw_alert(...arguments);
-			} else if (thealert.template !== template) {
-				this.clear_alert(category);
-				// eslint-disable-next-line prefer-rest-params
-				return this.throw_alert(...arguments);
-			} else if (!severity || severity === thealert.c.Alert.severity) {
-				if (thealert.c.Alert.timeout) {
-					this.clear_alert(category);
-					// eslint-disable-next-line prefer-rest-params
-					return this.throw_alert(...arguments);
-				} else {
-					//no need to update
-					return false;
-				}
-			}
+			[thealert, category, new_master, template, severity] = this.do_alerts(thealert, category, new_master, template, severity);
 		} else {
 			thealert = new Atom(this.a.server, template);
 			thealert.c.Alert.override_alerts = override;
@@ -94,6 +71,33 @@ class MobHud extends Component {
 			}, thealert.c.Alert.timeout);
 		}
 	}
+	do_alerts(thealert: any, category: any, new_master: any, template: any, severity: any): any {
+		thealert = this.alerts[category];
+		if (thealert.c.Alert.override_alerts) {return false;}
+		if (new_master && new_master !== thealert.c.Alert.master) {
+			console.warn(
+				`${this} threw alert ${category} with new_master ${new_master} while already having that alert with master ${thealert.c.Alert.master}`
+			);
+
+			this.clear_alert(category);
+			// eslint-disable-next-line prefer-rest-params
+			return this.throw_alert(...arguments);
+		} else if (thealert.template !== template) {
+			this.clear_alert(category);
+			// eslint-disable-next-line prefer-rest-params
+			return this.throw_alert(...arguments);
+		} else if (!severity || severity === thealert.c.Alert.severity) {
+			if (thealert.c.Alert.timeout) {
+				this.clear_alert(category);
+				// eslint-disable-next-line prefer-rest-params
+				return this.throw_alert(...arguments);
+			} else {
+				//no need to update
+				return false;
+			}
+		}
+	}
+
 	clear_alert(category: string | number, clear_override = false) {
 		const alert = this.alerts[category];
 		if (!alert) {return false;}
