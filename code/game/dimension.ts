@@ -1,12 +1,14 @@
 export{};
-const _locations: any = Symbol("_locations");
-const _step_cache: any = Symbol("_step_cache");
+const _locations = Symbol("_locations");
+const _step_cache = Symbol("_step_cache");
 
 /** @typedef {import('./server')} Typespess */
 /** @typedef {import('./atom/atom')} Typespess.Atom */
 
 class Dimension {
 	server: any;
+	[_step_cache]: any;
+	[_locations]: any;
 	constructor(server: any) {
 		this.server = server;
 		this[_locations] = new Map();
@@ -62,6 +64,8 @@ class Location {
 	viewers: Array<any>;
 	hearers: Array<any>;
 	server: Record<string,any>;
+	[_step_cache]: any;
+	[_locations]: any;
 	constructor(x: number, y: number, z: number, dim: any, server: any) {
 		// Define these so that they can't be changed.
 		Object.defineProperty(this, "x", {

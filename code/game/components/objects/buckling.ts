@@ -33,10 +33,8 @@ class Buckle extends Component {
 	mouse_dropped_by(e: Record<string,any>) {
 		const buckling = e.from.atom;
 		const user = e.mob;
-		if (this.can_buckle && has_component(buckling, "LivingMob")) {
-			if (this.user_buckle_mob(buckling, user)) {
+		if (this.can_buckle && has_component(buckling, "LivingMob") && this.user_buckle_mob(buckling, user)) {
 				return true;
-			}
 		}
 	}
 

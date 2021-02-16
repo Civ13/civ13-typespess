@@ -470,12 +470,9 @@ class Mob extends Component {
 	}
 
 	basic_panel_read_checks(/*atom:any, */panel:any/*, key:any*/) {
-		if (typeof panel === "object") {
-			if (
-				panel.client !== this.client ||
-		(panel.bound_mob && panel.bound_mob !== this.a)
-			)
-				{return false;}
+		if (typeof panel === "object" && (panel.client !== this.client ||
+		(panel.bound_mob && panel.bound_mob !== this.a))) {
+				return false;
 		}
 		return true;
 	}

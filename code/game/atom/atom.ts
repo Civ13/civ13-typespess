@@ -511,8 +511,8 @@ class Atom extends EventEmitter {
 							lost_viewers.push(item);
 						});
 						for (const atom of thisloc.partial_contents) {
-							if (atom !== this && atom.does_cross(this)) {
-								if (!lost_crossers.includes(atom)) {lost_crossers.push(atom);}
+							if (atom !== this && atom.does_cross(this) && !lost_crossers.includes(atom)) {
+								lost_crossers.push(atom);
 							}
 						}
 					}
@@ -685,10 +685,8 @@ class Atom extends EventEmitter {
 						y++
 					) {
 						const thisloc = this[_loc].dim.location(x, y, this[_z]);
-						for (const atom of thisloc.partial_contents) {
-							if (atom !== this && atom.does_cross(this)) {
-								if (!lost_crossers.includes(atom)) {lost_crossers.push(atom);}
-							}
+						for (const atom of thisloc.partial_contents)
+							if (atom !== this && atom.does_cross(this) && !lost_crossers.includes(atom)) {lost_crossers.push(atom);}
 						}
 					}
 				}
@@ -724,7 +722,6 @@ class Atom extends EventEmitter {
 							}
 						}
 					}
-				}
 			}
 		}
 		return { gained_crossers, lost_crossers, common_crossers };

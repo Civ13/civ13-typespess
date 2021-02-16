@@ -12,8 +12,7 @@ class AreaAmbience extends Component {
 		this.a.c.Area.on("start_touch", this.start_touch.bind(this));
 	}
 	start_touch(atom: Record<string,any>) {
-		if (has_component(atom, "LivingMob") && atom.c.Mob.client) {
-			if (Math.random() < 0.35 && !atom.c.Mob.client.played_ambience) {
+		if (has_component(atom, "LivingMob") && atom.c.Mob.client && Math.random() < 0.35 && !atom.c.Mob.client.played_ambience) {
 				atom.c.Mob.client.played_ambience = true;
 				const soundname = this.ambient_sounds[
 					Math.floor(Math.random() * this.ambient_sounds.length)
@@ -24,7 +23,7 @@ class AreaAmbience extends Component {
 				setTimeout(() => {
 					if (atom.c.Mob.client) {atom.c.Mob.client.played_ambience = false;}
 				}, 60000);
-			}
+
 		}
 	}
 }

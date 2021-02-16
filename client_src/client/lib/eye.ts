@@ -117,16 +117,10 @@ class Eye extends EventEmitter {
 				localY += 0.5;
 				const bounds = atom.get_bounds(timestamp);
 				if (
-					bounds && localX >= bounds.x && localX < bounds.x + bounds.width && localY >= bounds.y && localY < bounds.y + bounds.height
-				) {
-					if (
-						atom.mouse_opacity === 2 ||
-			atom.is_mouse_over(localX, localY, timestamp)
-					) {
-						clickedAtom = atom;
-						break;
-					}
-				}
+					bounds && localX >= bounds.x && localX < bounds.x + bounds.width
+					&& localY >= bounds.y && localY < bounds.y + bounds.height &&
+					atom.mouse_opacity === 2 || atom.is_mouse_over(localX, localY, timestamp)
+				) {clickedAtom = atom; break;}
 			}
 			if (clickedAtom) {break;}
 		}
