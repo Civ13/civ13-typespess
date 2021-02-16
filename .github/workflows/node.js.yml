@@ -26,8 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run:
-        command: sudo sh scripts/setup.sh
-    - run:
-        command: sudo sh scripts/launch_test.sh
-        no_output_timeout: 2m
+    - run: sudo sh scripts/setup.sh
+   
+    - run: sudo sh scripts/launch_test.sh
+
+
