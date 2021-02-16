@@ -148,7 +148,7 @@ class PreferencesPanel {
 				menu.appendChild(item);
 			}
 			dropdown(hair_dropdown, menu);
-			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "instant" });}
+			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "auto" });}
 		});
 
 		const skin_tone_dropdown = this.panel.$(".property-skin_tone");
@@ -186,7 +186,7 @@ class PreferencesPanel {
 				menu.appendChild(item);
 			}
 			dropdown(skin_tone_dropdown, menu);
-			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "instant" });}
+			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "auto" });}
 		});
 		const hair_color_dropdown = this.panel.$(".property-hair_color");
 		hair_color_dropdown.addEventListener("click", (e: { defaultPrevented: any; }) => {
@@ -218,7 +218,7 @@ class PreferencesPanel {
 				menu.appendChild(item);
 			}
 			dropdown(hair_color_dropdown, menu);
-			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "instant" });}
+			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "auto" });}
 		});
 
 		this.panel.$(".property-age").addEventListener("input", (e: { target: { value: string | number; }; }) => {
