@@ -955,7 +955,9 @@ class Slot extends EventEmitter {
 	}
 	update_icons()
 	{
-		if (this.props.is_hand_slot) {
+		if (this.props.is_hand_slot || this.props.clothing_slot) {
+			let preset = "inhand_";
+			if (this.props.clothing_slot) {preset = "clothing_";}
 			let icodir = 1;
 			if (this.mob) {icodir = this.mob.dir;}
 			if (icodir ===1)
@@ -966,36 +968,16 @@ class Slot extends EventEmitter {
 				{icodir = 3;}
 			else if (icodir ===8)
 				{icodir = 4;}
-			if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("1.png") !== -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("1.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("2.png") !== -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("2.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("3.png") !== -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("3.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`inhand_${this.id}`] && this.mob.overlays[`inhand_${this.id}`].icon && this.mob.overlays[`inhand_${this.id}`].icon.search("4.png") !== -1)
-				{this.mob.overlays[`inhand_${this.id}`].icon = this.mob.overlays[`inhand_${this.id}`].icon.replace("4.png",`${icodir}.png`);}
+			if (this.mob.overlays[`${preset}${this.id}`] && this.mob.overlays[`${preset}${this.id}`].icon && this.mob.overlays[`${preset}${this.id}`].icon.search("1.png") !== -1)
+				{this.mob.overlays[`${preset}${this.id}`].icon = this.mob.overlays[`${preset}${this.id}`].icon.replace("1.png",`${icodir}.png`);}
+			else if (this.mob.overlays[`${preset}${this.id}`] && this.mob.overlays[`${preset}${this.id}`].icon && this.mob.overlays[`${preset}${this.id}`].icon.search("2.png") !== -1)
+				{this.mob.overlays[`${preset}${this.id}`].icon = this.mob.overlays[`${preset}${this.id}`].icon.replace("2.png",`${icodir}.png`);}
+			else if (this.mob.overlays[`${preset}${this.id}`] && this.mob.overlays[`${preset}${this.id}`].icon && this.mob.overlays[`${preset}${this.id}`].icon.search("3.png") !== -1)
+				{this.mob.overlays[`${preset}${this.id}`].icon = this.mob.overlays[`${preset}${this.id}`].icon.replace("3.png",`${icodir}.png`);}
+			else if (this.mob.overlays[`${preset}${this.id}`] && this.mob.overlays[`${preset}${this.id}`].icon && this.mob.overlays[`${preset}${this.id}`].icon.search("4.png") !== -1)
+				{this.mob.overlays[`${preset}${this.id}`].icon = this.mob.overlays[`${preset}${this.id}`].icon.replace("4.png",`${icodir}.png`);}
 		}
-		if (this.props.clothing_slot) {
-			let icodir = 1;
-			if (this.mob) {icodir = this.mob.dir;}
-			if (icodir ===1)
-				{icodir = 2;}
-			else if (icodir ===2)
-				{icodir = 1;}
-			else if (icodir ===4)
-				{icodir = 3;}
-			else if (icodir ===8)
-				{icodir = 4;}
-			if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("1.png") !== -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("1.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("2.png") !== -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("2.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("3.png") !== -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("3.png",`${icodir}.png`);}
-			else if (this.mob.overlays[`clothing_${this.id}`] && this.mob.overlays[`clothing_${this.id}`].icon && this.mob.overlays[`clothing_${this.id}`].icon.search("4.png") !== -1)
-				{this.mob.overlays[`clothing_${this.id}`].icon = this.mob.overlays[`clothing_${this.id}`].icon.replace("4.png",`${icodir}.png`);}
 
-		}	
 	}
 	can_accept_item(item: Record<string,any>) {
 		if (!has_component(item, "Item")) {return false;}
