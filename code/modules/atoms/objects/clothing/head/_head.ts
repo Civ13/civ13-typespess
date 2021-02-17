@@ -6,9 +6,8 @@ class HeadItem extends Component {
 		super(atom, template);
 	}
 }
-//TODO: Handle that dynamic_hair_suffix crap
+
 //TODO: Toggling
-//TODO: Possibly handle block_tracking? Dunno how that one works
 //TODO: /obj/item/clothing/head/Initialize()
 //TODO: /obj/item/clothing/head/worn_overlays(isinhands = FALSE)
 //TODO: /obj/item/clothing/head/update_clothes_damaged_state(damaging = TRUE)

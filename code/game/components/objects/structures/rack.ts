@@ -53,7 +53,6 @@ class Rack extends Component {
 			this.a.density = 0;
 			// eslint-disable-next-line no-new
 			new Atom(this.a.server, "rack_parts", this.a.loc);
-			//TODO: fingerprints
 			this.a.destroy();
 		}
 	}
@@ -135,7 +134,6 @@ RackParts.template = {
 		name: "rack parts",
 		icon: "icons/obj/misc/",
 		icon_state: "rack_parts",
-		//TODO: flags_1 = CONDUCT_1
 	},
 };
 

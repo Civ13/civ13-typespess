@@ -182,7 +182,6 @@ class Stack extends Component {
 		if (has_component(user, "MobInventory")) {
 			user.c.MobInventory.put_in_hands(new_stack);
 		}
-		// TODO evidence
 	}
 
 	crossed_by(target: Record<string,any>) {

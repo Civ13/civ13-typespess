@@ -9,7 +9,6 @@ class WearableItem extends Component {
 
 //TODO: Handle flags_inv
 //TODO: Handle flags_cover
-//TODO: Handle dog_fashion
 
 WearableItem.template = {
 	vars: {

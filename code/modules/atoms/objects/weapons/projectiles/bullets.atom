@@ -30,19 +30,6 @@ bullet_a762:
 	
 	tree_paths: ["effects/projectiles/bullet/a762"]
 
-bullet_a762_enchanted:
-	parent_template: "bullet"
-	vars:
-		components:
-			Bullet:
-				damage: 5
-				#TODO stamina: 80
-			
-		
-		name: "enchanted 7.62 bullet"
-	
-	tree_paths: ["effects/projectiles/bullet/a762_enchanted"]
-
 # 7.62x38mmR (Nagant Revolver)
 bullet_n762:
 	parent_template: "bullet"
@@ -66,7 +53,6 @@ bullet_c38:
 		components:
 			Bullet:
 				damage: 15
-				#TODO stamina: 50
 				status_effects:
 					Knockdown:
 						delay: 6000
@@ -174,9 +160,7 @@ bullet_c45:
 		components:
 			Bullet:
 				damage: 20
-				#TODO stamina: 65
-			
-		
+
 		name: ".45 bullet"
 	
 	tree_paths: ["effects/projectiles/bullet/c45"]
@@ -188,7 +172,6 @@ bullet_c45_nostamina:
 			Bullet:
 				damage: 30
 			
-		
 		name: ".45 bullet"
 	
 	tree_paths: ["effects/projectiles/bullet/c45_nostamina"]
@@ -261,7 +244,6 @@ bullet_shotgun_beanbag:
 			Bullet:
 				damage: 5
 				#TODO stamina: 80
-			
 		
 		name: "beanbag slug"
 	

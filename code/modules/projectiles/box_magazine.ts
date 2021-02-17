@@ -191,8 +191,6 @@ AmmoBox.template = {
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				inhand_icon_state: "syringe_kit",
-				//TODO flags_1 = CONDUCT_1
-				//TODO slot_flags = SLOT_BELT
 				materials: { metal: 30000 },
 			},
 			Tangile: {

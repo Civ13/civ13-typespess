@@ -50,7 +50,6 @@ class PowerCell extends Component {
 
 	examine(prev: any, user: any) {
 		prev();
-		// TODO rigged
 		to_chat`The charge meter reads ${Math.round(this.percent)}%.`(user);
 	}
 }

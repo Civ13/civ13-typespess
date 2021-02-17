@@ -1,8 +1,6 @@
 export{};
 const { Component} = require("./../../../../../../code/game/server.js");
 
-//TODO: Folding up boxes
-
 class Box extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);

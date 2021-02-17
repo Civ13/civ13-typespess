@@ -131,8 +131,6 @@ AmmoCasing.template = {
 			Item: {
 				force: 0,
 				size: 1,
-				//TODO flags_1 = CONDUCT_1
-				//TODO slot_flags = SLOT_BELT
 			},
 			Examine: {
 				desc: "A bullet casing.",

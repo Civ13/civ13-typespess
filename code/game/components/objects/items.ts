@@ -152,7 +152,6 @@ Item.template = {
 				force: 0,
 				damage_type: "brute",
 				attack_verb: null,
-				needs_permit: false, //TODO: currently just a placeholder
 				strip_delay: 4000,
 				equip_delay_other: 2000,
 			},

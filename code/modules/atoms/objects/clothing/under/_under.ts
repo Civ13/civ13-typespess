@@ -6,10 +6,6 @@ class UniformItem extends Component {
 		super(atom, template);
 	}
 }
-//TODO: Alt styles
-//TODO: Sensors
-//TODO: A fuckton of other procs from the DM file
-
 UniformItem.template = {
 	vars: {
 		components: {
