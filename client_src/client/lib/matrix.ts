@@ -1,11 +1,11 @@
 // the only functional programming in the whole project
 class Matrix {
-	a;
-	b;
-	c;
-	d;
-	e;
-	f;
+	a: number;
+	b: number;
+	c: number;
+	d: number;
+	e: number;
+	f: number;
 	static identity: Matrix;
 	constructor(a: number, b: number, c: number, d: number, e: number, f: number) {
 		this.a = a;

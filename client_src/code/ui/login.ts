@@ -1,6 +1,6 @@
 class LoginPanel {
-	panel;
-	connection;
+	panel: Record<string,any>;
+	connection: any;
 	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.content_obj.classList.add("center");
