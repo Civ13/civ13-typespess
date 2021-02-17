@@ -10,19 +10,19 @@ class MobMovement extends Component {
 
 		this.atom.c.Mob.on("keydown", (e: Record<string,any>) => {
 			if (!e) {return;}
-			if (e.which === 65 || e.which === 37) {
+			if (e.key === "a" || e.key === "ArrowLeft") {
 				this.intended_walk_dir |= 8;
 				this.last_axis = 12;
 			}
-			if (e.which === 68 || e.which === 39) {
+			if (e.key === "d" || e.key === "ArrowRight") {
 				this.intended_walk_dir |= 4;
 				this.last_axis = 12;
 			}
-			if (e.which === 83 || e.which === 40) {
+			if (e.key === "s" || e.key === "ArrowDown") {
 				this.intended_walk_dir |= 2;
 				this.last_axis = 3;
 			}
-			if (e.which === 87 || e.which === 38) {
+			if (e.key === "w" || e.key === "ArrowUp") {
 				this.intended_walk_dir |= 1;
 				this.last_axis = 3;
 			}
@@ -31,16 +31,16 @@ class MobMovement extends Component {
 
 		this.atom.c.Mob.on("keyup", (e: Record<string,any>) => {
 			if (!e) {return;}
-			if (e.which === 65 || e.which === 37) {
+			if (e.key === "a" || e.key === "ArrowLeft") {
 				this.intended_walk_dir &= ~8;
 			}
-			if (e.which === 68 || e.which === 39) {
+			if (e.key === "d" || e.key === "ArrowRight") {
 				this.intended_walk_dir &= ~4;
 			}
-			if (e.which === 83 || e.which === 40) {
+			if (e.key === "s" || e.key === "ArrowDown") {
 				this.intended_walk_dir &= ~2;
 			}
-			if (e.which === 87 || e.which === 38) {
+			if (e.key === "w" || e.key === "ArrowUp") {
 				this.intended_walk_dir &= ~1;
 			}
 			this.update_walk();

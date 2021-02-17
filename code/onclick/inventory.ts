@@ -520,19 +520,19 @@ class MobInventory extends Component {
 	}
 
 	keydown(e: Record<string,any>) {
-		if (e.which === 88) {
+		if (e.key === "x") {
 			// x
 			this.swap_hands();
 		}
-		if (e.which === 90 && this.active_hand &&
+		if (e.key === "z" && this.active_hand &&
 			this.slots[this.active_hand] && this.slots[this.active_hand].item) {
 			// z
 			this.slots[this.active_hand].item.c.Item.attack_self(this.a);}
-		if (e.which === 81) {
+		if (e.key === "q") {
 			// q
 			this.slots[this.active_hand].item = void 0;
 		}
-		if (e.which === 82) {
+		if (e.key === "r") {
 			this.throw_mode = !this.throw_mode;
 		}
 	}

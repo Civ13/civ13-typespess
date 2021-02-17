@@ -68,7 +68,7 @@ module.exports.now = (server:any) => {
 	server.on("client_login", (client: Record<string,any>) => {
 		client.on("keydown", (e: Record<string,any>) => {
 			if (!e) {return;}
-			if (e.which === 115 && client.holder && !client.holder.admin_menu) {
+			if (e.key === "F4" && client.holder && !client.holder.admin_menu) {
 					const menu = new AdminPanel(client);
 					menu.open();
 				}

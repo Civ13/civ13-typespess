@@ -71,27 +71,27 @@ class TypespessClient extends EventEmitter {
 		const networked_down = new Set();
 		document.addEventListener("keydown", (e) => {
 			if (e.target.localName !== "input" && this.connection) {
-				networked_down.add(e.which);
+				networked_down.add(e.key);
 				this.connection.send(
-					JSON.stringify({ keydown: { which: e.which, id: e.target.id } })
+					JSON.stringify({ keydown: { key: e.key, id: e.target.id } })
 				);
 			}
 		});
 		document.addEventListener("keyup", (e) => {
 			if (
 				(e.target.localName !== "input" && this.connection) ||
-				networked_down.has(e.which)
+				networked_down.has(e.key)
 			) {
-				networked_down.delete(e.which);
+				networked_down.delete(e.key);
 				this.connection.send(
-					JSON.stringify({ keyup: { which: e.which, id: e.target.id } })
+					JSON.stringify({ keyup: { key: e.key, id: e.target.id } })
 				);
 			}
 		});
 		window.addEventListener("blur", () => {
-			for (const which of networked_down) {
-				this.connection.send(JSON.stringify({ keyup: { which } }));
-				networked_down.delete(which);
+			for (const key of networked_down) {
+				this.connection.send(JSON.stringify({ keyup: { key } }));
+				networked_down.delete(key);
 			}
 		});
 	}

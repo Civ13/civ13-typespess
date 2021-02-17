@@ -9,12 +9,12 @@ module.exports.now = function (client: { connection: { send: (arg0: string) => v
 			if (typeof input_elem === "undefined") {return;}
 			if (e.target.localName === "input" || !client.connection) {return;}
 			// the e.preventDefault() is for stopping the character being typed into the input
-			if (e.which === 79) {
+			if (e.key === "o") {
 				// o
 				input_elem.dataset.inputting = "ooc";
 				input_elem.focus();
 				e.preventDefault();
-			} else if (e.which === 84) {
+			} else if (e.key === "t") {
 				// t
 				input_elem.dataset.inputting = "say";
 				input_elem.focus();
@@ -34,13 +34,13 @@ module.exports.now = function (client: { connection: { send: (arg0: string) => v
 			}
 		});
 		input_elem.addEventListener("keydown", (e) => {
-			if (e.which === 27) {
+			if (e.key === "Escape") {
 				// escape
 				input_elem.blur();
 				input_elem.dataset.inputting = null;
 				input_elem.value = "";
 				e.preventDefault();
-			} else if (e.which === 13) {
+			} else if (e.key === "Enter") {
 				// enter
 				if (client.connection && input_elem.dataset.inputting === "ooc") {
 					client.connection.send(
