@@ -75,11 +75,9 @@ module.exports = {
 			const slot: Record<string,any> = tslot;
 			if (slot.props.is_hand_slot) {continue;}
 			const item = slot.item;
-			if (has_component(item, "WearableItem")) {
-				if (item.c.WearableItem.body_parts_covered.includes(def_zone)) {
+			if (has_component(item, "WearableItem") && item.c.WearableItem.body_parts_covered.includes(def_zone)) {
 					protection += item.c.WearableItem.clothing_armor[d_type];
 				}
-			}
 		}
 		return protection;
 	},

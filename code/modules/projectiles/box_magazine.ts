@@ -129,14 +129,11 @@ class AmmoBox extends Component {
 			}
 			item.c.AmmoBox.update_icon();
 		}
-		if (has_component(item, "AmmoCasing")) {
-			if (this.give_round(item, replace_spent)) {
+		if (has_component(item, "AmmoCasing") && this.give_round(item, replace_spent)) {
 				item.loc = this.a;
 				num_loaded++;
-			}
 		}
-		if (num_loaded) {
-			if (!silent) {
+		if (num_loaded && !silent) {
 				to_chat`<span class='notice'>You load ${num_loaded} shell${
 					num_loaded === 1 ? "" : "s"
 				} into the ${this.a}!</span>`(user);
@@ -145,7 +142,6 @@ class AmmoBox extends Component {
 					volume: 0.6,
 					vary: true,
 				}).emit_from(user);
-			}
 		}
 		this.update_icon();
 		return prev();

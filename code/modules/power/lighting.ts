@@ -122,9 +122,7 @@ class LightFixture extends Component {
 
 	take_damage(prev: any, damage_amount: number) {
 		const dot = prev();
-		if (!this.a.destroyed) {
-			if (Math.random() < damage_amount * 0.05) {this.break_light_tube();}
-		}
+		if (!this.a.destroyed && Math.random() < damage_amount * 0.05) {this.break_light_tube();}
 		return dot;
 	}
 

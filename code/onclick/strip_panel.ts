@@ -11,9 +11,7 @@ class StripPanel extends Panel {
 	}
 
 	message_handler(msg: Record<string,any>) {
-		if (msg.slot) {
-			if (
-				has_component(this.bound_mob, "MobInventory") &&
+		if (msg.slot && has_component(this.bound_mob, "MobInventory") &&
 		!this.cached_covered[msg.slot]
 			) {
 				const slot_to_strip = this.bound_atom.c.MobInventory.slots[msg.slot];
@@ -30,7 +28,6 @@ class StripPanel extends Panel {
 						slot_to_strip
 					);}
 			}
-		}
 	}
 	opened() {
 		const layout = this.bound_atom.c.MobInventory.strip_layout;

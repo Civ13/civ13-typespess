@@ -71,27 +71,20 @@ class JobController {
 
 	give_random_job(mind: Record<string,any>) {
 		for (const job of _.shuffle(Object.values(this.jobs))) {
-			if (
-				job &&
-		job.id !== "nomad" &&
-		!job.departments.includes("command") &&
-		this.can_be_job(mind, job)
-			) {
-				if (this.assign_role(mind, job)) {return true;}
-			}
+			if (job && job.id !== "nomad" && !job.departments.includes("command") &&
+			this.can_be_job(mind, job) && this.assign_role(mind, job))
+				{return true;}
 		}
 		return false;
 	}
 
 	importModule(mod: Record<string,any>) {
-		if (mod) {
-			if (mod.jobs) {
+		if (mod && mod.jobs) {
 				for (const [id, tjob] of Object.entries(mod.jobs)) {
 					const job: any = tjob;
 					if (this.jobs[id]) {throw new Error(`Job '${id}' defined!`);}
 					this.jobs[id] = job;
 					job.id = id;
-				}
 			}
 		}
 	}

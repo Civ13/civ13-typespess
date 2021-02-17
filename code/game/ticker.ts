@@ -36,32 +36,30 @@ class GameTicker extends EventEmitter {
 	}
 	tick() {
 		if (this.busy) {return;}
-		if (this.game_state === "pregame") {
-			if (typeof this.start_at !== "undefined") {
-				const time_left = this.start_at - this.server.now();
-				/** if (time_left <= 30000 && !this.round_tip_sent) {this.send_tip_of_the_round();
-					this.round_tip_sent = true;
-				}*/
-				if (time_left <= 0) {
-					this.start_game().then(
-						(success) => {
-							if (!success) {
-								this.game_state = "pregame";
-								this.busy = false;
-								if (this.total_players)
-									{this.start_at =
-					this.server.now() +
-					3 * 1000;}
-								else {this.start_at = null;}
-							}
-						},
-						(err) => {
-							console.error(err);
-							// eslint-disable-next-line no-process-exit
-							process.exit(1); // something went horribly wrong, let's gtfo.
+		if (this.game_state === "pregame" && typeof this.start_at !== "undefined") {
+			const time_left = this.start_at - this.server.now();
+			/** if (time_left <= 30000 && !this.round_tip_sent) {this.send_tip_of_the_round();
+				this.round_tip_sent = true;
+			}*/
+			if (time_left <= 0) {
+				this.start_game().then(
+					(success) => {
+						if (!success) {
+							this.game_state = "pregame";
+							this.busy = false;
+							if (this.total_players)
+								{this.start_at =
+				this.server.now() +
+				3 * 1000;}
+							else {this.start_at = null;}
 						}
-					);
-				}
+					},
+					(err) => {
+						console.error(err);
+						// eslint-disable-next-line no-process-exit
+						process.exit(1); // something went horribly wrong, let's gtfo.
+					}
+				);
 			}
 		}
 	}

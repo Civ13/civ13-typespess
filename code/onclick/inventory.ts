@@ -536,16 +536,10 @@ class MobInventory extends Component {
 			// x
 			this.swap_hands();
 		}
-		if (e.which === 90) {
+		if (e.which === 90 && this.active_hand &&
+			this.slots[this.active_hand] && this.slots[this.active_hand].item) {
 			// z
-			if (
-				this.active_hand &&
-		this.slots[this.active_hand] &&
-		this.slots[this.active_hand].item
-			) {
-				this.slots[this.active_hand].item.c.Item.attack_self(this.a);
-			}
-		}
+			this.slots[this.active_hand].item.c.Item.attack_self(this.a);}
 		if (e.which === 81) {
 			// q
 			this.slots[this.active_hand].item = void 0;
@@ -554,7 +548,6 @@ class MobInventory extends Component {
 			this.throw_mode = !this.throw_mode;
 		}
 	}
-
 	get throw_mode() {
 		return !!this[_throw_mode];
 	}
@@ -727,23 +720,17 @@ class MobInventory extends Component {
 
 	mouse_dragged_to(e: Record<string,any>) {
 		const user = e.mob;
-		if (
-			e.from.atom === this.a &&
-	e.to.atom === user &&
-	(!has_component(e.mob, "Tangible") || e.mob.c.Tangible.can_reach(this.a))
+		if (e.from.atom === this.a && e.to.atom === user &&
+			(!has_component(e.mob, "Tangible") || e.mob.c.Tangible.can_reach(this.a)) &&
+			!user.c.Mob.get_panel(this.a, StripPanel) && user.c.Mob.can_read_panel(this.a, StripPanel)
 		) {
 			// time for some fun strippy times
-			if (
-				!user.c.Mob.get_panel(this.a, StripPanel) &&
-		user.c.Mob.can_read_panel(this.a, StripPanel)
-			) {
 				const panel = new StripPanel(user.c.Mob.client, {
 					title: `${this.a.name}`,
 				});
 				user.c.Mob.bind_panel(this.a, panel);
 				panel.open();
 			}
-		}
 	}
 
 	strip_panel_equip(mob: any, slot: Record<string,any>) {
@@ -1117,9 +1104,7 @@ class Slot extends EventEmitter {
 			this.mob.c.Eye.screen[`item_in_slot_${this.id}`] = void 0;
 			for (const tslot of Object.values(this.mob.c.MobInventory.slots)) {
 				const slot: Record<string,any> = tslot;
-				if (slot.props.requires_slot === this.id) {
-					if (slot.can_unequip()) {slot.item = null;}
-				}
+				if (slot.props.requires_slot === this.id && slot.can_unequip()) {slot.item = null;}
 			}
 		}
 		const olditem = this[_item];

@@ -46,10 +46,8 @@ class Destructible extends Component {
 			if (this.integrity_failure && old_integ > this.integrity_failure)
 				{this.obj_break(/*damage_flag*/);}
 			this.obj_destruction(/*damage_flag*/);
-		} else if (this.integrity_failure) {
-			if (this.obj_integrity <= this.integrity_failure)
+		} else if (this.integrity_failure && this.obj_integrity <= this.integrity_failure)
 				{this.obj_break(/*damage_flag*/);}
-		}
 	}
 
 	run_obj_armor(damage_amount: number, damage_type: string, damage_flag: string | number) {

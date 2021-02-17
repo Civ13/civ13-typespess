@@ -33,9 +33,7 @@ class FootItem extends Component {
 		});
 	}
 	mob_crossed(obj: Record<string,any>, movement: any) {
-		if (has_component(obj, "CleanableDecal")) {
-			if (
-				obj.c.CleanableDecal.footprint_amount &&
+		if (has_component(obj, "CleanableDecal") && obj.c.CleanableDecal.footprint_amount &&
 		obj.c.CleanableDecal.footprint_type
 			) {
 				const type = obj.c.CleanableDecal.footprint_type;
@@ -48,7 +46,6 @@ class FootItem extends Component {
 					this.footprint_amounts[type] =
 			(+this.footprint_amounts[type] || 0) + to_get;
 					obj.c.CleanableDecal.footprint_amount -= to_get;
-				}
 			}
 		}
 		if (has_component(obj, "FootprintsDecal") && movement.offset) {

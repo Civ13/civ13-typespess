@@ -221,11 +221,9 @@ class LivingMob extends Component {
 	}
 
 	client_changed(new_client: { key: any; }) {
-		if (new_client) {
-			if (!this.mind) {
+		if (new_client && !this.mind) {
 				const mind = new Mind(new_client.key);
 				mind.transfer_to(this.a);
-			}
 		}
 	}
 

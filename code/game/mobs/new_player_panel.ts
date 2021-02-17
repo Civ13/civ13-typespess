@@ -30,8 +30,7 @@ class NewPlayerPanel extends Panel {
 	}
 
 	message_handler(msg: Record<string,any>) {
-		if (msg.latejoin) {
-			if (!this.latejoin_panel) {
+		if (msg.latejoin && !this.latejoin_panel) {
 				const panel = new LatejoinPanel(this.client);
 				this.latejoin_panel = panel;
 				panel.on("close", () => {
@@ -39,7 +38,6 @@ class NewPlayerPanel extends Panel {
 				});
 				panel.open();
 			}
-		}
 		if (msg.setup_character) {
 			PreferencesPanel.open_for(this.client);
 		}
