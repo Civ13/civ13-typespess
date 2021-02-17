@@ -251,13 +251,11 @@ class Typespess extends EventEmitter {
 				let iter_tile = tile;
 				while (iter_tile.opacity && iter_tile.x >= base_x - dist) {
 					left = iter_tile.x;
-					//used_tiles.add(iter_tile);
 					iter_tile = iter_tile.get_step(8);
 				}
 				iter_tile = tile;
 				while (iter_tile.opacity && iter_tile.x <= base_x + dist) {
 					right = iter_tile.x;
-					//used_tiles.add(iter_tile);
 					iter_tile = iter_tile.get_step(4);
 				}
 				const vdir = tile.y > base_y ? 1 : -1;
@@ -437,7 +435,7 @@ class Typespess extends EventEmitter {
 		if (template.variants && template.variants.length) {
 			if (!variant_leaf_path) {variant_leaf_path = [];}
 			variant_leaf_path.length = template.variants.length;
-			for (let i = 0; i < template.variants.length; i++) {
+			for (const i of template.variants.length) {
 				const variant = template.variants[i];
 				if (variant.type === "single") {
 					let idx = variant.values.indexOf(variant_leaf_path[i]);

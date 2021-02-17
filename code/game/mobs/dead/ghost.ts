@@ -14,7 +14,6 @@ ghost_group.overrides.set("visible", true);
 class Ghost extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		//this.add_networked_var("ghost_orbit");
 		ghost_group.viewers.add(this.a);
 
 		this.a.c.Mob.on("client_changed", this.client_changed.bind(this));

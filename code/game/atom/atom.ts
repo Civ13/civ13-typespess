@@ -69,7 +69,7 @@ class Atom extends EventEmitter {
 			template && template.use_random_variant && !template.is_variant && template.variants && template.variants.length
 		) {
 			const new_variant_leaf_path = new Array(template.variants.length);
-			for (let i = 0; i < template.variants.length; i++) {
+			for (const i of template.variants.length) {
 				const variant = template.variants[i];
 				if (variant.type === "single") {
 					new_variant_leaf_path[i] =
@@ -407,13 +407,14 @@ class Atom extends EventEmitter {
 	[_changeloc](
 		newX: any,
 		newY: any,
-		newZ = this[_z],
+		newZ: any,
 		newLoc: Record<string,any>,
 		newBounds_x: any,
 		newBounds_y: any,
 		newBounds_width: any,
 		newBounds_height: any
 	) {
+		if (!newZ) {newZ = this[_z];}
 		if (
 			newLoc && !newLoc.is_base_loc && this[_loc] && !this[_loc].is_base_loc && newLoc === this[_loc]
 		)

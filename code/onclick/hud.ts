@@ -40,7 +40,8 @@ class MobHud extends Component {
 			{throw new TypeError("Template provided is missing an Alert component.");}
 		let thealert: { c: { Alert: { override_alerts: boolean; master: any; severity: any; timeout: number; mob_viewer: any; }; }; template: { vars: { icon_state: any; }; }; overlays: { alert_master: { icon: any; icon_state: any; color: any; }; }; icon_state: string; };
 		if (this.alerts[category]) {
-			[thealert, category, new_master, template, severity] = this.do_alerts(thealert, category, new_master, template, severity);
+			thealert = this.do_alerts(thealert, category, new_master, template, severity);
+			if (!thealert) {return false;}
 		} else {
 			thealert = new Atom(this.a.server, template);
 			thealert.c.Alert.override_alerts = override;
@@ -73,7 +74,7 @@ class MobHud extends Component {
 	}
 	do_alerts(thealert: any, category: any, new_master: any, template: any, severity: any): any {
 		thealert = this.alerts[category];
-		if (thealert.c.Alert.override_alerts) {return false;}
+		if (thealert.c.Alert.override_alerts) {return null;}
 		if (new_master && new_master !== thealert.c.Alert.master) {
 			console.warn(
 				`${this} threw alert ${category} with new_master ${new_master} while already having that alert with master ${thealert.c.Alert.master}`
@@ -93,9 +94,10 @@ class MobHud extends Component {
 				return this.throw_alert(...arguments);
 			} else {
 				//no need to update
-				return false;
+				return null;
 			}
 		}
+		return thealert;
 	}
 
 	clear_alert(category: string | number, clear_override = false) {

@@ -1,6 +1,6 @@
 
 pigeon:
-	components: ["Mob", "LivingMob", "mobAI", "SimpleMob"]
+	components: ["Mob", "LivingMob", "MobAI", "SimpleMob"]
 	tree_paths: ["mobs/animals/pigeon"]
 	vars:
 		components:
@@ -12,7 +12,7 @@ pigeon:
 			Examine:
 				desc: "A simple animal. Pretty generic."
 			
-			mobAI:
+			MobAI:
 				behaviour: "scared"
 			
 			Atom:

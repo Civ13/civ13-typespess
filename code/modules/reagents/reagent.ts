@@ -180,7 +180,6 @@ class ReagentReaction {
 		let single_result_volume = 0;
 		let req_volume = 0;
 		for (const v of Object.values(this.results)) {single_result_volume += v;}
-		//multiplier = (container.c.ReagentHolder.maximum_volume - container.c.ReagentHolder.total_volume) / single_result_volume;
 		for (const [reagent, req] of Object.entries(this.required_reagents)) {
 			multiplier = Math.min(
 				multiplier,

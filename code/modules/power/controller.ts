@@ -1,6 +1,5 @@
 export{};
 const _ = require("underscore");
-//const {stoplag} = require('typespess');
 
 class PowerController {
 	server: any;
@@ -28,15 +27,6 @@ class PowerController {
 					{this.powernets.delete(powernet);}
 				else {powernet.reset(dt);}
 			}
-			//			let ctr = 0;
-			//			for(let machine of this.server.atoms_for_components.MachineTick) {
-			//				machine.c.MachineTick.process(dt);
-			//				ctr++;
-			//				if(ctr > 50) {
-			//					ctr = 0;
-			//					await stoplag();
-			//				}
-			//			}
 		}
 		setTimeout(this.tick, 1000 - (this.server.now() - this.last_tick_time));
 	}

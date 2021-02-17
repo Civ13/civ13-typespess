@@ -21,11 +21,11 @@ class SimpleMob extends Component {
 		this.hunting = null;
 		this.a.directional = true;
 	}
-	get mobAI() {
-		return this.a.c.mobAI;
+	get MobAI() {
+		return this.a.c.MobAI;
 	}
-	set mobAI(val) {
-		this.a.c.mobAI = val;
+	set MobAI(val) {
+		this.a.c.MobAI = val;
 	}
 	update_stat() {
 		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {return;}
@@ -99,13 +99,11 @@ class SimpleMob extends Component {
 			{icodir = 3;}
 		else if (icodir === 8)
 			{icodir = 4;}
-		const overlay = { icon: `${this.a.icon}${this.base_icon_state}/${this.base_icon_state}-dir${icodir}.png` };
-
-		return overlay;
+		return { icon: `${this.a.icon}${this.base_icon_state}/${this.base_icon_state}-dir${icodir}.png` };
 	}
 }
 
-class mobAI extends Component {
+class MobAI extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.behaviour = "scared";
@@ -133,7 +131,6 @@ class mobAI extends Component {
 			}
 			else { //if target, run away
 					const target_dir = Typespess.dir_to(this.a.x - this.a.c.SimpleMob.target.x, this.a.y - this.a.c.SimpleMob.target.y);
-					//target_dir = Typespess.dir_reverse(target_dir); //apparently the target_dir is already the reverse dir
 					this.a.c.SimpleMob.move_ai(target_dir);
 				}
 		}
@@ -156,7 +153,7 @@ SimpleMob.template = {
 			Examine: {
 				desc: "A simple animal. Pretty generic.",
 			},
-			mobAI: {
+			MobAI: {
 				behaviour: "scared",
 			},
 		},
@@ -174,4 +171,4 @@ SimpleMob.template = {
 SimpleMob.depends = ["MobMovement", "Hearer", "Mob", "LivingMob", "Examine", "SpeechHearer"];
 SimpleMob.loadBefore = ["Mob", "LivingMob", "Examine", "SpeechHearer"];
 
-module.exports.components = { SimpleMob , mobAI };
+module.exports.components = { SimpleMob , MobAI };
