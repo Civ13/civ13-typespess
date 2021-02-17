@@ -2,6 +2,7 @@
 
 ![](https://i.imgur.com/napac0L.png)
 
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/civ13/civ13-typespess/Node.js%20CI)](https://github.com/Civ13/civ13-typespess/actions)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=alert_status)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Civ13/civ13-typespess)
 
