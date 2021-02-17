@@ -16,18 +16,18 @@
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Civ13_civ13-typespess&metric=ncloc)](https://sonarcloud.io/dashboard?id=Civ13_civ13-typespess)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/civ13/civ13-typespess)
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13-typespess)
-[![License](https://img.shields.io/github/license/civ13/civ13-typespess)](https://github.com/Civ13/civ13-typespess/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/civ13/civ13-typespess?color=blue)](https://github.com/Civ13/civ13-typespess/blob/master/LICENSE)
 
-Welcome! This is an attempt at creating a Civ13 remake using [TypeScript](https://www.typescriptlang.org/) and *JavaScript*.
+Welcome! This is an attempt at remaking Civ13, a BYOND game, using [TypeScript](https://www.typescriptlang.org/) and [Node.js](https://nodejs.org/). This is loosely forked from the [Bluespess](https://github.com/Bluespess) engine, a JavaScript remake of the tgstation codebase of SS13, also a BYOND game.
 
-Check the original Civ13 that uses BYOND and SS13 code here: https://github.com/civ13/civ13.
+Check the original Civ13 here: https://github.com/civ13/civ13.
 
 **Please read the [Contribution Guide](.github/CONTRIBUTING.md) page if you're willing to help! All help is appreciated!**
 
 ## Installing
 
 ### Windows
-1. Install node.js 12 or later from https://nodejs.org/en/download/
+1. Install node.js 14 or later from https://nodejs.org/en/download/
 2. Clone `https://github.com/civ13/civ13-typespess.git` using your preferred git software, or download the ZIP file from github and extract it (not recommended).
 3. Run `setup.bat` in the civ13-typespess/scripts folder.
 
@@ -42,7 +42,7 @@ Whenever you update to the latest code, run `setup.sh` again afterwards for the 
 
 ## Running
 
-Run `launch_server.bat` or  `launch_server.sh` in the civ13-typespess/scripts folder. To join the server connect to `localhost:1713` using a web browser.
+Run `launch_server.bat` or  `launch_server.sh` in the civ13-typespess/scripts folder. To join the server (locally) connect to `localhost:1713` using a web browser. To connect remotely, replace localhost with the IP address.
 
 If you have the database login system enabled (in **server.cson**), you also need to launch the **PouchDB** using `start_db.bat` or `start_db.sh`.
 
