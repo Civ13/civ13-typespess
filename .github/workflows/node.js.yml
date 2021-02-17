@@ -26,8 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: sudo sh scripts/setup.sh
-   
     - run: sudo sh scripts/launch_test.sh
 
 

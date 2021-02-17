@@ -1,12 +1,19 @@
 #!/bin/bash
 cd -
-echo npx tsc -p tsconfig.json
-cd maps
-echo node mapgen.js
-cd -
+apt install nodejs npm
+npm install
+echo Transpiling to JavaScript...
+npx tsc -p tsconfig.json
 cd client_src
-echo node preload_assets.js
-echo node compile.js
+echo Generating the preload list...
+node preload_assets.js
+echo Browserifying client...
+node compile.js
 cd -
-echo node index.js test
-
+cd maps
+echo Generating the map...
+node mapgen.js
+cd -
+echo Launching server...
+node index.js test
+echo All done.
