@@ -1,7 +1,7 @@
 #!/bin/bash
 cd -
 apt install nodejs npm
-npm install
+npm install --production
 echo Transpiling to JavaScript...
 npx tsc -p tsconfig.json
 cd client_src
