@@ -78,7 +78,7 @@ module.exports = {
 	// eslint-disable-next-line @typescript-eslint/ban-types
 	chain_func(func1: any, func2: any) {
 		if (typeof func2 === "undefined") {throw new Error("Chaining undefined function!");}
-		function chained_func(...args: any[]) {
+		function chained_func(this:any,...args: any[]) {
 			while (
 				chained_func[_chain_parent] &&
 		chained_func[_chain_parent][_chain_spliced]
