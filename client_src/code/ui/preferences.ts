@@ -311,112 +311,114 @@ class PreferencesPanel {
 			if (elem.value === msg.name_correction[0])
 				{elem.value = msg.name_correction[1];}
 		}
-		if (msg.job_preferences) {
-			this.job_preferences = msg.job_preferences;
-			if (msg.job_metas) {this.job_metas = msg.job_metas;}
-			// alright now we order the jobs.
-			const job_order = [...Object.keys(this.job_metas)];
-			job_order.sort((a, b) => {
-				const ameta = this.job_metas[a];
-				const bmeta = this.job_metas[b];
-				const department_diff = department_order.indexOf(ameta.departments[0] || "misc") - department_order.indexOf(bmeta.departments[0] || "misc");
-				if (department_diff !== 0) {return department_diff;}
-				if (
-					ameta.departments.includes("command") && !bmeta.departments.includes("command")
-				)
-					{return -1;}
-				if (
-					!ameta.departments.includes("command") && bmeta.departments.includes("command")
-				)
-					{return 1;}
-				return 0;
-			});
-			this.panel.$(".job-list").style.gridTemplateRows = `repeat(${Math.ceil(
-				job_order.length / 2
-			)}, auto)`;
-			let assistant_disable = false;
-			for (const key of job_order) {
-				const meta = this.job_metas[key];
-				const elem = document.createElement("div");
-				elem.style.minWidth = "280";
-				elem.style.backgroundColor = meta.selection_color;
-				elem.dataset.jobKey = key;
-				const setting = this.job_preferences[key];
-				elem.innerHTML = `
+		
+		if (msg.job_preferences) {this.handle_prefs(msg);}
+	}
+	handle_prefs(msg: Record<string,any>) {
+		this.job_preferences = msg.job_preferences;
+		if (msg.job_metas) {this.job_metas = msg.job_metas;}
+		// alright now we order the jobs.
+		const job_order = [...Object.keys(this.job_metas)];
+		job_order.sort((a, b) => {
+			const ameta = this.job_metas[a];
+			const bmeta = this.job_metas[b];
+			const department_diff = department_order.indexOf(ameta.departments[0] || "misc") - department_order.indexOf(bmeta.departments[0] || "misc");
+			if (department_diff !== 0) {return department_diff;}
+			if (
+				ameta.departments.includes("command") && !bmeta.departments.includes("command")
+			)
+				{return -1;}
+			if (
+				!ameta.departments.includes("command") && bmeta.departments.includes("command")
+			)
+				{return 1;}
+			return 0;
+		});
+		this.panel.$(".job-list").style.gridTemplateRows = `repeat(${Math.ceil(
+			job_order.length / 2
+		)}, auto)`;
+		for (const key of job_order) {
+			const meta = this.job_metas[key];
+			const elem = document.createElement("div");
+			elem.style.minWidth = "280";
+			elem.style.backgroundColor = meta.selection_color;
+			elem.dataset.jobKey = key;
+			const setting = this.job_preferences[key];
+			elem.innerHTML = `
 <div style='text-align:right;width:180;display:inline-block;padding-right:3px'>${meta.name}</div>
 <div style='display:inline-block' class='job-pref-button-container'></div>`;
-				const job_pref_button_container = elem.querySelector(
-					".job-pref-button-container"
-				);
-				const job_pref_button = document.createElement("div");
-				job_pref_button_container.appendChild(job_pref_button);
-				job_pref_button.classList.add(
-					"button",
-					"dropdown",
-					"white",
-					"job-selection-button"
-				);
-				if (key === "nomad") {
-					if (setting) {
-						assistant_disable = true;
-						job_pref_button.style.color = "green";
-						job_pref_button.textContent = "Yes";
-					} else {
-						job_pref_button.style.color = "red";
-						job_pref_button.textContent = "No";
-					}
-				} else {
-					if (assistant_disable) {
-						job_pref_button.style.visibility = "hidden";
-					}
-					job_pref_button.classList.add("affected-by-assistant");
-					job_pref_button.style.color = job_pref_colors[setting];
-					job_pref_button.textContent = job_pref_settings[setting];
-					job_pref_button.addEventListener("click", (e) => {
-						if (e.defaultPrevented) {return;}
-						const menu = document.createElement("div");
-						menu.classList.add("dropdown-content");
-						for (let i = 0; i <= 3; i++) {
-							const item = document.createElement("div");
-							item.classList.add("button", "dropdown-item", "white");
-							if (i === this.job_preferences[key]) {
-								item.classList.add("selected");
-							}
-							item.textContent = job_pref_settings[i];
-							item.style.color = job_pref_colors[i];
-							item.addEventListener("click", (e) => {
-								this.panel.send_message({ job_preferences: { [key]: i } });
-								e.preventDefault();
-								job_pref_button.textContent = job_pref_settings[i];
-								job_pref_button.style.color = job_pref_colors[i];
-								this.job_preferences[key] = i;
-								if (i === 3) {
-									for (const [otherjob, level] of Object.entries(
-										this.job_preferences
-									)) {
-										if (level === 3 && otherjob !== key) {
-											this.job_preferences[otherjob] = 2;
-											const otherelem = this.panel.$(
-												`.job-list div[data-job-key="${otherjob}"] .job-selection-button`
-											);
-											if (otherelem) {
-												otherelem.textContent = job_pref_settings[2];
-												otherelem.style.color = job_pref_colors[2];
-											}
-										}
-									}
-								}
-							});
-							menu.appendChild(item);
-						}
-						dropdown(job_pref_button, menu);
-					});
-				}
-				this.panel.$(".job-list").appendChild(elem);
-			}
+			const job_pref_button_container = elem.querySelector(
+				".job-pref-button-container"
+			);
+			const job_pref_button = document.createElement("div");
+			job_pref_button_container.appendChild(job_pref_button);
+			job_pref_button.classList.add(
+				"button",
+				"dropdown",
+				"white",
+				"job-selection-button"
+			);
+			if (key === "nomad") {this.do_nomad_job(key, setting, job_pref_button);}
+			else {this.do_other_job(key, setting, job_pref_button);}
+			this.panel.$(".job-list").appendChild(elem);
 		}
 	}
+	do_other_job(key: any, setting: any, job_pref_button: Record<string,any>) {
 
+		job_pref_button.style.visibility = "hidden";
+		job_pref_button.classList.add("affected-by-assistant");
+		job_pref_button.style.color = job_pref_colors[setting];
+		job_pref_button.textContent = job_pref_settings[setting];
+		job_pref_button.addEventListener("click", (e: any) => {
+			if (e.defaultPrevented) {return;}
+			const menu = document.createElement("div");
+			menu.classList.add("dropdown-content");
+			for (let i = 0; i <= 3; i++) {
+				const item = document.createElement("div");
+				item.classList.add("button", "dropdown-item", "white");
+				if (i === this.job_preferences[key]) {
+					item.classList.add("selected");
+				}
+				item.textContent = job_pref_settings[i];
+				item.style.color = job_pref_colors[i];
+				item.addEventListener("click", (e) => {
+					this.panel.send_message({ job_preferences: { [key]: i } });
+					e.preventDefault();
+					job_pref_button.textContent = job_pref_settings[i];
+					job_pref_button.style.color = job_pref_colors[i];
+					this.job_preferences[key] = i;
+					if (i === 3) {
+						for (const [otherjob, level] of Object.entries(
+							this.job_preferences
+						)) {
+							if (level === 3 && otherjob !== key) {
+								this.job_preferences[otherjob] = 2;
+								const otherelem = this.panel.$(
+									`.job-list div[data-job-key="${otherjob}"] .job-selection-button`
+								);
+								if (otherelem) {
+									otherelem.textContent = job_pref_settings[2];
+									otherelem.style.color = job_pref_colors[2];
+								}
+							}
+						}
+					}
+				});
+				menu.appendChild(item);
+			}
+			dropdown(job_pref_button, menu);
+		});
+	}
+
+	do_nomad_job(key: any, setting: any, job_pref_button: Record<string,any>) {
+		if (setting) {
+			job_pref_button.style.color = "green";
+			job_pref_button.textContent = "Yes";
+		} else {
+			job_pref_button.style.color = "red";
+			job_pref_button.textContent = "No";
+		}
+	}
 	update_previews() {
 		this.create_preview({ canvas: this.panel.$(".preview-down"), dir: 1 });
 		this.create_preview({ canvas: this.panel.$(".preview-right"), dir: 3 });
