@@ -492,7 +492,7 @@ class Mob extends Component {
 	 * @returns {boolean}
 	 * @abstract
 	 */
-	can_interact_with_panel(/*atom:any, panel:any, key:any*/) {return true;}
+	can_interact_with_panel(atom:any/*, panel:any, key:any*/) {return true;}
 
 	basic_panel_read_checks(panel: any) {
 		if (typeof panel === "object" && (panel.client !== this.client || (panel.bound_mob && panel.bound_mob !== this.a)))
@@ -537,7 +537,7 @@ class Mob extends Component {
 				this.basic_panel_read_checks(panel) &&
 				this.can_read_panel(atom, panel, key)
 			) {
-				panel.visibility_indicator = this.can_interact_with_panel(/*atom,panel,key*/)
+				panel.visibility_indicator = this.can_interact_with_panel(atom/*,panel,key*/)
 					? "can_interact"
 					: "can_see";
 				return;

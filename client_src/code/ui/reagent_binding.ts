@@ -32,55 +32,58 @@ class ReagentBinding {
 			}
 			obj = obj[split];
 		}
-		if (!obj) {
-			for (const e of this.elem.querySelectorAll(".has-container")) {
-				e.style.display = "none";
-			}
-			for (const e of this.elem.querySelectorAll(".has-no-container")) {
-				e.style.display = null;
-			}
-			for (const e of Object.values(this.reagent_elems)) {
-				if (!e) {
-					continue;
-				}
-				this.elem.querySelector(".reagents-list").removeChild(e);
-			}
-			this.reagent_elems = {};
-		} else {
-			for (const e of this.elem.querySelectorAll(".has-container")) {
-				e.style.display = null;
-			}
-			for (const e of this.elem.querySelectorAll(".has-no-container")) {
-				e.style.display = "none";
-			}
-
-			if (typeof obj.temperature !== "undefined") {
-				[...this.elem.querySelectorAll(".temperature")].forEach((item) => {
-					item.textContent = +obj.temperature.toFixed(1);
-				});
-			}
-			if (typeof obj.holder_name !== "undefined") {
-				[...this.elem.querySelectorAll(".holder-name")].forEach((item) => {
-					item.textContent = obj.holder_name;
-				});
-			}
-			if (typeof obj.total_volume !== "undefined") {
-				[...this.elem.querySelectorAll(".total-volume")].forEach((item) => {
-					item.textContent = obj.total_volume;
-				});
-			}
-			if (typeof obj.maximum_volume !== "undefined") {
-				[...this.elem.querySelectorAll(".maximum-volume")].forEach((item) => {
-					item.textContent = obj.maximum_volume;
-				});
-			}
-
-			if (obj.reagents) {
-				this.check_reagents(obj);
-			}
+		if (!obj) {this.handle_no_obj_message();}
+		else {this.handle_obj_message(obj);}
+	}
+	handle_no_obj_message() {
+		for (const e of this.elem.querySelectorAll(".has-container")) {
+			e.style.display = "none";
 		}
+		for (const e of this.elem.querySelectorAll(".has-no-container")) {
+			e.style.display = null;
+		}
+		for (const e of Object.values(this.reagent_elems)) {
+			if (!e) {
+				continue;
+			}
+			this.elem.querySelector(".reagents-list").removeChild(e);
+		}
+		this.reagent_elems = {};
 	}
 
+	handle_obj_message(obj: Record<string,any>) {
+		for (const e of this.elem.querySelectorAll(".has-container")) {
+			e.style.display = null;
+		}
+		for (const e of this.elem.querySelectorAll(".has-no-container")) {
+			e.style.display = "none";
+		}
+
+		if (typeof obj.temperature !== "undefined") {
+			[...this.elem.querySelectorAll(".temperature")].forEach((item) => {
+				item.textContent = +obj.temperature.toFixed(1);
+			});
+		}
+		if (typeof obj.holder_name !== "undefined") {
+			[...this.elem.querySelectorAll(".holder-name")].forEach((item) => {
+				item.textContent = obj.holder_name;
+			});
+		}
+		if (typeof obj.total_volume !== "undefined") {
+			[...this.elem.querySelectorAll(".total-volume")].forEach((item) => {
+				item.textContent = obj.total_volume;
+			});
+		}
+		if (typeof obj.maximum_volume !== "undefined") {
+			[...this.elem.querySelectorAll(".maximum-volume")].forEach((item) => {
+				item.textContent = obj.maximum_volume;
+			});
+		}
+
+		if (obj.reagents) {
+			this.check_reagents(obj);
+		}
+	}
 	check_reagents(obj: Record<string, any>) {
 		const reagents_list = this.elem.querySelector(".reagents-list");
 		for (const [key, robj] of Object.entries(obj.reagents)) {

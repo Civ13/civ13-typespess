@@ -38,10 +38,7 @@ class LivingMob extends Component {
 
 		this.a.c.Mob.on("client_changed", this.client_changed.bind(this));
 		this.a.c.Mob.can_interact_with_panel = this.can_interact_with_panel.bind(this);
-		this.a.c.Tangible.experience_pressure_difference = chain_func(
-			this.a.c.Tangible.experience_pressure_difference,
-			this.experience_pressure_difference.bind(this)
-		);
+
 		this.a.c.Tangible.attacked_by = this.attacked_by.bind(this);
 		this.a.c.Tangible.bullet_act = this.bullet_act.bind(this);
 		this.a.c.Tangible.on("throw_finished", this.throw_finished.bind(this));
@@ -272,21 +269,12 @@ class LivingMob extends Component {
 		return false;
 	}
 
-	can_interact_with_panel(target: {z: any; dim: any; x: number; y: number}) {
+	can_interact_with_panel(target: {dim: any; x: number; y: number, z: number;}) {
 		return (
 			target.z === this.a.z &&
 			target.dim === this.a.dim &&
 			Math.max(Math.abs(target.x - this.a.x), Math.abs(target.y - this.a.y)) < 1
 		);
-	}
-
-	experience_pressure_difference(prev: () => void, difference: number) {
-		new Sound(this.a.server, {
-			path: "sound/effects/space_wind.ogg",
-			vary: true,
-			volume: Math.min(difference / 100, 1),
-		}).play_to(this.a);
-		prev();
 	}
 
 	can_be_crossed(prev: () => any, mover: {density: number}, reason: string) {

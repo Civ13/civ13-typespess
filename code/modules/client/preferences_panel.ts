@@ -20,7 +20,7 @@ class PreferencesPanel extends Panel {
 		this.char_prefs = client.character_preferences || (client.character_preferences = new CharacterPreferences());
 	}
 
-	check_name(new_name: string, msg: any) {
+	check_name(new_name: string, msg: Record<string,any>) {
 		if (new_name) {
 			this.send_message({name_valid: true});
 			const corrected = CharacterPreferences.reject_bad_name(msg.char_prefs.name, {trim: false});

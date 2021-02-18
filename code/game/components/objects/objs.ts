@@ -12,24 +12,6 @@ class Tangible extends Component {
 		this.last_high_pressure_movement_air_cycle = 0;
 	}
 
-	experience_pressure_difference(difference: number, dx: number, dy: number, pressure_resistance_prob_delta = 0) {
-		const PROBABILITY_OFFSET = 25;
-		const PROBABILITY_BASE_PERCENT = 75;
-		if (this.anchored) {return false;}
-		if (this.last_high_pressure_movement_air_cycle < this.a.server.air_controller.ticknum) {
-			let move_prob = 100;
-			if (this.pressure_resistance > 0) {
-				move_prob = (difference / this.pressure_resistance) * PROBABILITY_BASE_PERCENT - PROBABILITY_OFFSET;
-			}
-			move_prob += pressure_resistance_prob_delta;
-			if (move_prob > PROBABILITY_OFFSET && Math.random() * 100 < move_prob) {
-				this.a.glide_size = 2;
-				this.a.move(dx, dy, "pressure_difference");
-				this.last_high_pressure_movement_air_cycle = this.a.server.air_controller.ticknum;
-			}
-		}
-	}
-
 	async throw_at({target = null, range = this.throw_range, speed = this.throw_speed}: Record<string, any> = {}) {
 		try {
 			if (!target) {return;}

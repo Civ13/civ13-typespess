@@ -15,7 +15,7 @@ class MachineWirePanel {
 		`;
 	}
 
-	handle_message(msg: any) {
+	handle_message(msg: Record<string,any>) {
 		if (msg.wires) {
 			for (const wire of msg.wires) {
 				if (!this.panel.$(`.wire-color-${wire.color}`)) {
@@ -39,6 +39,10 @@ class MachineWirePanel {
 				}
 			}
 		}
+
+		this.handle_other_messages(msg);
+	}
+	handle_other_messages(msg: Record<string,any>) {
 		if (typeof msg.item_type !== "undefined") {
 			this.item_type = msg.item_type;
 			for (const elem of this.panel.$$(".wire-cut-button")) {

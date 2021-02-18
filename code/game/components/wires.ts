@@ -167,7 +167,7 @@ class MachineWirePanel extends Panel {
 				this.bound_mob.c.MobInventory.removeListener("active_hand_item_changed", this.active_hand_item_changed);
 			}
 		});
-		this.on("message", (msg: any) => {
+		this.on("message", (msg: Record<string,any>) => {
 			let tool = null;
 			if (has_component(this.bound_mob, "MobInventory")) {
 				tool = this.bound_mob.c.MobInventory.slots[this.bound_mob.c.MobInventory.active_hand].item;

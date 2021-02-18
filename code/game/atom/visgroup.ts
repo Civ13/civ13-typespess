@@ -64,22 +64,19 @@ class VisibilityGroup {
 		 */
 		this.overrides = new Map();
 		this.overrides.set = chain_func(this.overrides.set, (prev: any, key: any) => {
-			const ret = prev();
 			this.override_changed(key);
-			return ret;
+			return prev();
 		});
 		this.overrides.delete = chain_func(this.overrides.delete, (prev: any, key: any) => {
-			const ret = prev();
 			this.override_changed(key);
-			return ret;
+			return prev();
 		});
 		this.overrides.clear = chain_func(this.overrides.clear, (prev: any) => {
 			const keys = [...this.overrides.keys()];
-			const ret = prev();
 			for (const key of keys) {
 				this.override_changed(key);
 			}
-			return ret;
+			return prev();
 		});
 	}
 
