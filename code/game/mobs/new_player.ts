@@ -1,9 +1,5 @@
 export{};
-const {
-	Component,
-	Sound,
-	Atom,
-} = require("./../../../code/game/server.js");
+const {Component, Sound, Atom} = require("./../../../code/game/server.js");
 const NewPlayerPanel = require("./new_player_panel.js");
 const _ = require("underscore");
 const CharacterPreferences = require("../../modules/client/character.js");
@@ -46,8 +42,9 @@ class NewPlayer extends Component {
 			});
 			this.lobby_music_sound.play_to(new_client);
 
-			if (!new_client.character_preferences)
-				{new_client.character_preferences = new CharacterPreferences();}
+			if (!new_client.character_preferences) {
+				new_client.character_preferences = new CharacterPreferences();
+			}
 		}
 	}
 
@@ -60,7 +57,7 @@ NewPlayer.loadBefore = ["Mob"];
 
 class SplashScreen extends Component.Networked {}
 
-module.exports.components = { NewPlayer, SplashScreen };
-module.exports.now = function (server: Record<string,any>) {
+module.exports.components = {NewPlayer, SplashScreen};
+module.exports.now = function (server: Record<string, any>) {
 	server.lobby_music = _.sample(["sound/music/words_through_the_sky.ogg"]);
 };

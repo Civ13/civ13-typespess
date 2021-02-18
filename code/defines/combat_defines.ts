@@ -1,4 +1,3 @@
-
 /*ALL DEFINES RELATED TO COMBAT GO HERE*/
 
 module.exports = {
@@ -135,5 +134,4 @@ module.exports = {
 	EXPLODE_DEVASTATE: 1,
 	EXPLODE_HEAVY: 2,
 	EXPLODE_LIGHT: 3,
-
 };

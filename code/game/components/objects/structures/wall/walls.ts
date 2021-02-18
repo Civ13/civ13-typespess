@@ -1,31 +1,15 @@
 export{};
 const layers = require("../../../../../defines/layers.js");
-const {
-	Component,
-	Sound,
-	has_component,
-	Atom,
-	chain_func,
-	to_chat,
-} = require("./../../../../../../code/game/server.js");
+const {Component, Sound, has_component, Atom, chain_func, to_chat} = require("./../../../../../../code/game/server.js");
 
 class Wall extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
-		this.a.c.Destructible.deconstruct = chain_func(
-			this.a.c.Destructible.deconstruct,
-			this.deconstruct.bind(this)
-		);
-		this.a.c.Examine.examine = chain_func(
-			this.a.c.Examine.examine,
-			this.examine.bind(this)
-		);
-		this.a.c.Tangible.ex_act = chain_func(
-			this.a.c.Tangible.ex_act,
-			this.ex_act.bind(this)
-		);
+		this.a.c.Destructible.deconstruct = chain_func(this.a.c.Destructible.deconstruct, this.deconstruct.bind(this));
+		this.a.c.Examine.examine = chain_func(this.a.c.Examine.examine, this.examine.bind(this));
+		this.a.c.Tangible.ex_act = chain_func(this.a.c.Tangible.ex_act, this.ex_act.bind(this));
 	}
 
 	examine(prev: any, user: any) {
@@ -34,13 +18,13 @@ class Wall extends Component {
 	}
 
 	deconstruction_hints(user: any) {
-		to_chat`<span class='notice'>The outer plating is <b>welded</b> firmly in place.</span>`(
-			user
-		);
+		to_chat`<span class='notice'>The outer plating is <b>welded</b> firmly in place.</span>`(user);
 	}
 
 	attack_by(prev: any, item: any, user: any) {
-		if (this.try_decon(item, user)) {return true;}
+		if (this.try_decon(item, user)) {
+			return true;
+		}
 		return prev();
 	}
 
@@ -48,23 +32,21 @@ class Wall extends Component {
 		if (has_component(item, "Tool")) {
 			if (item.c.Tool.can_use("WeldingTool", user)) {
 				item.c.Tool.used("WeldingTool");
-				to_chat`<span class='notice'>You begin slicing through the outer plating...</span>`(
-					user
-				);
+				to_chat`<span class='notice'>You begin slicing through the outer plating...</span>`(user);
 				user.c.MobInventory.do_after({
 					delay: this.slicing_duration * item.c.Tool.toolspeed,
 					target: this.a,
 				}).then((success: any) => {
-					if (!success) {return;}
+					if (!success) {
+						return;
+					}
 					new Sound(this.a.server, {
 						path: "sound/items/welder.ogg",
 						volume: 1,
 						vary: true,
 					}).emit_from(this.a);
 					this.a.c.Destructible.deconstruct(true);
-					to_chat`<span class='notice'>You remove the outer plating.</span>`(
-						user
-					);
+					to_chat`<span class='notice'>You remove the outer plating.</span>`(user);
 				});
 				return true;
 			}
@@ -72,7 +54,9 @@ class Wall extends Component {
 	}
 
 	deconstruct(prev: any) {
-		if (!this.a.loc) {return;}
+		if (!this.a.loc) {
+			return;
+		}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			const sheets = new Atom(this.a.server, this.sheet_type);
 			sheets.c.Stack.amount = this.sheet_amount;
@@ -132,4 +116,4 @@ Wall.template = {
 	},
 };
 
-module.exports.components = { Wall };
+module.exports.components = {Wall};

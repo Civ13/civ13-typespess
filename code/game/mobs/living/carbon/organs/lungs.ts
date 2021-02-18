@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 class OrganLungs extends Component {
 	constructor(atom: any, template: any) {
@@ -31,7 +31,7 @@ OrganLungs.template = {
 						max_dam: 10,
 						dam_type: "oxy",
 					},
-					co2: { min: null, max: 10, min_dam: 1, max_dam: 10, dam_type: "oxy" },
+					co2: {min: null, max: 10, min_dam: 1, max_dam: 10, dam_type: "oxy"},
 					plasma: {
 						min: null,
 						max: 0.05,
@@ -55,4 +55,4 @@ OrganLungs.template = {
 	},
 };
 
-module.exports.components = { OrganLungs };
+module.exports.components = {OrganLungs};

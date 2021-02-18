@@ -1,11 +1,5 @@
 export{};
-const {
-	Component,
-	has_component,
-	chain_func,
-	to_chat,
-	Atom,
-} = require("./../../../../../code/game/server.js");
+const {Component, has_component, chain_func, to_chat, Atom} = require("./../../../../../code/game/server.js");
 const pass_flags = require("../../../../defines/pass_flags.js");
 const layers = require("../../../../defines/layers.js");
 
@@ -14,24 +8,16 @@ class Rack extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
-		this.a.c.Examine.examine = chain_func(
-			this.a.c.Examine.examine,
-			this.examine.bind(this)
-		);
-		this.a.c.Destructible.deconstruct = chain_func(
-			this.a.c.Destructible.deconstruct,
-			this.deconstruct.bind(this)
-		);
+		this.a.c.Examine.examine = chain_func(this.a.c.Examine.examine, this.examine.bind(this));
+		this.a.c.Destructible.deconstruct = chain_func(this.a.c.Destructible.deconstruct, this.deconstruct.bind(this));
 	}
 
 	examine(prev: any, user: any) {
 		prev();
-		to_chat`<span class='notice'>It's held together by a couple of <b>bolts</b>.</span>`(
-			user
-		);
+		to_chat`<span class='notice'>It's held together by a couple of <b>bolts</b>.</span>`(user);
 	}
 
-	attack_by(prev: any, item: Record<string,any>, user: Record<string,any>, e: Record<string,any>) {
+	attack_by(prev: any, item: Record<string, any>, user: Record<string, any>, e: Record<string, any>) {
 		if (has_component(item, "Tool") && item.c.Tool.can_use("Wrench", user)) {
 			item.c.Tool.used("Wrench");
 			this.a.c.Destructible.deconstruct();
@@ -48,7 +34,9 @@ class Rack extends Component {
 	}
 
 	deconstruct() {
-		if (!this.a.loc) {return;}
+		if (!this.a.loc) {
+			return;
+		}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			this.a.density = 0;
 			// eslint-disable-next-line no-new
@@ -78,16 +66,16 @@ class RackParts extends Component {
 		}
 	}
 
-	attack_self(user: Record<string,any>) {
+	attack_self(user: Record<string, any>) {
 		to_chat`<span class='notice'>You start constructing a rack...</span>`(user);
-		user.c.MobInventory.do_after({ delay: 5000, target: this.a }).then(
-			(success: any) => {
-				if (!success) {return;}
-				// eslint-disable-next-line no-new
-				new Atom(this.a.server, "rack", user.loc);
-				this.a.destroy();
+		user.c.MobInventory.do_after({delay: 5000, target: this.a}).then((success: any) => {
+			if (!success) {
+				return;
 			}
-		);
+			// eslint-disable-next-line no-new
+			new Atom(this.a.server, "rack", user.loc);
+			this.a.destroy();
+		});
 	}
 }
 
@@ -128,7 +116,7 @@ RackParts.template = {
 				desc: "Parts of a rack.",
 			},
 			Item: {
-				materials: { metal: 2000 },
+				materials: {metal: 2000},
 			},
 		},
 		name: "rack parts",
@@ -137,4 +125,4 @@ RackParts.template = {
 	},
 };
 
-module.exports.components = { Rack, RackParts };
+module.exports.components = {Rack, RackParts};

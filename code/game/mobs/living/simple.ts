@@ -28,23 +28,27 @@ class SimpleMob extends Component {
 		this.a.c.MobAI = val;
 	}
 	update_stat() {
-		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {return;}
+		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {
+			return;
+		}
 		const health = this.a.c.LivingMob.health;
 		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
 			if (health <= 0) {
 				this.a.c.LivingMob.stat = combat_defines.DEAD;
-				if (this.base_icon_state.search("_dead") === -1)
-					{this.base_icon_state = `${this.base_icon_state}_dead`;this.update_overlays();}
+				if (this.base_icon_state.search("_dead") === -1) {
+					this.base_icon_state = `${this.base_icon_state}_dead`;
+					this.update_overlays();
+				}
 				return;
 			}
 			if (
 				this.a.c.LivingMob.get_damage("oxy") > 50 ||
-		health <= (this.a.c.LivingMob.max_health/3) ||
-		this.a.c.LivingMob.effects.Unconscious
+				health <= this.a.c.LivingMob.max_health / 3 ||
+				this.a.c.LivingMob.effects.Unconscious
 			) {
 				this.a.c.LivingMob.stat = combat_defines.UNCONSCIOUS;
 			} else {
-				if (health <= (this.a.c.LivingMob.max_health/2)) {
+				if (health <= this.a.c.LivingMob.max_health / 2) {
 					this.a.c.LivingMob.stat = combat_defines.SOFT_CRIT;
 				} else {
 					this.a.c.LivingMob.stat = combat_defines.CONSCIOUS;
@@ -52,13 +56,17 @@ class SimpleMob extends Component {
 			}
 		}
 	}
-	move_ai (movedir: number) {
-		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {return;}
-		if (!(movedir in [1,2,4,8])) {movedir = _.sample([1,2,4,8]);}
+	move_ai(movedir: number) {
+		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {
+			return;
+		}
+		if (!(movedir in [1, 2, 4, 8])) {
+			movedir = _.sample([1, 2, 4, 8]);
+		}
 		this.a.dir = movedir;
 		let newx = 0;
 		let newy = 0;
-		switch(movedir) {
+		switch (movedir) {
 			case Typespess.NORTH:
 				newy = 1;
 				break;
@@ -73,7 +81,7 @@ class SimpleMob extends Component {
 				break;
 		}
 		this.update_overlays();
-		this.a.move(newx,newy,"walking");
+		this.a.move(newx, newy, "walking");
 	}
 
 	update_overlays() {
@@ -85,21 +93,22 @@ class SimpleMob extends Component {
 		return;
 	}
 
-	remove_overlays(atom: Record<string,any>) {
+	remove_overlays(atom: Record<string, any>) {
 		atom.overlays["mob_icon"] = void 0;
 	}
 
 	get_main_overlay() {
 		let icodir = this.a.dir;
-		if (icodir === 1)
-			{icodir = 2;}
-		else if (icodir === 2)
-			{icodir = 1;}
-		else if (icodir === 4)
-			{icodir = 3;}
-		else if (icodir === 8)
-			{icodir = 4;}
-		return { icon: `${this.a.icon}${this.base_icon_state}/${this.base_icon_state}-dir${icodir}.png` };
+		if (icodir === 1) {
+			icodir = 2;
+		} else if (icodir === 2) {
+			icodir = 1;
+		} else if (icodir === 4) {
+			icodir = 3;
+		} else if (icodir === 8) {
+			icodir = 4;
+		}
+		return {icon: `${this.a.icon}${this.base_icon_state}/${this.base_icon_state}-dir${icodir}.png`};
 	}
 }
 
@@ -117,22 +126,29 @@ class MobAI extends Component {
 		this.behaviour_timeout = null;
 		this.behaviour_cycle_num++;
 		this.do_behaviour();
-		if (this.stat !== combat_defines.DEAD && !this.behaviour_timeout)
-			{this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 1000);}
+		if (this.stat !== combat_defines.DEAD && !this.behaviour_timeout) {
+			this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 1000);
+		}
 	}
 	do_behaviour() {
-		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {return;}
+		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {
+			return;
+		}
 		this.a.c.SimpleMob.update_overlays();
 		if (this.behaviour === "scared") {
-			if (!this.a.c.SimpleMob.target) { //if no target, wander
+			if (!this.a.c.SimpleMob.target) {
+				//if no target, wander
 				if (Math.random() <= 0.25) {
 					this.a.c.SimpleMob.move_ai(_.sample(randomDir));
 				}
+			} else {
+				//if target, run away
+				const target_dir = Typespess.dir_to(
+					this.a.x - this.a.c.SimpleMob.target.x,
+					this.a.y - this.a.c.SimpleMob.target.y
+				);
+				this.a.c.SimpleMob.move_ai(target_dir);
 			}
-			else { //if target, run away
-					const target_dir = Typespess.dir_to(this.a.x - this.a.c.SimpleMob.target.x, this.a.y - this.a.c.SimpleMob.target.y);
-					this.a.c.SimpleMob.move_ai(target_dir);
-				}
 		}
 	}
 }
@@ -171,4 +187,4 @@ SimpleMob.template = {
 SimpleMob.depends = ["MobMovement", "Hearer", "Mob", "LivingMob", "Examine", "SpeechHearer"];
 SimpleMob.loadBefore = ["Mob", "LivingMob", "Examine", "SpeechHearer"];
 
-module.exports.components = { SimpleMob , MobAI };
+module.exports.components = {SimpleMob, MobAI};

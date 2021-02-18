@@ -1,4 +1,3 @@
-
 const JobType = require("./job.js");
 
 module.exports.jobs = {};
@@ -17,7 +16,7 @@ const nomad_outfit = new JobType.Outfit({
 	jobtype: module.exports.jobs.nomad,
 	slots: {
 		iclothing: "loincloth",
-		rhand: "hatchet"
+		rhand: "hatchet",
 	},
 });
 module.exports.jobs.nomad.outfit = nomad_outfit;

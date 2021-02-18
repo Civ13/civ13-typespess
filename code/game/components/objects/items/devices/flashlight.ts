@@ -1,11 +1,11 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 const lighting = require("../../../../../defines/lighting.js");
 
 class Flashlight extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.c.ItemActions.add_action({ name: "Toggle Flashlight" });
+		this.a.c.ItemActions.add_action({name: "Toggle Flashlight"});
 		this.a.c.LightSource.on("enabled_changed", this.enabled_changed.bind(this));
 		this.a.c.Item.attack_self = this.attack_self.bind(this);
 		this.enabled_changed();
@@ -42,7 +42,7 @@ Flashlight.template = {
 			},
 		},
 		icon: "icons/obj/lighting/",
-		icon_state: "flashlight"
+		icon_state: "flashlight",
 	},
 };
 
@@ -98,4 +98,4 @@ Sun.template = {
 	},
 };
 
-module.exports.components = { Flashlight, DeskLamp, Sun };
+module.exports.components = {Flashlight, DeskLamp, Sun};

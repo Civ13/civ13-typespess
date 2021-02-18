@@ -1,5 +1,3 @@
-
-
 module.exports = {
 	TURF_LAYER: 2,
 	MID_TURF_LAYER: 2.02,

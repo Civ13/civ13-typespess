@@ -2,7 +2,7 @@ export{};
 class ReagentBinding {
 	elem: any;
 	panel: any;
-	reagent_elems: Record<string,any>;
+	reagent_elems: Record<string, any>;
 	path: any;
 	constructor(panel: any, elem: any, props: any) {
 		Object.assign(
@@ -25,9 +25,11 @@ class ReagentBinding {
 		}
 	}
 
-	message_handler(obj: Record<string,any>) {
+	message_handler(obj: Record<string, any>) {
 		for (const split of this.path.split(".")) {
-			if (!obj || !Object.prototype.hasOwnProperty.call(obj,split)) {return;}
+			if (!obj || !Object.prototype.hasOwnProperty.call(obj, split)) {
+				return;
+			}
 			obj = obj[split];
 		}
 		if (!obj) {
@@ -38,7 +40,9 @@ class ReagentBinding {
 				e.style.display = null;
 			}
 			for (const e of Object.values(this.reagent_elems)) {
-				if (!e) {continue;}
+				if (!e) {
+					continue;
+				}
 				this.elem.querySelector(".reagents-list").removeChild(e);
 			}
 			this.reagent_elems = {};
@@ -71,11 +75,13 @@ class ReagentBinding {
 				});
 			}
 
-			if (obj.reagents) {this.check_reagents(obj);}
+			if (obj.reagents) {
+				this.check_reagents(obj);
+			}
 		}
 	}
 
-	check_reagents(obj: Record<string,any>) {
+	check_reagents(obj: Record<string, any>) {
 		const reagents_list = this.elem.querySelector(".reagents-list");
 		for (const [key, robj] of Object.entries(obj.reagents)) {
 			if (!robj) {
@@ -100,10 +106,8 @@ class ReagentBinding {
 		elem.style.padding = "2px 0";
 		return elem;
 	}
-	update_entry(id: any, obj: Record<string,any>, elem: any) {
-		elem.textContent = `${+obj.volume.toFixed(2)} unit${
-			obj.volume === 1 ? "" : "s"
-		} of ${obj.name}`;
+	update_entry(id: any, obj: Record<string, any>, elem: any) {
+		elem.textContent = `${+obj.volume.toFixed(2)} unit${obj.volume === 1 ? "" : "s"} of ${obj.name}`;
 	}
 
 	close() {

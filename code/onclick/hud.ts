@@ -1,10 +1,5 @@
 export{};
-const {
-	Component,
-	Atom,
-	has_component,
-	is_atom,
-} = require("./../../code/game/server.js");
+const {Component, Atom, has_component, is_atom} = require("./../../code/game/server.js");
 
 class MobHud extends Component {
 	constructor(atom: any, template: any) {
@@ -18,7 +13,7 @@ class MobHud extends Component {
 	throw_alert(
 		category: string | number = null,
 		template: any = null,
-		{ severity, new_master, override = false }: Record<string,any> = {}
+		{severity, new_master, override = false}: Record<string, any> = {}
 	): boolean {
 		/* Proc to create or update an alert. Returns the alert if the alert is new or updated, 0 if it was thrown already
 		category is a text string. Each mob may only have one alert per category; the previous one will be replaced
@@ -29,23 +24,39 @@ class MobHud extends Component {
 		Clicks are forwarded to master
 		Override makes it so the alert is not replaced until cleared by a clear_alert with clear_override, and it's used for hallucinations.
 		*/
-		if (typeof severity === "undefined") {severity = "";}
-		if (!category) {return false;}
-		if (typeof template === "string")
-			{template = this.a.server.templates[template];}
-		if (!template || typeof template !== "object")
-			{throw new TypeError(`${template} is not a valid template`);}
+		if (typeof severity === "undefined") {
+			severity = "";
+		}
+		if (!category) {
+			return false;
+		}
+		if (typeof template === "string") {
+			template = this.a.server.templates[template];
+		}
+		if (!template || typeof template !== "object") {
+			throw new TypeError(`${template} is not a valid template`);
+		}
 		this.a.server.process_template(template);
-		if (!template.components.includes("Alert"))
-			{throw new TypeError("Template provided is missing an Alert component.");}
-		let thealert: { c: { Alert: { override_alerts: boolean; master: any; severity: any; timeout: number; mob_viewer: any; }; }; template: { vars: { icon_state: any; }; }; overlays: { alert_master: { icon: any; icon_state: any; color: any; }; }; icon_state: string; };
+		if (!template.components.includes("Alert")) {
+			throw new TypeError("Template provided is missing an Alert component.");
+		}
+		let thealert: {
+			c: {Alert: {override_alerts: boolean; master: any; severity: any; timeout: number; mob_viewer: any}};
+			template: {vars: {icon_state: any}};
+			overlays: {alert_master: {icon: any; icon_state: any; color: any}};
+			icon_state: string;
+		};
 		if (this.alerts[category]) {
 			thealert = this.do_alerts(thealert, category, new_master, template, severity);
-			if (!thealert) {return false;}
+			if (!thealert) {
+				return false;
+			}
 		} else {
 			thealert = new Atom(this.a.server, template);
 			thealert.c.Alert.override_alerts = override;
-			if (override) {thealert.c.Alert.timeout = 0;}
+			if (override) {
+				thealert.c.Alert.timeout = 0;
+			}
 		}
 		thealert.c.Alert.mob_viewer = this.atom;
 
@@ -67,14 +78,17 @@ class MobHud extends Component {
 		// TODO Animation, see code/_onclick/hud/alert.dm line 64
 		if (thealert.c.Alert.timeout) {
 			setTimeout(() => {
-				if (thealert.c.Alert.timeout && this.alerts[category] === thealert)
-					{this.clear_alert(category);}
+				if (thealert.c.Alert.timeout && this.alerts[category] === thealert) {
+					this.clear_alert(category);
+				}
 			}, thealert.c.Alert.timeout);
 		}
 	}
 	do_alerts(thealert: any, category: any, new_master: any, template: any, severity: any): any {
 		thealert = this.alerts[category];
-		if (thealert.c.Alert.override_alerts) {return null;}
+		if (thealert.c.Alert.override_alerts) {
+			return null;
+		}
 		if (new_master && new_master !== thealert.c.Alert.master) {
 			console.warn(
 				`${this} threw alert ${category} with new_master ${new_master} while already having that alert with master ${thealert.c.Alert.master}`
@@ -102,25 +116,35 @@ class MobHud extends Component {
 
 	clear_alert(category: string | number, clear_override = false) {
 		const alert = this.alerts[category];
-		if (!alert) {return false;}
-		if (alert.c.Alert.override_alerts && !clear_override) {return false;}
+		if (!alert) {
+			return false;
+		}
+		if (alert.c.Alert.override_alerts && !clear_override) {
+			return false;
+		}
 
 		delete this.alerts[category];
 		this.reorganize_alerts();
 		//this.c.Eye.screen[`alert_${category}`] = void 0;
 		// TODO: destroy the alert;
 	}
-	_onclick() {return false;}
+	_onclick() {
+		return false;
+	}
 	reorganize_alerts() {
 		let alert_idx = 0;
 		for (const alertname in this.alerts) {
-			if (!Object.prototype.hasOwnProperty.call(this.alerts,alertname)) {continue;}
+			if (!Object.prototype.hasOwnProperty.call(this.alerts, alertname)) {
+				continue;
+			}
 			const alert = this.alerts[alertname];
 			alert.screen_loc_x = 13.875;
 			alert.screen_loc_y = 12.84375 - 1.0625 * alert_idx;
 			this.a.c.Eye.screen[`ui_alert${alert_idx}`] = alert;
 			alert_idx++;
-			if (alert_idx >= 5) {break;}
+			if (alert_idx >= 5) {
+				break;
+			}
 		}
 		for (; alert_idx < 5; alert_idx++) {
 			this.a.c.Eye.screen[`ui_alert${alert_idx}`] = void 0;
@@ -139,8 +163,9 @@ class MobHud extends Component {
 		}
 	}
 	update_buttons() {
-		for (const button of this.action_buttons.values())
-			{button.c.ActionButton.update_icon();}
+		for (const button of this.action_buttons.values()) {
+			button.c.ActionButton.update_icon();
+		}
 	}
 }
 
@@ -157,8 +182,7 @@ Tooltip.template = {
 	vars: {
 		components: {
 			Tooltip: {
-				desc:
-		"Something seems to have gone wrong with this tooltip, so report this bug please",
+				desc: "Something seems to have gone wrong with this tooltip, so report this bug please",
 				theme: "",
 			},
 		},
@@ -173,8 +197,9 @@ class Alert extends Component {
 	}
 
 	clicked() {
-		if (this.resist_alert && this.mob_viewer && has_component(this.mob_viewer, "MobInteract"))
-			{this.mob_viewer.c.MobInteract.resist();}
+		if (this.resist_alert && this.mob_viewer && has_component(this.mob_viewer, "MobInteract")) {
+			this.mob_viewer.c.MobInteract.resist();
+		}
 	}
 }
 Alert.template = {
@@ -218,4 +243,4 @@ GridDisplay.template = {
 	},
 };
 
-module.exports.components = { Alert, MobHud, GridDisplay, Tooltip };
+module.exports.components = {Alert, MobHud, GridDisplay, Tooltip};

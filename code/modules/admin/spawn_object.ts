@@ -1,15 +1,10 @@
 export{};
-const {
-	Panel,
-	Atom,
-	has_component,
-	to_chat,
-} = require("./../../../code/game/server.js");
+const {Panel, Atom, has_component, to_chat} = require("./../../../code/game/server.js");
 
 const _has_received_templates = Symbol("_has_received_templates");
 
 class SpawnObjectPanel extends Panel {
-	constructor(client: Record<string,any>) {
+	constructor(client: Record<string, any>) {
 		super(client, {
 			width: 400,
 			height: 600,
@@ -20,7 +15,7 @@ class SpawnObjectPanel extends Panel {
 		this.on("open", this.opened.bind(this));
 		this.on("close", this.closed.bind(this));
 	}
-	message_handler(msg: Record<string,any>) {
+	message_handler(msg: Record<string, any>) {
 		if (msg.spawn) {
 			const obj = new Atom(this.client.server, msg.spawn);
 			const mob = this.client.mob;
@@ -31,7 +26,9 @@ class SpawnObjectPanel extends Panel {
 			if (has_component(obj, "Item") && has_component(mob, "MobInventory")) {
 				mob.c.MobInventory.put_in_hands(obj);
 			}
-			if (!obj.loc) {obj.loc = mob.fine_loc;}
+			if (!obj.loc) {
+				obj.loc = mob.fine_loc;
+			}
 		}
 	}
 	opened() {
@@ -41,7 +38,7 @@ class SpawnObjectPanel extends Panel {
 			for (const template of Object.values(this.client.server.templates)) {
 				this.client.server.process_template(template);
 			}
-			this.send_message({ templates: this.client.server.templates });
+			this.send_message({templates: this.client.server.templates});
 		}
 	}
 	closed() {
@@ -56,8 +53,10 @@ module.exports.admin_tools = {
 		name: "Spawn Object",
 		perm_required: "spawn.atom",
 		buttons: {
-			Open: (client: Record<string,any>) => {
-				if (opened_panels.get(client)) {return;}
+			Open: (client: Record<string, any>) => {
+				if (opened_panels.get(client)) {
+					return;
+				}
 				const panel = new SpawnObjectPanel(client);
 				panel.open();
 			},

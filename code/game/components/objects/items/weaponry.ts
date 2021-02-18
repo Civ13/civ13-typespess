@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../code/game/server.js");
+const {Component} = require("./../../../../../code/game/server.js");
 
 class BaseballBat extends Component {
 	constructor(atom: any, template: any) {
@@ -34,5 +34,4 @@ BaseballBat.template = {
 	},
 };
 
-
-module.exports.components = { BaseballBat };
+module.exports.components = {BaseballBat};

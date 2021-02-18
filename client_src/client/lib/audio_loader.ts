@@ -1,6 +1,8 @@
-function get_audio_buffer(client: Record<string,any>, url: string) {
+function get_audio_buffer(client: Record<string, any>, url: string) {
 	const old_buf = client.audio_buffers.get(url);
-	if (old_buf) {return old_buf;}
+	if (old_buf) {
+		return old_buf;
+	}
 
 	const promise = new Promise((resolve, reject) => {
 		const xhr = new XMLHttpRequest();

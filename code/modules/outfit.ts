@@ -1,8 +1,8 @@
 export{};
-const { Atom, has_component } = require("./../../code/game/server.js");
+const {Atom, has_component} = require("./../../code/game/server.js");
 
 class Outfit {
-	constructor(obj: Record<string,any>) {
+	constructor(obj: Record<string, any>) {
 		Object.assign(
 			this,
 			{
@@ -16,40 +16,41 @@ class Outfit {
 		);
 	}
 
-	pre_equip() {return;}
-	post_equip() {return;}
+	pre_equip() {
+		return;
+	}
+	post_equip() {
+		return;
+	}
 
-	equip(target: Record<string,any>, visuals_only = false) {
+	equip(target: Record<string, any>, visuals_only = false) {
 		const clone = Object.create(this);
 		Object.assign(clone, JSON.parse(JSON.stringify(this)));
 		clone.pre_equip(target, visuals_only);
 
 		if (has_component(target, "MobInventory")) {
-			if (clone.slots.iclothing && target.c.MobInventory.slots.iclothing)
-				{target.c.MobInventory.slots.iclothing.equip_or_del(
-					new Atom(target.server, clone.slots.iclothing)
-				);}
-			if (clone.slots.oclothing && target.c.MobInventory.slots.oclothing)
-				{target.c.MobInventory.slots.oclothing.equip_or_del(
-					new Atom(target.server, clone.slots.oclothing)
-				);}
+			if (clone.slots.iclothing && target.c.MobInventory.slots.iclothing) {
+				target.c.MobInventory.slots.iclothing.equip_or_del(new Atom(target.server, clone.slots.iclothing));
+			}
+			if (clone.slots.oclothing && target.c.MobInventory.slots.oclothing) {
+				target.c.MobInventory.slots.oclothing.equip_or_del(new Atom(target.server, clone.slots.oclothing));
+			}
 
 			for (const [id, tslot] of Object.entries(target.c.MobInventory.slots)) {
-				const slot: Record<string,any> = tslot;
-				if (id === "iclothing" || id === "oclothing") {continue;}
-				if (clone.slots[id])
-					{slot.equip_or_del(new Atom(target.server, clone.slots[id]));}
+				const slot: Record<string, any> = tslot;
+				if (id === "iclothing" || id === "oclothing") {
+					continue;
+				}
+				if (clone.slots[id]) {
+					slot.equip_or_del(new Atom(target.server, clone.slots[id]));
+				}
 			}
 
 			if (!visuals_only) {
-				const backpack =
-		target.c.MobInventory.slots.back &&
-		target.c.MobInventory.slots.back.item;
+				const backpack = target.c.MobInventory.slots.back && target.c.MobInventory.slots.back.item;
 				if (clone.backpack_contents && has_component(backpack, "StorageItem")) {
 					for (const item of clone.backpack_contents) {
-						backpack.c.StorageItem.insert_item_or_del(
-							new Atom(target.server, item)
-						);
+						backpack.c.StorageItem.insert_item_or_del(new Atom(target.server, item));
 					}
 				}
 			}

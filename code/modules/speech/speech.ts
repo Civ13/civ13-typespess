@@ -1,62 +1,55 @@
 export{};
-const {
-	Component,
-	has_component,
-	format_html,
-	audible_message,
-	to_chat,
-} = require("./../../../code/game/server.js");
+const {Component, has_component, format_html, audible_message, to_chat} = require("./../../../code/game/server.js");
 
 class SpeechEmitter extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		if (has_component(this.a, "Mob")) {
-			this.a.c.Mob.on("message", (obj: { say_message: string; }) => {
+			this.a.c.Mob.on("message", (obj: {say_message: string}) => {
 				if (obj.say_message) {
 					const client = this.a.c.Mob.client;
-					if (
-						client.last_say_message &&
-			this.a.server.now() < client.last_say_message + 300
-					) {
+					if (client.last_say_message && this.a.server.now() < client.last_say_message + 300) {
 						to_chat`You're doing that too fast!`(client);
 					} else {
 						client.last_say_message = this.a.server.now();
 						const msg = ("" + obj.say_message).substring(0, 256);
-						const message_obj = this.build_message({ text: msg });
+						const message_obj = this.build_message({text: msg});
 						this.emit_message(message_obj);
 					}
 				}
 			});
 		}
 	}
-	build_message({ text = "" } = {}) {
-		const msg = new SpeechMessage({ message: text, speaker: this.a });
-		if (!msg.message || !msg.message.length) {return null;}
+	build_message({text = ""} = {}) {
+		const msg = new SpeechMessage({message: text, speaker: this.a});
+		if (!msg.message || !msg.message.length) {
+			return null;
+		}
 		return msg;
 	}
 	emit_message(message: SpeechMessage) {
-		if (!message) {return;}
+		if (!message) {
+			return;
+		}
 		const hearers = new Set();
 		for (const loc of this.a.base_mover.partial_locs()) {
-			for (const hearer of loc.hearers)
-				{if (has_component(hearer, "SpeechHearer")) {hearers.add(hearer);}}
+			for (const hearer of loc.hearers) {
+				if (has_component(hearer, "SpeechHearer")) {
+					hearers.add(hearer);
+				}
+			}
 		}
 		for (const thearer of hearers) {
-			const hearer: Record<string,any> = thearer;
-			if (
-				Math.max(
-					Math.abs(hearer.x - this.a.x),
-					Math.abs(hearer.y - this.a.y)
-				) <= message.range
-			)
-				{hearer.c.SpeechHearer.hear_message(message, this.a);}
+			const hearer: Record<string, any> = thearer;
+			if (Math.max(Math.abs(hearer.x - this.a.x), Math.abs(hearer.y - this.a.y)) <= message.range) {
+				hearer.c.SpeechHearer.hear_message(message, this.a);
+			}
 		}
 		if (message.mode === "radio" && !message.radio_freq) {
 			// TODO make this less hacky
 			const new_message = message.clone();
 			new_message.radio_freq = `1459`;
-			for (const target of this.a.server.atoms_for_components["SpeechHearer"] ||
-		[]) {
+			for (const target of this.a.server.atoms_for_components["SpeechHearer"] || []) {
 				target.c.SpeechHearer.hear_message(new_message, target);
 			}
 		}
@@ -86,7 +79,7 @@ class SpeechMessage {
 	speaker: any;
 	range: number;
 	radio_freq: string;
-	constructor(obj: Record<string,any>) {
+	constructor(obj: Record<string, any>) {
 		Object.assign(
 			this,
 			{
@@ -104,7 +97,7 @@ class SpeechMessage {
 	}
 }
 
-const freqtospan: Record<string,string> = {
+const freqtospan: Record<string, string> = {
 	"1351": "sciradio",
 	"1355": "medradio",
 	"1357": "engradio",
@@ -123,27 +116,30 @@ class SpeechHearer extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 	}
-	hear_message(message: { speaker: { c: { SpeechEmitter: { verb_say: any; }; }; }; radio_freq: any; }, emitter: any) {
+	hear_message(message: {speaker: {c: {SpeechEmitter: {verb_say: any}}}; radio_freq: any}, emitter: any) {
 		let deaf_message = null;
 		if (message.speaker !== this.a) {
-			if (!message.radio_freq)
-				{deaf_message = format_html`<span class='name'>${message.speaker}</span> ${message.speaker.c.SpeechEmitter.verb_say} something but you cannot hear them.`;}
+			if (!message.radio_freq) {
+				deaf_message = format_html`<span class='name'>${message.speaker}</span> ${message.speaker.c.SpeechEmitter.verb_say} something but you cannot hear them.`;
+			}
 		} else {
 			deaf_message = "<span class='notice'>You can't hear yourself!</span>";
 		}
 
 		const composed = this.compose_message(message);
-		if (!composed) {return;}
+		if (!composed) {
+			return;
+		}
 		const shown_message = audible_message(composed);
-		if (deaf_message) {shown_message.deaf(deaf_message);}
+		if (deaf_message) {
+			shown_message.deaf(deaf_message);
+		}
 		shown_message.show_directly_to(this.a, emitter);
 	}
 
-	compose_message(message: { speaker: any; radio_freq: string; message?: any; }) {
+	compose_message(message: {speaker: any; radio_freq: string; message?: any}) {
 		const spanpart1 = `<span class='${
-			message.radio_freq
-				? freqtospan[message.radio_freq] || "radio"
-				: "game say"
+			message.radio_freq ? freqtospan[message.radio_freq] || "radio" : "game say"
 		}'>`;
 		const spanpart2 = "<span class='name'>";
 		const freqpart = message.radio_freq ? "[Common]" : "";
@@ -155,4 +151,4 @@ class SpeechHearer extends Component {
 	}
 }
 
-module.exports.components = { SpeechEmitter, SpeechHearer };
+module.exports.components = {SpeechEmitter, SpeechHearer};

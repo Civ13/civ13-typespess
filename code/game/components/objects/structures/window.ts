@@ -1,12 +1,5 @@
 export{};
-const {
-	Component,
-	Atom,
-	Sound,
-	has_component,
-	chain_func,
-	to_chat,
-} = require("./../../../../../code/game/server.js");
+const {Component, Atom, Sound, has_component, chain_func, to_chat} = require("./../../../../../code/game/server.js");
 const layers = require("../../../../defines/layers.js");
 const sounds = require("../../../../defines/sounds.js");
 const pass_flags = require("../../../../defines/pass_flags.js");
@@ -14,15 +7,12 @@ const pass_flags = require("../../../../defines/pass_flags.js");
 const _state: any = Symbol("_state");
 
 class Window extends Component {
-	constructor(atom:any, template:any) {
+	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.c.Destructible.play_attack_sound = this.play_attack_sound.bind(this);
 		this.a.c.Destructible.deconstruct = this.deconstruct.bind(this);
-		this.a.c.Destructible.take_damage = chain_func(
-			this.a.c.Destructible.take_damage,
-			this.take_damage.bind(this)
-		);
+		this.a.c.Destructible.take_damage = chain_func(this.a.c.Destructible.take_damage, this.take_damage.bind(this));
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 	}
 
@@ -33,18 +23,19 @@ class Window extends Component {
 
 	play_attack_sound(damage_amount: number, damage_type = "brute") {
 		if (damage_type === "brute") {
-			if (damage_amount)
-				{new Sound(this.a.server, {
+			if (damage_amount) {
+				new Sound(this.a.server, {
 					path: "sound/effects/Glasshit.ogg",
 					volume: 0.75,
 					vary: true,
-				}).emit_from(this.a);}
-			else
-				{new Sound(this.a.server, {
+				}).emit_from(this.a);
+			} else {
+				new Sound(this.a.server, {
 					path: "sound/weapons/tap.ogg",
 					volume: 0.75,
 					vary: true,
-				}).emit_from(this.a);}
+				}).emit_from(this.a);
+			}
 		} else if (damage_type === "burn") {
 			new Sound(this.a.server, {
 				path: "sound/items/Welder.ogg",
@@ -54,19 +45,21 @@ class Window extends Component {
 	}
 
 	update_damage_overlay() {
-		if (this.a.destroyed) {return;}
-		let ratio =
-	this.a.c.Destructible.obj_integrity / this.a.c.Destructible.max_integrity;
+		if (this.a.destroyed) {
+			return;
+		}
+		let ratio = this.a.c.Destructible.obj_integrity / this.a.c.Destructible.max_integrity;
 		ratio = Math.ceil(ratio * 4) * 25;
 
-		if (ratio > 75 || !this.enable_damage_overlay)
-			{this.a.overlays.window_damage = null;}
-		else
-			{this.a.overlays.window_damage = {
+		if (ratio > 75 || !this.enable_damage_overlay) {
+			this.a.overlays.window_damage = null;
+		} else {
+			this.a.overlays.window_damage = {
 				icon: "icons/obj/windows/",
 				icon_state: `damage${ratio}`,
 				overlay_layer: -1,
-			};}
+			};
+		}
 	}
 
 	make_debris() {
@@ -77,7 +70,9 @@ class Window extends Component {
 	}
 
 	deconstruct(disassembled = true) {
-		if (this.a.destroyed) {return;}
+		if (this.a.destroyed) {
+			return;
+		}
 		if (disassembled) {
 			const glass = new Atom(this.a.server, this.glass_type);
 			glass.c.Stack.amount = this.glass_amount;
@@ -99,7 +94,9 @@ class Window extends Component {
 		return this[_state];
 	}
 	set state(val) {
-		if (val === this[_state]) {return;}
+		if (val === this[_state]) {
+			return;
+		}
 		this[_state] = val;
 		if (val === "unscrewed_from_floor") {
 			this.a.c.Tangible.anchored = false;
@@ -169,10 +166,7 @@ class ReinforcedWindow extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
-		this.a.c.Window.make_debris = chain_func(
-			this.a.c.Window.make_debris,
-			this.make_debris.bind(this)
-		);
+		this.a.c.Window.make_debris = chain_func(this.a.c.Window.make_debris, this.make_debris.bind(this));
 	}
 
 	attack_by(prev: any, item: any, user: any) {
@@ -180,70 +174,62 @@ class ReinforcedWindow extends Component {
 			if (this.a.c.Window.state === "screwed_to_floor") {
 				if (item.c.Tool.can_use("Crowbar", user)) {
 					item.c.Tool.used("Crowbar");
-					to_chat`<span class='notice'>You begin to lever the window into the frame...</span>`(
-						user
-					);
+					to_chat`<span class='notice'>You begin to lever the window into the frame...</span>`(user);
 					user.c.MobInventory.do_after({
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success: any) => {
-						if (!success || this.a.c.Window.state !== "screwed_to_floor") {return;}
+						if (!success || this.a.c.Window.state !== "screwed_to_floor") {
+							return;
+						}
 						this.a.c.Window.state = "in_frame";
-						to_chat`<span class='notice'>You pry the window into the frame.</span>`(
-							user
-						);
+						to_chat`<span class='notice'>You pry the window into the frame.</span>`(user);
 					});
 					return true;
 				}
 			} else if (this.a.c.Window.state === "in_frame") {
 				if (item.c.Tool.can_use("Crowbar", user)) {
 					item.c.Tool.used("Crowbar");
-					to_chat`<span class='notice'>You begin to lever the window out of the frame...</span>`(
-						user
-					);
+					to_chat`<span class='notice'>You begin to lever the window out of the frame...</span>`(user);
 					user.c.MobInventory.do_after({
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success: any) => {
-						if (!success || this.a.c.Window.state !== "in_frame") {return;}
+						if (!success || this.a.c.Window.state !== "in_frame") {
+							return;
+						}
 						this.a.c.Window.state = "screwed_to_floor";
-						to_chat`<span class='notice'>You pry the window out of the frame.</span>`(
-							user
-						);
+						to_chat`<span class='notice'>You pry the window out of the frame.</span>`(user);
 					});
 					return true;
 				} else if (item.c.Tool.can_use("Screwdriver", user)) {
 					item.c.Tool.used("Screwdriver");
-					to_chat`<span class='notice'>You begin to screw the window to the frame...</span>`(
-						user
-					);
+					to_chat`<span class='notice'>You begin to screw the window to the frame...</span>`(user);
 					user.c.MobInventory.do_after({
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success: any) => {
-						if (!success || this.a.c.Window.state !== "in_frame") {return;}
+						if (!success || this.a.c.Window.state !== "in_frame") {
+							return;
+						}
 						this.a.c.Window.state = "screwed_to_frame";
-						to_chat`<span class='notice'>You fasten the window to the frame.</span>`(
-							user
-						);
+						to_chat`<span class='notice'>You fasten the window to the frame.</span>`(user);
 					});
 					return true;
 				}
 			} else if (this.a.c.Window.state === "screwed_to_frame") {
 				if (item.c.Tool.can_use("Screwdriver", user)) {
 					item.c.Tool.used("Screwdriver");
-					to_chat`<span class='notice'>You begin to unscrew the window from the frame...</span>`(
-						user
-					);
+					to_chat`<span class='notice'>You begin to unscrew the window from the frame...</span>`(user);
 					user.c.MobInventory.do_after({
 						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
 						target: this.a,
 					}).then((success: any) => {
-						if (!success || this.a.c.Window.state !== "screwed_to_frame") {return;}
+						if (!success || this.a.c.Window.state !== "screwed_to_frame") {
+							return;
+						}
 						this.a.c.Window.state = "in_frame";
-						to_chat`<span class='notice'>You unfasten the window from the frame.</span>`(
-							user
-						);
+						to_chat`<span class='notice'>You unfasten the window from the frame.</span>`(user);
 					});
 					return true;
 				}
@@ -306,48 +292,60 @@ class DirectionalWindow extends Component {
 			this.a.can_crosser_move_within,
 			this.can_crosser_move_within.bind(this)
 		);
-		this.a.can_be_uncrossed = chain_func(
-			this.a.can_be_uncrossed,
-			this.can_crosser_move_within.bind(this)
-		);
-		this.a.can_be_crossed = chain_func(
-			this.a.can_be_crossed,
-			this.can_be_crossed.bind(this)
-		);
+		this.a.can_be_uncrossed = chain_func(this.a.can_be_uncrossed, this.can_crosser_move_within.bind(this));
+		this.a.can_be_crossed = chain_func(this.a.can_be_crossed, this.can_be_crossed.bind(this));
 	}
 
 	can_be_crossed(prev: any, crosser: any, dx: any, dy: any) {
-		if (dx < 0 && this.a.dir & 4) {return prev();}
-		if (dx > 0 && this.a.dir & 8) {return prev();}
-		if (dy < 0 && this.a.dir & 1) {return prev();}
-		if (dy > 0 && this.a.dir & 2) {return prev();}
+		if (dx < 0 && this.a.dir & 4) {
+			return prev();
+		}
+		if (dx > 0 && this.a.dir & 8) {
+			return prev();
+		}
+		if (dy < 0 && this.a.dir & 1) {
+			return prev();
+		}
+		if (dy > 0 && this.a.dir & 2) {
+			return prev();
+		}
 		return true;
 	}
 
 	can_crosser_move_within(prev: any, atom: any, dx: any, dy: any) {
-		if (this.a.let_pass_flags & atom.pass_flags) {return prev();}
-		if (atom.density < 0 || this.a.density <= 0) {return prev();}
+		if (this.a.let_pass_flags & atom.pass_flags) {
+			return prev();
+		}
+		if (atom.density < 0 || this.a.density <= 0) {
+			return prev();
+		}
 		if (dx > 0 && this.a.dir & 4) {
 			const this_right = this.a.x + this.a.bounds_x + this.a.bounds_width;
 			const other_right = atom.x + atom.bounds_x + atom.bounds_width;
-			if (other_right <= this_right && other_right + dx > this_right)
-				{return false;}
+			if (other_right <= this_right && other_right + dx > this_right) {
+				return false;
+			}
 		}
 		if (dx < 0 && this.a.dir & 8) {
 			const this_left = this.a.x + this.a.bounds_x;
 			const other_left = atom.x + atom.bounds_x;
-			if (other_left >= this_left && other_left + dx < this_left) {return false;}
+			if (other_left >= this_left && other_left + dx < this_left) {
+				return false;
+			}
 		}
 		if (dy > 0 && this.a.dir & 1) {
 			const this_top = this.a.y + this.a.bounds_y + this.a.bounds_height;
 			const other_top = atom.y + atom.bounds_y + atom.bounds_height;
-			if (other_top <= this_top && other_top + dy > this_top) {return false;}
+			if (other_top <= this_top && other_top + dy > this_top) {
+				return false;
+			}
 		}
 		if (dy < 0 && this.a.dir & 2) {
 			const this_bottom = this.a.y + this.a.bounds_y;
 			const other_bottom = atom.y + atom.bounds_y;
-			if (other_bottom >= this_bottom && other_bottom + dy < this_bottom)
-				{return false;}
+			if (other_bottom >= this_bottom && other_bottom + dy < this_bottom) {
+				return false;
+			}
 		}
 		return prev();
 	}
@@ -362,4 +360,4 @@ DirectionalWindow.template = {
 	},
 };
 
-module.exports.components = { Window, ReinforcedWindow, DirectionalWindow };
+module.exports.components = {Window, ReinforcedWindow, DirectionalWindow};

@@ -9,10 +9,7 @@ const {
 } = require("./../../../code/game/server.js");
 const pass_flags = require("../../defines/pass_flags.js");
 const combat_defines = require("../../defines/combat_defines.js");
-const {
-	random_zone,
-	parse_zone,
-} = require("../../game/mobs/living/carbon/body_parts/helpers.js");
+const {random_zone, parse_zone} = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class Projectile extends Component.Networked {
 	constructor(atom: any, template: any) {
@@ -32,7 +29,9 @@ class Projectile extends Component.Networked {
 	}
 
 	bumped(target: any, dx: any, dy: any, reason: any) {
-		if (reason !== "projectile") {return;}
+		if (reason !== "projectile") {
+			return;
+		}
 		if (this.collide(target)) {
 			this.a.destroy();
 		} else {
@@ -52,17 +51,21 @@ class Projectile extends Component.Networked {
 			this.a.destroy();
 			return;
 		}
-		if (this.permuted) {this.permuted.add(this.firer);}
+		if (this.permuted) {
+			this.permuted.add(this.firer);
+		}
 		this.starting = [this.a.x, this.a.y];
-		if (typeof angle !== "undefined")
-		//Does a Box-Muller transform to make the bullet spread a normal distribution.
-		// This is to make it easier to have spread from multiple sources work as you would expect.
-			{this.angle =
-		angle +
-		Math.sqrt(-2.0 * Math.log(Math.random() || 0.001)) *
-		Math.cos(2.0 * Math.PI * Math.random()) *
-		this.spread;}
-		else {this.angle = this.angle || 0;}
+		if (typeof angle !== "undefined") {
+			//Does a Box-Muller transform to make the bullet spread a normal distribution.
+			// This is to make it easier to have spread from multiple sources work as you would expect.
+			this.angle =
+				angle +
+				Math.sqrt(-2.0 * Math.log(Math.random() || 0.001)) *
+					Math.cos(2.0 * Math.PI * Math.random()) *
+					this.spread;
+		} else {
+			this.angle = this.angle || 0;
+		}
 		this.paused = false;
 		if (!this.process_timer) {
 			this.process_timer = setInterval(this.process, 50);
@@ -85,12 +88,10 @@ class Projectile extends Component.Networked {
 
 		const dist_to_move = (this.speed * dt) / 1000;
 		const rad_angle = (this.angle * Math.PI) / 180;
-		if (this.a.glide_size !== this.speed + 1) {this.a.glide_size = this.speed + 1;}
-		this.a.move(
-			Math.cos(rad_angle) * dist_to_move,
-			Math.sin(rad_angle) * dist_to_move,
-			"projectile"
-		);
+		if (this.a.glide_size !== this.speed + 1) {
+			this.a.glide_size = this.speed + 1;
+		}
+		this.a.move(Math.cos(rad_angle) * dist_to_move, Math.sin(rad_angle) * dist_to_move, "projectile");
 		this.range -= dist_to_move;
 		if (this.range <= 0) {
 			this.a.destroy();
@@ -98,15 +99,16 @@ class Projectile extends Component.Networked {
 	}
 
 	can_cross(prev: any, target: any, dx: any, dy: any, reason: any) {
-		if (reason !== "projectile") {return prev();}
-		if (this.permuted.has(target))
-		// We've already hit the thing, so let's go through it now.
-			{return true;}
-		if (
-			target === this.target &&
-	(target.density === 1 || has_component(target, "LivingMob"))
-		)
-			{return false;} // We aimed at the thing, so clearly we aimed down on it.
+		if (reason !== "projectile") {
+			return prev();
+		}
+		if (this.permuted.has(target)) {
+			// We've already hit the thing, so let's go through it now.
+			return true;
+		}
+		if (target === this.target && (target.density === 1 || has_component(target, "LivingMob"))) {
+			return false;
+		} // We aimed at the thing, so clearly we aimed down on it.
 		return prev();
 	}
 
@@ -122,12 +124,12 @@ class Projectile extends Component.Networked {
 		return true;
 	}
 
-	hit(target: any, def_zone: any, blocked=0) {
+	hit(target: any, def_zone: any, blocked = 0) {
 		if (
 			has_component(target, "Wall") &&
-	["brute", "burn"].includes(this.damage_type) &&
-	!this.no_damage &&
-	Math.random() < 0.75
+			["brute", "burn"].includes(this.damage_type) &&
+			!this.no_damage &&
+			Math.random() < 0.75
 		) {
 			// TODO the damage decal
 		}
@@ -138,27 +140,25 @@ class Projectile extends Component.Networked {
 			// TODO blood splatter
 			let organ_hit_text = "";
 			if (has_component(target, "MobBodyParts")) {
-				organ_hit_text = ` in the ${parse_zone(
-					target.c.MobBodyParts.limbs[def_zone] ? def_zone : "torso"
-				)}`;
+				organ_hit_text = ` in the ${parse_zone(target.c.MobBodyParts.limbs[def_zone] ? def_zone : "torso")}`;
 			}
 			if (this.suppressed) {
-				if (this.hitsound)
-					{new Sound(this.a.server, {
+				if (this.hitsound) {
+					new Sound(this.a.server, {
 						path: this.hitsound,
 						volume: 0.05,
 						vary: true,
-					}).emit_from(target);}
-				to_chat`<span class='userdanger'>You're shot by a ${this.a}${organ_hit_text}</span>`(
-					target
-				);
+					}).emit_from(target);
+				}
+				to_chat`<span class='userdanger'>You're shot by a ${this.a}${organ_hit_text}</span>`(target);
 			} else {
-				if (this.hitsound)
-					{new Sound(this.a.server, {
+				if (this.hitsound) {
+					new Sound(this.a.server, {
 						path: this.hitsound,
 						volume: this.vol_by_damage(),
 						vary: true,
-					}).emit_from(target);}
+					}).emit_from(target);
+				}
 				visible_message`<span class='danger'>The ${target} is hit by a ${this.a}${organ_hit_text}</span>`
 					.self`<span class='userdanger'>The ${target} is hit by a ${this.a}${organ_hit_text}</span>`
 					.range(combat_defines.COMBAT_MESSAGE_RANGE)
@@ -166,20 +166,20 @@ class Projectile extends Component.Networked {
 			}
 		}
 		for (const [effect, props] of Object.entries(this.status_effects)) {
-			const real_props = Object.assign({}, props, { blocked });
+			const real_props = Object.assign({}, props, {blocked});
 			target.c.LivingMob.apply_effect(effect, real_props);
 		}
 		return 1;
 	}
 
 	collide(target: any) {
-		const dist = Math.sqrt(
-			(this.starting[0] - this.a.x) ** 2 + (this.starting[1] - this.a.y) ** 2
-		); // Get the distance between the turf shot from and the mob we hit and use that for the calculations.
+		const dist = Math.sqrt((this.starting[0] - this.a.x) ** 2 + (this.starting[1] - this.a.y) ** 2); // Get the distance between the turf shot from and the mob we hit and use that for the calculations.
 		this.def_zone = random_zone(this.def_zone, Math.max(1 - 0.07 * dist, 0.05)); //Lower accurancy/longer range tradeoff. 7 is a balanced number to use.
 		if (has_component(target, "Wall") && this.hitsound_wall) {
 			let volume = Math.min(Math.max(this.vol_by_damage() + 0.2, 0), 1);
-			if (this.suppressed) {volume = 0.05;}
+			if (this.suppressed) {
+				volume = 0.05;
+			}
 			new Sound(this.a.server, {
 				path: this.hitsound_wall,
 				volume,
@@ -187,10 +187,12 @@ class Projectile extends Component.Networked {
 			}).emit_from(target);
 		}
 
-		if (!this.prehit(/*target*/)) {
+		if (!(this.prehit(/*target*/))) {
 			return false;
 		}
-		if (!has_component(target, "Tangible")) {return true;}
+		if (!has_component(target, "Tangible")) {
+			return true;
+		}
 
 		const permutation = target.c.Tangible.bullet_act(this.a, this.def_zone);
 		if (permutation === -1 || this.force_dodge) {
@@ -198,9 +200,12 @@ class Projectile extends Component.Networked {
 		} else {
 			const alt: any = this.select_target(/*target*/);
 			if (alt) {
-				if (!this.prehit(/*alt*/)) {return false;}
-				if (has_component(alt, "Tangible"))
-					{alt.c.Tangible.bullet_act(this.a, this.def_zone);}
+				if (!(this.prehit(/*alt*/))) {
+					return false;
+				}
+				if (has_component(alt, "Tangible")) {
+					alt.c.Tangible.bullet_act(this.a, this.def_zone);
+				}
 			}
 		}
 
@@ -212,7 +217,9 @@ class Projectile extends Component.Networked {
 	}
 
 	destroy() {
-		if (this.process_timer) {clearInterval(this.process_timer);}
+		if (this.process_timer) {
+			clearInterval(this.process_timer);
+		}
 		super.destroy();
 	}
 }
@@ -261,4 +268,4 @@ Projectile.template = {
 	},
 };
 
-module.exports.components = { Projectile };
+module.exports.components = {Projectile};

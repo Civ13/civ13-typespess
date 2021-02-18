@@ -8,17 +8,17 @@ const {
 	visible_message,
 	has_component,
 } = require("./../../../../code/game/server.js");
-const _:any = require("underscore");
-const Mind:any = require("../mind/mind.js");
-const combat_defines:any = require("../../../defines/combat_defines.js");
-const mob_defines:any = require("../../../defines/mob_defines.js");
-const { random_zone }:any = require("./carbon/body_parts/helpers.js");
-const layers:any = require("../../../defines/layers.js");
-const pass_flags:any = require("../../../defines/pass_flags.js");
+const _: any = require("underscore");
+const Mind: any = require("../mind/mind.js");
+const combat_defines: any = require("../../../defines/combat_defines.js");
+const mob_defines: any = require("../../../defines/mob_defines.js");
+const {random_zone}: any = require("./carbon/body_parts/helpers.js");
+const layers: any = require("../../../defines/layers.js");
+const pass_flags: any = require("../../../defines/pass_flags.js");
 
-const _stat:any = Symbol("_stat");
+const _stat: any = Symbol("_stat");
 
-const status_effects: Record<string,any> = {};
+const status_effects: Record<string, any> = {};
 
 class LivingMob extends Component {
 	// eslint-disable-next-line max-statements
@@ -37,9 +37,7 @@ class LivingMob extends Component {
 		this.mind = null;
 
 		this.a.c.Mob.on("client_changed", this.client_changed.bind(this));
-		this.a.c.Mob.can_interact_with_panel = this.can_interact_with_panel.bind(
-			this
-		);
+		this.a.c.Mob.can_interact_with_panel = this.can_interact_with_panel.bind(this);
 		this.a.c.Tangible.experience_pressure_difference = chain_func(
 			this.a.c.Tangible.experience_pressure_difference,
 			this.experience_pressure_difference.bind(this)
@@ -47,19 +45,13 @@ class LivingMob extends Component {
 		this.a.c.Tangible.attacked_by = this.attacked_by.bind(this);
 		this.a.c.Tangible.bullet_act = this.bullet_act.bind(this);
 		this.a.c.Tangible.on("throw_finished", this.throw_finished.bind(this));
-		this.a.c.Tangible.on(
-			"throw_impacted_by",
-			this.throw_impacted_by.bind(this)
-		);
+		this.a.c.Tangible.on("throw_impacted_by", this.throw_impacted_by.bind(this));
 		this.a.c.SpeechEmitter.build_message = chain_func(
 			this.a.c.SpeechEmitter.build_message,
 			this.build_message.bind(this)
 		);
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
-		this.a.can_be_crossed = chain_func(
-			this.a.can_be_crossed,
-			this.can_be_crossed.bind(this)
-		);
+		this.a.can_be_crossed = chain_func(this.a.can_be_crossed, this.can_be_crossed.bind(this));
 		this.a.move = chain_func(this.a.move, this.move.bind(this));
 		this.a.on("bumped", this.bumped.bind(this));
 		this.on("health_changed", this.health_changed.bind(this));
@@ -78,17 +70,26 @@ class LivingMob extends Component {
 			get: () => {
 				return damage_obj.val;
 			},
-			set: (newval: number, { health_event = true, force = false } = {}) => {
-				if (this.status_flags & combat_defines.GODMODE && !force) {return false;}
+			set: (newval: number, {health_event = true, force = false} = {}) => {
+				if (this.status_flags & combat_defines.GODMODE && !force) {
+					return false;
+				}
 				newval = Math.max(0, newval);
-				if (newval === damage_obj.val) {return;}
+				if (newval === damage_obj.val) {
+					return;
+				}
 				damage_obj.val = newval;
 				this.emit("damage_changed", name);
-				if (health_event) {this.emit("health_changed");}
+				if (health_event) {
+					this.emit("health_changed");
+				}
 			},
-			adjust: (amount: number, props: { health_event: true, force: false; }) => {
-				if (props) {damage_obj.set(damage_obj.get() + amount, props);}
-				else {damage_obj.set(damage_obj.get() + amount, { health_event: true, force: false });}
+			adjust: (amount: number, props: {health_event: true; force: false}) => {
+				if (props) {
+					damage_obj.set(damage_obj.get() + amount, props);
+				} else {
+					damage_obj.set(damage_obj.get() + amount, {health_event: true, force: false});
+				}
 			},
 		};
 		this.damages[name] = damage_obj;
@@ -96,7 +97,9 @@ class LivingMob extends Component {
 
 	get_damage(name: string) {
 		const damage = this.damages[name];
-		if (damage) {return damage.get();}
+		if (damage) {
+			return damage.get();
+		}
 		return 0;
 	}
 
@@ -121,9 +124,10 @@ class LivingMob extends Component {
 	get health() {
 		let h = this.max_health;
 		for (const tdamage_obj of Object.values(this.damages)) {
-			const damage_obj: Record<string,any> = tdamage_obj;
-			if (damage_obj && damage_obj.get && damage_obj.affects_health)
-				{h -= damage_obj.get();}
+			const damage_obj: Record<string, any> = tdamage_obj;
+			if (damage_obj && damage_obj.get && damage_obj.affects_health) {
+				h -= damage_obj.get();
+			}
 		}
 		return h;
 	}
@@ -135,19 +139,15 @@ class LivingMob extends Component {
 	set stat(val) {
 		const oldstat = this.stat;
 		// eslint-disable-next-line no-setter-return
-		if (val === oldstat) {return;}
+		if (val === oldstat) {
+			return;
+		}
 		this[_stat] = val;
 		this.emit("stat_changed", oldstat, val);
-		if (
-			val >= combat_defines.UNCONSCIOUS &&
-	oldstat < combat_defines.UNCONSCIOUS
-		) {
+		if (val >= combat_defines.UNCONSCIOUS && oldstat < combat_defines.UNCONSCIOUS) {
 			this.nomove_counter++;
 			this.a.c.MobInteract.nointeract_counter++;
-		} else if (
-			val < combat_defines.UNCONSCIOUS &&
-	oldstat >= combat_defines.UNCONSCIOUS
-		) {
+		} else if (val < combat_defines.UNCONSCIOUS && oldstat >= combat_defines.UNCONSCIOUS) {
 			this.nomove_counter--;
 			this.a.c.MobInteract.nointeract_counter--;
 		}
@@ -162,23 +162,21 @@ class LivingMob extends Component {
 	get in_crit() {
 		return (
 			this.health <= combat_defines.HEALTH_THRESHOLD_CRIT &&
-	(this.stat === combat_defines.SOFT_CRIT ||
-		this.stat === combat_defines.UNCONSCIOUS)
+			(this.stat === combat_defines.SOFT_CRIT || this.stat === combat_defines.UNCONSCIOUS)
 		);
 	}
 
 	get in_full_crit() {
-		return (
-			this.health <= combat_defines.HEALTH_THRESHOLD_FULLCRIT &&
-	this.stat === combat_defines.UNCONSCIOUS
-		);
+		return this.health <= combat_defines.HEALTH_THRESHOLD_FULLCRIT && this.stat === combat_defines.UNCONSCIOUS;
 	}
 
 	health_changed() {
 		this.update_stat();
 	}
 
-	update_stat() {return;}
+	update_stat() {
+		return;
+	}
 
 	//DAMAGE
 	apply_damage(
@@ -188,15 +186,21 @@ class LivingMob extends Component {
 		blocked = this.run_armor_check(def_zone, "melee")
 	) {
 		const hit_percent = (100 - blocked) / 100;
-		if (!damage || hit_percent <= 0) {return false;}
+		if (!damage || hit_percent <= 0) {
+			return false;
+		}
 		this.adjust_damage(damagetype, damage * hit_percent);
 		return true;
 	}
 
-	apply_damages(damages: { [x: string]: number; }, def_zone: any, blocked: number) {
-		if (blocked >= 100) {return false;}
+	apply_damages(damages: {[x: string]: number}, def_zone: any, blocked: number) {
+		if (blocked >= 100) {
+			return false;
+		}
 		for (const key in damages) {
-			if (!Object.prototype.hasOwnProperty.call(damages,key)) {continue;}
+			if (!Object.prototype.hasOwnProperty.call(damages, key)) {
+				continue;
+			}
 			this.apply_damage(damages[key], key, def_zone, blocked);
 		}
 		return true;
@@ -206,11 +210,14 @@ class LivingMob extends Component {
 		this.life_timeout = null;
 		this.life_cycle_num++;
 		this.life(/*this.life_cycle_num*/);
-		if (this.stat !== combat_defines.DEAD && !this.life_timeout)
-			{this.life_timeout = setTimeout(this.run_life.bind(this), 2000);}
+		if (this.stat !== combat_defines.DEAD && !this.life_timeout) {
+			this.life_timeout = setTimeout(this.run_life.bind(this), 2000);
+		}
 	}
 
-	life() {return;}
+	life() {
+		return;
+	}
 
 	movement_delay() {
 		if (this.a.c.MobInteract.move_mode === mob_defines.MOVE_INTENT_WALK) {
@@ -220,15 +227,15 @@ class LivingMob extends Component {
 		}
 	}
 
-	client_changed(new_client: { key: any; }) {
+	client_changed(new_client: {key: any}) {
 		if (new_client && !this.mind) {
-				const mind = new Mind(new_client.key);
-				mind.transfer_to(this.a);
+			const mind = new Mind(new_client.key);
+			mind.transfer_to(this.a);
 		}
 	}
 
 	ghostize(can_reenter_corpse = true) {
-		const ghost = new Atom(this.a.server, { components: ["Ghost"] });
+		const ghost = new Atom(this.a.server, {components: ["Ghost"]});
 		ghost.loc = this.a.base_mover.fine_loc;
 		ghost.c.Ghost.mind = this.mind;
 		ghost.c.Mob.key = this.a.c.Mob.key;
@@ -236,14 +243,18 @@ class LivingMob extends Component {
 	}
 
 	move(prev: () => any, dx: any, dy: any, reason: string) {
-		if (reason !== "walking") {return prev();}
+		if (reason !== "walking") {
+			return prev();
+		}
 
 		if (this.stat === combat_defines.DEAD) {
 			this.ghostize(true);
 			return;
 		}
 
-		if (this.incapacitated()) {return;}
+		if (this.incapacitated()) {
+			return;
+		}
 
 		this.a.walk_delay = this.movement_delay();
 
@@ -262,22 +273,28 @@ class LivingMob extends Component {
 			msg.message = msg.message.substring(1);
 		}
 
-		if (this.stat >= combat_defines.UNCONSCIOUS) {return null;}
+		if (this.stat >= combat_defines.UNCONSCIOUS) {
+			return null;
+		}
 
-		if (!msg.message || !msg.message.length) {return null;}
+		if (!msg.message || !msg.message.length) {
+			return null;
+		}
 		return msg;
 	}
 
 	incapacitated() {
-		if (this.nomove_counter) {return true;}
+		if (this.nomove_counter) {
+			return true;
+		}
 		return false;
 	}
 
-	can_interact_with_panel(target: { z: any; dim: any; x: number; y: number; }) {
+	can_interact_with_panel(target: {z: any; dim: any; x: number; y: number}) {
 		return (
 			target.z === this.a.z &&
-	target.dim === this.a.dim &&
-	Math.max(Math.abs(target.x - this.a.x), Math.abs(target.y - this.a.y)) < 1
+			target.dim === this.a.dim &&
+			Math.max(Math.abs(target.x - this.a.x), Math.abs(target.y - this.a.y)) < 1
 		);
 	}
 
@@ -290,13 +307,10 @@ class LivingMob extends Component {
 		prev();
 	}
 
-	can_be_crossed(prev: () => any, mover: { density: number; }, reason: string) {
-		if (
-			(mover.density < 1 || this.a.density < 1) &&
-	reason !== "throw" &&
-	reason !== "projectile"
-		)
-			{return true;}
+	can_be_crossed(prev: () => any, mover: {density: number}, reason: string) {
+		if ((mover.density < 1 || this.a.density < 1) && reason !== "throw" && reason !== "projectile") {
+			return true;
+		}
 		return prev();
 	}
 
@@ -305,12 +319,21 @@ class LivingMob extends Component {
 		this.a.y = Math.round(this.a.y);
 	}
 
-	attack_by(prev: () => any, item: { c: { Item: { attack: (arg0: any, arg1: any) => any; }; }; }, user: { c: { MobInteract: { change_next_move: (arg0: any) => void; }; }; }) {
+	attack_by(
+		prev: () => any,
+		item: {c: {Item: {attack: (arg0: any, arg1: any) => any}}},
+		user: {c: {MobInteract: {change_next_move: (arg0: any) => void}}}
+	) {
 		user.c.MobInteract.change_next_move(combat_defines.CLICK_CD_MELEE);
 		return prev() || item.c.Item.attack(this.a, user);
 	}
 
-	throw_impacted_by(item: { c: { Tangible: { throw_force: number; throwhitsound: any; }; Item: { size: number; hitsound: any; damage_type: string; }; }; }) {
+	throw_impacted_by(item: {
+		c: {
+			Tangible: {throw_force: number; throwhitsound: any};
+			Item: {size: number; hitsound: any; damage_type: string};
+		};
+	}) {
 		if (!has_component(item, "Item")) {
 			new Sound(this.a.server, {
 				path: "sound/weapons/genhit.ogg",
@@ -321,44 +344,36 @@ class LivingMob extends Component {
 		}
 		const zone = random_zone("torso", 65);
 		let volume = 0;
-		if (item.c.Tangible.throw_force && item.c.Item.size)
-			{volume = Math.min(
-				Math.max((item.c.Tangible.throw_force + item.c.Item.size) * 0.05, 0.3),
-				1
-			);}
-		else if (item.c.Item.size)
-			{volume = Math.min(Math.max(item.c.Item.size * 0.08, 0.2), 1);}
-		else {return;}
+		if (item.c.Tangible.throw_force && item.c.Item.size) {
+			volume = Math.min(Math.max((item.c.Tangible.throw_force + item.c.Item.size) * 0.05, 0.3), 1);
+		} else if (item.c.Item.size) {
+			volume = Math.min(Math.max(item.c.Item.size * 0.08, 0.2), 1);
+		} else {
+			return;
+		}
 		if (item.c.Tangible.throw_force > 0) {
-			let sound =
-		item.c.Tangible.throwhitsound ||
-		item.c.Item.hitsound ||
-		"sound/weapons/genhit.ogg";
-			if (!item.c.Tangible.throw_force) {sound = "sound/weapons/throwtap.ogg";}
-			new Sound(this.a.server, { path: sound, volume, vary: true }).emit_from(
-				this.a
-			);
+			let sound = item.c.Tangible.throwhitsound || item.c.Item.hitsound || "sound/weapons/genhit.ogg";
+			if (!item.c.Tangible.throw_force) {
+				sound = "sound/weapons/throwtap.ogg";
+			}
+			new Sound(this.a.server, {path: sound, volume, vary: true}).emit_from(this.a);
 		}
 		visible_message`<span class='danger'>The ${this.a} has been hit by the ${item}.</span class='danger'>`
-			.self`<span class='userdanger'>The ${this.a} been hit by the ${item}.</span>`.emit_from(
-			this.a
-		);
-		this.apply_damage(
-			item.c.Tangible.throw_force,
-			item.c.Item.damage_type,
-			zone
-		);
+			.self`<span class='userdanger'>The ${this.a} been hit by the ${item}.</span>`.emit_from(this.a);
+		this.apply_damage(item.c.Tangible.throw_force, item.c.Item.damage_type, zone);
 	}
 
-	add_splatter_floor(/*{turf, small_drip = false} = {}*/) {return;}
+	add_splatter_floor(/*{turf, small_drip = false} = {}*/) {
+		return;
+	}
 
-	attacked_by(item: Record<string,any>, user: Record<string,any>) {
+	attacked_by(item: Record<string, any>, user: Record<string, any>) {
 		const zone = random_zone(user.c.MobInteract.zone_sel);
-		const bp = has_component(this.a, "MobBodyParts") &&
+		const bp =
+			has_component(this.a, "MobBodyParts") &&
 			(this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.torso);
 		this.send_item_attack_message(item, user, bp && bp.name);
-		if (has_component(this.a, "SimpleMob"))
-		{
+		if (has_component(this.a, "SimpleMob")) {
 			this.a.c.SimpleMob.target = user;
 		}
 		if (item.c.Item.force) {
@@ -370,7 +385,7 @@ class LivingMob extends Component {
 		}
 	}
 
-	send_item_attack_message(item: Record<string,any>, user: any, hit_area: any) {
+	send_item_attack_message(item: Record<string, any>, user: any, hit_area: any) {
 		let message_verb = "attacked";
 		if (item.c.Item.attack_verb && item.c.Item.attack_verb.length) {
 			message_verb = format_html`${_.sample(item.c.Item.attack_verb)}`;
@@ -378,13 +393,14 @@ class LivingMob extends Component {
 			return;
 		}
 		let message_hit_area = "";
-		if (hit_area) {message_hit_area = format_html` in the ${hit_area}`;}
+		if (hit_area) {
+			message_hit_area = format_html` in the ${hit_area}`;
+		}
 		let attack_message = `${format_html`The ${this.a}`} has been ${message_verb}${message_hit_area} with ${format_html`the ${item}`}.`;
-		if (this.a.c.Hearer.in_view(user))
-			{attack_message = `${format_html`The ${user}`} has ${message_verb} ${format_html`the ${this.a}`}${message_hit_area} with ${format_html`the ${item}`}!`;}
-		visible_message(
-			`<span class='danger'>${attack_message}</span class='danger'>`
-		)
+		if (this.a.c.Hearer.in_view(user)) {
+			attack_message = `${format_html`The ${user}`} has ${message_verb} ${format_html`the ${this.a}`}${message_hit_area} with ${format_html`the ${item}`}!`;
+		}
+		visible_message(`<span class='danger'>${attack_message}</span class='danger'>`)
 			.self(`<span class='userdanger'>${attack_message}</span>`)
 			.range(combat_defines.COMBAT_MESSAGE_RANGE)
 			.emit_from(this.a);
@@ -407,7 +423,9 @@ class LivingMob extends Component {
 			new status_effects[name]().apply_to(this.a, {});
 			effect = this.effects[name];
 		}
-		if (!effect) {return;}
+		if (!effect) {
+			return;
+		}
 		effect.adjust(amount);
 	}
 
@@ -424,52 +442,66 @@ class LivingMob extends Component {
 		const face_name = this.get_face_name("");
 		const id_name = this.get_id_name("");
 		if (face_name) {
-			if (id_name && id_name !== face_name)
-				{return `${face_name} (as ${id_name})`;}
+			if (id_name && id_name !== face_name) {
+				return `${face_name} (as ${id_name})`;
+			}
 			return face_name;
 		}
-		if (id_name) {return id_name;}
+		if (id_name) {
+			return id_name;
+		}
 		return "Unknown";
 	}
 
 	get_face_name(if_no_face = "Unknown") {
-		if (!this.identifiable()) {return if_no_face;}
-		return this.real_name;}
-	get_id_name(if_no_id = "Unknown") {return if_no_id;}
+		if (!this.identifiable()) {
+			return if_no_face;
+		}
+		return this.real_name;
+	}
+	get_id_name(if_no_id = "Unknown") {
+		return if_no_id;
+	}
 
-	bumped(atom: Record<string,any>, offsetx: any, offsety: any) {
-		if (this.buckled || this.now_pushing) {return;}
+	bumped(atom: Record<string, any>, offsetx: any, offsety: any) {
+		if (this.buckled || this.now_pushing) {
+			return;
+		}
 		if (has_component(atom, "Tangible")) {
-			if (
-				has_component(atom, "LivingMob") &&
-		this.mob_collide(atom)
-			)
-				{return;}
-			if (!atom.c.Tangible.anchored) {this.set_anchored(atom, offsetx, offsety);}
-
+			if (has_component(atom, "LivingMob") && this.mob_collide(atom)) {
+				return;
+			}
+			if (!atom.c.Tangible.anchored) {
+				this.set_anchored(atom, offsetx, offsety);
+			}
 		}
 	}
-	set_anchored(atom: Record<string,any>, offsetx: number, offsety: number) {
+	set_anchored(atom: Record<string, any>, offsetx: number, offsety: number) {
 		this.a.glide_size = atom.glide_size;
 		this.now_pushing = true;
 		atom.move(Math.sign(offsetx), Math.sign(offsety), "bumped");
 		this.a.move(offsetx, offsety, "pushing");
 		this.now_pushing = false;
 	}
-	mob_collide(atom: Record<string,any>) {
-		if (this.now_pushing) {return true;}
+	mob_collide(atom: Record<string, any>) {
+		if (this.now_pushing) {
+			return true;
+		}
 		if (!atom.c.LivingMob.buckled) {
 			let mob_swap = false;
-			const this_intent = has_component(this.a, "MobInteract")
-				? this.a.c.MobInteract.act_intent
-				: "harm";
-			const other_intent = has_component(atom, "MobInteract")
-				? atom.c.MobInteract.act_intent
-				: "harm";
-			if ((has_component(this.a, "Puller") && this.a.c.Puller.pulling === atom && this_intent === "grab") || (this_intent === "help" || other_intent === "help"))
-				{mob_swap = true;}
+			const this_intent = has_component(this.a, "MobInteract") ? this.a.c.MobInteract.act_intent : "harm";
+			const other_intent = has_component(atom, "MobInteract") ? atom.c.MobInteract.act_intent : "harm";
+			if (
+				(has_component(this.a, "Puller") && this.a.c.Puller.pulling === atom && this_intent === "grab") ||
+				this_intent === "help" ||
+				other_intent === "help"
+			) {
+				mob_swap = true;
+			}
 			if (mob_swap) {
-				if (!this.a.c.Tangible.adjacent(atom)) {return;}
+				if (!this.a.c.Tangible.adjacent(atom)) {
+					return;
+				}
 				this.now_pushing = true;
 				const oldloc = this.a.fine_loc;
 				const oldloc_other = atom.fine_loc;
@@ -483,10 +515,7 @@ class LivingMob extends Component {
 				this.now_pushing = true;
 
 				atom.glide_size = this.a.glide_size;
-				if (
-					!atom.move(-dx, -dy, "push_swap") ||
-		!this.a.move(dx, dy, "push_swap")
-				) {
+				if (!atom.move(-dx, -dy, "push_swap") || !this.a.move(dx, dy, "push_swap")) {
 					this.a.loc = oldloc;
 					atom.loc = oldloc_other;
 					move_failed = true;
@@ -497,7 +526,9 @@ class LivingMob extends Component {
 				atom.pass_flags &= ~pass_flags.PASSMOB;
 				this.a.pass_flags &= ~pass_flags.PASSMOB;
 
-				if (!move_failed) {return true;}
+				if (!move_failed) {
+					return true;
+				}
 			}
 		}
 	}
@@ -505,22 +536,8 @@ class LivingMob extends Component {
 
 Object.assign(LivingMob.prototype, require("./living_defense.js"));
 
-LivingMob.depends = [
-	"Mob",
-	"Tangible",
-	"MobInteract",
-	"MobHud",
-	"SpeechHearer",
-	"SpeechEmitter",
-];
-LivingMob.loadBefore = [
-	"Mob",
-	"Tangible",
-	"MobInteract",
-	"MobHud",
-	"SpeechHearer",
-	"SpeechEmitter",
-];
+LivingMob.depends = ["Mob", "Tangible", "MobInteract", "MobHud", "SpeechHearer", "SpeechEmitter"];
+LivingMob.loadBefore = ["Mob", "Tangible", "MobInteract", "MobHud", "SpeechHearer", "SpeechEmitter"];
 
 LivingMob.template = {
 	vars: {
@@ -528,10 +545,10 @@ LivingMob.template = {
 			Atom: {directional: true},
 			LivingMob: {
 				status_flags:
-		combat_defines.CANSTUN |
-		combat_defines.CANWEAKEN |
-		combat_defines.CANPARALYSE |
-		combat_defines.CANPUSH,
+					combat_defines.CANSTUN |
+					combat_defines.CANWEAKEN |
+					combat_defines.CANPARALYSE |
+					combat_defines.CANPUSH,
 				max_health: 100,
 				stat: combat_defines.CONSCIOUS,
 				nomove_counter: 0,
@@ -550,7 +567,7 @@ LivingMob.template = {
 
 class MovementProxy extends Component {}
 
-function add_effects(mod: Record<string,any> = {}) {
+function add_effects(mod: Record<string, any> = {}) {
 	if (mod.status_effects) {
 		Object.assign(status_effects, mod.status_effects);
 	}
@@ -558,4 +575,4 @@ function add_effects(mod: Record<string,any> = {}) {
 
 add_effects(require("./effects/incapacitating.js"));
 
-module.exports.components = { LivingMob, MovementProxy };
+module.exports.components = {LivingMob, MovementProxy};

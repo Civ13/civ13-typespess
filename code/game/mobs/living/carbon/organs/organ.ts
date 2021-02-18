@@ -1,8 +1,5 @@
 export{};
-const {
-	Component,
-	has_component,
-} = require("./../../../../../../code/game/server.js");
+const {Component, has_component} = require("./../../../../../../code/game/server.js");
 
 class Organ extends Component {
 	constructor(atom: any, template: any) {
@@ -10,10 +7,14 @@ class Organ extends Component {
 		this.mob = null;
 	}
 
-	do_life() {return;}
+	do_life() {
+		return;
+	}
 
-	insert(mob: Record<string,any>) {
-		if (!has_component(mob, "CarbonMob")) {return false;}
+	insert(mob: Record<string, any>) {
+		if (!has_component(mob, "CarbonMob")) {
+			return false;
+		}
 		this.mob = mob;
 		mob.c.CarbonMob.organs[this.slot] = this.a;
 		this.a.loc = mob;
@@ -42,4 +43,4 @@ Organ.template = {
 	},
 };
 
-module.exports.components = { Organ };
+module.exports.components = {Organ};

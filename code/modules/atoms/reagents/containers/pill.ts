@@ -1,35 +1,39 @@
 export{};
-const {
-	Component,
-	visible_message,
-	to_chat,
-} = require("./../../../../../code/game/server.js");
+const {Component, visible_message, to_chat} = require("./../../../../../code/game/server.js");
 
 const _ = require("underscore");
 
 class Pill extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		if (!this.a.icon_state) {this.a.icon_state = `pill${_.random(1, 20)}`;}
+		if (!this.a.icon_state) {
+			this.a.icon_state = `pill${_.random(1, 20)}`;
+		}
 		this.a.c.Item.attack = this.attack.bind(this);
 	}
 
-	attack(target: Record<string,any>, user: Record<string,any>) {
-		if (!this.a.c.ReagentHolder.can_consume(target, user)) {return true;}
+	attack(target: Record<string, any>, user: Record<string, any>) {
+		if (!this.a.c.ReagentHolder.can_consume(target, user)) {
+			return true;
+		}
 
 		(async () => {
 			if (target === user) {
-				visible_message`<span class='notice'>The ${user} attempts to ${this.apply_method} the ${this.a}</span>`.emit_from(target);
-				if (this.self_delay &&  !(await user.c.MobInventory.do_after({target, delay: this.self_delay,})))
-						{return false;}
+				visible_message`<span class='notice'>The ${user} attempts to ${this.apply_method} the ${this.a}</span>`.emit_from(
+					target
+				);
+				if (this.self_delay && !(await user.c.MobInventory.do_after({target, delay: this.self_delay}))) {
+					return false;
+				}
 				to_chat`<span class='notice'>You ${this.apply_method} the ${this.a}.</span>`(user);
 			} else {
 				visible_message`<span class='danger'>The ${user} attempts to force the ${target} to ${this.apply_method} the ${this.a}.</span>`
 					.self`<span class='userdanger'>The ${user} attempts to force you to ${this.apply_method} the ${this.a}.</span>`.emit_from(
 					target
 				);
-				if (!(await user.c.MobInventory.do_after({ target, delay: 3000 })))
-					{return false;}
+				if (!(await user.c.MobInventory.do_after({target, delay: 3000}))) {
+					return false;
+				}
 				visible_message`<span class='danger'>The ${user} forces the ${target} to ${this.apply_method} the ${this.a}.</span>`
 					.self`<span class='userdanger'>The ${user} forces you to ${this.apply_method} the ${this.a}.</span>`.emit_from(
 					target
@@ -73,4 +77,4 @@ Pill.template = {
 	},
 };
 
-module.exports.components = { Pill };
+module.exports.components = {Pill};

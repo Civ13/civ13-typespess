@@ -1,11 +1,5 @@
 export{};
-const {
-	Component,
-	has_component,
-	Sound,
-	visible_message,
-	to_chat,
-} = require("./../../../code/game/server.js");
+const {Component, has_component, Sound, visible_message, to_chat} = require("./../../../code/game/server.js");
 const combat_defines = require("../../defines/combat_defines.js");
 const sounds = require("../../defines/sounds.js");
 
@@ -18,35 +12,42 @@ class Gun extends Component {
 	}
 
 	after_attack(target: any, user: any, prox: any, e: any) {
-		if (this.firing_burst || !target.loc || !target.loc.is_base_loc) {return;}
+		if (this.firing_burst || !target.loc || !target.loc.is_base_loc) {
+			return;
+		}
 		if (prox) {
-			if (!has_component(target, "LivingMob")) {return;}
-			if (target === user && user.c.MobInteract.zone_sel !== "mouth")
-			//so we can't shoot ourselves (unless mouth selected)
-				{return;}
+			if (!has_component(target, "LivingMob")) {
+				return;
+			}
+			if (target === user && user.c.MobInteract.zone_sel !== "mouth") {
+				//so we can't shoot ourselves (unless mouth selected)
+				return;
+			}
 		}
 
-		if (!this.can_trigger(user)) {return;}
+		if (!this.can_trigger(user)) {
+			return;
+		}
 
 		if (!this.can_shoot()) {
-			this.shoot_with_empty_chamber({ user });
+			this.shoot_with_empty_chamber({user});
 			return;
 		}
 
 		if (prox && user.zone_selected === "mouth") {
-				// TODO suicide
-				return;
+			// TODO suicide
+			return;
 		}
 
 		if (this.weapon_weight === combat_defines.WEAPON_HEAVY) {
 			let hands = 0;
 			for (const hand of user.c.MobInventory.hand_slots()) {
-				if (!hand.item || hand.item === this.a) {hands++;}
+				if (!hand.item || hand.item === this.a) {
+					hands++;
+				}
 			}
 			if (hands < 2) {
-				to_chat`<span class='userdanger'>You need both hands free to fire the ${this.a}!</span>`(
-					user
-				);
+				to_chat`<span class='userdanger'>You need both hands free to fire the ${this.a}!</span>`(user);
 				return;
 			}
 		}
@@ -54,7 +55,7 @@ class Gun extends Component {
 		const bonus_spread = 0;
 		// TODO dualweilding
 
-		this.fire({ target, user, e, bonus_spread });
+		this.fire({target, user, e, bonus_spread});
 	}
 
 	fire(opts: any) {
@@ -69,16 +70,12 @@ class Gun extends Component {
 		e: any = null,
 		zone_override: any = null,
 		bonus_spread = 0,
-		angle_offset = 0,
+		angle_offset = 0
 	) {
 		const dx = target.x + ((e && e.x - 0.5) || 0) - user.x;
 		const dy = target.y + ((e && e.y - 0.5) || 0) - user.y;
 		const angle = angle_offset + (Math.atan2(dy, dx) * 180) / Math.PI;
-		if (
-			!this.a.c.Item.slot ||
-	this.a.c.Item.slot.mob !== user ||
-	!this.a.c.Item.slot.props.is_hand_slot
-		) {
+		if (!this.a.c.Item.slot || this.a.c.Item.slot.mob !== user || !this.a.c.Item.slot.props.is_hand_slot) {
 			return false;
 		}
 
@@ -96,17 +93,14 @@ class Gun extends Component {
 				this.shoot_live_shot({
 					user,
 					message,
-					point_blank:
-			Math.max(target.x - user.x, target.y - user.y) <= 1.5
-				? target
-				: null,
+					point_blank: Math.max(target.x - user.x, target.y - user.y) <= 1.5 ? target : null,
 				});
 			} else {
-				this.shoot_with_empty_chamber({ user });
+				this.shoot_with_empty_chamber({user});
 				return false;
 			}
 		} else {
-			this.shoot_with_empty_chamber({ user });
+			this.shoot_with_empty_chamber({user});
 			return false;
 		}
 		this.process_chamber();
@@ -121,14 +115,15 @@ class Gun extends Component {
 			vary: true,
 		}).emit_from(user);
 		if (!this.suppressed && message) {
-			if (point_blank)
-				{visible_message`<span class='danger'>The ${user} fires the ${this.a} point blank at the ${point_blank}!</span>`
+			if (point_blank) {
+				visible_message`<span class='danger'>The ${user} fires the ${this.a} point blank at the ${point_blank}!</span>`
 					.range(combat_defines.COMBAT_MESSAGE_RANGE)
-					.emit_from(user);}
-			else
-				{visible_message`<span class='danger'>The ${user} fires the ${this.a}!</span>`
+					.emit_from(user);
+			} else {
+				visible_message`<span class='danger'>The ${user} fires the ${this.a}!</span>`
 					.range(combat_defines.COMBAT_MESSAGE_RANGE)
-					.emit_from(user);}
+					.emit_from(user);
+			}
 		}
 	}
 
@@ -144,11 +139,9 @@ class Gun extends Component {
 	// Fun fact this is an item proc on tg. On all items. For guns.
 	// whether the user can trigger this gun
 	can_trigger(user: any) {
-		if (
-			!has_component(user, "MobInventory") ||
-	!user.c.MobInventory.can_use_guns(this.a)
-		)
-			{return false;}
+		if (!has_component(user, "MobInventory") || !user.c.MobInventory.can_use_guns(this.a)) {
+			return false;
+		}
 		return true;
 	}
 
@@ -163,7 +156,9 @@ class Gun extends Component {
 		return true;
 	}
 
-	update_icon() {return;}
+	update_icon() {
+		return;
+	}
 }
 
 Gun.loadBefore = ["Item", "BeltItem"];
@@ -203,4 +198,4 @@ Gun.template = {
 	},
 };
 
-module.exports.components = { Gun };
+module.exports.components = {Gun};

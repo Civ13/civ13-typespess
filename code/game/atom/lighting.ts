@@ -1,10 +1,10 @@
 export{};
-const { Component, Atom } = require("../server.js");
+const {Component, Atom} = require("../server.js");
 
-const _enabled:any = Symbol("_enabled");
-const _color:any = Symbol("_color");
-const _radius:any = Symbol("_radius");
-const _lighting_object:any = Symbol("_lighting_object");
+const _enabled: any = Symbol("_enabled");
+const _color: any = Symbol("_color");
+const _radius: any = Symbol("_radius");
+const _lighting_object: any = Symbol("_lighting_object");
 
 class LightingObject extends Component.Networked {
 	constructor(atom: any, template: any) {
@@ -24,13 +24,17 @@ class LightingObject extends Component.Networked {
 		this.update_shadows_string();
 	}
 
-	crossed(item: Record<string,any>) {
-		if (!item.opacity) {return;}
-		if (this.shadows.has(item)) {return;}
+	crossed(item: Record<string, any>) {
+		if (!item.opacity) {
+			return;
+		}
+		if (this.shadows.has(item)) {
+			return;
+		}
 		const move_callback = this.update_shadow.bind(this, item);
 		this.move_callbacks.set(item, move_callback);
 		item.on("moved", move_callback);
-		const shadow: Record<string,any> = {};
+		const shadow: Record<string, any> = {};
 		shadow.x1 = item.x + item.bounds_x;
 		shadow.y1 = item.y + item.bounds_y;
 		shadow.x2 = item.x + item.bounds_x + item.bounds_width;
@@ -39,8 +43,10 @@ class LightingObject extends Component.Networked {
 		this.update_shadows_string();
 	}
 
-	uncrossed(item: Record<string,any>) {
-		if (!this.shadows.has(item)) {return;}
+	uncrossed(item: Record<string, any>) {
+		if (!this.shadows.has(item)) {
+			return;
+		}
 		const move_callback = this.move_callbacks.get(item);
 		if (move_callback) {
 			item.removeListener("moved", move_callback);
@@ -49,10 +55,14 @@ class LightingObject extends Component.Networked {
 		this.update_shadows_string();
 	}
 
-	update_shadow(item: Record<string,any>) {
-		if (!item.opacity) {return this.uncrossed(item);}
+	update_shadow(item: Record<string, any>) {
+		if (!item.opacity) {
+			return this.uncrossed(item);
+		}
 		const shadow = this.shadows.get(item);
-		if (!shadow) {return this.crossed(item);}
+		if (!shadow) {
+			return this.crossed(item);
+		}
 		shadow.x1 = item.x + item.bounds_x;
 		shadow.y1 = item.y + item.bounds_y;
 		shadow.x2 = item.x + item.bounds_x + item.bounds_width;
@@ -97,25 +107,26 @@ class LightSource extends Component {
 		this.update_queued = false;
 	}
 	update_lighting_object() {
-		if (this.update_queued) {return;}
+		if (this.update_queued) {
+			return;
+		}
 		this.update_queued = true;
 		process.nextTick(() => {
 			try {
-				if (!this[_lighting_object]) {return;}
+				if (!this[_lighting_object]) {
+					return;
+				}
 				if (
 					!this[_enabled] ||
-		!this.a.loc ||
-		(!this.a.loc.is_base_loc &&
-			(!this.a.loc.loc || !this.a.loc.loc.is_base_loc))
+					!this.a.loc ||
+					(!this.a.loc.is_base_loc && (!this.a.loc.loc || !this.a.loc.loc.is_base_loc))
 				) {
 					this[_lighting_object].loc = null;
 					this[_lighting_object].c.LightingObject.enabled = false;
 					return;
 				}
 				this[_lighting_object].glide_size =
-		this.a.base_mover === this.last_base_mover
-			? this.a.base_mover.glide_size
-			: 0;
+					this.a.base_mover === this.last_base_mover ? this.a.base_mover.glide_size : 0;
 				this[_lighting_object].fine_loc = this.a.base_mover.fine_loc;
 				this[_lighting_object].c.LightingObject.enabled = true;
 				this[_lighting_object].c.LightingObject.color = this[_color];
@@ -127,47 +138,53 @@ class LightSource extends Component {
 		});
 	}
 	/**
-  * @type {boolean}
-  * @default false
-  */
+	 * @type {boolean}
+	 * @default false
+	 */
 	get enabled() {
 		return this[_enabled];
 	}
 	set enabled(val) {
 		const old = this[_enabled];
-		if (old === val) {return;}
+		if (old === val) {
+			return;
+		}
 		this[_enabled] = val;
 		this.update_lighting_object();
 		this.emit("enabled_changed", old, val);
 	}
 
 	/**
-  * CSS color of the light
-  * @type {string}
-  * @default "#FFFFFF"
-  */
+	 * CSS color of the light
+	 * @type {string}
+	 * @default "#FFFFFF"
+	 */
 	get color() {
 		return this[_color];
 	}
 	set color(val) {
 		const old = this[_color];
-		if (old === val) {return;}
+		if (old === val) {
+			return;
+		}
 		this[_color] = val;
 		this.update_lighting_object();
 		this.emit("color_changed", old, val);
 	}
 
 	/**
-  * How many tiles away this emits light
-  * @type {number}
-  * @default 2
-  */
+	 * How many tiles away this emits light
+	 * @type {number}
+	 * @default 2
+	 */
 	get radius() {
 		return this[_radius];
 	}
 	set radius(val) {
 		const old = this[_radius];
-		if (old === val) {return;}
+		if (old === val) {
+			return;
+		}
 		this[_radius] = val;
 		this.update_lighting_object();
 		this.emit("radius_changed", old, val);
@@ -186,4 +203,4 @@ LightSource.template = {
 	},
 };
 
-module.exports.components = { LightingObject, LightSource };
+module.exports.components = {LightingObject, LightSource};

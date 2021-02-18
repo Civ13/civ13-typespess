@@ -1,14 +1,8 @@
 export{};
-const {
-	Component,
-	Atom,
-	make_watched_property,
-	chain_func,
-	has_component,
-} = require("./../../../code/game/server.js");
+const {Component, Atom, make_watched_property, chain_func, has_component} = require("./../../../code/game/server.js");
 const layers = require("../../defines/layers.js");
 const lighting = require("../../defines/lighting.js");
-const { _areas } = require("../../game/area/area.js").symbols;
+const {_areas} = require("../../game/area/area.js").symbols;
 const channels = ["lighting", "equipment", "environment"];
 
 class Apc extends Component {
@@ -28,75 +22,75 @@ class Apc extends Component {
 			this.cell.charge = this.cell.max_charge * this.start_charge;
 		}
 
-		this.a.once("map_instance_done", (map: Record<string,any>) => {
+		this.a.once("map_instance_done", (map: Record<string, any>) => {
 			if (this.area_override_id && map[_areas]) {
 				const area = map[_areas][this.area_override_id];
 				if (!area || !has_component(area, "AreaPower")) {
-					console.warn(
-						new Error(
-							`"${this.area_override_id}" (${area}) is not a valid APC area`
-						)
-					);
+					console.warn(new Error(`"${this.area_override_id}" (${area}) is not a valid APC area`));
 					return;
 				}
 				if (area.c.AreaPower.apc) {
-					console.warn(
-						new Error(`"${this.area_override_id}" already has an APC`)
-					);
+					console.warn(new Error(`"${this.area_override_id}" already has an APC`));
 					return;
 				}
 				this.area = map[_areas][this.area_override_id];
 				return;
 			}
 			for (const brush of this.a.crosses()) {
-				if (!has_component(brush, "AreaBrush")) {continue;}
+				if (!has_component(brush, "AreaBrush")) {
+					continue;
+				}
 				let area = brush.c.AreaBrush.area;
 				if (!area) {
 					area = map[_areas][brush.c.AreaBrush.map_id];
 				}
-				if (!area) {continue;}
+				if (!area) {
+					continue;
+				}
 				if (has_component(area, "AreaPower") && !area.c.AreaPower.apc) {
 					this.area = area;
 				}
 			}
 			if (!this.area) {
-				console.warn(
-					new Error(`APC at (${this.a.x}, ${this.a.y}) has no valid area!`)
-				);
+				console.warn(new Error(`APC at (${this.a.x}, ${this.a.y}) has no valid area!`));
 			}
 		});
 		this.on("area_changed", this.area_changed.bind(this));
-		this.a.c.MachineTick.process = chain_func(
-			this.a.c.MachineTick.process,
-			this.process.bind(this)
-		);
+		this.a.c.MachineTick.process = chain_func(this.a.c.MachineTick.process, this.process.bind(this));
 		make_watched_property(this, "area");
 	}
 
 	area_changed(from: any, to: any) {
-		if (from && from.c.AreaPower.apc === this.a) {from.c.AreaPower.apc = null;}
+		if (from && from.c.AreaPower.apc === this.a) {
+			from.c.AreaPower.apc = null;
+		}
 		if (to) {
-			if (to.c.AreaPower.apc)
-				{console.warn(
-					new Error(
-						`This apc at (${this.a.x},${this.a.y}) was assigned an area that already has one!`
-					)
-				);}
+			if (to.c.AreaPower.apc) {
+				console.warn(
+					new Error(`This apc at (${this.a.x},${this.a.y}) was assigned an area that already has one!`)
+				);
+			}
 			to.c.AreaPower.apc = this.a;
 			this.a.name = to.name + " APC";
 		}
 	}
 
 	get_available_power(channel = "equipment") {
-		if (!this.channel_on[channel]) {return 0;}
+		if (!this.channel_on[channel]) {
+			return 0;
+		}
 		let available_power = 0;
-		if (this.cell) {available_power += this.cell.c.PowerCell.charge * 1000;}
+		if (this.cell) {
+			available_power += this.cell.c.PowerCell.charge * 1000;
+		}
 		available_power += this.a.c.PowerNode.surplus;
 		return available_power;
 	}
 
 	use_power(amount: number, channel = "equipment") {
-		if (!this.channel_on[channel]) {return 0;}
+		if (!this.channel_on[channel]) {
+			return 0;
+		}
 
 		const powernet_surplus = this.a.c.PowerNode.surplus;
 		const to_use_powernet = Math.min(amount, powernet_surplus);
@@ -132,10 +126,7 @@ class Apc extends Component {
 		this.a.c.LightSource.enabled = true;
 		if (!this.cell) {
 			overlay_num = 0;
-		} else if (
-			this.cell.c.PowerCell.charge >=
-	this.cell.c.PowerCell.max_charge - 0.001
-		) {
+		} else if (this.cell.c.PowerCell.charge >= this.cell.c.PowerCell.max_charge - 0.001) {
 			overlay_num = 2;
 		} else if (this.last_charge > 0) {
 			overlay_num = 1;
@@ -143,16 +134,15 @@ class Apc extends Component {
 			overlay_num = 0;
 		}
 		const new_icon_state = `apco3-${overlay_num}`;
-		if (
-			!this.a.overlays.apc_charge ||
-	new_icon_state !== this.a.overlays.apc_charge.icon_state
-		) {
-			this.a.overlays.apc_charge = { icon_state: new_icon_state };
-			if (overlay_num === 0)
-				{this.a.c.LightSource.color = lighting.LIGHT_COLOR_RED;}
-			else if (overlay_num === 1)
-				{this.a.c.LightSource.color = lighting.LIGHT_COLOR_BLUE;}
-			else {this.a.c.LightSource.color = lighting.LIGHT_COLOR_GREEN;}
+		if (!this.a.overlays.apc_charge || new_icon_state !== this.a.overlays.apc_charge.icon_state) {
+			this.a.overlays.apc_charge = {icon_state: new_icon_state};
+			if (overlay_num === 0) {
+				this.a.c.LightSource.color = lighting.LIGHT_COLOR_RED;
+			} else if (overlay_num === 1) {
+				this.a.c.LightSource.color = lighting.LIGHT_COLOR_BLUE;
+			} else {
+				this.a.c.LightSource.color = lighting.LIGHT_COLOR_GREEN;
+			}
 		}
 	}
 }

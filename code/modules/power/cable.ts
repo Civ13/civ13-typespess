@@ -1,18 +1,10 @@
-
 export{};
-const {
-	Component,
-	Atom,
-	to_chat,
-	has_component,
-	chain_func,
-	dir_to,
-} = require("./../../../code/game/server.js");
+const {Component, Atom, to_chat, has_component, chain_func, dir_to} = require("./../../../code/game/server.js");
 const layers = require("../../defines/layers.js");
 const _ = require("underscore");
-const { display_watts } = require("./helpers.js");
+const {display_watts} = require("./helpers.js");
 
-const cable_colors: Record<string,any> = {
+const cable_colors: Record<string, any> = {
 	red: "#ff0000",
 	yellow: "#ffff00",
 	green: "#00aa00",
@@ -30,11 +22,7 @@ class Cable extends Component {
 		const match = /^([0-9]+)-([0-9]+)$/.exec(this.a.icon_state);
 		const d1 = +match[1];
 		const d2 = +match[2];
-		if (
-			![0, 1, 2, 4, 5, 6, 8, 9].includes(d1) ||
-	![1, 2, 4, 5, 6, 8, 9, 10].includes(d2) ||
-	d1 >= d2
-		) {
+		if (![0, 1, 2, 4, 5, 6, 8, 9].includes(d1) || ![1, 2, 4, 5, 6, 8, 9, 10].includes(d2) || d1 >= d2) {
 			console.warn(new Error(`Invalid cable icon_state ${this.a.icon_state}`));
 		}
 		this.d1 = d1;
@@ -47,28 +35,21 @@ class Cable extends Component {
 		this.a.on("moved", this.connect.bind(this));
 
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
-		this.a.c.Destructible.deconstruct = chain_func(
-			this.a.c.Destructible.deconstruct,
-			this.deconstruct.bind(this)
-		);
+		this.a.c.Destructible.deconstruct = chain_func(this.a.c.Destructible.deconstruct, this.deconstruct.bind(this));
 	}
 
 	attack_by(prev: any, item: any, user: any) {
-		if (
-			has_component(item, "Tool") &&
-	item.c.Tool.can_use("Wirecutters", user)
-		) {
+		if (has_component(item, "Tool") && item.c.Tool.can_use("Wirecutters", user)) {
 			item.c.Tool.used("Wirecutters");
 			this.a.c.Destructible.deconstruct(true);
 			return true;
 		}
 		if (has_component(item, "Tool") && item.c.Tool.can_use("Multitool", user)) {
-			if (this.powernet && this.powernet.avail > 0)
-				{to_chat`<span class='danger'>${display_watts(
-					this.powernet.view_avail
-				)} in power network.`(user);}
-			else
-				{to_chat`<span class='danger'>This cable is not powered.</span>`(user);}
+			if (this.powernet && this.powernet.avail > 0) {
+				to_chat`<span class='danger'>${display_watts(this.powernet.view_avail)} in power network.`(user);
+			} else {
+				to_chat`<span class='danger'>This cable is not powered.</span>`(user);
+			}
 			return true;
 		}
 		return prev();
@@ -81,8 +62,8 @@ class Cable extends Component {
 				components: ["StackCable"],
 				vars: {
 					components: {
-						StackCable: { cable_color: this.cable_color },
-						Stack: { amount },
+						StackCable: {cable_color: this.cable_color},
+						Stack: {amount},
 					},
 				},
 			});
@@ -93,16 +74,25 @@ class Cable extends Component {
 
 	get_end(n: number) {
 		// where n is 1 or 2 for d1 and d2
-		if (n !== 1 && n !== 2)
-			{throw new Error(`Invalid n value ${n}, should be 1 or 2`);}
+		if (n !== 1 && n !== 2) {
+			throw new Error(`Invalid n value ${n}, should be 1 or 2`);
+		}
 		const dn = n === 2 ? this.d2 : this.d1;
 
 		let x = this.a.x;
 		let y = this.a.y;
-		if (dn & 1) {y += this.a.bounds_y + this.a.bounds_height - 0.5;}
-		if (dn & 2) {y += this.a.bounds_y - 0.5;}
-		if (dn & 4) {x += this.a.bounds_x + this.a.bounds_width - 0.5;}
-		if (dn & 8) {x += this.a.bounds_x - 0.5;}
+		if (dn & 1) {
+			y += this.a.bounds_y + this.a.bounds_height - 0.5;
+		}
+		if (dn & 2) {
+			y += this.a.bounds_y - 0.5;
+		}
+		if (dn & 4) {
+			x += this.a.bounds_x + this.a.bounds_width - 0.5;
+		}
+		if (dn & 8) {
+			x += this.a.bounds_x - 0.5;
+		}
 
 		return [x, y];
 	}
@@ -110,20 +100,32 @@ class Cable extends Component {
 	disconnect() {
 		for (const cable of this.cables) {
 			const idx = cable.c.Cable.cables.indexOf(this.a);
-			if (idx !== -1) {cable.c.Cable.cables.splice(idx, 1);}
+			if (idx !== -1) {
+				cable.c.Cable.cables.splice(idx, 1);
+			}
 		}
 		for (const node of this.nodes) {
-			if (node.c.PowerNode.cable !== this.a) {continue;}
-			if (this.powernet) {this.powernet.nodes.delete(node);}
-			if (node.powernet === this.powernet) {node.powernet = null;}
+			if (node.c.PowerNode.cable !== this.a) {
+				continue;
+			}
+			if (this.powernet) {
+				this.powernet.nodes.delete(node);
+			}
+			if (node.powernet === this.powernet) {
+				node.powernet = null;
+			}
 			node.c.PowerNode.cable = null;
 		}
 		const cables_to_recalculate = [...this.cables];
 		this.cables.length = 0;
 		this.nodes.length = 0;
-		if (this.powernet) {this.powernet.cables.delete(this.a);}
+		if (this.powernet) {
+			this.powernet.cables.delete(this.a);
+		}
 		this.powernet = null;
-		if (cables_to_recalculate.length < 2) {return;} // there's nothing that could possibly have gotten disconnected.
+		if (cables_to_recalculate.length < 2) {
+			return;
+		} // there's nothing that could possibly have gotten disconnected.
 		// Alright let's repropogate all the cables!
 		while (cables_to_recalculate.length > 1) {
 			const stack = [cables_to_recalculate.pop()];
@@ -133,31 +135,40 @@ class Cable extends Component {
 				const next = stack.pop();
 				connected.add(next);
 				for (const cable of next.c.Cable.cables) {
-					if (!connected.has(cable)) {stack.push(cable);}
+					if (!connected.has(cable)) {
+						stack.push(cable);
+					}
 				}
 				const idx = cables_to_recalculate.indexOf(next);
 				if (idx !== -1) {
 					// Ooooh there's a loop. Let's take that out of the list.
 					cables_to_recalculate.splice(idx, 1);
-					if (!cables_to_recalculate.length) {return;} // Nice, we're done here.
+					if (!cables_to_recalculate.length) {
+						return;
+					} // Nice, we're done here.
 				}
 			}
-
 		}
 	}
 
 	connect() {
 		this.disconnect();
-		if (!this.a.loc) {return;}
+		if (!this.a.loc) {
+			return;
+		}
 		let new_powernet = null;
 		for (const loc of this.a.marginal_locs()) {
 			for (const cable of loc.partial_contents) {
 				if (this.does_connect_to(cable)) {
-					if (this.cables.includes(cable)) {continue;}
+					if (this.cables.includes(cable)) {
+						continue;
+					}
 					this.cables.push(cable);
 					cable.c.Cable.cables.push(this.a);
 					const other_powernet = cable.c.Cable.powernet;
-					if (other_powernet === new_powernet) {continue;}
+					if (other_powernet === new_powernet) {
+						continue;
+					}
 					if (!new_powernet) {
 						new_powernet = other_powernet;
 					} else if (other_powernet.cables.size > new_powernet.cables.size) {
@@ -171,26 +182,32 @@ class Cable extends Component {
 		}
 		if (this.d1 === 0) {
 			for (const crosser of this.a.crosses()) {
-				if (!has_component(crosser, "PowerNode")) {continue;}
-				if (crosser.c.PowerNode.cable) {continue;}
+				if (!has_component(crosser, "PowerNode")) {
+					continue;
+				}
+				if (crosser.c.PowerNode.cable) {
+					continue;
+				}
 				this.nodes.push(crosser);
 				crosser.c.PowerNode.cable = this.a;
 			}
 		}
 	}
 
-	does_connect_to(other: Record<string,any>) {
-		if (other === this.a) {return false;}
-		if (!has_component(other, "Cable")) {return false;}
+	does_connect_to(other: Record<string, any>) {
+		if (other === this.a) {
+			return false;
+		}
+		if (!has_component(other, "Cable")) {
+			return false;
+		}
 		for (const n_this of [1, 2]) {
 			for (const n_other of [1, 2]) {
 				const end_this = this.get_end(n_this);
 				const end_other = other.c.Cable.get_end(n_other);
-				if (
-					Math.abs(end_this[0] - end_other[0]) < 0.001 &&
-		Math.abs(end_this[1] - end_other[1]) < 0.0001
-				)
-					{return true;}
+				if (Math.abs(end_this[0] - end_other[0]) < 0.001 && Math.abs(end_this[1] - end_other[1]) < 0.0001) {
+					return true;
+				}
 			}
 		}
 		return false;
@@ -213,8 +230,7 @@ Cable.template = {
 				anchored: true,
 			},
 			Examine: {
-				desc:
-		"A flexible, superconducting insulated cable for heavy-duty power transfer.",
+				desc: "A flexible, superconducting insulated cable for heavy-duty power transfer.",
 			},
 		},
 		name: "power cable",
@@ -224,9 +240,8 @@ Cable.template = {
 	},
 };
 
-Cable.update_map_instance = function (instobj: Record<string,any>) {
-	instobj.client_atom.color =
-	cable_colors[instobj.computed_vars.components.Cable.cable_color];
+Cable.update_map_instance = function (instobj: Record<string, any>) {
+	instobj.client_atom.color = cable_colors[instobj.computed_vars.components.Cable.cable_color];
 };
 
 class StackCable extends Component {
@@ -234,18 +249,18 @@ class StackCable extends Component {
 		super(atom, template);
 		this.a.c.Stack.on("amount_changed", this.amount_changed.bind(this));
 		this.amount_changed();
-		if (this.cable_color === "random")
-			{this.cable_color = _.sample([...Object.keys(cable_colors)]);}
+		if (this.cable_color === "random") {
+			this.cable_color = _.sample([...Object.keys(cable_colors)]);
+		}
 		this.a.color = cable_colors[this.cable_color];
-		this.a.c.Item.pre_attack = chain_func(
-			this.a.c.Item.pre_attack,
-			this.pre_attack.bind(this)
-		);
+		this.a.c.Item.pre_attack = chain_func(this.a.c.Item.pre_attack, this.pre_attack.bind(this));
 		this.a.c.Item.inhand_icon_state = `coil_${this.cable_color}`;
 	}
 
-	pre_attack(prev: any, target: Record<string,any>, user: Record<string,any>) {
-		if (this.a.c.Stack.amount < 1) {return true;}
+	pre_attack(prev: any, target: Record<string, any>, user: Record<string, any>) {
+		if (this.a.c.Stack.amount < 1) {
+			return true;
+		}
 		// The cable we will be merging with
 		let target_cable = null;
 		// Get the dir from turf to user, but if that's 0 (they're the same location) just use the user's dir
@@ -253,13 +268,11 @@ class StackCable extends Component {
 		if (!target_dir) {
 			target_dir = user.dir;
 		}
-		if (has_component(target, "Cable")) {target_cable = target;}
+		if (has_component(target, "Cable")) {
+			target_cable = target;
+		}
 
-		if (
-			target_cable &&
-	target_cable.c.Cable.d1 === 0 &&
-	target_dir !== target_cable.c.Cable.d2
-		) {
+		if (target_cable && target_cable.c.Cable.d1 === 0 && target_dir !== target_cable.c.Cable.d2) {
 			const orig_dir = target_cable.c.Cable.d2;
 			const target_cable_loc = target_cable.fine_loc;
 			target_cable.destroy();
@@ -271,10 +284,7 @@ class StackCable extends Component {
 							cable_color: this.cable_color,
 						},
 					},
-					icon_state: `${Math.min(orig_dir, target_dir)}-${Math.max(
-						orig_dir,
-						target_dir
-					)}`,
+					icon_state: `${Math.min(orig_dir, target_dir)}-${Math.max(orig_dir, target_dir)}`,
 				},
 			});
 			new_cable.loc = target_cable_loc;
@@ -298,7 +308,7 @@ StackCable.template = {
 				cable_color: "red",
 			},
 			Item: {
-				materials: { metal: 10, glass: 5 },
+				materials: {metal: 10, glass: 5},
 				attack_verb: ["whipped", "lashed", "disciplined", "flogged"],
 				conduct: true,
 				size: 2,
@@ -331,13 +341,14 @@ StackCable.template = {
 StackCable.depends = ["Stack", "BeltItem"];
 StackCable.loadBefore = ["Stack", "BeltItem"];
 
-StackCable.update_map_instance = function (instobj: Record<string,any>) {
+StackCable.update_map_instance = function (instobj: Record<string, any>) {
 	const cc = instobj.computed_vars.components.StackCable.cable_color;
-	if (cc !== "random") {instobj.client_atom.color = cable_colors[cc];}
-	else {
+	if (cc !== "random") {
+		instobj.client_atom.color = cable_colors[cc];
+	} else {
 		instobj.client_atom.color = "#000000";
 	}
 };
 
-module.exports.components = { Cable, StackCable };
+module.exports.components = {Cable, StackCable};
 module.exports.cable_colors = cable_colors;

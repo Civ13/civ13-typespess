@@ -1,11 +1,5 @@
 export{};
-const {
-	Component,
-	Sound,
-	visible_message,
-	to_chat,
-	has_component,
-} = require("./../../../../../code/game/server.js");
+const {Component, Sound, visible_message, to_chat, has_component} = require("./../../../../../code/game/server.js");
 
 class Handcuffs extends Component {
 	constructor(atom: any, template: any) {
@@ -13,13 +7,10 @@ class Handcuffs extends Component {
 		this.a.c.Item.attack = this.attack.bind(this);
 	}
 
-	attack(target: Record<string,any>, user: Record<string,any>) {
-		if (
-			this.used ||
-	!has_component(target, "MobInventory") ||
-	!target.c.MobInventory.check_can_handcuff(user)
-		)
-			{return;}
+	attack(target: Record<string, any>, user: Record<string, any>) {
+		if (this.used || !has_component(target, "MobInventory") || !target.c.MobInventory.check_can_handcuff(user)) {
+			return;
+		}
 		if (!target.c.MobInventory.handcuffed) {
 			visible_message`<span class='danger'>The ${user} is trying to put the ${this.a} on the ${target}!</span>`
 				.self`<span class='userdanger'>The ${user} is trying to put the ${this.a} on the ${target}!</span>`.emit_from(
@@ -31,11 +22,9 @@ class Handcuffs extends Component {
 				vary: true,
 				range: 5,
 			}).emit_from(target);
-			user.c.MobInventory.do_after({ target, delay: 3000 }).then((success: any) => {
+			user.c.MobInventory.do_after({target, delay: 3000}).then((success: any) => {
 				if (!success) {
-					to_chat`<span class='warning'>You fail to handcuff the ${target}</span>`(
-						user
-					);
+					to_chat`<span class='warning'>You fail to handcuff the ${target}</span>`(user);
 					return;
 				}
 				this.apply(target, user);
@@ -43,23 +32,31 @@ class Handcuffs extends Component {
 		}
 	}
 
-	apply(target: Record<string,any>, user: Record<string,any>) {
-		if (
-			this.used ||
-	!target.c.MobInventory.check_can_handcuff(user) ||
-	target.c.MobInventory.handcuffed
-		)
-			{return;}
-		if (this.a.c.Item.slot && !this.a.c.Item.slot.can_unequip) {return;}
+	apply(target: Record<string, any>, user: Record<string, any>) {
+		if (this.used || !target.c.MobInventory.check_can_handcuff(user) || target.c.MobInventory.handcuffed) {
+			return;
+		}
+		if (this.a.c.Item.slot && !this.a.c.Item.slot.can_unequip) {
+			return;
+		}
 		if (this.single_use) {
-			if (this.used_icon_state) {this.a.icon_state = this.used_icon_state;}
-			if (this.used_inhand_icon_state)
-				{this.a.c.Item.inhand_icon_state = this.used_inhand_icon_state;}
-			if (this.used_name) {this.a.name = this.used_name;}
-			if (this.used_desc) {this.a.c.Examine.desc = this.used_desc;}
+			if (this.used_icon_state) {
+				this.a.icon_state = this.used_icon_state;
+			}
+			if (this.used_inhand_icon_state) {
+				this.a.c.Item.inhand_icon_state = this.used_inhand_icon_state;
+			}
+			if (this.used_name) {
+				this.a.name = this.used_name;
+			}
+			if (this.used_desc) {
+				this.a.c.Examine.desc = this.used_desc;
+			}
 			this.used = true;
 		}
-		if (this.a.c.Item.slot) {this.a.c.Item.slot.item = null;}
+		if (this.a.c.Item.slot) {
+			this.a.c.Item.slot.item = null;
+		}
 		this.a.loc = target;
 		target.c.MobInventory.handcuffed = this.a;
 	}
@@ -114,5 +111,4 @@ Handcuffs.template = {
 	},
 };
 
-
-module.exports.components = { Handcuffs };
+module.exports.components = {Handcuffs};

@@ -1,11 +1,7 @@
 export{};
-const {
-	Component,
-	chain_func,
-	make_watched_property,
-} = require("./../../../../../../code/game/server.js");
+const {Component, chain_func, make_watched_property} = require("./../../../../../../code/game/server.js");
 
-const { skin_tones } = require("./helpers.js");
+const {skin_tones} = require("./helpers.js");
 const sprite_accessories = require("../human/sprite_accessories.js");
 
 class BodyPartSkinTone extends Component {
@@ -16,10 +12,7 @@ class BodyPartSkinTone extends Component {
 			this.a.c.BodyPart.get_main_overlay,
 			this.get_main_overlay.bind(this)
 		);
-		this.a.c.BodyPart.apply_prefs = chain_func(
-			this.a.c.BodyPart.apply_prefs,
-			this.apply_prefs.bind(this)
-		);
+		this.a.c.BodyPart.apply_prefs = chain_func(this.a.c.BodyPart.apply_prefs, this.apply_prefs.bind(this));
 		make_watched_property(this, "skin_tone");
 		this.on("skin_tone_changed", () => {
 			this.a.c.BodyPart.update_overlays();
@@ -56,14 +49,8 @@ BodyPartSkinTone.template = {
 class BodyPartHumanHair extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.c.BodyPart.apply_prefs = chain_func(
-			this.a.c.BodyPart.apply_prefs,
-			this.apply_prefs.bind(this)
-		);
-		this.a.c.BodyPart.apply_overlays = chain_func(
-			this.a.c.BodyPart.apply_overlays,
-			this.apply_overlays.bind(this)
-		);
+		this.a.c.BodyPart.apply_prefs = chain_func(this.a.c.BodyPart.apply_prefs, this.apply_prefs.bind(this));
+		this.a.c.BodyPart.apply_overlays = chain_func(this.a.c.BodyPart.apply_overlays, this.apply_overlays.bind(this));
 		this.a.c.BodyPart.remove_overlays = chain_func(
 			this.a.c.BodyPart.remove_overlays,
 			this.remove_overlays.bind(this)
@@ -89,18 +76,21 @@ class BodyPartHumanHair extends Component {
 		}
 	}
 
-	get_main_overlay(atm: Record<string,any> = null) {
+	get_main_overlay(atm: Record<string, any> = null) {
 		let icodir = 1;
-		if (atm) {icodir = atm.dir;}
+		if (atm) {
+			icodir = atm.dir;
+		}
 		const hair_obj = sprite_accessories.hair[this.hair_style];
-		if (icodir ===1)
-			{icodir = 2;}
-		else if (icodir ===2)
-			{icodir = 1;}
-		else if (icodir ===4)
-			{icodir = 3;}
-		else if (icodir ===8)
-			{icodir = 4;}
+		if (icodir === 1) {
+			icodir = 2;
+		} else if (icodir === 2) {
+			icodir = 1;
+		} else if (icodir === 4) {
+			icodir = 3;
+		} else if (icodir === 8) {
+			icodir = 4;
+		}
 
 		return {
 			icon: `icons/mob/human_face/${hair_obj.icon_state}/${hair_obj.icon_state}-dir${icodir}.png`,
@@ -109,7 +99,7 @@ class BodyPartHumanHair extends Component {
 			overlay_layer: 14,
 		};
 	}
-	remove_overlays(prev: any, atom: Record<string,any>) {
+	remove_overlays(prev: any, atom: Record<string, any>) {
 		prev();
 		atom.overlays[`limb_${this.a.c.BodyPart.body_zone}_brute`] = null;
 	}
@@ -135,4 +125,4 @@ BodyPartHumanHair.template = {
 	},
 };
 
-module.exports.components = { BodyPartSkinTone, BodyPartHumanHair };
+module.exports.components = {BodyPartSkinTone, BodyPartHumanHair};

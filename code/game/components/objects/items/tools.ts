@@ -1,14 +1,8 @@
 export{};
-const {
-	Component,
-	Sound,
-	has_component,
-	chain_func,
-	to_chat,
-} = require("./../../../../../code/game/server.js");
+const {Component, Sound, has_component, chain_func, to_chat} = require("./../../../../../code/game/server.js");
 const _ = require("underscore");
 
-const _is_on:any = Symbol("_is_on");
+const _is_on: any = Symbol("_is_on");
 
 class Tool extends Component {
 	constructor(atom: any, template: any) {
@@ -19,10 +13,9 @@ class Tool extends Component {
 		return has_component(this.a, cname);
 	}
 	used() {
-		if (this.usesound)
-			{new Sound(this.a.server, { path: this.usesound, vary: true }).emit_from(
-				this.a
-			);}
+		if (this.usesound) {
+			new Sound(this.a.server, {path: this.usesound, vary: true}).emit_from(this.a);
+		}
 	}
 }
 
@@ -43,7 +36,7 @@ Tool.template = {
 			},
 		},
 		icon: "icons/obj/tools/",
-		icon_state: "bonehatchet"
+		icon_state: "bonehatchet",
 	},
 };
 
@@ -116,8 +109,9 @@ Screwdriver.template = {
 class Wirecutters extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		if (this.random_color)
-			{this.a.icon_state = `cutters_${_.sample(["yellow", "red"])}`;}
+		if (this.random_color) {
+			this.a.icon_state = `cutters_${_.sample(["yellow", "red"])}`;
+		}
 	}
 }
 
@@ -188,9 +182,13 @@ Axe.template = {
 		name: "hatchet",
 	},
 	can_use(prev: any, tool: string) {
-		if (!prev()) {return false;}
-		if (tool !== "Axe") {return true;}
-	}
+		if (!prev()) {
+			return false;
+		}
+		if (tool !== "Axe") {
+			return true;
+		}
+	},
 };
 
 class Crowbar extends Component {
@@ -210,13 +208,7 @@ Crowbar.template = {
 			},
 			Item: {
 				force: 5,
-				attack_verb: [
-					"attacked",
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"whacked",
-				],
+				attack_verb: ["attacked", "bashed", "battered", "bludgeoned", "whacked"],
 				size: 2,
 			},
 			Tangible: {
@@ -224,7 +216,7 @@ Crowbar.template = {
 			},
 			Examine: {
 				desc:
-		"A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors.",
+					"A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors.",
 			},
 		},
 		icon_state: "crowbar",
@@ -238,32 +230,23 @@ class WeldingTool extends Component {
 
 		this.a.c.ReagentHolder.on("removed", this.update_fuel.bind(this));
 		this.a.c.ReagentHolder.on("added", this.update_fuel.bind(this));
-		this.a.c.Item.attack_self = chain_func(
-			this.a.c.Item.attack_self,
-			this.attack_self.bind(this)
-		);
-		this.a.c.Tool.can_use = chain_func(
-			this.a.c.Tool.can_use,
-			this.can_use.bind(this)
-		);
+		this.a.c.Item.attack_self = chain_func(this.a.c.Item.attack_self, this.attack_self.bind(this));
+		this.a.c.Tool.can_use = chain_func(this.a.c.Tool.can_use, this.can_use.bind(this));
 		this.update_fuel();
 	}
 
 	update_fuel() {
 		this.a.overlays.fuel_indicator = {
-			icon_state: `[parent]${
-				Math.ceil(
-					(this.get_fuel() / this.a.c.ReagentHolder.maximum_volume) * 4
-				) * 25
-			}`,
+			icon_state: `[parent]${Math.ceil((this.get_fuel() / this.a.c.ReagentHolder.maximum_volume) * 4) * 25}`,
 		};
 	}
 
 	update_torch() {
-		if (this.a.overlays.welder_on && !this.is_on)
-			{this.a.overlays.welder_on = null;}
-		else if (!this.a.overlays.welder_on && this.is_on)
-			{this.a.overlays.welder_on = { icon_state: "[parent]-on" };}
+		if (this.a.overlays.welder_on && !this.is_on) {
+			this.a.overlays.welder_on = null;
+		} else if (!this.a.overlays.welder_on && this.is_on) {
+			this.a.overlays.welder_on = {icon_state: "[parent]-on"};
+		}
 	}
 
 	attack_self(/*prev, user*/) {
@@ -271,28 +254,30 @@ class WeldingTool extends Component {
 	}
 
 	can_use(prev: any, tool: string) {
-		if (!prev()) {return false;}
-		if (tool !== "WeldingTool") {return true;}
+		if (!prev()) {
+			return false;
+		}
+		if (tool !== "WeldingTool") {
+			return true;
+		}
 		return this.is_on && this.get_fuel() > 0;
 	}
 
 	use_fuel(amount: number, user: any) {
-		if (!this.a.c.Tool.can_use("WeldingTool", user)) {return false;}
+		if (!this.a.c.Tool.can_use("WeldingTool", user)) {
+			return false;
+		}
 		if (this.get_fuel() >= amount) {
 			this.a.c.ReagentHolder.remove("WeldingFuel", amount);
 			return true;
 		} else {
-			to_chat`<span class='warning'>You need more welding fuel to complete this task!</span>`(
-				user
-			);
+			to_chat`<span class='warning'>You need more welding fuel to complete this task!</span>`(user);
 			return false;
 		}
 	}
 
 	can_use_fuel(amount: number, user: any) {
-		return (
-			this.get_fuel() >= amount && this.a.c.Tool.can_use("WeldingTool", user)
-		);
+		return this.get_fuel() >= amount && this.a.c.Tool.can_use("WeldingTool", user);
 	}
 
 	get_fuel() {
@@ -325,7 +310,7 @@ WeldingTool.template = {
 			},
 			ReagentHolder: {
 				maximum_volume: 20,
-				init_reagents: { WeldingFuel: 123456789 },
+				init_reagents: {WeldingFuel: 123456789},
 				reagents_visible: true,
 			},
 			Item: {

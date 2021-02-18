@@ -1,13 +1,14 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 const _ = require("underscore");
 
 class HandItem extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		if (this.siemens_coefficient instanceof Array)
-			{this.siemens_coefficient = _.sample(this.siemens_coefficient);}
+		if (this.siemens_coefficient instanceof Array) {
+			this.siemens_coefficient = _.sample(this.siemens_coefficient);
+		}
 	}
 }
 
@@ -25,11 +26,11 @@ HandItem.template = {
 		},
 		gender: "plural",
 		icon: "icons/mob/under/gloves/",
-		icon_state: "gray"
+		icon_state: "gray",
 	},
 };
 
 HandItem.depends = ["WearableItem"];
 HandItem.loadBefore = ["WearableItem"];
 
-module.exports.components = { HandItem };
+module.exports.components = {HandItem};

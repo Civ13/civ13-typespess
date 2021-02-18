@@ -1,5 +1,5 @@
 export{};
-const { Atom, dropdown } = require("../../client/index.js");
+const {Atom, dropdown} = require("../../client/index.js");
 
 const job_pref_settings = ["NEVER", "Low", "Medium", "High"];
 const job_pref_colors = ["red", "orange", "green", "slateblue"];
@@ -10,8 +10,8 @@ class PreferencesPanel {
 	sprite_accessories: any;
 	job_preferences: any;
 	job_metas: any;
-	hair_colors: Record<string,any>;
-	skin_tones: Record<string,any>;
+	hair_colors: Record<string, any>;
+	skin_tones: Record<string, any>;
 	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.header_obj.classList.add("center");
@@ -76,7 +76,7 @@ class PreferencesPanel {
 <input type="range" min="1" max="16" step="1" class="shadow-quality-slider" value=8>
 
 </div>`;
-		[...this.panel.$$(".button[data-radio-group=\"tab\"]")].forEach((item) => {
+		[...this.panel.$$('.button[data-radio-group="tab"]')].forEach((item) => {
 			item.addEventListener("click", () => {
 				this.show_tab(item.dataset.tab);
 			});
@@ -84,13 +84,15 @@ class PreferencesPanel {
 
 		const name_field = this.panel.$(".property-name");
 		name_field.addEventListener("input", () => {
-			this.panel.send_message({ char_prefs: { name: name_field.value } });
+			this.panel.send_message({char_prefs: {name: name_field.value}});
 		});
 
 		const gender_dropdown = this.panel.$(".property-gender");
-		gender_dropdown.addEventListener("click", (e: { defaultPrevented: any; }) => {
-			if (e.defaultPrevented) {return;}
-			const genders = { male: "Male", female: "Female" };
+		gender_dropdown.addEventListener("click", (e: {defaultPrevented: any}) => {
+			if (e.defaultPrevented) {
+				return;
+			}
+			const genders = {male: "Male", female: "Female"};
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			for (const [id, name] of Object.entries(genders)) {
@@ -101,7 +103,7 @@ class PreferencesPanel {
 				}
 				item.textContent = name;
 				item.addEventListener("click", (e) => {
-					this.panel.send_message({ char_prefs: { gender: id } });
+					this.panel.send_message({char_prefs: {gender: id}});
 					e.preventDefault();
 					this.char_prefs.gender = id;
 					gender_dropdown.textContent = name;
@@ -113,13 +115,15 @@ class PreferencesPanel {
 		});
 
 		const hair_dropdown = this.panel.$(".property-hair");
-		hair_dropdown.addEventListener("click", (e: { defaultPrevented: any; }) => {
-			if (e.defaultPrevented) {return;}
+		hair_dropdown.addEventListener("click", (e: {defaultPrevented: any}) => {
+			if (e.defaultPrevented) {
+				return;
+			}
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
 			for (const [id, tobj] of Object.entries(this.sprite_accessories.hair)) {
-				const obj: Record<string,any> = tobj;
+				const obj: Record<string, any> = tobj;
 				const item = document.createElement("div");
 				item.classList.add("button", "dropdown-item");
 				item.style.height = "64px";
@@ -139,7 +143,7 @@ class PreferencesPanel {
 				item.appendChild(preview);
 				item.appendChild(text);
 				item.addEventListener("click", (e) => {
-					this.panel.send_message({ char_prefs: { hair_style: id } });
+					this.panel.send_message({char_prefs: {hair_style: id}});
 					e.preventDefault();
 					this.char_prefs.hair_style = id;
 					hair_dropdown.textContent = obj.name;
@@ -148,12 +152,16 @@ class PreferencesPanel {
 				menu.appendChild(item);
 			}
 			dropdown(hair_dropdown, menu);
-			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "auto" });}
+			if (sel_elem) {
+				sel_elem.scrollIntoView({behavior: "auto"});
+			}
 		});
 
 		const skin_tone_dropdown = this.panel.$(".property-skin_tone");
-		skin_tone_dropdown.addEventListener("click", (e: { defaultPrevented: any; }) => {
-			if (e.defaultPrevented) {return;}
+		skin_tone_dropdown.addEventListener("click", (e: {defaultPrevented: any}) => {
+			if (e.defaultPrevented) {
+				return;
+			}
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
@@ -168,7 +176,7 @@ class PreferencesPanel {
 				const text = document.createElement("span");
 				text.textContent = id;
 				const preview = this.create_preview({
-					prefs_modifier: (prefs: { skin_tone: string; }) => {
+					prefs_modifier: (prefs: {skin_tone: string}) => {
 						prefs.skin_tone = id;
 					},
 				});
@@ -177,7 +185,7 @@ class PreferencesPanel {
 				item.appendChild(preview);
 				item.appendChild(text);
 				item.addEventListener("click", (e) => {
-					this.panel.send_message({ char_prefs: { skin_tone: id } });
+					this.panel.send_message({char_prefs: {skin_tone: id}});
 					e.preventDefault();
 					this.char_prefs.skin_tone = id;
 					skin_tone_dropdown.textContent = id;
@@ -186,11 +194,15 @@ class PreferencesPanel {
 				menu.appendChild(item);
 			}
 			dropdown(skin_tone_dropdown, menu);
-			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "auto" });}
+			if (sel_elem) {
+				sel_elem.scrollIntoView({behavior: "auto"});
+			}
 		});
 		const hair_color_dropdown = this.panel.$(".property-hair_color");
-		hair_color_dropdown.addEventListener("click", (e: { defaultPrevented: any; }) => {
-			if (e.defaultPrevented) {return;}
+		hair_color_dropdown.addEventListener("click", (e: {defaultPrevented: any}) => {
+			if (e.defaultPrevented) {
+				return;
+			}
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			let sel_elem = null;
@@ -208,7 +220,7 @@ class PreferencesPanel {
 				text.textContent = id;
 				item.appendChild(text);
 				item.addEventListener("click", (e) => {
-					this.panel.send_message({ char_prefs: { hair_color: this.hair_colors[id] } });
+					this.panel.send_message({char_prefs: {hair_color: this.hair_colors[id]}});
 					e.preventDefault();
 					this.char_prefs.hair_color = this.hair_colors[id];
 					hair_color_dropdown.textContent = id;
@@ -218,12 +230,14 @@ class PreferencesPanel {
 				menu.appendChild(item);
 			}
 			dropdown(hair_color_dropdown, menu);
-			if (sel_elem) {sel_elem.scrollIntoView({ behavior: "auto" });}
+			if (sel_elem) {
+				sel_elem.scrollIntoView({behavior: "auto"});
+			}
 		});
 
-		this.panel.$(".property-age").addEventListener("input", (e: { target: { value: string | number; }; }) => {
+		this.panel.$(".property-age").addEventListener("input", (e: {target: {value: string | number}}) => {
 			const age = Math.round(+e.target.value);
-			this.panel.send_message({ char_prefs: { age } });
+			this.panel.send_message({char_prefs: {age}});
 		});
 
 		const shadow_quality_slider = this.panel.$(".shadow-quality-slider");
@@ -249,9 +263,13 @@ class PreferencesPanel {
 			item.style.display = "none";
 		});
 		const tab_obj = this.panel.$(`.tabcontent[data-tab='${tab}']`);
-		if (tab_obj) {tab_obj.style.display = "block";}
+		if (tab_obj) {
+			tab_obj.style.display = "block";
+		}
 	}
-	msg_char_prefs(msg: { char_prefs: { name: any; gender: string; age: any; skin_tone: any; hair_color: any; hair_style: string | number; }; }) {
+	msg_char_prefs(msg: {
+		char_prefs: {name: any; gender: string; age: any; skin_tone: any; hair_color: any; hair_style: string | number};
+	}) {
 		Object.assign(this.char_prefs, msg.char_prefs);
 		if (msg.char_prefs.name) {
 			this.panel.$(".property-name").value = msg.char_prefs.name;
@@ -267,20 +285,24 @@ class PreferencesPanel {
 			this.panel.$(".property-skin_tone").textContent = msg.char_prefs.skin_tone;
 		}
 		if (msg.char_prefs.hair_color) {
-			this.panel.$(
-				".property-hair_color"
-			).style.backgroundColor = msg.char_prefs.hair_color;
+			this.panel.$(".property-hair_color").style.backgroundColor = msg.char_prefs.hair_color;
 		}
 		if (msg.char_prefs.hair_style) {
-			this.panel.$(
-				".property-hair"
-			).textContent = this.sprite_accessories.hair[
-				msg.char_prefs.hair_style
-			].name;
+			this.panel.$(".property-hair").textContent = this.sprite_accessories.hair[msg.char_prefs.hair_style].name;
 		}
 		this.update_previews();
 	}
-	handle_message(msg: { sprite_accessories: any; skin_tones: any; hair_colors: any; set_tab: any; char_prefs: any; name_valid: any; name_correction: any[]; job_preferences: any; job_metas: any; }) {
+	handle_message(msg: {
+		sprite_accessories: any;
+		skin_tones: any;
+		hair_colors: any;
+		set_tab: any;
+		char_prefs: any;
+		name_valid: any;
+		name_correction: any[];
+		job_preferences: any;
+		job_metas: any;
+	}) {
 		if (msg.sprite_accessories) {
 			this.sprite_accessories = msg.sprite_accessories;
 		}
@@ -294,49 +316,57 @@ class PreferencesPanel {
 			[...this.panel.$$(".button[data-radio-group='tab']")].forEach((item) => {
 				item.classList.remove("selected");
 			});
-			this.panel
-				.$(`.button[data-radio-group='tab'][data-tab='${msg.set_tab}']`)
-				.classList.add("selected");
+			this.panel.$(`.button[data-radio-group='tab'][data-tab='${msg.set_tab}']`).classList.add("selected");
 			this.show_tab(msg.set_tab);
 		}
-		if (msg.char_prefs) {this.msg_char_prefs(msg);}
+		if (msg.char_prefs) {
+			this.msg_char_prefs(msg);
+		}
 
-		if (Object.prototype.hasOwnProperty.call(msg,"name_valid")) {
+		if (Object.prototype.hasOwnProperty.call(msg, "name_valid")) {
 			const elem = this.panel.$(".property-name");
-			if (msg.name_valid) {elem.classList.remove("red");}
-			else {elem.classList.add("red");}
+			if (msg.name_valid) {
+				elem.classList.remove("red");
+			} else {
+				elem.classList.add("red");
+			}
 		}
 		if (msg.name_correction) {
 			const elem = this.panel.$(".property-name");
-			if (elem.value === msg.name_correction[0])
-				{elem.value = msg.name_correction[1];}
+			if (elem.value === msg.name_correction[0]) {
+				elem.value = msg.name_correction[1];
+			}
 		}
-		
-		if (msg.job_preferences) {this.handle_prefs(msg);}
+
+		if (msg.job_preferences) {
+			this.handle_prefs(msg);
+		}
 	}
-	handle_prefs(msg: Record<string,any>) {
+	handle_prefs(msg: Record<string, any>) {
 		this.job_preferences = msg.job_preferences;
-		if (msg.job_metas) {this.job_metas = msg.job_metas;}
+		if (msg.job_metas) {
+			this.job_metas = msg.job_metas;
+		}
 		// alright now we order the jobs.
 		const job_order = [...Object.keys(this.job_metas)];
 		job_order.sort((a, b) => {
 			const ameta = this.job_metas[a];
 			const bmeta = this.job_metas[b];
-			const department_diff = department_order.indexOf(ameta.departments[0] || "misc") - department_order.indexOf(bmeta.departments[0] || "misc");
-			if (department_diff !== 0) {return department_diff;}
-			if (
-				ameta.departments.includes("command") && !bmeta.departments.includes("command")
-			)
-				{return -1;}
-			if (
-				!ameta.departments.includes("command") && bmeta.departments.includes("command")
-			)
-				{return 1;}
+			const department_diff =
+				department_order.indexOf(ameta.departments[0] || "misc") -
+				department_order.indexOf(bmeta.departments[0] || "misc");
+			if (department_diff !== 0) {
+				return department_diff;
+			}
+			if (ameta.departments.includes("command") && !bmeta.departments.includes("command")) {
+				return -1;
+			}
+			if (!ameta.departments.includes("command") && bmeta.departments.includes("command")) {
+				return 1;
+			}
 			return 0;
 		});
-		this.panel.$(".job-list").style.gridTemplateRows = `repeat(${Math.ceil(
-			job_order.length / 2
-		)}, auto)`;
+		this.panel.$(".job-list").style.gridTemplateRows = `repeat(${Math.ceil(job_order.length / 2)}, auto)`;
 		for (const key of job_order) {
 			const meta = this.job_metas[key];
 			const elem = document.createElement("div");
@@ -347,30 +377,27 @@ class PreferencesPanel {
 			elem.innerHTML = `
 <div style='text-align:right;width:180;display:inline-block;padding-right:3px'>${meta.name}</div>
 <div style='display:inline-block' class='job-pref-button-container'></div>`;
-			const job_pref_button_container = elem.querySelector(
-				".job-pref-button-container"
-			);
+			const job_pref_button_container = elem.querySelector(".job-pref-button-container");
 			const job_pref_button = document.createElement("div");
 			job_pref_button_container.appendChild(job_pref_button);
-			job_pref_button.classList.add(
-				"button",
-				"dropdown",
-				"white",
-				"job-selection-button"
-			);
-			if (key === "nomad") {this.do_nomad_job(key, setting, job_pref_button);}
-			else {this.do_other_job(key, setting, job_pref_button);}
+			job_pref_button.classList.add("button", "dropdown", "white", "job-selection-button");
+			if (key === "nomad") {
+				this.do_nomad_job(key, setting, job_pref_button);
+			} else {
+				this.do_other_job(key, setting, job_pref_button);
+			}
 			this.panel.$(".job-list").appendChild(elem);
 		}
 	}
-	do_other_job(key: any, setting: any, job_pref_button: Record<string,any>) {
-
+	do_other_job(key: any, setting: any, job_pref_button: Record<string, any>) {
 		job_pref_button.style.visibility = "hidden";
 		job_pref_button.classList.add("affected-by-assistant");
 		job_pref_button.style.color = job_pref_colors[setting];
 		job_pref_button.textContent = job_pref_settings[setting];
 		job_pref_button.addEventListener("click", (e: any) => {
-			if (e.defaultPrevented) {return;}
+			if (e.defaultPrevented) {
+				return;
+			}
 			const menu = document.createElement("div");
 			menu.classList.add("dropdown-content");
 			for (let i = 0; i <= 3; i++) {
@@ -382,15 +409,13 @@ class PreferencesPanel {
 				item.textContent = job_pref_settings[i];
 				item.style.color = job_pref_colors[i];
 				item.addEventListener("click", (e) => {
-					this.panel.send_message({ job_preferences: { [key]: i } });
+					this.panel.send_message({job_preferences: {[key]: i}});
 					e.preventDefault();
 					job_pref_button.textContent = job_pref_settings[i];
 					job_pref_button.style.color = job_pref_colors[i];
 					this.job_preferences[key] = i;
 					if (i === 3) {
-						for (const [otherjob, level] of Object.entries(
-							this.job_preferences
-						)) {
+						for (const [otherjob, level] of Object.entries(this.job_preferences)) {
 							if (level === 3 && otherjob !== key) {
 								this.job_preferences[otherjob] = 2;
 								const otherelem = this.panel.$(
@@ -410,7 +435,7 @@ class PreferencesPanel {
 		});
 	}
 
-	do_nomad_job(key: any, setting: any, job_pref_button: Record<string,any>) {
+	do_nomad_job(key: any, setting: any, job_pref_button: Record<string, any>) {
 		if (setting) {
 			job_pref_button.style.color = "green";
 			job_pref_button.textContent = "Yes";
@@ -420,29 +445,40 @@ class PreferencesPanel {
 		}
 	}
 	update_previews() {
-		this.create_preview({ canvas: this.panel.$(".preview-down"), dir: 1 });
-		this.create_preview({ canvas: this.panel.$(".preview-right"), dir: 3 });
-		this.create_preview({ canvas: this.panel.$(".preview-up"), dir: 2 });
-		this.create_preview({ canvas: this.panel.$(".preview-left"), dir: 4 });
+		this.create_preview({canvas: this.panel.$(".preview-down"), dir: 1});
+		this.create_preview({canvas: this.panel.$(".preview-right"), dir: 3});
+		this.create_preview({canvas: this.panel.$(".preview-up"), dir: 2});
+		this.create_preview({canvas: this.panel.$(".preview-left"), dir: 4});
 	}
 
-	create_preview({
-		canvas = null,
-		dir = 1,
-		modifier = null,
-		prefs_modifier = null,
-	} = {}) {
-		const atom = new Atom(this.panel.manager.client, { dir });
+	create_preview({canvas = null, dir = 1, modifier = null, prefs_modifier = null} = {}) {
+		const atom = new Atom(this.panel.manager.client, {dir});
 		const prefs = JSON.parse(JSON.stringify(this.char_prefs));
-		if (prefs_modifier) {prefs_modifier(prefs);}
-		for (const part of ["torso", "groin", "l_arm", "r_arm", "l_leg", "r_leg", "r_hand", "l_hand", "r_foot", "l_foot", "head"]) {
+		if (prefs_modifier) {
+			prefs_modifier(prefs);
+		}
+		for (const part of [
+			"torso",
+			"groin",
+			"l_arm",
+			"r_arm",
+			"l_leg",
+			"r_leg",
+			"r_hand",
+			"l_hand",
+			"r_foot",
+			"l_foot",
+			"head",
+		]) {
 			let icon_state = part;
 			let partic = part;
 			icon_state += prefs.gender === "female" ? "_f" : "_m";
 			partic += prefs.gender === "female" ? "_f" : "_m";
 
 			let color = null;
-			if (this.skin_tones) {color = this.skin_tones[prefs.skin_tone];}
+			if (this.skin_tones) {
+				color = this.skin_tones[prefs.skin_tone];
+			}
 			atom.set_overlay(`limb_${part}`, {
 				icon: `icons/mob/human_body/${partic}/${partic}-dir${dir}.png`,
 				icon_state,
@@ -459,8 +495,12 @@ class PreferencesPanel {
 			});
 		}
 
-		if (modifier) {modifier(atom);}
-		if (!canvas) {canvas = document.createElement("canvas");}
+		if (modifier) {
+			modifier(atom);
+		}
+		if (!canvas) {
+			canvas = document.createElement("canvas");
+		}
 		canvas.width = 32;
 		canvas.height = 32;
 		let ts = performance.now();
@@ -476,23 +516,13 @@ class PreferencesPanel {
 		return canvas;
 	}
 }
-const department_order = [
-	"misc",
-	"command",
-	"supply",
-	"service",
-	"eng",
-	"med",
-	"sci",
-	"sec",
-	"synth",
-];
+const department_order = ["misc", "command", "supply", "service", "eng", "med", "sci", "sec", "synth"];
 
-module.exports.now = (client: { soft_shadow_resolution: number; }) => {
+module.exports.now = (client: {soft_shadow_resolution: number}) => {
 	const shadow_pref = localStorage.getItem("shadow_resolution");
 	if (typeof shadow_pref !== "undefined") {
 		client.soft_shadow_resolution = +shadow_pref;
 	}
 };
 
-module.exports.panel_classes = { PreferencesPanel };
+module.exports.panel_classes = {PreferencesPanel};

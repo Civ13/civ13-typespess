@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../code/game/server.js");
+const {Component} = require("./../../../../../code/game/server.js");
 
 class WearableItem extends Component {
 	constructor(atom: any, template: any) {
@@ -37,7 +37,7 @@ WearableItem.template = {
 			Item: {
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_rhand_icon: "icons/mob/inhands/lefthand/",
-				inhand_icon_state: "nothing"
+				inhand_icon_state: "nothing",
 			},
 		},
 	},

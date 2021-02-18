@@ -6,7 +6,7 @@ class Civilization {
 	research: Array<number>;
 	members: Array<string>;
 	points: number;
-	constructor(name = "",symbol = "star",color1 = "#FFFFFF",color2 = "#000000",research = [0,0,0],points = 0) {
+	constructor(name = "", symbol = "star", color1 = "#FFFFFF", color2 = "#000000", research = [0, 0, 0], points = 0) {
 		this.name = name;
 		this.symbol = symbol;
 		this.color1 = color1;
@@ -15,7 +15,6 @@ class Civilization {
 		this.members = [];
 		this.points = points;
 	}
-
 }
 
 module.exports = Civilization;

@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 class MaskItem extends Component {
 	constructor(atom: any, template: any) {
@@ -19,11 +19,11 @@ MaskItem.template = {
 			},
 		},
 		icon: "icons/mob/under/masks/",
-		icon_state: "balaclava"
+		icon_state: "balaclava",
 	},
 };
 
 MaskItem.depends = ["WearableItem"];
 MaskItem.loadBefore = ["WearableItem"];
 
-module.exports.components = { MaskItem };
+module.exports.components = {MaskItem};

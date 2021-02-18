@@ -1,32 +1,27 @@
 export{};
-const {
-	Component,
-	chain_func,
-} = require("./../../../../../../code/game/server.js");
+const {Component, chain_func} = require("./../../../../../../code/game/server.js");
 const layers = require("../../../../../defines/layers.js");
 
 class Closet extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.c.LargeContainer.open = chain_func(
-			this.a.c.LargeContainer.open,
-			this.open.bind(this)
-		);
-		this.a.c.LargeContainer.close = chain_func(
-			this.a.c.LargeContainer.close,
-			this.close.bind(this)
-		);
+		this.a.c.LargeContainer.open = chain_func(this.a.c.LargeContainer.open, this.open.bind(this));
+		this.a.c.LargeContainer.close = chain_func(this.a.c.LargeContainer.close, this.close.bind(this));
 	}
 
 	open(prev: any) {
-		if (!prev()) {return false;}
+		if (!prev()) {
+			return false;
+		}
 		this.a.layer = layers.BELOW_OBJ_LAYER;
-		this.a.overlays.door = { icon_state: "[parent]_open" };
+		this.a.overlays.door = {icon_state: "[parent]_open"};
 		return true;
 	}
 
 	close(prev: any) {
-		if (!prev()) {return false;}
+		if (!prev()) {
+			return false;
+		}
 		this.a.layer = layers.OBJ_LAYER;
 		this.a.overlays.door = {
 			icon_state: `${this.icon_door || "[parent]"}_door`,
@@ -55,4 +50,4 @@ Closet.template = {
 	},
 };
 
-module.exports.components = { Closet };
+module.exports.components = {Closet};

@@ -1,10 +1,5 @@
 export{};
-const {
-	Component,
-	Atom,
-	has_component,
-	chain_func,
-} = require("./../../../../../../../code/game/server.js");
+const {Component, Atom, has_component, chain_func} = require("./../../../../../../../code/game/server.js");
 
 const _ = require("underscore");
 const combat_defines = require("../../../../../../defines/combat_defines.js");
@@ -51,13 +46,7 @@ GlassSheet.template = {
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 5,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
+				attack_verb: ["bashed", "battered", "bludgeoned", "thrashed", "smashed"],
 				inhand_icon_state: "sheet-glass",
 			},
 			Tangible: {
@@ -104,13 +93,7 @@ RGlassSheet.template = {
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 5,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
+				attack_verb: ["bashed", "battered", "bludgeoned", "thrashed", "smashed"],
 				inhand_icon_state: "sheet-rglass",
 			},
 			Tangible: {
@@ -133,12 +116,15 @@ class GlassShard extends Component {
 		this.a.once("moved", () => {
 			const bxo = Math.random() - 0.5;
 			const byo = Math.random() - 0.5;
-			if (this.a.icon_state === "small")
-				{this.a.move(bxo * 0.75, byo * 0.75, "placement");}
-			if (this.a.icon_state === "medium")
-				{this.a.move(bxo * 0.5, byo * 0.5, "placement");}
-			if (this.a.icon_state === "large")
-				{this.a.move(bxo * 0.3125, byo * 0.3125, "placement");}
+			if (this.a.icon_state === "small") {
+				this.a.move(bxo * 0.75, byo * 0.75, "placement");
+			}
+			if (this.a.icon_state === "medium") {
+				this.a.move(bxo * 0.5, byo * 0.5, "placement");
+			}
+			if (this.a.icon_state === "large") {
+				this.a.move(bxo * 0.3125, byo * 0.3125, "placement");
+			}
 		});
 	}
 }
@@ -186,4 +172,4 @@ GlassShard.template = {
 	},
 };
 
-module.exports.components = { GlassShard, GlassSheet, RGlassSheet };
+module.exports.components = {GlassShard, GlassSheet, RGlassSheet};

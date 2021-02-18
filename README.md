@@ -27,6 +27,7 @@ Check the original Civ13 here: https://github.com/civ13/civ13.
 ## Installing
 
 ### Windows
+
 1. Install node.js 14 or later from https://nodejs.org/en/download/
 2. Clone `https://github.com/civ13/civ13-typespess.git` using your preferred git software, or download the ZIP file from github and extract it (not recommended).
 3. Run `setup.bat` in the civ13-typespess/scripts folder.
@@ -34,15 +35,16 @@ Check the original Civ13 here: https://github.com/civ13/civ13.
 Whenever you update to the latest code, run `setup.bat` again afterwards for the simplest and easiest experience.
 
 ### Linux (Ubuntu)
+
 1. If you don't have it yet, install git using `apt install git`.
 1. Clone the repo using `git clone https://github.com/civ13/civ13-typespess.git`.
-2. Run `setup.sh` in the civ13-typespess/scripts folder.
+1. Run `setup.sh` in the civ13-typespess/scripts folder.
 
 Whenever you update to the latest code, run `setup.sh` again afterwards for the simplest and easiest experience.
 
 ## Running
 
-Run `launch_server.bat` or  `launch_server.sh` in the civ13-typespess/scripts folder. To join the server (locally) connect to `localhost:1713` using a web browser. To connect remotely, replace localhost with the IP address.
+Run `launch_server.bat` or `launch_server.sh` in the civ13-typespess/scripts folder. To join the server (locally) connect to `localhost:1713` using a web browser. To connect remotely, replace localhost with the IP address.
 
 If you have the database login system enabled (in **server.cson**), you also need to launch the **PouchDB** using `start_db.bat` or `start_db.sh`.
 

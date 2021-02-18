@@ -1,18 +1,10 @@
 export{};
-const {
-	Component,
-	chain_func,
-	has_component,
-	visible_message,
-} = require("./../../../../code/game/server.js");
+const {Component, chain_func, has_component, visible_message} = require("./../../../../code/game/server.js");
 
 class Buckle extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.attack_hand = chain_func(
-			this.a.attack_hand,
-			this.attack_hand.bind(this)
-		);
+		this.a.attack_hand = chain_func(this.a.attack_hand, this.attack_hand.bind(this));
 		this.atom.on("mouse_dropped_by", this.mouse_dropped_by.bind(this));
 		this.buckled_mobs = [];
 	}
@@ -30,11 +22,11 @@ class Buckle extends Component {
 		return prev();
 	}
 
-	mouse_dropped_by(e: Record<string,any>) {
+	mouse_dropped_by(e: Record<string, any>) {
 		const buckling = e.from.atom;
 		const user = e.mob;
 		if (this.can_buckle && has_component(buckling, "LivingMob") && this.user_buckle_mob(buckling, user)) {
-				return true;
+			return true;
 		}
 	}
 
@@ -45,7 +37,7 @@ class Buckle extends Component {
 		return false;
 	}
 
-	buckle_mob(buckling: Record<string,any>, force = false, check_loc = true) {
+	buckle_mob(buckling: Record<string, any>, force = false, check_loc = true) {
 		if (!this.buckled_mobs) {
 			this.buckled_mobs = [];
 		}
@@ -57,9 +49,9 @@ class Buckle extends Component {
 		}
 		if (
 			(!this.can_buckle && !force) ||
-	buckling.c.LivingMob.buckled ||
-	this.buckled_mobs.length >= this.max_buckled_mobs ||
-	this.atom === buckling
+			buckling.c.LivingMob.buckled ||
+			this.buckled_mobs.length >= this.max_buckled_mobs ||
+			this.atom === buckling
 		) {
 			//TODO: restraints check
 			return false;
@@ -83,20 +75,17 @@ class Buckle extends Component {
 
 	//TODO: Handle igniting mobs buckled to flaming things. see /obj/buckle_mob() in TG code
 
-	unbuckle_mob(unbuckling: Record<string,any>, force = false) {
-		if (
-			(has_component(unbuckling, "LivingMob") &&
-		unbuckling.c.LivingMob.buckled === this.atom) ||
-	force
-		) {
+	unbuckle_mob(unbuckling: Record<string, any>, force = false) {
+		if ((has_component(unbuckling, "LivingMob") && unbuckling.c.LivingMob.buckled === this.atom) || force) {
 			//TODO: can_unbuckle() from TG. Irrelevant until slimes are added.
 			unbuckling.c.LivingMob.buckled = null;
-			unbuckling.c.Tangible.anchored =
-		unbuckling.template.vars.components.Tangible.anchored;
+			unbuckling.c.Tangible.anchored = unbuckling.template.vars.components.Tangible.anchored;
 			unbuckling.c.LivingMob.nomove_counter--;
 			unbuckling.c.MobHud.clear_alert("buckled");
 			const idx = this.buckled_mobs.indexOf(unbuckling);
-			if (idx !== -1) {this.buckled_mobs.splice(idx, 1);}
+			if (idx !== -1) {
+				this.buckled_mobs.splice(idx, 1);
+			}
 			this.post_buckle_mob();
 			return true;
 		}
@@ -120,40 +109,32 @@ class Buckle extends Component {
 	}
 
 	//Wrappers that handle sanity and user feedback
-	user_buckle_mob(buckling: Record<string,any>, user: Record<string,any>, check_loc = true) {
+	user_buckle_mob(buckling: Record<string, any>, user: Record<string, any>, check_loc = true) {
 		//This proc is unfinished placeholder, using it for testing.
 		//TODO: range/stat/restrained checks
 
 		if (this.buckle_mob(buckling, false, check_loc)) {
 			if (buckling === user) {
 				visible_message`<span class='notice'>${buckling} buckles themself to ${this.a}.</span>`
-					.self`<span class='notice'>You buckle yourself to ${this.a}.</span>`.emit_from(
-					this.a
-				);
+					.self`<span class='notice'>You buckle yourself to ${this.a}.</span>`.emit_from(this.a);
 				return true;
 			} else {
 				visible_message`<span class='warning'>${user} buckles ${buckling} to ${this.a}.</span>`
-					.self`<span class='warning'>${user} buckles you to ${this.a}.</span>`.emit_from(
-					this.a
-				);
+					.self`<span class='warning'>${user} buckles you to ${this.a}.</span>`.emit_from(this.a);
 				return true;
 			}
 		}
 	}
 
-	user_unbuckle_mob(unbuckling: Record<string,any>, user: Record<string,any>) {
+	user_unbuckle_mob(unbuckling: Record<string, any>, user: Record<string, any>) {
 		this.unbuckle_mob(unbuckling);
 		if (unbuckling !== user) {
 			visible_message`<span class='notice'>${user} unbuckles ${unbuckling} from ${this.a}.</span>`
-				.self`<span class='notice'>${user} unbuckles you from ${this.a}.</span>`.emit_from(
-				this.a
-			);
+				.self`<span class='notice'>${user} unbuckles you from ${this.a}.</span>`.emit_from(this.a);
 			return true;
 		} else {
 			visible_message`<span class='warning'>${unbuckling} unbuckles themself from ${this.a}.</span>`
-				.self`<span class='warning'>You unbuckle yourself from ${this.a}.</span>`.emit_from(
-				this.a
-			);
+				.self`<span class='warning'>You unbuckle yourself from ${this.a}.</span>`.emit_from(this.a);
 			return true;
 		}
 	}
@@ -173,4 +154,4 @@ Buckle.template = {
 	},
 };
 
-module.exports.components = { Buckle };
+module.exports.components = {Buckle};

@@ -1,13 +1,10 @@
 export{};
-const { Component, chain_func } = require("../client/index.js");
+const {Component, chain_func} = require("../client/index.js");
 
 class CarbonMob extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.get_transform = chain_func(
-			this.a.get_transform,
-			this.get_transform.bind(this)
-		);
+		this.a.get_transform = chain_func(this.a.get_transform, this.get_transform.bind(this));
 		this.last_timestamp = 0;
 		this.lying_direction = -1;
 		this.interpolated_lying = this.lying ? 1 : 0;
@@ -25,15 +22,9 @@ class CarbonMob extends Component {
 				if (this.interpolated_lying === 0) {
 					this.lying_direction = Math.random() < 0.5 ? 1 : -1;
 				}
-				this.interpolated_lying = Math.min(
-					this.interpolated_lying + timestamp_diff / 150,
-					1
-				);
+				this.interpolated_lying = Math.min(this.interpolated_lying + timestamp_diff / 150, 1);
 			} else {
-				this.interpolated_lying = Math.max(
-					this.interpolated_lying - timestamp_diff / 150,
-					0
-				);
+				this.interpolated_lying = Math.max(this.interpolated_lying - timestamp_diff / 150, 0);
 			}
 			this.last_timestamp = timestamp;
 		}
@@ -58,4 +49,4 @@ class CarbonMob extends Component {
 	}
 }
 
-module.exports.components = { CarbonMob };
+module.exports.components = {CarbonMob};

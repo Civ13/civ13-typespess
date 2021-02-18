@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../../code/game/server.js");
 
 class MetalSheet extends Component {
 	constructor(atom: any, template: any) {
@@ -24,13 +24,7 @@ MetalSheet.template = {
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 5,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
+				attack_verb: ["bashed", "battered", "bludgeoned", "thrashed", "smashed"],
 			},
 			Tangible: {
 				throw_force: 10,
@@ -68,13 +62,7 @@ WoodSheet.template = {
 			Item: {
 				//Wood apparently has no inhands.
 				force: 5,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
+				attack_verb: ["bashed", "battered", "bludgeoned", "thrashed", "smashed"],
 			},
 			Tangible: {
 				throw_force: 10,
@@ -112,10 +100,7 @@ StrawSheet.template = {
 			Item: {
 				//Wood apparently has no inhands.
 				force: 1,
-				attack_verb: [
-					"flailed",
-					"battered",
-				],
+				attack_verb: ["flailed", "battered"],
 			},
 			Tangible: {
 				throw_force: 3,
@@ -152,13 +137,7 @@ ClothSheet.template = {
 			Item: {
 				//No inhands for cloth either
 				force: 0,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
+				attack_verb: ["bashed", "battered", "bludgeoned", "thrashed", "smashed"],
 			},
 			Tangible: {
 				throw_force: 0,
@@ -197,13 +176,7 @@ CardboardSheet.template = {
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				force: 0,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
+				attack_verb: ["bashed", "battered", "bludgeoned", "thrashed", "smashed"],
 			},
 			Tangible: {
 				throw_force: 0,
@@ -240,13 +213,7 @@ BoneSheet.template = {
 			Item: {
 				//No inhands for bone either
 				force: 7,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
+				attack_verb: ["bashed", "battered", "bludgeoned", "thrashed", "smashed"],
 			},
 			Tangible: {
 				throw_force: 5,
@@ -283,13 +250,7 @@ PlasticSheet.template = {
 			Item: {
 				//No inhands for plastic either?
 				force: 5,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
+				attack_verb: ["bashed", "battered", "bludgeoned", "thrashed", "smashed"],
 			},
 			Tangible: {
 				throw_force: 7,
@@ -326,13 +287,7 @@ PaperframeSheet.template = {
 			Item: {
 				//No inhands for paperframes either?
 				force: 3,
-				attack_verb: [
-					"bashed",
-					"battered",
-					"bludgeoned",
-					"thrashed",
-					"smashed",
-				],
+				attack_verb: ["bashed", "battered", "bludgeoned", "thrashed", "smashed"],
 			},
 			Tangible: {
 				throw_force: 3,

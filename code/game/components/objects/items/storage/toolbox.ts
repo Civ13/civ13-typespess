@@ -1,6 +1,5 @@
 export{};
-const { Component} = require("./../../../../../../code/game/server.js");
-
+const {Component} = require("./../../../../../../code/game/server.js");
 
 class Toolbox extends Component {
 	constructor(atom: any, template: any) {
@@ -53,4 +52,4 @@ Toolbox.template = {
 	},
 };
 
-module.exports.components = { Toolbox };
+module.exports.components = {Toolbox};

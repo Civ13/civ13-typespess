@@ -1,32 +1,33 @@
 export{};
-const {
-	Component,
-	chain_func,
-	make_watched_property,
-	to_chat,
-} = require("./../../../code/game/server.js");
+const {Component, chain_func, make_watched_property, to_chat} = require("./../../../code/game/server.js");
 
 class PowerCell extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		if (!this.start_empty) {this.charge = this.max_charge;}
+		if (!this.start_empty) {
+			this.charge = this.max_charge;
+		}
 		this.on("charge_changed", this.charge_changed.bind(this));
-		this.a.c.Examine.examine = chain_func(
-			this.a.c.Examine.examine,
-			this.examine.bind(this)
-		);
+		this.a.c.Examine.examine = chain_func(this.a.c.Examine.examine, this.examine.bind(this));
 
 		make_watched_property(this, "charge", "number");
 	}
 
 	charge_changed(from: any, to: any) {
-		if (to > this.max_charge) {this.charge = this.max_charge;}
-		if (to < 0) {this.charge = 0;}
+		if (to > this.max_charge) {
+			this.charge = this.max_charge;
+		}
+		if (to < 0) {
+			this.charge = 0;
+		}
 
-		if (to < 0.01) {this.a.overlays.charge_overlay = null;}
-		else if (to / this.max_charge >= 0.995)
-			{this.a.overlays.charge_overlay = { icon_state: "cell-o2" };}
-		else {this.a.overlays.charge_overlay = { icon_state: "cell-o1" };}
+		if (to < 0.01) {
+			this.a.overlays.charge_overlay = null;
+		} else if (to / this.max_charge >= 0.995) {
+			this.a.overlays.charge_overlay = {icon_state: "cell-o2"};
+		} else {
+			this.a.overlays.charge_overlay = {icon_state: "cell-o1"};
+		}
 	}
 
 	use(amount: number) {
@@ -88,4 +89,4 @@ PowerCell.template = {
 	},
 };
 
-module.exports.components = { PowerCell };
+module.exports.components = {PowerCell};

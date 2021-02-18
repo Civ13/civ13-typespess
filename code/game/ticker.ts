@@ -1,14 +1,9 @@
 export{};
 const EventEmitter = require("events");
-const {
-	make_watched_property,
-	to_chat,
-	stoplag,
-	has_component,
-} = require("./../../code/game/server.js");
+const {make_watched_property, to_chat, stoplag, has_component} = require("./../../code/game/server.js");
 const Mind = require("./mobs/mind/mind.js");
 class GameTicker extends EventEmitter {
-	constructor(server: Record<string,any>) {
+	constructor(server: Record<string, any>) {
 		super();
 		this.server = server;
 		this.server.ticker = this;
@@ -30,12 +25,14 @@ class GameTicker extends EventEmitter {
 	}
 	start_ticking() {
 		setInterval(this.tick.bind(this), 2000);
-		if (this.total_players)
-			{this.start_at =
-		this.server.now() + 3 * 1000;}
+		if (this.total_players) {
+			this.start_at = this.server.now() + 3 * 1000;
+		}
 	}
 	tick() {
-		if (this.busy) {return;}
+		if (this.busy) {
+			return;
+		}
 		if (this.game_state === "pregame" && typeof this.start_at !== "undefined") {
 			const time_left = this.start_at - this.server.now();
 			/** if (time_left <= 30000 && !this.round_tip_sent) {this.send_tip_of_the_round();
@@ -47,11 +44,11 @@ class GameTicker extends EventEmitter {
 						if (!success) {
 							this.game_state = "pregame";
 							this.busy = false;
-							if (this.total_players)
-								{this.start_at =
-				this.server.now() +
-				3 * 1000;}
-							else {this.start_at = null;}
+							if (this.total_players) {
+								this.start_at = this.server.now() + 3 * 1000;
+							} else {
+								this.start_at = null;
+							}
 						}
 					},
 					(err) => {
@@ -66,29 +63,30 @@ class GameTicker extends EventEmitter {
 
 	async start_game() {
 		this.busy = true;
-		to_chat`<span class='boldannounce'>Starting game...</span>`(
-			Object.values(this.server.clients)
-		);
+		to_chat`<span class='boldannounce'>Starting game...</span>`(Object.values(this.server.clients));
 		stoplag();
 		for (const tclient of Object.values(this.server.clients)) {
-			const client: Record<string,any> = tclient;
+			const client: Record<string, any> = tclient;
 			if (
 				has_component(client.mob, "NewPlayer") &&
-		client.mob.c.NewPlayer.new_player_panel &&
-		client.mob.c.NewPlayer.new_player_panel.ready
+				client.mob.c.NewPlayer.new_player_panel &&
+				client.mob.c.NewPlayer.new_player_panel.ready
 			) {
 				// readied up.
 				const mind = new Mind(client.key);
-				if (client.character_preferences)
-					{mind.character_preferences = client.character_preferences;}
+				if (client.character_preferences) {
+					mind.character_preferences = client.character_preferences;
+				}
 				this.server.job_controller.unassigned.add(mind);
 			}
 		}
 		this.server.job_controller.divide_occupations();
 		for (const mind of this.server.job_controller.assigned) {
-			if (!mind.assigned_role) {continue;} //
+			if (!mind.assigned_role) {
+				continue;
+			} //
 			// alright now spawn everyone in
-			const mob = mind.assigned_role.instance(this.server,mind.character_preferences);
+			const mob = mind.assigned_role.instance(this.server, mind.character_preferences);
 			mind.transfer_to(mob);
 			this.server.job_controller.send_to_spawn(mob, mind.assigned_role.id);
 			mind.assigned_role.after_spawn(mob);
@@ -103,17 +101,19 @@ class GameTicker extends EventEmitter {
 	}
 
 	total_players_changed(from: any, to: any) {
-		if (from && !to) {this.start_at = null;}
-		if (to && !from)
-			{this.start_at = this.start_at =
-		this.server.now() + 3 * 1000;}
+		if (from && !to) {
+			this.start_at = null;
+		}
+		if (to && !from) {
+			this.start_at = this.start_at = this.server.now() + 3 * 1000;
+		}
 	}
 }
 
-module.exports.now = (server: Record<string,any>) => {
+module.exports.now = (server: Record<string, any>) => {
 	server.ticker = new GameTicker(server);
 };
 
-module.exports.server_start = (server: Record<string,any>) => {
+module.exports.server_start = (server: Record<string, any>) => {
 	server.ticker.start_ticking();
 };

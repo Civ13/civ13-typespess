@@ -1,14 +1,15 @@
 export{};
 const TypespessClient = require("./client/index.js");
 
-const { Eye, Plane } = TypespessClient;
-const { ParallaxPlane } = require("./code/parallax.js");
+const {Eye, Plane} = TypespessClient;
+const {ParallaxPlane} = require("./code/parallax.js");
 
 // Just a small little polyfill for Edge (fuck you edge by the way)
 
 for (const collection_class of [HTMLCollection, NodeList, DOMTokenList]) {
-	if (!collection_class.prototype[Symbol.iterator])
-		{collection_class.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];}
+	if (!collection_class.prototype[Symbol.iterator]) {
+		collection_class.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+	}
 }
 
 const client = new TypespessClient();
@@ -33,7 +34,7 @@ client.importModule(require("./code/ui/strip.js"));
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-if(global.is_bs_editor_env) {
+if (global.is_bs_editor_env) {
 	module.exports = client;
 } else {
 	client.handle_login = function () {
@@ -58,14 +59,15 @@ if(global.is_bs_editor_env) {
 		parallax_plane.z_index = 9999;
 		eye.canvas = document.getElementById("mainlayer");
 		eye.create_click_handlers();
-		eye.on("mouse_over_atom_changed", (to: { name: string | null; }) => {
+		eye.on("mouse_over_atom_changed", (to: {name: string | null}) => {
 			const doc = document.getElementById("hovering-atom");
 			if (doc) {
 				if (to) {
 					doc.textContent = to.name;
 				} else {
 					doc.textContent = "";
-				}}
+				}
+			}
 		});
 
 		client.login();

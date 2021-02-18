@@ -1,8 +1,8 @@
 export{};
-const { Component, has_component } = require("./../../../code/game/server.js");
+const {Component, has_component} = require("./../../../code/game/server.js");
 
-const _smooth_with:any = Symbol("_smooth_with");
-const _enabled:any = Symbol("_enabled");
+const _smooth_with: any = Symbol("_smooth_with");
+const _enabled: any = Symbol("_enabled");
 
 class Smooth extends Component {
 	constructor(atom: any, template: any) {
@@ -11,49 +11,36 @@ class Smooth extends Component {
 		this.a.on("moved", this.rebuild_smooth.bind(this));
 	}
 
-	rebuild_smooth(exclude: Record<string,any> = null) {
+	rebuild_smooth(exclude: Record<string, any> = null) {
 		this.adjacent = 0;
 		if (!this.enabled) {
-			if (this.use_soft_disable) {this.a.icon_state = "";}
-			else {this.a.icon_state = this.a.template.vars.icon_state;}
+			if (this.use_soft_disable) {
+				this.a.icon_state = "";
+			} else {
+				this.a.icon_state = this.a.template.vars.icon_state;
+			}
 			return this.redraw_smoothing();
 		}
 		this.a.icon_state = "";
 		for (const loc of this.a.marginal_locs()) {
 			for (const atom of loc.partial_contents) {
-				if (atom === exclude || atom === this.a) {continue;}
-				if (!has_component(atom, "SmoothGroup")) {continue;}
-				if (
-					!atom.c.SmoothGroup.enabled ||
-		!atom.c.SmoothGroup.groups.includes(this.smooth_with)
-				)
-					{continue;}
+				if (atom === exclude || atom === this.a) {
+					continue;
+				}
+				if (!has_component(atom, "SmoothGroup")) {
+					continue;
+				}
+				if (!atom.c.SmoothGroup.enabled || !atom.c.SmoothGroup.groups.includes(this.smooth_with)) {
+					continue;
+				}
 				const left_touch =
-		Math.abs(
-			atom.x +
-			atom.bounds_x +
-			atom.bounds_width -
-			(this.a.x + this.a.bounds_x)
-		) < 0.0001;
+					Math.abs(atom.x + atom.bounds_x + atom.bounds_width - (this.a.x + this.a.bounds_x)) < 0.0001;
 				const right_touch =
-		Math.abs(
-			atom.x +
-			atom.bounds_x -
-			(this.a.x + this.a.bounds_x + this.a.bounds_width)
-		) < 0.0001;
+					Math.abs(atom.x + atom.bounds_x - (this.a.x + this.a.bounds_x + this.a.bounds_width)) < 0.0001;
 				const top_touch =
-		Math.abs(
-			atom.y +
-			atom.bounds_y -
-			(this.a.y + this.a.bounds_y + this.a.bounds_height)
-		) < 0.0001;
+					Math.abs(atom.y + atom.bounds_y - (this.a.y + this.a.bounds_y + this.a.bounds_height)) < 0.0001;
 				const bottom_touch =
-		Math.abs(
-			atom.y +
-			atom.bounds_y +
-			atom.bounds_height -
-			(this.a.y + this.a.bounds_y)
-		) < 0.0001;
+					Math.abs(atom.y + atom.bounds_y + atom.bounds_height - (this.a.y + this.a.bounds_y)) < 0.0001;
 				if (Math.abs(atom.x - this.a.x) < 0.0001) {
 					if (bottom_touch) {
 						this.adjacent |= 1 << 2;
@@ -70,10 +57,18 @@ class Smooth extends Component {
 						this.adjacent |= 1 << 4;
 					}
 				}
-				if (top_touch && right_touch) {this.adjacent |= 1 << 5;}
-				if (bottom_touch && right_touch) {this.adjacent |= 1 << 6;}
-				if (top_touch && left_touch) {this.adjacent |= 1 << 9;}
-				if (bottom_touch && left_touch) {this.adjacent |= 1 << 10;}
+				if (top_touch && right_touch) {
+					this.adjacent |= 1 << 5;
+				}
+				if (bottom_touch && right_touch) {
+					this.adjacent |= 1 << 6;
+				}
+				if (top_touch && left_touch) {
+					this.adjacent |= 1 << 9;
+				}
+				if (bottom_touch && left_touch) {
+					this.adjacent |= 1 << 10;
+				}
 			}
 		}
 		this.redraw_smoothing();
@@ -87,18 +82,26 @@ class Smooth extends Component {
 		return this[_smooth_with];
 	}
 	set smooth_with(val) {
-		if (val === this[_smooth_with]) {return;}
+		if (val === this[_smooth_with]) {
+			return;
+		}
 		this[_smooth_with] = val;
-		if (this.a) {this.rebuild_smooth();}
+		if (this.a) {
+			this.rebuild_smooth();
+		}
 	}
 
 	get enabled() {
 		return this[_enabled];
 	}
 	set enabled(val) {
-		if (val === this[_enabled]) {return;}
+		if (val === this[_enabled]) {
+			return;
+		}
 		this[_enabled] = val;
-		if (this.a) {this.rebuild_smooth();}
+		if (this.a) {
+			this.rebuild_smooth();
+		}
 	}
 }
 
@@ -129,8 +132,8 @@ class SmoothGroup extends Component {
 			for (const atom of loc.partial_contents) {
 				if (
 					has_component(atom, "Smooth") &&
-		atom.c.Smooth.enabled &&
-		this.groups.includes(atom.c.Smooth.smooth_with)
+					atom.c.Smooth.enabled &&
+					this.groups.includes(atom.c.Smooth.smooth_with)
 				) {
 					atom.c.Smooth.rebuild_smooth(this.a);
 				}
@@ -143,8 +146,8 @@ class SmoothGroup extends Component {
 			for (const atom of loc.partial_contents) {
 				if (
 					has_component(atom, "Smooth") &&
-		atom.c.Smooth.enabled &&
-		this.groups.includes(atom.c.Smooth.smooth_with)
+					atom.c.Smooth.enabled &&
+					this.groups.includes(atom.c.Smooth.smooth_with)
 				) {
 					atom.c.Smooth.rebuild_smooth();
 				}
@@ -156,9 +159,13 @@ class SmoothGroup extends Component {
 		return this[_enabled];
 	}
 	set enabled(val) {
-		if (val === this[_enabled]) {return;}
+		if (val === this[_enabled]) {
+			return;
+		}
 		this[_enabled] = val;
-		if (this.a) {this.moved();}
+		if (this.a) {
+			this.moved();
+		}
 	}
 }
 
@@ -182,8 +189,9 @@ class TGSmooth extends Component {
 
 	redraw_smoothing() {
 		if (!this.a.c.Smooth.enabled && !this.a.c.Smooth.use_soft_disable) {
-			for (const i of [1, 2, 3, 4])
-				{this.a.overlays[`smoothing_corner_${i}`] = void 0;}
+			for (const i of [1, 2, 3, 4]) {
+				this.a.overlays[`smoothing_corner_${i}`] = void 0;
+			}
 			if (this.diagonal) {
 				this.a.overlays["smoothing_diag_a"] = void 0;
 				this.a.overlays["smoothing_diag_b"] = void 0;
@@ -208,22 +216,32 @@ class TGSmooth extends Component {
 						break;
 					}
 				}
-				if (!corner_valid) {continue;}
+				if (!corner_valid) {
+					continue;
+				}
 				let dir_string = "";
-				if (corner & 1 && adjacent & (1 << 1))
-				// Yes that's right it's OPPOSITE. Thanks, TG!
-					{dir_string += "s";}
-				if (corner & 2 && adjacent & (1 << 2)) {dir_string += "n";}
-				if (corner & 4 && adjacent & (1 << 4)) {dir_string += "w";}
-				if (corner & 8 && adjacent & (1 << 8)) {dir_string += "e";}
+				if (corner & 1 && adjacent & (1 << 1)) {
+					// Yes that's right it's OPPOSITE. Thanks, TG!
+					dir_string += "s";
+				}
+				if (corner & 2 && adjacent & (1 << 2)) {
+					dir_string += "n";
+				}
+				if (corner & 4 && adjacent & (1 << 4)) {
+					dir_string += "w";
+				}
+				if (corner & 8 && adjacent & (1 << 8)) {
+					dir_string += "e";
+				}
 				diag_a = `d-${dir_string}`;
 				diag_b = `d-${dir_string}-${adjacent & (1 << corner) ? 1 : 0}`;
 			}
 			if (diag_a) {
-				for (const i of [1, 2, 3, 4])
-					{this.a.overlays[`smoothing_corner_${i}`] = void 0;}
-				this.a.overlays["smoothing_diag_a"] = { icon_state: diag_a };
-				this.a.overlays["smoothing_diag_b"] = { icon_state: diag_b };
+				for (const i of [1, 2, 3, 4]) {
+					this.a.overlays[`smoothing_corner_${i}`] = void 0;
+				}
+				this.a.overlays["smoothing_diag_a"] = {icon_state: diag_a};
+				this.a.overlays["smoothing_diag_b"] = {icon_state: diag_b};
 				return;
 			} else {
 				this.a.overlays["smoothing_diag_a"] = void 0;
@@ -234,13 +252,23 @@ class TGSmooth extends Component {
 		for (const i of [1, 2, 3, 4]) {
 			const corner = [9, 5, 10, 6][i - 1];
 			let dir_string = "";
-			if (corner & 1 && adjacent & (1 << 1)) {dir_string += "n";}
-			if (corner & 2 && adjacent & (1 << 2)) {dir_string += "s";}
-			if (corner & 4 && adjacent & (1 << 4)) {dir_string += "e";}
-			if (corner & 8 && adjacent & (1 << 8)) {dir_string += "w";}
-			if (dir_string.length === 0) {dir_string = "i";}
-			else if (dir_string.length >= 2 && adjacent & (1 << corner))
-				{dir_string = "f";}
+			if (corner & 1 && adjacent & (1 << 1)) {
+				dir_string += "n";
+			}
+			if (corner & 2 && adjacent & (1 << 2)) {
+				dir_string += "s";
+			}
+			if (corner & 4 && adjacent & (1 << 4)) {
+				dir_string += "e";
+			}
+			if (corner & 8 && adjacent & (1 << 8)) {
+				dir_string += "w";
+			}
+			if (dir_string.length === 0) {
+				dir_string = "i";
+			} else if (dir_string.length >= 2 && adjacent & (1 << corner)) {
+				dir_string = "f";
+			}
 			this.a.overlays[`smoothing_corner_${i}`] = {
 				icon_state: `${i}-${dir_string}`,
 			};
@@ -261,4 +289,4 @@ TGSmooth.template = {
 TGSmooth.depends = ["Smooth"];
 TGSmooth.loadBefore = ["Smooth"];
 
-module.exports.components = { Smooth, SmoothGroup, TGSmooth };
+module.exports.components = {Smooth, SmoothGroup, TGSmooth};

@@ -1,26 +1,14 @@
 export{};
-const {
-	Component,
-	Sound,
-	has_component,
-	to_chat,
-	chain_func,
-} = require("./../../../../../../code/game/server.js");
+const {Component, Sound, has_component, to_chat, chain_func} = require("./../../../../../../code/game/server.js");
 const mob_defines = require("../../../../../defines/mob_defines.js");
 
 class LargeContainer extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 
-		this.a.attack_hand = chain_func(
-			this.a.attack_hand,
-			this.attack_hand.bind(this)
-		);
+		this.a.attack_hand = chain_func(this.a.attack_hand, this.attack_hand.bind(this));
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
-		this.a.c.Examine.examine = chain_func(
-			this.a.c.Examine.examine,
-			this.examine.bind(this)
-		);
+		this.a.c.Examine.examine = chain_func(this.a.c.Examine.examine, this.examine.bind(this));
 
 		this.a.c.MovementProxy.on("child_moved", this.child_moved.bind(this));
 
@@ -32,58 +20,67 @@ class LargeContainer extends Component {
 			this.opened = false;
 		}
 		process.nextTick(() => {
-			if (!do_close && !this.start_empty) {this.populate_contents();}
-			if (do_close) {this.close();}
-			else {this.open();}
-			if (do_close && !this.start_empty) {this.populate_contents();}
+			if (!do_close && !this.start_empty) {
+				this.populate_contents();
+			}
+			if (do_close) {
+				this.close();
+			} else {
+				this.open();
+			}
+			if (do_close && !this.start_empty) {
+				this.populate_contents();
+			}
 		});
 	}
-	populate_contents() {return;}
-
-	examine(prev:any, user:any) {
-		prev();
-		if (this.a.c.Tangible.anchored)
-			{to_chat`<span class='notice'>It is <b>bolted</b> to the ground.</span>`(
-				user
-			);}
-		if (this.opened)
-			{to_chat`<span class='notice'>The parts are <b>welded</b> together.</span>`(
-				user
-			);}
+	populate_contents() {
+		return;
 	}
 
-	can_open(user:any = null) {
+	examine(prev: any, user: any) {
+		prev();
+		if (this.a.c.Tangible.anchored) {
+			to_chat`<span class='notice'>It is <b>bolted</b> to the ground.</span>`(user);
+		}
+		if (this.opened) {
+			to_chat`<span class='notice'>The parts are <b>welded</b> together.</span>`(user);
+		}
+	}
+
+	can_open(user: any = null) {
 		for (const atom of this.a.crosses()) {
-			if (!has_component(atom, "LivingMob")) {continue;}
+			if (!has_component(atom, "LivingMob")) {
+				continue;
+			}
 			if (
 				atom.c.Tangible.anchored ||
-		(this.horizontal &&
-		atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY &&
-		atom.density > 0)
+				(this.horizontal && atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY && atom.density > 0)
 			) {
-				if (user)
-					{to_chat`<span class='danger'>There's something large on top of the ${this.a}, preventing it from opening.</span>`(
+				if (user) {
+					to_chat`<span class='danger'>There's something large on top of the ${this.a}, preventing it from opening.</span>`(
 						user
-					);}
+					);
+				}
 				return false;
 			}
 		}
 		return true;
 	}
 
-	can_close(user:any = null) {
+	can_close(user: any = null) {
 		for (const atom of this.a.crosses()) {
-			if (!has_component(atom, "LivingMob")) {continue;}
+			if (!has_component(atom, "LivingMob")) {
+				continue;
+			}
 			if (
 				atom.c.Tangible.anchored ||
-		(this.horizontal &&
-		atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY &&
-		atom.density > 0)
+				(this.horizontal && atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY && atom.density > 0)
 			) {
-				if (user)
-					{to_chat`<span class='danger'>There's something large on top of the ${this.a}, preventing it from closing.</span>`(
+				if (user) {
+					to_chat`<span class='danger'>There's something large on top of the ${this.a}, preventing it from closing.</span>`(
 						user
-					);}
+					);
+				}
 				return false;
 			}
 		}
@@ -99,12 +96,16 @@ class LargeContainer extends Component {
 
 	take_contents() {
 		for (const atom of [...this.a.crosses()]) {
-			if (this.insert(atom) === -1) {break;}
+			if (this.insert(atom) === -1) {
+				break;
+			}
 		}
 	}
 
-	open(user: Record<string,any> = null) {
-		if (this.opened || (user && !this.can_open(user))) {return;}
+	open(user: Record<string, any> = null) {
+		if (this.opened || (user && !this.can_open(user))) {
+			return;
+		}
 		new Sound(this.a.server, {
 			path: this.open_sound,
 			volume: 0.15,
@@ -116,33 +117,53 @@ class LargeContainer extends Component {
 		return true;
 	}
 
-	insert(atom: Record<string,any>) {
-		if (this.a.contents.length >= this.storage_capacity) {return -1;}
+	insert(atom: Record<string, any>) {
+		if (this.a.contents.length >= this.storage_capacity) {
+			return -1;
+		}
 		if (has_component(atom, "LivingMob")) {
-			if (atom.c.Tangible.anchored) {return;}
+			if (atom.c.Tangible.anchored) {
+				return;
+			}
 			if (atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY) {
-				if (this.horizontal && atom.density > 0) {return;}
-				if (atom.c.LivingMob.mob_size > this.max_mob_size) {return;}
+				if (this.horizontal && atom.density > 0) {
+					return;
+				}
+				if (atom.c.LivingMob.mob_size > this.max_mob_size) {
+					return;
+				}
 				let mobs_stored = 0;
 				for (const item of this.a.contents) {
-					if (!has_component(item, "LivingMob")) {continue;}
-					if (++mobs_stored >= this.mob_storage_capacity) {return;}
+					if (!has_component(item, "LivingMob")) {
+						continue;
+					}
+					if (++mobs_stored >= this.mob_storage_capacity) {
+						return;
+					}
 				}
 			}
 		} else if (has_component(atom, "LargeContainer")) {
 			return;
 		} else if (has_component(atom, "Tangible")) {
-			if (!this.allow_objects && !has_component(atom, "Item")) {return;}
-			if (!this.allow_dense && atom.density > 0) {return;}
-			if (atom.c.Tangible.anchored) {return;}
+			if (!this.allow_objects && !has_component(atom, "Item")) {
+				return;
+			}
+			if (!this.allow_dense && atom.density > 0) {
+				return;
+			}
+			if (atom.c.Tangible.anchored) {
+				return;
+			}
 		} else {
 			return;
 		}
 		atom.loc = this.a;
 	}
 
-	close(user: Record<string,any> = null) {
-		if (!this.opened || (user && !this.can_close(user))) {return;}
+	close(user: Record<string, any> = null) {
+		if (!this.opened || (user && !this.can_close(user))) {
+			return;
+		}
 		this.take_contents();
 		new Sound(this.a.server, {
 			path: this.close_sound,
@@ -154,9 +175,12 @@ class LargeContainer extends Component {
 		return true;
 	}
 
-	toggle(user: Record<string,any>) {
-		if (this.opened) {return this.close(user);}
-		else {return this.open(user);}
+	toggle(user: Record<string, any>) {
+		if (this.opened) {
+			return this.close(user);
+		} else {
+			return this.open(user);
+		}
 	}
 
 	attack_hand(prev: any, user: any) {
@@ -165,7 +189,9 @@ class LargeContainer extends Component {
 	}
 
 	attack_by(prev: any, item: any, user: any) {
-		if (user.loc === this.a) {return;}
+		if (user.loc === this.a) {
+			return;
+		}
 		if (this.opened) {
 			if (item.c.Item.slot && item.c.Item.slot.can_unequip()) {
 				item.glide_size = 0;
@@ -225,4 +251,4 @@ LargeContainer.template = {
 	},
 };
 
-module.exports.components = { LargeContainer };
+module.exports.components = {LargeContainer};

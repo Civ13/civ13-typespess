@@ -1,31 +1,17 @@
 export{};
-const {
-	Component,
-	Atom,
-	chain_func,
-} = require("./../../../../../../code/game/server.js");
+const {Component, Atom, chain_func} = require("./../../../../../../code/game/server.js");
 
 const layers = require("../../../../../defines/layers.js");
 
 class Chair extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.c.Destructible.deconstruct = chain_func(
-			this.a.c.Destructible.deconstruct,
-			this.deconstruct.bind(this)
-		);
-		this.a.c.Buckle.post_buckle_mob = chain_func(
-			this.a.c.Buckle.post_buckle_mob,
-			this.post_buckle_mob.bind(this)
-		);
+		this.a.c.Destructible.deconstruct = chain_func(this.a.c.Destructible.deconstruct, this.deconstruct.bind(this));
+		this.a.c.Buckle.post_buckle_mob = chain_func(this.a.c.Buckle.post_buckle_mob, this.post_buckle_mob.bind(this));
 	}
 
 	deconstruct(prev: any) {
-		if (
-			!this.a.c.Destructible.no_deconstruct &&
-	this.a.base_loc &&
-	this.stack_type
-		) {
+		if (!this.a.c.Destructible.no_deconstruct && this.a.base_loc && this.stack_type) {
 			const stack = new Atom(this.a.server, this.stack_type);
 			stack.c.Stack.amount = this.stack_amount;
 			stack.loc = this.a.base_mover.fine_loc;
@@ -80,4 +66,4 @@ Chair.template = {
 	},
 };
 
-module.exports.components = { Chair };
+module.exports.components = {Chair};

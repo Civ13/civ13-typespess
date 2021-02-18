@@ -1,4 +1,3 @@
-
 module.exports = {
 	LIGHT_COLOR_RED: "#FA8282", // Warm but extremely diluted red. rgb(250, 130, 130)
 	LIGHT_COLOR_GREEN: "#64C864", // Bright but quickly dissipating neon green. rgb(100, 200, 100)

@@ -1,10 +1,5 @@
 export{};
-const {
-	Component,
-	has_component,
-	to_chat,
-	sleep,
-} = require("./../../../../code/game/server.js");
+const {Component, has_component, to_chat, sleep} = require("./../../../../code/game/server.js");
 
 const pass_flags = require("../../../defines/pass_flags.js");
 
@@ -17,19 +12,13 @@ class Tangible extends Component {
 		this.last_high_pressure_movement_air_cycle = 0;
 	}
 
-	experience_pressure_difference(
-		difference: number,
-		dx: number,
-		dy: number,
-		pressure_resistance_prob_delta = 0
-	) {
+	experience_pressure_difference(difference: number, dx: number, dy: number, pressure_resistance_prob_delta = 0) {
 		const PROBABILITY_OFFSET = 25;
 		const PROBABILITY_BASE_PERCENT = 75;
-		if (this.anchored) {return false;}
-		if (
-			this.last_high_pressure_movement_air_cycle <
-	this.a.server.air_controller.ticknum
-		) {
+		if (this.anchored) {
+			return false;
+		}
+		if (this.last_high_pressure_movement_air_cycle < this.a.server.air_controller.ticknum) {
 			let move_prob = 100;
 			if (this.pressure_resistance > 0) {
 				move_prob = (difference / this.pressure_resistance) * PROBABILITY_BASE_PERCENT - PROBABILITY_OFFSET;
@@ -43,13 +32,11 @@ class Tangible extends Component {
 		}
 	}
 
-	async throw_at({
-		target = null,
-		range = this.throw_range,
-		speed = this.throw_speed,
-	}: Record<string,any> = {}) {
+	async throw_at({target = null, range = this.throw_range, speed = this.throw_speed}: Record<string, any> = {}) {
 		try {
-			if (!target) {return;}
+			if (!target) {
+				return;
+			}
 			this.stop_throw();
 
 			let dist_traveled = 0;
@@ -62,14 +49,17 @@ class Tangible extends Component {
 				this.a.removeListener("bumped_by", this.stop_throw);
 				still_throwing = false;
 				this.a.pass_flags &= ~pass_flags.LETPASSTHROW;
-				this.stop_throw = function () {return;};
+				this.stop_throw = function () {
+					return;
+				};
 			};
 
-			const throw_impact = (target: Record<string,any>) => {
+			const throw_impact = (target: Record<string, any>) => {
 				this.stop_throw();
 				if (speed > 0.5) {
-					if (has_component(target, "Tangible"))
-						{target.c.Tangible.emit("throw_impacted_by", this.a);}
+					if (has_component(target, "Tangible")) {
+						target.c.Tangible.emit("throw_impacted_by", this.a);
+					}
 					this.emit("throw_impacted", target);
 				}
 			};
@@ -110,7 +100,7 @@ class Tangible extends Component {
 				const this_dx = this.a.x - oldx;
 				const this_dy = this.a.y - oldy;
 				dist_traveled += Math.sqrt(this_dx * this_dx + this_dy * this_dy);
-				const dist_covered_delay = range > dist_traveled 	? ((range - dist_traveled) * 100) / speed 	: 123456789;
+				const dist_covered_delay = range > dist_traveled ? ((range - dist_traveled) * 100) / speed : 123456789;
 				await sleep(Math.max(Math.min(dist_covered_delay, 50), 1));
 				if (dist_traveled >= range - 0.001) {
 					this.stop_throw();
@@ -123,17 +113,21 @@ class Tangible extends Component {
 		this.emit("throw_finished");
 	}
 
-	bullet_act(projectile: { c: { Projectile: { hit: (arg0: any, arg1: number, arg2: any) => any; }; }; }, def_zone: any) {
+	bullet_act(projectile: {c: {Projectile: {hit: (arg0: any, arg1: number, arg2: any) => any}}}, def_zone: any) {
 		return projectile.c.Projectile.hit(this.a, def_zone, 0);
 	}
 
-	stop_throw() {return;} // This only has actual code once throw_at is called
+	stop_throw() {
+		return;
+	} // This only has actual code once throw_at is called
 
 	drop_location() {
 		return this.a.loc;
 	}
 
-	ex_act() {return;}
+	ex_act() {
+		return;
+	}
 
 	do_attack_animation() {
 		//later
@@ -143,11 +137,8 @@ class Tangible extends Component {
 		// This is basically for legit attacks
 	}
 
-	adjacent(target: { x: number; y: number; }) {
-		return (
-			Math.abs(target.x - this.a.x) <= 1.5001 &&
-	Math.abs(target.y - this.a.y) <= 1.5001
-		);
+	adjacent(target: {x: number; y: number}) {
+		return Math.abs(target.x - this.a.x) <= 1.5001 && Math.abs(target.y - this.a.y) <= 1.5001;
 	}
 	can_reach(target: any) {
 		return this.adjacent(target);
@@ -186,14 +177,18 @@ class Examine extends Component {
 		this.a.on("shift_clicked", this.shift_clicked.bind(this));
 	}
 
-	shift_clicked(e: { mob: any; }) {
-		if (e.mob) {this.examine(e.mob);}
+	shift_clicked(e: {mob: any}) {
+		if (e.mob) {
+			this.examine(e.mob);
+		}
 	}
 
 	examine(user: any) {
 		to_chat`That's <b>${this.a}</b>`(user);
-		if (this.desc) {to_chat(user, "<i>"+this.desc+"</i>");}
+		if (this.desc) {
+			to_chat(user, "<i>" + this.desc + "</i>");
+		}
 	}
 }
 
-module.exports.components = { Tangible, Examine };
+module.exports.components = {Tangible, Examine};

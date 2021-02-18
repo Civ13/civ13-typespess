@@ -1,5 +1,3 @@
-
-
 module.exports = {
 	shatter: "sound/effects/glassbr{1-3}.ogg",
 	explosion: "sound/effects/explosion{1-2}.ogg",

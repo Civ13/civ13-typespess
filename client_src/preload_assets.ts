@@ -1,41 +1,39 @@
-const { join } = require ("path");
+const {join} = require("path");
 import fs from "fs";
 
 let files = "";
 const dirs: any[] = [];
 
 function dirIt(directory: string) {
-
 	try {
-
 		const dirContent = fs.readdirSync(directory);
 
-		dirContent.forEach( (path: any) => {
+		dirContent.forEach((path: any) => {
+			const fullPath = join(directory, path);
 
-			const fullPath = join(directory,path);
-
-			if ( fs.statSync(fullPath).isFile()) {
+			if (fs.statSync(fullPath).isFile()) {
 				let nfile = fullPath;
 				const pieces = nfile.split("\\");
 				nfile = pieces.join("/");
-				nfile = nfile.replace("../resources/","");
+				nfile = nfile.replace("../resources/", "");
 				nfile = `"${nfile}",`;
-				files+=nfile;
-
+				files += nfile;
+			} else {
+				dirs.push(fullPath);
 			}
-			else
-				{dirs.push(fullPath);}
 		});
 
-		if ( dirs.length !== 0 ) {
+		if (dirs.length !== 0) {
 			const popd = dirs.pop();
-			if (popd)
-				{dirIt(popd);}
+			if (popd) {
+				dirIt(popd);
 			}
+		}
 
 		return files;
-
-	} catch(ex) {throw new Error(ex);}
+	} catch (ex) {
+		throw new Error(ex);
+	}
 }
 
 const preloadlist = dirIt("../resources/icons/ui/");

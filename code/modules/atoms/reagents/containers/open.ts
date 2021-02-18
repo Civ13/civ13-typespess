@@ -16,13 +16,15 @@ class OpenReagentContainer extends Component {
 		this.a.c.Tangible.on("throw_finished", () => {
 			this.splash();
 		});
-		this.a.c.Tangible.on("throw_impacted", (target: Record<string,any>) => {
+		this.a.c.Tangible.on("throw_impacted", (target: Record<string, any>) => {
 			this.splash(target);
 		});
 	}
 
-	attack(target: Record<string,any>, user: Record<string,any>) {
-		if (!this.a.c.ReagentHolder.can_consume(target, user)) {return;}
+	attack(target: Record<string, any>, user: Record<string, any>) {
+		if (!this.a.c.ReagentHolder.can_consume(target, user)) {
+			return;
+		}
 
 		if (this.a.c.ReagentHolder.total_volume <= 0) {
 			to_chat`<span class='warning'>The ${this.a} is empty!</span>`(user);
@@ -34,13 +36,14 @@ class OpenReagentContainer extends Component {
 					.self`<span class='userdanger'>The ${user} attempts to feed something to you.</span>`.emit_from(
 					target
 				);
-				if (!(await user.c.MobInventory.do_after({ target, delay: 3000 })))
-					{return;}
-				if (this.a.c.ReagentHolder.total_volume <= 0) {return;}
+				if (!(await user.c.MobInventory.do_after({target, delay: 3000}))) {
+					return;
+				}
+				if (this.a.c.ReagentHolder.total_volume <= 0) {
+					return;
+				}
 			} else {
-				to_chat`<span class='notice'>You swallow a gulp of the ${this.a}.</span>`(
-					user
-				);
+				to_chat`<span class='notice'>You swallow a gulp of the ${this.a}.</span>`(user);
 			}
 			const fraction = 5 / this.a.c.ReagentHolder.total_volume;
 			this.a.c.ReagentHolder.react_atom(target, "ingest", {
@@ -57,15 +60,15 @@ class OpenReagentContainer extends Component {
 		})();
 	}
 
-	splash(target: Record<string,any> = null) {
-		if (this.a.c.ReagentHolder.total_volume <= 0) {return;}
+	splash(target: Record<string, any> = null) {
+		if (this.a.c.ReagentHolder.total_volume <= 0) {
+			return;
+		}
 		if (!target) {
 			for (const crosser of this.a.crosses()) {
-				if (
-					has_component(crosser, "FloorBase") &&
-		(!target || crosser.layer > target.layer)
-				)
-					{target = crosser;}
+				if (has_component(crosser, "FloorBase") && (!target || crosser.layer > target.layer)) {
+					target = crosser;
+				}
 			}
 		}
 		if (!target) {
@@ -109,21 +112,15 @@ class ReagentReceiver extends Component {
 				return true;
 			}
 
-			if (
-				this.a.c.ReagentHolder.total_volume >=
-		this.a.c.ReagentHolder.maximum_volume
-			) {
+			if (this.a.c.ReagentHolder.total_volume >= this.a.c.ReagentHolder.maximum_volume) {
 				to_chat`<span clas='notice'>The ${this.a} is full.</span>`(user);
 				return true;
 			}
 
-			const trans = item.c.ReagentHolder.transfer_to(
-				this.a,
-				item.c.OpenReagentContainer.transfer_amount
-			);
-			to_chat`<span class='notice'>You transfer ${trans} unit${
-				trans === 1 ? "" : "s"
-			} of the solution to ${this.a}</span>`(user);
+			const trans = item.c.ReagentHolder.transfer_to(this.a, item.c.OpenReagentContainer.transfer_amount);
+			to_chat`<span class='notice'>You transfer ${trans} unit${trans === 1 ? "" : "s"} of the solution to ${
+				this.a
+			}</span>`(user);
 			return true;
 		}
 		return prev();
@@ -152,33 +149,31 @@ class GlassBeaker extends Component {
 	}
 
 	update_filling() {
-		const percent =
-	this.a.c.ReagentHolder.total_volume /
-	this.a.c.ReagentHolder.maximum_volume;
+		const percent = this.a.c.ReagentHolder.total_volume / this.a.c.ReagentHolder.maximum_volume;
 		if (percent === 0) {
 			this.a.overlays.reagent_filling = null;
 			return;
 		}
 		if (percent < 0.1) {
-			this.a.overlays.reagent_filling = { icon_state: "[parent]-10" };
+			this.a.overlays.reagent_filling = {icon_state: "[parent]-10"};
 		} else if (percent < 0.25) {
-			this.a.overlays.reagent_filling = { icon_state: "[parent]10" };
+			this.a.overlays.reagent_filling = {icon_state: "[parent]10"};
 		} else if (percent < 0.5) {
-			this.a.overlays.reagent_filling = { icon_state: "[parent]25" };
+			this.a.overlays.reagent_filling = {icon_state: "[parent]25"};
 		} else if (percent < 0.75) {
-			this.a.overlays.reagent_filling = { icon_state: "[parent]50" };
+			this.a.overlays.reagent_filling = {icon_state: "[parent]50"};
 		} else if (percent < 0.8) {
-			this.a.overlays.reagent_filling = { icon_state: "[parent]75" };
+			this.a.overlays.reagent_filling = {icon_state: "[parent]75"};
 		} else if (percent < 0.9) {
-			this.a.overlays.reagent_filling = { icon_state: "[parent]80" };
+			this.a.overlays.reagent_filling = {icon_state: "[parent]80"};
 		} else {
-			this.a.overlays.reagent_filling = { icon_state: "[parent]100" };
+			this.a.overlays.reagent_filling = {icon_state: "[parent]100"};
 		}
 		this.a.overlays.reagent_filling.icon = "icons/obj/chemical/reagentfillings/";
 		const [r, g, b, a] = this.a.c.ReagentHolder.get_reagents_color();
-		this.a.overlays.reagent_filling.color = `rgb(${Math.round(
-			r * 255
-		)}, ${Math.round(g * 255)}, ${Math.round(b * 255)})`;
+		this.a.overlays.reagent_filling.color = `rgb(${Math.round(r * 255)}, ${Math.round(g * 255)}, ${Math.round(
+			b * 255
+		)})`;
 		this.a.overlays.reagent_filling.alpha = a;
 	}
 }

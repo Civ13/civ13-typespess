@@ -1,5 +1,5 @@
 class LoginPanel {
-	panel: Record<string,any>;
+	panel: Record<string, any>;
 	connection: any;
 	constructor(panel: any) {
 		this.panel = panel;
@@ -10,7 +10,7 @@ class LoginPanel {
 		this.connection.addEventListener("message", this.message_handler);
 	}
 
-	message_handler(e: Record<string,any>) {
+	message_handler(e: Record<string, any>) {
 		const obj = JSON.parse(e.data);
 		if (obj.login_type === "debug") {
 			let div = document.createElement("div");
@@ -29,15 +29,16 @@ class LoginPanel {
 			button.textContent = "Connect";
 			button.addEventListener("click", () => {
 				localStorage.setItem("debug_username", text_input.value);
-				this.connection.send(JSON.stringify({ login: text_input.value }));
+				this.connection.send(JSON.stringify({login: text_input.value}));
 				this.login_finish();
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
 		} else if (obj.valid === true) {
 			if (obj.autojoin) {
-				this.connection.send(JSON.stringify({ login: obj.logged_in_as }));
-				this.login_finish();}
+				this.connection.send(JSON.stringify({login: obj.logged_in_as}));
+				this.login_finish();
+			}
 		} else if (obj.login_type === "database") {
 			const div = document.createElement("div");
 			div.classList.add("vertical-margins");
@@ -61,26 +62,21 @@ class LoginPanel {
 			button.classList.add("button");
 			button.textContent = "Login";
 			button.addEventListener("click", () => {
-				this.connection.send(JSON.stringify({name: text_input.value, password: password_input.value , request_check: true}));
+				this.connection.send(
+					JSON.stringify({name: text_input.value, password: password_input.value, request_check: true})
+				);
 				localStorage.setItem("stored_username", text_input.value);
 			});
 			div.appendChild(button);
 			this.panel.content_obj.appendChild(div);
 			if (obj.value === true && obj.logged_in_as === text_input.value) {
-				this.connection.send(JSON.stringify({ login: text_input.value }));
+				this.connection.send(JSON.stringify({login: text_input.value}));
 				this.login_finish();
 			}
-
 		} else {
-			this.panel.content_obj.getElementsByClassName(
-				"logged-in"
-			)[0].style.display = "none";
-			this.panel.content_obj.getElementsByClassName(
-				"not-logged-in"
-			)[0].style.display = "block";
-			this.panel.content_obj
-				.getElementsByClassName("connect-button")[0]
-				.classList.add("disabled");
+			this.panel.content_obj.getElementsByClassName("logged-in")[0].style.display = "none";
+			this.panel.content_obj.getElementsByClassName("not-logged-in")[0].style.display = "block";
+			this.panel.content_obj.getElementsByClassName("connect-button")[0].classList.add("disabled");
 		}
 	}
 
@@ -91,4 +87,4 @@ class LoginPanel {
 	}
 }
 
-module.exports.panel_classes = { LoginPanel };
+module.exports.panel_classes = {LoginPanel};

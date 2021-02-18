@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 class UniformItem extends Component {
 	constructor(atom: any, template: any) {
@@ -17,14 +17,7 @@ UniformItem.template = {
 			},
 			WearableItem: {
 				permeability_coefficient: 0.9,
-				body_parts_covered: [
-					"torso",
-					"groin",
-					"l_leg",
-					"r_leg",
-					"l_arm",
-					"r_arm",
-				],
+				body_parts_covered: ["torso", "groin", "l_leg", "r_leg", "l_arm", "r_arm"],
 			},
 		},
 		icon: "icons/mob/under/uniforms/",
@@ -36,4 +29,4 @@ UniformItem.template = {
 UniformItem.depends = ["WearableItem"];
 UniformItem.loadBefore = ["WearableItem"];
 
-module.exports.components = { UniformItem };
+module.exports.components = {UniformItem};

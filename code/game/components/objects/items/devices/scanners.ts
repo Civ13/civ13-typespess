@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 class Analyzer extends Component {
 	constructor(atom: any, template: any) {
@@ -26,8 +26,7 @@ Analyzer.template = {
 				throw_range: 7,
 			},
 			Examine: {
-				desc:
-		"A hand-held environmental scanner which reports current gas levels.",
+				desc: "A hand-held environmental scanner which reports current gas levels.",
 			},
 		},
 		name: "analyzer",
@@ -36,5 +35,4 @@ Analyzer.template = {
 	},
 };
 
-
-module.exports.components = { Analyzer };
+module.exports.components = {Analyzer};

@@ -2,7 +2,7 @@ class NewPlayerPanel {
 	panel: any;
 	start_at: any;
 	timer_timeout: NodeJS.Timeout;
-	constructor(panel: Record<string,any>) {
+	constructor(panel: Record<string, any>) {
 		this.panel = panel;
 		this.panel.on("message", this.handle_message.bind(this));
 		this.build_content();
@@ -10,7 +10,7 @@ class NewPlayerPanel {
 		this.update_timer();
 	}
 
-	handle_message(message: Record<string,any>) {
+	handle_message(message: Record<string, any>) {
 		if (typeof message.latejoin !== "undefined") {
 			[...this.panel.content_obj.getElementsByClassName("pregame")].forEach(
 				(item) => (item.style.display = message.latejoin ? "none" : "block")
@@ -30,11 +30,12 @@ class NewPlayerPanel {
 		if (typeof this.start_at === "undefined") {
 			this.panel.$(".timer").textContent = "Delayed";
 		} else {
-			const time_left =
-		this.start_at -
-		(performance.now() - this.panel.manager.client.server_time_to_client);
-			if (time_left < 0) {this.panel.$(".timer").textContent = "SOON";}
-			else {this.panel.$(".timer").textContent = (time_left / 1000).toFixed(1);}
+			const time_left = this.start_at - (performance.now() - this.panel.manager.client.server_time_to_client);
+			if (time_left < 0) {
+				this.panel.$(".timer").textContent = "SOON";
+			} else {
+				this.panel.$(".timer").textContent = (time_left / 1000).toFixed(1);
+			}
 		}
 	}
 
@@ -52,4 +53,4 @@ class NewPlayerPanel {
 	}
 }
 
-module.exports.panel_classes = { NewPlayerPanel };
+module.exports.panel_classes = {NewPlayerPanel};

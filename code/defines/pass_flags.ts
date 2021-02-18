@@ -1,4 +1,3 @@
-
 module.exports = {
 	PASSTABLE: 1,
 	PASSGLASS: 2,

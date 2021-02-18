@@ -1,10 +1,5 @@
 export{};
-const {
-	Component,
-	Atom,
-	has_component,
-	make_watched_property,
-} = require("./../../code/game/server.js");
+const {Component, Atom, has_component, make_watched_property} = require("./../../code/game/server.js");
 const combat_defines = require("../defines/combat_defines.js");
 const mob_defines = require("../defines/mob_defines.js");
 
@@ -17,11 +12,11 @@ class MobInteract extends Component {
 		if (this.zone_sel_template) {
 			const zone_sel = new Atom(this.a.server, this.zone_sel_template);
 			if (zone_sel.c.ZoneSel) {
-			process.nextTick(() => {
-				zone_sel.c.ZoneSel.set_mob(this.a);
-			});
-			this.a.c.Eye.screen.zone_sel = zone_sel;
-		}
+				process.nextTick(() => {
+					zone_sel.c.ZoneSel.set_mob(this.a);
+				});
+				this.a.c.Eye.screen.zone_sel = zone_sel;
+			}
 		}
 
 		this.move_mode = mob_defines.MOVE_INTENT_RUN;
@@ -40,18 +35,26 @@ class MobInteract extends Component {
 			this.move_intent();
 		});
 		this.on("nointeract_counter_changed", (from: any, to: any) => {
-			if ((from && !to) || (to && !from)) {this.a.c.MobHud.update_buttons();}
+			if ((from && !to) || (to && !from)) {
+				this.a.c.MobHud.update_buttons();
+			}
 		});
 	}
 
-	click_on(e: Record<string,any>) {
-		if (e.ctrlKey || e.altKey || e.shiftKey) {return;}
+	click_on(e: Record<string, any>) {
+		if (e.ctrlKey || e.altKey || e.shiftKey) {
+			return;
+		}
 		const isliving = has_component(this.a, "LivingMob");
 		const hasinv = has_component(this.a, "MobInventory");
 
-		if (this.next_move > this.a.server.now()) {return;}
+		if (this.next_move > this.a.server.now()) {
+			return;
+		}
 
-		if (isliving && !this.can_interact()) {return;}
+		if (isliving && !this.can_interact()) {
+			return;
+		}
 
 		if (hasinv && this.a.c.MobInventory.handcuffed) {
 			return;
@@ -59,10 +62,10 @@ class MobInteract extends Component {
 
 		if (
 			hasinv &&
-	this.a.c.MobInventory.throw_mode &&
-	(!e.atom || (e.atom.loc && e.atom.loc.is_base_loc)) &&
-	this.a.loc &&
-	this.a.loc.is_base_loc
+			this.a.c.MobInventory.throw_mode &&
+			(!e.atom || (e.atom.loc && e.atom.loc.is_base_loc)) &&
+			this.a.loc &&
+			this.a.loc.is_base_loc
 		) {
 			this.a.c.MobInventory.throw_item({
 				x: e.world_x - 0.5,
@@ -72,51 +75,58 @@ class MobInteract extends Component {
 		}
 
 		this.interact_with_atom(e, hasinv);
-
 	}
 
-	interact_with_atom(e: Record<string,any>, hasinv: any) {
-		const active_item = hasinv ? this.a.c.MobInventory.slots[this.a.c.MobInventory.active_hand].item: null;
+	interact_with_atom(e: Record<string, any>, hasinv: any) {
+		const active_item = hasinv ? this.a.c.MobInventory.slots[this.a.c.MobInventory.active_hand].item : null;
 		if (e.atom) {
-			if (active_item === e.atom) {active_item.c.Item.attack_self(this.a); return;}
+			if (active_item === e.atom) {
+				active_item.c.Item.attack_self(this.a);
+				return;
+			}
 
 			if (Math.abs(e.atom.x - this.a.x) <= 1.5001 && Math.abs(e.atom.y - this.a.y) <= 1.5001) {
 				if (active_item) {
 					active_item.c.Item.melee_attack_chain(this.a, e.atom, e);
 				} else {
-					if (has_component(e.atom, "Mob"))
-						{this.change_next_move(combat_defines.CLICK_CD_MELEE);}
+					if (has_component(e.atom, "Mob")) {
+						this.change_next_move(combat_defines.CLICK_CD_MELEE);
+					}
 					this.unarmed_attack(e.atom, e);
 				}
 				return;
 			} else {
 				if (active_item) {
 					active_item.c.Item.after_attack(e.atom, this.a, false, e);
-				} else {this.ranged_attack(/*e.atom, e*/);}
+				} else {
+					this.ranged_attack(/*e.atom, e*/);
+				}
 			}
-		} else {this.no_atom(e, active_item);}
+		} else {
+			this.no_atom(e, active_item);
+		}
 	}
 
-	no_atom(e: Record<string,any>, active_item: Record<string,any>) {
+	no_atom(e: Record<string, any>, active_item: Record<string, any>) {
 		const flag =
-		Math.abs(Math.floor(e.world_x) - this.a.x) <= 1.5001 &&
-		Math.abs(Math.floor(e.world_y) - this.a.y) <= 1.5001;
-			const target = {
-				x: e.world_x - 0.5,
-				y: e.world_y - 0.5,
-				z: this.a.z,
-				is_fine_loc: true,
-				loc: this.a.dim.location(
-					Math.floor(e.world_x),
-					Math.floor(e.world_y),
-					this.a.z
-				),
-			};
-			if (active_item) {active_item.c.Item.attack_space(target, this.a, flag, e);}
+			Math.abs(Math.floor(e.world_x) - this.a.x) <= 1.5001 &&
+			Math.abs(Math.floor(e.world_y) - this.a.y) <= 1.5001;
+		const target = {
+			x: e.world_x - 0.5,
+			y: e.world_y - 0.5,
+			z: this.a.z,
+			is_fine_loc: true,
+			loc: this.a.dim.location(Math.floor(e.world_x), Math.floor(e.world_y), this.a.z),
+		};
+		if (active_item) {
+			active_item.c.Item.attack_space(target, this.a, flag, e);
+		}
 	}
 
 	can_interact() {
-		if (this.nointeract_counter) {return false;}
+		if (this.nointeract_counter) {
+			return false;
+		}
 		return true;
 	}
 
@@ -131,9 +141,7 @@ class MobInteract extends Component {
 	}
 
 	change_next_move(num: any) {
-		this.next_move =
-	this.a.server.now() +
-	(num + this.next_move_adjust) * this.next_move_modifier;
+		this.next_move = this.a.server.now() + (num + this.next_move_adjust) * this.next_move_modifier;
 	}
 
 	unarmed_attack(target: any, e: any) {
@@ -141,14 +149,20 @@ class MobInteract extends Component {
 	}
 
 	resist() {
-		if (this.next_move > this.a.server.now() || !this.can_interact()) {return;}
+		if (this.next_move > this.a.server.now() || !this.can_interact()) {
+			return;
+		}
 		this.change_next_move(mob_defines.CLICK_CD_RESIST);
 		this.resist_act();
 	}
 
-	resist_act() {return;}
+	resist_act() {
+		return;
+	}
 
-	ranged_attack() {return;}
+	ranged_attack() {
+		return;
+	}
 }
 
 MobInteract.template = {
@@ -171,4 +185,4 @@ MobInteract.template = {
 MobInteract.depends = ["Mob", "MobHud"];
 MobInteract.loadBefore = ["Mob", "MobHud"];
 
-module.exports.components = { MobInteract };
+module.exports.components = {MobInteract};

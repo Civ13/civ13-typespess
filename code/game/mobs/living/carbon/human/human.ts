@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 const _ = require("underscore");
 
@@ -19,12 +19,7 @@ class HumanMob extends Component {
 }
 
 HumanMob.depends = ["CarbonMob", "MobBodyParts", "MobInventory", "MobMovement"];
-HumanMob.loadBefore = [
-	"CarbonMob",
-	"MobBodyParts",
-	"MobInventory",
-	"MobMovement",
-];
+HumanMob.loadBefore = ["CarbonMob", "MobBodyParts", "MobInventory", "MobMovement"];
 
 HumanMob.template = {
 	vars: {
@@ -35,9 +30,9 @@ HumanMob.template = {
 			},
 			MobInventory: {
 				handcuffable: true,
-			}
+			},
 		},
 	},
 };
 
-module.exports.components = { HumanMob };
+module.exports.components = {HumanMob};

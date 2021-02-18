@@ -1,10 +1,5 @@
 export{};
-const {
-	Component,
-	Atom,
-	VisibilityGroup,
-	to_chat,
-} = require("./../../../../code/game/server.js");
+const {Component, Atom, VisibilityGroup, to_chat} = require("./../../../../code/game/server.js");
 
 const layers = require("../../../defines/layers.js");
 
@@ -41,21 +36,19 @@ class Ghost extends Component {
 	}
 
 	reenter_corpse() {
-		if (!this.a.c.Mob.client) {return;}
+		if (!this.a.c.Mob.client) {
+			return;
+		}
 		if (!this.mind || !this.mind.current || this.mind.current.destroyed) {
 			to_chat`<span class='warning'>You have no body.</span>`(this.a);
 			return;
 		}
 		if (!this.can_reenter_corpse) {
-			to_chat`<span class='warning'>You cannot re-enter your body.</span>`(
-				this.a
-			);
+			to_chat`<span class='warning'>You cannot re-enter your body.</span>`(this.a);
 			return;
 		}
 		if (this.mind.current.c.Mob.key) {
-			to_chat`<span class='warning'>Another consciousness is in your body... It is resisting you.</span>`(
-				this.a
-			);
+			to_chat`<span class='warning'>Another consciousness is in your body... It is resisting you.</span>`(this.a);
 			return;
 		}
 		this.mind.key = this.a.c.Mob.key;
@@ -90,4 +83,4 @@ Ghost.template = {
 Ghost.depends = ["MobMovement", "Hearer", "Mob", "Examine", "SpeechHearer"];
 Ghost.loadBefore = ["Mob", "Examine", "SpeechHearer"];
 
-module.exports.components = { Ghost };
+module.exports.components = {Ghost};

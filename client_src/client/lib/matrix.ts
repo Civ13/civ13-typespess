@@ -77,19 +77,17 @@ class Matrix {
 	rotate(angle: number, ox = 0, oy = 0) {
 		const c = Math.cos(angle);
 		const s = Math.sin(angle);
-		return this.translate(-ox, -oy)
-			.multiply(new Matrix(c, s, -s, c, 0, 0))
-			.translate(ox, oy);
+		return this.translate(-ox, -oy).multiply(new Matrix(c, s, -s, c, 0, 0)).translate(ox, oy);
 	}
 
 	scale(sx: any, sy: any, ox = 0, oy = 0) {
-		if (typeof sy === "undefined") {sy = sx;}
-		return this.translate(-ox, -oy)
-			.multiply(new Matrix(sx, 0, 0, sy, 0, 0))
-			.translate(ox, oy);
+		if (typeof sy === "undefined") {
+			sy = sx;
+		}
+		return this.translate(-ox, -oy).multiply(new Matrix(sx, 0, 0, sy, 0, 0)).translate(ox, oy);
 	}
 
-	equals(other: { a: any; b: any; c: any; d: any; e: any; f: any; }) {
+	equals(other: {a: any; b: any; c: any; d: any; e: any; f: any}) {
 		return (
 			other.a === this.a &&
 			other.b === this.b &&

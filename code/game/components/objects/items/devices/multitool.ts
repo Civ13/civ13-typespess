@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 class Multitool extends Component {
 	constructor(atom: any, template: any) {
@@ -23,8 +23,7 @@ Multitool.template = {
 				hitsound: "sound/weapons/tap.ogg",
 			},
 			Examine: {
-				desc:
-		"Used for pulsing wires to test which to cut. Not recommended by doctors.",
+				desc: "Used for pulsing wires to test which to cut. Not recommended by doctors.",
 			},
 		},
 		name: "multitool",
@@ -33,5 +32,4 @@ Multitool.template = {
 	},
 };
 
-
-module.exports.components = { Multitool };
+module.exports.components = {Multitool};

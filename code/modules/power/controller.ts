@@ -6,7 +6,7 @@ class PowerController {
 	powernets: Set<unknown>;
 	machines: Set<unknown>;
 	last_tick_time: any;
-	constructor(server: Record<string,any>) {
+	constructor(server: Record<string, any>) {
 		this.server = server;
 		this.powernets = new Set();
 		this.machines = new Set();
@@ -23,9 +23,11 @@ class PowerController {
 			this.last_tick_time = this.server.now();
 			const dt = 1;
 			for (const powernet of _.shuffle([...this.powernets])) {
-				if (!powernet.nodes.size && !powernet.cables.size)
-					{this.powernets.delete(powernet);}
-				else {powernet.reset(dt);}
+				if (!powernet.nodes.size && !powernet.cables.size) {
+					this.powernets.delete(powernet);
+				} else {
+					powernet.reset(dt);
+				}
 			}
 		}
 		setTimeout(this.tick, 1000 - (this.server.now() - this.last_tick_time));
@@ -36,6 +38,6 @@ module.exports.now = (server: any) => {
 	server.power_controller = new PowerController(server);
 };
 
-module.exports.server_start = (server: Record<string,any>) => {
+module.exports.server_start = (server: Record<string, any>) => {
 	server.power_controller.start();
 };

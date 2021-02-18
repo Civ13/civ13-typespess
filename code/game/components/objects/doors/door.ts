@@ -1,15 +1,10 @@
 export{};
-const {
-	Component,
-	chain_func,
-	has_component,
-	sleep,
-} = require("./../../../../../code/game/server.js");
+const {Component, chain_func, has_component, sleep} = require("./../../../../../code/game/server.js");
 
 const layers = require("../../../../defines/layers.js");
 const pass_flags = require("../../../../defines/pass_flags.js");
 
-const _locked:any = Symbol("_locked");
+const _locked: any = Symbol("_locked");
 
 class Door extends Component {
 	constructor(atom: any, template: any) {
@@ -21,24 +16,25 @@ class Door extends Component {
 		this.a.layer = this.a.density > 0 ? this.closed_layer : this.open_layer;
 		this.a.opacity = this.a.density > 0 && !this.glass;
 		this.a.on("bumped_by", this.bumped_by.bind(this));
-		this.a.c.RequiresAccess.can_access = chain_func(
-			this.a.c.RequiresAccess.can_access,
-			this.can_access
-		);
-		this.a.attack_hand = (user: Record<string,any>) => {
+		this.a.c.RequiresAccess.can_access = chain_func(this.a.c.RequiresAccess.can_access, this.can_access);
+		this.a.attack_hand = (user: Record<string, any>) => {
 			this.try_to_activate_door(user);
 		};
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
 
-		if (this.glass) {this.a.let_pass_flags |= pass_flags.PASSGLASS;}
+		if (this.glass) {
+			this.a.let_pass_flags |= pass_flags.PASSGLASS;
+		}
 	}
 
-	bumped_by(atom: Record<string,any>) {
-		if (this.operating) {return;}
+	bumped_by(atom: Record<string, any>) {
+		if (this.operating) {
+			return;
+		}
 		this.bump_open(atom);
 	}
 
-	bump_open(atom: Record<string,any>) {
+	bump_open(atom: Record<string, any>) {
 		if (this.a.density > 0 && has_component(atom, "LivingMob")) {
 			if (this.a.c.RequiresAccess.can_access(atom)) {
 				this.open();
@@ -48,8 +44,10 @@ class Door extends Component {
 		}
 	}
 
-	try_to_activate_door(atom: Record<string,any>) {
-		if (this.operating) {return false;}
+	try_to_activate_door(atom: Record<string, any>) {
+		if (this.operating) {
+			return false;
+		}
 		if (this.a.c.RequiresAccess.can_access(atom)) {
 			if (this.a.density > 0) {
 				this.open();
@@ -58,17 +56,25 @@ class Door extends Component {
 			}
 			return true;
 		}
-		if (this.a.density > 0) {this.deny();}
+		if (this.a.density > 0) {
+			this.deny();
+		}
 	}
 
 	can_access(prev: any) {
-		if (this.emergency) {return true;}
+		if (this.emergency) {
+			return true;
+		}
 		return prev();
 	}
 
 	async open() {
-		if (this.a.density <= 0) {return true;}
-		if (this.operating) {return;}
+		if (this.a.density <= 0) {
+			return true;
+		}
+		if (this.operating) {
+			return;
+		}
 		this.operating = true;
 		this.a.opacity = false;
 		await sleep(500);
@@ -88,8 +94,12 @@ class Door extends Component {
 	}
 
 	async close() {
-		if (this.a.density > 0) {return true;}
-		if (this.operating) {return;}
+		if (this.a.density > 0) {
+			return true;
+		}
+		if (this.operating) {
+			return;
+		}
 		if (this.safe) {
 			for (const atom of this.a.crosses()) {
 				if (atom.density > 0) {
@@ -109,7 +119,9 @@ class Door extends Component {
 		this.a.density = 1;
 		await sleep(500);
 		this.a.icon_state = this.closed_state;
-		if (!this.glass) {this.a.opacity = true;}
+		if (!this.glass) {
+			this.a.opacity = true;
+		}
 		if (this.safe) {
 			for (const atom of this.a.crosses()) {
 				if (has_component(atom, "LivingMob")) {
@@ -127,15 +139,23 @@ class Door extends Component {
 		return true;
 	}
 
-	crush() {return;}
+	crush() {
+		return;
+	}
 
-	deny() {return;}
+	deny() {
+		return;
+	}
 
-	try_to_crowbar(/*tool, user*/) {return;}
+	try_to_crowbar(/*tool, user*/) {
+		return;
+	}
 
-	try_to_weld(/*tool, user*/) {return;}
+	try_to_weld(/*tool, user*/) {
+		return;
+	}
 
-	attack_by(prev: any, item: any/*, user: any*/) {
+	attack_by(prev: any, item: any /*, user: any*/) {
 		if (has_component(item, "Tool") && item.c.Tool.can_use("Crowbar")) {
 			this.try_to_crowbar(/*item, user*/);
 			return true;
@@ -153,10 +173,15 @@ class Door extends Component {
 
 	set locked(val) {
 		val = !!val;
-		if (val === this[_locked]) {return;}
+		if (val === this[_locked]) {
+			return;
+		}
 		this[_locked] = val;
-		if (val) {this.emit("locked");}
-		else {this.emit("unlocked");}
+		if (val) {
+			this.emit("locked");
+		} else {
+			this.emit("unlocked");
+		}
 	}
 }
 
@@ -197,4 +222,4 @@ Door.template = {
 Door.depends = ["Destructible", "RequiresAccess"];
 Door.loadBefore = ["Destructible", "RequiresAccess"];
 
-module.exports.components = { Door };
+module.exports.components = {Door};

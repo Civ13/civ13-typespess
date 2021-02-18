@@ -12,34 +12,38 @@ const _chain_spliced = Symbol("_chain_spliced");
 
 module.exports = {
 	/**
-  * Sort of like Object.assign(), but it assigns *behind* the other object, and it's also recursive.
-  * @memberof Typespess
-  * @param {Object} a
-  * @param {Object} b
-  */
+	 * Sort of like Object.assign(), but it assigns *behind* the other object, and it's also recursive.
+	 * @memberof Typespess
+	 * @param {Object} a
+	 * @param {Object} b
+	 */
 	weak_deep_assign(a: any, b: any) {
 		for (const key in b) {
-			if (!Object.prototype.hasOwnProperty.call(b,key)) {continue;}
+			if (!Object.prototype.hasOwnProperty.call(b, key)) {
+				continue;
+			}
 			if (
 				typeof b[key] === "object" &&
-		b[key] !== null &&
-		!(b[key] instanceof Array) &&
-		(!Object.prototype.hasOwnProperty.call(a,key) ||
-		typeof a[key] !== "object" ||
-		typeof a[key] === "undefined" ||
-		a[key] instanceof Array)
-			)
-				{a[key] = {};}
-			if (Object.prototype.hasOwnProperty.call(a,key)) {
+				b[key] !== null &&
+				!(b[key] instanceof Array) &&
+				(!Object.prototype.hasOwnProperty.call(a, key) ||
+					typeof a[key] !== "object" ||
+					typeof a[key] === "undefined" ||
+					a[key] instanceof Array)
+			) {
+				a[key] = {};
+			}
+			if (Object.prototype.hasOwnProperty.call(a, key)) {
 				if (
 					typeof a[key] === "object" &&
-		a[key] !== null &&
-		!(a[key] instanceof Array) &&
-		typeof b[key] === "object" &&
-		b[key] !== null &&
-		!(b[key] instanceof Array)
-				)
-					{module.exports.weak_deep_assign(a[key], b[key]);}
+					a[key] !== null &&
+					!(a[key] instanceof Array) &&
+					typeof b[key] === "object" &&
+					b[key] !== null &&
+					!(b[key] instanceof Array)
+				) {
+					module.exports.weak_deep_assign(a[key], b[key]);
+				}
 			} else {
 				a[key] = b[key];
 			}
@@ -48,51 +52,58 @@ module.exports = {
 	},
 
 	// Recursive version of Object.create()
-	deep_create(obj: Record<string,any>) {
+	deep_create(obj: Record<string, any>) {
 		const newobj = Object.create(obj);
 		for (const key in obj) {
-			if (!Object.prototype.hasOwnProperty.call(obj,key)) {continue;}
-			if (typeof obj[key] === "object" && !(obj[key] instanceof Array))
-				{newobj[key] = module.exports.deep_create(obj[key]);}
+			if (!Object.prototype.hasOwnProperty.call(obj, key)) {
+				continue;
+			}
+			if (typeof obj[key] === "object" && !(obj[key] instanceof Array)) {
+				newobj[key] = module.exports.deep_create(obj[key]);
+			}
 		}
 		return newobj;
 	},
 
 	/**
-  * Used for overriding functions. Similar to underscore's <code>wrap</code> function.
-  * @example
-  * function foo(a) {
-  * 	return a;
-  * }
-  * console.log(foo("bar")); // logs "bar"
-  * foo = chain_func(foo, function(prev) {
-  * 	return prev() + "baz";
-  * });
-  * let splice = foo.splice;
-  * console.log(foo("bar")); // logs "barbaz"
-  * splice();
-  * console.log(foo("bar")); // logs "bar"
-  * @memberof! Typespess
-  * @static
-  */
+	 * Used for overriding functions. Similar to underscore's <code>wrap</code> function.
+	 * @example
+	 * function foo(a) {
+	 * 	return a;
+	 * }
+	 * console.log(foo("bar")); // logs "bar"
+	 * foo = chain_func(foo, function(prev) {
+	 * 	return prev() + "baz";
+	 * });
+	 * let splice = foo.splice;
+	 * console.log(foo("bar")); // logs "barbaz"
+	 * splice();
+	 * console.log(foo("bar")); // logs "bar"
+	 * @memberof! Typespess
+	 * @static
+	 */
 	// eslint-disable-next-line @typescript-eslint/ban-types
 	chain_func(func1: any, func2: any) {
-		if (typeof func2 === "undefined") {throw new Error("Chaining undefined function!");}
-		function chained_func(this:any,...args: any[]) {
-			while (
-				chained_func[_chain_parent] &&
-		chained_func[_chain_parent][_chain_spliced]
-			) {
-				chained_func[_chain_parent] =
-		chained_func[_chain_parent][_chain_parent];
+		if (typeof func2 === "undefined") {
+			throw new Error("Chaining undefined function!");
+		}
+		function chained_func(this: any, ...args: any[]) {
+			while (chained_func[_chain_parent] && chained_func[_chain_parent][_chain_spliced]) {
+				chained_func[_chain_parent] = chained_func[_chain_parent][_chain_parent];
 			}
 			const prev = (...override_args: undefined[]) => {
-				if (!chained_func[_chain_parent]) {return;}
-				if (override_args.length)
-					{return chained_func[_chain_parent].call(this, ...override_args);}
-				else {return chained_func[_chain_parent].call(this, ...args);}
+				if (!chained_func[_chain_parent]) {
+					return;
+				}
+				if (override_args.length) {
+					return chained_func[_chain_parent].call(this, ...override_args);
+				} else {
+					return chained_func[_chain_parent].call(this, ...args);
+				}
 			};
-			if (chained_func[_chain_spliced]) {return prev();}
+			if (chained_func[_chain_spliced]) {
+				return prev();
+			}
 			return func2.call(this, prev, ...args);
 		}
 		chained_func.splice = function () {
@@ -104,70 +115,76 @@ module.exports = {
 	},
 
 	/**
-  *
-  * @param {any} obj
-  * @param {string} name
-  * @param {string|((val) => boolean)} check
-  */
-	make_watched_property(obj: any, name: string, check: { (arg0: any): any; (val: any): boolean; }) {
+	 *
+	 * @param {any} obj
+	 * @param {string} name
+	 * @param {string|((val) => boolean)} check
+	 */
+	make_watched_property(obj: any, name: string, check: {(arg0: any): any; (val: any): boolean}) {
 		const init_value = obj[name];
 		let value: any = null;
 		const event_name = `${name}_changed`;
 		if (typeof check === "string") {
 			const type = check;
 			check = function (val: any) {
-				if (typeof val !== type) {return true;}
+				if (typeof val !== type) {
+					return true;
+				}
 			};
 		}
-		if (check && typeof init_value !== "undefined" && check(init_value))
-			{throw new Error(
-				`Initial value ${init_value} for ${name} failed type check!`
-			);}
+		if (check && typeof init_value !== "undefined" && check(init_value)) {
+			throw new Error(`Initial value ${init_value} for ${name} failed type check!`);
+		}
 		Object.defineProperty(obj, name, {
 			get() {
 				return value;
 			},
 			set(val) {
-				if (check && check(val))
-					{throw new Error(`Setting ${name} to ${val} failed type check!`);}
-				if (val === value) {return;}
+				if (check && check(val)) {
+					throw new Error(`Setting ${name} to ${val} failed type check!`);
+				}
+				if (val === value) {
+					return;
+				}
 				const old = value;
 				value = val;
 				obj.emit(event_name, old, val);
 			},
 			enumerable: true,
 		});
-		if (typeof init_value !== "undefined") {obj[name] = init_value;}
+		if (typeof init_value !== "undefined") {
+			obj[name] = init_value;
+		}
 	},
 
 	/**
-  * Checks if a given object is an atom and has the given component
-  * @memberof Typespess
-  * @param {Typespess.Atom} atom The object to check
-  * @param {string} name The name of the component
-  * @returns {boolean}
-  */
-	has_component(atom: { components: { [x: string]: any; }; }, name: string) {
+	 * Checks if a given object is an atom and has the given component
+	 * @memberof Typespess
+	 * @param {Typespess.Atom} atom The object to check
+	 * @param {string} name The name of the component
+	 * @returns {boolean}
+	 */
+	has_component(atom: {components: {[x: string]: any}}, name: string) {
 		return atom && atom instanceof Atom && !!atom.components[name];
 	},
 
 	/**
-  * Checks if a given object is an atom
-  * @memberof Typespess
-  * @param {Typespess.Atom} atom The object to check
-  * @returns {boolean}
-  */
+	 * Checks if a given object is an atom
+	 * @memberof Typespess
+	 * @param {Typespess.Atom} atom The object to check
+	 * @returns {boolean}
+	 */
 	is_atom(atom: any) {
 		return atom && atom instanceof Atom;
 	},
 
 	/**
-  * Rotates the given direction by the given angle clockwise
-  * @memberof Typespess
-  * @param {number} dir The direction to turn
-  * @param {number} angle The angle to turn it by
-  * @returns {number} The resulting direction
-  */
+	 * Rotates the given direction by the given angle clockwise
+	 * @memberof Typespess
+	 * @param {number} dir The direction to turn
+	 * @param {number} angle The angle to turn it by
+	 * @returns {number} The resulting direction
+	 */
 	turn_dir(dir: number, angle: number) {
 		dir = dir & 15;
 		angle = ((angle % 360) + 360) % 360;
@@ -186,29 +203,45 @@ module.exports = {
 
 	dir_dx(dir: number) {
 		let dx = 0;
-		if (dir & 4) {dx++;}
-		if (dir & 8) {dx--;}
+		if (dir & 4) {
+			dx++;
+		}
+		if (dir & 8) {
+			dx--;
+		}
 		return dx;
 	},
 
 	dir_dy(dir: number) {
 		let dy = 0;
-		if (dir & 1) {dy++;}
-		if (dir & 2) {dy--;}
+		if (dir & 1) {
+			dy++;
+		}
+		if (dir & 2) {
+			dy--;
+		}
 		return dy;
 	},
 
 	dir_to(dx: number, dy: number) {
 		let dir = 0;
-		if (dy > 0) {dir |= 1;}
-		if (dy < 0) {dir |= 2;}
-		if (dx > 0) {dir |= 4;}
-		if (dx < 0) {dir |= 8;}
+		if (dy > 0) {
+			dir |= 1;
+		}
+		if (dy < 0) {
+			dir |= 2;
+		}
+		if (dx > 0) {
+			dir |= 4;
+		}
+		if (dx < 0) {
+			dir |= 8;
+		}
 		return dir;
 	},
 
 	dir_reverse(dir: number) {
-		switch(dir) {
+		switch (dir) {
 			case 1: //North
 				dir = 2;
 				break;
@@ -239,10 +272,10 @@ module.exports = {
 		return dir;
 	},
 	/**
-  * Returns a promise that resolves on setImmediate(). Useful for doing expensive things without blocking the node.js event loop.
-  * @memberof Typespess
-  * @async
-  */
+	 * Returns a promise that resolves on setImmediate(). Useful for doing expensive things without blocking the node.js event loop.
+	 * @memberof Typespess
+	 * @async
+	 */
 	stoplag() {
 		return new Promise((resolve) => {
 			setImmediate(resolve);
@@ -250,11 +283,11 @@ module.exports = {
 	},
 
 	/**
-  * Returns a promise that resolves in the given amount of time.
-  * @memberof Typespess
-  * @param {number} time The amount of time before resolving the promise, in milliseconds.
-  * @async
-  */
+	 * Returns a promise that resolves in the given amount of time.
+	 * @memberof Typespess
+	 * @param {number} time The amount of time before resolving the promise, in milliseconds.
+	 * @async
+	 */
 	sleep(time = 0) {
 		return new Promise((resolve) => {
 			setTimeout(resolve, time);
@@ -262,12 +295,12 @@ module.exports = {
 	},
 
 	/**
-  * Has template literal form, see {@link Typespess.format_html}
-  * Builds a visible chat message object
-  * @param {string} message
-  * @returns {Typespess.ChatMessage} (this object)
-  * @memberof Typespess
-  */
+	 * Has template literal form, see {@link Typespess.format_html}
+	 * Builds a visible chat message object
+	 * @param {string} message
+	 * @returns {Typespess.ChatMessage} (this object)
+	 * @memberof Typespess
+	 */
 	visible_message(a: any, ...b: any[]) {
 		if (typeof a === "string") {
 			return new ChatMessage("see", a);
@@ -276,12 +309,12 @@ module.exports = {
 	},
 
 	/**
-  * Has template literal form, see {@link Typespess.format_html}
-  * Builds an audible chat message object
-  * @param {string} message
-  * @returns {Typespess.ChatMessage} (this object)
-  * @memberof Typespess
-  */
+	 * Has template literal form, see {@link Typespess.format_html}
+	 * Builds an audible chat message object
+	 * @param {string} message
+	 * @returns {Typespess.ChatMessage} (this object)
+	 * @memberof Typespess
+	 */
 	audible_message(a: any, ...b: any[]) {
 		if (typeof a === "string") {
 			return new ChatMessage("hear", a);
@@ -290,34 +323,41 @@ module.exports = {
 	},
 
 	/**
-  * Sends the given chat message to the given clients. There's a tagged template literal form of this function that uses format_html that is demonstrated in the example
-  * @example
-  * to_chat(user, "<span class='warning'>The action failed</span>");
-  *
-  * // If you use this in tagged template literal form:
-  * to_chat`<span class='warning'>The ${this.a} explodes!</span>`(user);
-  * // It's the equivalent to:
-  * to_chat(user, format_html`<span class='warning'>The ${this.a} explodes!</span>`);
-  *
-  * // Be careful, if you do this, the HTML will not be escaped! Use one of the above 2 formats to ensure that your HTML is escaped to prevent XSS exploits.
-  * to_chat(user, `<span class='warning'>The ${this.a} explodes!</span>`);
-  * @memberof Typespess
-  * @see {@link Typespess#format_html}
-  * @param {Typespess.Atom|Client|Array<Typespess.Atom|Client>} target
-  * @param {string} message
-  */
+	 * Sends the given chat message to the given clients. There's a tagged template literal form of this function that uses format_html that is demonstrated in the example
+	 * @example
+	 * to_chat(user, "<span class='warning'>The action failed</span>");
+	 *
+	 * // If you use this in tagged template literal form:
+	 * to_chat`<span class='warning'>The ${this.a} explodes!</span>`(user);
+	 * // It's the equivalent to:
+	 * to_chat(user, format_html`<span class='warning'>The ${this.a} explodes!</span>`);
+	 *
+	 * // Be careful, if you do this, the HTML will not be escaped! Use one of the above 2 formats to ensure that your HTML is escaped to prevent XSS exploits.
+	 * to_chat(user, `<span class='warning'>The ${this.a} explodes!</span>`);
+	 * @memberof Typespess
+	 * @see {@link Typespess#format_html}
+	 * @param {Typespess.Atom|Client|Array<Typespess.Atom|Client>} target
+	 * @param {string} message
+	 */
 	to_chat(a: any, ...b: any) {
 		if (a instanceof Atom || a instanceof Client) {
 			let cl: any;
-			if (a instanceof Client) {cl = a;}
-			else {cl = a.c.Mob.client;}
-			if (!cl) {return;}
-			if (!cl.next_message.to_chat) {cl.next_message.to_chat = [];}
+			if (a instanceof Client) {
+				cl = a;
+			} else {
+				cl = a.c.Mob.client;
+			}
+			if (!cl) {
+				return;
+			}
+			if (!cl.next_message.to_chat) {
+				cl.next_message.to_chat = [];
+			}
 			cl.next_message.to_chat.push(b.join(""));
 		} else if (
 			a instanceof Array &&
-	a.length &&
-	(a[0] instanceof Atom || a[0] instanceof Client || a[0] instanceof Array)
+			a.length &&
+			(a[0] instanceof Atom || a[0] instanceof Client || a[0] instanceof Array)
 		) {
 			for (const item of a) {
 				module.exports.to_chat(item, ...b);
@@ -330,19 +370,19 @@ module.exports = {
 		}
 	},
 	/**
-  * A tagged template literal function.
-  * Anything in the <code>${}</code> is escaped.
-  * @example
-  * // obj gets html-escaped.
-  * let obj = "<b>hah</b>";
-  * let formatted = format_html`<span class='warning'>The ${str} explodes!</span>`;
-  * console.log(formatted);
-  * // <span class='warning'>The &lt;b&gt;hah&lt;/b&gt; explodes!</span>
-  * @param {TemplateStringsArray} strs
-  * @param {...(string|Typespess.Atom)} tags
-  * @returns {string}
-  * @memberof Typespess
-  */
+	 * A tagged template literal function.
+	 * Anything in the <code>${}</code> is escaped.
+	 * @example
+	 * // obj gets html-escaped.
+	 * let obj = "<b>hah</b>";
+	 * let formatted = format_html`<span class='warning'>The ${str} explodes!</span>`;
+	 * console.log(formatted);
+	 * // <span class='warning'>The &lt;b&gt;hah&lt;/b&gt; explodes!</span>
+	 * @param {TemplateStringsArray} strs
+	 * @param {...(string|Typespess.Atom)} tags
+	 * @returns {string}
+	 * @memberof Typespess
+	 */
 	format_html(strs: string | any[], ...tags: any[]) {
 		let out_str = "";
 		for (let i = 0; i < strs.length; i++) {
@@ -355,25 +395,21 @@ module.exports = {
 			let is_proper = str_tag.length && str_tag[0] === str_tag[0].toUpperCase();
 			let gender = "neuter";
 			if (tags[i] instanceof Atom) {
-				if (tags[i].force_improper) {is_proper = false;}
-				if (tags[i].force_proper) {is_proper = true;}
+				if (tags[i].force_improper) {
+					is_proper = false;
+				}
+				if (tags[i].force_proper) {
+					is_proper = true;
+				}
 				gender = tags[i].gender;
 			}
-			if (is_proper)
-				{pre_tag = pre_tag.replace(
-					/(^|[ \t.,>])(?:the|a) (?=(?:[ \t]|(?:<[^>]+>))*$)/i,
-					"$1"
-				);}
-			else if (gender === "plural")
-				{pre_tag = pre_tag.replace(
-					/((?:^|[ \t.,>]))a(?= (?:[ \t]|(?:<[^>]+>))*$)/i,
-					"$1some"
-				);}
-			else if (str_tag.match(/^[aeiou]/i))
-				{pre_tag = pre_tag.replace(
-					/((?:^|[ \t.,>])a)(?= (?:[ \t]|(?:<[^>]+>))*$)/i,
-					"$1n"
-				);}
+			if (is_proper) {
+				pre_tag = pre_tag.replace(/(^|[ \t.,>])(?:the|a) (?=(?:[ \t]|(?:<[^>]+>))*$)/i, "$1");
+			} else if (gender === "plural") {
+				pre_tag = pre_tag.replace(/((?:^|[ \t.,>]))a(?= (?:[ \t]|(?:<[^>]+>))*$)/i, "$1some");
+			} else if (str_tag.match(/^[aeiou]/i)) {
+				pre_tag = pre_tag.replace(/((?:^|[ \t.,>])a)(?= (?:[ \t]|(?:<[^>]+>))*$)/i, "$1n");
+			}
 			tags[i] = "" + tags[i];
 			out_str += pre_tag;
 			out_str += module.exports.escape_html(tags[i]);
@@ -382,18 +418,28 @@ module.exports = {
 	},
 
 	/**
-  * Escapes the characters &, <, >, ", and ' using their HTML encodings.
-  * @memberof Typespess
-  * @param {string} str
-  * @returns {string}
-  */
+	 * Escapes the characters &, <, >, ", and ' using their HTML encodings.
+	 * @memberof Typespess
+	 * @param {string} str
+	 * @returns {string}
+	 */
 	escape_html(str: string) {
 		return str.replace(/[&<>"']/gi, (chr: string) => {
-			if (chr === "&") {return "&amp;";}
-			if (chr === "<") {return "&lt;";}
-			if (chr === ">") {return "&gt;";}
-			if (chr === "\"") {return "&quot;";}
-			if (chr === "'") {return "&#039;";}
+			if (chr === "&") {
+				return "&amp;";
+			}
+			if (chr === "<") {
+				return "&lt;";
+			}
+			if (chr === ">") {
+				return "&gt;";
+			}
+			if (chr === '"') {
+				return "&quot;";
+			}
+			if (chr === "'") {
+				return "&#039;";
+			}
 		});
 	},
 
@@ -404,35 +450,43 @@ module.exports = {
 	},
 
 	/**
-  * @memberof Typespess
-  * @default 1
-  * @constant
-  */
+	 * @memberof Typespess
+	 * @default 1
+	 * @constant
+	 */
 	NORTH: 1,
 	/**
-  * @memberof Typespess
-  * @default 2
-  * @constant
-  */
+	 * @memberof Typespess
+	 * @default 2
+	 * @constant
+	 */
 	SOUTH: 2,
 	/**
-  * @memberof Typespess
-  * @default 4
-  * @constant
-  */
+	 * @memberof Typespess
+	 * @default 4
+	 * @constant
+	 */
 	EAST: 4,
 	/**
-  * @memberof Typespess
-  * @default 8
-  * @constant
-  */
+	 * @memberof Typespess
+	 * @default 8
+	 * @constant
+	 */
 	WEST: 8,
 
 	readonly_traps: {
-		set: () => {return;},
-		deleteProperty: () => {return;},
-		defineProperty: () => {return;},
-		setPrototypeOf: () => {return;},
+		set: () => {
+			return;
+		},
+		deleteProperty: () => {
+			return;
+		},
+		defineProperty: () => {
+			return;
+		},
+		setPrototypeOf: () => {
+			return;
+		},
 		isExtensible: () => {
 			return false;
 		},

@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 class HeadBodyPart extends Component {
 	constructor(atom: any, template: any) {
@@ -25,8 +25,7 @@ HeadBodyPart.template = {
 				throw_range: 2, // No head bowling
 			},
 			Examine: {
-				desc:
-		"Didn't make sense not to live for fun, your brain gets smart but your head gets dumb.",
+				desc: "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb.",
 			},
 		},
 		name: "head",
@@ -34,4 +33,4 @@ HeadBodyPart.template = {
 	},
 };
 
-module.exports.components = { HeadBodyPart };
+module.exports.components = {HeadBodyPart};

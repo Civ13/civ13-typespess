@@ -4,10 +4,14 @@ const Matrix = require("./matrix.js");
 const EventEmitter = require("events");
 
 class Atom extends EventEmitter {
-	constructor(client: any, instobj: Record<string,any>) {
+	constructor(client: any, instobj: Record<string, any>) {
 		super();
-		if (!Object.prototype.hasOwnProperty.call(instobj,"x")) {instobj.x = 0;}
-		if (!Object.prototype.hasOwnProperty.call(instobj,"y")) {instobj.y = 0;}
+		if (!Object.prototype.hasOwnProperty.call(instobj, "x")) {
+			instobj.x = 0;
+		}
+		if (!Object.prototype.hasOwnProperty.call(instobj, "y")) {
+			instobj.y = 0;
+		}
 		this.client = client;
 		this.directional = false;
 		this.main_icon_renderer = new IconRenderer(this);
@@ -16,9 +20,12 @@ class Atom extends EventEmitter {
 		this.overlay_renderers = {};
 
 		for (const key in instobj) {
-			if (!Object.prototype.hasOwnProperty.call(instobj,key)) {continue;}
-			if (key === "overlays" || key === "components" || key === "component_vars")
-				{continue;}
+			if (!Object.prototype.hasOwnProperty.call(instobj, key)) {
+				continue;
+			}
+			if (key === "overlays" || key === "components" || key === "component_vars") {
+				continue;
+			}
 			this[key] = instobj[key];
 		}
 		this.main_icon_renderer.directional = this.directional;
@@ -30,19 +37,24 @@ class Atom extends EventEmitter {
 
 		this.eye_id = instobj.eye_id || "";
 		this.eye = client.eyes[this.eye_id];
-		if (this.eye) {this.eye.atoms.add(this);}
+		if (this.eye) {
+			this.eye.atoms.add(this);
+		}
 
 		this.mark_dirty();
 
-		if (instobj.overlays)
-			{for (const key in instobj.overlays) {
-				if (!Object.prototype.hasOwnProperty.call(instobj.overlays,key)) {continue;}
+		if (instobj.overlays) {
+			for (const key in instobj.overlays) {
+				if (!Object.prototype.hasOwnProperty.call(instobj.overlays, key)) {
+					continue;
+				}
 				this.set_overlay(key, instobj.overlays[key]);
-			}}
+			}
+		}
 
 		this.components = {};
 		for (const component_name of instobj.components || []) {
-			if (!Object.prototype.hasOwnProperty.call(client.components,component_name)) {
+			if (!Object.prototype.hasOwnProperty.call(client.components, component_name)) {
 				console.warn(
 					`Server passed an unknown networked component '${component_name}'! Yell at the devs of your server.`
 				);
@@ -61,7 +73,9 @@ class Atom extends EventEmitter {
 		if (this.eye) {
 			this.eye.atoms.delete(this);
 			const plane = this.get_plane();
-			if (plane) {plane.atoms.delete(this);}
+			if (plane) {
+				plane.atoms.delete(this);
+			}
 		}
 		this.client.atoms.splice(this.client.atoms.indexOf(this), 1);
 		delete this.client.atoms_by_netid[this.network_id];
@@ -73,7 +87,9 @@ class Atom extends EventEmitter {
 
 	get_plane_id() {
 		// eslint-disable-next-line eqeqeq -- otherwise it wont work
-		if (this.screen_loc_x != null || this.screen_loc_y != null) {return "ui";}
+		if (this.screen_loc_x != null || this.screen_loc_y != null) {
+			return "ui";
+		}
 		return "";
 	}
 
@@ -83,16 +99,20 @@ class Atom extends EventEmitter {
 
 	mark_dirty() {
 		const plane = this.get_plane();
-		if (plane) {plane.dirty_atoms.add(this);}
+		if (plane) {
+			plane.dirty_atoms.add(this);
+		}
 	}
 
-	set_overlay(key: string, value: { [x: string]: any; overlay_layer: number; }) {
+	set_overlay(key: string, value: {[x: string]: any; overlay_layer: number}) {
 		let overlay_renderer;
 		if (this.overlays[key] && !value) {
 			delete this.overlays[key];
 			overlay_renderer = this.overlay_renderers[key];
 			const idx = this.overlay_renderers_list.indexOf(overlay_renderer);
-			if (idx !== -1) {this.overlay_renderers_list.splice(idx, 1);}
+			if (idx !== -1) {
+				this.overlay_renderers_list.splice(idx, 1);
+			}
 			delete this.overlay_renderers[key];
 			this.mark_dirty();
 			return;
@@ -110,17 +130,10 @@ class Atom extends EventEmitter {
 			return;
 		}
 		overlay_renderer.overlay_layer = value.overlay_layer || 0;
-		for (const prop of [
-			"icon",
-			"icon_state",
-			"dir",
-			"color",
-			"alpha",
-			"offset_x",
-			"offset_y",
-		])
-			{overlay_renderer[prop] = value[prop];}
-		this.overlay_renderers_list.sort((a: { overlay_layer: number; }, b: { overlay_layer: number; }) => {
+		for (const prop of ["icon", "icon_state", "dir", "color", "alpha", "offset_x", "offset_y"]) {
+			overlay_renderer[prop] = value[prop];
+		}
+		this.overlay_renderers_list.sort((a: {overlay_layer: number}, b: {overlay_layer: number}) => {
 			return a.overlay_layer - b.overlay_layer;
 		});
 	}
@@ -143,7 +156,7 @@ class Atom extends EventEmitter {
 			dispx = this.x + glidex;
 			dispy = this.y + glidey;
 		}
-		return { dispx, dispy };
+		return {dispx, dispy};
 	}
 
 	get_transform() {
@@ -151,13 +164,17 @@ class Atom extends EventEmitter {
 	}
 
 	update_glide(timestamp: any) {
-		if (!this.glide) {return;}
+		if (!this.glide) {
+			return;
+		}
 		this.glide.update(timestamp);
 	}
 
 	is_mouse_over(x: any, y: any) {
 		for (const overlay of this.overlay_renderers_list) {
-			if (overlay.is_mouse_over(x, y)) {return true;}
+			if (overlay.is_mouse_over(x, y)) {
+				return true;
+			}
 		}
 		return this.main_icon_renderer.is_mouse_over(x, y);
 	}
@@ -176,7 +193,9 @@ class Atom extends EventEmitter {
 		let i;
 		for (i = 0; i < this.overlay_renderers_list.length; i++) {
 			const overlay = this.overlay_renderers_list[i];
-			if (overlay.overlay_layer >= 0) {break;}
+			if (overlay.overlay_layer >= 0) {
+				break;
+			}
 			overlay.draw(ctx, timestamp);
 		}
 		this.main_icon_renderer.draw(ctx, timestamp);
@@ -190,7 +209,9 @@ class Atom extends EventEmitter {
 		let bounds = this.main_icon_renderer.get_bounds();
 		for (const overlay of this.overlay_renderers_list) {
 			const overlay_bounds = overlay.get_bounds();
-			if (!overlay_bounds) {continue;}
+			if (!overlay_bounds) {
+				continue;
+			}
 			if (!bounds) {
 				bounds = overlay_bounds;
 				continue;
@@ -203,14 +224,8 @@ class Atom extends EventEmitter {
 				bounds.height += bounds.y - overlay_bounds.y;
 				bounds.y = overlay_bounds.y;
 			}
-			bounds.width = Math.max(
-				bounds.width,
-				overlay_bounds.x - bounds.x + overlay_bounds.width
-			);
-			bounds.height = Math.max(
-				bounds.height,
-				overlay_bounds.y - bounds.y + overlay_bounds.height
-			);
+			bounds.width = Math.max(bounds.width, overlay_bounds.x - bounds.x + overlay_bounds.width);
+			bounds.height = Math.max(bounds.height, overlay_bounds.y - bounds.y + overlay_bounds.height);
 		}
 		return bounds;
 	}
@@ -218,7 +233,9 @@ class Atom extends EventEmitter {
 	get_transformed_bounds() {
 		const transform = this.get_transform();
 		const bounds = this.get_bounds();
-		if (!bounds) {return bounds;}
+		if (!bounds) {
+			return bounds;
+		}
 		const corners = [
 			[bounds.x, bounds.y],
 			[bounds.x + bounds.width, bounds.y],
@@ -227,10 +244,7 @@ class Atom extends EventEmitter {
 		];
 		let [left, right, top, bottom] = [Infinity, -Infinity, -Infinity, Infinity];
 		for (const corner of corners) {
-			const transformed_corner = transform.multiply_array([
-				corner[0] - 0.5,
-				corner[1] - 0.5,
-			]);
+			const transformed_corner = transform.multiply_array([corner[0] - 0.5, corner[1] - 0.5]);
 			transformed_corner[0] += 0.5;
 			transformed_corner[1] += 0.5;
 			left = Math.min(left, transformed_corner[0]);
@@ -307,15 +321,18 @@ class Glide {
 		this.y = 0;
 		if (
 			params.oldx === +params.oldx &&
-	params.oldy === +params.oldy &&
-	(params.oldx !== object.x || params.oldy !== object.y) &&
-	Math.abs(Math.max(object.x - params.oldx, object.y - params.oldy)) <=
-		1.5001
+			params.oldy === +params.oldy &&
+			(params.oldx !== object.x || params.oldy !== object.y) &&
+			Math.abs(Math.max(object.x - params.oldx, object.y - params.oldy)) <= 1.5001
 		) {
 			let pgx = (object.glide && object.glide.x) || 0;
-			if (Math.sign(pgx) === params.oldx - object.x) {pgx = 0;}
+			if (Math.sign(pgx) === params.oldx - object.x) {
+				pgx = 0;
+			}
 			let pgy = (object.glide && object.glide.y) || 0;
-			if (Math.sign(pgy) === params.oldy - object.y) {pgy = 0;}
+			if (Math.sign(pgy) === params.oldy - object.y) {
+				pgy = 0;
+			}
 			Object.assign(this, {
 				x: params.oldx - object.x + pgx,
 				y: params.oldy - object.y + pgy,
@@ -328,7 +345,9 @@ class Glide {
 		let glidex = this.x;
 		let glidey = this.y;
 		let glide_size = +this.object.glide_size;
-		if (glide_size !== glide_size) {glide_size = this.object.client.glide_size;}
+		if (glide_size !== glide_size) {
+			glide_size = this.object.client.glide_size;
+		}
 		if (glide_size !== glide_size || glide_size === 0) {
 			this.object.glide = null;
 			return;
@@ -347,21 +366,38 @@ class Glide {
 		}
 		this.x = glidex;
 		this.y = glidey;
-		if (glidex === 0 && glidey === 0) {this.object.glide = void 0;}
+		if (glidex === 0 && glidey === 0) {
+			this.object.glide = void 0;
+		}
 	}
 }
 
 Atom.Glide = Glide;
 
-Atom.atom_comparator = function (a: { layer: number; y: number; network_id: number; }, b: { layer: number; y: number; network_id: number; }) {
-	if (!a && !b) {return 0;}
-	if (!a) {return 1;}
-	if (!b) {return -1;}
+Atom.atom_comparator = function (
+	a: {layer: number; y: number; network_id: number},
+	b: {layer: number; y: number; network_id: number}
+) {
+	if (!a && !b) {
+		return 0;
+	}
+	if (!a) {
+		return 1;
+	}
+	if (!b) {
+		return -1;
+	}
 	let comparison = a.layer - b.layer;
-	if (comparison === 0) {comparison = b.y - a.y;}
-	if (comparison === 0)
-		{if (a.network_id > b.network_id) {comparison = 1;}
-		else if (a.network_id < b.network_id) {comparison = -1;}}
+	if (comparison === 0) {
+		comparison = b.y - a.y;
+	}
+	if (comparison === 0) {
+		if (a.network_id > b.network_id) {
+			comparison = 1;
+		} else if (a.network_id < b.network_id) {
+			comparison = -1;
+		}
+	}
 	return comparison;
 };
 

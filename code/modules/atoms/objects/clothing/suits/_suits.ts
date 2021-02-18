@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 class SuitItem extends Component {
 	constructor(atom: any, template: any) {
@@ -29,4 +29,4 @@ SuitItem.template = {
 SuitItem.depends = ["WearableItem"];
 SuitItem.loadBefore = ["WearableItem"];
 
-module.exports.components = { SuitItem };
+module.exports.components = {SuitItem};

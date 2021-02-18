@@ -1,33 +1,17 @@
-
 //trees, bushes, and so on
 ///////////////////////////
 export{};
 const layers = require("../../../../defines/layers.js");
-const {
-	Component,
-	has_component,
-	Atom,
-	chain_func,
-	to_chat,
-} = require("./../../../../../code/game/server.js");
+const {Component, has_component, Atom, chain_func, to_chat} = require("./../../../../../code/game/server.js");
 
 class Wild extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.attack_by = chain_func(this.a.attack_by, this.attack_by.bind(this));
-		this.a.c.Destructible.deconstruct = chain_func(
-			this.a.c.Destructible.deconstruct,
-			this.deconstruct.bind(this)
-		);
-		this.a.c.Examine.examine = chain_func(
-			this.a.c.Examine.examine,
-			this.examine.bind(this)
-		);
-		this.a.c.Tangible.ex_act = chain_func(
-			this.a.c.Tangible.ex_act,
-			this.ex_act.bind(this)
-		);
+		this.a.c.Destructible.deconstruct = chain_func(this.a.c.Destructible.deconstruct, this.deconstruct.bind(this));
+		this.a.c.Examine.examine = chain_func(this.a.c.Examine.examine, this.examine.bind(this));
+		this.a.c.Tangible.ex_act = chain_func(this.a.c.Tangible.ex_act, this.ex_act.bind(this));
 	}
 
 	examine(prev: any) {
@@ -35,7 +19,9 @@ class Wild extends Component {
 	}
 
 	attack_by(prev: any, item: any, user: any) {
-		if (this.try_decon(item, user)) {return true;}
+		if (this.try_decon(item, user)) {
+			return true;
+		}
 		return prev();
 	}
 
@@ -48,7 +34,9 @@ class Wild extends Component {
 					delay: this.slicing_duration * item.c.Tool.toolspeed,
 					target: this.a,
 				}).then((success: any) => {
-					if (!success) {return;}
+					if (!success) {
+						return;
+					}
 					this.a.c.Destructible.deconstruct(true);
 					to_chat`<span class='notice'>You chop down the ${this.a.name}!</span>`(user);
 				});
@@ -58,7 +46,9 @@ class Wild extends Component {
 	}
 
 	deconstruct(prev: any) {
-		if (!this.a.loc) {return;}
+		if (!this.a.loc) {
+			return;
+		}
 		if (!this.a.c.Destructible.no_deconstruct) {
 			const sheets = new Atom(this.a.server, this.sheet_type);
 			sheets.c.Stack.amount = this.sheet_amount;
@@ -108,4 +98,4 @@ Wild.template = {
 	},
 };
 
-module.exports.components = { Wild };
+module.exports.components = {Wild};

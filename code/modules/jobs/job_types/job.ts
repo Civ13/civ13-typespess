@@ -15,7 +15,7 @@ class JobType {
 	req_admin_notify: any;
 	outfit: any;
 	static Outfit: typeof JobOutfit;
-	constructor(obj: Record<string,any>) {
+	constructor(obj: Record<string, any>) {
 		Object.assign(
 			this,
 			{
@@ -41,7 +41,9 @@ class JobType {
 	}
 
 	instance(server: any, prefs: typeof CharacterPreferences) {
-		if (!prefs) {prefs = new CharacterPreferences();}
+		if (!prefs) {
+			prefs = new CharacterPreferences();
+		}
 		const mob = prefs.instance_human(server, {
 			name_override: this.name_override,
 		});
@@ -49,15 +51,20 @@ class JobType {
 		return mob;
 	}
 
-	after_spawn(user: Record<string,any>) {
+	after_spawn(user: Record<string, any>) {
 		to_chat`<b>You job title is ${""}${this.title}.</b>`(user);
 		to_chat`Your role is ${this.description}`(user);
-		if (this.req_admin_notify)
-			{to_chat`<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>`(user);}
+		if (this.req_admin_notify) {
+			to_chat`<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>`(
+				user
+			);
+		}
 	}
 
-	equip(mob: Record<string,any>) {
-		if (this.outfit) {this.outfit.equip(mob);}
+	equip(mob: Record<string, any>) {
+		if (this.outfit) {
+			this.outfit.equip(mob);
+		}
 	}
 }
 
@@ -67,7 +74,7 @@ class JobOutfit extends Outfit {
 	backpack: any;
 	box: any;
 	backpack_contents: any;
-	constructor(obj: Record<string,any>) {
+	constructor(obj: Record<string, any>) {
 		super(obj);
 		weak_deep_assign(this, {
 			name: "Standard Gear",
@@ -94,13 +101,17 @@ class JobOutfit extends Outfit {
 	pre_equip() {
 		this.slots.back = this.backpack;
 		if (this.box) {
-			if (!this.backpack_contents) {this.backpack_contents = [];}
+			if (!this.backpack_contents) {
+				this.backpack_contents = [];
+			}
 			this.backpack_contents.splice(0, 0, this.box); // at 0th position, deleting 0 items, insert this.box
 		}
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	post_equip(target: Record<string,any>, visuals_only = false) {return;}
+	post_equip(target: Record<string, any>, visuals_only = false) {
+		return;
+	}
 }
 
 JobType.Outfit = JobOutfit;

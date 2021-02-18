@@ -15,12 +15,12 @@ class Dimension {
 	}
 
 	/**
-  * Used for getting a specific location.
-  * @param {number} x
-  * @param {number} y
-  * @param {number} z
-  * @return {Location} The location object.
-  */
+	 * Used for getting a specific location.
+	 * @param {number} x
+	 * @param {number} y
+	 * @param {number} z
+	 * @return {Location} The location object.
+	 */
 	location(x: number, y: number, z: number) {
 		if (x !== +x || y !== +y || z !== +z) {
 			// OI THERE NUMBERS only
@@ -63,7 +63,7 @@ class Location {
 	contents: Array<any>;
 	viewers: Array<any>;
 	hearers: Array<any>;
-	server: Record<string,any>;
+	server: Record<string, any>;
 	[_step_cache]: any;
 	[_locations]: any;
 	constructor(x: number, y: number, z: number, dim: any, server: any) {
@@ -132,31 +132,47 @@ class Location {
 			value: server,
 		});
 		this[_step_cache] = new Array(16);
-
 	}
 
 	/**
-  * Returns a location in the given direction
-  * @param {number} dir
-  * @returns {Location}
-  */
+	 * Returns a location in the given direction
+	 * @param {number} dir
+	 * @returns {Location}
+	 */
 	get_step(dir: number) {
-		if ((dir & 3) === 3) {dir &= ~3;}
-		if ((dir & 12) === 12) {dir &= ~12;}
+		if ((dir & 3) === 3) {
+			dir &= ~3;
+		}
+		if ((dir & 12) === 12) {
+			dir &= ~12;
+		}
 		const cached = this[_step_cache][dir];
-		if (cached) {return cached;}
+		if (cached) {
+			return cached;
+		}
 		let newx = this.x;
 		let newy = this.y;
-		if (dir & 1) {newy++;}
-		if (dir & 2) {newy--;}
-		if (dir & 4) {newx++;}
-		if (dir & 8) {newx--;}
+		if (dir & 1) {
+			newy++;
+		}
+		if (dir & 2) {
+			newy--;
+		}
+		if (dir & 4) {
+			newx++;
+		}
+		if (dir & 8) {
+			newx--;
+		}
 		return (this[_step_cache][dir] = this.dim.location(newx, newy, this.z));
 	}
 
 	get opacity() {
-		for (const atom of this.partial_contents)
-			{if (atom.opacity && atom.does_enclose_tile(this)) {return atom.opacity;}}
+		for (const atom of this.partial_contents) {
+			if (atom.opacity && atom.does_enclose_tile(this)) {
+				return atom.opacity;
+			}
+		}
 		return false;
 	}
 

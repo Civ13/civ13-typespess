@@ -1,12 +1,5 @@
 export{};
-const {
-	Component,
-	Atom,
-	chain_func,
-	has_component,
-	Sound,
-	to_chat,
-} = require("./../../../code/game/server.js");
+const {Component, Atom, chain_func, has_component, Sound, to_chat} = require("./../../../code/game/server.js");
 
 class AmmoBox extends Component {
 	constructor(atom: any, template: any) {
@@ -24,22 +17,16 @@ class AmmoBox extends Component {
 
 	update_icon() {
 		switch (this.multiple_sprites) {
-		case 1:
-			this.a.icon_state = `${this.a.template.vars.icon_state}-${
-				this.stored_ammo.length % this.ammo_mod
-			}`;
-			break;
-		case 2:
-			this.a.icon_state = `${this.a.template.vars.icon_state}-${
-				this.stored_ammo.length ? "1" : "0"
-			}`;
-			break;
+			case 1:
+				this.a.icon_state = `${this.a.template.vars.icon_state}-${this.stored_ammo.length % this.ammo_mod}`;
+				break;
+			case 2:
+				this.a.icon_state = `${this.a.template.vars.icon_state}-${this.stored_ammo.length ? "1" : "0"}`;
+				break;
 		}
-		this.a.c.Examine.desc = `${
-			this.a.template.vars.components.Examine.desc
-		} There are ${this.stored_ammo.length} shell${
-			this.stored_ammo.length === 1 ? "" : "s"
-		} left.`;
+		this.a.c.Examine.desc = `${this.a.template.vars.components.Examine.desc} There are ${
+			this.stored_ammo.length
+		} shell${this.stored_ammo.length === 1 ? "" : "s"} left.`;
 	}
 
 	get_round(keep = false) {
@@ -60,8 +47,8 @@ class AmmoBox extends Component {
 		}
 		if (
 			!ammo_casing ||
-	(this.caliber && ammo_casing.c.AmmoCasing.caliber !== this.caliber) ||
-	(!this.caliber && ammo_casing.c.AmmoCasing.casing_type !== this.ammo_type)
+			(this.caliber && ammo_casing.c.AmmoCasing.caliber !== this.caliber) ||
+			(!this.caliber && ammo_casing.c.AmmoCasing.casing_type !== this.ammo_type)
 		) {
 			return false;
 		}
@@ -76,7 +63,9 @@ class AmmoBox extends Component {
 				if (!casing.projectile) {
 					//Spent ammo.
 					const idx = this.stored_ammo.indexOf(casing);
-					if (idx !== -1) {this.stored_ammo.splice(idx, 1);}
+					if (idx !== -1) {
+						this.stored_ammo.splice(idx, 1);
+					}
 					casing.loc = this.a.loc;
 
 					this.stored_ammo.push(ammo_casing);
@@ -100,17 +89,13 @@ class AmmoBox extends Component {
 		for (const ammo of this.stored_ammo) {
 			ammo.loc = this.a.loc;
 			const idx = this.stored_ammo.indexOf(ammo);
-			if (idx !== -1) {this.stored_ammo.splice(idx, 1);}
+			if (idx !== -1) {
+				this.stored_ammo.splice(idx, 1);
+			}
 		}
 	}
 
-	attack_by(
-		prev: any,
-		item: any,
-		user: Record<string,any>,
-		e: any,
-		{ silent = false, replace_spent = false } = {}
-	) {
+	attack_by(prev: any, item: any, user: Record<string, any>, e: any, {silent = false, replace_spent = false} = {}) {
 		let num_loaded = 0;
 		if (!this.can_load()) {
 			return;
@@ -120,7 +105,9 @@ class AmmoBox extends Component {
 				const did_load = this.give_round(casing, replace_spent);
 				if (did_load) {
 					const idx = item.c.AmmoBox.stored_ammo.indexOf(casing);
-					if (idx !== -1) {item.c.AmmoBox.stored_ammo.splice(idx, 1);}
+					if (idx !== -1) {
+						item.c.AmmoBox.stored_ammo.splice(idx, 1);
+					}
 					num_loaded++;
 				}
 				if (!did_load || !this.multiload) {
@@ -130,24 +117,24 @@ class AmmoBox extends Component {
 			item.c.AmmoBox.update_icon();
 		}
 		if (has_component(item, "AmmoCasing") && this.give_round(item, replace_spent)) {
-				item.loc = this.a;
-				num_loaded++;
+			item.loc = this.a;
+			num_loaded++;
 		}
 		if (num_loaded && !silent) {
-				to_chat`<span class='notice'>You load ${num_loaded} shell${
-					num_loaded === 1 ? "" : "s"
-				} into the ${this.a}!</span>`(user);
-				new Sound(this.a.server, {
-					path: "sound/weapons/bulletinsert.ogg",
-					volume: 0.6,
-					vary: true,
-				}).emit_from(user);
+			to_chat`<span class='notice'>You load ${num_loaded} shell${num_loaded === 1 ? "" : "s"} into the ${
+				this.a
+			}!</span>`(user);
+			new Sound(this.a.server, {
+				path: "sound/weapons/bulletinsert.ogg",
+				volume: 0.6,
+				vary: true,
+			}).emit_from(user);
 		}
 		this.update_icon();
 		return prev();
 	}
 
-	attack_self(user: Record<string,any>) {
+	attack_self(user: Record<string, any>) {
 		const casing = this.get_round();
 		if (casing) {
 			if (!user.c.MobInventory.put_in_hands(casing)) {
@@ -155,9 +142,7 @@ class AmmoBox extends Component {
 			} else {
 				user.c.MobInventory.put_in_hands(casing);
 			}
-			to_chat`<span class='notice'>You remove a round from the ${this.a}!</span>`(
-				user
-			);
+			to_chat`<span class='notice'>You remove a round from the ${this.a}!</span>`(user);
 			new Sound(this.a.server, {
 				path: "sound/weapons/bulletremove.ogg",
 				volume: 0.6,
@@ -191,7 +176,7 @@ AmmoBox.template = {
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				inhand_icon_state: "syringe_kit",
-				materials: { metal: 30000 },
+				materials: {metal: 30000},
 			},
 			Tangile: {
 				throw_force: 2,
@@ -221,5 +206,4 @@ GunMagazine.template = {
 	},
 };
 
-
-module.exports.components = { AmmoBox, GunMagazine };
+module.exports.components = {AmmoBox, GunMagazine};

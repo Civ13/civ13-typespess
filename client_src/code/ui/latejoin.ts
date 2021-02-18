@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/ban-types */export{};
+/* eslint-disable @typescript-eslint/ban-types */ export{};
 class LatejoinPanel {
 	panel: any;
-	job_elems: Record<string,any>;
-	jobs: Record<string,any>;
-	department_elems: Record<string,any>;
+	job_elems: Record<string, any>;
+	jobs: Record<string, any>;
+	department_elems: Record<string, any>;
 	constructor(panel: any) {
 		this.panel = panel;
 		this.panel.on("message", this.handle_message.bind(this));
@@ -14,7 +14,7 @@ class LatejoinPanel {
 		this.department_elems = {};
 
 		for (const department of Object.keys(departments)) {
-			const { name, color } = departments[department];
+			const {name, color} = departments[department];
 			const elem = document.createElement("fieldset");
 			elem.classList.add("status-display", "center");
 			const legend = document.createElement("legend");
@@ -26,7 +26,7 @@ class LatejoinPanel {
 		}
 	}
 
-	handle_message(message: Record<string,any>) {
+	handle_message(message: Record<string, any>) {
 		if (message.jobs) {
 			for (const id of Object.keys(message.jobs)) {
 				const job = this.jobs[id] || {};
@@ -37,10 +37,8 @@ class LatejoinPanel {
 					this.job_elems[id] = elem;
 					const button = document.createElement("div");
 					button.classList.add("button");
-					button.dataset.message = JSON.stringify({ join: id });
-					const department_elem = this.department_elems[
-						job.departments[0] || "misc"
-					];
+					button.dataset.message = JSON.stringify({join: id});
+					const department_elem = this.department_elems[job.departments[0] || "misc"];
 					if (job.departments.lastIndexOf("command") > 0) {
 						button.style.fontWeight = "bold";
 						department_elem.insertBefore(elem, department_elem.firstChild);
@@ -53,9 +51,7 @@ class LatejoinPanel {
 				elem.button.textContent = `${job.title} (${job.current_positions}/${
 					job.total_positions !== -1 ? job.total_positions : "∞"
 				})`;
-				if (
-					job.current_positions >= job.total_positions && job.total_positions !== -1
-				) {
+				if (job.current_positions >= job.total_positions && job.total_positions !== -1) {
 					elem.style.display = "none";
 				} else {
 					elem.style.display = "block";
@@ -65,11 +61,11 @@ class LatejoinPanel {
 	}
 }
 
-const departments: Record<string,any> = {
+const departments: Record<string, any> = {
 	misc: {
 		name: "Miscellaneous",
 		color: "#ffffff",
 	},
 };
 
-module.exports.panel_classes = { LatejoinPanel };
+module.exports.panel_classes = {LatejoinPanel};

@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../../../code/game/server.js");
+const {Component} = require("./../../../../../../code/game/server.js");
 
 class StackRod extends Component {
 	constructor(atom: any, template: any) {
@@ -22,7 +22,7 @@ StackRod.template = {
 		components: {
 			Item: {
 				force: 9,
-				materials: { metal: 1000 },
+				materials: {metal: 1000},
 				attack_verb: ["hit", "bludgeoned", "whacked"],
 				inhand_icon_state: "rods",
 				hitsound: "sound/weapons/grenadelaunch.ogg",
@@ -60,4 +60,4 @@ StackRod.template = {
 StackRod.depends = ["Stack"];
 StackRod.loadBefore = ["Stack"];
 
-module.exports.components = { StackRod };
+module.exports.components = {StackRod};

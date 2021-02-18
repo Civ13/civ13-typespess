@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../code/game/server.js");
+const {Component} = require("./../../../../code/game/server.js");
 
 class EnergyLens extends Component {
 	constructor(atom: any, template: any) {
@@ -28,5 +28,4 @@ EnergyLens.template = {
 	},
 };
 
-
-module.exports.components = { EnergyLens };
+module.exports.components = {EnergyLens};

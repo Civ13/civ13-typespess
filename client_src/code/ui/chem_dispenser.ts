@@ -34,10 +34,7 @@ class ChemDispenserPanel {
 </div>
 `;
 		this.panel.content_obj.appendChild(this.reagents_list_container);
-		this.reagent_binding = new ReagentBinding(
-			this.panel,
-			this.reagents_list_container
-		);
+		this.reagent_binding = new ReagentBinding(this.panel, this.reagents_list_container);
 
 		for (const amt of [1, 5, 10, 15, 20, 25, 30, 40, 50, 75, 100, 150, 300]) {
 			const button = document.createElement("div");
@@ -49,7 +46,7 @@ class ChemDispenserPanel {
 		}
 	}
 
-	handle_message(message: { dispensable_reagents: any[]; dispense_amount: any; }) {
+	handle_message(message: {dispensable_reagents: any[]; dispense_amount: any}) {
 		if (message.dispensable_reagents) {
 			this.dispense_list.innerHTML = "";
 			message.dispensable_reagents.sort();
@@ -59,18 +56,20 @@ class ChemDispenserPanel {
 				button.style.width = "125px";
 				button.style.margin = "2px 0";
 				button.innerText = name;
-				button.dataset.message = JSON.stringify({ dispense: reagent });
+				button.dataset.message = JSON.stringify({dispense: reagent});
 				this.dispense_list.appendChild(button);
 			}
 		}
 		if (message.dispense_amount && message.dispense_amount !== this.dispense_amount) {
-				this.dispense_amount = message.dispense_amount;
-				for (const child of this.dispense_amounts.childNodes) {
-					if (child.dataset.radioValue === this.dispense_amount)
-						{child.classList.add("selected");}
-					else {child.classList.remove("selected");}
+			this.dispense_amount = message.dispense_amount;
+			for (const child of this.dispense_amounts.childNodes) {
+				if (child.dataset.radioValue === this.dispense_amount) {
+					child.classList.add("selected");
+				} else {
+					child.classList.remove("selected");
 				}
 			}
 		}
 	}
-module.exports.panel_classes = { ChemDispenserPanel };
+}
+module.exports.panel_classes = {ChemDispenserPanel};

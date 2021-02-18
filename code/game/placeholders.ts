@@ -1,5 +1,3 @@
-
-
 module.exports.templates = {
 	crate: {
 		tree_paths: ["structures/closet/crate"],

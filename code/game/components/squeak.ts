@@ -1,10 +1,5 @@
 export{};
-const {
-	Component,
-	Sound,
-	has_component,
-	chain_func,
-} = require("./../../../code/game/server.js");
+const {Component, Sound, has_component, chain_func} = require("./../../../code/game/server.js");
 
 class Squeak extends Component {
 	constructor(atom: any, template: any) {
@@ -15,29 +10,24 @@ class Squeak extends Component {
 		this.a.on("crossed_by", this.play_squeak);
 		if (has_component(this.a, "Item")) {
 			this.a.c.Item.attack = chain_func(this.a.c.Item.attack, this.play_squeak);
-			this.a.c.Item.attack_obj = chain_func(
-				this.a.c.Item.attack_obj,
-				this.play_squeak
-			);
-			this.a.c.Item.attack_self = chain_func(
-				this.a.c.Item.attack_self,
-				this.use_squeak
-			);
+			this.a.c.Item.attack_obj = chain_func(this.a.c.Item.attack_obj, this.play_squeak);
+			this.a.c.Item.attack_self = chain_func(this.a.c.Item.attack_self, this.use_squeak);
 			this.a.c.Item.on("equipped", this.equipped.bind(this));
 			this.a.c.Item.on("unequipped", this.unequipped.bind(this));
 		}
 	}
 
 	play_squeak(prev: any = null) {
-		if (Math.random() < this.squeak_chance)
-			{new Sound(this.a.server, {
-				path: this.squeak_sounds[
-					Math.floor(Math.random() * this.squeak_sounds.length)
-				],
+		if (Math.random() < this.squeak_chance) {
+			new Sound(this.a.server, {
+				path: this.squeak_sounds[Math.floor(Math.random() * this.squeak_sounds.length)],
 				vary: true,
 				volume: this.volume,
-			}).emit_from(this.a);}
-		if (typeof prev === "function") {return prev();}
+			}).emit_from(this.a);
+		}
+		if (typeof prev === "function") {
+			return prev();
+		}
 	}
 
 	step_squeak() {
@@ -54,11 +44,15 @@ class Squeak extends Component {
 			this.last_use = this.a.server.now();
 			this.play_squeak();
 		}
-		if (typeof prev === "function") {return prev();}
+		if (typeof prev === "function") {
+			return prev();
+		}
 	}
 
 	equipped(slot: any) {
-		if (slot.id === "shoes") {slot.mob.on("moved", this.step_squeak);}
+		if (slot.id === "shoes") {
+			slot.mob.on("moved", this.step_squeak);
+		}
 	}
 	unequipped(slot: any) {
 		slot.mob.removeListener("moved", this.step_squeak);
@@ -88,4 +82,4 @@ Squeak.template = {
 	},
 };
 
-module.exports.components = { Squeak };
+module.exports.components = {Squeak};

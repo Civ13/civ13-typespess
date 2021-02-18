@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("../client/index.js");
+const {Component} = require("../client/index.js");
 
 class Tooltip extends Component {
 	constructor(atom: any, template: any) {
@@ -10,12 +10,12 @@ class Tooltip extends Component {
 		this.alert_div = document.createElement("div");
 		this.alert_div.classList.add("tooltip");
 		this.alert_div.classList.add(this.theme || "midnight");
-		this.alert_div.innerHTML = "<div class=\"content\"><h1 class=\"title\"></h1><p class=\"desc\"></p></div>";
+		this.alert_div.innerHTML = '<div class="content"><h1 class="title"></h1><p class="desc"></p></div>';
 		this.title_elem = this.alert_div.querySelector(".title");
 		this.desc_elem = this.alert_div.querySelector(".desc");
 	}
 
-	mouseover(e:any) {
+	mouseover(e: any) {
 		this.title_elem.textContent = this.a.name;
 		this.desc_elem.textContent = this.desc;
 		const elem = document.createElement("div");
@@ -26,15 +26,15 @@ class Tooltip extends Component {
 	}
 
 	mouseout() {
-		if (this.alert_div.parentNode && this.alert_div.parentNode.parentNode)
-			{this.alert_div.parentNode.parentNode.removeChild(
-				this.alert_div.parentNode
-			);}
-		if (this.alert_div.parentNode)
-			{this.alert_div.parentNode.removeChild(this.alert_div);}
+		if (this.alert_div.parentNode && this.alert_div.parentNode.parentNode) {
+			this.alert_div.parentNode.parentNode.removeChild(this.alert_div.parentNode);
+		}
+		if (this.alert_div.parentNode) {
+			this.alert_div.parentNode.removeChild(this.alert_div);
+		}
 	}
 
-	mousemove(e: Record<string,any>) {
+	mousemove(e: Record<string, any>) {
 		if (this.alert_div.parentNode) {
 			this.alert_div.parentNode.style.left = e.original_event.clientX + "px";
 			this.alert_div.parentNode.style.top = e.original_event.clientY + "px";
@@ -42,4 +42,4 @@ class Tooltip extends Component {
 	}
 }
 
-module.exports.components = { Tooltip };
+module.exports.components = {Tooltip};

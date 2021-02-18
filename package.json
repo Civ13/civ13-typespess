@@ -73,7 +73,10 @@
 			"sonarjs"
 		],
 		"rules": {
-			"sonarjs/cognitive-complexity": ["error",20],
+			"sonarjs/cognitive-complexity": [
+				"error",
+				20
+			],
 			"sonarjs/no-duplicate-string": 0,
 			"@typescript-eslint/no-var-requires": 0,
 			"@typescript-eslint/no-explicit-any": 0,
@@ -142,5 +145,11 @@
 		"testMatch": [
 			"<rootDir>/scripts/test.test.js"
 		]
+	},
+	"prettier": {
+		"tabWidth": 4,
+		"useTabs": true,
+		"bracketSpacing": false,
+		"printWidth": 120
 	}
 }

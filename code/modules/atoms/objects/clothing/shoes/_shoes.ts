@@ -1,10 +1,5 @@
 export{};
-const {
-	Component,
-	Atom,
-	has_component,
-	dir_to,
-} = require("./../../../../../../code/game/server.js");
+const {Component, Atom, has_component, dir_to} = require("./../../../../../../code/game/server.js");
 
 const BLOOD_LOSS_PER_STEP = 5;
 const BLOOD_LOSS_IN_SPREAD = 15;
@@ -17,14 +12,14 @@ class FootItem extends Component {
 		this.mob_uncrossed = this.mob_uncrossed.bind(this);
 		this.mob_moved = this.mob_moved.bind(this);
 		// hey check this shit out you can put code related to shoes in shoe code instead of mob code.
-		this.a.c.Item.on("equipped", (slot: Record<string,any>) => {
+		this.a.c.Item.on("equipped", (slot: Record<string, any>) => {
 			if (!slot.props.is_hand_slot) {
 				slot.mob.on("crossed", this.mob_crossed);
 				slot.mob.on("uncrossed", this.mob_uncrossed);
 				slot.mob.on("moved", this.mob_moved);
 			}
 		});
-		this.a.c.Item.on("unequipped", (slot: Record<string,any>) => {
+		this.a.c.Item.on("unequipped", (slot: Record<string, any>) => {
 			if (!slot.props.is_hand_slot) {
 				slot.mob.removeListener("crossed", this.mob_crossed);
 				slot.mob.removeListener("uncrossed", this.mob_uncrossed);
@@ -32,74 +27,67 @@ class FootItem extends Component {
 			}
 		});
 	}
-	mob_crossed(obj: Record<string,any>, movement: any) {
-		if (has_component(obj, "CleanableDecal") && obj.c.CleanableDecal.footprint_amount &&
-		obj.c.CleanableDecal.footprint_type
-			) {
-				const type = obj.c.CleanableDecal.footprint_type;
-				const to_get = Math.min(
-					100,
-					100 - (+this.footprint_amounts[type] || 0),
-					obj.c.CleanableDecal.footprint_amount
-				);
-				if (to_get > 0) {
-					this.footprint_amounts[type] =
-			(+this.footprint_amounts[type] || 0) + to_get;
-					obj.c.CleanableDecal.footprint_amount -= to_get;
+	mob_crossed(obj: Record<string, any>, movement: any) {
+		if (
+			has_component(obj, "CleanableDecal") &&
+			obj.c.CleanableDecal.footprint_amount &&
+			obj.c.CleanableDecal.footprint_type
+		) {
+			const type = obj.c.CleanableDecal.footprint_type;
+			const to_get = Math.min(
+				100,
+				100 - (+this.footprint_amounts[type] || 0),
+				obj.c.CleanableDecal.footprint_amount
+			);
+			if (to_get > 0) {
+				this.footprint_amounts[type] = (+this.footprint_amounts[type] || 0) + to_get;
+				obj.c.CleanableDecal.footprint_amount -= to_get;
 			}
 		}
 		if (has_component(obj, "FootprintsDecal") && movement.offset) {
 			const amount = +this.footprint_amounts[obj.c.FootprintsDecal.type] || 0;
 			if (amount > 0) {
 				this.footprint_amounts[obj.c.FootprintsDecal.type] = Math.max(
-					this.footprint_amounts[obj.c.FootprintsDecal.type] -
-			BLOOD_LOSS_PER_STEP,
+					this.footprint_amounts[obj.c.FootprintsDecal.type] - BLOOD_LOSS_PER_STEP,
 					0
 				);
-				obj.c.FootprintsDecal.entered_dirs |= dir_to(
-					movement.offset.x,
-					movement.offset.y
-				);
+				obj.c.FootprintsDecal.entered_dirs |= dir_to(movement.offset.x, movement.offset.y);
 			}
 		}
 	}
-	mob_uncrossed(obj: Record<string,any>, movement: Record<string,any>) {
+	mob_uncrossed(obj: Record<string, any>, movement: Record<string, any>) {
 		if (has_component(obj, "FootprintsDecal") && movement.offset) {
 			const amount = +this.footprint_amounts[obj.c.FootprintsDecal.type] || 0;
 			if (amount > 0) {
 				this.footprint_amounts[obj.c.FootprintsDecal.type] = Math.max(
-					this.footprint_amounts[obj.c.FootprintsDecal.type] -
-			BLOOD_LOSS_PER_STEP,
+					this.footprint_amounts[obj.c.FootprintsDecal.type] - BLOOD_LOSS_PER_STEP,
 					0
 				);
-				obj.c.FootprintsDecal.exited_dirs |= dir_to(
-					movement.offset.x,
-					movement.offset.y
-				);
+				obj.c.FootprintsDecal.exited_dirs |= dir_to(movement.offset.x, movement.offset.y);
 			}
 		}
 	}
-	mob_moved(movement: Record<string,any>) {
-		if (!movement.offset) {return;}
+	mob_moved(movement: Record<string, any>) {
+		if (!movement.offset) {
+			return;
+		}
 		// eslint-disable-next-line prefer-const
 		for (let [type, tamount] of Object.entries(this.footprint_amounts)) {
 			let amount = Number(tamount);
-			if (amount <= 0) {continue;}
+			if (amount <= 0) {
+				continue;
+			}
 			let valid = true;
 			for (const obj of this.a.crosses()) {
-				if (
-					has_component(obj, "FootprintsDecal") &&
-		obj.c.FootprintsDecal === type
-				) {
+				if (has_component(obj, "FootprintsDecal") && obj.c.FootprintsDecal === type) {
 					valid = false;
 					break;
 				}
 			}
-			if (!valid) {break;}
-			this.footprint_amounts[type] = amount = Math.max(
-				0,
-				amount - BLOOD_LOSS_PER_STEP
-			);
+			if (!valid) {
+				break;
+			}
+			this.footprint_amounts[type] = amount = Math.max(0, amount - BLOOD_LOSS_PER_STEP);
 			if (amount > BLOOD_LOSS_IN_SPREAD) {
 				const footprints = new Atom(this.a.server, {
 					components: ["FootprintsDecal"],
@@ -112,10 +100,7 @@ class FootItem extends Component {
 					},
 				});
 				footprints.fine_loc = this.a.c.Item.slot.mob.fine_loc;
-				footprints.alpha = Math.max(
-					footprints.alpha,
-					+this.footprint_amounts[type] / 100
-				);
+				footprints.alpha = Math.max(footprints.alpha, +this.footprint_amounts[type] / 100);
 				this.mob_crossed(footprints, movement);
 			}
 		}
@@ -143,4 +128,4 @@ FootItem.template = {
 FootItem.depends = ["WearableItem"];
 FootItem.loadBefore = ["WearableItem"];
 
-module.exports.components = { FootItem };
+module.exports.components = {FootItem};

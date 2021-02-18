@@ -1,10 +1,5 @@
 export{};
-const {
-	Component,
-	has_component,
-	make_watched_property,
-	chain_func,
-} = require("./../../../code/game/server.js");
+const {Component, has_component, make_watched_property, chain_func} = require("./../../../code/game/server.js");
 
 class ApcPowered extends Component {
 	constructor(atom: any, template: any) {
@@ -13,24 +8,18 @@ class ApcPowered extends Component {
 		this.a.on("end_touch_area", this.end_touch_area.bind(this));
 		make_watched_property(this, "area");
 		make_watched_property(this, "powered"); // controls whether this object received it's idle power in the last machine tick.
-		this.a.c.MachineTick.process = chain_func(
-			this.a.c.MachineTick.process,
-			this.process.bind(this)
-		);
+		this.a.c.MachineTick.process = chain_func(this.a.c.MachineTick.process, this.process.bind(this));
 	}
 
-	start_touch_area(atom: Record<string,any>) {
+	start_touch_area(atom: Record<string, any>) {
 		if (has_component(atom, "AreaPower")) {
 			this.area = atom;
 		}
 	}
-	end_touch_area(atom: Record<string,any>) {
+	end_touch_area(atom: Record<string, any>) {
 		if (atom === this.area) {
 			for (const brush of this.a.crosses()) {
-				if (
-					has_component(brush, "AreaBrush") &&
-		has_component(brush.c.AreaBrush.area, "AreaPower")
-				) {
+				if (has_component(brush, "AreaBrush") && has_component(brush.c.AreaBrush.area, "AreaPower")) {
 					this.area = brush.c.AreaBrush.area;
 					return;
 				}
@@ -40,22 +29,26 @@ class ApcPowered extends Component {
 	}
 
 	/**
-  * @param {string} channel
-  * @return {number} Amount of availible energy in joules
-  */
+	 * @param {string} channel
+	 * @return {number} Amount of availible energy in joules
+	 */
 	get_available_power(channel = this.power_channel) {
-		if (!this.area) {return 0;}
+		if (!this.area) {
+			return 0;
+		}
 		return this.area.c.AreaPower.get_available_power(channel);
 	}
 
 	/**
-  *
-  * @param {number} amount
-  * @param {string} channel
-  * @return {number} Amount of energy used in joules
-  */
+	 *
+	 * @param {number} amount
+	 * @param {string} channel
+	 * @return {number} Amount of energy used in joules
+	 */
 	use_power(amount: number, channel = this.power_channel) {
-		if (!this.area) {return 0;}
+		if (!this.area) {
+			return 0;
+		}
 		return this.area.c.AreaPower.use_power(amount, channel);
 	}
 
@@ -99,7 +92,9 @@ ApcPowered.template = {
 };
 
 class MachineTick extends Component {
-	process(/* dt */) {return;}
+	process(/* dt */) {
+		return;
+	}
 }
 
-module.exports.components = { MachineTick, ApcPowered };
+module.exports.components = {MachineTick, ApcPowered};

@@ -1,8 +1,5 @@
 export{};
-const {
-	Component,
-	has_component,
-} = require("./../../../../../code/game/server.js");
+const {Component, has_component} = require("./../../../../../code/game/server.js");
 const layers = require("../../../../defines/layers.js");
 
 class CleanableDecal extends Component {
@@ -10,11 +7,11 @@ class CleanableDecal extends Component {
 		super(atom, template);
 		this.a.on("crossed", this.crossed.bind(this));
 	}
-	crossed(other: Record<string,any>) {
+	crossed(other: Record<string, any>) {
 		if (
 			this.merge_group &&
-	has_component(other, "CleanableDecal") &&
-	other.c.CleanableDecal.merge_group === this.merge_group
+			has_component(other, "CleanableDecal") &&
+			other.c.CleanableDecal.merge_group === this.merge_group
 		) {
 			if (other.c.CleanableDecal.merge_priority >= this.merge_priority) {
 				other.c.CleanableDecal.emit("merged", this.a);
@@ -53,4 +50,4 @@ CleanableDecal.template = {
 	},
 };
 
-module.exports.components = { CleanableDecal };
+module.exports.components = {CleanableDecal};

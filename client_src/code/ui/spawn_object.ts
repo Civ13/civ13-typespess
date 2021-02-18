@@ -1,10 +1,10 @@
 export{};
-const { Atom } = require("../../client/index.js");
+const {Atom} = require("../../client/index.js");
 
 class SpawnObjectPanel {
 	panel: any;
 	templates: any;
-	constructor(panel: Record<string,any>) {
+	constructor(panel: Record<string, any>) {
 		this.panel = panel;
 		this.panel.on("message", this.message_handler.bind(this));
 
@@ -13,20 +13,21 @@ class SpawnObjectPanel {
 <div class='templates-list'>
 </div>
 `;
-		this.panel.$(".search-field").addEventListener("input", (e: Record<string,any>) => {
+		this.panel.$(".search-field").addEventListener("input", (e: Record<string, any>) => {
 			const term = e.target.value;
 			for (const item of this.panel.$$(".template-entry")) {
-				if (item.dataset.searchString.includes(term))
-					{item.style.display = "block";}
-				else {item.style.display = "none";}
+				if (item.dataset.searchString.includes(term)) {
+					item.style.display = "block";
+				} else {
+					item.style.display = "none";
+				}
 			}
 		});
-		this.panel.content_obj.addEventListener("click", (e: Record<string,any>) => {
+		this.panel.content_obj.addEventListener("click", (e: Record<string, any>) => {
 			const button = e.target.closest(".spawn-button");
 			if (button) {
-				const template_name = button.closest(".template-entry").dataset
-					.templateKey;
-				this.panel.send_message({ spawn: template_name });
+				const template_name = button.closest(".template-entry").dataset.templateKey;
+				this.panel.send_message({spawn: template_name});
 			}
 		});
 		if (this.panel.manager.client.server_templates) {
@@ -35,7 +36,7 @@ class SpawnObjectPanel {
 		}
 	}
 
-	message_handler(msg: Record<string,any>) {
+	message_handler(msg: Record<string, any>) {
 		if (msg.templates) {
 			this.templates = msg.templates;
 			this.panel.manager.client.server_templates = msg.templates;
@@ -48,7 +49,7 @@ class SpawnObjectPanel {
 			return a[0] > b[0] ? 1 : a[0] === b[0] ? 0 : -1;
 		})) {
 			const key: any = tkey;
-			const val: Record<string,any> = tval;
+			const val: Record<string, any> = tval;
 			const template_elem = document.createElement("div");
 			template_elem.classList.add("template-entry");
 			template_elem.style.borderBottom = "1px solid grey";
@@ -85,4 +86,4 @@ class SpawnObjectPanel {
 	}
 }
 
-module.exports.panel_classes = { SpawnObjectPanel };
+module.exports.panel_classes = {SpawnObjectPanel};

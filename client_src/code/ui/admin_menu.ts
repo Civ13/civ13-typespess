@@ -1,4 +1,3 @@
-
 class AdminPanel {
 	panel: any;
 	tools: any;
@@ -11,17 +10,19 @@ class AdminPanel {
 <div class='tools-list'>
 </div>
 `;
-		this.panel.$(".search-field").addEventListener("input", (e: Record<string,any>) => {
+		this.panel.$(".search-field").addEventListener("input", (e: Record<string, any>) => {
 			const term = e.target.value;
 			for (const item of this.panel.$$(".tool-entry")) {
-				if (item.dataset.searchString.includes(term))
-					{item.style.display = "block";}
-				else {item.style.display = "none";}
+				if (item.dataset.searchString.includes(term)) {
+					item.style.display = "block";
+				} else {
+					item.style.display = "none";
+				}
 			}
 		});
 	}
 
-	message_handler(msg: Record<string,any>) {
+	message_handler(msg: Record<string, any>) {
 		if (msg.tools) {
 			this.tools = msg.tools;
 			this.populate_tools();
@@ -30,11 +31,11 @@ class AdminPanel {
 
 	populate_tools() {
 		for (const [key, tval] of Object.entries(this.tools).sort((ta, tb) => {
-			const a: Record<string,any> = ta;
-			const b: Record<string,any> = tb;
+			const a: Record<string, any> = ta;
+			const b: Record<string, any> = tb;
 			return a[1].name > b[1].name ? 1 : a[1].name === b[1].name ? 0 : -1;
 		})) {
-			const val: Record<string,any> = tval;
+			const val: Record<string, any> = tval;
 			const template_elem = document.createElement("div");
 			template_elem.classList.add("tool-entry");
 			template_elem.style.borderBottom = "1px solid grey";
@@ -50,11 +51,11 @@ class AdminPanel {
 				const elem = document.createElement("div");
 				elem.classList.add("button");
 				elem.textContent = button;
-				elem.dataset.message = JSON.stringify({ button_tool: key, button });
+				elem.dataset.message = JSON.stringify({button_tool: key, button});
 				buttons_list.appendChild(elem);
 			}
 		}
 	}
 }
 
-module.exports.panel_classes = { AdminPanel };
+module.exports.panel_classes = {AdminPanel};

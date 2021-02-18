@@ -1,5 +1,5 @@
 export{};
-const { Atom, chain_func, Plane } = require("../client/index.js");
+const {Atom, chain_func, Plane} = require("../client/index.js");
 
 module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 	constructor(eye: any, id: any) {
@@ -31,12 +31,8 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 						let dispx = 0;
 						let dispy = 0;
 						if (origin_disp) {
-							dispx =
-								-(origin_disp.dispx + this.get_plane().parallax_offset[0]) *
-								layer;
-							dispy =
-								-(origin_disp.dispy + this.get_plane().parallax_offset[1]) *
-								layer;
+							dispx = -(origin_disp.dispx + this.get_plane().parallax_offset[0]) * layer;
+							dispy = -(origin_disp.dispy + this.get_plane().parallax_offset[1]) * layer;
 						}
 						dispx = ((dispx % 480) - 480) % 480;
 						dispy = ((dispy % 480) + 480) % 480;
@@ -44,12 +40,9 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 						dispy += y * 480;
 						dispx /= 32;
 						dispy /= 32;
-						return { dispx, dispy };
+						return {dispx, dispy};
 					};
-					parallax_atom.draw = chain_func(parallax_atom.draw, function (
-						prev: any,
-						ctx: any
-					) {
+					parallax_atom.draw = chain_func(parallax_atom.draw, function (prev: any, ctx: any) {
 						ctx.globalCompositeOperation = "lighten";
 						prev();
 						ctx.globalCompositeOperation = "source-over";
@@ -73,17 +66,12 @@ module.exports.ParallaxPlane = class ParallaxPlane extends Plane {
 		const mctx = this.mask_canvas.getContext("2d");
 		mctx.clearRect(0, 0, eye_ctx.canvas.width, eye_ctx.canvas.height);
 		mctx.fillStyle = "#ffffff";
-		const { dispx, dispy } = (this.eye.origin &&
+		const {dispx, dispy} = (this.eye.origin &&
 			this.eye.origin.get_displacement &&
-			this.eye.origin.get_displacement(timestamp)) || { dispx: 0, dispy: 0 };
+			this.eye.origin.get_displacement(timestamp)) || {dispx: 0, dispy: 0};
 		for (const tile of this.client.visible_tiles) {
 			const [x, y] = JSON.parse(tile);
-			mctx.fillRect(
-				Math.round((x - dispx + 7) * 32),
-				Math.round(-(y - dispy - 7) * 32),
-				32,
-				32
-			);
+			mctx.fillRect(Math.round((x - dispx + 7) * 32), Math.round(-(y - dispy - 7) * 32), 32, 32);
 		}
 		mctx.globalCompositeOperation = "source-in";
 		super.composite_plane(mctx, timestamp);

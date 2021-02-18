@@ -1,24 +1,15 @@
 export{};
-const {
-	Component,
-	chain_func,
-} = require("./../../../../../../../code/game/server.js");
+const {Component, chain_func} = require("./../../../../../../../code/game/server.js");
 
 class StackTile extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 
 		this.a.once("moved", () => {
-			this.a.move(
-				Math.random() * 0.1875 - 0.09375,
-				Math.random() * 0.1875 - 0.09375
-			);
+			this.a.move(Math.random() * 0.1875 - 0.09375, Math.random() * 0.1875 - 0.09375);
 		});
 
-		this.a.c.Item.pre_attack = chain_func(
-			this.a.c.Item.pre_attack,
-			this.pre_attack.bind(this)
-		);
+		this.a.c.Item.pre_attack = chain_func(this.a.c.Item.pre_attack, this.pre_attack.bind(this));
 	}
 
 	pre_attack(prev: any) {
@@ -50,7 +41,7 @@ StackTile.template = {
 			},
 		},
 		icon: "icons/obj/tiles/",
-		icon_state: "tile"
+		icon_state: "tile",
 	},
 };
 
@@ -145,4 +136,4 @@ PlasteelTile.template = {
 	},
 };
 
-module.exports.components = { StackTile, PlasteelTile, WoodTile, CarpetTile };
+module.exports.components = {StackTile, PlasteelTile, WoodTile, CarpetTile};

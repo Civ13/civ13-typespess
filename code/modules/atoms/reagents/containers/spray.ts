@@ -15,14 +15,13 @@ const pass_flags = require("../../../../defines/pass_flags.js");
 class SprayBottle extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.c.Item.after_attack = chain_func(
-			this.a.c.Item.after_attack,
-			this.after_attack.bind(this)
-		);
+		this.a.c.Item.after_attack = chain_func(this.a.c.Item.after_attack, this.after_attack.bind(this));
 	}
 
-	after_attack(prev: any, target: any, user: Record<string,any>) {
-		if (typeof target === "undefined" || target.z !== user.z) {return prev();}
+	after_attack(prev: any, target: any, user: Record<string, any>) {
+		if (typeof target === "undefined" || target.z !== user.z) {
+			return prev();
+		}
 		if (this.a.c.ReagentHolder.total_volume < this.current_amount) {
 			to_chat`<span class='warning'>The ${this.a} is empty!</span>`(user);
 			return;
@@ -37,12 +36,9 @@ class SprayBottle extends Component {
 		user.c.MobInteract.change_next_move(combat_defines.CLICK_CD_MELEE);
 	}
 
-	spray_at(target: Record<string,any>) {
+	spray_at(target: Record<string, any>) {
 		const range = Math.max(
-			Math.min(
-				this.current_range,
-				Math.max(Math.abs(this.a.x - target.x), Math.abs(this.a.y - target.y))
-			),
+			Math.min(this.current_range, Math.max(Math.abs(this.a.x - target.x), Math.abs(this.a.y - target.y))),
 			1
 		);
 		const chempuff = new Atom(this.a.server, {
@@ -68,20 +64,12 @@ class SprayBottle extends Component {
 			puff_reagent_left = 1;
 		}
 		const [r, g, b] = chempuff.c.ReagentHolder.get_reagents_color();
-		chempuff.color = `rgb(${Math.round(r * 255)},${Math.round(
-			g * 255
-		)},${Math.round(b * 255)})`;
+		chempuff.color = `rgb(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)})`;
 		const wait_step = Math.max(200 + 300 / range, 200);
-		this.move_spray({ target, wait_step, chempuff, range, puff_reagent_left });
+		this.move_spray({target, wait_step, chempuff, range, puff_reagent_left});
 	}
 
-	async move_spray({
-		target,
-		wait_step,
-		chempuff,
-		range,
-		puff_reagent_left,
-	}: Record<string,any> = {}) {
+	async move_spray({target, wait_step, chempuff, range, puff_reagent_left}: Record<string, any> = {}) {
 		let range_left = range;
 		await sleep(100);
 		const volume_modifier = 1 / puff_reagent_left;
@@ -97,9 +85,11 @@ class SprayBottle extends Component {
 			await sleep(wait_step);
 
 			for (const atom of [...chempuff.crosses()]) {
-				if (puff_reagent_left <= 0) {break;}
+				if (puff_reagent_left <= 0) {
+					break;
+				}
 
-				chempuff.c.ReagentHolder.react_atom(atom, "vapor", { volume_modifier });
+				chempuff.c.ReagentHolder.react_atom(atom, "vapor", {volume_modifier});
 				if (has_component(atom, "LivingMob")) {
 					puff_reagent_left--;
 				}
@@ -157,4 +147,4 @@ SprayBottle.template = {
 	},
 };
 
-module.exports.components = { SprayBottle };
+module.exports.components = {SprayBottle};

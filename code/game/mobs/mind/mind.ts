@@ -1,7 +1,7 @@
 export{};
-const { has_component } = require("./../../../../code/game/server.js");
+const {has_component} = require("./../../../../code/game/server.js");
 
-const { EventEmitter } = require("events");
+const {EventEmitter} = require("events");
 const CharacterPreferences = require("../../../modules/client/character.js");
 
 class Mind extends EventEmitter {
@@ -15,24 +15,25 @@ class Mind extends EventEmitter {
 		this.character_preferences = new CharacterPreferences();
 	}
 
-	transfer_to(new_character: Record<string,any>) {
-		if (!has_component(new_character, "LivingMob"))
-			{throw new TypeError(
-				`New character ${new_character} is not a living mob!`
-			);}
+	transfer_to(new_character: Record<string, any>) {
+		if (!has_component(new_character, "LivingMob")) {
+			throw new TypeError(`New character ${new_character} is not a living mob!`);
+		}
 		const old_character = this.current;
 		if (this.current) {
 			this.current.c.LivingMob.mind = null;
 		}
 		if (this.key) {
-			if (new_character.c.Mob.key !== this.key)
-				{new_character.c.LivingMob.ghostize(true);}
+			if (new_character.c.Mob.key !== this.key) {
+				new_character.c.LivingMob.ghostize(true);
+			}
 		} else {
 			this.key = new_character.c.Mob.key;
 		}
 
-		if (new_character.c.LivingMob.mind)
-			{new_character.c.LivingMob.mind.current = null;}
+		if (new_character.c.LivingMob.mind) {
+			new_character.c.LivingMob.mind.current = null;
+		}
 
 		this.current = new_character;
 		new_character.c.LivingMob.mind = this;

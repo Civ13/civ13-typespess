@@ -1,6 +1,6 @@
 const EventEmitter = require("events");
 const mob_symbols = require("./mob.js")._symbols;
-const _networked_vars:any = Symbol("_networked_vars");
+const _networked_vars: any = Symbol("_networked_vars");
 
 /**
  * @typedef {import("./atom")} Typespess.Atom
@@ -10,12 +10,12 @@ const _networked_vars:any = Symbol("_networked_vars");
  * Should never be instanced directly.
  * @memberof Typespess
  * @abstract
- */export{};
+ */ export{};
 class Component extends EventEmitter {
 	/**
-  * @param {Typespess.Atom} atom
-  * @param {template} template
-  */
+	 * @param {Typespess.Atom} atom
+	 * @param {template} template
+	 */
 	constructor(atom: any, template: any) {
 		super();
 		Object.defineProperty(this, "atom", {
@@ -25,9 +25,9 @@ class Component extends EventEmitter {
 			value: atom,
 		});
 		/**
-	* The atom this component belongs to
-	* @type {Typespess.Atom}
-	*/
+		 * The atom this component belongs to
+		 * @type {Typespess.Atom}
+		 */
 		if (!this.a.server.atoms_for_components[this.constructor.name]) {
 			this.a.server.atoms_for_components[this.constructor.name] = new Set();
 		}
@@ -39,18 +39,18 @@ class Component extends EventEmitter {
 	}
 
 	/**
-  * Alias for {@link Typespess.Component#atom}
-  * @type {Typespess.Atom}
-  * @instance
-  */
+	 * Alias for {@link Typespess.Component#atom}
+	 * @type {Typespess.Atom}
+	 * @instance
+	 */
 	get a() {
 		return this.atom;
 	}
 
 	/**
-  * Called when the atom this component belongs to is destroyed.
-  * @abstract
-  */
+	 * Called when the atom this component belongs to is destroyed.
+	 * @abstract
+	 */
 	destroy() {
 		this.a.server.atoms_for_components[this.constructor.name].delete(this.atom);
 	}
@@ -104,12 +104,14 @@ class NetworkedComponent extends Component {
 	}
 
 	/**
-  * Makes the property with the specified name networked.
-  * @param {string} name
-  * @param {Function} on_set A function that is called when this property gets changed. If it returns falsish, the property does not get set.
-  */
+	 * Makes the property with the specified name networked.
+	 * @param {string} name
+	 * @param {Function} on_set A function that is called when this property gets changed. If it returns falsish, the property does not get set.
+	 */
 	add_networked_var(name: string, on_set: any) {
-		if (Object.prototype.hasOwnProperty.call(this[_networked_vars],name)) {return;}
+		if (Object.prototype.hasOwnProperty.call(this[_networked_vars], name)) {
+			return;
+		}
 		this[_networked_vars][name] = this[name];
 		Object.defineProperty(this, name, {
 			configurable: false,
@@ -118,8 +120,12 @@ class NetworkedComponent extends Component {
 				return this[_networked_vars][name];
 			},
 			set: (val) => {
-				if (val === this[_networked_vars][name]) {return;}
-				if (on_set && !on_set(val)) {return;}
+				if (val === this[_networked_vars][name]) {
+					return;
+				}
+				if (on_set && !on_set(val)) {
+					return;
+				}
 				const old = this[_networked_vars][name];
 				this[_networked_vars][name] = val;
 				this.atom[mob_symbols._update_var](name, this.constructor.name);
@@ -129,9 +135,9 @@ class NetworkedComponent extends Component {
 	}
 
 	/**
-  * Returns an object with all the networked vars on this component
-  * @returns {Object}
-  */
+	 * Returns an object with all the networked vars on this component
+	 * @returns {Object}
+	 */
 	get_networked_vars() {
 		// This isn't as slow as you think it is.
 		return Object.assign({}, this[_networked_vars]);

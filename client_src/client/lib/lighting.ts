@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("../index.js");
+const {Component} = require("../index.js");
 
 class LightingObject extends Component {
 	constructor(atom: any, template: any) {
@@ -27,15 +27,15 @@ class LightingObject extends Component {
 			this.dirty = true;
 		} else if (this.shadows_list !== this.last_shadows_list) {
 			this.dirty = true;
-		} else if (
-			!this.last_disp || this.last_disp.dispx !== disp.dispx || this.last_disp.dispy !== disp.dispy
-		) {
+		} else if (!this.last_disp || this.last_disp.dispx !== disp.dispx || this.last_disp.dispy !== disp.dispy) {
 			this.dirty = true;
 		} else if (this.a.client.soft_shadow_resolution !== this.last_resolution) {
 			this.random_angle_offset = Math.random();
 			this.dirty = true;
 		}
-		if (this.dirty) {this.a.mark_dirty();}
+		if (this.dirty) {
+			this.a.mark_dirty();
+		}
 
 		this.last_color = this.color;
 		this.last_radius = this.radius;
@@ -52,12 +52,18 @@ class LightingObject extends Component {
 		};
 	}
 
-	draw(ctx: { globalCompositeOperation: string; drawImage: (arg0: any, arg1: number, arg2: number) => void; }, timestamp: any) {
+	draw(
+		ctx: {globalCompositeOperation: string; drawImage: (arg0: any, arg1: number, arg2: number) => void},
+		timestamp: any
+	) {
 		if (
 			// eslint-disable-next-line eqeqeq
-			this.atom.screen_loc_x != null || this.radius !== +this.radius || !this.enabled
-		)
-			{return;}
+			this.atom.screen_loc_x != null ||
+			this.radius !== +this.radius ||
+			!this.enabled
+		) {
+			return;
+		}
 
 		if (this.dirty) {
 			this.last_resolution = this.a.client.soft_shadow_resolution;
@@ -69,22 +75,19 @@ class LightingObject extends Component {
 
 			const c = this.canvas.width * 0.5;
 
-			let { dispx, dispy } = this.atom.get_displacement(timestamp);
+			let {dispx, dispy} = this.atom.get_displacement(timestamp);
 			dispx = Math.round(dispx * 32) / 32;
 			dispy = Math.round(dispy * 32) / 32;
-			if (dispx !== +dispx || dispy !== +dispy) {return;}
+			if (dispx !== +dispx || dispy !== +dispy) {
+				return;
+			}
 
 			const sample_points = [];
-			if (
-				this.soft_shadow_radius <= 0 ||
-		this.a.client.soft_shadow_resolution <= 1
-			) {
+			if (this.soft_shadow_radius <= 0 || this.a.client.soft_shadow_resolution <= 1) {
 				sample_points.push([dispx, dispy]);
 			} else {
 				for (let i = 0; i < this.a.client.soft_shadow_resolution; i++) {
-					const angle =
-			((i + this.random_angle_offset) * Math.PI * 2) /
-			this.a.client.soft_shadow_resolution;
+					const angle = ((i + this.random_angle_offset) * Math.PI * 2) / this.a.client.soft_shadow_resolution;
 					sample_points.push([
 						dispx + Math.cos(angle) * this.soft_shadow_radius,
 						dispy + Math.sin(angle) * this.soft_shadow_radius,
@@ -107,7 +110,7 @@ class LightingObject extends Component {
 				const wall_offset_y = Math.round(16 + point_y * 32);
 				const walls = [];
 				for (const shadow of this.shadows_list) {
-					const wall: Record<string,any> = {};
+					const wall: Record<string, any> = {};
 					wall.x1 = shadow.x1 * 32 + wall_offset_x;
 					wall.y1 = -shadow.y2 * 32 + wall_offset_y;
 					wall.x2 = shadow.x2 * 32 + wall_offset_x;
@@ -116,12 +119,17 @@ class LightingObject extends Component {
 					wall.base_height = wall.y2 - wall.y1;
 					wall.used_horizontally = false;
 					wall.used_vertically = false;
-					if (wall.x1 < 0 && wall.y1 < 0 && wall.x2 > 0 && wall.y2 > 0)
-						{continue;}
+					if (wall.x1 < 0 && wall.y1 < 0 && wall.x2 > 0 && wall.y2 > 0) {
+						continue;
+					}
 					let hdist = Math.min(Math.abs(wall.x1), Math.abs(wall.x2));
 					let vdist = Math.min(Math.abs(wall.y1), Math.abs(wall.y2));
-					if (wall.x1 <= 0 && wall.x2 >= 0) {hdist = 0;}
-					if (wall.y1 <= 0 && wall.y2 >= 0) {vdist = 0;}
+					if (wall.x1 <= 0 && wall.x2 >= 0) {
+						hdist = 0;
+					}
+					if (wall.y1 <= 0 && wall.y2 >= 0) {
+						vdist = 0;
+					}
 					wall.dist = hdist + vdist;
 					walls.push(wall);
 				}
@@ -142,21 +150,26 @@ class LightingObject extends Component {
 						}
 						if (
 							(wall1.x1 > 0 &&
-				wall1.x1 === wall2.x1 &&
-				(wall1.y1 === wall2.y2 || wall1.y2 === wall2.y1)) || (wall1.y1 > 0 &&
-				wall1.y1 === wall2.y1 &&
-				(wall1.x1 === wall2.x2 || wall1.x2 === wall2.x1)) || (wall1.x2 < 0 &&
-				wall1.x2 === wall2.x2 &&
-				(wall1.y1 === wall2.y2 || wall1.y2 === wall2.y1)) || (wall1.y2 < 0 &&
-				wall1.y2 === wall2.y2 &&
-				(wall1.x1 === wall2.x2 || wall1.x2 === wall2.x1))
+								wall1.x1 === wall2.x1 &&
+								(wall1.y1 === wall2.y2 || wall1.y2 === wall2.y1)) ||
+							(wall1.y1 > 0 &&
+								wall1.y1 === wall2.y1 &&
+								(wall1.x1 === wall2.x2 || wall1.x2 === wall2.x1)) ||
+							(wall1.x2 < 0 &&
+								wall1.x2 === wall2.x2 &&
+								(wall1.y1 === wall2.y2 || wall1.y2 === wall2.y1)) ||
+							(wall1.y2 < 0 && wall1.y2 === wall2.y2 && (wall1.x1 === wall2.x2 || wall1.x2 === wall2.x1))
 						) {
 							if (wall1.x1 === wall2.x1 || wall1.x2 === wall2.x2) {
-								if (wall2.used_vertically) {continue;}
+								if (wall2.used_vertically) {
+									continue;
+								}
 								wall2.used_vertically = true;
 							}
 							if (wall1.y1 === wall2.y1 || wall1.y2 === wall2.y2) {
-								if (wall2.used_horizontally) {continue;}
+								if (wall2.used_horizontally) {
+									continue;
+								}
 								wall2.used_horizontally = true;
 							}
 							wall1.x1 = Math.min(wall1.x1, wall2.x1);
@@ -169,7 +182,9 @@ class LightingObject extends Component {
 
 				bctx.beginPath();
 				for (const wall of walls) {
-					if (wall.used_horizontally || wall.used_vertically) {continue;}
+					if (wall.used_horizontally || wall.used_vertically) {
+						continue;
+					}
 					let sx = 1;
 					let sy = 1;
 					let flip = false;
@@ -209,20 +224,14 @@ class LightingObject extends Component {
 					} else {
 						// eslint-disable-next-line eqeqeq
 						flip = sx != sy;
-						path.push([
-							cx + (x1 + wall.base_width) * sx,
-							cy + (y1 + wall.base_height) * sy,
-						]);
+						path.push([cx + (x1 + wall.base_width) * sx, cy + (y1 + wall.base_height) * sy]);
 						path.push([cx + (x1 + wall.base_width) * sx, cy + y2 * sy]);
 						path.push([cx + x1 * sx, cy + y2 * sy]);
 
 						let scalar = (this.radius * 32 + 48) / Math.max(x1, y2);
 						path.push([cx + x1 * sx * scalar, cy + y2 * sy * scalar]);
 
-						path.push([
-							cx + (this.radius * 32 + 48) * sx,
-							cy + (this.radius * 32 + 48) * sy,
-						]);
+						path.push([cx + (this.radius * 32 + 48) * sx, cy + (this.radius * 32 + 48) * sy]);
 
 						scalar = (this.radius * 32 + 48) / Math.max(x2, y1);
 						path.push([cx + x2 * sx * scalar, cy + y1 * sy * scalar]);
@@ -233,13 +242,19 @@ class LightingObject extends Component {
 					if (!flip) {
 						// draw it in a way that makes sure it winds in the right direction
 						for (let j = 0; j < path.length; j++) {
-							if (j === 0) {bctx.moveTo(path[j][0], path[j][1]);}
-							else {bctx.lineTo(path[j][0], path[j][1]);}
+							if (j === 0) {
+								bctx.moveTo(path[j][0], path[j][1]);
+							} else {
+								bctx.lineTo(path[j][0], path[j][1]);
+							}
 						}
 					} else {
 						for (let j = path.length - 1; j >= 0; j--) {
-							if (j === path.length - 1) {bctx.moveTo(path[j][0], path[j][1]);}
-							else {bctx.lineTo(path[j][0], path[j][1]);}
+							if (j === path.length - 1) {
+								bctx.moveTo(path[j][0], path[j][1]);
+							} else {
+								bctx.lineTo(path[j][0], path[j][1]);
+							}
 						}
 					}
 					bctx.closePath();
@@ -270,4 +285,4 @@ class LightingObject extends Component {
 	}
 }
 
-module.exports.components = { LightingObject };
+module.exports.components = {LightingObject};

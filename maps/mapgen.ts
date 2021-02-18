@@ -6,36 +6,35 @@ let originalLoadedConfigs = [100, 100, 25, 20]; // width, height, water, dirt
 let finalData = "";
 
 function load_configs() {
-	fs.readFile("mapdef.txt", function (
-		err: Error,
-		data: any
-	) {
+	fs.readFile("mapdef.txt", function (err: Error, data: any) {
 		if (err) {
 			return console.error(err);
 		}
-		const tempConfigs = (data.toString()).split(",", 4);
+		const tempConfigs = data.toString().split(",", 4);
 
-		return [
-			Number(tempConfigs[0]),
-			Number(tempConfigs[1]),
-			Number(tempConfigs[2]),
-			Number(tempConfigs[3]),
-		];
+		return [Number(tempConfigs[0]), Number(tempConfigs[1]), Number(tempConfigs[2]), Number(tempConfigs[3])];
 	});
 	return [100, 100, 25, 20];
 }
 function generateRandomInteger(min: number, max: number) {
-	return Math.floor(min + Math.random()*(max + 1 - min));
+	return Math.floor(min + Math.random() * (max + 1 - min));
 }
 function random_floor(prob: number) {
-	if (Math.random() <= prob / 100) {return "dirt";}
-	else {return "grass";}
+	if (Math.random() <= prob / 100) {
+		return "dirt";
+	} else {
+		return "grass";
+	}
 }
 
 function random_flora() {
-	if (Math.random() <= 0.25) {return {rname:"bush",icon: "icons/obj/flora/bushes/", icon_state:`smallbush${generateRandomInteger(1,44)}`};}
-	else if (Math.random() <= 0.7) {return {rname:"grass",icon: "icons/obj/flora/wild/", icon_state:`tall_grass_${generateRandomInteger(1,9)}`};}
-	else {return {rname:"tree",icon:"icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1,5)}`};}
+	if (Math.random() <= 0.25) {
+		return {rname: "bush", icon: "icons/obj/flora/bushes/", icon_state: `smallbush${generateRandomInteger(1, 44)}`};
+	} else if (Math.random() <= 0.7) {
+		return {rname: "grass", icon: "icons/obj/flora/wild/", icon_state: `tall_grass_${generateRandomInteger(1, 9)}`};
+	} else {
+		return {rname: "tree", icon: "icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1, 5)}`};
+	}
 }
 
 originalLoadedConfigs = load_configs();
@@ -54,7 +53,7 @@ const inc_h = -originalLoadedConfigs[1] / 2;
 
 console.log("Generating the map...");
 finalData = finalData + "{\n";
-finalData = finalData + "	\"locs\": {\n";
+finalData = finalData + '	"locs": {\n';
 for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 	for (let j = inc_h; j <= Math.abs(inc_h); j++) {
 		let hascomma = "		],\n";
@@ -65,27 +64,27 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		finalData = finalData + `		"${i},${j},0": [\n`;
 		if (i === inc_w) {
 			finalData = finalData + "			{\n";
-			finalData = finalData + "				\"instance_vars\": {\n";
-			finalData = finalData + "					\"components\": {\n";
-			finalData = finalData + "						\"Area\": {\n";
-			finalData = finalData + "							\"map_id\": \"area_outside_arrivals\"\n";
+			finalData = finalData + '				"instance_vars": {\n';
+			finalData = finalData + '					"components": {\n';
+			finalData = finalData + '						"Area": {\n';
+			finalData = finalData + '							"map_id": "area_outside_arrivals"\n';
 			finalData = finalData + "						}\n";
 			finalData = finalData + "					}\n";
 			finalData = finalData + "				},\n";
-			finalData = finalData + "				\"template_name\": \"area_outside_arrivals\",\n";
+			finalData = finalData + '				"template_name": "area_outside_arrivals",\n';
 			finalData = finalData + `				"x": ${i},\n`;
 			finalData = finalData + `				"y": ${j}\n`;
 			finalData = finalData + "			},\n";
 			finalData = finalData + "			{\n";
-			finalData = finalData + "				\"instance_vars\": {\n";
-			finalData = finalData + "					\"name\": \"start\",\n";
-			finalData = finalData + "					\"components\": {\n";
-			finalData = finalData + "						\"JobLandmark\": {\n";
-			finalData = finalData + "							\"name\": \"start\"\n";
+			finalData = finalData + '				"instance_vars": {\n';
+			finalData = finalData + '					"name": "start",\n';
+			finalData = finalData + '					"components": {\n';
+			finalData = finalData + '						"JobLandmark": {\n';
+			finalData = finalData + '							"name": "start"\n';
 			finalData = finalData + "						}\n";
 			finalData = finalData + "					}\n";
 			finalData = finalData + "				},\n";
-			finalData = finalData + "				\"template_name\": \"job_landmark\",\n";
+			finalData = finalData + '				"template_name": "job_landmark",\n';
 			finalData = finalData + `				"x": ${i},\n`;
 			finalData = finalData + `				"y": ${j}\n`;
 			finalData = finalData + "			},\n";
@@ -97,12 +96,11 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		if (i === 0 && j === 0) {
 			finalData = finalData + "			},\n";
 			finalData = finalData + "			{\n";
-			finalData = finalData + "				\"template_name\": \"sun\",\n";
+			finalData = finalData + '				"template_name": "sun",\n';
 			finalData = finalData + `				"x": ${i},\n`;
 			finalData = finalData + `				"y": ${j}\n`;
 			finalData = finalData + "			}\n";
-		}
-		else {
+		} else {
 			if (Math.random() <= 0.5) {
 				const rflora = random_flora();
 				finalData = finalData + "			},\n";
@@ -115,8 +113,9 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 				finalData = finalData + `				"x": ${i},\n`;
 				finalData = finalData + `				"y": ${j}\n`;
 				finalData = finalData + "			}\n";
+			} else {
+				finalData = finalData + "			}\n";
 			}
-			else {finalData = finalData + "			}\n";}
 		}
 		finalData = finalData + hascomma;
 	}

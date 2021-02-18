@@ -1,10 +1,5 @@
 export{};
-const {
-	Component,
-	Atom,
-	make_watched_property,
-	has_component,
-} = require("./../../../../../code/game/server.js");
+const {Component, Atom, make_watched_property, has_component} = require("./../../../../../code/game/server.js");
 const _ = require("underscore");
 
 class BloodDecal extends Component {
@@ -28,7 +23,7 @@ BloodDecal.template = {
 		},
 		name: "blood",
 		icon: "icons/effects/blood/",
-		icon_state: "floor1"
+		icon_state: "floor1",
 	},
 };
 
@@ -36,12 +31,12 @@ class BloodDripsDecal extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		for (let i = 0; i < this.num_drips; i++) {
-			this.a.overlays[`drip_${i}`] = { icon_state: _.sample(this.drip_icons) };
+			this.a.overlays[`drip_${i}`] = {icon_state: _.sample(this.drip_icons)};
 		}
 		this.a.icon_state = null;
 		this.a.c.CleanableDecal.on("merged", this.merged.bind(this));
 	}
-	merged(other: Record<string,any>) {
+	merged(other: Record<string, any>) {
 		if (has_component(other, "BloodDripsDecal")) {
 			const old_drips = this.num_drips;
 			this.num_drips += other.c.BloodDripsDecal.num_drips;
@@ -90,25 +85,29 @@ class FootprintsDecal extends Component {
 
 	entered_dirs_changed(from: any, to: any) {
 		for (const dir of [1, 2, 4, 8]) {
-			if (from & dir && !(to & dir)) {this.a.overlays[`entered_${dir}`] = null;}
-			else if (to & dir && !(from & dir))
-				{this.a.overlays[`entered_${dir}`] = {
+			if (from & dir && !(to & dir)) {
+				this.a.overlays[`entered_${dir}`] = null;
+			} else if (to & dir && !(from & dir)) {
+				this.a.overlays[`entered_${dir}`] = {
 					icon_state: `${this.type}1`,
 					dir,
 					alpha: this.a.alpha,
-				};}
+				};
+			}
 		}
 	}
 
 	exited_dirs_changed(from: any, to: any) {
 		for (const dir of [1, 2, 4, 8]) {
-			if (from & dir && !(to & dir)) {this.a.overlays[`exited_${dir}`] = null;}
-			else if (to & dir && !(from & dir))
-				{this.a.overlays[`exited_${dir}`] = {
+			if (from & dir && !(to & dir)) {
+				this.a.overlays[`exited_${dir}`] = null;
+			} else if (to & dir && !(from & dir)) {
+				this.a.overlays[`exited_${dir}`] = {
 					icon_state: `${this.type}2`,
 					dir,
 					alpha: this.a.alpha,
-				};}
+				};
+			}
 		}
 	}
 }
@@ -135,4 +134,4 @@ FootprintsDecal.template = {
 	},
 };
 
-module.exports.components = { BloodDecal, BloodDripsDecal, FootprintsDecal };
+module.exports.components = {BloodDecal, BloodDripsDecal, FootprintsDecal};

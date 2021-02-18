@@ -1,20 +1,21 @@
 export{};
-const {
-	Component,
-	has_component,
-} = require("./../../../../../code/game/server.js");
+const {Component, has_component} = require("./../../../../../code/game/server.js");
 
 class Slippery extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		this.a.on("crossed_by", (mob: Record<string,any>) => {
+		this.a.on("crossed_by", (mob: Record<string, any>) => {
 			this.slip(mob);
 		});
 	}
 
-	slip(mob: Record<string,any>) {
-		if (!has_component(mob, "CarbonMob")) {return;}
-		if (!this.enabled) {return;}
+	slip(mob: Record<string, any>) {
+		if (!has_component(mob, "CarbonMob")) {
+			return;
+		}
+		if (!this.enabled) {
+			return;
+		}
 		mob.c.CarbonMob.slip(this.a);
 	}
 }
@@ -30,4 +31,4 @@ Slippery.template = {
 	},
 };
 
-module.exports.components = { Slippery };
+module.exports.components = {Slippery};

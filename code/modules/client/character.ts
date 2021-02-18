@@ -1,14 +1,12 @@
 export{};
-const { Atom } = require("./../../../code/game/server.js");
+const {Atom} = require("./../../../code/game/server.js");
 const _ = require("underscore");
 const first_names = require("../../../strings/names/first.json");
 const first_names_male = require("../../../strings/names/first_male.json");
 const first_names_female = require("../../../strings/names/first_female.json");
 const last_names = require("../../../strings/names/last.json");
 const sprite_accessories = require("../../game/mobs/living/carbon/human/sprite_accessories.js");
-const {
-	skin_tones,hair_colors,
-} = require("../../game/mobs/living/carbon/body_parts/helpers.js");
+const {skin_tones, hair_colors} = require("../../game/mobs/living/carbon/body_parts/helpers.js");
 
 class CharacterPreferences {
 	gender: string;
@@ -17,7 +15,7 @@ class CharacterPreferences {
 	hair_style: any;
 	hair_color: any;
 	name: string;
-	constructor(obj: Record<string,any>) {
+	constructor(obj: Record<string, any>) {
 		Object.assign(this, {
 			name: "asdf",
 			be_random_name: false,
@@ -53,25 +51,31 @@ class CharacterPreferences {
 		this.hair_color = _.sample(Object.keys(hair_colors));
 	}
 	randomize_name(type: string) {
-		if (!type || type === "human")
-			{this.name = CharacterPreferences.generate_human_name(this.gender);}
+		if (!type || type === "human") {
+			this.name = CharacterPreferences.generate_human_name(this.gender);
+		}
 	}
 
 	static generate_human_name(gender: string) {
 		let first_list = first_names;
-		if (gender === "male") {first_list = first_names_male;}
-		if (gender === "female") {first_list = first_names_female;}
+		if (gender === "male") {
+			first_list = first_names_male;
+		}
+		if (gender === "female") {
+			first_list = first_names_female;
+		}
 		const first_name = _.sample(first_list);
 		const last_name = _.sample(last_names);
 		return `${first_name} ${last_name}`;
 	}
 
-	static reject_bad_name(
-		t_in: string | any[],
-		{ allow_numbers = false, max_length = 42, trim = true } = {}
-	) {
-		if (typeof t_in !== "string") {return;}
-		if (t_in.length > max_length) {return;}
+	static reject_bad_name(t_in: string | any[], {allow_numbers = false, max_length = 42, trim = true} = {}) {
+		if (typeof t_in !== "string") {
+			return;
+		}
+		if (t_in.length > max_length) {
+			return;
+		}
 		let number_of_alphanumberic = 0;
 		let last_char_group = 0;
 		let t_out = "";
@@ -91,49 +95,56 @@ class CharacterPreferences {
 				number_of_alphanumberic++;
 				last_char_group = 4;
 			} else if (chr >= "0" && chr <= "9") {
-				if (!last_char_group) {continue;}
-				if (!allow_numbers) {continue;}
+				if (!last_char_group) {
+					continue;
+				}
+				if (!allow_numbers) {
+					continue;
+				}
 				t_out += chr;
 				number_of_alphanumberic++;
 				last_char_group = 3;
 			} else if ("'-.".includes(chr)) {
-				if (!last_char_group) {continue;}
+				if (!last_char_group) {
+					continue;
+				}
 				t_out += chr;
 				last_char_group = 2;
 			} else if ("~|@:#$%&*+".includes(chr)) {
-				if (!last_char_group) {continue;}
-				if (!allow_numbers) {continue;}
+				if (!last_char_group) {
+					continue;
+				}
+				if (!allow_numbers) {
+					continue;
+				}
 				t_out += chr;
 				last_char_group = 3;
 			} else if (chr === " ") {
-				if (last_char_group <= 1) {continue;}
+				if (last_char_group <= 1) {
+					continue;
+				}
 				t_out += chr;
 				last_char_group = 1;
 			} else {
 				return;
 			}
 		}
-		if (trim) {t_out = t_out.trim();}
-		if (number_of_alphanumberic < 2) {return;}
-		if (
-			[
-				"space",
-				"floor",
-				"wall",
-				"r-wall",
-				"monkey",
-				"unknown",
-				"inactive ai",
-			].includes(t_out.toLowerCase())
-		)
-			{return;}
+		if (trim) {
+			t_out = t_out.trim();
+		}
+		if (number_of_alphanumberic < 2) {
+			return;
+		}
+		if (["space", "floor", "wall", "r-wall", "monkey", "unknown", "inactive ai"].includes(t_out.toLowerCase())) {
+			return;
+		}
 		return t_out;
 	}
 
 	instance_human(server: any) {
 		const template = {
 			components: ["HumanMob"],
-			vars: { gender: "neuter", components: { LivingMob: { real_name: ""} } },
+			vars: {gender: "neuter", components: {LivingMob: {real_name: ""}}},
 		};
 		template.vars.components.LivingMob.real_name = this.name;
 		template.vars.gender = this.gender;

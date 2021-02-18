@@ -1,5 +1,5 @@
 export{};
-const { Component } = require("./../../../../code/game/server.js");
+const {Component} = require("./../../../../code/game/server.js");
 
 const pass_flags = require("../../../defines/pass_flags.js");
 const lighting = require("../../../defines/lighting.js");
@@ -29,9 +29,8 @@ BeamProjectile.template = {
 		},
 		name: "laser",
 		icon_state: "laser",
-		pass_flags:
-	pass_flags.PASSTABLE | pass_flags.PASSGLASS,
+		pass_flags: pass_flags.PASSTABLE | pass_flags.PASSGLASS,
 	},
 };
 
-module.exports.components = { BeamProjectile };
+module.exports.components = {BeamProjectile};

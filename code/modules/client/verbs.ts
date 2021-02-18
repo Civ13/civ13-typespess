@@ -1,13 +1,11 @@
 export{};
-const { to_chat } = require("./../../../code/game/server.js");
+const {to_chat} = require("./../../../code/game/server.js");
 
-module.exports.now = function (server: Record<string,any>) {
-	server.on("client_login", function (client: Record<string,any>) {
-		client.on("message", (obj: Record<string,any>) => {
+module.exports.now = function (server: Record<string, any>) {
+	server.on("client_login", function (client: Record<string, any>) {
+		client.on("message", (obj: Record<string, any>) => {
 			if (obj.ooc_message) {
-				if (
-					client.last_ooc_message && server.now() < client.last_ooc_message + 300
-				) {
+				if (client.last_ooc_message && server.now() < client.last_ooc_message + 300) {
 					to_chat`You're doing that too fast!`(client);
 				} else {
 					client.last_ooc_message = server.now();

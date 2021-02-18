@@ -1,11 +1,5 @@
 export{};
-const {
-	Component,
-	Atom,
-	chain_func,
-	has_component,
-	to_chat,
-} = require("./../../../code/game/server.js");
+const {Component, Atom, chain_func, has_component, to_chat} = require("./../../../code/game/server.js");
 const _ = require("underscore");
 
 class AmmoCasing extends Component {
@@ -17,24 +11,19 @@ class AmmoCasing extends Component {
 	}
 
 	update_icon() {
-		if (this.caseless) {return;}
-		this.a.icon_state = `${this.a.template.vars.icon_state}${
-			this.spent ? "-0" : ""
-		}`;
+		if (this.caseless) {
+			return;
+		}
+		this.a.icon_state = `${this.a.template.vars.icon_state}${this.spent ? "-0" : ""}`;
 		this.a.c.Examine.desc = `${this.a.template.vars.components.Examine.desc}${
 			!this.spent ? "" : " This one is spent."
 		}`;
 	}
 
-	fire({
-		target,
-		user,
-		angle = 0,
-		suppressed = false,
-		zone_override,
-		spread,
-	}: Record<string,any> = {}) {
-		if (!user.loc || !user.loc.is_base_loc || this.spent) {return;}
+	fire({target, user, angle = 0, suppressed = false, zone_override, spread}: Record<string, any> = {}) {
+		if (!user.loc || !user.loc.is_base_loc || this.spent) {
+			return;
+		}
 		const proj = this.create_projectile({
 			target,
 			user,
@@ -55,7 +44,7 @@ class AmmoCasing extends Component {
 		return true;
 	}
 
-	create_projectile({ target, user, quiet = false, zone_override }: Record<string,any> = {}) {
+	create_projectile({target, user, quiet = false, zone_override}: Record<string, any> = {}) {
 		//Different from tg. Fuck tg by the way.
 		const proj = new Atom(this.a.server, this.projectile_type, this.a);
 		proj.c.Projectile.target = target;
@@ -73,7 +62,7 @@ class AmmoCasing extends Component {
 					if (has_component(bullet, "AmmoCasing")) {
 						if (
 							item.c.AmmoBox.stored_ammo &&
-			item.c.AmmoBox.stored_ammo.length >= item.c.AmmoBox.max_ammo
+							item.c.AmmoBox.stored_ammo.length >= item.c.AmmoBox.max_ammo
 						) {
 							break;
 						}
@@ -88,17 +77,13 @@ class AmmoCasing extends Component {
 				}
 				if (boolets > 0) {
 					item.c.AmmoBox.update_icon();
-					to_chat`<span class='notice'>You collect ${boolets} shell${
-						boolets === 1 ? "" : "s"
-					}. The ${this.a} now contains ${
-						item.c.AmmoBox.stored_ammo.length
-					} shell${item.c.AmmoBox.stored_ammo.length === 1 ? "" : "s"}</span>`(
-						user
-					);
+					to_chat`<span class='notice'>You collect ${boolets} shell${boolets === 1 ? "" : "s"}. The ${
+						this.a
+					} now contains ${item.c.AmmoBox.stored_ammo.length} shell${
+						item.c.AmmoBox.stored_ammo.length === 1 ? "" : "s"
+					}</span>`(user);
 				} else {
-					to_chat`<span class='warning'>You fail to collect anything!</span>`(
-						user
-					);
+					to_chat`<span class='warning'>You fail to collect anything!</span>`(user);
 				}
 			}
 		} else {
@@ -142,5 +127,4 @@ AmmoCasing.template = {
 	},
 };
 
-
-module.exports.components = { AmmoCasing };
+module.exports.components = {AmmoCasing};

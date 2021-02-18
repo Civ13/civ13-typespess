@@ -1,17 +1,12 @@
 export{};
-const {
-	Component,
-	Atom,
-	make_watched_property,
-	chain_func,
-	to_chat,
-} = require("./../../../../code/game/server.js");
+const {Component, Atom, make_watched_property, chain_func, to_chat} = require("./../../../../code/game/server.js");
 
 class EnergyGun extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		if (this.cell_type)
-			{this.cell = new Atom(this.a.server, this.cell_type, this.a);}
+		if (this.cell_type) {
+			this.cell = new Atom(this.a.server, this.cell_type, this.a);
+		}
 
 		this.ammo_type = [...this.ammo_type];
 		for (let i = 0; i < this.ammo_type.length; i++) {
@@ -21,14 +16,8 @@ class EnergyGun extends Component {
 		this.on("select_changed", this.select_changed.bind(this));
 		this.on("cell_changed", this.cell_changed.bind(this));
 		this.cell_charge_changed = this.cell_charge_changed.bind(this);
-		this.a.c.Gun.can_shoot = chain_func(
-			this.a.c.Gun.can_shoot,
-			this.can_shoot.bind(this)
-		);
-		this.a.c.Gun.process_chamber = chain_func(
-			this.a.c.Gun.process_chamber,
-			this.process_chamber.bind(this)
-		);
+		this.a.c.Gun.can_shoot = chain_func(this.a.c.Gun.can_shoot, this.can_shoot.bind(this));
+		this.a.c.Gun.process_chamber = chain_func(this.a.c.Gun.process_chamber, this.process_chamber.bind(this));
 		this.a.c.Item.attack_self = this.attack_self.bind(this);
 
 		make_watched_property(this, "select", "number");
@@ -38,9 +27,7 @@ class EnergyGun extends Component {
 	update_charge_overlay() {
 		const cell_charge = this.cell ? this.cell.c.PowerCell.charge : 0;
 		const cell_max_charge = this.cell ? this.cell.c.PowerCell.max_charge : 1000;
-		const ratio = Math.ceil(
-			(cell_charge / cell_max_charge) * this.charge_sections
-		);
+		const ratio = Math.ceil((cell_charge / cell_max_charge) * this.charge_sections);
 		const shot = this.ammo_type[this.select];
 		let select_suffix = "";
 		if (this.select_icon) {
@@ -50,7 +37,7 @@ class EnergyGun extends Component {
 			};
 		}
 		if (cell_charge < shot.c.EnergyLens.e_cost) {
-			this.a.overlays.energy_charge = { icon_state: "[parent]_empty" };
+			this.a.overlays.energy_charge = {icon_state: "[parent]_empty"};
 			for (let i = 0; i < this.charge_sections; i++) {
 				this.a.overlays[`energy_csection_${i}`] = null;
 			}
@@ -75,24 +62,25 @@ class EnergyGun extends Component {
 			}
 		}
 		if (!this.a.template.vars.components.Item.inhand_icon_state) {
-			this.a.c.Item.inhand_icon_state =
-		this.a.icon_state + (shot.c.EnergyLens.select_name || "") + ratio;
+			this.a.c.Item.inhand_icon_state = this.a.icon_state + (shot.c.EnergyLens.select_name || "") + ratio;
 		}
 	}
 
 	process_chamber(prev: any) {
 		prev();
 		if (this.a.c.Gun.chambered) {
-			this.cell.c.PowerCell.use(
-				this.ammo_type[this.select].c.EnergyLens.e_cost
-			);
+			this.cell.c.PowerCell.use(this.ammo_type[this.select].c.EnergyLens.e_cost);
 		}
 	}
 
 	can_shoot(prev: any) {
 		const shot = this.ammo_type[this.select];
-		if (!shot || !this.cell) {return false;}
-		if (this.cell.c.PowerCell.charge < shot.c.EnergyLens.e_cost) {return false;}
+		if (!shot || !this.cell) {
+			return false;
+		}
+		if (this.cell.c.PowerCell.charge < shot.c.EnergyLens.e_cost) {
+			return false;
+		}
 		return prev();
 	}
 
@@ -102,10 +90,7 @@ class EnergyGun extends Component {
 
 	cell_changed(from: any, to: any) {
 		if (from) {
-			from.c.PowerCell.removeListener(
-				"charge_changed",
-				this.cell_charge_changed
-			);
+			from.c.PowerCell.removeListener("charge_changed", this.cell_charge_changed);
 		}
 		if (to) {
 			to.c.PowerCell.on("charge_changed", this.cell_charge_changed);
@@ -127,7 +112,9 @@ class EnergyGun extends Component {
 	}
 
 	select_changed(from: any, to: any) {
-		if (this.ammo_type.length <= 0) {return;} // this shouldn't happen
+		if (this.ammo_type.length <= 0) {
+			return;
+		} // this shouldn't happen
 		if (to >= this.ammo_type.length) {
 			this.select -= this.ammo_type.length;
 			return;
@@ -145,14 +132,11 @@ class EnergyGun extends Component {
 
 	check_can_charge(user: any) {
 		if (!this.can_charge) {
-			to_chat`<span class='notice'>Your gun has no external power connector</span>`(
-				user
-			);
+			to_chat`<span class='notice'>Your gun has no external power connector</span>`(user);
 			return false;
 		}
 		return true;
 	}
-
 }
 
 EnergyGun.loadBefore = ["Gun"];
@@ -183,4 +167,4 @@ EnergyGun.template = {
 	},
 };
 
-module.exports.components = { EnergyGun };
+module.exports.components = {EnergyGun};
