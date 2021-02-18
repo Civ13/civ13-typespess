@@ -74,14 +74,15 @@ async function explosion({
 	}
 	bbox = _.shuffle(bbox); // shuffle so that it doesn't look tacky if it lags
 	const explosion_block_cache = new Map(); // Stores the explosion block for tiles that have already been exploded
-	for (let target of bbox) {
-		const flip_x = target[0] < 0;
-		const flip_y = target[1] < 0;
-		target[0] = Math.abs(target[0]);
-		target[1] = Math.abs(target[1]);
-		const flip_xy = target[1] > target[0];
-		if (flip_xy) {target = [target[1], target[0]];}
-		const delta_error = target[1] / target[0];
+	for (const target of bbox) {
+		let ttarget = target;
+		const flip_x = ttarget[0] < 0;
+		const flip_y = ttarget[1] < 0;
+		target[0] = Math.abs(ttarget[0]);
+		target[1] = Math.abs(ttarget[1]);
+		const flip_xy = ttarget[1] > ttarget[0];
+		if (flip_xy) {ttarget = [ttarget[1], ttarget[0]];}
+		const delta_error = ttarget[1] / ttarget[0];
 		let flipped_dy = 0;
 		let error = 0;
 		let accumulated_explosion_block = 0;

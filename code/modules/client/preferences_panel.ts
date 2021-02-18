@@ -61,9 +61,7 @@ class PreferencesPanel extends Panel {
 			}
 			if (typeof msg.char_prefs.hair_style !== "undefined") {
 				const hair_obj = sprite_accessories.hair[msg.char_prefs.hair_style];
-				if (
-					hair_obj && Object.prototype.hasOwnProperty.call(sprite_accessories.hair,msg.char_prefs.hair_style) && (!hair_obj.gender || hair_obj.gender.includes(this.char_prefs.gender))
-				)
+				if (hair_obj && Object.prototype.hasOwnProperty.call(sprite_accessories.hair,msg.char_prefs.hair_style) && (!hair_obj.gender || hair_obj.gender.includes(this.char_prefs.gender)))
 					{this.char_prefs.hair_style = msg.char_prefs.hair_style;}
 			}
 
@@ -82,14 +80,14 @@ class PreferencesPanel extends Panel {
 		}
 	}
 	check_job_preferences(msg: Record<string,any>) {
-		// eslint-disable-next-line prefer-const
-		for (let [key, setting] of Object.entries(msg.job_preferences)) {
-			setting = Math.max(Math.min(Math.round(+setting || 0), 3), 0); // sanitize the value
-			if (key === "nomad") {setting = +!!setting;} // turn it into 0/1 deal
+		for (const [key, setting] of Object.entries(msg.job_preferences)) {
+			let tsetting = setting;
+			tsetting = Math.max(Math.min(Math.round(+tsetting || 0), 3), 0); // sanitize the value
+			if (key === "nomad") {tsetting = +!!tsetting;} // turn it into 0/1 deal
 			if (!this.client.server.job_controller.jobs[key]) {continue;} // oi that job doesnt exist ree
-			if (setting === 0) {delete this.char_prefs.job_preferences[key];}
-			else {this.char_prefs.job_preferences[key] = setting;}
-			if (setting === 3) {
+			if (tsetting === 0) {delete this.char_prefs.job_preferences[key];}
+			else {this.char_prefs.job_preferences[key] = tsetting;}
+			if (tsetting === 3) {
 				for (const [otherjob, othersetting] of Object.entries(
 					this.char_prefs.job_preferences
 				)) {
