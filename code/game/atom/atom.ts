@@ -59,10 +59,7 @@ class Atom extends EventEmitter {
 		const otemp = template;
 		if (typeof template === "string") {template = server.templates[template];}
 		if (template && template.pick_from) {
-			template =
-		template.pick_from[
-			Math.floor(Math.random() * template.pick_from.length)
-		];
+			template = template.pick_from[Math.floor(Math.random() * template.pick_from.length)];
 			if (typeof template === "string") {template = server.templates[template];}
 		}
 		if (
@@ -88,6 +85,7 @@ class Atom extends EventEmitter {
 				`Invalid arguments while instantiating template: ${otemp}, ${template}`
 			);}
 		super();
+		this.on("ctrl_clicked", this.ctrl_clicked.bind(this));
 
 		/**
 	* The template this atom was constructed with. Useful to get the initial values of variables.
@@ -588,7 +586,9 @@ class Atom extends EventEmitter {
 		this[mob_symbols._update_var]("x", 0); // Send the changes to the network.
 		this[mob_symbols._update_var]("y", 0);
 	}
-
+	ctrl_clicked(e: Record<string,any>) {
+		if (e) {console.log("ATOM DEBUG:");console.log(this);console.log("-----------------------");}
+	}
 	do_base_loc(gained_viewers: any, gained_crossers: any, lost_crossers: any, common_crossers: any) {
 		for (
 			let x = Math.floor(this[_x] + this[_bounds_x] + 0.0001);
