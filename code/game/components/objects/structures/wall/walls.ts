@@ -22,9 +22,7 @@ class Wall extends Component {
 	}
 
 	attack_by(prev: any, item: any, user: any) {
-		if (this.try_decon(item, user)) {
-			return true;
-		}
+		if (this.try_decon(item, user)) {return true;}
 		return prev();
 	}
 
@@ -37,9 +35,7 @@ class Wall extends Component {
 					delay: this.slicing_duration * item.c.Tool.toolspeed,
 					target: this.a,
 				}).then((success: any) => {
-					if (!success) {
-						return;
-					}
+					if (!success) {return;}
 					new Sound(this.a.server, {
 						path: "sound/items/welder.ogg",
 						volume: 1,

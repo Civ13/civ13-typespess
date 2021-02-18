@@ -75,9 +75,7 @@ class Gun extends Component {
 		const dx = target.x + ((e && e.x - 0.5) || 0) - user.x;
 		const dy = target.y + ((e && e.y - 0.5) || 0) - user.y;
 		const angle = angle_offset + (Math.atan2(dy, dx) * 180) / Math.PI;
-		if (!this.a.c.Item.slot || this.a.c.Item.slot.mob !== user || !this.a.c.Item.slot.props.is_hand_slot) {
-			return false;
-		}
+		if (!this.a.c.Item.slot || this.a.c.Item.slot.mob !== user || !this.a.c.Item.slot.props.is_hand_slot) {return false;}
 
 		if (this.chambered) {
 			if (
@@ -139,26 +137,18 @@ class Gun extends Component {
 	// Fun fact this is an item proc on tg. On all items. For guns.
 	// whether the user can trigger this gun
 	can_trigger(user: any) {
-		if (!has_component(user, "MobInventory") || !user.c.MobInventory.can_use_guns(this.a)) {
-			return false;
-		}
+		if (!has_component(user, "MobInventory") || !user.c.MobInventory.can_use_guns(this.a)) {return false;}
 		return true;
 	}
 
 	//called after the gun has successfully fired its chambered ammo.
-	process_chamber() {
-		return false;
-	}
+	process_chamber() {return false;}
 
 	//check if there's enough ammo/energy/whatever to shoot one time
 	//i.e if clicking would make it shoot
-	can_shoot() {
-		return true;
-	}
+	can_shoot() {return true;}
 
-	update_icon() {
-		return;
-	}
+	update_icon() {return;}
 }
 
 Gun.loadBefore = ["Item", "BeltItem"];

@@ -8,9 +8,7 @@ class AdminHolder {
 		this.client = client;
 	}
 
-	has_permission() {
-		return true;
-	}
+	has_permission() {return true;}
 }
 
 module.exports = AdminHolder;

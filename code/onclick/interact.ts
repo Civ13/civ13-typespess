@@ -124,9 +124,7 @@ class MobInteract extends Component {
 	}
 
 	can_interact() {
-		if (this.nointeract_counter) {
-			return false;
-		}
+		if (this.nointeract_counter) {return false;}
 		return true;
 	}
 
@@ -156,13 +154,9 @@ class MobInteract extends Component {
 		this.resist_act();
 	}
 
-	resist_act() {
-		return;
-	}
+	resist_act() {return;}
 
-	ranged_attack() {
-		return;
-	}
+	ranged_attack() {return;}
 }
 
 MobInteract.template = {

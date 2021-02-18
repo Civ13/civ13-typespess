@@ -8,9 +8,7 @@ class Handcuffs extends Component {
 	}
 
 	attack(target: Record<string, any>, user: Record<string, any>) {
-		if (this.used || !has_component(target, "MobInventory") || !target.c.MobInventory.check_can_handcuff(user)) {
-			return;
-		}
+		if (this.used || !has_component(target, "MobInventory") || !target.c.MobInventory.check_can_handcuff(user)) {return;}
 		if (!target.c.MobInventory.handcuffed) {
 			visible_message`<span class='danger'>The ${user} is trying to put the ${this.a} on the ${target}!</span>`
 				.self`<span class='userdanger'>The ${user} is trying to put the ${this.a} on the ${target}!</span>`.emit_from(
@@ -33,12 +31,8 @@ class Handcuffs extends Component {
 	}
 
 	apply(target: Record<string, any>, user: Record<string, any>) {
-		if (this.used || !target.c.MobInventory.check_can_handcuff(user) || target.c.MobInventory.handcuffed) {
-			return;
-		}
-		if (this.a.c.Item.slot && !this.a.c.Item.slot.can_unequip) {
-			return;
-		}
+		if (this.used || !target.c.MobInventory.check_can_handcuff(user) || target.c.MobInventory.handcuffed) {return;}
+		if (this.a.c.Item.slot && !this.a.c.Item.slot.can_unequip) {return;}
 		if (this.single_use) {
 			if (this.used_icon_state) {
 				this.a.icon_state = this.used_icon_state;

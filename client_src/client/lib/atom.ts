@@ -126,9 +126,7 @@ class Atom extends EventEmitter {
 		} else if (this.overlays[key] && value) {
 			overlay_renderer = this.overlay_renderers[key];
 			this.overlays[key] = value;
-		} else {
-			return;
-		}
+		} else {return;}
 		overlay_renderer.overlay_layer = value.overlay_layer || 0;
 		for (const prop of ["icon", "icon_state", "dir", "color", "alpha", "offset_x", "offset_y"]) {
 			overlay_renderer[prop] = value[prop];
@@ -164,17 +162,13 @@ class Atom extends EventEmitter {
 	}
 
 	update_glide(timestamp: any) {
-		if (!this.glide) {
-			return;
-		}
+		if (!this.glide) {return;}
 		this.glide.update(timestamp);
 	}
 
 	is_mouse_over(x: any, y: any) {
 		for (const overlay of this.overlay_renderers_list) {
-			if (overlay.is_mouse_over(x, y)) {
-				return true;
-			}
+			if (overlay.is_mouse_over(x, y)) {return true;}
 		}
 		return this.main_icon_renderer.is_mouse_over(x, y);
 	}

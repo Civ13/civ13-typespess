@@ -16,12 +16,8 @@ class Outfit {
 		);
 	}
 
-	pre_equip() {
-		return;
-	}
-	post_equip() {
-		return;
-	}
+	pre_equip() {return;}
+	post_equip() {return;}
 
 	equip(target: Record<string, any>, visuals_only = false) {
 		const clone = Object.create(this);

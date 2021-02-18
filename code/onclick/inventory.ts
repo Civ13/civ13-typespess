@@ -34,15 +34,9 @@ class MobInventory extends Component {
 		this.next_move = 0;
 		this[_slots] = {};
 		this.slots = new Proxy(this[_slots], {
-			set: () => {
-				return false;
-			},
-			deleteProperty: () => {
-				return false;
-			},
-			defineProperty: () => {
-				return false;
-			},
+			set: () => {return false;},
+			deleteProperty: () => {return false;},
+			defineProperty: () => {return false;},
 		});
 		this.add_slot(
 			"lhand",
@@ -722,9 +716,7 @@ class MobInventory extends Component {
 				slot.props.clothing_slot &&
 				has_component(slot.item, slot.props.clothing_slot) &&
 				slot.item.c[slot.props.clothing_slot].hide_face
-			) {
-				return false;
-			}
+			) {return false;}
 		}
 		return prev();
 	}
@@ -868,9 +860,7 @@ class MobInventory extends Component {
 
 	do_after({delay, needhand = true, target = null, progress = true, extra_checks = null}: Record<string, any> = {}) {
 		return new Promise((resolve) => {
-			if (!delay) {
-				return true;
-			}
+			if (!delay) {return true;}
 			const time_begin = this.a.server.now();
 			if (!target) {
 				target = [];
@@ -939,12 +929,8 @@ class MobInventory extends Component {
 	}
 }
 
-Atom.prototype.attack_hand = () => {
-	return;
-};
-Atom.prototype.attack_by = () => {
-	return;
-};
+Atom.prototype.attack_hand = () => {return;};
+Atom.prototype.attack_by = () => {return;};
 
 class Slot extends EventEmitter {
 	constructor(mob: any, id: any, atom: any, props: any) {
@@ -1065,29 +1051,15 @@ class Slot extends EventEmitter {
 		}
 	}
 	can_accept_item(item: Record<string, any>) {
-		if (!has_component(item, "Item")) {
-			return false;
-		}
-		if (this.item) {
-			return false;
-		}
-		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {
-			return false;
-		}
-		if (this.props.max_size && this.props.max_size < item.c.Item.size) {
-			return false;
-		}
-		if (this.props.is_hand_slot && this.mob.c.MobInventory.nohold_counter) {
-			return false;
-		}
-		if (this.props.clothing_slot && !has_component(item, this.props.clothing_slot)) {
-			return false;
-		}
+		if (!has_component(item, "Item")) {return false;}
+		if (this.item) {return false;}
+		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return false;}
+		if (this.props.max_size && this.props.max_size < item.c.Item.size) {return false;}
+		if (this.props.is_hand_slot && this.mob.c.MobInventory.nohold_counter) {return false;}
+		if (this.props.clothing_slot && !has_component(item, this.props.clothing_slot)) {return false;}
 		if (this.props.requires_slot) {
 			const rslot = this.mob.c.MobInventory.slots[this.props.requires_slot];
-			if (!rslot.item) {
-				return false;
-			}
+			if (!rslot.item) {return false;}
 			if (rslot.props.clothing_slot) {
 				const whitelist =
 					rslot.item.c[rslot.props.clothing_slot][`${this.props.requires_slot_prefix || this.id}_whitelist`];
@@ -1101,15 +1073,11 @@ class Slot extends EventEmitter {
 							break;
 						}
 					}
-					if (!valid) {
-						return false;
-					}
+					if (!valid) {return false;}
 				}
 				if (blacklist) {
 					for (const comp of blacklist) {
-						if (has_component(item, comp)) {
-							return false;
-						}
+						if (has_component(item, comp)) {return false;}
 					}
 				}
 			}
@@ -1117,9 +1085,7 @@ class Slot extends EventEmitter {
 		return true;
 	}
 
-	can_unequip() {
-		return true;
-	}
+	can_unequip() {return true;}
 
 	equip_or_del(item: Record<string, any>) {
 		if (!this.can_accept_item(item)) {

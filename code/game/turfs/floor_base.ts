@@ -13,9 +13,7 @@ class FloorBase extends Component {
 	ex_act(prev: any, severity: number) {
 		prev();
 		const shielded = this.is_shielded();
-		if (severity !== 1 && shielded) {
-			return;
-		}
+		if (severity !== 1 && shielded) {return;}
 		if (severity === 1) {
 			this.a.destroy();
 		} else if (severity === 2) {
@@ -36,9 +34,7 @@ class FloorBase extends Component {
 	}
 
 	break_tile() {
-		if (this.broken || !this.can_break) {
-			return;
-		}
+		if (this.broken || !this.can_break) {return;}
 		if (this.broken_states.length) {
 			this.a.overlays.broken = {icon_state: _.sample(this.broken_states)};
 		}
@@ -52,9 +48,7 @@ class FloorBase extends Component {
 			}
 			const shielded_components = ["FloorBase", "Wall", "Window"];
 			for (const comp of shielded_components) {
-				if (has_component(obj, comp)) {
-					return true;
-				}
+				if (has_component(obj, comp)) {return true;}
 			}
 		}
 	}

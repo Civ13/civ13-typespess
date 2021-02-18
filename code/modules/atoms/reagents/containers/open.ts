@@ -22,9 +22,7 @@ class OpenReagentContainer extends Component {
 	}
 
 	attack(target: Record<string, any>, user: Record<string, any>) {
-		if (!this.a.c.ReagentHolder.can_consume(target, user)) {
-			return;
-		}
+		if (!this.a.c.ReagentHolder.can_consume(target, user)) {return;}
 
 		if (this.a.c.ReagentHolder.total_volume <= 0) {
 			to_chat`<span class='warning'>The ${this.a} is empty!</span>`(user);
@@ -36,12 +34,8 @@ class OpenReagentContainer extends Component {
 					.self`<span class='userdanger'>The ${user} attempts to feed something to you.</span>`.emit_from(
 					target
 				);
-				if (!(await user.c.MobInventory.do_after({target, delay: 3000}))) {
-					return;
-				}
-				if (this.a.c.ReagentHolder.total_volume <= 0) {
-					return;
-				}
+				if (!(await user.c.MobInventory.do_after({target, delay: 3000}))) {return;}
+				if (this.a.c.ReagentHolder.total_volume <= 0) {return;}
 			} else {
 				to_chat`<span class='notice'>You swallow a gulp of the ${this.a}.</span>`(user);
 			}
@@ -61,9 +55,7 @@ class OpenReagentContainer extends Component {
 	}
 
 	splash(target: Record<string, any> = null) {
-		if (this.a.c.ReagentHolder.total_volume <= 0) {
-			return;
-		}
+		if (this.a.c.ReagentHolder.total_volume <= 0) {return;}
 		if (!target) {
 			for (const crosser of this.a.crosses()) {
 				if (has_component(crosser, "FloorBase") && (!target || crosser.layer > target.layer)) {

@@ -93,20 +93,12 @@ class Action /*lawsuit*/ extends EventEmitter {
 	}
 	check_mob_use(mob: {c: {LivingMob: {stat: any}; MobInteract: {nointeract_counter: any}}}) {
 		if (this.check_conscious) {
-			if (!has_component(mob, "LivingMob")) {
-				return false;
-			}
-			if (mob.c.LivingMob.stat !== combat_defines.CONSCIOUS) {
-				return false;
-			}
+			if (!has_component(mob, "LivingMob")) {return false;}
+			if (mob.c.LivingMob.stat !== combat_defines.CONSCIOUS) {return false;}
 		}
 		if (this.check_interact) {
-			if (!has_component(mob, "MobInteract")) {
-				return false;
-			}
-			if (mob.c.MobInteract.nointeract_counter) {
-				return false;
-			}
+			if (!has_component(mob, "MobInteract")) {return false;}
+			if (mob.c.MobInteract.nointeract_counter) {return false;}
 		}
 		return true;
 	}
@@ -133,12 +125,8 @@ class ItemAction extends Action {
 		);
 	}
 	check_mob_use(mob: any) {
-		if (!super.check_mob_use(mob)) {
-			return false;
-		}
-		if (!has_component(mob, "MobInventory") || !this.target || this.target.loc !== mob) {
-			return false;
-		}
+		if (!super.check_mob_use(mob)) {return false;}
+		if (!has_component(mob, "MobInventory") || !this.target || this.target.loc !== mob) {return false;}
 		return true;
 	}
 	click_act(user: any) {

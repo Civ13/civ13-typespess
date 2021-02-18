@@ -74,9 +74,7 @@ class Panel extends EventEmitter {
 			console.warn(new Error("Cannot send message on an unopened panel!"));
 			return;
 		}
-		if (!this.client) {
-			return;
-		}
+		if (!this.client) {return;}
 		const pm = this.client.next_message.panel || (this.client.next_message.panel = {});
 		if (!pm.message) {
 			pm.message = [];
@@ -88,9 +86,7 @@ class Panel extends EventEmitter {
 	 * Closes the panel
 	 */
 	close(send_message = true) {
-		if (!this.is_open) {
-			return;
-		}
+		if (!this.is_open) {return;}
 		if (this.client && send_message) {
 			const pm = this.client.next_message.panel || (this.client.next_message.panel = {});
 			if (!pm.close) {

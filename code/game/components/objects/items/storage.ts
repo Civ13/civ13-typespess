@@ -134,9 +134,7 @@ class StorageItem extends Component {
 				slot[0].screen_loc_x = null;
 				slot[0].screen_loc_y = null;
 				slot.splice(0, 1);
-				if (slot.length) {
-					return;
-				}
+				if (slot.length) {return;}
 				break;
 			} else {
 				slot.splice(idx, 1);
@@ -241,13 +239,9 @@ class StorageItem extends Component {
 		if (!has_component(item, "Item")) {
 			return;
 		} // not an item
-		if (this.a.loc === item) {
-			return false;
-		}
+		if (this.a.loc === item) {return false;}
 
-		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {
-			return false;
-		}
+		if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return false;}
 
 		if (this.a.contents.length >= this.storage_slots) {
 			if (user && !stop_messages) {
@@ -313,9 +307,7 @@ class StorageItem extends Component {
 	}
 
 	insert_item(item: any, user: any, prevent_warning = false) {
-		if (!has_component(item, "Item")) {
-			return false;
-		}
+		if (!has_component(item, "Item")) {return false;}
 		if (item.c.Item.slot) {
 			item.c.Item.slot.item = null;
 		}

@@ -62,12 +62,8 @@ class MobBodyParts extends Component {
 					amt: number,
 					{health_event = true, force = false, only_robotic = false, only_organic = false} = {}
 				) => {
-					if (amt === 0) {
-						return;
-					}
-					if (this.status_flags & combat_defines.GODMODE && !force) {
-						return false;
-					}
+					if (amt === 0) {return;}
+					if (this.status_flags & combat_defines.GODMODE && !force) {return false;}
 
 					let abs_amt = Math.abs(amt);
 					const sign_amt = Math.sign(amt);
@@ -164,9 +160,7 @@ class MobBodyParts extends Component {
 			return prev();
 		}
 		const hit_percent = (100 - blocked) / 100;
-		if (!damage || hit_percent < 0) {
-			return false;
-		}
+		if (!damage || hit_percent < 0) {return false;}
 		if (!has_component(def_zone, "BodyPart")) {
 			let bp = null;
 			if (!def_zone) {
@@ -195,9 +189,7 @@ class MobBodyParts extends Component {
 	}
 
 	check_can_handcuff(prev: any, user: any) {
-		if (!prev()) {
-			return false;
-		}
+		if (!prev()) {return false;}
 		if (!this.limbs.l_arm || !this.limbs.r_arm) {
 			if (user) {
 				to_chat`<span class='warning'>The ${this.a} doesn't have two hands...</span>`(user);
@@ -243,12 +235,8 @@ class BodyPart extends Component {
 	}
 
 	attach(mob: Record<string, any>) {
-		if (!has_component(mob, "MobBodyParts")) {
-			return false;
-		}
-		if (mob.c.MobBodyParts.limbs[this.body_zone]) {
-			return false;
-		}
+		if (!has_component(mob, "MobBodyParts")) {return false;}
+		if (mob.c.MobBodyParts.limbs[this.body_zone]) {return false;}
 		mob.c.MobBodyParts.limbs[this.body_zone] = this.a;
 		mob.c.MobBodyParts.limbs_set.add(this.a);
 		this.a.loc = mob;
@@ -357,9 +345,7 @@ class BodyPart extends Component {
 		return "#ffffff";
 	}
 
-	apply_prefs(/*prefs*/) {
-		return;
-	}
+	apply_prefs(/*prefs*/) {return;}
 
 	multiply_damage(type: string, amount: number) {
 		return amount;
@@ -369,9 +355,7 @@ class BodyPart extends Component {
 		amount = this.multiply_damage(type, amount);
 
 		const can_inflict = this.max_damage - this.brute_damage - this.burn_damage;
-		if (can_inflict <= 0) {
-			return false;
-		}
+		if (can_inflict <= 0) {return false;}
 
 		if (type === "brute") {
 			this.brute_damage += Math.min(can_inflict, amount);

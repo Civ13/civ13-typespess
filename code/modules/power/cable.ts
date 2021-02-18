@@ -143,9 +143,7 @@ class Cable extends Component {
 				if (idx !== -1) {
 					// Ooooh there's a loop. Let's take that out of the list.
 					cables_to_recalculate.splice(idx, 1);
-					if (!cables_to_recalculate.length) {
-						return;
-					} // Nice, we're done here.
+					if (!cables_to_recalculate.length) {return;} // Nice, we're done here.
 				}
 			}
 		}
@@ -195,19 +193,13 @@ class Cable extends Component {
 	}
 
 	does_connect_to(other: Record<string, any>) {
-		if (other === this.a) {
-			return false;
-		}
-		if (!has_component(other, "Cable")) {
-			return false;
-		}
+		if (other === this.a) {return false;}
+		if (!has_component(other, "Cable")) {return false;}
 		for (const n_this of [1, 2]) {
 			for (const n_other of [1, 2]) {
 				const end_this = this.get_end(n_this);
 				const end_other = other.c.Cable.get_end(n_other);
-				if (Math.abs(end_this[0] - end_other[0]) < 0.001 && Math.abs(end_this[1] - end_other[1]) < 0.0001) {
-					return true;
-				}
+				if (Math.abs(end_this[0] - end_other[0]) < 0.001 && Math.abs(end_this[1] - end_other[1]) < 0.0001) {return true;}
 			}
 		}
 		return false;
@@ -258,9 +250,7 @@ class StackCable extends Component {
 	}
 
 	pre_attack(prev: any, target: Record<string, any>, user: Record<string, any>) {
-		if (this.a.c.Stack.amount < 1) {
-			return true;
-		}
+		if (this.a.c.Stack.amount < 1) {return true;}
 		// The cable we will be merging with
 		let target_cable = null;
 		// Get the dir from turf to user, but if that's 0 (they're the same location) just use the user's dir

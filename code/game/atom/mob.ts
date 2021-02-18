@@ -73,9 +73,7 @@ class Eye extends Component {
 					if (typeof value !== "undefined" && !is_atom(value)) {
 						throw new TypeError(`${value} is not an atom`);
 					}
-					if (target[key] === value) {
-						return true;
-					}
+					if (target[key] === value) {return true;}
 					if (target[key]) {
 						this[_screen_set].delete(target[key]);
 						if (!this.can_see(target[key])) {
@@ -263,9 +261,7 @@ class Eye extends Component {
 	 * @returns {boolean}
 	 */
 	can_see(item: any) {
-		if (this[_screen_set].has(item)) {
-			return true;
-		}
+		if (this[_screen_set].has(item)) {return true;}
 		let visible_value = item.visible;
 		for (const visgroup of item[_visgroups]) {
 			if (this[_visgroups].has(visgroup) && visgroup.overrides.has("visible")) {
@@ -381,9 +377,7 @@ class Mob extends Component {
 						if (typeof value !== "undefined" && !has_component(value, "Eye")) {
 							throw new TypeError("Expected object with Eye component");
 						}
-						if (value && value.c.Eye[_observers].indexOf(this) !== -1) {
-							return false;
-						}
+						if (value && value.c.Eye[_observers].indexOf(this) !== -1) {return false;}
 						const oldEye = target[property];
 						if (oldEye && this.client) {
 							for (const netid in oldEye.c.Eye[_viewing]) {
@@ -498,9 +492,7 @@ class Mob extends Component {
 	 * @returns {boolean}
 	 * @abstract
 	 */
-	can_interact_with_panel(/*atom:any, panel:any, key:any*/) {
-		return true;
-	}
+	can_interact_with_panel(/*atom:any, panel:any, key:any*/) {return true;}
 
 	basic_panel_read_checks(panel: any) {
 		if (typeof panel === "object" && (panel.client !== this.client || (panel.bound_mob && panel.bound_mob !== this.a)))
@@ -516,14 +508,10 @@ class Mob extends Component {
 	 * @abstract
 	 */
 	can_read_panel(atom: any, panel: any, key = "") {
-		if (atom.can_user_read_panel && !atom.can_user_read_panel(this.a, panel, key)) {
-			return false;
-		}
+		if (atom.can_user_read_panel && !atom.can_user_read_panel(this.a, panel, key)) {return false;}
 		for (const teye of Object.values(this.eyes)) {
 			const eye: any = teye;
-			if (eye.c.Eye.can_see(atom)) {
-				return true;
-			}
+			if (eye.c.Eye.can_see(atom)) {return true;}
 		}
 		return false;
 	}

@@ -120,12 +120,8 @@ class NetworkedComponent extends Component {
 				return this[_networked_vars][name];
 			},
 			set: (val) => {
-				if (val === this[_networked_vars][name]) {
-					return;
-				}
-				if (on_set && !on_set(val)) {
-					return;
-				}
+				if (val === this[_networked_vars][name]) {return;}
+				if (on_set && !on_set(val)) {return;}
 				const old = this[_networked_vars][name];
 				this[_networked_vars][name] = val;
 				this.atom[mob_symbols._update_var](name, this.constructor.name);

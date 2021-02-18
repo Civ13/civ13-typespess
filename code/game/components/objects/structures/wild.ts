@@ -19,9 +19,7 @@ class Wild extends Component {
 	}
 
 	attack_by(prev: any, item: any, user: any) {
-		if (this.try_decon(item, user)) {
-			return true;
-		}
+		if (this.try_decon(item, user)) {return true;}
 		return prev();
 	}
 
@@ -34,9 +32,7 @@ class Wild extends Component {
 					delay: this.slicing_duration * item.c.Tool.toolspeed,
 					target: this.a,
 				}).then((success: any) => {
-					if (!success) {
-						return;
-					}
+					if (!success) {return;}
 					this.a.c.Destructible.deconstruct(true);
 					to_chat`<span class='notice'>You chop down the ${this.a.name}!</span>`(user);
 				});

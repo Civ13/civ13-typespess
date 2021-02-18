@@ -61,9 +61,7 @@ class MachineWires extends Component {
 				},
 				set: (val) => {
 					val = !!val;
-					if (cut === val) {
-						return;
-					}
+					if (cut === val) {return;}
 					cut = val;
 					if (cut) {
 						this.emit("cut", wire_obj);
@@ -73,22 +71,16 @@ class MachineWires extends Component {
 				},
 			});
 			wire_obj.pulse = (user: any) => {
-				if (wire_obj.cut) {
-					return;
-				}
+				if (wire_obj.cut) {return;}
 				this.emit("pulse", wire_obj, user);
 			};
 			wire_obj.do_cut = (user: any) => {
-				if (wire_obj.cut) {
-					return;
-				}
+				if (wire_obj.cut) {return;}
 				cut = true;
 				this.emit("cut", wire_obj, user);
 			};
 			wire_obj.do_mend = (user: any) => {
-				if (!wire_obj.cut) {
-					return;
-				}
+				if (!wire_obj.cut) {return;}
 				cut = false;
 				this.emit("mend", wire_obj, user);
 			};
@@ -97,9 +89,7 @@ class MachineWires extends Component {
 	}
 
 	show_ui(user: Record<string, any>) {
-		if (user.c.Mob.get_panel(this.a, MachineWirePanel) || !user.c.Mob.can_read_panel(this.a, MachineWirePanel)) {
-			return;
-		}
+		if (user.c.Mob.get_panel(this.a, MachineWirePanel) || !user.c.Mob.can_read_panel(this.a, MachineWirePanel)) {return;}
 		const panel = new MachineWirePanel(user.c.Mob.client, {
 			title: `${this.a.name} wires`,
 			width: 350,
@@ -113,9 +103,7 @@ class MachineWires extends Component {
 		if (
 			has_component(tool, "Tool") &&
 			(tool.c.Tool.can_use("Wirecutters", this.bound_mob) || tool.c.Tool.can_use("Multitool", this.bound_mob))
-		) {
-			return true;
-		}
+		) {return true;}
 		return false;
 	}
 

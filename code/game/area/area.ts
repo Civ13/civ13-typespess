@@ -13,9 +13,7 @@ class Area extends Component {
 		this.area_brushes = new Set();
 		this.touching = new Set();
 		this.a.once("map_instanced", (map: any) => {
-			if (!this.map_id) {
-				return;
-			}
+			if (!this.map_id) {return;}
 			map[_areas] = map[_areas] || {};
 			map[_areas][this.map_id] = this.a;
 		});
@@ -41,14 +39,10 @@ Area.template = {
 
 Area.update_map_instance = function (instobj: any) {
 	const id = instobj.computed_vars.components.Area.map_id;
-	if (!id) {
-		return;
-	}
+	if (!id) {return;}
 	instobj.map[_areas] = instobj.map[_areas] || {};
 	instobj.map[_areas][id] = instobj;
-	if (!instobj.map[_area_brushes] || !instobj.map[_area_brushes][id]) {
-		return;
-	}
+	if (!instobj.map[_area_brushes] || !instobj.map[_area_brushes][id]) {return;}
 	for (const brush of instobj.map[_area_brushes][id]) {
 		brush.client_atom.icon = instobj.computed_vars.components.Area.brush_icon;
 		brush.client_atom.icon_state = instobj.computed_vars.components.Area.brush_icon_state;
@@ -60,9 +54,7 @@ class AreaBrush extends Component {
 		super(atom, template);
 		this[_area] = null;
 		this.a.once("map_instance_done", (map: any) => {
-			if (!this.map_id) {
-				return;
-			}
+			if (!this.map_id) {return;}
 			map[_areas] = map[_areas] || {};
 			const area = map[_areas][this.map_id];
 			if (area) {
@@ -78,9 +70,7 @@ class AreaBrush extends Component {
 	}
 
 	crossed(atom: Record<string, any>) {
-		if (!this.area) {
-			return;
-		}
+		if (!this.area) {return;}
 		if (!this.area.c.Area.touching.has(atom)) {
 			this.area.c.Area.touching.add(atom);
 			this.area.c.Area.emit("start_touch", atom);
@@ -89,13 +79,9 @@ class AreaBrush extends Component {
 	}
 
 	uncrossed(atom: Record<string, any>) {
-		if (!this.area) {
-			return;
-		}
+		if (!this.area) {return;}
 		for (const brush of atom.crosses()) {
-			if (has_component(brush, "AreaBrush") && brush.c.AreaBrush.area === this.area) {
-				return;
-			}
+			if (has_component(brush, "AreaBrush") && brush.c.AreaBrush.area === this.area) {return;}
 		}
 		this.area.c.Area.touching.delete(atom);
 		this.area.c.Area.emit("end_touch", atom);
@@ -141,9 +127,7 @@ AreaBrush.template = {
 
 AreaBrush.update_map_instance = function (instobj: Record<string, any>) {
 	const id = instobj.computed_vars.components.AreaBrush.map_id;
-	if (!id) {
-		return;
-	}
+	if (!id) {return;}
 	instobj.map[_area_brushes] = instobj.map[_area_brushes] || {};
 	instobj.map[_area_brushes][id] = instobj.map[_area_brushes][id] || new Set();
 	instobj.map[_area_brushes][id].add(instobj);

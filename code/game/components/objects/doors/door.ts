@@ -45,9 +45,7 @@ class Door extends Component {
 	}
 
 	try_to_activate_door(atom: Record<string, any>) {
-		if (this.operating) {
-			return false;
-		}
+		if (this.operating) {return false;}
 		if (this.a.c.RequiresAccess.can_access(atom)) {
 			if (this.a.density > 0) {
 				this.open();
@@ -62,16 +60,12 @@ class Door extends Component {
 	}
 
 	can_access(prev: any) {
-		if (this.emergency) {
-			return true;
-		}
+		if (this.emergency) {return true;}
 		return prev();
 	}
 
 	async open() {
-		if (this.a.density <= 0) {
-			return true;
-		}
+		if (this.a.density <= 0) {return true;}
 		if (this.operating) {
 			return;
 		}
@@ -94,9 +88,7 @@ class Door extends Component {
 	}
 
 	async close() {
-		if (this.a.density > 0) {
-			return true;
-		}
+		if (this.a.density > 0) {return true;}
 		if (this.operating) {
 			return;
 		}
@@ -139,21 +131,13 @@ class Door extends Component {
 		return true;
 	}
 
-	crush() {
-		return;
-	}
+	crush() {return;}
 
-	deny() {
-		return;
-	}
+	deny() {return;}
 
-	try_to_crowbar(/*tool, user*/) {
-		return;
-	}
+	try_to_crowbar(/*tool, user*/) {return;}
 
-	try_to_weld(/*tool, user*/) {
-		return;
-	}
+	try_to_weld(/*tool, user*/) {return;}
 
 	attack_by(prev: any, item: any /*, user: any*/) {
 		if (has_component(item, "Tool") && item.c.Tool.can_use("Crowbar")) {

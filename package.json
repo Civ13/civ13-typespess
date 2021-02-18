@@ -75,7 +75,7 @@
 		"rules": {
 			"sonarjs/cognitive-complexity": [
 				"error",
-				20
+				25
 			],
 			"sonarjs/no-duplicate-string": 0,
 			"@typescript-eslint/no-var-requires": 0,

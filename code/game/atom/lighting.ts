@@ -113,9 +113,7 @@ class LightSource extends Component {
 		this.update_queued = true;
 		process.nextTick(() => {
 			try {
-				if (!this[_lighting_object]) {
-					return;
-				}
+				if (!this[_lighting_object]) {return;}
 				if (
 					!this[_enabled] ||
 					!this.a.loc ||

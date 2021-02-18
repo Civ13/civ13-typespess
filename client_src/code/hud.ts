@@ -33,9 +33,7 @@ class GridDisplay extends Component {
 	is_mouse_over(prev: any, x: number, y: number) {
 		for (let ox = 0; ox < this.width; ox++) {
 			for (let oy = 0; oy < this.height; oy++) {
-				if (prev(x - ox, y - oy)) {
-					return true;
-				}
+				if (prev(x - ox, y - oy)) {return true;}
 			}
 		}
 		return false;

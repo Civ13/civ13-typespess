@@ -45,9 +45,7 @@ class Window extends Component {
 	}
 
 	update_damage_overlay() {
-		if (this.a.destroyed) {
-			return;
-		}
+		if (this.a.destroyed) {return;}
 		let ratio = this.a.c.Destructible.obj_integrity / this.a.c.Destructible.max_integrity;
 		ratio = Math.ceil(ratio * 4) * 25;
 
@@ -70,9 +68,7 @@ class Window extends Component {
 	}
 
 	deconstruct(disassembled = true) {
-		if (this.a.destroyed) {
-			return;
-		}
+		if (this.a.destroyed) {return;}
 		if (disassembled) {
 			const glass = new Atom(this.a.server, this.glass_type);
 			glass.c.Stack.amount = this.glass_amount;
@@ -94,9 +90,7 @@ class Window extends Component {
 		return this[_state];
 	}
 	set state(val) {
-		if (val === this[_state]) {
-			return;
-		}
+		if (val === this[_state]) {return;}
 		this[_state] = val;
 		if (val === "unscrewed_from_floor") {
 			this.a.c.Tangible.anchored = false;
@@ -278,30 +272,22 @@ class DirectionalWindow extends Component {
 		if (dx > 0 && this.a.dir & 4) {
 			const this_right = this.a.x + this.a.bounds_x + this.a.bounds_width;
 			const other_right = atom.x + atom.bounds_x + atom.bounds_width;
-			if (other_right <= this_right && other_right + dx > this_right) {
-				return false;
-			}
+			if (other_right <= this_right && other_right + dx > this_right) {return false;}
 		}
 		if (dx < 0 && this.a.dir & 8) {
 			const this_left = this.a.x + this.a.bounds_x;
 			const other_left = atom.x + atom.bounds_x;
-			if (other_left >= this_left && other_left + dx < this_left) {
-				return false;
-			}
+			if (other_left >= this_left && other_left + dx < this_left) {return false;}
 		}
 		if (dy > 0 && this.a.dir & 1) {
 			const this_top = this.a.y + this.a.bounds_y + this.a.bounds_height;
 			const other_top = atom.y + atom.bounds_y + atom.bounds_height;
-			if (other_top <= this_top && other_top + dy > this_top) {
-				return false;
-			}
+			if (other_top <= this_top && other_top + dy > this_top) {return false;}
 		}
 		if (dy < 0 && this.a.dir & 2) {
 			const this_bottom = this.a.y + this.a.bounds_y;
 			const other_bottom = atom.y + atom.bounds_y;
-			if (other_bottom >= this_bottom && other_bottom + dy < this_bottom) {
-				return false;
-			}
+			if (other_bottom >= this_bottom && other_bottom + dy < this_bottom) {return false;}
 		}
 		return prev();
 	}

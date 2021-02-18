@@ -28,9 +28,7 @@ class SimpleMob extends Component {
 		this.a.c.MobAI = val;
 	}
 	update_stat() {
-		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {
-			return;
-		}
+		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {return;}
 		const health = this.a.c.LivingMob.health;
 		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
 			if (health <= 0) {
@@ -57,9 +55,7 @@ class SimpleMob extends Component {
 		}
 	}
 	move_ai(movedir: number) {
-		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {
-			return;
-		}
+		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {return;}
 		if (!(movedir in [1, 2, 4, 8])) {
 			movedir = _.sample([1, 2, 4, 8]);
 		}
@@ -89,9 +85,7 @@ class SimpleMob extends Component {
 		this.a.overlays["mob_icon"] = this.get_main_overlay();
 	}
 
-	detach() {
-		return;
-	}
+	detach() {return;}
 
 	remove_overlays(atom: Record<string, any>) {
 		atom.overlays["mob_icon"] = void 0;
@@ -131,9 +125,7 @@ class MobAI extends Component {
 		}
 	}
 	do_behaviour() {
-		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {
-			return;
-		}
+		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {return;}
 		this.a.c.SimpleMob.update_overlays();
 		if (this.behaviour === "scared") {
 			if (!this.a.c.SimpleMob.target) {

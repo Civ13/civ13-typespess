@@ -60,9 +60,7 @@ class IconRenderer {
 	}
 
 	get_bounds() {
-		if (!this.icon_meta) {
-			return;
-		}
+		if (!this.icon_meta) {return;}
 		const offset = this.get_offset();
 		return {
 			x: offset[0],
@@ -101,9 +99,7 @@ class IconRenderer {
 					} else {
 						this.icon = `${this.icon}${this.icon_state}.png`;
 					}
-				} else if (this.icon_state === "") {
-					return;
-				} //if theres no icon state - don't draw.
+				} else if (this.icon_state === "") {return;} //if theres no icon state - don't draw.
 				if (!this.icon) {
 					this.icon = "icons/nothing.png";
 				}
@@ -129,9 +125,7 @@ class IconRenderer {
 	}
 
 	draw(ctx: any) {
-		if (!this.icon_meta || !this.icon_meta.__image_object) {
-			return;
-		}
+		if (!this.icon_meta || !this.icon_meta.__image_object) {return;}
 
 		let image = this.icon_meta.__image_object;
 		let tcolor = null;
@@ -191,18 +185,14 @@ class IconRenderer {
 	}
 
 	is_mouse_over(x: number, y: number) {
-		if (!this.icon_meta || !this.icon_meta.__image_data) {
-			return false;
-		}
+		if (!this.icon_meta || !this.icon_meta.__image_data) {return false;}
 		const offset = this.get_offset();
 		x -= offset[0];
 		y -= offset[1];
 		const pxx = Math.floor(x * 32);
 		const pxy = Math.floor(32 - y * 32);
 
-		if (pxx < 0 || pxy < 0 || pxx > this.icon_meta.width || pxy > this.icon_meta.height) {
-			return false;
-		}
+		if (pxx < 0 || pxy < 0 || pxx > this.icon_meta.width || pxy > this.icon_meta.height) {return false;}
 		const idx = 3 + 4 * (pxx + pxy * this.icon_meta.__image_data.width);
 		return this.icon_meta.__image_data.data[idx] > 0;
 	}
@@ -245,9 +235,7 @@ class IconRenderer {
 		return this._overlay_layer;
 	}
 	set overlay_layer(val) {
-		if (val === this._overlay_layer) {
-			return;
-		}
+		if (val === this._overlay_layer) {return;}
 		this._overlay_layer = val;
 		if (this.atom) {
 			this.atom.mark_dirty();
@@ -258,9 +246,7 @@ class IconRenderer {
 		return this._offset_x;
 	}
 	set offset_x(val) {
-		if (val === this._offset_x) {
-			return;
-		}
+		if (val === this._offset_x) {return;}
 		this._offset_x = +val || 0;
 		if (this.atom) {
 			this.atom.mark_dirty();
@@ -270,9 +256,7 @@ class IconRenderer {
 		return this._offset_y;
 	}
 	set offset_y(val) {
-		if (val === this._offset_y) {
-			return;
-		}
+		if (val === this._offset_y) {return;}
 		this._offset_y = +val || 0;
 		if (this.atom) {
 			this.atom.mark_dirty();
@@ -307,9 +291,7 @@ class IconRenderer {
 		return this._color;
 	}
 	set color(val) {
-		if (val === this._color) {
-			return;
-		}
+		if (val === this._color) {return;}
 		this._color = "" + val;
 		if (this.atom) {
 			this.atom.mark_dirty();
@@ -320,9 +302,7 @@ class IconRenderer {
 		return this._alpha;
 	}
 	set alpha(val) {
-		if (val === this._alpha) {
-			return;
-		}
+		if (val === this._alpha) {return;}
 		this._alpha = "" + val;
 		if (this.atom) {
 			this.atom.mark_dirty();

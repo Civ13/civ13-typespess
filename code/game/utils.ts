@@ -92,9 +92,7 @@ module.exports = {
 				chained_func[_chain_parent] = chained_func[_chain_parent][_chain_parent];
 			}
 			const prev = (...override_args: undefined[]) => {
-				if (!chained_func[_chain_parent]) {
-					return;
-				}
+				if (!chained_func[_chain_parent]) {return;}
 				if (override_args.length) {
 					return chained_func[_chain_parent].call(this, ...override_args);
 				} else {
@@ -127,9 +125,7 @@ module.exports = {
 		if (typeof check === "string") {
 			const type = check;
 			check = function (val: any) {
-				if (typeof val !== type) {
-					return true;
-				}
+				if (typeof val !== type) {return true;}
 			};
 		}
 		if (check && typeof init_value !== "undefined" && check(init_value)) {
@@ -143,9 +139,7 @@ module.exports = {
 				if (check && check(val)) {
 					throw new Error(`Setting ${name} to ${val} failed type check!`);
 				}
-				if (val === value) {
-					return;
-				}
+				if (val === value) {return;}
 				const old = value;
 				value = val;
 				obj.emit(event_name, old, val);
@@ -347,9 +341,7 @@ module.exports = {
 			} else {
 				cl = a.c.Mob.client;
 			}
-			if (!cl) {
-				return;
-			}
+			if (!cl) {return;}
 			if (!cl.next_message.to_chat) {
 				cl.next_message.to_chat = [];
 			}
@@ -475,20 +467,10 @@ module.exports = {
 	WEST: 8,
 
 	readonly_traps: {
-		set: () => {
-			return;
-		},
-		deleteProperty: () => {
-			return;
-		},
-		defineProperty: () => {
-			return;
-		},
-		setPrototypeOf: () => {
-			return;
-		},
-		isExtensible: () => {
-			return false;
-		},
+		set: () => {return;},
+		deleteProperty: () => {return;},
+		defineProperty: () => {return;},
+		setPrototypeOf: () => {return;},
+		isExtensible: () => {return false;},
 	},
 };

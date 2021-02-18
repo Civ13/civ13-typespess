@@ -89,9 +89,7 @@ class ChatMessage {
 	 * @returns {Typespess.ChatMessage} (this object)
 	 */
 	emit_from(atom: Record<string, any>) {
-		if (!atom) {
-			return;
-		}
+		if (!atom) {return;}
 		this.emitter = atom;
 		const hearers = new Set();
 		for (const loc of atom.base_mover.partial_locs()) {
@@ -115,9 +113,7 @@ class ChatMessage {
 	 * @returns {Typespess.ChatMessage} (this object)
 	 */
 	show_directly_to(target: any, source: any) {
-		if (!target || !source || !has_component(target, "Hearer")) {
-			return;
-		}
+		if (!target || !source || !has_component(target, "Hearer")) {return;}
 		this.emitter = source;
 		target.c.Hearer.show_message(this);
 		return this;

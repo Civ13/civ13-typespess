@@ -81,9 +81,7 @@ class Stack extends Component {
 	}
 
 	use(used: any) {
-		if (this.amount < used) {
-			return false;
-		}
+		if (this.amount < used) {return false;}
 		this.amount -= used;
 		return true;
 	}

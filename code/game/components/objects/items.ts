@@ -12,9 +12,7 @@ class Item extends Component {
 		this.a.c.Examine.examine = chain_func(this.a.c.Examine.examine, this.examine.bind(this));
 	}
 
-	attack_self() {
-		return;
-	}
+	attack_self() {return;}
 
 	_attack_hand(prev: any, user: any) {
 		if (has_component(user, "MobInventory")) {
@@ -70,17 +68,11 @@ class Item extends Component {
 		}
 	}
 
-	pre_attack() {
-		return false;
-	}
+	pre_attack() {return false;}
 
-	after_attack() {
-		return true;
-	}
+	after_attack() {return true;}
 
-	attack_space() {
-		return true;
-	}
+	attack_space() {return true;}
 
 	melee_attack_chain(user: Record<string, any>, target: any, e: any) {
 		if (!(this.pre_attack(/*target, user, e*/))) {
@@ -92,9 +84,7 @@ class Item extends Component {
 	}
 
 	attack(target: any, user: Record<string, any>) {
-		if (this.no_bludgeon) {
-			return;
-		}
+		if (this.no_bludgeon) {return;}
 		if (!this.force) {
 			new Sound(this.a.server, {
 				path: "sound/weapons/tap.ogg",
@@ -118,9 +108,7 @@ class Item extends Component {
 	}
 
 	attack_obj(target: Record<string, any>, user: Record<string, any>) {
-		if (this.no_bludgeon) {
-			return;
-		}
+		if (this.no_bludgeon) {return;}
 		user.c.MobInteract.change_next_move(combat_defines.CLICK_CD_MELEE);
 		user.c.Tangible.do_attack_animation(target);
 		target.c.Destructible.attacked_by(this.a, user);

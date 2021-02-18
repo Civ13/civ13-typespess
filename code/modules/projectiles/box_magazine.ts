@@ -42,16 +42,12 @@ class AmmoBox extends Component {
 
 	give_round(ammo_casing: any, replace_spent = false) {
 		// Boxes don't have a caliber type, magazines do. Not sure if it's intended or not, but if we fail to find a caliber, then we fall back to ammo_type.
-		if (!has_component(ammo_casing, "AmmoCasing")) {
-			return false;
-		}
+		if (!has_component(ammo_casing, "AmmoCasing")) {return false;}
 		if (
 			!ammo_casing ||
 			(this.caliber && ammo_casing.c.AmmoCasing.caliber !== this.caliber) ||
 			(!this.caliber && ammo_casing.c.AmmoCasing.casing_type !== this.ammo_type)
-		) {
-			return false;
-		}
+		) {return false;}
 
 		if (this.stored_ammo.length < this.max_ammo) {
 			this.stored_ammo.push(ammo_casing);
@@ -77,9 +73,7 @@ class AmmoBox extends Component {
 		return false;
 	}
 
-	can_load(/*user*/) {
-		return true;
-	}
+	can_load(/*user*/) {return true;}
 
 	ammo_count() {
 		return this.stored_ammo.length;

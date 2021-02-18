@@ -272,9 +272,7 @@ class Client extends EventEmitter {
 		return this[_mob];
 	}
 	set mob(val) {
-		if (val === this[_mob]) {
-			return;
-		}
+		if (val === this[_mob]) {return;}
 		if (val && !has_component(val, "Mob")) {
 			throw new TypeError("Expected object with Mob component");
 		}
@@ -393,9 +391,7 @@ class Client extends EventEmitter {
 	}
 
 	send_network_updates() {
-		if (!this.socket || this.socket.readyState !== this.socket.OPEN) {
-			return;
-		}
+		if (!this.socket || this.socket.readyState !== this.socket.OPEN) {return;}
 		const message: Record<string, any> = {};
 		for (const netid in this[_atom_net_queue]) {
 			if (this[_atom_net_queue][netid]) {
@@ -428,9 +424,7 @@ class Client extends EventEmitter {
 			message[key] = this.next_message[key];
 			delete this.next_message[key];
 		}
-		if (JSON.stringify(message) === "{}") {
-			return;
-		}
+		if (JSON.stringify(message) === "{}") {return;}
 		message.timestamp = this.server.now();
 		if (this.server.demo_stream && !this.server.demo_stream.closed) {
 			this.server.demo_stream.write(

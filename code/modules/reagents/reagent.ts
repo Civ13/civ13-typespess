@@ -66,9 +66,7 @@ class Reagent extends EventEmitter {
 		return amount;
 	}
 
-	overdose_process() {
-		return;
-	}
+	overdose_process() {return;}
 	overdose_start() {
 		to_chat`<span class='userdanger'>You feel like you took too much of ${this.name}!</span>`(this.holder);
 	}
@@ -107,17 +105,13 @@ class Reagent extends EventEmitter {
 		this.remove(this.metabolization_rate * dt);
 	}
 
-	reaction_obj() {
-		return;
-	}
+	reaction_obj() {return;}
 	reaction_mob(target: any, method: string, volume: number) {
 		if (method === "vapor" && volume > 0.5) {
 			target.c.ReagentHolder.add(this, volume);
 		}
 	}
-	reaction_turf() {
-		return;
-	}
+	reaction_turf() {return;}
 }
 
 class ReagentReaction {

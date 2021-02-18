@@ -15,9 +15,7 @@ class Buckle extends Component {
 				//TODO: implement this correctly like on TG
 				this.unbuckle_all_mobs();
 			}
-			if (this.user_unbuckle_mob(this.buckled_mobs[0], user)) {
-				return true;
-			}
+			if (this.user_unbuckle_mob(this.buckled_mobs[0], user)) {return true;}
 		}
 		return prev();
 	}
@@ -25,15 +23,11 @@ class Buckle extends Component {
 	mouse_dropped_by(e: Record<string, any>) {
 		const buckling = e.from.atom;
 		const user = e.mob;
-		if (this.can_buckle && has_component(buckling, "LivingMob") && this.user_buckle_mob(buckling, user)) {
-			return true;
-		}
+		if (this.can_buckle && has_component(buckling, "LivingMob") && this.user_buckle_mob(buckling, user)) {return true;}
 	}
 
 	has_buckled_mobs() {
-		if (this.buckled_mobs.length > 0) {
-			return true;
-		}
+		if (this.buckled_mobs.length > 0) {return true;}
 		return false;
 	}
 
@@ -41,12 +35,8 @@ class Buckle extends Component {
 		if (!this.buckled_mobs) {
 			this.buckled_mobs = [];
 		}
-		if (!has_component(buckling, "LivingMob")) {
-			return false;
-		}
-		if (check_loc && buckling.loc !== this.a.loc) {
-			return false;
-		}
+		if (!has_component(buckling, "LivingMob")) {return false;}
+		if (check_loc && buckling.loc !== this.a.loc) {return false;}
 		if (
 			(!this.can_buckle && !force) ||
 			buckling.c.LivingMob.buckled ||
@@ -92,9 +82,7 @@ class Buckle extends Component {
 	}
 
 	unbuckle_all_mobs(force = false) {
-		if (!this.has_buckled_mobs()) {
-			return;
-		}
+		if (!this.has_buckled_mobs()) {return;}
 		for (let i = 0; i < this.buckled_mobs.length; i++) {
 			const unbuckling = this.buckled_mobs[i];
 			this.unbuckle_mob(unbuckling, force);

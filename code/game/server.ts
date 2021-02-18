@@ -347,9 +347,7 @@ class Typespess extends EventEmitter {
 	 * @param {template} template
 	 */
 	process_template(template: any) {
-		if (template[_is_template_processed]) {
-			return;
-		}
+		if (template[_is_template_processed]) {return;}
 		if (template.parent_template) {
 			if (typeof template.parent_template === "string") {
 				const ptemplate = this.templates[template.parent_template];
@@ -515,9 +513,7 @@ class Typespess extends EventEmitter {
 			} else {
 				cl = client.a.c.Mob.client;
 			}
-			if (!cl) {
-				return;
-			}
+			if (!cl) {return;}
 			if (!cl.next_message.to_chat) {
 				cl.next_message.to_chat = [];
 			}

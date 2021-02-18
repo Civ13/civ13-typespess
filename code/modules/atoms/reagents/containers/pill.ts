@@ -13,27 +13,21 @@ class Pill extends Component {
 	}
 
 	attack(target: Record<string, any>, user: Record<string, any>) {
-		if (!this.a.c.ReagentHolder.can_consume(target, user)) {
-			return true;
-		}
+		if (!this.a.c.ReagentHolder.can_consume(target, user)) {return true;}
 
 		(async () => {
 			if (target === user) {
 				visible_message`<span class='notice'>The ${user} attempts to ${this.apply_method} the ${this.a}</span>`.emit_from(
 					target
 				);
-				if (this.self_delay && !(await user.c.MobInventory.do_after({target, delay: this.self_delay}))) {
-					return false;
-				}
+				if (this.self_delay && !(await user.c.MobInventory.do_after({target, delay: this.self_delay}))) {return false;}
 				to_chat`<span class='notice'>You ${this.apply_method} the ${this.a}.</span>`(user);
 			} else {
 				visible_message`<span class='danger'>The ${user} attempts to force the ${target} to ${this.apply_method} the ${this.a}.</span>`
 					.self`<span class='userdanger'>The ${user} attempts to force you to ${this.apply_method} the ${this.a}.</span>`.emit_from(
 					target
 				);
-				if (!(await user.c.MobInventory.do_after({target, delay: 3000}))) {
-					return false;
-				}
+				if (!(await user.c.MobInventory.do_after({target, delay: 3000}))) {return false;}
 				visible_message`<span class='danger'>The ${user} forces the ${target} to ${this.apply_method} the ${this.a}.</span>`
 					.self`<span class='userdanger'>The ${user} forces you to ${this.apply_method} the ${this.a}.</span>`.emit_from(
 					target

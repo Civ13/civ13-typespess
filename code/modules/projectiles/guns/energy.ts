@@ -75,12 +75,8 @@ class EnergyGun extends Component {
 
 	can_shoot(prev: any) {
 		const shot = this.ammo_type[this.select];
-		if (!shot || !this.cell) {
-			return false;
-		}
-		if (this.cell.c.PowerCell.charge < shot.c.EnergyLens.e_cost) {
-			return false;
-		}
+		if (!shot || !this.cell) {return false;}
+		if (this.cell.c.PowerCell.charge < shot.c.EnergyLens.e_cost) {return false;}
 		return prev();
 	}
 

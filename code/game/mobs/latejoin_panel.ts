@@ -29,16 +29,10 @@ class LatejoinPanel extends Panel {
 
 	message_handler(msg: Record<string, any>) {
 		if (msg.join) {
-			if (this.client.server.ticker.game_state !== "playing" || this.client.server.ticker.busy) {
-				return;
-			}
+			if (this.client.server.ticker.game_state !== "playing" || this.client.server.ticker.busy) {return;}
 			const job = this.client.server.job_controller.jobs[msg.join];
-			if (!job) {
-				return;
-			}
-			if (job.current_positions >= job.total_positions && job.total_positions !== -1) {
-				return;
-			}
+			if (!job) {return;}
+			if (job.current_positions >= job.total_positions && job.total_positions !== -1) {return;}
 			job.current_positions++;
 			const mob = job.instance(this.client.server, this.client.character_preferences);
 			this.client.server.job_controller.send_to_late_join(mob);

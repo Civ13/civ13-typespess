@@ -23,9 +23,7 @@ class StatusEffect {
 	}
 
 	unapply() {
-		if (!this.mob) {
-			return;
-		}
+		if (!this.mob) {return;}
 		if (this.mob.c.LivingMob.effects[this.constructor.name] === this) {
 			this.mob.c.LivingMob.effects[this.constructor.name] = null;
 		}
@@ -40,13 +38,9 @@ class TimedEffect extends StatusEffect {
 	timeout: any;
 	apply_to(mob: Record<string, any>, props: Record<string, any> = {}) {
 		const new_target_time = mob.server.now() + (props.delay || 0);
-		if (new_target_time <= (this.target_time || 0)) {
-			return;
-		}
+		if (new_target_time <= (this.target_time || 0)) {return;}
 		super.apply_to(mob, props);
-		if (!this.mob) {
-			return;
-		}
+		if (!this.mob) {return;}
 		this.target_time = new_target_time;
 		if (this.timeout) {
 			clearTimeout(this.timeout);

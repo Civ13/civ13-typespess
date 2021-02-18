@@ -54,9 +54,7 @@ module.exports.admin_tools = {
 		perm_required: "spawn.atom",
 		buttons: {
 			Open: (client: Record<string, any>) => {
-				if (opened_panels.get(client)) {
-					return;
-				}
+				if (opened_panels.get(client)) {return;}
 				const panel = new SpawnObjectPanel(client);
 				panel.open();
 			},

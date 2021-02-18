@@ -20,9 +20,7 @@ class JobController {
 	}
 
 	assign_role(mind: Record<string, any>, job: any, {latejoin = false, run_checks = true} = {}) {
-		if (run_checks && !this.can_be_job(mind, job, {latejoin})) {
-			return false;
-		}
+		if (run_checks && !this.can_be_job(mind, job, {latejoin})) {return false;}
 		job.current_positions++;
 		this.unassigned.delete(mind);
 		if (!latejoin) {
@@ -41,15 +39,9 @@ class JobController {
 	// Okay tg was being really retarded and put the same list of checks literally everwhere
 	// so I'm doing this to avoid that bullshit
 	can_be_job(mind: Record<string, any>, job: Record<string, any>, {latejoin = false} = {}) {
-		if (mind.restricted_roles.has(job.id)) {
-			return false;
-		}
-		if (latejoin && job.total_positions !== -1 && job.current_positions > job.total_positions) {
-			return false;
-		}
-		if (!latejoin && job.spawn_positions !== -1 && job.current_positions > job.spawn_positions) {
-			return false;
-		}
+		if (mind.restricted_roles.has(job.id)) {return false;}
+		if (latejoin && job.total_positions !== -1 && job.current_positions > job.total_positions) {return false;}
+		if (!latejoin && job.spawn_positions !== -1 && job.current_positions > job.spawn_positions) {return false;}
 		return true;
 	}
 
@@ -78,9 +70,7 @@ class JobController {
 				!job.departments.includes("command") &&
 				this.can_be_job(mind, job) &&
 				this.assign_role(mind, job)
-			) {
-				return true;
-			}
+			) {return true;}
 		}
 		return false;
 	}
@@ -99,9 +89,7 @@ class JobController {
 	}
 
 	divide_occupations() {
-		if (this.unassigned.size === 0) {
-			return false;
-		}
+		if (this.unassigned.size === 0) {return false;}
 
 		// people who want to be assistants, sure, go on.
 		for (const candidate of this.find_occupation_candidates(this.jobs.nomad, 1)) {

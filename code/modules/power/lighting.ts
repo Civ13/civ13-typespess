@@ -48,9 +48,7 @@ class LightFixture extends Component {
 
 	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "LightTube")) {
-			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {
-				return true;
-			}
+			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return true;}
 			if (this.tube && !this.tube.c.LightTube.broken && !this.tube.c.LightTube.burned) {
 				to_chat`<span class='warning'>There is a ${this.tube_type} already inserted!</span>`(user);
 			} else if (item.c.LightTube.tube_type !== this.tube_type) {

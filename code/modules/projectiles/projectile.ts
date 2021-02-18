@@ -106,9 +106,7 @@ class Projectile extends Component.Networked {
 			// We've already hit the thing, so let's go through it now.
 			return true;
 		}
-		if (target === this.target && (target.density === 1 || has_component(target, "LivingMob"))) {
-			return false;
-		} // We aimed at the thing, so clearly we aimed down on it.
+		if (target === this.target && (target.density === 1 || has_component(target, "LivingMob"))) {return false;} // We aimed at the thing, so clearly we aimed down on it.
 		return prev();
 	}
 
@@ -120,9 +118,7 @@ class Projectile extends Component.Networked {
 		}
 	}
 
-	prehit(/*target: any*/) {
-		return true;
-	}
+	prehit(/*target: any*/) {return true;}
 
 	hit(target: any, def_zone: any, blocked = 0) {
 		if (
@@ -187,22 +183,14 @@ class Projectile extends Component.Networked {
 			}).emit_from(target);
 		}
 
-		if (!(this.prehit(/*target*/))) {
-			return false;
-		}
-		if (!has_component(target, "Tangible")) {
-			return true;
-		}
+		if (!(this.prehit(/*target*/))) {return false;}
+		if (!has_component(target, "Tangible")) {return true;}
 
 		const permutation = target.c.Tangible.bullet_act(this.a, this.def_zone);
-		if (permutation === -1 || this.force_dodge) {
-			return false;
-		} else {
+		if (permutation === -1 || this.force_dodge) {return false;} else {
 			const alt: any = this.select_target(/*target*/);
 			if (alt) {
-				if (!(this.prehit(/*alt*/))) {
-					return false;
-				}
+				if (!(this.prehit(/*alt*/))) {return false;}
 				if (has_component(alt, "Tangible")) {
 					alt.c.Tangible.bullet_act(this.a, this.def_zone);
 				}
@@ -212,9 +200,7 @@ class Projectile extends Component.Networked {
 		return true;
 	}
 
-	select_target(/*target: any*/) {
-		return;
-	}
+	select_target(/*target: any*/) {return;}
 
 	destroy() {
 		if (this.process_timer) {

@@ -15,9 +15,7 @@ class Tangible extends Component {
 	experience_pressure_difference(difference: number, dx: number, dy: number, pressure_resistance_prob_delta = 0) {
 		const PROBABILITY_OFFSET = 25;
 		const PROBABILITY_BASE_PERCENT = 75;
-		if (this.anchored) {
-			return false;
-		}
+		if (this.anchored) {return false;}
 		if (this.last_high_pressure_movement_air_cycle < this.a.server.air_controller.ticknum) {
 			let move_prob = 100;
 			if (this.pressure_resistance > 0) {
@@ -34,9 +32,7 @@ class Tangible extends Component {
 
 	async throw_at({target = null, range = this.throw_range, speed = this.throw_speed}: Record<string, any> = {}) {
 		try {
-			if (!target) {
-				return;
-			}
+			if (!target) {return;}
 			this.stop_throw();
 
 			let dist_traveled = 0;
@@ -49,9 +45,7 @@ class Tangible extends Component {
 				this.a.removeListener("bumped_by", this.stop_throw);
 				still_throwing = false;
 				this.a.pass_flags &= ~pass_flags.LETPASSTHROW;
-				this.stop_throw = function () {
-					return;
-				};
+				this.stop_throw = function () {return;};
 			};
 
 			const throw_impact = (target: Record<string, any>) => {
@@ -117,17 +111,13 @@ class Tangible extends Component {
 		return projectile.c.Projectile.hit(this.a, def_zone, 0);
 	}
 
-	stop_throw() {
-		return;
-	} // This only has actual code once throw_at is called
+	stop_throw() {return;} // This only has actual code once throw_at is called
 
 	drop_location() {
 		return this.a.loc;
 	}
 
-	ex_act() {
-		return;
-	}
+	ex_act() {return;}
 
 	do_attack_animation() {
 		//later

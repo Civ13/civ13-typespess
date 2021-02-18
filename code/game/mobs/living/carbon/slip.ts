@@ -10,12 +10,8 @@ class Slippery extends Component {
 	}
 
 	slip(mob: Record<string, any>) {
-		if (!has_component(mob, "CarbonMob")) {
-			return;
-		}
-		if (!this.enabled) {
-			return;
-		}
+		if (!has_component(mob, "CarbonMob")) {return;}
+		if (!this.enabled) {return;}
 		mob.c.CarbonMob.slip(this.a);
 	}
 }

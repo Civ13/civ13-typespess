@@ -182,12 +182,8 @@ Axe.template = {
 		name: "hatchet",
 	},
 	can_use(prev: any, tool: string) {
-		if (!prev()) {
-			return false;
-		}
-		if (tool !== "Axe") {
-			return true;
-		}
+		if (!prev()) {return false;}
+		if (tool !== "Axe") {return true;}
 	},
 };
 
@@ -254,19 +250,13 @@ class WeldingTool extends Component {
 	}
 
 	can_use(prev: any, tool: string) {
-		if (!prev()) {
-			return false;
-		}
-		if (tool !== "WeldingTool") {
-			return true;
-		}
+		if (!prev()) {return false;}
+		if (tool !== "WeldingTool") {return true;}
 		return this.is_on && this.get_fuel() > 0;
 	}
 
 	use_fuel(amount: number, user: any) {
-		if (!this.a.c.Tool.can_use("WeldingTool", user)) {
-			return false;
-		}
+		if (!this.a.c.Tool.can_use("WeldingTool", user)) {return false;}
 		if (this.get_fuel() >= amount) {
 			this.a.c.ReagentHolder.remove("WeldingFuel", amount);
 			return true;

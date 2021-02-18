@@ -438,9 +438,7 @@ class Atom extends EventEmitter {
 		if (!newZ) {
 			newZ = this[_z];
 		}
-		if (newLoc && !newLoc.is_base_loc && this[_loc] && !this[_loc].is_base_loc && newLoc === this[_loc]) {
-			return;
-		}
+		if (newLoc && !newLoc.is_base_loc && this[_loc] && !this[_loc].is_base_loc && newLoc === this[_loc]) {return;}
 		let old_fine_loc = this.fine_loc;
 		const new_fine_loc = {
 			x: newX,
@@ -467,9 +465,7 @@ class Atom extends EventEmitter {
 		if (new_fine_loc.loc && new_fine_loc.loc.emit) {
 			new_fine_loc.loc.emit("before_enter", movement);
 		}
-		if (newLoc && !newLoc.is_base_loc && this.loc && !this.loc.is_base_loc && newLoc === this.loc) {
-			return;
-		}
+		if (newLoc && !newLoc.is_base_loc && this.loc && !this.loc.is_base_loc && newLoc === this.loc) {return;}
 		old_fine_loc = this.fine_loc;
 		movement.old = old_fine_loc;
 		if (old_fine_loc.loc && old_fine_loc.loc.is_base_loc && new_fine_loc.loc && new_fine_loc.loc.is_base_loc) {
@@ -746,9 +742,7 @@ class Atom extends EventEmitter {
 	}
 	set x(newX) {
 		newX = +newX; // cast to number
-		if (newX === this[_x] && this[_loc] && this[_loc].is_base_loc) {
-			return;
-		}
+		if (newX === this[_x] && this[_loc] && this[_loc].is_base_loc) {return;}
 		if (newX !== newX) {
 			// NaN check, NaN != NaN
 			throw new TypeError(`New X value ${newX} is not a number!`);
@@ -765,9 +759,7 @@ class Atom extends EventEmitter {
 	}
 	set y(newY) {
 		newY = +newY; // cast to number
-		if (newY === this[_y] && this[_loc] && this[_loc].is_base_loc) {
-			return;
-		}
+		if (newY === this[_y] && this[_loc] && this[_loc].is_base_loc) {return;}
 		if (newY !== newY) {
 			// NaN check, NaN != NaN
 			throw new TypeError(`New Y value ${newY} is not a number!`);
@@ -784,9 +776,7 @@ class Atom extends EventEmitter {
 	}
 	set z(newZ) {
 		newZ = +newZ; // ast to number
-		if (newZ === this[_z] && this[_loc] && this[_loc].is_base_loc) {
-			return;
-		}
+		if (newZ === this[_z] && this[_loc] && this[_loc].is_base_loc) {return;}
 		if (newZ !== newZ) {
 			// NaN check, NaN != NaN
 			throw new TypeError(`New Z value ${newZ} is not a number!`);
@@ -802,9 +792,7 @@ class Atom extends EventEmitter {
 		return this[_dim];
 	}
 	set dim(newDim) {
-		if (newDim === this[_dim]) {
-			return;
-		}
+		if (newDim === this[_dim]) {return;}
 		this[_changeloc](this[_x], this[_y], this[_z], newDim.location(this[_x], this[_y], this[_z]));
 	}
 
@@ -813,9 +801,7 @@ class Atom extends EventEmitter {
 		return this[_loc];
 	}
 	set loc(newLoc) {
-		if (newLoc === this[_loc]) {
-			return;
-		}
+		if (newLoc === this[_loc]) {return;}
 		if (
 			newLoc !== null &&
 			(typeof newLoc !== "object" || (!(newLoc.contents instanceof Array) && !newLoc.is_fine_loc))
@@ -908,9 +894,7 @@ class Atom extends EventEmitter {
 	}
 	set bounds_x(newval) {
 		newval = +newval;
-		if (newval === this[_bounds_x]) {
-			return;
-		}
+		if (newval === this[_bounds_x]) {return;}
 		if (newval !== newval) {
 			throw new TypeError(`New boundary ${newval} is not a number`);
 		}
@@ -935,9 +919,7 @@ class Atom extends EventEmitter {
 	}
 	set bounds_y(newval) {
 		newval = +newval;
-		if (newval === this[_bounds_y]) {
-			return;
-		}
+		if (newval === this[_bounds_y]) {return;}
 		if (newval !== newval) {
 			throw new TypeError(`New boundary ${newval} is not a number`);
 		}
@@ -962,9 +944,7 @@ class Atom extends EventEmitter {
 	}
 	set bounds_width(newval) {
 		newval = +newval;
-		if (newval === this[_bounds_width]) {
-			return;
-		}
+		if (newval === this[_bounds_width]) {return;}
 		if (newval !== newval) {
 			throw new TypeError(`New boundary ${newval} is not a number`);
 		}
@@ -989,9 +969,7 @@ class Atom extends EventEmitter {
 	}
 	set bounds_height(newval) {
 		newval = +newval;
-		if (newval === this[_bounds_height]) {
-			return;
-		}
+		if (newval === this[_bounds_height]) {return;}
 		if (newval !== newval) {
 			throw new TypeError(`New boundary ${newval} is not a number`);
 		}
@@ -1031,12 +1009,8 @@ class Atom extends EventEmitter {
 	 * @param {string} reason
 	 */
 	move(offsetx: number, offsety: number, reason: any) {
-		if (!this.loc || !this.loc.is_base_loc) {
-			return false;
-		}
-		if (!this.can_move()) {
-			return false;
-		}
+		if (!this.loc || !this.loc.is_base_loc) {return false;}
+		if (!this.can_move()) {return false;}
 		let remaining_x = offsetx;
 		let remaining_y = offsety;
 		const move_splits = Math.ceil(
@@ -1081,9 +1055,7 @@ class Atom extends EventEmitter {
 			remaining_x -= step_x;
 			remaining_y -= step_y;
 		}
-		if (!clang) {
-			return true;
-		}
+		if (!clang) {return true;}
 		let first_bump = null;
 		let first_bump_layer = -Infinity;
 		for (let i = 1; i * Math.max(Math.abs(step_x), Math.abs(step_y)) >= 1 / this.movement_granularity / 2; i /= 2) {
@@ -1153,9 +1125,7 @@ class Atom extends EventEmitter {
 	 * @param {string} reason
 	 * @abstract
 	 */
-	can_move() {
-		return true;
-	}
+	can_move() {return true;}
 
 	/**
 	 * Whether this atom can cross the given atom. Calls {@link Typespess.Atom.can_be_crossed} crosser by default
@@ -1206,9 +1176,7 @@ class Atom extends EventEmitter {
 	 * @abstract
 	 */
 	can_be_crossed(crosser: {pass_flags: number; density: number}) {
-		if (this.let_pass_flags & crosser.pass_flags) {
-			return true;
-		}
+		if (this.let_pass_flags & crosser.pass_flags) {return true;}
 		return crosser.density < 0 || this.density <= 0;
 	}
 
@@ -1220,9 +1188,7 @@ class Atom extends EventEmitter {
 	 * @param {string} reason
 	 * @abstract
 	 */
-	can_be_uncrossed() {
-		return true;
-	}
+	can_be_uncrossed() {return true;}
 
 	/**
 	 * Whether this atom allows the given atom to move while crossing this one.
@@ -1232,9 +1198,7 @@ class Atom extends EventEmitter {
 	 * @param {string} reason
 	 * @abstract
 	 */
-	can_crosser_move_within() {
-		return true;
-	}
+	can_crosser_move_within() {return true;}
 
 	/**
 	 * Checks if this atom encloses the given location.
@@ -1242,9 +1206,7 @@ class Atom extends EventEmitter {
 	 * @returns {boolean}
 	 */
 	does_enclose_tile(tile: {is_base_loc: any; z: any; x: number; y: number}) {
-		if (!tile.is_base_loc || !this[_loc] || !this[_loc].is_base_loc || this[_z] !== tile.z) {
-			return false;
-		}
+		if (!tile.is_base_loc || !this[_loc] || !this[_loc].is_base_loc || this[_z] !== tile.z) {return false;}
 		return (
 			this[_x] + this[_bounds_x] - 0.001 <= tile.x &&
 			this[_y] + this[_bounds_y] - 0.001 <= tile.y &&
@@ -1306,9 +1268,7 @@ class Atom extends EventEmitter {
 	}
 
 	[_walk_step]() {
-		if (this[_walk_stepping] || !this[_walking]) {
-			return;
-		}
+		if (this[_walk_stepping] || !this[_walking]) {return;}
 		this[_walk_stepping] = true;
 		let offsetx = 0;
 		let offsety = 0;
@@ -1369,9 +1329,7 @@ class Atom extends EventEmitter {
 	}
 	set dir(val) {
 		const old = this[_dir];
-		if (old === val) {
-			return;
-		}
+		if (old === val) {return;}
 		this[_dir] = val;
 		this[mob_symbols._update_var]("dir", 0);
 		this.emit("dir_changed", old, val);
@@ -1557,9 +1515,7 @@ class Atom extends EventEmitter {
 		return this[_opacity];
 	}
 	set opacity(val) {
-		if (this[_opacity] === val) {
-			return;
-		}
+		if (this[_opacity] === val) {return;}
 		this[_opacity] = val;
 		this[mob_symbols._update_var]("opacity", 0);
 		for (const viewer of this[mob_symbols._viewers]) {

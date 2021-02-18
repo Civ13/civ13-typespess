@@ -109,9 +109,7 @@ class JobOutfit extends Outfit {
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	post_equip(target: Record<string, any>, visuals_only = false) {
-		return;
-	}
+	post_equip(target: Record<string, any>, visuals_only = false) {return;}
 }
 
 JobType.Outfit = JobOutfit;

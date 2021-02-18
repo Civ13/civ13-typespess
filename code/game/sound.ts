@@ -128,9 +128,7 @@ class Sound {
 	 * Makes the sound stop playing.
 	 */
 	stop() {
-		if (!this.playing) {
-			return;
-		}
+		if (!this.playing) {return;}
 		this[_playing] = false;
 		for (const client of this[_clients]) {
 			if (!client.next_message.sound) {

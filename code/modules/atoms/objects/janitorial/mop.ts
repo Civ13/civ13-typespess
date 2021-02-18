@@ -48,9 +48,7 @@ class Mop extends Component {
 				delay: this.mop_speed,
 				target: turf,
 			}).then((success: Record<string, any>) => {
-				if (!success) {
-					return;
-				}
+				if (!success) {return;}
 				to_chat`<span class='notice'>You finish mopping.</span>`(user);
 				if (this.a.c.ReagentHolder.volume_of("Water") >= 1) {
 					for (const crosser of [...turf.crosses()]) {

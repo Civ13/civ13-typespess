@@ -92,9 +92,7 @@ ApcPowered.template = {
 };
 
 class MachineTick extends Component {
-	process(/* dt */) {
-		return;
-	}
+	process(/* dt */) {return;}
 }
 
 module.exports.components = {MachineTick, ApcPowered};

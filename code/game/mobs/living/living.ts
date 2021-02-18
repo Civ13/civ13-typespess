@@ -71,13 +71,9 @@ class LivingMob extends Component {
 				return damage_obj.val;
 			},
 			set: (newval: number, {health_event = true, force = false} = {}) => {
-				if (this.status_flags & combat_defines.GODMODE && !force) {
-					return false;
-				}
+				if (this.status_flags & combat_defines.GODMODE && !force) {return false;}
 				newval = Math.max(0, newval);
-				if (newval === damage_obj.val) {
-					return;
-				}
+				if (newval === damage_obj.val) {return;}
 				damage_obj.val = newval;
 				this.emit("damage_changed", name);
 				if (health_event) {
@@ -139,9 +135,7 @@ class LivingMob extends Component {
 	set stat(val) {
 		const oldstat = this.stat;
 		// eslint-disable-next-line no-setter-return
-		if (val === oldstat) {
-			return;
-		}
+		if (val === oldstat) {return;}
 		this[_stat] = val;
 		this.emit("stat_changed", oldstat, val);
 		if (val >= combat_defines.UNCONSCIOUS && oldstat < combat_defines.UNCONSCIOUS) {
@@ -174,9 +168,7 @@ class LivingMob extends Component {
 		this.update_stat();
 	}
 
-	update_stat() {
-		return;
-	}
+	update_stat() {return;}
 
 	//DAMAGE
 	apply_damage(
@@ -186,17 +178,13 @@ class LivingMob extends Component {
 		blocked = this.run_armor_check(def_zone, "melee")
 	) {
 		const hit_percent = (100 - blocked) / 100;
-		if (!damage || hit_percent <= 0) {
-			return false;
-		}
+		if (!damage || hit_percent <= 0) {return false;}
 		this.adjust_damage(damagetype, damage * hit_percent);
 		return true;
 	}
 
 	apply_damages(damages: {[x: string]: number}, def_zone: any, blocked: number) {
-		if (blocked >= 100) {
-			return false;
-		}
+		if (blocked >= 100) {return false;}
 		for (const key in damages) {
 			if (!Object.prototype.hasOwnProperty.call(damages, key)) {
 				continue;
@@ -215,9 +203,7 @@ class LivingMob extends Component {
 		}
 	}
 
-	life() {
-		return;
-	}
+	life() {return;}
 
 	movement_delay() {
 		if (this.a.c.MobInteract.move_mode === mob_defines.MOVE_INTENT_WALK) {
@@ -252,9 +238,7 @@ class LivingMob extends Component {
 			return;
 		}
 
-		if (this.incapacitated()) {
-			return;
-		}
+		if (this.incapacitated()) {return;}
 
 		this.a.walk_delay = this.movement_delay();
 
@@ -284,9 +268,7 @@ class LivingMob extends Component {
 	}
 
 	incapacitated() {
-		if (this.nomove_counter) {
-			return true;
-		}
+		if (this.nomove_counter) {return true;}
 		return false;
 	}
 
@@ -308,9 +290,7 @@ class LivingMob extends Component {
 	}
 
 	can_be_crossed(prev: () => any, mover: {density: number}, reason: string) {
-		if ((mover.density < 1 || this.a.density < 1) && reason !== "throw" && reason !== "projectile") {
-			return true;
-		}
+		if ((mover.density < 1 || this.a.density < 1) && reason !== "throw" && reason !== "projectile") {return true;}
 		return prev();
 	}
 
@@ -348,9 +328,7 @@ class LivingMob extends Component {
 			volume = Math.min(Math.max((item.c.Tangible.throw_force + item.c.Item.size) * 0.05, 0.3), 1);
 		} else if (item.c.Item.size) {
 			volume = Math.min(Math.max(item.c.Item.size * 0.08, 0.2), 1);
-		} else {
-			return;
-		}
+		} else {return;}
 		if (item.c.Tangible.throw_force > 0) {
 			let sound = item.c.Tangible.throwhitsound || item.c.Item.hitsound || "sound/weapons/genhit.ogg";
 			if (!item.c.Tangible.throw_force) {
@@ -363,9 +341,7 @@ class LivingMob extends Component {
 		this.apply_damage(item.c.Tangible.throw_force, item.c.Item.damage_type, zone);
 	}
 
-	add_splatter_floor(/*{turf, small_drip = false} = {}*/) {
-		return;
-	}
+	add_splatter_floor(/*{turf, small_drip = false} = {}*/) {return;}
 
 	attacked_by(item: Record<string, any>, user: Record<string, any>) {
 		const zone = random_zone(user.c.MobInteract.zone_sel);
@@ -389,9 +365,7 @@ class LivingMob extends Component {
 		let message_verb = "attacked";
 		if (item.c.Item.attack_verb && item.c.Item.attack_verb.length) {
 			message_verb = format_html`${_.sample(item.c.Item.attack_verb)}`;
-		} else if (!item.c.Item.force) {
-			return;
-		}
+		} else if (!item.c.Item.force) {return;}
 		let message_hit_area = "";
 		if (hit_area) {
 			message_hit_area = format_html` in the ${hit_area}`;
@@ -423,9 +397,7 @@ class LivingMob extends Component {
 			new status_effects[name]().apply_to(this.a, {});
 			effect = this.effects[name];
 		}
-		if (!effect) {
-			return;
-		}
+		if (!effect) {return;}
 		effect.adjust(amount);
 	}
 
@@ -464,13 +436,9 @@ class LivingMob extends Component {
 	}
 
 	bumped(atom: Record<string, any>, offsetx: any, offsety: any) {
-		if (this.buckled || this.now_pushing) {
-			return;
-		}
+		if (this.buckled || this.now_pushing) {return;}
 		if (has_component(atom, "Tangible")) {
-			if (has_component(atom, "LivingMob") && this.mob_collide(atom)) {
-				return;
-			}
+			if (has_component(atom, "LivingMob") && this.mob_collide(atom)) {return;}
 			if (!atom.c.Tangible.anchored) {
 				this.set_anchored(atom, offsetx, offsety);
 			}
@@ -484,9 +452,7 @@ class LivingMob extends Component {
 		this.now_pushing = false;
 	}
 	mob_collide(atom: Record<string, any>) {
-		if (this.now_pushing) {
-			return true;
-		}
+		if (this.now_pushing) {return true;}
 		if (!atom.c.LivingMob.buckled) {
 			let mob_swap = false;
 			const this_intent = has_component(this.a, "MobInteract") ? this.a.c.MobInteract.act_intent : "harm";
@@ -499,9 +465,7 @@ class LivingMob extends Component {
 				mob_swap = true;
 			}
 			if (mob_swap) {
-				if (!this.a.c.Tangible.adjacent(atom)) {
-					return;
-				}
+				if (!this.a.c.Tangible.adjacent(atom)) {return;}
 				this.now_pushing = true;
 				const oldloc = this.a.fine_loc;
 				const oldloc_other = atom.fine_loc;
@@ -526,9 +490,7 @@ class LivingMob extends Component {
 				atom.pass_flags &= ~pass_flags.PASSMOB;
 				this.a.pass_flags &= ~pass_flags.PASSMOB;
 
-				if (!move_failed) {
-					return true;
-				}
+				if (!move_failed) {return true;}
 			}
 		}
 	}

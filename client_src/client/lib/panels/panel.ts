@@ -66,12 +66,8 @@ class Panel extends EventEmitter {
 	}
 
 	_start_drag(e: Record<string, any>) {
-		if (e.defaultPrevented) {
-			return;
-		}
-		if (e.target !== this.header_obj) {
-			return;
-		}
+		if (e.defaultPrevented) {return;}
+		if (e.target !== this.header_obj) {return;}
 		const pad = (this.container_obj.offsetWidth - this.panel_obj.offsetWidth) / 2;
 		e.preventDefault();
 		this.panel_obj.focus();
@@ -140,9 +136,7 @@ class Panel extends EventEmitter {
 		}
 
 		const resize_meta = this._resize_meta(e);
-		if (!resize_meta.can_resize) {
-			return;
-		}
+		if (!resize_meta.can_resize) {return;}
 		const pad = (this.container_obj.offsetWidth - this.panel_obj.offsetWidth) / 2;
 		e.preventDefault();
 		this.panel_obj.focus();

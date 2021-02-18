@@ -39,9 +39,7 @@ class Puller extends Component {
 		);
 	}
 
-	before_move() {
-		return;
-	}
+	before_move() {return;}
 
 	moved(movement: Record<string, any>) {
 		if (
@@ -54,9 +52,7 @@ class Puller extends Component {
 			!movement.offset ||
 			movement.offset.z !== 0 ||
 			typeof this[_pulling] === "undefined"
-		) {
-			return;
-		}
+		) {return;}
 		const oldx = this.a.x - movement.offset.x;
 		const oldy = this.a.y - movement.offset.y;
 		if (Math.abs(this[_pulling].x - this.a.x) > 2.5001 || Math.abs(this[_pulling].y - this.a.y) > 2.5001) {
@@ -69,16 +65,12 @@ class Puller extends Component {
 			Math.abs(this[_pulling].y - oldy) < 0.001 &&
 			Math.abs(this[_pulling].x - this.a.x) <= 1.5001 &&
 			Math.abs(this[_pulling].y - this.a.y) <= 1.5001
-		) {
-			return;
-		}
+		) {return;}
 		// No pulls if moving toward object
 		if (
 			Math.abs(this[_pulling].x - this.a.x) + Math.abs(this[_pulling].y - this.a.y) <
 			Math.abs(this[_pulling].x - oldx) + Math.abs(this[_pulling].y - oldy)
-		) {
-			return;
-		}
+		) {return;}
 		this.pulling.glide_size = this.a.glide_size;
 		this.pulling.move(oldx - this.pulling.x, oldy - this.pulling.y, "pulled");
 	}
@@ -89,14 +81,10 @@ class Puller extends Component {
 
 	set pulling(val) {
 		if (typeof val !== "undefined" && !this.can_pull(val)) {
-			if (val !== this[_pulling]) {
-				return;
-			}
+			if (val !== this[_pulling]) {return;}
 			val = null;
 		}
-		if (val === this[_pulling]) {
-			return;
-		}
+		if (val === this[_pulling]) {return;}
 		if (this[_pulling]) {
 			this[_pulling].c.Tangible.puller = null;
 		}

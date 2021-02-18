@@ -27,9 +27,7 @@ class MobHud extends Component {
 		if (typeof severity === "undefined") {
 			severity = "";
 		}
-		if (!category) {
-			return false;
-		}
+		if (!category) {return false;}
 		if (typeof template === "string") {
 			template = this.a.server.templates[template];
 		}
@@ -48,9 +46,7 @@ class MobHud extends Component {
 		};
 		if (this.alerts[category]) {
 			thealert = this.do_alerts(thealert, category, new_master, template, severity);
-			if (!thealert) {
-				return false;
-			}
+			if (!thealert) {return false;}
 		} else {
 			thealert = new Atom(this.a.server, template);
 			thealert.c.Alert.override_alerts = override;
@@ -116,21 +112,15 @@ class MobHud extends Component {
 
 	clear_alert(category: string | number, clear_override = false) {
 		const alert = this.alerts[category];
-		if (!alert) {
-			return false;
-		}
-		if (alert.c.Alert.override_alerts && !clear_override) {
-			return false;
-		}
+		if (!alert) {return false;}
+		if (alert.c.Alert.override_alerts && !clear_override) {return false;}
 
 		delete this.alerts[category];
 		this.reorganize_alerts();
 		//this.c.Eye.screen[`alert_${category}`] = void 0;
 		// TODO: destroy the alert;
 	}
-	_onclick() {
-		return false;
-	}
+	_onclick() {return false;}
 	reorganize_alerts() {
 		let alert_idx = 0;
 		for (const alertname in this.alerts) {

@@ -68,9 +68,7 @@ class Hearer extends Component {
 	 * @param {Typespess.Atom} [origin]
 	 * @abstract
 	 */
-	can_hear() {
-		return true;
-	}
+	can_hear() {return true;}
 
 	/**
 	 * @param {Typespess.Atom} origin
@@ -85,9 +83,7 @@ class Hearer extends Component {
 	 */
 	in_view(atom: Record<string, any>) {
 		for (const tile of atom.partial_locs()) {
-			if (tile.hearers.includes(this)) {
-				return true;
-			}
+			if (tile.hearers.includes(this)) {return true;}
 		}
 		return false;
 	}

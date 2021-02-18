@@ -21,14 +21,10 @@ class Destructible extends Component {
 		if (sound_effect) {
 			this.play_attack_sound(damage_amount, damage_type);
 		}
-		if (this.indestructible || this.obj_integrity <= 0) {
-			return;
-		}
+		if (this.indestructible || this.obj_integrity <= 0) {return;}
 
 		damage_amount = this.run_obj_armor(damage_amount, damage_type, damage_flag);
-		if (damage_amount < 0.1) {
-			return;
-		}
+		if (damage_amount < 0.1) {return;}
 		const old_integ = this.obj_integrity;
 		this.obj_integrity = Math.max(old_integ - damage_amount, 0);
 		if (this.obj_integrity <= 0) {
@@ -81,9 +77,7 @@ class Destructible extends Component {
 		this.a.destroy();
 	}
 
-	obj_break() {
-		return;
-	}
+	obj_break() {return;}
 	obj_destruction() {
 		this.deconstruct(/*false*/);
 	}
@@ -103,9 +97,7 @@ class Destructible extends Component {
 	}
 
 	throw_impacted_by(obj: {c: {Tangible: {throw_force: any}}}) {
-		if (!has_component(obj, "Tangible")) {
-			return;
-		}
+		if (!has_component(obj, "Tangible")) {return;}
 		this.take_damage(obj.c.Tangible.throw_force, "brute", "melee", true);
 	}
 

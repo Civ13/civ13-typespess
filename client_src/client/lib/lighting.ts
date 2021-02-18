@@ -7,9 +7,7 @@ class LightingObject extends Component {
 		this.atom.draw = this.draw.bind(this);
 		this.atom.get_bounds = this.get_bounds.bind(this);
 		this.atom.on_render_tick = this.on_render_tick.bind(this);
-		this.atom.is_mouse_over = () => {
-			return false;
-		};
+		this.atom.is_mouse_over = () => {return false;};
 		this.atom.get_plane_id = () => {
 			return "lighting";
 		};
@@ -61,9 +59,7 @@ class LightingObject extends Component {
 			this.atom.screen_loc_x != null ||
 			this.radius !== +this.radius ||
 			!this.enabled
-		) {
-			return;
-		}
+		) {return;}
 
 		if (this.dirty) {
 			this.last_resolution = this.a.client.soft_shadow_resolution;

@@ -278,9 +278,7 @@ class ReagentHolder extends Component {
 	}
 
 	should_metabolize_reagent(key: string /*, reagent*/) {
-		if (key === "Blood" && this.a.c.CarbonMob.uses_blood) {
-			return false;
-		}
+		if (key === "Blood" && this.a.c.CarbonMob.uses_blood) {return false;}
 		return true;
 	}
 
@@ -333,9 +331,7 @@ class ReagentHolder extends Component {
 	}
 
 	can_consume(eater: Record<string, any> /*, user*/) {
-		if (!has_component(eater, "CarbonMob")) {
-			return false;
-		}
+		if (!has_component(eater, "CarbonMob")) {return false;}
 		// TODO mouth cover check
 		return true;
 	}

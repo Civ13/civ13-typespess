@@ -155,9 +155,7 @@ explosion.dyn_explosion = function dyn_explosion({
 	silent = false,
 	smoke = true,
 } = {}) {
-	if (!power) {
-		return;
-	}
+	if (!power) {return;}
 	const range = Math.round(Math.sqrt(2 * power));
 	explosion({
 		epicenter,

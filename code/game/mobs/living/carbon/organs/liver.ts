@@ -15,12 +15,8 @@ class OrganLiver extends Component {
 		if (this.damage > this.max_health) {
 			this.damage = this.max_health;
 		}
-		if (!has_component(this.a.c.Organ.mob, "CarbonMob")) {
-			return;
-		}
-		if (this.failing) {
-			return;
-		}
+		if (!has_component(this.a.c.Organ.mob, "CarbonMob")) {return;}
+		if (this.failing) {return;}
 
 		const owner = this.a.c.Organ.mob;
 		if (this.filter_toxins) {

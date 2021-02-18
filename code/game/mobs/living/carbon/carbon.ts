@@ -88,9 +88,7 @@ class CarbonMob extends Component.Networked {
 	}
 
 	update_stat() {
-		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {
-			return;
-		}
+		if (this.a.c.LivingMob.status_flags & combat_defines.GODMODE) {return;}
 		const health = this.a.c.LivingMob.health;
 		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
 			if (health <= combat_defines.HEALTH_THRESHOLD_DEAD) {
@@ -115,9 +113,7 @@ class CarbonMob extends Component.Networked {
 
 	update_health_hud() {
 		const health_hud = this.a.c.Eye.screen.health;
-		if (!health_hud) {
-			return;
-		}
+		if (!health_hud) {return;}
 		const health = this.a.c.LivingMob.health - this.a.c.LivingMob.get_damage("stamina");
 		const max_health = this.a.c.LivingMob.max_health;
 		let variant;
@@ -231,9 +227,7 @@ class CarbonMob extends Component.Networked {
 	}
 	set lying_counter(val) {
 		const old = this[_lying_counter];
-		if (old === val) {
-			return;
-		}
+		if (old === val) {return;}
 		this[_lying_counter] = val;
 		this.update_lying(/*old, val*/);
 	}
@@ -285,9 +279,7 @@ class CarbonMob extends Component.Networked {
 		// blood in there as another reagent type. Makes more sense, and your syringes will actually
 		// pull out the other reagents in your blood. And you'll actually be able to get drunk
 		// by drinking a drunk person's blood. (please don't try this at home)
-		if (!this.uses_blood) {
-			return;
-		} // fuck off we have no blood here
+		if (!this.uses_blood) {return;} // fuck off we have no blood here
 		const blood_volume = this.a.c.ReagentHolder.volume_of("Blood");
 		if (blood_volume < mob_defines.BLOOD_VOLUME_SAFE) {
 			const word = _.sample(["dizzy", "woozy", "faint"]);
@@ -346,9 +338,7 @@ class CarbonMob extends Component.Networked {
 	}
 
 	handle_liver() {
-		if (!this.organs || !this.organs.liver) {
-			return;
-		}
+		if (!this.organs || !this.organs.liver) {return;}
 		const liver = this.organs.liver;
 		if (!liver || liver.c.OrganLiver.failing) {
 			// liver failure
@@ -369,12 +359,8 @@ class CarbonMob extends Component.Networked {
 	}
 
 	add_splatter_floor({ref = this.a, small_drip = false} = {}) {
-		if (this.get_blood_id() !== "blood") {
-			return;
-		}
-		if (!ref || !ref.base_mover || !ref.base_mover.loc) {
-			return;
-		}
+		if (this.get_blood_id() !== "blood") {return;}
+		if (!ref || !ref.base_mover || !ref.base_mover.loc) {return;}
 
 		let splatter;
 		if (small_drip) {

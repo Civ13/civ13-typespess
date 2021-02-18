@@ -10,9 +10,7 @@ class Climbable extends Component {
 	}
 
 	can_be_crossed(prev: any, atom: Record<string, any>, dx: number, dy: number, reason: string) {
-		if (reason === "climb") {
-			return true;
-		}
+		if (reason === "climb") {return true;}
 		return prev();
 	}
 
@@ -39,9 +37,7 @@ class Climbable extends Component {
 				if (idx !== -1) {
 					this.climbers.splice(idx, 1);
 				}
-				if (!success) {
-					return;
-				}
+				if (!success) {return;}
 				visible_message`<span class='warning'>The ${user} climbs onto the ${this.a}.</span>`
 					.self`<span class='notice'>You climb onto the ${this.a}...</span>`.emit_from(user);
 				const glide_length = Math.max(Math.abs(this.a.x - user.x), Math.abs(this.a.y - user.y));

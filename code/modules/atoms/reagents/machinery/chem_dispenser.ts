@@ -21,9 +21,7 @@ class ChemDispenser extends Component {
 				return true;
 			}
 
-			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {
-				return true;
-			}
+			if (item.c.Item.slot && !item.c.Item.slot.can_unequip()) {return true;}
 			item.loc = this.a;
 
 			this.beaker = item;

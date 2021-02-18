@@ -33,9 +33,7 @@ class LargeContainer extends Component {
 			}
 		});
 	}
-	populate_contents() {
-		return;
-	}
+	populate_contents() {return;}
 
 	examine(prev: any, user: any) {
 		prev();
@@ -126,20 +124,14 @@ class LargeContainer extends Component {
 				return;
 			}
 			if (atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY) {
-				if (this.horizontal && atom.density > 0) {
-					return;
-				}
-				if (atom.c.LivingMob.mob_size > this.max_mob_size) {
-					return;
-				}
+				if (this.horizontal && atom.density > 0) {return;}
+				if (atom.c.LivingMob.mob_size > this.max_mob_size) {return;}
 				let mobs_stored = 0;
 				for (const item of this.a.contents) {
 					if (!has_component(item, "LivingMob")) {
 						continue;
 					}
-					if (++mobs_stored >= this.mob_storage_capacity) {
-						return;
-					}
+					if (++mobs_stored >= this.mob_storage_capacity) {return;}
 				}
 			}
 		} else if (has_component(atom, "LargeContainer")) {
