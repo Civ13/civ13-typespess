@@ -18,7 +18,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13-typespess)
 [![License](https://img.shields.io/github/license/civ13/civ13-typespess?color=blue)](https://github.com/Civ13/civ13-typespess/blob/master/LICENSE)
 
-Welcome! This is an attempt at remaking Civ13, a BYOND game, using [TypeScript](https://www.typescriptlang.org/) and [Node.js](https://nodejs.org/). This is loosely forked from the [Bluespess](https://github.com/Bluespess) engine, a JavaScript remake of the tgstation codebase of SS13, also a BYOND game.
+Welcome! This is an attempt at remaking Civ13, a [BYOND](http://www.byond.com/) game, using [TypeScript](https://www.typescriptlang.org/) and [Node.js](https://nodejs.org/). This is loosely forked from the [Bluespess](https://github.com/Bluespess) engine, a JavaScript remake of the [/tg/station codebase](https://github.com/tgstation/tgstation) of [SS13](http://www.byond.com/games/Exadv1/SpaceStation13), also a BYOND game.
 
 Check the original Civ13 here: https://github.com/civ13/civ13.
 
@@ -37,8 +37,8 @@ Whenever you update to the latest code, run `setup.bat` again afterwards for the
 ### Linux (Ubuntu)
 
 1. If you don't have it yet, install git using `apt install git`.
-1. Clone the repo using `git clone https://github.com/civ13/civ13-typespess.git`.
-1. Run `setup.sh` in the civ13-typespess/scripts folder.
+2. Clone the repo using `git clone https://github.com/civ13/civ13-typespess.git`.
+3. Run `setup.sh` in the civ13-typespess/scripts folder.
 
 Whenever you update to the latest code, run `setup.sh` again afterwards for the simplest and easiest experience.
 
