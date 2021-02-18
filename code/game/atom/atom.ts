@@ -832,14 +832,8 @@ class Atom extends EventEmitter {
 				this.loc = newLoc.loc;
 				return;
 			}
-			if (typeof newLoc.loc === "undefined") {
-				this.loc = null;
-				return;
-			}
-			if (newLoc.loc !== null && !newLoc.loc.is_base_loc) {
-				this.loc = newLoc.loc;
-				return;
-			}
+			if (typeof newLoc.loc === "undefined") {this.loc = null; return;}
+			if (newLoc.loc !== null && !newLoc.loc.is_base_loc) {this.loc = newLoc.loc; return;}
 			if (
 				(Object.prototype.hasOwnProperty.call(newLoc, "z") && newLoc.z !== +newLoc.z) ||
 				newLoc.x !== +newLoc.x ||

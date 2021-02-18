@@ -36,9 +36,7 @@ class Panel extends EventEmitter {
 		 * @see {@link Typespess.Panel#close}
 		 */
 		this.is_open = false;
-		/** @type {Typespess.Atom|null} */
 		this.bound_atom = null;
-		/** @type {Typespess.Atom|null} */
 		this.bound_mob = null;
 		panel_props.content_class = this.constructor.name;
 		this.client.panels.set(this.id, this);

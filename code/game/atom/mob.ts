@@ -502,13 +502,9 @@ class Mob extends Component {
 		return true;
 	}
 
-	basic_panel_read_checks(/*atom:any, */ panel: any /*, key:any*/) {
-		if (
-			typeof panel === "object" &&
-			(panel.client !== this.client || (panel.bound_mob && panel.bound_mob !== this.a))
-		) {
-			return false;
-		}
+	basic_panel_read_checks(panel: any) {
+		if (typeof panel === "object" && (panel.client !== this.client || (panel.bound_mob && panel.bound_mob !== this.a)))
+			{return false;}
 		return true;
 	}
 
@@ -539,7 +535,7 @@ class Mob extends Component {
 	 * @param {string} [key=""]
 	 */
 	bind_panel(atom: any, panel: any, key = "") {
-		if (!this.basic_panel_read_checks(atom /*, panel, key*/) || !this.can_read_panel(atom, panel, key)) {
+		if (!this.basic_panel_read_checks(panel) || !this.can_read_panel(atom, panel, key)) {
 			throw new Error("Check that your panel can be opened *before* creating and trying to bind it you tit");
 		}
 		if (this.get_panel(atom, panel, key)) {
@@ -550,7 +546,7 @@ class Mob extends Component {
 		const check = () => {
 			if (
 				panel.is_open &&
-				this.basic_panel_read_checks(atom /*, panel, key*/) &&
+				this.basic_panel_read_checks(panel) &&
 				this.can_read_panel(atom, panel, key)
 			) {
 				panel.visibility_indicator = this.can_interact_with_panel(/*atom,panel,key*/)
