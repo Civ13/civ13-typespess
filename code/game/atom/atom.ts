@@ -85,7 +85,6 @@ class Atom extends EventEmitter {
 				`Invalid arguments while instantiating template: ${otemp}, ${template}`
 			);}
 		super();
-		this.on("ctrl_clicked", this.ctrl_clicked.bind(this));
 
 		/**
 	* The template this atom was constructed with. Useful to get the initial values of variables.
@@ -586,9 +585,6 @@ class Atom extends EventEmitter {
 		this[mob_symbols._update_var]("x", 0); // Send the changes to the network.
 		this[mob_symbols._update_var]("y", 0);
 	}
-	ctrl_clicked(e: Record<string,any>) {
-		if (e) {console.log("ATOM DEBUG:");console.log(this);console.log("-----------------------");}
-	}
 	do_base_loc(gained_viewers: any, gained_crossers: any, lost_crossers: any, common_crossers: any) {
 		for (
 			let x = Math.floor(this[_x] + this[_bounds_x] + 0.0001);
@@ -809,15 +805,13 @@ class Atom extends EventEmitter {
 	}
 	set loc(newLoc) {
 		if (newLoc === this[_loc]) {return;}
-		if (
-			newLoc !== null && (typeof newLoc !== "object" || (!(newLoc.contents instanceof Array) && !newLoc.is_fine_loc))
-		)
+		if (newLoc !== null && (typeof newLoc !== "object" || (!(newLoc.contents instanceof Array) && !newLoc.is_fine_loc)))
 			{throw new TypeError(
 				`New loc '${newLoc}' is not a valid location (null, object with contents list, or fine loc)`
 			);}
 		if (newLoc !== null && newLoc.is_fine_loc) {
 			if (!Object.prototype.hasOwnProperty.call(newLoc,"x") || !Object.prototype.hasOwnProperty.call(newLoc,"y")) {
-				this.loc = newLoc.loc || null;
+				this.loc = newLoc.loc;
 				return;
 			}
 			if (typeof newLoc.loc === "undefined") {
@@ -830,21 +824,14 @@ class Atom extends EventEmitter {
 			}
 			if (
 				(Object.prototype.hasOwnProperty.call(newLoc,"z") && newLoc.z !== +newLoc.z) ||
-		newLoc.x !== +newLoc.x ||
-		newLoc.y !== +newLoc.y ||
-		!newLoc.dim
+		newLoc.x !== +newLoc.x || newLoc.y !== +newLoc.y || !newLoc.dim
 			)
 				{throw new TypeError("new fine loc is invalid");}
 			const newz = newLoc.z !== null ? newLoc.z : this.z;
-			this[_changeloc](
-				newLoc.x,
-				newLoc.y,
-				newz,
-				newLoc.dim.location(newLoc.x, newLoc.y, newz)
-			);
+			this[_changeloc](newLoc.x, newLoc.y, newz, newLoc.dim.location(newLoc.x, newLoc.y, newz));
 			return;
 		}
-		if (typeof newLoc !== "undefined" && newLoc.is_base_loc) {
+		if (newLoc !== null && newLoc.is_base_loc) {
 			this[_changeloc](newLoc.x, newLoc.y, newLoc.z, newLoc);
 		} else {
 			this[_changeloc](0, 0, 0, newLoc);
