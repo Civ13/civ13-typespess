@@ -75,11 +75,8 @@ class StripPanel extends Panel {
 					new_item_names_msg[otherslotname] = null;
 					new_item_appearances_msg[otherslotname] = null;
 				} else {
-					new_item_names_msg[otherslotname] = otherslot.item
-						? otherslot.props.visible
-							? otherslot.item.name
-							: "Full"
-						: null;
+					const part1 = otherslot.props.visible ? otherslot.item.name : "Full";
+					new_item_names_msg[otherslotname] = otherslot.item ? part1 : null;
 					new_item_appearances_msg[otherslotname] =
 						otherslot.item && otherslot.props.visible
 							? otherslot.item.network_encode(this.bound_mob)
@@ -88,7 +85,8 @@ class StripPanel extends Panel {
 			}
 		}
 		if (!new_covered_msg[slotid] && !this.cached_covered[slotid]) {
-			new_item_names_msg[slotid] = to ? (slot.props.visible ? to.name : "Full") : null;
+			const props_visible = slot.props.visible ? to.name : "Full";
+			new_item_names_msg[slotid] = to ? props_visible : null;
 			new_item_appearances_msg[slotid] = to && slot.props.visible ? to.network_encode(this.bound_mob) : null;
 		}
 		this.send_message({

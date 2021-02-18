@@ -33,7 +33,8 @@ class AdminPanel {
 		for (const [key, tval] of Object.entries(this.tools).sort((ta, tb) => {
 			const a: Record<string, any> = ta;
 			const b: Record<string, any> = tb;
-			return a[1].name > b[1].name ? 1 : a[1].name === b[1].name ? 0 : -1;
+			const part1 = a[1].name === b[1].name ? 0 : -1;
+			return a[1].name > b[1].name ? 1 : part1;
 		})) {
 			const val: Record<string, any> = tval;
 			const template_elem = document.createElement("div");

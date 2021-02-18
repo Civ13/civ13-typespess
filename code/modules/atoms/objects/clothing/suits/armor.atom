@@ -35,6 +35,6 @@ armor_vest:
 			Examine:
 				desc: "A slim Type I armored vest that provides decent protection against most types of damage.",
 		name: "armor vest",
-		icon_state: "armoralt",
+		icon_state: "heavypolice",
 	
 	tree_paths: ["items/clothing/suit/armor/vest"],

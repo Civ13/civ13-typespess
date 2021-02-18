@@ -364,7 +364,8 @@ class Client extends EventEmitter {
 			entry.update.components[type].add(varname);
 		} else {
 			const subentry = entry.update;
-			const setname = type === 1 ? "appearance_items" : type === 2 ? "overlays" : "items";
+			const part1 = type === 2 ? "overlays" : "items";
+			const setname = type === 1 ? "appearance_items" : part1;
 			if (!subentry[setname]) {
 				subentry[setname] = new Set();
 			}
