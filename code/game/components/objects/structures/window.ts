@@ -171,68 +171,24 @@ class ReinforcedWindow extends Component {
 
 	attack_by(prev: any, item: any, user: any) {
 		if (has_component(item, "Tool")) {
-			if (this.a.c.Window.state === "screwed_to_floor") {
-				if (item.c.Tool.can_use("Crowbar", user)) {
-					item.c.Tool.used("Crowbar");
-					to_chat`<span class='notice'>You begin to lever the window into the frame...</span>`(user);
-					user.c.MobInventory.do_after({
-						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
-						target: this.a,
-					}).then((success: any) => {
-						if (!success || this.a.c.Window.state !== "screwed_to_floor") {
-							return;
-						}
-						this.a.c.Window.state = "in_frame";
-						to_chat`<span class='notice'>You pry the window into the frame.</span>`(user);
-					});
-					return true;
-				}
-			} else if (this.a.c.Window.state === "in_frame") {
-				if (item.c.Tool.can_use("Crowbar", user)) {
-					item.c.Tool.used("Crowbar");
-					to_chat`<span class='notice'>You begin to lever the window out of the frame...</span>`(user);
-					user.c.MobInventory.do_after({
-						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
-						target: this.a,
-					}).then((success: any) => {
-						if (!success || this.a.c.Window.state !== "in_frame") {
-							return;
-						}
-						this.a.c.Window.state = "screwed_to_floor";
-						to_chat`<span class='notice'>You pry the window out of the frame.</span>`(user);
-					});
-					return true;
-				} else if (item.c.Tool.can_use("Screwdriver", user)) {
-					item.c.Tool.used("Screwdriver");
-					to_chat`<span class='notice'>You begin to screw the window to the frame...</span>`(user);
-					user.c.MobInventory.do_after({
-						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
-						target: this.a,
-					}).then((success: any) => {
-						if (!success || this.a.c.Window.state !== "in_frame") {
-							return;
-						}
-						this.a.c.Window.state = "screwed_to_frame";
-						to_chat`<span class='notice'>You fasten the window to the frame.</span>`(user);
-					});
-					return true;
-				}
-			} else if (this.a.c.Window.state === "screwed_to_frame") {
-				if (item.c.Tool.can_use("Screwdriver", user)) {
-					item.c.Tool.used("Screwdriver");
-					to_chat`<span class='notice'>You begin to unscrew the window from the frame...</span>`(user);
-					user.c.MobInventory.do_after({
-						delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
-						target: this.a,
-					}).then((success: any) => {
-						if (!success || this.a.c.Window.state !== "screwed_to_frame") {
-							return;
-						}
-						this.a.c.Window.state = "in_frame";
-						to_chat`<span class='notice'>You unfasten the window from the frame.</span>`(user);
-					});
-					return true;
-				}
+			if (item.c.Tool.can_use("Crowbar", user)) {
+				item.c.Tool.used("Crowbar");
+				let verb = "into";
+				const prev_state = this.a.c.Window.state;
+				let new_state = "in_frame";
+				if (this.a.c.Window.state === "in_floor") {verb = "out of"; new_state = "screwed_to_floor";}
+				to_chat`<span class='notice'>You begin to lever the window ${verb} the frame...</span>`(user);
+				user.c.MobInventory.do_after({
+					delay: this.a.c.Window.decon_speed * item.c.Tool.toolspeed,
+					target: this.a,
+				}).then((success: any) => {
+					if ((prev_state === "screwed_to_floor" && (!success || this.a.c.Window.state !== "screwed_to_floor"))  ||
+					(prev_state === "in_frame" && (!success || this.a.c.Window.state !== "in_frame")))
+					{return false;}
+					this.a.c.Window.state = new_state;
+					to_chat`<span class='notice'>You pry the window ${verb} the frame.</span>`(user);
+				});
+				return true;
 			}
 		}
 		return prev();
