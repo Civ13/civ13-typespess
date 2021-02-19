@@ -104,9 +104,7 @@ class AmmoBox extends Component {
 					}
 					num_loaded++;
 				}
-				if (!did_load || !this.multiload) {
-					break;
-				}
+				if (!did_load || !this.multiload) {break;}
 			}
 			item.c.AmmoBox.update_icon();
 		}

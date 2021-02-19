@@ -98,9 +98,7 @@ async function explosion({
 				await stoplag();
 				// first check if it's too far away
 				let dist = accumulated_explosion_block + Math.sqrt(dx * dx + dy * dy) - 0.5;
-				if (dist > max_range) {
-					break;
-				} // we don't need to cast any more rays.
+				if (dist > max_range) {break;} // we don't need to cast any more rays.
 				let this_explosion_block = 0;
 				for (const obj of tile.partial_contents) {
 					if (has_component(obj, "Tangible")) {
@@ -110,9 +108,7 @@ async function explosion({
 				accumulated_explosion_block += this_explosion_block;
 				dist += this_explosion_block;
 				explosion_block_cache.set(tile, this_explosion_block);
-				if (dist > max_range) {
-					break;
-				}
+				if (dist > max_range) {break;}
 				let explode_power = combat_defines.EXPLODE_NONE;
 				if (dist < devastation_range) {
 					explode_power = combat_defines.EXPLODE_DEVASTATE;

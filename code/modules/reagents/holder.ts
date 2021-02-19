@@ -148,9 +148,7 @@ class ReagentHolder extends Component {
 		const reagents_list = [...this.reagents.values()];
 
 		while (total_transferred < amount) {
-			if (!reagents_list.length) {
-				break;
-			}
+			if (!reagents_list.length) {break;}
 			const rand_idx = Math.floor(Math.random() * reagents_list.length);
 			const reagent = reagents_list[rand_idx];
 			total_transferred += reagent.remove(amount - total_transferred);

@@ -90,9 +90,7 @@ class LargeContainer extends Component {
 
 	take_contents() {
 		for (const atom of [...this.a.crosses()]) {
-			if (this.insert(atom) === -1) {
-				break;
-			}
+			if (this.insert(atom) === -1) {break;}
 		}
 	}
 

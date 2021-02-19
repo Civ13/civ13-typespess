@@ -1030,25 +1030,19 @@ class Atom extends EventEmitter {
 					clang = true;
 				}
 			}
-			if (clang) {
-				break;
-			}
+			if (clang) {break;}
 			for (const lost of result.lost_crossers) {
 				if (!this.can_uncross(lost, remaining_x, remaining_y, reason)) {
 					clang = true;
 				}
 			}
-			if (clang) {
-				break;
-			}
+			if (clang) {break;}
 			for (const common of result.common_crossers) {
 				if (!this.can_move_within(common, remaining_x, remaining_y, reason)) {
 					clang = true;
 				}
 			}
-			if (clang) {
-				break;
-			}
+			if (clang) {break;}
 			cx += step_x;
 			cy += step_y;
 			this[_changeloc](newx, newy, this[_z], this.dim.location(newx, newy, this[_z]));
@@ -1062,9 +1056,7 @@ class Atom extends EventEmitter {
 			first_bump_layer = -Infinity;
 			const newx = Math.round((cx + step_x * i) * this.movement_granularity) / this.movement_granularity;
 			const newy = Math.round((cy + step_y * i) * this.movement_granularity) / this.movement_granularity;
-			if (newx === this.x && newy === this.y) {
-				break;
-			}
+			if (newx === this.x && newy === this.y) {break;}
 			const result = this.test_move(newx, newy);
 			clang = false;
 

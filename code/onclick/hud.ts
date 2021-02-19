@@ -130,9 +130,7 @@ class MobHud extends Component {
 			alert.screen_loc_y = 12.84375 - 1.0625 * alert_idx;
 			this.a.c.Eye.screen[`ui_alert${alert_idx}`] = alert;
 			alert_idx++;
-			if (alert_idx >= 5) {
-				break;
-			}
+			if (alert_idx >= 5) {break;}
 		}
 		for (; alert_idx < 5; alert_idx++) {
 			this.a.c.Eye.screen[`ui_alert${alert_idx}`] = void 0;

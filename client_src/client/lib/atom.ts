@@ -181,9 +181,7 @@ class Atom extends EventEmitter {
 		let i;
 		for (i = 0; i < this.overlay_renderers_list.length; i++) {
 			const overlay = this.overlay_renderers_list[i];
-			if (overlay.overlay_layer >= 0) {
-				break;
-			}
+			if (overlay.overlay_layer >= 0) {break;}
 			overlay.draw(ctx, timestamp);
 		}
 		this.main_icon_renderer.draw(ctx, timestamp);

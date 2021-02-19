@@ -63,9 +63,7 @@ class AmmoCasing extends Component {
 						if (
 							item.c.AmmoBox.stored_ammo &&
 							item.c.AmmoBox.stored_ammo.length >= item.c.AmmoBox.max_ammo
-						) {
-							break;
-						}
+						) {break;}
 						if (bullet.c.AmmoCasing.projectile) {
 							if (item.c.AmmoBox.give_round(bullet, 0)) {
 								boolets++;

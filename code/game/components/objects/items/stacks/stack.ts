@@ -213,9 +213,7 @@ class Stack extends Component {
 							break;
 						}
 					}
-					if (did_break) {
-						break;
-					}
+					if (did_break) {break;}
 				}
 			}
 			if (build_limit !== recipe.build_limit) {

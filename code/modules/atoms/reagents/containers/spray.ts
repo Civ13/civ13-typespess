@@ -85,9 +85,7 @@ class SprayBottle extends Component {
 			await sleep(wait_step);
 
 			for (const atom of [...chempuff.crosses()]) {
-				if (puff_reagent_left <= 0) {
-					break;
-				}
+				if (puff_reagent_left <= 0) {break;}
 
 				chempuff.c.ReagentHolder.react_atom(atom, "vapor", {volume_modifier});
 				if (has_component(atom, "LivingMob")) {

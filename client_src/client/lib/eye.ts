@@ -138,9 +138,7 @@ class Eye extends EventEmitter {
 					break;
 				}
 			}
-			if (clickedAtom) {
-				break;
-			}
+			if (clickedAtom) {break;}
 		}
 		const [world_x, world_y] = this.screen_to_world(clickX, clickY, timestamp);
 		return {
@@ -459,9 +457,7 @@ class Plane {
 						break;
 					}
 				}
-				if (should_draw) {
-					break;
-				}
+				if (should_draw) {break;}
 			}
 			if (!should_draw) {continue;}
 

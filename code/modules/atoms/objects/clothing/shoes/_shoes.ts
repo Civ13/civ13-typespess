@@ -82,9 +82,7 @@ class FootItem extends Component {
 					break;
 				}
 			}
-			if (!valid) {
-				break;
-			}
+			if (!valid) {break;}
 			this.footprint_amounts[type] = amount = Math.max(0, amount - BLOOD_LOSS_PER_STEP);
 			if (amount > BLOOD_LOSS_IN_SPREAD) {
 				const footprints = new Atom(this.a.server, {
