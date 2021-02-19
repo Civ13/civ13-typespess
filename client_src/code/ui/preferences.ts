@@ -102,9 +102,9 @@ class PreferencesPanel {
 					item.classList.add("selected");
 				}
 				item.textContent = name;
-				item.addEventListener("click", (e) => {
+				item.addEventListener("click", (e2) => {
 					this.panel.send_message({char_prefs: {gender: id}});
-					e.preventDefault();
+					e2.preventDefault();
 					this.char_prefs.gender = id;
 					gender_dropdown.textContent = name;
 					this.update_previews();
@@ -142,9 +142,9 @@ class PreferencesPanel {
 				preview.style.height = "64px";
 				item.appendChild(preview);
 				item.appendChild(text);
-				item.addEventListener("click", (e) => {
+				item.addEventListener("click", (e3) => {
 					this.panel.send_message({char_prefs: {hair_style: id}});
-					e.preventDefault();
+					e3.preventDefault();
 					this.char_prefs.hair_style = id;
 					hair_dropdown.textContent = obj.name;
 					this.update_previews();
@@ -184,9 +184,9 @@ class PreferencesPanel {
 				preview.style.height = "64px";
 				item.appendChild(preview);
 				item.appendChild(text);
-				item.addEventListener("click", (e) => {
+				item.addEventListener("click", (e4) => {
 					this.panel.send_message({char_prefs: {skin_tone: id}});
-					e.preventDefault();
+					e4.preventDefault();
 					this.char_prefs.skin_tone = id;
 					skin_tone_dropdown.textContent = id;
 					this.update_previews();
@@ -219,9 +219,9 @@ class PreferencesPanel {
 				const text = document.createElement("span");
 				text.textContent = id;
 				item.appendChild(text);
-				item.addEventListener("click", (e) => {
+				item.addEventListener("click", (e5) => {
 					this.panel.send_message({char_prefs: {hair_color: this.hair_colors[id]}});
-					e.preventDefault();
+					e5.preventDefault();
 					this.char_prefs.hair_color = this.hair_colors[id];
 					hair_color_dropdown.textContent = id;
 					hair_color_dropdown.style.backgroundColor = this.char_prefs.hair_color;
@@ -408,9 +408,9 @@ class PreferencesPanel {
 				}
 				item.textContent = job_pref_settings[i];
 				item.style.color = job_pref_colors[i];
-				item.addEventListener("click", (e) => {
+				item.addEventListener("click", (e6) => {
 					this.panel.send_message({job_preferences: {[key]: i}});
-					e.preventDefault();
+					e6.preventDefault();
 					job_pref_button.textContent = job_pref_settings[i];
 					job_pref_button.style.color = job_pref_colors[i];
 					this.job_preferences[key] = i;

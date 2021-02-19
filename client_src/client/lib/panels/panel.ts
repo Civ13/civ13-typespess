@@ -73,11 +73,11 @@ class Panel extends EventEmitter {
 		this.panel_obj.focus();
 		let lastclientx = e.clientX;
 		let lastclienty = e.clientY;
-		const mousemove = (e: Record<string, any>) => {
-			const dx = e.clientX - lastclientx;
-			const dy = e.clientY - lastclienty;
-			lastclientx = e.clientX;
-			lastclienty = e.clientY;
+		const mousemove = (e2: Record<string, any>) => {
+			const dx = e2.clientX - lastclientx;
+			const dy = e2.clientY - lastclienty;
+			lastclientx = e2.clientX;
+			lastclienty = e2.clientY;
 			const {left: oldleft, top: oldtop} = this.container_obj.getBoundingClientRect();
 			this.container_obj.style.left =
 				Math.min(document.documentElement.clientWidth - 160 - pad, Math.max(-pad, oldleft + dx)) + "px";
@@ -142,11 +142,11 @@ class Panel extends EventEmitter {
 		this.panel_obj.focus();
 		let lastclientx = e.clientX;
 		let lastclienty = e.clientY;
-		const mousemove = (e: Record<string, any>) => {
-			const dx = e.clientX - lastclientx;
-			const dy = e.clientY - lastclienty;
-			lastclientx = e.clientX;
-			lastclienty = e.clientY;
+		const mousemove = (e3: Record<string, any>) => {
+			const dx = e3.clientX - lastclientx;
+			const dy = e3.clientY - lastclienty;
+			lastclientx = e3.clientX;
+			lastclienty = e3.clientY;
 			const {left: oldleft, top: oldtop} = this.container_obj.getBoundingClientRect();
 			if (resize_meta.drag_left) {
 				this.container_obj.style.left =

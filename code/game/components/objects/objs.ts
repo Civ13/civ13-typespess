@@ -30,13 +30,13 @@ class Tangible extends Component {
 				this.stop_throw = function () {return;};
 			};
 
-			const throw_impact = (target: Record<string, any>) => {
+			const throw_impact = (target2: Record<string, any>) => {
 				this.stop_throw();
 				if (speed > 0.5) {
-					if (has_component(target, "Tangible")) {
-						target.c.Tangible.emit("throw_impacted_by", this.a);
+					if (has_component(target2, "Tangible")) {
+						target2.c.Tangible.emit("throw_impacted_by", this.a);
 					}
-					this.emit("throw_impacted", target);
+					this.emit("throw_impacted", target2);
 				}
 			};
 

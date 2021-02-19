@@ -802,18 +802,18 @@ class MobInventory extends Component {
 				};
 			},
 		}).then((success) => {
-			if (!success) {
-				if (!slot.props.visible) {
-					to_chat`<span class='warning'>You feel your ${slot.props.strip_desc} being fumbled with!</span>`(
-						mob
-					);
-				}
-				return;
-			}
+			if (!success) {this.fumble_message(slot, mob);return;}
 			if (slot.can_accept_item(this_item)) {
 				slot.item = this_item;
 			}
 		});
+	}
+	fumble_message(slot: Record<string,any>, mob: Record<string,any>) {
+		if (!slot.props.visible) {
+			to_chat`<span class='warning'>You feel your ${slot.props.strip_desc} being fumbled with!</span>`(
+				mob
+			);
+		}
 	}
 	strip_panel_unequip(mob: Record<string, any>, slot: Record<string, any>) {
 		const item = slot.item;
@@ -844,14 +844,7 @@ class MobInventory extends Component {
 				};
 			},
 		}).then((success) => {
-			if (!success) {
-				if (!slot.props.visible) {
-					to_chat`<span class='warning'>You feel your ${slot.props.strip_desc} being fumbled with!</span>`(
-						mob
-					);
-				}
-				return;
-			}
+			if (!success) {this.fumble_message(slot, mob);return;}
 			if (slot.can_unequip()) {
 				item.loc = mob.fine_loc;
 			}
@@ -1011,42 +1004,18 @@ class Slot extends EventEmitter {
 			} else if (icodir === 8) {
 				icodir = 4;
 			}
+			for(const numpng of ["1.png","2.png","3.png","4.png"])
+			{
 			if (
 				this.mob.overlays[`${preset}${this.id}`] &&
 				this.mob.overlays[`${preset}${this.id}`].icon &&
-				this.mob.overlays[`${preset}${this.id}`].icon.search("1.png") !== -1
+				this.mob.overlays[`${preset}${this.id}`].icon.search(numpng) !== -1
 			) {
 				this.mob.overlays[`${preset}${this.id}`].icon = this.mob.overlays[`${preset}${this.id}`].icon.replace(
-					"1.png",
+					numpng,
 					`${icodir}.png`
 				);
-			} else if (
-				this.mob.overlays[`${preset}${this.id}`] &&
-				this.mob.overlays[`${preset}${this.id}`].icon &&
-				this.mob.overlays[`${preset}${this.id}`].icon.search("2.png") !== -1
-			) {
-				this.mob.overlays[`${preset}${this.id}`].icon = this.mob.overlays[`${preset}${this.id}`].icon.replace(
-					"2.png",
-					`${icodir}.png`
-				);
-			} else if (
-				this.mob.overlays[`${preset}${this.id}`] &&
-				this.mob.overlays[`${preset}${this.id}`].icon &&
-				this.mob.overlays[`${preset}${this.id}`].icon.search("3.png") !== -1
-			) {
-				this.mob.overlays[`${preset}${this.id}`].icon = this.mob.overlays[`${preset}${this.id}`].icon.replace(
-					"3.png",
-					`${icodir}.png`
-				);
-			} else if (
-				this.mob.overlays[`${preset}${this.id}`] &&
-				this.mob.overlays[`${preset}${this.id}`].icon &&
-				this.mob.overlays[`${preset}${this.id}`].icon.search("4.png") !== -1
-			) {
-				this.mob.overlays[`${preset}${this.id}`].icon = this.mob.overlays[`${preset}${this.id}`].icon.replace(
-					"4.png",
-					`${icodir}.png`
-				);
+				}
 			}
 		}
 	}
