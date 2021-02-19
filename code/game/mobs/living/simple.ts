@@ -1,5 +1,5 @@
 export{};
-const {Component} = require("./../../../../code/game/server.js");
+const {Component, to_chat} = require("./../../../../code/game/server.js");
 
 const combat_defines = require("../../../defines/combat_defines.js");
 const mob_defines = require("../../../defines/mob_defines.js");
@@ -93,16 +93,31 @@ class SimpleMob extends Component {
 
 	get_main_overlay() {
 		let icodir = this.a.dir;
-		if (icodir === 1) {
+		if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
 			icodir = 2;
-		} else if (icodir === 2) {
+		} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
 			icodir = 1;
-		} else if (icodir === 4) {
+		} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
 			icodir = 3;
-		} else if (icodir === 8) {
+		} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
 			icodir = 4;
 		}
 		return {icon: `${this.a.icon}${this.base_icon_state}/${this.base_icon_state}-dir${icodir}.png`};
+	}
+
+	attacked_by(item: Record<string, any>, user: Record<string, any>) {
+		if (this.a.c.LivingMob.stat === combat_defines.DEAD) {
+			to_chat`<span class='notice'>You begin butchering the ${this.a.name}...</span>`(user);
+			user.c.MobInventory.do_after({
+				delay: 8000 * item.c.Tool.toolspeed,
+				target: this.a,
+			}).then((success: any) => {
+				if (!success) {return;}
+				to_chat`<span class='notice'>You butcher ${this.a.name}!</span>`(user);
+				this.a.destroy();
+			});
+			return true;
+		}
 	}
 }
 
@@ -111,7 +126,7 @@ class MobAI extends Component {
 		super(atom, template);
 		this.behaviour = "scared";
 		this.behaviour_timeout = null;
-		if (this.stat !== combat_defines.DEAD) {
+		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
 			this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 2000);
 		}
 		this.behaviour_cycle_num = 0;
@@ -120,7 +135,7 @@ class MobAI extends Component {
 		this.behaviour_timeout = null;
 		this.behaviour_cycle_num++;
 		this.do_behaviour();
-		if (this.stat !== combat_defines.DEAD && !this.behaviour_timeout) {
+		if (this.a.c.LivingMob.stat !== combat_defines.DEAD && !this.behaviour_timeout) {
 			this.behaviour_timeout = setTimeout(this.run_behaviour.bind(this), 1000);
 		}
 	}
@@ -178,5 +193,6 @@ SimpleMob.template = {
 
 SimpleMob.depends = ["MobMovement", "Hearer", "Mob", "LivingMob", "Examine", "SpeechHearer"];
 SimpleMob.loadBefore = ["Mob", "LivingMob", "Examine", "SpeechHearer"];
-
+MobAI.depends = ["LivingMob"];
+MobAI.loadBefore = ["LivingMob"];
 module.exports.components = {SimpleMob, MobAI};

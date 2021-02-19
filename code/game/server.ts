@@ -322,6 +322,7 @@ class Typespess extends EventEmitter {
 		return visible_tiles;
 	}
 	pushRingTiles(atom: any, dist: any, ring_tiles: any, base_x: number, base_y: number, base_z: number) {
+		if (!atom || !atom.dim) {return;}
 		for (let i = 1; i <= dist * 2; i++) {
 			for (let j = Math.max(i - dist, 0); j < i - Math.max(i - dist - 1, 0); j++) {
 				ring_tiles.push(atom.dim.location(base_x + i - j, base_y + j, base_z));

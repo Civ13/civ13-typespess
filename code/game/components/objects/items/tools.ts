@@ -161,6 +161,7 @@ Axe.template = {
 			},
 			Tool: {
 				usesound: "sound/items/wood_cutting.ogg",
+				bladed: true
 			},
 			Item: {
 				force: 12,

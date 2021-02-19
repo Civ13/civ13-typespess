@@ -1,13 +1,5 @@
 export{};
-const {
-	Component,
-	Sound,
-	Atom,
-	chain_func,
-	format_html,
-	visible_message,
-	has_component,
-} = require("./../../../../code/game/server.js");
+const {Component, Sound, Atom, chain_func, format_html, visible_message, has_component} = require("./../../../../code/game/server.js");
 const _: any = require("underscore");
 const Mind: any = require("../mind/mind.js");
 const combat_defines: any = require("../../../defines/combat_defines.js");
@@ -333,13 +325,11 @@ class LivingMob extends Component {
 
 	attacked_by(item: Record<string, any>, user: Record<string, any>) {
 		const zone = random_zone(user.c.MobInteract.zone_sel);
-		const bp =
-			has_component(this.a, "MobBodyParts") &&
-			(this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.torso);
+		const bp = has_component(this.a, "MobBodyParts") && (this.a.c.MobBodyParts.limbs[zone] || this.a.c.MobBodyParts.limbs.torso);
 		this.send_item_attack_message(item, user, bp && bp.name);
-		if (has_component(this.a, "SimpleMob")) {
-			this.a.c.SimpleMob.target = user;
-		}
+		if (has_component(this.a, "SimpleMob")) {this.a.c.SimpleMob.target = user;}
+		if (has_component(item, "Tool") && item.c.Tool.bladed && has_component(this.a, "SimpleMob") && this.a.c.LivingMob.stat === combat_defines.DEAD)
+				{this.a.c.SimpleMob.attacked_by(item, user); return true;}
 		if (item.c.Item.force) {
 			this.apply_damage(item.c.Item.force, item.c.Item.damage_type, zone);
 			if (item.c.Item.damage_type === "brute" && Math.random() < 0.33) {
