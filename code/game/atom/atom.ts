@@ -676,9 +676,9 @@ class Atom extends EventEmitter {
 	 * @property {Array<Typespess.Atom>} common_crossers
 	 */
 	test_move(newX: number, newY: number) {
-		const lost_crossers: any[] = [];
-		const gained_crossers: any[] = [];
-		const common_crossers: any[] = [];
+		let lost_crossers: any[] = [];
+		let gained_crossers: any[] = [];
+		let common_crossers: any[] = [];
 
 		if (this[_loc] && this[_loc].is_base_loc && this[_loc].is_base_loc) {
 			for (
@@ -701,38 +701,40 @@ class Atom extends EventEmitter {
 			}
 		}
 
-		if (this[_loc].is_base_loc) {
+		if (this[_loc].is_base_loc)
+			{[gained_crossers, lost_crossers, common_crossers] = this.test_move_base_loc(gained_crossers, lost_crossers, common_crossers, newX, newY);}
+		return {gained_crossers, lost_crossers, common_crossers};
+	}
+	test_move_base_loc(gained_crossers: any, lost_crossers: any, common_crossers: any, newX: number, newY: number) {
+		for (
+			let x = Math.floor(newX + this[_bounds_x] + 0.0001);
+			x < Math.ceil(newX + this[_bounds_x] + this[_bounds_width] - 0.0001);
+			x++
+		) {
 			for (
-				let x = Math.floor(newX + this[_bounds_x] + 0.0001);
-				x < Math.ceil(newX + this[_bounds_x] + this[_bounds_width] - 0.0001);
-				x++
+				let y = Math.floor(newY + this[_bounds_y] + 0.0001);
+				y < Math.ceil(newY + this[_bounds_y] + this[_bounds_height] - 0.0001);
+				y++
 			) {
-				for (
-					let y = Math.floor(newY + this[_bounds_y] + 0.0001);
-					y < Math.ceil(newY + this[_bounds_y] + this[_bounds_height] - 0.0001);
-					y++
-				) {
-					const thisloc = this[_loc].dim.location(x, y, this[_z]);
-					for (const atom of thisloc.partial_contents) {
-						if (atom !== this && this.does_cross(atom, {x: newX, y: newY})) {
-							const idx = lost_crossers.indexOf(atom);
+				const thisloc = this[_loc].dim.location(x, y, this[_z]);
+				for (const atom of thisloc.partial_contents) {
+					if (atom !== this && this.does_cross(atom, {x: newX, y: newY})) {
+						const idx = lost_crossers.indexOf(atom);
 
-							if (idx === -1) {
-								if (!gained_crossers.includes(atom) && !common_crossers.includes(atom)) {
-									gained_crossers.push(atom);
-								}
-							} else {
-								lost_crossers.splice(idx, 1);
-								common_crossers.push(atom);
+						if (idx === -1) {
+							if (!gained_crossers.includes(atom) && !common_crossers.includes(atom)) {
+								gained_crossers.push(atom);
 							}
+						} else {
+							lost_crossers.splice(idx, 1);
+							common_crossers.push(atom);
 						}
 					}
 				}
 			}
 		}
-		return {gained_crossers, lost_crossers, common_crossers};
+		return [gained_crossers, lost_crossers, common_crossers];
 	}
-
 	/** @type {number} */
 	get x() {
 		if (this[_loc] && !this[_loc].is_base_loc) {
