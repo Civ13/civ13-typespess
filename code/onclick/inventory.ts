@@ -1,14 +1,6 @@
 /* eslint-disable max-lines */ export{};
-const {
-	Component,
-	Atom,
-	has_component,
-	chain_func,
-	is_atom,
-	make_watched_property,
-	visible_message,
-	to_chat,
-} = require("./../../code/game/server.js");
+const {Component, Atom, has_component, chain_func, is_atom, make_watched_property, visible_message, to_chat} = require("./../../code/game/server.js");
+const Typespess = require("./../../code/game/server.js");
 const combat_defines = require("../defines/combat_defines.js");
 const EventEmitter = require("events");
 const StripPanel = require("./strip_panel.js");
@@ -995,13 +987,13 @@ class Slot extends EventEmitter {
 			if (this.mob) {
 				icodir = this.mob.dir;
 			}
-			if (icodir === 1) {
+			if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
 				icodir = 2;
-			} else if (icodir === 2) {
+			} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
 				icodir = 1;
-			} else if (icodir === 4) {
+			} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
 				icodir = 3;
-			} else if (icodir === 8) {
+			} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
 				icodir = 4;
 			}
 			for(const numpng of ["1.png","2.png","3.png","4.png"])
@@ -1132,13 +1124,13 @@ class Slot extends EventEmitter {
 				if (this.mob) {
 					icodir = this.mob.dir;
 				}
-				if (icodir === 1) {
+				if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
 					icodir = 2;
-				} else if (icodir === 2) {
+				} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
 					icodir = 1;
-				} else if (icodir === 4) {
+				} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
 					icodir = 3;
-				} else if (icodir === 8) {
+				} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
 					icodir = 4;
 				}
 				this.mob.overlays[`inhand_${this.id}`] = {
@@ -1154,13 +1146,13 @@ class Slot extends EventEmitter {
 				if (this.mob) {
 					icodir = this.mob.dir;
 				}
-				if (icodir === 1) {
+				if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
 					icodir = 2;
-				} else if (icodir === 2) {
+				} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
 					icodir = 1;
-				} else if (icodir === 4) {
+				} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
 					icodir = 3;
-				} else if (icodir === 8) {
+				} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
 					icodir = 4;
 				}
 				this.mob.overlays[`clothing_${this.id}`] = {

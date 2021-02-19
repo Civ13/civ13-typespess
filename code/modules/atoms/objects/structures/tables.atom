@@ -8,7 +8,7 @@ wood_table_frame:
 	vars:
 		components:
 			TableFrame:
-				frame_material: "wood_sheet"
+				frame_material: "WoodSheet"
 			
 			Examine:
 				desc: "Four wooden legs with four framing wooden rods for a wooden table. You could easily pass through this."

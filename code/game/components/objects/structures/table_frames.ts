@@ -20,7 +20,7 @@ TableFrame.template = {
 	vars: {
 		components: {
 			TableFrame: {
-				frame_material: "stack_rods",
+				frame_material: "MetalSheet",
 				frame_material_amount: 2,
 			},
 			Destructible: {

@@ -1,12 +1,6 @@
 export{};
-const {
-	Component,
-	Atom,
-	has_component,
-	chain_func,
-	to_chat,
-	format_html,
-} = require("./../../../../../../code/game/server.js");
+const {Component, Atom, has_component, chain_func, to_chat, format_html} = require("./../../../../../../code/game/server.js");
+const Typespess = require("./../../../../../../code/game/server.js");
 const layers = require("../../../../../defines/layers.js");
 const combat_defines = require("../../../../../defines/combat_defines.js");
 const {random_zone, parse_zone} = require("./helpers.js");
@@ -273,14 +267,14 @@ class BodyPart extends Component {
 					icon: "icons/mob/dam_mob/",
 					icon_state: `${this.dmg_overlay_type}_${this.body_zone}_${brutestate}0`,
 					overlay_layer: 0.2,
-			  }
+		}
 			: null;
 		atom.overlays[`limb_${this.body_zone}_burn`] = burnstate
 			? {
 					icon: "icons/mob/dam_mob/",
 					icon_state: `${this.dmg_overlay_type}_${this.body_zone}_0${burnstate}`,
 					overlay_layer: 0.2,
-			  }
+		}
 			: null;
 	}
 
@@ -315,13 +309,13 @@ class BodyPart extends Component {
 		}
 		const mob = this.owner;
 		let icodir = mob.dir;
-		if (icodir === 1) {
+		if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
 			icodir = 2;
-		} else if (icodir === 2) {
+		} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
 			icodir = 1;
-		} else if (icodir === 4) {
+		} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
 			icodir = 3;
-		} else if (icodir === 8) {
+		} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
 			icodir = 4;
 		}
 		const overlay = {

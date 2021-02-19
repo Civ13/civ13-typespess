@@ -628,6 +628,10 @@ Typespess.NORTH = utils.NORTH;
 Typespess.SOUTH = utils.SOUTH;
 Typespess.EAST = utils.EAST;
 Typespess.WEST = utils.WEST;
+Typespess.NORTHWEST = utils.NORTHWEST;
+Typespess.SOUTHWEST = utils.SOUTHWEST;
+Typespess.NORTHEAST = utils.NORTHEAST;
+Typespess.SOUTHEAST = utils.SOUTHEAST;
 Typespess.readonly_traps = utils.readonly_traps;
 
 Typespess.Panel = Panel;

@@ -96,20 +96,7 @@ class Structure extends Component {
 				});
 				return true;
 			}
-		} else if (has_component(item, "MetalSheet") && this.frame_material === "stack_rods") {
-			if (item.c.Stack.amount >= 1) {
-				to_chat`<span class='notice'>You start adding ${item} to ${this.a}...</span>`(user);
-				user.c.MobInventory.do_after({delay: 2000, target: this.a}).then((success: any) => {
-					if (!success) {return;}
-					const table = new Atom(this.a.server, "table");
-					table.loc = this.a.loc;
-					item.c.Stack.use(1);
-					this.a.destroy();
-				});
-			} else if (item.c.Stack.amount < 1) {
-				to_chat`<span class='notice'>You need one sheet of metal to do this!</span>`(user);
-			}
-		} else if (has_component(item, "WoodSheet") && this.frame_material === "wood_sheet") {
+		} else if (has_component(item, this.frame_material)) {
 			if (item.c.Stack.amount >= 1) {
 				to_chat`<span class='notice'>You start adding ${item} to ${this.a}...</span>`(user);
 				user.c.MobInventory.do_after({delay: 2000, target: this.a}).then((success: any) => {
@@ -120,7 +107,7 @@ class Structure extends Component {
 					this.a.destroy();
 				});
 			} else if (item.c.Stack.amount < 1) {
-				to_chat`<span class='notice'>You need one sheet of wood to do this!</span>`(user);
+				to_chat`<span class='notice'>You need one sheet to do this!</span>`(user);
 			}
 		}
 		return prev();
