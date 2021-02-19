@@ -261,6 +261,22 @@ module.exports = {
 		}
 		return dir;
 	},
+	//converts the ingame dirs to 1,2,3,4 to use with icons.
+	dir2ico(icodir: number): number {
+		let newdir = 1;
+		if (icodir === 1 || icodir === 5) { //north, northeast
+			newdir = 2;
+		} else if (icodir === 2 || icodir === 10) { //south, southeast
+			newdir = 1;
+		} else if (icodir === 4 || icodir === 6) { //east, southeast
+			newdir = 3;
+		} else if (icodir === 8 || icodir === 9) { //west, northwest
+			newdir = 4;
+		} else {
+			newdir = 1;
+		}
+		return newdir;
+	},
 	/**
 	 * Returns a promise that resolves on setImmediate(). Useful for doing expensive things without blocking the node.js event loop.
 	 * @memberof Typespess

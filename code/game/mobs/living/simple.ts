@@ -8,7 +8,7 @@ const pass_flags = require("../../../defines/pass_flags.js");
 const Typespess = require("./../../../../code/game/server.js");
 
 const _ = require("underscore");
-const randomDir = [Typespess.NORTH, Typespess.SOUTH, Typespess.EAST, Typespess.WEST];
+const randomDir = [1, 2, 4, 8];
 class SimpleMob extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
@@ -63,16 +63,16 @@ class SimpleMob extends Component {
 		let newx = 0;
 		let newy = 0;
 		switch (movedir) {
-			case Typespess.NORTH:
+			case 1:
 				newy = 1;
 				break;
-			case Typespess.SOUTH:
+			case 2:
 				newy = -1;
 				break;
-			case Typespess.EAST:
+			case 4:
 				newx = 1;
 				break;
-			case Typespess.WEST:
+			case 8:
 				newx = -1;
 				break;
 		}
@@ -92,16 +92,7 @@ class SimpleMob extends Component {
 	}
 
 	get_main_overlay() {
-		let icodir = this.a.dir;
-		if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
-			icodir = 2;
-		} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
-			icodir = 1;
-		} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
-			icodir = 3;
-		} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
-			icodir = 4;
-		}
+		const icodir = Typespess.dir2ico(this.a.dir);
 		return {icon: `${this.a.icon}${this.base_icon_state}/${this.base_icon_state}-dir${icodir}.png`};
 	}
 

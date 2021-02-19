@@ -973,19 +973,7 @@ class Slot extends EventEmitter {
 			if (this.props.clothing_slot) {
 				preset = "clothing_";
 			}
-			let icodir = 1;
-			if (this.mob) {
-				icodir = this.mob.dir;
-			}
-			if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
-				icodir = 2;
-			} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
-				icodir = 1;
-			} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
-				icodir = 3;
-			} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
-				icodir = 4;
-			}
+			const icodir = Typespess.dir2ico(this.mob.dir);
 			for(const numpng of ["1.png","2.png","3.png","4.png"])
 			{
 			if (
@@ -1111,18 +1099,7 @@ class Slot extends EventEmitter {
 			}
 			if (this.props.is_hand_slot && (this[_item].c.Item.inhand_icon_state || this[_item].icon_state)) {
 				let icodir = 1;
-				if (this.mob) {
-					icodir = this.mob.dir;
-				}
-				if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
-					icodir = 2;
-				} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
-					icodir = 1;
-				} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
-					icodir = 3;
-				} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
-					icodir = 4;
-				}
+				if (this.mob) {icodir = Typespess.dir2ico(this.mob.dir);}
 				this.mob.overlays[`inhand_${this.id}`] = {
 					icon_state: this[_item].c.Item.inhand_icon_state,
 					icon: `${this[_item].c.Item[`inhand_${this.id}_icon`]}${this[_item].c.Item.inhand_icon_state}/${
@@ -1133,18 +1110,8 @@ class Slot extends EventEmitter {
 			}
 			if (this.props.clothing_slot) {
 				let icodir = 1;
-				if (this.mob) {
-					icodir = this.mob.dir;
-				}
-				if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
-					icodir = 2;
-				} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
-					icodir = 1;
-				} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
-					icodir = 3;
-				} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
-					icodir = 4;
-				}
+				if (this.mob) {icodir = Typespess.dir2ico(this.mob.dir);}
+
 				this.mob.overlays[`clothing_${this.id}`] = {
 					icon_state: this[_item].c[this.props.clothing_slot].worn_icon_state,
 					icon: `${this[_item].c[this.props.clothing_slot].worn_icon}${

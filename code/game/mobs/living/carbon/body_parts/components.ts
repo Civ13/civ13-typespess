@@ -78,19 +78,9 @@ class BodyPartHumanHair extends Component {
 
 	get_main_overlay(atm: Record<string, any> = null) {
 		let icodir = 1;
-		if (atm) {
-			icodir = atm.dir;
-		}
+		if (atm) {icodir = Typespess.dir2ico(atm.dir);}
 		const hair_obj = sprite_accessories.hair[this.hair_style];
-		if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
-			icodir = 2;
-		} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
-			icodir = 1;
-		} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
-			icodir = 3;
-		} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
-			icodir = 4;
-		}
+
 
 		return {
 			icon: `icons/mob/human_face/${hair_obj.icon_state}/${hair_obj.icon_state}-dir${icodir}.png`,

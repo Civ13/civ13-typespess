@@ -606,6 +606,7 @@ Typespess.dir_dx = utils.dir_dx;
 Typespess.dir_dy = utils.dir_dy;
 Typespess.dir_to = utils.dir_to;
 Typespess.dir_reverse = utils.dir_reverse;
+Typespess.dir2ico = utils.dir2ico;
 Typespess.stoplag = utils.stoplag;
 Typespess.sleep = utils.sleep;
 Typespess.visible_message = utils.visible_message;

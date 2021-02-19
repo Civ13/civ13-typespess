@@ -307,17 +307,7 @@ class BodyPart extends Component {
 		if (!this.owner) {
 			return;
 		}
-		const mob = this.owner;
-		let icodir = mob.dir;
-		if (icodir === Typespess.NORTH || icodir === Typespess.NORTHEAST) {
-			icodir = 2;
-		} else if (icodir === Typespess.SOUTH || icodir === Typespess.SOUTHWEST) {
-			icodir = 1;
-		} else if (icodir === Typespess.EAST || icodir === Typespess.SOUTHEAST) {
-			icodir = 3;
-		} else if (icodir === Typespess.WEST || icodir === Typespess.NORTHWEST) {
-			icodir = 4;
-		}
+		const icodir = Typespess.dir2ico(this.owner.dir);
 		const overlay = {
 			icon: `icons/mob/human_body/${this.body_zone}_m/${this.body_zone}_m-dir${icodir}.png`,
 			icon_state: "",
