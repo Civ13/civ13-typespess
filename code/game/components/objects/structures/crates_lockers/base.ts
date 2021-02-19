@@ -47,9 +47,7 @@ class LargeContainer extends Component {
 
 	can_open(user: any = null) {
 		for (const atom of this.a.crosses()) {
-			if (!has_component(atom, "LivingMob")) {
-				continue;
-			}
+			if (!has_component(atom, "LivingMob")) {continue;}
 			if (
 				atom.c.Tangible.anchored ||
 				(this.horizontal && atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY && atom.density > 0)
@@ -67,9 +65,7 @@ class LargeContainer extends Component {
 
 	can_close(user: any = null) {
 		for (const atom of this.a.crosses()) {
-			if (!has_component(atom, "LivingMob")) {
-				continue;
-			}
+			if (!has_component(atom, "LivingMob")) {continue;}
 			if (
 				atom.c.Tangible.anchored ||
 				(this.horizontal && atom.c.LivingMob.mob_size > mob_defines.MOB_SIZE_TINY && atom.density > 0)
@@ -128,9 +124,7 @@ class LargeContainer extends Component {
 				if (atom.c.LivingMob.mob_size > this.max_mob_size) {return;}
 				let mobs_stored = 0;
 				for (const item of this.a.contents) {
-					if (!has_component(item, "LivingMob")) {
-						continue;
-					}
+					if (!has_component(item, "LivingMob")) {continue;}
 					if (++mobs_stored >= this.mob_storage_capacity) {return;}
 				}
 			}

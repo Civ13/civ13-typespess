@@ -62,9 +62,7 @@ module.exports = {
 		let protection = 0;
 		for (const tslot of Object.values(this.a.c.MobInventory.slots)) {
 			const slot: Record<string, any> = tslot;
-			if (slot.props.is_hand_slot) {
-				continue;
-			}
+			if (slot.props.is_hand_slot) {continue;}
 			const item = slot.item;
 			if (has_component(item, "WearableItem") && item.c.WearableItem.body_parts_covered.includes(def_zone)) {
 				protection += item.c.WearableItem.clothing_armor[d_type];

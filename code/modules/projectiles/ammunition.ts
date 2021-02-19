@@ -70,9 +70,7 @@ class AmmoCasing extends Component {
 							if (item.c.AmmoBox.give_round(bullet, 0)) {
 								boolets++;
 							}
-						} else {
-							continue;
-						}
+						} else {continue;}
 					}
 				}
 				if (boolets > 0) {

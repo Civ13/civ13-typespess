@@ -24,15 +24,9 @@ class Smooth extends Component {
 		this.a.icon_state = "";
 		for (const loc of this.a.marginal_locs()) {
 			for (const atom of loc.partial_contents) {
-				if (atom === exclude || atom === this.a) {
-					continue;
-				}
-				if (!has_component(atom, "SmoothGroup")) {
-					continue;
-				}
-				if (!atom.c.SmoothGroup.enabled || !atom.c.SmoothGroup.groups.includes(this.smooth_with)) {
-					continue;
-				}
+				if (atom === exclude || atom === this.a) {continue;}
+				if (!has_component(atom, "SmoothGroup")) {continue;}
+				if (!atom.c.SmoothGroup.enabled || !atom.c.SmoothGroup.groups.includes(this.smooth_with)) {continue;}
 				const left_touch =
 					Math.abs(atom.x + atom.bounds_x + atom.bounds_width - (this.a.x + this.a.bounds_x)) < 0.0001;
 				const right_touch =
@@ -216,9 +210,7 @@ class TGSmooth extends Component {
 						break;
 					}
 				}
-				if (!corner_valid) {
-					continue;
-				}
+				if (!corner_valid) {continue;}
 				let dir_string = "";
 				if (corner & 1 && adjacent & (1 << 1)) {
 					// Yes that's right it's OPPOSITE. Thanks, TG!

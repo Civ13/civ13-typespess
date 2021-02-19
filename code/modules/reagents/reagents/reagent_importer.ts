@@ -20,9 +20,7 @@ if (global.is_bs_editor_env) {
 	appDir = global.workspaceDir;
 }
 for (const f of traverseDir(`${appDir}code/`)) {
-	if (getFileExtension(f) !== "reagents") {
-		continue;
-	}
+	if (getFileExtension(f) !== "reagents") {continue;}
 	const nrea = CSON.parse(fs.readFileSync(f, "utf8"));
 	for (const j in nrea) {
 		if (typeof j === "string") {

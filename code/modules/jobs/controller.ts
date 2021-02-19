@@ -52,9 +52,7 @@ class JobController {
 		} // this ain't gonna be useful so let's get out of here.
 		for (const tmind of this.unassigned) {
 			const mind: Record<string, any> = tmind;
-			if (!this.can_be_job(mind, job)) {
-				continue;
-			}
+			if (!this.can_be_job(mind, job)) {continue;}
 			if (mind.character_preferences.job_preferences[job.id] >= level) {
 				candidates.push(mind);
 			}
@@ -98,12 +96,8 @@ class JobController {
 		for (const level of [3, 2, 1]) {
 			for (const mind of _.shuffle([...this.unassigned])) {
 				for (const job of _.shuffle(Object.values(this.jobs))) {
-					if (!job) {
-						continue;
-					}
-					if (!this.can_be_job(mind, job)) {
-						continue;
-					}
+					if (!job) {continue;}
+					if (!this.can_be_job(mind, job)) {continue;}
 					if (mind.character_preferences.job_preferences[job.id] >= level) {
 						this.assign_role(mind, job);
 						break;

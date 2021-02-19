@@ -115,9 +115,7 @@ class LightingObject extends Component {
 					wall.base_height = wall.y2 - wall.y1;
 					wall.used_horizontally = false;
 					wall.used_vertically = false;
-					if (wall.x1 < 0 && wall.y1 < 0 && wall.x2 > 0 && wall.y2 > 0) {
-						continue;
-					}
+					if (wall.x1 < 0 && wall.y1 < 0 && wall.x2 > 0 && wall.y2 > 0) {continue;}
 					let hdist = Math.min(Math.abs(wall.x1), Math.abs(wall.x2));
 					let vdist = Math.min(Math.abs(wall.y1), Math.abs(wall.y2));
 					if (wall.x1 <= 0 && wall.x2 >= 0) {
@@ -136,14 +134,10 @@ class LightingObject extends Component {
 
 				for (let j = 0; j < walls.length; j++) {
 					const wall1 = walls[j];
-					if (wall1.used_horizontally || wall1.used_vertically) {
-						continue;
-					}
+					if (wall1.used_horizontally || wall1.used_vertically) {continue;}
 					for (let k = j + 1; k < walls.length; k++) {
 						const wall2 = walls[k];
-						if (wall2.used_vertically && wall2.used_horizontally) {
-							continue;
-						}
+						if (wall2.used_vertically && wall2.used_horizontally) {continue;}
 						if (
 							(wall1.x1 > 0 &&
 								wall1.x1 === wall2.x1 &&
@@ -178,9 +172,7 @@ class LightingObject extends Component {
 
 				bctx.beginPath();
 				for (const wall of walls) {
-					if (wall.used_horizontally || wall.used_vertically) {
-						continue;
-					}
+					if (wall.used_horizontally || wall.used_vertically) {continue;}
 					let sx = 1;
 					let sy = 1;
 					let flip = false;

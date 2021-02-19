@@ -27,9 +27,7 @@ async function explosion({
 		const far_dist = heavy_impact_range * 5 + devastation_range * 20;
 		const emitter = {x: x0, y: y0};
 		for (const mob of dim.server.atoms_for_components.Mob) {
-			if (mob.dim !== dim) {
-				continue;
-			}
+			if (mob.dim !== dim) {continue;}
 			const dist = Math.sqrt((x0 - mob.x) ** 2 + (y0 - mob.y) ** 2);
 			if (dist <= max_range + 5) {
 				new Sound(dim.server, {

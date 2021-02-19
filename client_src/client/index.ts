@@ -129,26 +129,18 @@ class TypespessClient extends EventEmitter {
 		for (let i = 0; i < obj.update_atoms.length; i++) {
 			const inst = obj.update_atoms[i];
 			const atom = this.atoms_by_netid[inst.network_id];
-			if (!atom) {
-				continue;
-			}
+			if (!atom) {continue;}
 			const oldx = atom.x;
 			const oldy = atom.y;
 			for (const key in inst) {
-				if (!Object.prototype.hasOwnProperty.call(inst, key)) {
-					continue;
-				}
-				if (key === "appearance" || key === "network_id" || key === "overlays" || key === "components") {
-					continue;
-				}
+				if (!Object.prototype.hasOwnProperty.call(inst, key)) {continue;}
+				if (key === "appearance" || key === "network_id" || key === "overlays" || key === "components") {continue;}
 				atom[key] = inst[key];
 			}
 			atom.glide = new Atom.Glide(atom, {oldx, oldy, lasttime: timestamp});
 			if (inst.overlays) {
 				for (const key in inst.overlays) {
-					if (!Object.prototype.hasOwnProperty.call(inst.overlays, key)) {
-						continue;
-					}
+					if (!Object.prototype.hasOwnProperty.call(inst.overlays, key)) {continue;}
 					atom.set_overlay(key, inst.overlays[key]);
 				}
 			}
@@ -159,13 +151,9 @@ class TypespessClient extends EventEmitter {
 	}
 	update_components(inst: any, atom: any) {
 		for (const component_name in inst.components) {
-			if (!Object.prototype.hasOwnProperty.call(inst.components, component_name)) {
-				continue;
-			}
+			if (!Object.prototype.hasOwnProperty.call(inst.components, component_name)) {continue;}
 			for (const key in inst.components[component_name]) {
-				if (!Object.prototype.hasOwnProperty.call(inst.components[component_name], key)) {
-					continue;
-				}
+				if (!Object.prototype.hasOwnProperty.call(inst.components[component_name], key)) {continue;}
 				atom.components[component_name][key] = inst.components[component_name][key];
 			}
 		}
@@ -174,18 +162,14 @@ class TypespessClient extends EventEmitter {
 	delete_atoms(obj: {delete_atoms: string | any[]}) {
 		for (let i = 0; i < obj.delete_atoms.length; i++) {
 			const atom = this.atoms_by_netid[obj.delete_atoms[i]];
-			if (!atom) {
-				continue;
-			}
+			if (!atom) {continue;}
 			atom.del();
 		}
 	}
 	update_eye(obj: any, timestamp: any) {
 		for (const [id, props] of Object.entries(obj.eye)) {
 			const eye = this.eyes[id];
-			if (!eye) {
-				continue;
-			}
+			if (!eye) {continue;}
 			const oldx = eye.origin.x;
 			const oldy = eye.origin.y;
 			Object.assign(eye.origin, props);
@@ -254,9 +238,7 @@ class TypespessClient extends EventEmitter {
 		if (obj.sound) {
 			if (obj.sound.play) {
 				for (const sound of obj.sound.play) {
-					if (this.playing_sounds.get(sound.id)) {
-						continue;
-					}
+					if (this.playing_sounds.get(sound.id)) {continue;}
 					new Sound(this, sound).start();
 				}
 			}

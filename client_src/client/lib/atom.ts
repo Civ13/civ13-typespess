@@ -20,12 +20,8 @@ class Atom extends EventEmitter {
 		this.overlay_renderers = {};
 
 		for (const key in instobj) {
-			if (!Object.prototype.hasOwnProperty.call(instobj, key)) {
-				continue;
-			}
-			if (key === "overlays" || key === "components" || key === "component_vars") {
-				continue;
-			}
+			if (!Object.prototype.hasOwnProperty.call(instobj, key)) {continue;}
+			if (key === "overlays" || key === "components" || key === "component_vars") {continue;}
 			this[key] = instobj[key];
 		}
 		this.main_icon_renderer.directional = this.directional;
@@ -45,9 +41,7 @@ class Atom extends EventEmitter {
 
 		if (instobj.overlays) {
 			for (const key in instobj.overlays) {
-				if (!Object.prototype.hasOwnProperty.call(instobj.overlays, key)) {
-					continue;
-				}
+				if (!Object.prototype.hasOwnProperty.call(instobj.overlays, key)) {continue;}
 				this.set_overlay(key, instobj.overlays[key]);
 			}
 		}
@@ -203,9 +197,7 @@ class Atom extends EventEmitter {
 		let bounds = this.main_icon_renderer.get_bounds();
 		for (const overlay of this.overlay_renderers_list) {
 			const overlay_bounds = overlay.get_bounds();
-			if (!overlay_bounds) {
-				continue;
-			}
+			if (!overlay_bounds) {continue;}
 			if (!bounds) {
 				bounds = overlay_bounds;
 				continue;

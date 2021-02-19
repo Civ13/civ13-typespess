@@ -212,9 +212,7 @@ class Atom extends EventEmitter {
 					key === "appearance" ||
 					key === "components" ||
 					key === "overlays"
-				) {
-					continue;
-				}
+				) {continue;}
 				this[key] = template.vars[key];
 			}
 		}
@@ -1079,9 +1077,7 @@ class Atom extends EventEmitter {
 					}
 				}
 			}
-			if (clang) {
-				continue;
-			}
+			if (clang) {continue;}
 			for (const common of result.common_crossers) {
 				if (!this.can_move_within(common, remaining_x, remaining_y, reason)) {
 					clang = true;
@@ -1091,9 +1087,7 @@ class Atom extends EventEmitter {
 					}
 				}
 			}
-			if (clang) {
-				continue;
-			}
+			if (clang) {continue;}
 			for (const gained of result.gained_crossers) {
 				if (!this.can_cross(gained, remaining_x, remaining_y, reason)) {
 					clang = true;
@@ -1103,9 +1097,7 @@ class Atom extends EventEmitter {
 					}
 				}
 			}
-			if (clang) {
-				continue;
-			}
+			if (clang) {continue;}
 
 			cx += step_x * i;
 			cy += step_y * i;
@@ -1529,9 +1521,7 @@ class Atom extends EventEmitter {
 			}
 		}
 		for (const loc of this.partial_locs()) {
-			if (!loc.is_base_loc) {
-				continue;
-			}
+			if (!loc.is_base_loc) {continue;}
 			for (const hearer of loc.hearers) {
 				hearer.c.Hearer.enqueue_update_visible_tiles();
 			}
@@ -1674,9 +1664,7 @@ class Atom extends EventEmitter {
 		if (this.template && this.template.components) {
 			for (const component_name of this.template.components) {
 				const component = this.components[component_name];
-				if (!(component instanceof Component.Networked)) {
-					continue;
-				}
+				if (!(component instanceof Component.Networked)) {continue;}
 				submessage.components.push(component_name);
 				submessage.component_vars[component_name] = component.get_networked_vars();
 			}

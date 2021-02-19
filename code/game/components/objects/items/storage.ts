@@ -115,9 +115,7 @@ class StorageItem extends Component {
 		for (i = 0; i < this[_slots].length; i++) {
 			const slot = this[_slots][i];
 			const idx = slot.indexOf(movement.atom);
-			if (idx === -1) {
-				continue;
-			}
+			if (idx === -1) {continue;}
 			if (idx === 0) {
 				if (this[_viewers]) {
 					for (const viewer of this[_viewers]) {

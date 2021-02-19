@@ -232,9 +232,7 @@ class Client extends EventEmitter {
 		if (pm.close) {
 			for (const id of pm.close) {
 				const panel = this.panels.get(id);
-				if (!panel) {
-					continue;
-				}
+				if (!panel) {continue;}
 				panel.close(false);
 			}
 		}
@@ -281,14 +279,10 @@ class Client extends EventEmitter {
 			this[_mob].c.Mob[mob_symbols._key] = void 0;
 			this.next_message.eye = this.next_message.eye || {};
 			for (const eyeId in this[_mob].c.Mob.eyes) {
-				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes, eyeId)) {
-					continue;
-				}
+				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes, eyeId)) {continue;}
 				const eye = this[_mob].c.Mob.eyes[eyeId];
 				for (const netid in eye.c.Eye[mob_symbols._viewing]) {
-					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing], netid)) {
-						continue;
-					}
+					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing], netid)) {continue;}
 					this.enqueue_delete_atom(netid);
 				}
 				for (const tile of eye.c.Eye[mob_symbols._visible_tiles]) {
@@ -307,14 +301,10 @@ class Client extends EventEmitter {
 				old_client.mob = null;
 			}
 			for (const eyeId in this[_mob].c.Mob.eyes) {
-				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes, eyeId)) {
-					continue;
-				}
+				if (!Object.prototype.hasOwnProperty.call(this[_mob].c.Mob.eyes, eyeId)) {continue;}
 				const eye = this[_mob].c.Mob.eyes[eyeId];
 				for (const netid in eye.c.Eye[mob_symbols._viewing]) {
-					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing], netid)) {
-						continue;
-					}
+					if (!Object.prototype.hasOwnProperty.call(eye.c.Eye[mob_symbols._viewing], netid)) {continue;}
 					this.enqueue_create_atom(netid, eye.c.Eye[mob_symbols._viewing][netid], eye);
 				}
 				for (const tile of eye.c.Eye[mob_symbols._visible_tiles]) {
@@ -418,9 +408,7 @@ class Client extends EventEmitter {
 			this[_tiles_to_remove].clear();
 		}
 		for (const key in this.next_message) {
-			if (!Object.prototype.hasOwnProperty.call(this.next_message, key)) {
-				continue;
-			}
+			if (!Object.prototype.hasOwnProperty.call(this.next_message, key)) {continue;}
 			message[key] = this.next_message[key];
 			delete this.next_message[key];
 		}
@@ -481,9 +469,7 @@ class Client extends EventEmitter {
 		if (atom.template && atom.template.components) {
 			for (const component_name of atom.template.components) {
 				const component = atom.components[component_name];
-				if (!(component instanceof Component.Networked)) {
-					continue;
-				}
+				if (!(component instanceof Component.Networked)) {continue;}
 				submessage.components.push(component_name);
 				submessage.component_vars[component_name] = component.get_networked_vars();
 			}
@@ -524,9 +510,7 @@ class Client extends EventEmitter {
 		if (entry.update.components) {
 			submessage.components = {};
 			for (const component_name in entry.update.components) {
-				if (!Object.prototype.hasOwnProperty.call(entry.update.components, component_name)) {
-					continue;
-				}
+				if (!Object.prototype.hasOwnProperty.call(entry.update.components, component_name)) {continue;}
 				submessage.components[component_name] = {};
 				for (const item of entry.update.components[component_name]) {
 					submessage.components[component_name][item] = atom.components[component_name][item];

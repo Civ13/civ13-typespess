@@ -147,9 +147,7 @@ if (global.is_bs_editor_env || global.is_test_env) {
 	console.log("SERVER: Starting server...");
 
 	for (const [key, file] of Object.entries(server_config.http_opts.files)) {
-		if (!key || !file) {
-			continue;
-		}
+		if (!key || !file) {continue;}
 		server_config.http_opts[key] = fs.readFileSync(file, "utf8");
 	}
 

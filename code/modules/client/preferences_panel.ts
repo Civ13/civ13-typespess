@@ -89,9 +89,7 @@ class PreferencesPanel extends Panel {
 			if (key === "nomad") {
 				tsetting = +!!tsetting;
 			} // turn it into 0/1 deal
-			if (!this.client.server.job_controller.jobs[key]) {
-				continue;
-			} // oi that job doesnt exist ree
+			if (!this.client.server.job_controller.jobs[key]) {continue;} // oi that job doesnt exist ree
 			if (tsetting === 0) {
 				delete this.char_prefs.job_preferences[key];
 			} else {
@@ -120,9 +118,7 @@ class PreferencesPanel extends Panel {
 			"hair_style",
 			"hair_color",
 		]) {
-			if (parts && !parts.includes(key)) {
-				continue;
-			}
+			if (parts && !parts.includes(key)) {continue;}
 			char_prefs_msg[key] = this.char_prefs[key];
 		}
 		this.send_message({char_prefs: char_prefs_msg});

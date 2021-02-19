@@ -93,27 +93,21 @@ class Eye extends EventEmitter {
 		for (const plane of [...this.planes.values()].sort((a, b) => {
 			return b.z_index - a.z_index;
 		})) {
-			if (plane.no_click) {
-				continue;
-			}
+			if (plane.no_click) {continue;}
 			const [originx, originy] = plane.calculate_origin(timestamp);
 			const [offsetx, offsety] = plane.calculate_composite_offset(timestamp);
 			const loc = `[${Math.floor((clickX - offsetx) / 32 + originx)},${Math.floor(
 				(-clickY + plane.canvas.height + offsety) / 32 + originy
 			)}]`;
 			const tile = plane.tiles.get(loc);
-			if (!tile) {
-				continue;
-			} //there's nothing there.
+			if (!tile) {continue;} //there's nothing there.
 			for (const atom of [...tile].sort((a, b) => {
 				return Atom.atom_comparator(b, a);
 			})) {
 				if (typeof atom.mouse_opacity === "undefined") {
 					atom.mouse_opacity = 1;
 				}
-				if (atom.mouse_opacity === 0) {
-					continue;
-				}
+				if (atom.mouse_opacity === 0) {continue;}
 				let {dispx, dispy} = atom.get_displacement(timestamp);
 				dispx = Math.round(dispx * 32) / 32;
 				dispy = Math.round(dispy * 32) / 32;
@@ -407,16 +401,12 @@ class Plane {
 			const atom: any = natom;
 			let add_to_tiles = false;
 			if (this.last_draw.has(atom)) {
-				if (!this.dirty_atoms.has(atom)) {
-					continue;
-				}
+				if (!this.dirty_atoms.has(atom)) {continue;}
 			} else {
 				add_to_tiles = true;
 			}
 			const bounds = atom.get_transformed_bounds(timestamp);
-			if (!bounds) {
-				continue;
-			}
+			if (!bounds) {continue;}
 			let {dispx, dispy} = atom.get_displacement(timestamp);
 			dispx = Math.round(dispx * 32) / 32;
 			dispy = Math.round(dispy * 32) / 32;
@@ -452,14 +442,10 @@ class Plane {
 		}
 
 		for (const natom of [...this.atoms].sort(Atom.atom_comparator)) {
-			if (!natom) {
-				continue;
-			}
+			if (!natom) {continue;}
 			const atom: any = natom;
 			const bounds = atom.get_transformed_bounds(timestamp);
-			if (!bounds) {
-				continue;
-			}
+			if (!bounds) {continue;}
 			let {dispx, dispy} = atom.get_displacement(timestamp);
 			dispx = Math.round(dispx * 32) / 32;
 			dispy = Math.round(dispy * 32) / 32;
@@ -477,9 +463,7 @@ class Plane {
 					break;
 				}
 			}
-			if (!should_draw) {
-				continue;
-			}
+			if (!should_draw) {continue;}
 
 			dispx -= originx;
 			dispy -= originy;

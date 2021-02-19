@@ -80,9 +80,7 @@ class GameTicker extends EventEmitter {
 		}
 		this.server.job_controller.divide_occupations();
 		for (const mind of this.server.job_controller.assigned) {
-			if (!mind.assigned_role) {
-				continue;
-			} //
+			if (!mind.assigned_role) {continue;} //
 			// alright now spawn everyone in
 			const mob = mind.assigned_role.instance(this.server, mind.character_preferences);
 			mind.transfer_to(mob);

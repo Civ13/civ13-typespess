@@ -37,16 +37,12 @@ class Apc extends Component {
 				return;
 			}
 			for (const brush of this.a.crosses()) {
-				if (!has_component(brush, "AreaBrush")) {
-					continue;
-				}
+				if (!has_component(brush, "AreaBrush")) {continue;}
 				let area = brush.c.AreaBrush.area;
 				if (!area) {
 					area = map[_areas][brush.c.AreaBrush.map_id];
 				}
-				if (!area) {
-					continue;
-				}
+				if (!area) {continue;}
 				if (has_component(area, "AreaPower") && !area.c.AreaPower.apc) {
 					this.area = area;
 				}

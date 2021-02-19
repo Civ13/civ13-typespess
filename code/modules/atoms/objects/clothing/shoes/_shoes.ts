@@ -74,9 +74,7 @@ class FootItem extends Component {
 		// eslint-disable-next-line prefer-const
 		for (let [type, tamount] of Object.entries(this.footprint_amounts)) {
 			let amount = Number(tamount);
-			if (amount <= 0) {
-				continue;
-			}
+			if (amount <= 0) {continue;}
 			let valid = true;
 			for (const obj of this.a.crosses()) {
 				if (has_component(obj, "FootprintsDecal") && obj.c.FootprintsDecal === type) {

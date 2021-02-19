@@ -121,9 +121,7 @@ class Typespess extends EventEmitter {
 
 	importTemplates(mod: any) {
 		for (const templateName in mod.templates) {
-			if (!Object.prototype.hasOwnProperty.call(mod.templates, templateName)) {
-				continue;
-			}
+			if (!Object.prototype.hasOwnProperty.call(mod.templates, templateName)) {continue;}
 			if (this.templates[templateName]) {
 				throw new Error(`Template ${templateName} already exists!`);
 			}
@@ -206,9 +204,7 @@ class Typespess extends EventEmitter {
 
 	[_net_tick]() {
 		for (const key in this.clients) {
-			if (!Object.prototype.hasOwnProperty.call(this.clients, key)) {
-				continue;
-			}
+			if (!Object.prototype.hasOwnProperty.call(this.clients, key)) {continue;}
 			const client = this.clients[key];
 			client.send_network_updates();
 		}
@@ -255,14 +251,10 @@ class Typespess extends EventEmitter {
 		visible_tiles.add(atom.base_loc);
 		const used_tiles = new Set();
 		for (const tile of ring_tiles) {
-			if (used_tiles.has(tile)) {
-				continue;
-			}
+			if (used_tiles.has(tile)) {continue;}
 			const dx = tile.x - base_x;
 			const dy = tile.y - base_y;
-			if (!tile.opacity) {
-				continue;
-			}
+			if (!tile.opacity) {continue;}
 			if (tile.y !== base_y) {
 				let left = base_x;
 				let right = base_x;
@@ -504,9 +496,7 @@ class Typespess extends EventEmitter {
 
 	to_global_chat(...b: any) {
 		for (const key in this.clients) {
-			if (!Object.prototype.hasOwnProperty.call(this.clients, key)) {
-				continue;
-			}
+			if (!Object.prototype.hasOwnProperty.call(this.clients, key)) {continue;}
 			const client = this.clients[key];
 			let cl;
 			if (client instanceof Client) {
@@ -532,9 +522,7 @@ class Typespess extends EventEmitter {
 	instance_map_sync(obj: any, x: number, y: number, z: number, dim: any) {
 		const inst_list = [];
 		for (const loc in obj.locs) {
-			if (!Object.prototype.hasOwnProperty.call(obj.locs, loc)) {
-				continue;
-			}
+			if (!Object.prototype.hasOwnProperty.call(obj.locs, loc)) {continue;}
 			for (const instobj of obj.locs[loc]) {
 				const base_template = this.templates[instobj.template_name];
 				if (!base_template) {

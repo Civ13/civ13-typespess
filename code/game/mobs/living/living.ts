@@ -175,9 +175,7 @@ class LivingMob extends Component {
 	apply_damages(damages: {[x: string]: number}, def_zone: any, blocked: number) {
 		if (blocked >= 100) {return false;}
 		for (const key in damages) {
-			if (!Object.prototype.hasOwnProperty.call(damages, key)) {
-				continue;
-			}
+			if (!Object.prototype.hasOwnProperty.call(damages, key)) {continue;}
 			this.apply_damage(damages[key], key, def_zone, blocked);
 		}
 		return true;

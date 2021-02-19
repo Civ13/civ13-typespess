@@ -32,9 +32,7 @@ class AdminPanel extends Panel {
 		const tools: Record<string, any> = {};
 		for (const [key, ttool] of Object.entries(admin_tools)) {
 			const tool: Record<string, any> = ttool;
-			if (!this.client.holder || !this.client.holder.has_permission(tool.perm_required)) {
-				continue;
-			}
+			if (!this.client.holder || !this.client.holder.has_permission(tool.perm_required)) {continue;}
 			tools[key] = {
 				name: tool.name,
 				desc: tool.desc,

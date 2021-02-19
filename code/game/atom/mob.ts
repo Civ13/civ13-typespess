@@ -151,27 +151,21 @@ class Eye extends Component {
 	enqueue_create_atom(netid: any, atom: any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
-			if (!client) {
-				continue;
-			}
+			if (!client) {continue;}
 			client.enqueue_create_atom(netid, atom, this.a);
 		}
 	}
 	enqueue_update_atom_var(netid: any, atom: any, varname: any, is_appearance: any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
-			if (!client) {
-				continue;
-			}
+			if (!client) {continue;}
 			client.enqueue_update_atom_var(netid, atom, varname, is_appearance);
 		}
 	}
 	enqueue_delete_atom(netid: any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
-			if (!client) {
-				continue;
-			}
+			if (!client) {continue;}
 			client.enqueue_delete_atom(netid);
 		}
 	}
@@ -179,9 +173,7 @@ class Eye extends Component {
 	enqueue_add_tile(tile: any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
-			if (!client) {
-				continue;
-			}
+			if (!client) {continue;}
 			client.enqueue_add_tile(tile);
 		}
 	}
@@ -189,9 +181,7 @@ class Eye extends Component {
 	enqueue_remove_tile(tile: any) {
 		for (const observer of this[_observers]) {
 			const client = observer.c.Mob.client;
-			if (!client) {
-				continue;
-			}
+			if (!client) {continue;}
 			client.enqueue_remove_tile(tile);
 		}
 	}
@@ -208,9 +198,7 @@ class Eye extends Component {
 		process.nextTick(() => {
 			for (const observer of this[_observers]) {
 				const client = observer.c.Mob.client;
-				if (!client) {
-					continue;
-				}
+				if (!client) {continue;}
 				client.next_message.eye = client.next_message.eye || {};
 				client.next_message.eye[observer.c.Mob[_eye_to_eyeid].get(this.a)] = {
 					x: this.a.base_mover.x,
