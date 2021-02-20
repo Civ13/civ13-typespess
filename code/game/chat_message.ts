@@ -92,9 +92,11 @@ class ChatMessage {
 		if (!atom) {return;}
 		this.emitter = atom;
 		const hearers = new Set();
-		for (const loc of atom.base_mover.partial_locs()) {
-			for (const hearer of loc.hearers) {
-				hearers.add(hearer);
+		if (atom && atom.base_mover) {
+			for (const loc of atom.base_mover.partial_locs()) {
+				for (const hearer of loc.hearers) {
+					hearers.add(hearer);
+				}
 			}
 		}
 		for (const thearer of hearers) {

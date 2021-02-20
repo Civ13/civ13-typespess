@@ -78,7 +78,7 @@ class Item extends Component {
 		if (!(this.pre_attack(/*target, user, e*/))) {
 			const resolved = target.attack_by(this.a, user, e);
 			if (!resolved && !target.destroyed && !this.a.destroyed) {
-				this.after_attack(/*target, user, true, e*/);
+				this.after_attack();
 			}
 		}
 	}

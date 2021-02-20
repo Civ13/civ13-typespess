@@ -55,19 +55,19 @@ class Gun extends Component {
 		const bonus_spread = 0;
 		// TODO dualweilding
 
-		this.fire({target, user, e, bonus_spread});
+		this.fire(target, user, true, e, null, bonus_spread, 0);
 	}
 
-	fire(opts: any) {
-		this.fire_one(opts);
+	fire(target: Record<string,any>, user: Record<string,any>, message: boolean, e: Record<string,any>, zone_override: any, bonus_spread: number, angle_offset: number) {
+		this.fire_one(target, user, message, e, zone_override, bonus_spread, angle_offset);
 	}
 
 	// fires one bullet.
 	fire_one(
-		target: any,
-		user: any = null,
+		target: Record<string,any>,
+		user: Record<string,any>,
 		message = true,
-		e: any = null,
+		e: Record<string,any> = null,
 		zone_override: any = null,
 		bonus_spread = 0,
 		angle_offset = 0
@@ -169,7 +169,7 @@ Gun.template = {
 			Item: {
 				size: 3,
 				force: 5,
-				inhand_icon_state: "gun",
+				inhand_icon_state: "pistol",
 				inhand_lhand_icon: "icons/mob/inhands/lefthand_guns/",
 				inhand_rhand_icon: "icons/mob/inhands/righthand_guns/",
 			},
