@@ -243,11 +243,11 @@ class Atom extends EventEmitter {
 		};
 	}
 
-	fully_load() {
+	fully_load(forced_directional = false) {
 		const promises = [];
-		promises.push(this.main_icon_renderer.fully_load());
+		promises.push(this.main_icon_renderer.fully_load(forced_directional));
 		for (const overlay of this.overlay_renderers_list) {
-			promises.push(overlay.fully_load());
+			promises.push(overlay.fully_load(forced_directional));
 		}
 		return Promise.all(promises);
 	}

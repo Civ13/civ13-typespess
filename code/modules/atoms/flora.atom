@@ -3,7 +3,7 @@ bush:
 	vars:
 		name: "small bush"
 		icon: "icons/obj/flora/bushes/"
-		icon_state: ""
+		icon_state: "smallbush1"
 		density: 0
 		opacity: false
 		layer: 3.7 #below_mob_layer
@@ -23,7 +23,7 @@ tree:
 	vars:
 		name: "tree"
 		icon: "icons/obj/flora/bigtrees/"
-		icon_state: ""
+		icon_state: "tree1"
 		density: 1
 		components:
 			Examine:
@@ -36,7 +36,7 @@ grass:
 	vars:
 		name: "grass"
 		icon: "icons/obj/flora/wild/"
-		icon_state: ""
+		icon_state: "tall_grass_1"
 		density: 0
 		opacity: false
 		components:

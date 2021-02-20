@@ -39,13 +39,13 @@ class IconRenderer {
 		}
 	}
 	// Returns a promise that is resolved when the icon is fully loaded (json and image)
-	fully_load() {
+	fully_load(forced_directional = false) {
 		if (this.icon_meta || !this.icon) {
 			return Promise.resolve();
 		}
 		if (this.icon && this.icon_state && this.icon.search(".png") === -1) {
 			if (
-				this.atom.directional === true ||
+				this.atom.directional === true || forced_directional === true ||
 				(this.icon.search("icons/mob/") !== -1 && this.icon.search("icons/mob/under/") === -1)
 			) {
 				this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
@@ -66,8 +66,7 @@ class IconRenderer {
 			height: this.icon_meta.height / 32,
 		};
 	}
-
-	on_render_tick() {
+	check_levels() {
 		if (this.icon !== this.last_icon) {
 			this.change_level = Math.max(this.change_level, CHANGE_LEVEL_ICON);
 			this.last_icon = this.icon;
@@ -78,6 +77,10 @@ class IconRenderer {
 			this.change_level = Math.max(this.change_level, CHANGE_LEVEL_DIR);
 			this.last_dir = this.dir;
 		}
+	}
+	on_render_tick() {
+		this.check_levels();
+
 		if (this.change_level >= CHANGE_LEVEL_NONE && this.atom) {
 			this.atom.mark_dirty();
 		}

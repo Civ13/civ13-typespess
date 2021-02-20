@@ -1,3 +1,5 @@
+import { findLastIndex } from "underscore";
+
 export{};
 const {Atom} = require("../../client/index.js");
 
@@ -74,10 +76,13 @@ class SpawnObjectPanel {
 					return this.panel.manager.client.components[i];
 				});
 				instobj.component_vars = val.vars.components;
-
+				if (val.vars.components && val.vars.components.Tangible)
+					{instobj.directional = val.vars.components.Tangible.directional;}
+				else
+					{instobj.directional = false;}
 				const a = new Atom(this.panel.manager.client, instobj); // quick and dirty
 				a.on_render_tick(0);
-				a.fully_load().then(() => {
+				a.fully_load(instobj.directional).then(() => {
 					a.on_render_tick(0);
 					a.draw(preview.getContext("2d"), 0);
 					a.del();
