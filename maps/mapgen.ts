@@ -1,21 +1,11 @@
 export{};
 const fs = require("fs");
-
+const CSON = require("cson");
 console.info("Loading definitions...");
-let originalLoadedConfigs = [100, 100, 25, 20]; // width, height, water, dirt
+let originalLoadedConfigs = {width:100, height:100, water:25, dirt:20};
+const {weak_deep_assign} = require("./../code/game/server.js");
 let finalData = "";
 
-function load_configs() {
-	fs.readFile("mapdef.txt", function (err: Error, data: any) {
-		if (err) {
-			return console.error(err);
-		}
-		const tempConfigs = data.toString().split(",", 4);
-
-		return [Number(tempConfigs[0]), Number(tempConfigs[1]), Number(tempConfigs[2]), Number(tempConfigs[3])];
-	});
-	return [100, 100, 25, 20];
-}
 function generateRandomInteger(min: number, max: number) {
 	return Math.floor(min + Math.random() * (max + 1 - min));
 }
@@ -36,20 +26,17 @@ function random_flora() {
 		return {rname: "tree", icon: "icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1, 5)}`};
 	}
 }
-
-originalLoadedConfigs = load_configs();
+originalLoadedConfigs = CSON.parse(fs.readFileSync(`../config/mapdef.cson`, "utf8"));
+weak_deep_assign(originalLoadedConfigs, CSON.parse(fs.readFileSync(`../config/mapdef.cson`, "utf8")));
 console.info(
-	"Read definitions as: " +
-		originalLoadedConfigs[0] +
-		"," +
-		originalLoadedConfigs[1] +
-		"," +
-		originalLoadedConfigs[2] +
-		"," +
-		originalLoadedConfigs[3]
+	"Read definitions as: w: " +
+		originalLoadedConfigs.width +
+		", h: " + originalLoadedConfigs.height +
+		", water: " + originalLoadedConfigs.water +
+		", dirt: " + originalLoadedConfigs.dirt
 );
-const inc_w = -originalLoadedConfigs[0] / 2;
-const inc_h = -originalLoadedConfigs[1] / 2;
+const inc_w = -originalLoadedConfigs.width / 2;
+const inc_h = -originalLoadedConfigs.height / 2;
 
 console.info("Generating the map...");
 finalData = finalData + "{\n";
@@ -60,7 +47,7 @@ for (let i = inc_w; i <= Math.abs(inc_w); i++) {
 		if (j === Math.abs(inc_h) && i === Math.abs(inc_w)) {
 			hascomma = "		]\n";
 		}
-		const floorname = random_floor(originalLoadedConfigs[3]);
+		const floorname = random_floor(originalLoadedConfigs.dirt);
 		finalData = finalData + `		"${i},${j},0": [\n`;
 		if (i === inc_w) {
 			finalData = finalData + "			{\n";

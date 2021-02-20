@@ -1,1 +1,0 @@
-width=100,height=100,water=25,dirt=20
