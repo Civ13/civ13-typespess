@@ -1,6 +1,6 @@
 straw_wall:
 	name: "straw wall"
-	template_name: "straw_wall"
+	template_name: "wall_straw"
 	cost: 6
 	time: 5000
 	on_floor: true
