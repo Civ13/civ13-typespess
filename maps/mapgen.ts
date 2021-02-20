@@ -26,8 +26,8 @@ function random_flora() {
 		return {rname: "tree", icon: "icons/obj/flora/bigtrees/", icon_state: `tree${generateRandomInteger(1, 5)}`};
 	}
 }
-originalLoadedConfigs = CSON.parse(fs.readFileSync(`../config/mapdef.cson`, "utf8"));
-weak_deep_assign(originalLoadedConfigs, CSON.parse(fs.readFileSync(`../config/mapdef.cson`, "utf8")));
+originalLoadedConfigs = CSON.parse(fs.readFileSync(`../config/mapgen.cson`, "utf8"));
+weak_deep_assign(originalLoadedConfigs, CSON.parse(fs.readFileSync(`../config/mapgen.cson`, "utf8")));
 console.info(
 	"Read definitions as: w: " +
 		originalLoadedConfigs.width +
