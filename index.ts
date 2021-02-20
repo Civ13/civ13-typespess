@@ -5,7 +5,7 @@ const World = require("./code/game/world.js");
 const Database = require("./code/database.js");
 const {URLSearchParams} = require("url");
 
-console.log("SERVER: Loading game...");
+console.info("SERVER: Loading game...");
 
 global.Tserver = new Typespess();
 global.Tworld = new World(global.Tserver);
@@ -128,7 +128,7 @@ if (global.is_bs_editor_env || global.is_test_env) {
 
 	const server_config = read_config("server.cson");
 	const map = server_config.maps.current_map;
-	console.log("SERVER: Loading map " + map + "...");
+	console.info("SERVER: Loading map " + map + "...");
 	global.Tserver.station_dim = new Typespess.Dimension(global.Tserver);
 	global.Tserver.instance_map_sync(
 		JSON.parse(fs.readFileSync("maps/" + map + ".bsmap", "utf8")),
@@ -144,7 +144,7 @@ if (global.is_bs_editor_env || global.is_test_env) {
 			mob.c.Mob.client = client;
 		}
 	});
-	console.log("SERVER: Starting server...");
+	console.info("SERVER: Starting server...");
 
 	for (const [key, file] of Object.entries(server_config.http_opts.files)) {
 		if (!key || !file) {continue;}
@@ -167,10 +167,10 @@ if (global.is_bs_editor_env || global.is_test_env) {
 						.then(function (results: {value: boolean; name: string}) {
 							validated = results;
 							if (validated.value === true && validated.name === obj.name) {
-								console.log(`DB AUTH: user "${obj.name}" authorized`);
+								console.info(`DB AUTH: user "${obj.name}" authorized`);
 								ws.send(JSON.stringify({valid: true, logged_in_as: obj.name, autojoin: true}));
 							} else {
-								console.log(`DB AUTH: user "${obj.name}" denied`);
+								console.info(`DB AUTH: user "${obj.name}" denied`);
 								ws.send(JSON.stringify({valid: false}));
 							}
 						});
@@ -258,7 +258,7 @@ if (global.is_bs_editor_env || global.is_test_env) {
 	}
 
 	global.Tserver.startServer({websocket: {server: http_server}});
-	console.log("SERVER: Server started.");
+	console.info("SERVER: Server started.");
 
 	//schedulers
 	global.Tworld.time_scheduler(global.Tworld);
@@ -268,7 +268,7 @@ if (global.is_bs_editor_env || global.is_test_env) {
 	//this signals the continuous integration program to exit.
 	const args = process.argv;
 	if (args[2] === "test") {
-		console.log("test passed.");
+		console.info("test passed.");
 		// eslint-disable-next-line no-process-exit
 		process.exit(0);
 	}

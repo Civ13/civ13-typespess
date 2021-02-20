@@ -480,7 +480,6 @@ LivingMob.loadBefore = ["Mob", "Tangible", "MobInteract", "MobHud", "SpeechHeare
 LivingMob.template = {
 	vars: {
 		components: {
-			Atom: {directional: true},
 			LivingMob: {
 				status_flags:
 					combat_defines.CANSTUN |
@@ -494,6 +493,7 @@ LivingMob.template = {
 			},
 			Tangible: {
 				throw_force: 10,
+				directional: true,
 			},
 		},
 		name: "",

@@ -18,4 +18,4 @@ used_bundler.bundle(function (err: string, buf: any) {
 		}
 	});
 });
-console.log("COMPILE: done.");
+console.info("COMPILE: done.");

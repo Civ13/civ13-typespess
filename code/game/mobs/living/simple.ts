@@ -19,7 +19,6 @@ class SimpleMob extends Component {
 		this.animal_class = "wild"; //wild, tamed
 		this.target = null;
 		this.hunting = null;
-		this.a.directional = true;
 	}
 	get MobAI() {
 		return this.a.c.MobAI;

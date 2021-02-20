@@ -72,11 +72,13 @@
 				
 				Buckle:
 					can_buckle: false
+
+				Tangible:
+					directional: false
 				
 			
 			name: "stool"
 			icon_state: "stool"
-			directional: false
 		
 		tree_paths: ["structures/chair/stool"]
 	
@@ -86,11 +88,13 @@
 			components:
 				Examine:
 					desc: "It has some unsavory stains on it..."
+
+				Tangible:
+					directional: false
 				
 			
 			name: "bar stool"
 			icon_state: "stool_wood"
-			directional: false
 		
 		tree_paths: ["structures/chair/stool/bar"]
 	

@@ -13,7 +13,7 @@ class Atom extends EventEmitter {
 			instobj.y = 0;
 		}
 		this.client = client;
-		this.directional = false;
+		this.directional = instobj.directional;
 		this.main_icon_renderer = new IconRenderer(this);
 		this.overlays = {};
 		this.overlay_renderers_list = [];
@@ -24,7 +24,6 @@ class Atom extends EventEmitter {
 			if (key === "overlays" || key === "components" || key === "component_vars") {continue;}
 			this[key] = instobj[key];
 		}
-		this.main_icon_renderer.directional = this.directional;
 		this.is_destroyed = false;
 		this.client.atoms.push(this);
 		if (this.network_id) {

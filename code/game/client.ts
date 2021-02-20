@@ -445,6 +445,7 @@ class Client extends EventEmitter {
 		for (const key of [
 			"icon",
 			"icon_state",
+			"directional",
 			"dir",
 			"layer",
 			"name",

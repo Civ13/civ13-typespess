@@ -34,8 +34,8 @@ class Chair extends Component {
 	}
 }
 
-Chair.loadBefore = ["Destructible", "Item", "Buckle"];
-Chair.depends = ["Destructible", "Buckle"];
+Chair.loadBefore = ["Destructible", "Item", "Buckle","Tangible"];
+Chair.depends = ["Destructible", "Buckle","Tangible"];
 
 Chair.template = {
 	vars: {
@@ -53,6 +53,7 @@ Chair.template = {
 			},
 			Tangible: {
 				anchored: true,
+				directional: true,
 			},
 			Examine: {
 				desc: "You sit in this. Either by will or force.",
@@ -60,7 +61,6 @@ Chair.template = {
 		},
 		name: "chair",
 		icon: "icons/obj/structures/chairs/",
-		directional: true,
 		icon_state: "chair",
 		layer: layers.OBJ_LAYER,
 	},

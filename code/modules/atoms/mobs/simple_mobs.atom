@@ -1,6 +1,6 @@
 
 pigeon:
-	components: ["Mob", "LivingMob", "MobAI", "SimpleMob"]
+	components: ["Mob", "LivingMob", "MobAI", "SimpleMob", "Tangible"]
 	tree_paths: ["mobs/animals/pigeon"]
 	vars:
 		components:
@@ -15,7 +15,7 @@ pigeon:
 			MobAI:
 				behaviour: "scared"
 			
-			Atom:
+			Tangible:
 				directional: true
 			
 			SimpleMob:

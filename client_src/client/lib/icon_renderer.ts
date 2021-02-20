@@ -13,7 +13,6 @@ class IconRenderer {
 	_offset_x: number;
 	_offset_y: number;
 	icon_meta: Record<string, any>;
-	directional: boolean;
 	last_icon: string;
 	last_icon_state: string;
 	last_dir: number;
@@ -28,9 +27,9 @@ class IconRenderer {
 		if (!obj.client) {
 			this.client = obj;
 		} else {
-			this.atom = obj;
 			this.client = obj.client;
 		}
+		this.atom = obj;
 		this._overlay_layer = 0;
 		this.change_level = 0;
 		this._offset_x = 0;
@@ -39,7 +38,6 @@ class IconRenderer {
 			this.dir = 1;
 		}
 	}
-
 	// Returns a promise that is resolved when the icon is fully loaded (json and image)
 	fully_load() {
 		if (this.icon_meta || !this.icon) {
@@ -48,7 +46,6 @@ class IconRenderer {
 		if (this.icon && this.icon_state && this.icon.search(".png") === -1) {
 			if (
 				this.atom.directional === true ||
-				this.directional === true ||
 				(this.icon.search("icons/mob/") !== -1 && this.icon.search("icons/mob/under/") === -1)
 			) {
 				this.icon = `${this.icon}${this.icon_state}/${this.icon_state}-dir${this.dir}.png`;
@@ -91,7 +88,6 @@ class IconRenderer {
 				const enqueued_icon = this.icon;
 				if (this.icon && this.icon_state && this.icon.search(".png") === -1) {
 					if (
-						this.directional === true ||
 						this.atom.directional === true ||
 						(this.icon.search("icons/mob/") !== -1 && this.icon.search("icons/mob/under/") === -1)
 					) {

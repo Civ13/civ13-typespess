@@ -12,18 +12,18 @@ class Database {
 
 	get_db_info() {
 		this.db.info().then(function (info: string) {
-			console.log(info);
+			console.info(info);
 		});
 	}
 	async authenticate(tname: string, tpassword: string) {
-		console.log("Authenticating " + tname + "...");
+		console.info("Authenticating " + tname + "...");
 		const i = await this.db.get(tname);
 		const accepted = {value: false, name: tname};
 		if (i.password === tpassword && i.name === tname && i.banned === false) {
-			console.log("	Accepted");
+			console.info("	Accepted");
 			accepted.value = true;
 		} else {
-			console.log("	Rejected");
+			console.info("	Rejected");
 			accepted.value = false;
 		}
 		return accepted;

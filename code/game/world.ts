@@ -85,7 +85,7 @@ class World {
 		for (const s of this.possible_seasons) {
 			if (s === new_season) {
 				this.season = s;
-				console.log("WORLD: Changed the season to " + new_season);
+				console.info("WORLD: Changed the season to " + new_season);
 				to_chat(this.user, format_html`<span class='announce'>It is now ${this.season}.</span>`);
 				return true;
 			}
@@ -96,16 +96,16 @@ class World {
 		//advances to the next season
 		if (this.season === "Winter") {
 			this.season = "Spring";
-			console.log("WORLD: Automatically advanced the season to " + this.season);
+			console.info("WORLD: Automatically advanced the season to " + this.season);
 		} else if (this.season === "Spring") {
 			this.season = "Summer";
-			console.log("WORLD: Automatically advanced the season to " + this.season);
+			console.info("WORLD: Automatically advanced the season to " + this.season);
 		} else if (this.season === "Summer") {
 			this.season = "Autumn";
-			console.log("WORLD: Automatically advanced the season to " + this.season);
+			console.info("WORLD: Automatically advanced the season to " + this.season);
 		} else if (this.season === "Autumn") {
 			this.season = "Winter";
-			console.log("WORLD: Automatically advanced the season to " + this.season);
+			console.info("WORLD: Automatically advanced the season to " + this.season);
 		}
 		this.server.to_global_chat(format_html`<span class='announce'>It is now ${this.season}.</span>`);
 		return true;
@@ -116,7 +116,7 @@ class World {
 		for (const w of this.possible_weather) {
 			if (w === new_weather) {
 				this.weather = w;
-				console.log("WORLD: Changed the weather to " + new_weather);
+				console.info("WORLD: Changed the weather to " + new_weather);
 				return true;
 			}
 		}
@@ -131,7 +131,7 @@ class World {
 		//randomizes the weather
 		const last_weather = this.weather;
 		this.weather = this.possible_weather[Math.floor(Math.random() * this.possible_weather.length)];
-		console.log("WORLD: Randomly changed the weather to " + this.weather);
+		console.info("WORLD: Randomly changed the weather to " + this.weather);
 		if (last_weather !== this.weather) {
 			this.server.to_global_chat(
 				format_html`<span class='announce'>The weather has changed to ${this.weather}.</span>`

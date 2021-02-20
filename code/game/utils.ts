@@ -154,7 +154,7 @@ module.exports = {
 	 * @param {string} name The name of the component
 	 * @returns {boolean}
 	 */
-	has_component(atom: {components: {[x: string]: any}}, name: string) {
+	has_component(atom: Record<string,any>, name: string) {
 		return atom && atom instanceof Atom && !!atom.components[name];
 	},
 
@@ -379,7 +379,7 @@ module.exports = {
 	 * // obj gets html-escaped.
 	 * let obj = "<b>hah</b>";
 	 * let formatted = format_html`<span class='warning'>The ${str} explodes!</span>`;
-	 * console.log(formatted);
+	 * console.info(formatted);
 	 * // <span class='warning'>The &lt;b&gt;hah&lt;/b&gt; explodes!</span>
 	 * @param {TemplateStringsArray} strs
 	 * @param {...(string|Typespess.Atom)} tags

@@ -1,7 +1,7 @@
 export{};
 const fs = require("fs");
 
-console.log("Loading definitions...");
+console.info("Loading definitions...");
 let originalLoadedConfigs = [100, 100, 25, 20]; // width, height, water, dirt
 let finalData = "";
 
@@ -38,7 +38,7 @@ function random_flora() {
 }
 
 originalLoadedConfigs = load_configs();
-console.log(
+console.info(
 	"Read definitions as: " +
 		originalLoadedConfigs[0] +
 		"," +
@@ -51,7 +51,7 @@ console.log(
 const inc_w = -originalLoadedConfigs[0] / 2;
 const inc_h = -originalLoadedConfigs[1] / 2;
 
-console.log("Generating the map...");
+console.info("Generating the map...");
 finalData = finalData + "{\n";
 finalData = finalData + '	"locs": {\n';
 for (let i = inc_w; i <= Math.abs(inc_w); i++) {
@@ -128,5 +128,5 @@ fs.writeFile("newmap.bsmap", finalData, function (err: Error) {
 	if (err) {
 		return console.error(err);
 	}
-	console.log("Finished saving the map.");
+	console.info("Finished saving the map.");
 });

@@ -9,7 +9,8 @@ class Tangible extends Component {
 		this.fingerprints = [];
 		this.fingerprints_hidden = [];
 		this.puller = null; // fuck it - one puller at a time.
-		this.last_high_pressure_movement_air_cycle = 0;
+
+		this.a.directional = this.directional;
 	}
 
 	async throw_at({target = null, range = this.throw_range, speed = this.throw_speed}: Record<string, any> = {}) {
@@ -138,6 +139,7 @@ Tangible.template = {
 				burn_time: 10, // How long it takes to burn to ashes, in seconds
 				pressure_resistance: 10,
 				explosion_block: 0,
+				directional: false,
 			},
 		},
 	},

@@ -22,7 +22,6 @@ const _walking: any = Symbol("_walking");
 const _walk_stepping: any = Symbol("_walk_stepping");
 const _walk_step: any = Symbol("_walk_step");
 
-const _directional: any = Symbol("_directional");
 const _icon: any = Symbol("_icon");
 const _icon_state: any = Symbol("_icon_state");
 const _dir: any = Symbol("_dir");
@@ -98,6 +97,7 @@ class Atom extends EventEmitter {
 		}
 		super();
 
+		this.directional = false;
 		/**
 		 * The template this atom was constructed with. Useful to get the initial values of variables.
 		 * @type {template}
@@ -292,7 +292,6 @@ class Atom extends EventEmitter {
 		this[_y] = 0;
 		this[_z] = 0;
 		this[_loc] = null;
-		this[_directional] = false;
 		if (typeof x === "number") {
 			x = +x;
 			y = +y;
@@ -1435,21 +1434,6 @@ class Atom extends EventEmitter {
 	}
 
 	/**
-	 * If the icon has directional sprites (true) or not (false)
-	 * @type {boolean}
-	 */
-	get directional() {
-		return this[_directional];
-	}
-	set directional(val) {
-		if (typeof val === "undefined") {
-			val = false;
-		}
-		this[_directional] = val;
-		this[mob_symbols._update_var]("directional", 0);
-	}
-
-	/**
 	 * Whether this atom gets sent to clients or not.
 	 * @type {boolean}
 	 */
@@ -1631,7 +1615,6 @@ class Atom extends EventEmitter {
 		for (const key of [
 			"icon",
 			"icon_state",
-			"directional",
 			"dir",
 			"layer",
 			"name",

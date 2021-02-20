@@ -1,7 +1,7 @@
 function enqueue_icon_meta_load(client: Record<string, any>, newIcon: string) {
 	if (!newIcon) {
 		newIcon = "icons/error.png";
-		console.log("MISSING ICON: Icon not defined!");
+		console.info("MISSING ICON: Icon not defined!");
 	}
 	if (client.icon_meta_load_queue[newIcon]) {
 		return client.icon_meta_load_queue[newIcon];
