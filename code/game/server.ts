@@ -520,24 +520,11 @@ class Typespess extends EventEmitter {
 	 * @param {number} z
 	 */
 	instance_map_sync(obj: any, x: number, y: number, z: number, dim: any) {
-		const inst_list = [];
+		let inst_list: any[] = [];
 		for (const loc in obj.locs) {
 			if (!Object.prototype.hasOwnProperty.call(obj.locs, loc)) {continue;}
 			for (const instobj of obj.locs[loc]) {
-				const base_template = this.templates[instobj.template_name];
-				if (!base_template) {
-					console.warn(`Map references unknown template "${instobj.template_name}"`);
-					continue;
-				}
-				const template = this.get_template_variant(
-					base_template,
-					instobj.variant_leaf_path,
-					instobj.instance_vars
-				);
-				utils.weak_deep_assign(template, base_template);
-				const atom = new Atom(this, template, x + instobj.x, y + instobj.y, z, dim);
-				atom.emit("map_instanced", obj);
-				inst_list.push(atom);
+				inst_list = this.obj_template_loading(instobj, inst_list, x, y, z, dim, obj);
 			}
 		}
 		for (let i = 0; i < inst_list.length; i++) {
@@ -556,26 +543,13 @@ class Typespess extends EventEmitter {
 	// eslint-disable-next-line max-params
 	async instance_map(obj: any, x: number, y: number, z: number, dim: any, percentage_callback: any) {
 		const locs = [...Object.values(obj.locs)];
-		const inst_list = [];
+		let inst_list: any[] = [];
 		let idx = 0;
 		for (const loc of locs) {
 			idx++;
 			const nLoc: any = loc;
 			for (const instobj of nLoc) {
-				const base_template = this.templates[instobj.template_name];
-				if (!base_template) {
-					console.warn(`Map references unknown template "${instobj.template_name}"`);
-					continue;
-				}
-				const template = this.get_template_variant(
-					base_template,
-					instobj.variant_leaf_path,
-					instobj.instance_vars
-				);
-				utils.weak_deep_assign(template, base_template);
-				const atom = new Atom(this, template, x + instobj.x, y + instobj.y, z, dim);
-				atom.emit("map_instanced", obj);
-				inst_list.push(atom);
+				inst_list = this.obj_template_loading(instobj, inst_list, x, y, z, dim, obj);
 			}
 			if (percentage_callback) {
 				percentage_callback(idx / locs.length);
@@ -585,6 +559,24 @@ class Typespess extends EventEmitter {
 		for (let i = 0; i < inst_list.length; i++) {
 			inst_list[i].emit("map_instance_done", obj);
 		}
+	}
+
+	obj_template_loading(instobj: Record<string,any>, inst_list: any[], x:number, y:number, z:number, dim: any, obj: any) {
+		const base_template = this.templates[instobj.template_name];
+		if (!base_template) {
+			console.warn(`Map references unknown template "${instobj.template_name}"`);
+			return inst_list;
+		}
+		const template = this.get_template_variant(
+			base_template,
+			instobj.variant_leaf_path,
+			instobj.instance_vars
+		);
+		utils.weak_deep_assign(template, base_template);
+		const atom = new Atom(this, template, x + instobj.x, y + instobj.y, z, dim);
+		atom.emit("map_instanced", obj);
+		inst_list.push(atom);
+		return inst_list;
 	}
 }
 
