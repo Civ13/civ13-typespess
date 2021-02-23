@@ -25,6 +25,7 @@ interface EventTarget {
 
 interface HTMLElement {
 	value: any;
+	disabled: boolean;
 }
 
 interface ChildNode {
