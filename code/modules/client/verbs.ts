@@ -10,7 +10,7 @@ module.exports.now = function (server: Record<string, any>) {
 				} else {
 					client.last_ooc_message = server.now();
 					const msg = ("" + obj.ooc_message).substring(0, 256);
-					to_chat`<span style='color:#002eb8' class='ooc'><span class='prefix'>OOC:</span> <EM>${client.name}:</EM> <span class='message'>${msg}</span></span>`(
+					to_chat`<span style='color:#638aff' class='ooc'><span class='prefix'>OOC:</span> <EM>${client.name}:</EM> <span class='message'>${msg}</span></span>`(
 						[...Object.values(server.clients)]
 					);
 				}

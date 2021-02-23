@@ -52,7 +52,7 @@ class JobType {
 	}
 
 	after_spawn(user: Record<string, any>) {
-		to_chat`<b>You job title is ${""}${this.title}.</b>`(user);
+		to_chat`<b>Your job title is ${""}${this.title}.</b>`(user);
 		to_chat`Your role is ${this.description}`(user);
 		if (this.req_admin_notify) {
 			to_chat`<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>`(
