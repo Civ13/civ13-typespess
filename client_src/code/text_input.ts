@@ -1,16 +1,12 @@
-module.exports.now = function (client: {connection: {send: (arg0: string) => void}}) {
+module.exports.now = function (client: Record<string,any>) {
 	if (global.is_bs_editor_env) {
 		module.exports = client;
 	}
 	window.addEventListener("load", () => {
 		const input_elem = document.getElementById("main-text-input");
 		document.addEventListener("keydown", (e) => {
-			if (typeof input_elem === "undefined") {
-				return;
-			}
-			if (e.target.localName === "input" || !client.connection) {
-				return;
-			}
+			if (typeof input_elem === "undefined" || e.target.localName === "input" || !client.connection)
+				{return;}
 			// the e.preventDefault() is for stopping the character being typed into the input
 			if (e.key === "o") {
 				// o
@@ -62,6 +58,7 @@ module.exports.now = function (client: {connection: {send: (arg0: string) => voi
 			}
 		});
 		input_elem.addEventListener("input", () => {
+			console.log("here");
 			const text = input_elem.value;
 			if (text.startsWith(";")) {
 				input_elem.classList.add("radio");

@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Just+Another+Hand&family=Roboto+Mono&display=swap');
 #chatwindow {
-	font-family: Verdana, sans-serif;
+	font-family: "Roboto Mono", Verdana, sans-serif;
 	padding: 5px;
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -198,10 +199,7 @@
 	color: #330033;
 }
 #chatwindow .sans {
-	font-family: "Comic Sans MS", cursive, sans-serif;
-}
-#chatwindow .papyrus {
-	font-family: "Papyrus", cursive, sans-serif;
+	font-family: "Just Another Hand", cursive, sans-serif;
 }
 #chatwindow .robot {
 	font-family: "Courier New", cursive, sans-serif;
@@ -303,7 +301,7 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Cinzel", Times, serif;
 	font-size: 25px;
 }
 #gamewindow #linkwindow .button {
