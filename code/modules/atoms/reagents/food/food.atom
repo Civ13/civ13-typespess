@@ -1,0 +1,18 @@
+meat:
+	components: ["Consumable"]
+	vars:
+		components:
+			ReagentHolder:
+				maximum_volume: 10
+				init_reagents:
+					Protein: 2
+					Fat: 2
+			
+			Examine:
+				desc: "A slab of meat."
+
+		name: "meat"
+		icon: "icons/obj/food/food/"
+		icon_state: "meat"
+
+	tree_paths: ["items/food/meat"]

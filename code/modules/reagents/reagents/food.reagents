@@ -9,6 +9,36 @@ Nutriment:
 	burn_heal: 0
 	subtype: "food"
 
+Protein:
+	name: "Protein"
+	description: "The basic building block of living cells."
+	reagent_state: "solid"
+	nutriment_factor: 5
+	color: [0.4, 0.26, 0.19]
+	brute_heal: 1
+	burn_heal: 0
+	subtype: "food"
+
+Carbohydrate:
+	name: "Carbohydrate"
+	description: "The main energy source for living creatures."
+	reagent_state: "solid"
+	nutriment_factor: 12
+	color: [0.4, 0.26, 0.19]
+	brute_heal: 0
+	burn_heal: 0
+	subtype: "food"
+
+Fat:
+	name: "Fat"
+	description: "The main energy storage of living creatures."
+	reagent_state: "solid"
+	nutriment_factor: 15
+	color: [0.4, 0.26, 0.19]
+	brute_heal: 0
+	burn_heal: 0
+	subtype: "food"
+
 Vitamin:
 	name: "Vitamin"
 	description: "All the best vitamins, minerals, and carbohydrates the body needs in pure form."

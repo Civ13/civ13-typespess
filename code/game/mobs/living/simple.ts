@@ -1,5 +1,5 @@
 export{};
-const {Component, to_chat} = require("./../../../../code/game/server.js");
+const {Component, to_chat, Atom} = require("./../../../../code/game/server.js");
 
 const combat_defines = require("../../../defines/combat_defines.js");
 const mob_defines = require("../../../defines/mob_defines.js");
@@ -104,6 +104,10 @@ class SimpleMob extends Component {
 			}).then((success: any) => {
 				if (!success) {return;}
 				to_chat`<span class='notice'>You butcher ${this.a.name}!</span>`(user);
+				for (let sz = 0; sz <= this.a.c.LivingMob.mob_size; sz++) {
+					const meat = new Atom(this.a.server, "meat");
+					meat.loc = this.a.fine_loc;
+				}
 				this.a.destroy();
 			});
 			return true;

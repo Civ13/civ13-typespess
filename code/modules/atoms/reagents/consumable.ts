@@ -1,14 +1,10 @@
 export{};
-const {Component, visible_message, to_chat} = require("./../../../../../code/game/server.js");
+const {Component, visible_message, to_chat} = require("./../../../../code/game/server.js");
 
-const _ = require("underscore");
-
-class Pill extends Component {
+class Consumable extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-		if (!this.a.icon_state) {
-			this.a.icon_state = `pill${_.random(1, 20)}`;
-		}
+
 		this.a.c.Item.attack = this.attack.bind(this);
 	}
 
@@ -42,13 +38,13 @@ class Pill extends Component {
 	}
 }
 
-Pill.loadBefore = ["Item", "ReagentHolder"];
-Pill.depends = ["Item", "ReagentHolder"];
+Consumable.loadBefore = ["Item", "ReagentHolder"];
+Consumable.depends = ["Item", "ReagentHolder"];
 
-Pill.template = {
+Consumable.template = {
 	vars: {
 		components: {
-			Pill: {
+			Consumable: {
 				apply_type: "ingest",
 				apply_method: "swallow",
 				self_delay: 0, //pills are instant, this is because patches inheret their aplication from pills
@@ -71,4 +67,4 @@ Pill.template = {
 	},
 };
 
-module.exports.components = {Pill};
+module.exports.components = {Consumable};

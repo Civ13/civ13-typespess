@@ -99,7 +99,7 @@ global.Tserver.importModule(require("./code/modules/projectiles/box_magazine.js"
 global.Tserver.importModule(require("./code/modules/projectiles/gun.js"));
 global.Tserver.importModule(require("./code/modules/projectiles/projectile.js"));
 global.Tserver.importModule(require("./code/modules/atoms/reagents/containers/open.js"));
-global.Tserver.importModule(require("./code/modules/atoms/reagents/containers/pill.js"));
+global.Tserver.importModule(require("./code/modules/atoms/reagents/consumable.js"));
 global.Tserver.importModule(require("./code/modules/atoms/reagents/containers/spray.js"));
 global.Tserver.importModule(require("./code/modules/atoms/reagents/machinery/chem_dispenser.js"));
 global.Tserver.importModule(require("./code/modules/reagents/holder.js"));
