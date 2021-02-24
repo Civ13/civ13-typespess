@@ -3,7 +3,33 @@ const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 const World = require("./code/game/world.js");
 const Database = require("./code/database.js");
+const {app, BrowserWindow} = require('electron');
+
 const {URLSearchParams} = require("url");
+
+function createWindow () {
+	const win = new BrowserWindow({
+		width: 800,
+		height: 600,
+		webPreferences: {nodeIntegration: true}
+	});
+
+	win.loadFile('./resources/index.html');
+}
+
+app.whenReady().then(createWindow);
+
+app.on('window-all-closed', () => {
+	if (process.platform !== 'darwin') {
+		app.quit();
+	}
+});
+
+app.on('activate', () => {
+	if (BrowserWindow.getAllWindows().length === 0) {
+		createWindow();
+	}
+});
 
 console.info("SERVER: Loading game...");
 
@@ -185,6 +211,7 @@ if (global.is_bs_editor_env || global.is_test_env) {
 			ws.on("message", message_handler);
 		};
 	}
+
 
 	const serve = serveStatic(global.Tserver.resRoot, {index: ["index.html"]});
 
