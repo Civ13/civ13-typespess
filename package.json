@@ -142,9 +142,9 @@
   },
   "scripts": {
     "test": "jest scripts/test.test.js --coverage --detectOpenHandles --forceExit",
-	"start": "electron .",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "start": "npx electron-forge start",
+    "package": "npx electron-forge package",
+    "make": "npx electron-forge make"
   },
   "jest": {
     "testEnvironment": "node",
