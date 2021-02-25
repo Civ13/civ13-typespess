@@ -75,8 +75,23 @@ DeskLamp.template = {
 	},
 };
 
-class Sun extends Component {}
+class Sun extends Component {
+	constructor(atom: any, template: any) {
+		super(atom, template);
+		this.running = true;
+		this.sun_timeout = null;
+		this.run_sun();
+	}
 
+	run_sun() {
+		this.sun_timeout = null;
+		if (this.running && this.a.x !== null && this.a.y !== null) {
+			this.a.move(-1, 0, "sun");
+			console.log("sun moved 1 tile west: "+this.a.x+","+this.a.y);
+			this.sun_timeout = setTimeout(this.run_sun.bind(this), 60000);
+		}
+	}
+}
 Sun.depends = ["Flashlight"];
 Sun.loadBefore = ["Flashlight"];
 

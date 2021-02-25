@@ -4,7 +4,10 @@ const {Component, visible_message, to_chat} = require("./../../../../code/game/s
 class Consumable extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
-
+		this.apply_type = "ingest";
+		this.apply_method = "swallow";
+		this.self_delay = 0;
+		this.raw = true; //food with the raw tag toggled has to be cooked before ingesting.
 		this.a.c.Item.attack = this.attack.bind(this);
 	}
 
@@ -32,6 +35,10 @@ class Consumable extends Component {
 
 			this.a.c.ReagentHolder.react_atom(target, "ingest");
 			this.a.c.ReagentHolder.transfer_percent_to(target, 1);
+			if (this.raw)
+			{
+				//TODO: Make the ingester sick
+			}
 			this.a.destroy();
 		})();
 		return true;
@@ -44,11 +51,6 @@ Consumable.depends = ["Item", "ReagentHolder"];
 Consumable.template = {
 	vars: {
 		components: {
-			Consumable: {
-				apply_type: "ingest",
-				apply_method: "swallow",
-				self_delay: 0, //pills are instant, this is because patches inheret their aplication from pills
-			},
 			ReagentHolder: {
 				maximum_volume: 50,
 			},
