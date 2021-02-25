@@ -1,16 +1,36 @@
-export{};
 const TypespessClient = require("./client/index.js");
-
 const {Eye, Plane} = TypespessClient;
 const {ParallaxPlane} = require("./code/parallax.js");
+const {app, BrowserWindow} = require('electron');
 
 // Just a small little polyfill for Edge (fuck you edge by the way)
-
 for (const collection_class of [HTMLCollection, NodeList, DOMTokenList]) {
 	if (!collection_class.prototype[Symbol.iterator]) {
 		collection_class.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 	}
 }
+//electron stuff
+function createWindow () {
+	const win = new BrowserWindow({
+		width: 1280,
+		height: 720,
+		webPreferences: {nodeIntegration: true}
+	});
+
+	win.loadFile('index.html');
+}
+
+app.whenReady().then(createWindow);
+
+app.on('window-all-closed', () => {
+	if (process.platform !== 'darwin') {app.quit();}
+});
+
+app.on('activate', () => {
+	if (BrowserWindow.getAllWindows().length === 0) {createWindow();}
+});
+
+//end of electron stuff
 
 const client = new TypespessClient();
 

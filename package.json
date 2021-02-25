@@ -43,7 +43,7 @@
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/experimental-utils": "^4.15.2",
     "@typescript-eslint/parser": "^3.10.1",
-    "electron": "^11.3.0",
+    "electron": "11.3.0",
     "eslint": "^7.19.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-sonarjs": "^0.6.0",
