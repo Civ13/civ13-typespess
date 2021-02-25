@@ -23,6 +23,7 @@
     "cson": "^7.20.0",
     "electron-squirrel-startup": "^1.0.0",
     "finalhandler": "^1.1.2",
+    "is-electron": "^2.2.0",
     "monaco-editor": "^0.22.3",
     "node-fetch": "^2.6.1",
     "pouchdb": "^7.2.2",
@@ -144,7 +145,8 @@
     "test": "jest scripts/test.test.js --coverage --detectOpenHandles --forceExit",
     "start": "npx electron-forge start",
     "package": "npx electron-forge package",
-    "make": "npx electron-forge make"
+    "make": "npx electron-forge make",
+	"electron-test": "tsc -p tsconfig.json && npx electron resources/index.html"
   },
   "jest": {
     "testEnvironment": "node",

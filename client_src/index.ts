@@ -33,7 +33,6 @@ app.on('activate', () => {
 //end of electron stuff
 
 const client = new TypespessClient();
-
 client.importModule(require("./code/alert.js"));
 client.importModule(require("./code/carbon_mob.js"));
 client.importModule(require("./code/hud.js"));
@@ -52,8 +51,6 @@ client.importModule(require("./code/ui/spawn_object.js"));
 client.importModule(require("./code/ui/stack_craft.js"));
 client.importModule(require("./code/ui/strip.js"));
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 if (global.is_bs_editor_env) {
 	module.exports = client;
 } else {

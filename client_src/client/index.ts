@@ -7,13 +7,13 @@ const EventEmitter = require("events");
 const Sound = require("./lib/sound.js");
 const Matrix = require("./lib/matrix.js");
 const {Eye, Plane} = require("./lib/eye.js");
+const isElectron = require("is-electron");
 
 class TypespessClient extends EventEmitter {
 	constructor(wsurl: string, resRoot = "") {
 		super();
-		if (!wsurl) {
-			wsurl = "ws" + window.location.origin.substring(4);
-		}
+		if (!wsurl) {wsurl = "ws" + window.location.origin.substring(4);}
+		if (isElectron()) {wsurl = "ws://localhost:1713";}
 		this.resRoot = resRoot;
 		this.wsurl = wsurl;
 		this.atoms_by_netid = {};
