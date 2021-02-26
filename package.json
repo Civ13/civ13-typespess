@@ -21,7 +21,6 @@
     "@types/ws": "^7.4.0",
     "browserify": "^17.0.0",
     "cson": "^7.20.0",
-    "electron-squirrel-startup": "^1.0.0",
     "finalhandler": "^1.1.2",
     "is-electron": "^2.2.0",
     "monaco-editor": "^0.22.3",
@@ -35,11 +34,6 @@
     "ws": "^7.4.3"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.54",
-    "@electron-forge/maker-deb": "^6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-    "@electron-forge/maker-zip": "^6.0.0-beta.54",
     "@types/eslint": "^7.2.6",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/experimental-utils": "^4.15.2",
@@ -143,10 +137,7 @@
   },
   "scripts": {
     "test": "jest scripts/test.test.js --coverage --detectOpenHandles --forceExit",
-    "start": "npx electron-forge start",
-    "package": "npx electron-forge package",
-    "make": "npx electron-forge make",
-	"electron-test": "tsc -p tsconfig.json && npx electron resources/index.html"
+    "electron-test": "tsc -p tsconfig.json && npx electron resources/index.html"
   },
   "jest": {
     "testEnvironment": "node",
@@ -164,32 +155,5 @@
     "useTabs": true,
     "bracketSpacing": false,
     "printWidth": 120
-  },
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "civ13"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
   }
 }

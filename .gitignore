@@ -77,3 +77,4 @@ server.bat
 ts-built/
 *.js
 reports/test-report.xml
+out/
