@@ -2,11 +2,15 @@
 cd -
 apt install nodejs npm
 npm install --production
+cd client_src
+git pull
+cd -
 echo Transpiling to JavaScript...
 npx tsc -p tsconfig.json
 cd client_src
 echo Browserifying client...
-node compile.js
+npx tsc -p tsconfig.json
+node compile.js "./../resources/"
 cd -
 cd maps
 echo Generating the map...
