@@ -8,7 +8,31 @@ const Sound = require("./lib/sound.js");
 const Matrix = require("./lib/matrix.js");
 const {Eye, Plane} = require("./lib/eye.js");
 const isElectron = require("is-electron");
+const {app, BrowserWindow} = require('electron');
+//electron stuff
+let win: typeof BrowserWindow;
 
+function createWindow () {
+	win = new BrowserWindow({
+		width: 1280,
+		height: 720,
+		webPreferences: {nodeIntegration: true}
+	});
+	win.loadURL('http://localhost:8000/start_page.html');
+	win.on('closed', function () {win = null;});
+	win.loadFile('index.html');
+}
+
+app.on('ready', createWindow);
+
+app.on('window-all-closed', () => {
+	if (process.platform !== 'darwin') {app.quit();}
+});
+
+app.on('activate', function () {
+	if (win === null) {createWindow();}
+  });
+//end of electron stuff
 class TypespessClient extends EventEmitter {
 	constructor(wsurl: string, resRoot = "") {
 		super();
