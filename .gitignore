@@ -78,3 +78,4 @@ ts-built/
 *.js
 reports/test-report.xml
 out/
+client_src/

@@ -3,11 +3,15 @@
 title Typespess Server
 
 cd..
+cd client_src
+call git pull
+cd..
 echo Transpiling Server...
 call npx tsc -p tsconfig.json
 cd client_src
 echo Browserifying Client...
-call node compile.js
+call npx tsc -p tsconfig.json
+call node compile.js "./../resources/"
 cd..
 echo Launching Server...
 call node index.js
