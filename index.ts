@@ -3,6 +3,7 @@ const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 const World = require("./code/game/world.js");
 const Database = require("./code/database.js");
+
 const {URLSearchParams} = require("url");
 
 console.info("SERVER: Loading game...");
@@ -185,6 +186,7 @@ if (global.is_bs_editor_env || global.is_test_env) {
 			ws.on("message", message_handler);
 		};
 	}
+
 
 	const serve = serveStatic(global.Tserver.resRoot, {index: ["index.html"]});
 
