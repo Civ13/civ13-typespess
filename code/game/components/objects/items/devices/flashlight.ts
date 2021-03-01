@@ -87,7 +87,8 @@ class Sun extends Component {
 		this.sun_timeout = null;
 		if (this.running && this.a.x !== null && this.a.y !== null) {
 			this.a.move(-1, 0, "sun");
-			console.info("WORLD: Sun moved 1 tile west: "+this.a.x+","+this.a.y);
+			if (this.a.x && this.a.y)
+				{console.info("WORLD: Sun moved 1 tile west: "+this.a.x+","+this.a.y);}
 			this.sun_timeout = setTimeout(this.run_sun.bind(this), 60000);
 		}
 	}
