@@ -7,6 +7,9 @@ declare namespace NodeJS {
 		is_bs_editor_env: boolean;
 		is_test_env: boolean;
 		workspaceDir: string;
+		server_version: string = "0.0.0";
+		client_version: string = "0.0.0";
+		min_client_version: number = 0;
 	}
 }
 
