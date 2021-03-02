@@ -16,4 +16,4 @@ jobs:
       - uses: actions/upload-artifact@v1
         with:
           name: resources
-          path: ${{ github.workspace }}
+          path: ${{ github.workspace }}/resources.zip
