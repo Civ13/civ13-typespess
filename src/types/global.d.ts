@@ -9,7 +9,7 @@ declare namespace NodeJS {
 		workspaceDir: string;
 		server_version: string = "0.0.0";
 		client_version: string = "0.0.0";
-		min_client_version: number = 0;
+		min_client_version: string = "0.0.0";
 	}
 }
 

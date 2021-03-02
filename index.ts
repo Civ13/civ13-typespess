@@ -15,9 +15,10 @@ global.Tserver.resRoot = "./resources/";
 
 const tmp_pk = JSON.parse(fs.readFileSync("package.json", "utf8"));
 global.server_version = tmp_pk.version;
-global.min_client_version = 10;
+global.min_client_version = "0.1.0";
 
 console.info("SERVER: version "+global.server_version);
+console.info("SERVER: requires client version "+global.min_client_version+" or newer");
 global.Tserver.importModule(require("./code/game/area/area_components.js"));
 global.Tserver.importModule(require("./code/game/area/area.js"));
 global.Tserver.importModule(require("./code/game/components/climbable.js"));
