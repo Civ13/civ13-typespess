@@ -17,7 +17,7 @@ const tmp_pk = JSON.parse(fs.readFileSync("package.json", "utf8"));
 global.server_version = tmp_pk.version;
 global.min_client_version = 10;
 
-console.info("Server version: "+global.server_version);
+console.info("SERVER: version "+global.server_version);
 global.Tserver.importModule(require("./code/game/area/area_components.js"));
 global.Tserver.importModule(require("./code/game/area/area.js"));
 global.Tserver.importModule(require("./code/game/components/climbable.js"));
@@ -163,6 +163,7 @@ if (global.is_bs_editor_env || global.is_test_env) {
 			removeListener: (arg0: string, arg1: (msg: any) => void) => void;
 			on: (arg0: string, arg1: (msg: any) => void) => void;
 		}) {
+			ws.send(JSON.stringify({min_client_version: global.min_client_version}));
 			ws.send(JSON.stringify({login_type: "database"}));
 			let validated = {value: false, name: "none"};
 			const message_handler = (msg: string) => {

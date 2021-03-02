@@ -175,6 +175,7 @@ class Typespess extends EventEmitter {
 			}
 		};
 		ws.on("message", handle_message);
+		ws.send(JSON.stringify({min_client_version: global.min_client_version}));
 		ws.send(JSON.stringify({login_type: "debug"}));
 	}
 
