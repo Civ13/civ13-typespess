@@ -13,7 +13,7 @@ jobs:
         with:
           files: resources/
           dest: resources.zip
-      - uses: actions/upload-artifact@v1
+      - uses: EndBug/add-and-commit@v7
         with:
-          name: resources
-          path: ${{ github.workspace }}/resources.zip
+          add: "resources.zip"
+          message: 'zipping resources'
