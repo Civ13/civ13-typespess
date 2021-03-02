@@ -3,7 +3,7 @@ const Typespess = require("./code/game/server.js");
 const read_config = require("./code/config.js");
 const World = require("./code/game/world.js");
 const Database = require("./code/database.js");
-
+const fs = require("fs");
 const {URLSearchParams} = require("url");
 
 console.info("SERVER: Loading game...");
@@ -13,6 +13,11 @@ global.Tworld = new World(global.Tserver);
 
 global.Tserver.resRoot = "./resources/";
 
+const tmp_pk = JSON.parse(fs.readFileSync("package.json", "utf8"));
+global.server_version = tmp_pk.version;
+global.min_client_version = 10;
+
+console.info("Server version: "+global.server_version);
 global.Tserver.importModule(require("./code/game/area/area_components.js"));
 global.Tserver.importModule(require("./code/game/area/area.js"));
 global.Tserver.importModule(require("./code/game/components/climbable.js"));
