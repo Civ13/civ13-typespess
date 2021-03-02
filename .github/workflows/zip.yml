@@ -12,8 +12,8 @@ jobs:
       - uses: papeloto/action-zip@v1
         with:
           files: resources/
-          dest: resources2.zip
+          dest: resources.zip
       - uses: actions/upload-artifact@v1
         with:
           name: resources
-          path: ${{ github.workspace }}/resources2.zip
+          path: ${{ github.workspace }}
