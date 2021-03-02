@@ -13,3 +13,7 @@ jobs:
         with:
           files: resources/
           dest: resources2.zip
+      - uses: actions/upload-artifact@v1
+        with:
+          name: resources
+          path: ${{ github.workspace }}/resources2.zip
