@@ -1,4 +1,6 @@
 root = true
+end_of_line = lf
+insert_final_newline = true
 
 [*.{html,css,js,ts,json,cson,atom,recipes,crafting}]
 indent_style = space

@@ -147,28 +147,23 @@ class MobBodyParts extends Component {
 		prev: any,
 		damage: number,
 		damage_type = "brute",
-		def_zone: any = null,
+		def_zone: string = null,
 		blocked = this.run_armor_check(def_zone, "melee")
 	) {
 		if (damage_type !== "brute" && damage_type !== "burn") {
 			return prev();
 		}
+		let bp = null;
 		const hit_percent = (100 - blocked) / 100;
 		if (!damage || hit_percent < 0) {return false;}
 		if (!has_component(def_zone, "BodyPart")) {
-			let bp = null;
-			if (!def_zone) {
-				def_zone = random_zone(def_zone);
-			}
+			if (!def_zone) {def_zone = random_zone(def_zone);}
 			bp = this.limbs[def_zone];
-			if (!bp) {
-				bp = this.limbs.torso;
-			}
-			if (!bp) {
-				return;
-			}
+			if (!bp) {bp = this.limbs.torso;}
+			if (!bp) {return;}
 		}
-		def_zone.c.BodyPart.receive_damage(damage_type, damage * hit_percent);
+		if (bp)
+			{bp.c.BodyPart.receive_damage(damage_type, damage * hit_percent);}
 	}
 
 	get_bodypart(zone: string) {
@@ -267,6 +262,7 @@ class BodyPart extends Component {
 					icon: "icons/mob/dam_mob/",
 					icon_state: `${this.dmg_overlay_type}_${this.body_zone}_${brutestate}0`,
 					overlay_layer: 0.2,
+					dir: atom.dir,
 		}
 			: null;
 		atom.overlays[`limb_${this.body_zone}_burn`] = burnstate
@@ -274,6 +270,7 @@ class BodyPart extends Component {
 					icon: "icons/mob/dam_mob/",
 					icon_state: `${this.dmg_overlay_type}_${this.body_zone}_0${burnstate}`,
 					overlay_layer: 0.2,
+					dir: atom.dir,
 		}
 			: null;
 	}

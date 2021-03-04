@@ -37,7 +37,8 @@ module.exports = {
 		if (zone && Math.random() < prob) {
 			return zone;
 		}
-
+		if (!zone)
+			{zone = "torso";}
 		const t = Math.floor(Math.random() * 18);
 		if (t === 0) {
 			return "head";

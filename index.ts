@@ -129,7 +129,6 @@ if (global.is_bs_editor_env || global.is_test_env) {
 	const net = require("net");
 	const https = require("https");
 	const serveStatic = require("serve-static");
-	const fs = require("fs");
 
 	const database = new Database("typespess");
 

@@ -1102,9 +1102,7 @@ class Slot extends EventEmitter {
 				if (this.mob) {icodir = Typespess.dir2ico(this.mob.dir);}
 				this.mob.overlays[`inhand_${this.id}`] = {
 					icon_state: this[_item].c.Item.inhand_icon_state,
-					icon: `${this[_item].c.Item[`inhand_${this.id}_icon`]}${this[_item].c.Item.inhand_icon_state}/${
-						this[_item].c.Item.inhand_icon_state
-					}-dir${icodir}.png`,
+					icon: `${this[_item].c.Item[`inhand_${this.id}_icon`]}${this[_item].c.Item.inhand_icon_state}/${this[_item].c.Item.inhand_icon_state}-dir${icodir}.png`,
 					overlay_layer: this.props.worn_layer,
 				};
 			}
