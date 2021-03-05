@@ -31,9 +31,8 @@ class BloodDripsDecal extends Component {
 	constructor(atom: any, template: any) {
 		super(atom, template);
 		for (let i = 0; i < this.num_drips; i++) {
-			this.a.overlays[`drip_${i}`] = {icon_state: _.sample(this.drip_icons)};
+			this.a.overlays[`drip_${i}`] = {icon: "icons/effects/blood/", icon_state: _.sample(this.drip_icons)};
 		}
-		this.a.icon_state = null;
 		this.a.c.CleanableDecal.on("merged", this.merged.bind(this));
 	}
 	merged(other: Record<string, any>) {
@@ -89,6 +88,7 @@ class FootprintsDecal extends Component {
 				this.a.overlays[`entered_${dir}`] = null;
 			} else if (to & dir && !(from & dir)) {
 				this.a.overlays[`entered_${dir}`] = {
+					icon: "icons/effects/blood/",
 					icon_state: `${this.type}1`,
 					dir,
 					alpha: this.a.alpha,
@@ -103,6 +103,7 @@ class FootprintsDecal extends Component {
 				this.a.overlays[`exited_${dir}`] = null;
 			} else if (to & dir && !(from & dir)) {
 				this.a.overlays[`exited_${dir}`] = {
+					icon: "icons/effects/blood/",
 					icon_state: `${this.type}2`,
 					dir,
 					alpha: this.a.alpha,

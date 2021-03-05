@@ -262,7 +262,7 @@ class BodyPart extends Component {
 					icon: "icons/mob/dam_mob/",
 					icon_state: `${this.dmg_overlay_type}_${this.body_zone}_${brutestate}0`,
 					overlay_layer: 0.2,
-					dir: atom.dir,
+					dir: Typespess.dir2ico(atom.dir),
 		}
 			: null;
 		atom.overlays[`limb_${this.body_zone}_burn`] = burnstate
@@ -270,7 +270,7 @@ class BodyPart extends Component {
 					icon: "icons/mob/dam_mob/",
 					icon_state: `${this.dmg_overlay_type}_${this.body_zone}_0${burnstate}`,
 					overlay_layer: 0.2,
-					dir: atom.dir,
+					dir: Typespess.dir2ico(atom.dir),
 		}
 			: null;
 	}
