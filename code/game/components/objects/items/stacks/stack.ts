@@ -1,4 +1,4 @@
-import {statSync} from "fs";
+const {statSync} = require("fs");
 
 export{};
 const {Component, Atom, chain_func, has_component, to_chat} = require("./../../../../../../code/game/server.js");

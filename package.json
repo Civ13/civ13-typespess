@@ -23,7 +23,6 @@
     "cson": "^7.20.0",
     "finalhandler": "^1.1.2",
     "is-electron": "^2.2.0",
-    "monaco-editor": "^0.22.3",
     "node-fetch": "^2.6.1",
     "pouchdb": "^7.2.2",
     "pouchdb-server": "^4.2.0",
@@ -38,13 +37,9 @@
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/experimental-utils": "^4.15.2",
     "@typescript-eslint/parser": "^3.10.1",
-    "electron": "11.3.0",
     "eslint": "^7.19.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-sonarjs": "^0.6.0",
-    "jest": "^26.6.3",
-    "jest-sonar": "^0.2.12",
-    "jest-sonar-reporter": "^2.0.0"
+    "eslint-plugin-sonarjs": "^0.6.0"
   },
   "engines": {
     "node": ">=14.0.0",
@@ -129,26 +124,6 @@
       "wrap-iife": "error",
       "node/no-unpublished-require": 0
     }
-  },
-  "jestSonar": {
-    "reportPath": "reports",
-    "reportFile": "test-report.xml",
-    "indent": 4
-  },
-  "scripts": {
-    "test": "jest scripts/test.test.js --coverage --detectOpenHandles --forceExit",
-    "electron-test": "tsc -p tsconfig.json && npx electron resources/index.html"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "collectCoverage": true,
-    "testResultsProcessor": "jest-sonar-reporter",
-    "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "testMatch": [
-      "<rootDir>/scripts/test.test.js"
-    ]
   },
   "prettier": {
     "tabWidth": 4,
