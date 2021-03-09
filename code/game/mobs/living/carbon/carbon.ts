@@ -52,6 +52,11 @@ class CarbonMob extends Component.Networked {
 		this.a.c.LivingMob.damages.stamina.affects_health = false;
 
 		this.organs = {};
+
+		this.hunger = 100;
+		this.thirst = 100;
+		this.mood = 100;
+
 		new Atom(this.a.server, "organ_lungs").c.Organ.insert(this.a);
 		new Atom(this.a.server, "organ_liver").c.Organ.insert(this.a);
 	}
@@ -261,9 +266,29 @@ class CarbonMob extends Component.Networked {
 		this.handle_organs();
 		this.handle_blood();
 		this.handle_liver();
+
+		this.handle_hunger_thirst();
+		this.handle_mood();
+
 		this.a.c.LivingMob.adjust_damage("stamina", -3);
 	}
 
+	handle_mood() {
+		if (this.hunger <= 30)
+			{this.mood -= 0.1;}
+		if (this.thirst <= 30)
+			{this.mood -= 0.12;}
+		this.mood = Math.min(Math.max(this.mood, 0), 100);
+	}
+	handle_hunger_thirst() {
+		if (this.hunger <= 100 && this.hunger > 0)
+			{this.hunger -= 0.05;}
+		this.hunger = Math.min(Math.max(this.hunger, 0), 100);
+
+		if (this.thirst <= 100 && this.thirst > 0)
+			{this.thirst -= 0.08;}
+		this.thirst = Math.min(Math.max(this.thirst, 0), 100);
+	}
 	handle_organs() {
 		if (this.organs) {
 			for (const torgan of Object.values(this.organs)) {
