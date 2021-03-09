@@ -119,14 +119,15 @@ class CarbonMob extends Component.Networked {
 	update_health_hud() {
 		const health_hud = this.a.c.Eye.screen.health;
 		if (!health_hud) {return;}
-		const health = this.a.c.LivingMob.health - this.a.c.LivingMob.get_damage("stamina");
-		const max_health = this.a.c.LivingMob.max_health;
-		let variant;
+		let variant = 0;
 		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
-			variant = Math.min(Math.max(5 - Math.floor((health / max_health) * 5), 0), 6);
-		} else {
-			variant = 7;
-		}
+			if (this.a.c.CarbonMob.mood < 85 && this.a.c.CarbonMob.mood >= 70) {variant = 1;}
+			if (this.a.c.CarbonMob.mood < 70 && this.a.c.CarbonMob.mood >= 55) {variant = 2;}
+			if (this.a.c.CarbonMob.mood < 55 && this.a.c.CarbonMob.mood >= 40) {variant = 3;}
+			if (this.a.c.CarbonMob.mood < 40 && this.a.c.CarbonMob.mood >= 25) {variant = 4;}
+			if (this.a.c.CarbonMob.mood < 25 && this.a.c.CarbonMob.mood >= 12) {variant = 5;}
+			if (this.a.c.CarbonMob.mood < 12 && this.a.c.CarbonMob.mood >= 0) {variant = 6;}
+		} else {variant = 7;}
 		health_hud.icon = "icons/ui/screen_gen/";
 		health_hud.icon_state = `health${variant}`;
 	}
