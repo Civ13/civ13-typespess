@@ -79,3 +79,4 @@ ts-built/
 reports/test-report.xml
 out/
 client_src/
+tools/
