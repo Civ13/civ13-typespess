@@ -787,7 +787,7 @@ div.button:active.dropdown-item {
 .fa {
 	display: inline-block;
 	font: normal normal normal 14px / 1;
-	font-family: FontAwesome, sans-serif;
+	font-family: "Roboto Mono", sans-serif;
 	font-size: inherit;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
@@ -904,7 +904,7 @@ div.button:active.dropdown-item {
 	margin-left: 2px;
 	display: inline-block;
 	font: normal normal normal 14px / 1;
-	font-family: FontAwesome, sans-serif;
+	font-family: "Roboto Mono", sans-serif;
 	font-size: inherit;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
@@ -939,7 +939,7 @@ div.button:active.dropdown-item {
 	top: 0;
 	display: inline-block;
 	font: normal normal normal 14px / 1;
-	font-family: FontAwesome, sans-serif;
+	font-family: "Roboto Mono", sans-serif;
 	font-size: inherit;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
