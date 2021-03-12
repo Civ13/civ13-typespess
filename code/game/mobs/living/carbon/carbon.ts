@@ -71,7 +71,6 @@ class CarbonMob extends Component.Networked {
 
 	health_changed() {
 		this.update_damage_hud();
-		this.update_health_hud();
 	}
 
 	damage_changed(type: string) {
@@ -121,14 +120,14 @@ class CarbonMob extends Component.Networked {
 		if (!health_hud) {return;}
 		let variant = 0;
 		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
-			if (this.a.c.CarbonMob.mood < 85 && this.a.c.CarbonMob.mood >= 70) {variant = 1;}
-			if (this.a.c.CarbonMob.mood < 70 && this.a.c.CarbonMob.mood >= 55) {variant = 2;}
-			if (this.a.c.CarbonMob.mood < 55 && this.a.c.CarbonMob.mood >= 40) {variant = 3;}
-			if (this.a.c.CarbonMob.mood < 40 && this.a.c.CarbonMob.mood >= 25) {variant = 4;}
-			if (this.a.c.CarbonMob.mood < 25 && this.a.c.CarbonMob.mood >= 12) {variant = 5;}
-			if (this.a.c.CarbonMob.mood < 12 && this.a.c.CarbonMob.mood >= 0) {variant = 6;}
-		} else {variant = 7;}
-		health_hud.icon = "icons/ui/screen_gen/";
+			if (this.a.c.CarbonMob.mood >= 85) {this.a.c.Eye.screen.health.desc = "Your mood is excellent!";}
+			else if (this.a.c.CarbonMob.mood < 85 && this.a.c.CarbonMob.mood >= 70) {variant = 1;this.a.c.Eye.screen.health.desc = "Your mood is very good!";}
+			else if (this.a.c.CarbonMob.mood < 70 && this.a.c.CarbonMob.mood >= 55) {variant = 2;this.a.c.Eye.screen.health.desc = "Your mood is good.";}
+			else if (this.a.c.CarbonMob.mood < 55 && this.a.c.CarbonMob.mood >= 40) {variant = 3;this.a.c.Eye.screen.health.desc = "Your mood is decent.";}
+			else if (this.a.c.CarbonMob.mood < 40 && this.a.c.CarbonMob.mood >= 25) {variant = 4;this.a.c.Eye.screen.health.desc = "Your mood is low.";}
+			else if (this.a.c.CarbonMob.mood < 25 && this.a.c.CarbonMob.mood >= 12) {variant = 5;this.a.c.Eye.screen.health.desc = "Your mood is bad!";}
+			else if (this.a.c.CarbonMob.mood < 12 && this.a.c.CarbonMob.mood >= 0) {variant = 6;this.a.c.Eye.screen.health.desc = "Your mood is terrible!";}
+		} else {variant = 7;this.a.c.Eye.screen.health.desc = "You are dead.";}
 		health_hud.icon_state = `health${variant}`;
 	}
 
@@ -270,7 +269,7 @@ class CarbonMob extends Component.Networked {
 
 		this.handle_hunger_thirst();
 		this.handle_mood();
-
+		this.update_health_hud();
 		this.a.c.LivingMob.adjust_damage("stamina", -3);
 	}
 

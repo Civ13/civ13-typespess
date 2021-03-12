@@ -444,9 +444,10 @@ class MobInventory extends Component {
 				screen_loc_x: 13.875,
 				screen_loc_y: 6.46875,
 				layer: 30,
+				desc: "Your mood is good.",
 			},
 		});
-
+		
 		this.on("handcuffed_changed", this.handcuffed_changed.bind(this));
 
 		make_watched_property(this, "handcuffed");
