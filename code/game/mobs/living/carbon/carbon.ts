@@ -120,14 +120,14 @@ class CarbonMob extends Component.Networked {
 		if (!health_hud) {return;}
 		let variant = 0;
 		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
-			if (this.a.c.CarbonMob.mood >= 85) {this.a.c.Eye.screen.health.desc = "Your mood is excellent!";}
-			else if (this.a.c.CarbonMob.mood < 85 && this.a.c.CarbonMob.mood >= 70) {variant = 1;this.a.c.Eye.screen.health.desc = "Your mood is very good!";}
-			else if (this.a.c.CarbonMob.mood < 70 && this.a.c.CarbonMob.mood >= 55) {variant = 2;this.a.c.Eye.screen.health.desc = "Your mood is good.";}
-			else if (this.a.c.CarbonMob.mood < 55 && this.a.c.CarbonMob.mood >= 40) {variant = 3;this.a.c.Eye.screen.health.desc = "Your mood is decent.";}
-			else if (this.a.c.CarbonMob.mood < 40 && this.a.c.CarbonMob.mood >= 25) {variant = 4;this.a.c.Eye.screen.health.desc = "Your mood is low.";}
-			else if (this.a.c.CarbonMob.mood < 25 && this.a.c.CarbonMob.mood >= 12) {variant = 5;this.a.c.Eye.screen.health.desc = "Your mood is bad!";}
-			else if (this.a.c.CarbonMob.mood < 12 && this.a.c.CarbonMob.mood >= 0) {variant = 6;this.a.c.Eye.screen.health.desc = "Your mood is terrible!";}
-		} else {variant = 7;this.a.c.Eye.screen.health.desc = "You are dead.";}
+			if (this.a.c.CarbonMob.mood >= 85) {this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is excellent!";}
+			else if (this.a.c.CarbonMob.mood < 85 && this.a.c.CarbonMob.mood >= 70) {variant = 1;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is very good!";}
+			else if (this.a.c.CarbonMob.mood < 70 && this.a.c.CarbonMob.mood >= 55) {variant = 2;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is good.";}
+			else if (this.a.c.CarbonMob.mood < 55 && this.a.c.CarbonMob.mood >= 40) {variant = 3;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is decent.";}
+			else if (this.a.c.CarbonMob.mood < 40 && this.a.c.CarbonMob.mood >= 25) {variant = 4;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is low.";}
+			else if (this.a.c.CarbonMob.mood < 25 && this.a.c.CarbonMob.mood >= 12) {variant = 5;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is bad!";}
+			else if (this.a.c.CarbonMob.mood < 12 && this.a.c.CarbonMob.mood >= 0) {variant = 6;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is terrible!";}
+		} else {variant = 7;this.a.c.Eye.screen.health.components.Examine.desc = "You are dead.";}
 		health_hud.icon_state = `health${variant}`;
 	}
 

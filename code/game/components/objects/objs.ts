@@ -158,7 +158,9 @@ class Examine extends Component {
 	}
 
 	examine(user: any) {
-		to_chat`That's <b>${this.a}</b>`(user);
+		if (!this.dont_declare) {
+			to_chat`That's <b>${this.a}</b>`(user);
+		}
 		if (this.desc) {
 			to_chat(user, "<i>" + this.desc + "</i>");
 		}
