@@ -446,7 +446,7 @@ class MobInventory extends Component {
 						}
 				},
 				icon: "icons/ui/screen_gen/",
-				icon_state: "health0",
+				icon_state: "health7",
 				name: "mood",
 				screen_loc_x: 13.875,
 				screen_loc_y: 6.46875,
