@@ -129,6 +129,17 @@ class CarbonMob extends Component.Networked {
 			else if (this.a.c.CarbonMob.mood < 12 && this.a.c.CarbonMob.mood >= 0) {variant = 6;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is terrible!";}
 		} else {variant = 7;this.a.c.Eye.screen.health.components.Examine.desc = "You are dead.";}
 		health_hud.icon_state = `health${variant}`;
+		const nutrition_hud = this.a.c.Eye.screen.nutrition;
+		if (!nutrition_hud) {return;}
+		variant = 0;
+		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
+			this.a.c.Eye.screen.nutrition.components.Examine.desc = `<b>Hunger:</b> ${this.a.c.CarbonMob.hunger}<br><b>Thirst:</b> ${this.a.c.CarbonMob.thirst}`;
+			if (this.a.c.CarbonMob.thirst >= 75 && this.a.c.CarbonMob.hunger >= 75) {variant = 1;}
+			else if ((this.a.c.CarbonMob.thirst < 75 && this.a.c.CarbonMob.thirst >= 50) || (this.a.c.CarbonMob.hunger < 75 && this.a.c.CarbonMob.hunger >= 50)) {variant = 2;}
+			else if ((this.a.c.CarbonMob.thirst < 50 && this.a.c.CarbonMob.thirst >= 25) || (this.a.c.CarbonMob.hunger < 50 && this.a.c.CarbonMob.hunger >= 25)) {variant = 3;}
+			else if ((this.a.c.CarbonMob.thirst < 25 && this.a.c.CarbonMob.thirst >= 0) || (this.a.c.CarbonMob.hunger < 25 && this.a.c.CarbonMob.hunger >= 0)) {variant = 4;}
+		} else {variant = 0;this.a.c.Eye.screen.nutrition.components.Examine.desc = "You are dead.";}
+		nutrition_hud.icon_state = `nutrition${variant}`;
 	}
 
 	update_damage_hud() {
@@ -278,16 +289,16 @@ class CarbonMob extends Component.Networked {
 			{this.mood -= 0.1;}
 		if (this.thirst <= 30)
 			{this.mood -= 0.12;}
-		this.mood = Math.min(Math.max(this.mood, 0), 100);
+		this.mood = Number(Math.min(Math.max(this.mood, 0), 100).toFixed(2));
 	}
 	handle_hunger_thirst() {
 		if (this.hunger <= 100 && this.hunger > 0)
 			{this.hunger -= 0.05;}
-		this.hunger = Math.min(Math.max(this.hunger, 0), 100);
+		this.hunger = Number(Math.min(Math.max(this.hunger, 0), 100).toFixed(2));
 
 		if (this.thirst <= 100 && this.thirst > 0)
 			{this.thirst -= 0.08;}
-		this.thirst = Math.min(Math.max(this.thirst, 0), 100);
+		this.thirst = Number(Math.min(Math.max(this.thirst, 0), 100).toFixed(2));
 	}
 	handle_organs() {
 		if (this.organs) {
