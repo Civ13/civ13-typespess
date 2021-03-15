@@ -98,15 +98,16 @@ Cyanide:
 	metabolization_rate: 0.0625
 	toxpwr: 1.25
 
-BadFood:
+Salmonella:
 	subtype: "toxin"
-	name: "Bad Food"
-	description: "The result of some abomination of cookery, food so bad it's toxic."
+	name: "Salmonella"
+	description: "You should've cooked the meat properly."
 	reagent_state: "liquid"
 	color: [0.84, 0.84, 0.85]
 	metabolization_rate: 0.125
 	toxpwr: 0.5
-	taste_description: "bad cooking"
+	taste_description: "uncooked"
+
 SodiumThiopental:
 	subtype: "toxin"
 	name: "Sodium Thiopental"

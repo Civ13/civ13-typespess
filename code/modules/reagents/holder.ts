@@ -229,6 +229,7 @@ class ReagentHolder extends Component {
 
 		for (const [key, reagent] of this.reagents) {
 			if (!this.should_metabolize_reagent(key /*, reagent*/)) {continue;}
+			dt = Math.min(reagent.volume,Math.max(reagent.volume*0.01, 0.03));
 			if (reagent.overdose_threshold && reagent.volume >= reagent.overdose_threshold && !reagent.overdosed) {
 				reagent.overdosed = true;
 				reagent.overdose_start();
@@ -249,7 +250,7 @@ class ReagentHolder extends Component {
 				const addiction = this.addictions.get(key);
 				addiction.addiction_stage = -15;
 			}
-			reagent.mob_life(dt);
+			reagent.mob_life(dt, this.a.c.CarbonMob);
 		}
 
 		if (this.addiction_tick >= 12) {

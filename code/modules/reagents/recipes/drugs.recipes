@@ -38,18 +38,3 @@ Methamphetamine:
 	results: { Methamphetamine: 4 }
 	required_reagents: { Ephedrine: 1, Iodine: 1, Phosphorus: 1, Hydrogen: 1 }
 	min_temp: 374
-
-
-BathSalts:
-	type: "reaction"
-	results: { BathSalts: 7 }
-	required_reagents: {
-		BadFood: 1
-		Saltpetre: 1
-		Nutriment: 1
-		SpaceCleaner: 1
-		UniversalEnzyme: 1
-		Tea: 1
-		Mercury: 1
-	}
-	min_temp: 374

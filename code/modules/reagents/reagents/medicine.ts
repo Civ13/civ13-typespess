@@ -13,7 +13,7 @@ Object.assign(Medicine.prototype, {
 
 class Leporazine extends Medicine {
 	// /datum/reagent/medicine/leporazine
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		if (this.holder.c.CarbonMob.bodytemperature > 310) {
 			this.holder.c.CarbonMob.bodytemperature = Math.max(
 				310,
@@ -25,7 +25,7 @@ class Leporazine extends Medicine {
 				this.holder.c.CarbonMob.bodytemperature + 20 * dt * atmos_defines.TEMPERATURE_DAMAGE_COEFFICIENT
 			);
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.Leporazine = Leporazine;
@@ -66,9 +66,9 @@ Object.assign(Rezadone.prototype, {
 
 class SilverSulfadiazine extends Medicine {
 	// /datum/reagent/medicine/silver_sulfadiazine //TODO: reaction_mob()
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.adjust_damage("burn", -1 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.SilverSulfadiazine = SilverSulfadiazine;
@@ -82,13 +82,13 @@ Object.assign(SilverSulfadiazine.prototype, {
 
 class Oxandrolone extends Medicine {
 	// /datum/reagent/medicine/oxandrolone
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		if (this.holder.c.LivingMob.get_damage("burn") > 50) {
 			this.holder.c.LivingMob.adjust_damage("burn", -2 * dt); //Twice as effective as silver sulfadiazine for severe burns
 		} else {
 			this.holder.c.LivingMob.adjust_damage("burn", -0.25 * dt); //But only a quarter as effective for minor ones
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		if (this.holder.c.LivingMob.get_damage("burn") > 0) {
@@ -144,14 +144,14 @@ Object.assign(SalineGlucoseSolution.prototype, {
 
 class Charcoal extends Medicine {
 	// /datum/reagent/medicine/charcoal
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.adjust_damage("tox", -1 * dt);
 		for (const key of this.holder.c.ReagentHolder.reagents.keys()) {
 			if (key !== this.constructor.name) {
 				this.holder.c.ReagentHolder.remove(key, 0.5 * dt);
 			}
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.Charcoal = Charcoal;
@@ -167,12 +167,12 @@ Object.assign(Charcoal.prototype, {
 
 class Omnizine extends Medicine {
 	// /datum/reagent/medicine/omnizine
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.adjust_damage("brute", -0.25 * dt);
 		this.holder.c.LivingMob.adjust_damage("burn", -0.25 * dt);
 		this.holder.c.LivingMob.adjust_damage("oxy", -0.25 * dt);
 		this.holder.c.LivingMob.adjust_damage("tox", -0.25 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		this.holder.c.LivingMob.adjust_damage("brute", 0.75 * dt);
@@ -194,7 +194,7 @@ Object.assign(Omnizine.prototype, {
 
 class Calomel extends Medicine {
 	// /datum/reagent/medicine/calomel
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		for (const key of this.holder.c.ReagentHolder.reagents.keys()) {
 			if (key !== this.constructor.name) {
 				this.holder.c.ReagentHolder.remove(key, 1.25 * dt);
@@ -203,7 +203,7 @@ class Calomel extends Medicine {
 		if (this.a.c.LivingMob.health > 20) {
 			this.holder.c.LivingMob.adjust_damage("tox", 1.25 * dt);
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.Calomel = Calomel;
@@ -218,11 +218,11 @@ Object.assign(Calomel.prototype, {
 
 class PotassiumIodide extends Medicine {
 	// /datum/reagent/medicine/potass_iodide
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		if (this.holder.c.CarbonMob.radiation > 0) {
 			this.holder.c.CarbonMob.radiation -= Math.min(this.holder.c.CarbonMob.radiation, 4 * dt);
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.PotassiumIodide = PotassiumIodide;
@@ -236,7 +236,7 @@ Object.assign(PotassiumIodide.prototype, {
 
 class PenteticAcid extends Medicine {
 	// /datum/reagent/medicine/pen_acid
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.CarbonMob.radiation -= Math.min(this.holder.c.CarbonMob.radiation - 250 * dt, 0) / 50;
 		this.holder.c.LivingMob.adjust_damage("tox", -1 * dt);
 		for (const key of this.holder.c.ReagentHolder.reagents.keys()) {
@@ -244,7 +244,7 @@ class PenteticAcid extends Medicine {
 				this.holder.c.ReagentHolder.remove(key, 1 * dt);
 			}
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.PenteticAcid = PenteticAcid;
@@ -258,13 +258,13 @@ Object.assign(PenteticAcid.prototype, {
 
 class SalicyclicAcid extends Medicine {
 	// /datum/reagent/medicine/sal_acid
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		if (this.holder.c.LivingMob.get_damage("brute") > 50) {
 			this.holder.c.LivingMob.adjust_damage("brute", -2 * dt); //Twice as effective as styptic powder for severe bruising
 		} else {
 			this.holder.c.LivingMob.adjust_damage("brute", -0.25 * dt); //But only a quarter as effective for more minor ones
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		if (this.holder.c.LivingMob.get_damage("brute") > 0) {
@@ -287,12 +287,12 @@ Object.assign(SalicyclicAcid.prototype, {
 
 class Salbutamol extends Medicine {
 	// /datum/reagent/medicine/salbutamol
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.adjust_damage("oxy", -1.5 * dt);
 		if (this.holder.c.CarbonMob.losebreath >= 2 * dt) {
 			this.holder.c.CarbonMob.losebreath -= 1 * dt;
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.Salbutamol = Salbutamol;
@@ -306,13 +306,13 @@ Object.assign(Salbutamol.prototype, {
 
 class Ephedrine extends Medicine {
 	// /datum/reagent/medicine/ephedrine
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.status_flags |= combat_defines.GOTTAGOFAST;
 		this.holder.c.LivingMob.adjust_effect("Stun", -1000 * dt);
 		this.holder.c.LivingMob.adjust_effect("Knockdown", -1000 * dt);
 		this.holder.c.LivingMob.adjust_effect("Unconscious", -1000 * dt);
 		this.holder.c.LivingMob.adjust_damage("clone", -0.5 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 
 	overdose_process(dt: number) {
@@ -364,13 +364,13 @@ Object.assign(Ephedrine.prototype, {
 
 class Diphenhydramine extends Medicine {
 	// /datum/reagent/medicine/diphenhydramine
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		if (Math.random() < 0.1) {
 			this.holder.c.CarbonMob.drowsiness += 0.5 * dt;
 		}
 		this.holder.c.CarbonMob.jitteriness -= 0.5 * dt;
 		this.holder.c.ReagentHolder.remove("Histamine", 1.5 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.Diphenhydramine = Diphenhydramine;
@@ -384,7 +384,7 @@ Object.assign(Diphenhydramine.prototype, {
 
 class Morphine extends Medicine {
 	// /datum/reagent/medicine/morphine //TODO: overdose_process(), and addiction_act_stage()s
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.status_flags |= combat_defines.IGNORESLOWDOWN;
 		if (this.time_in_mob === 22) {
 			to_chat`<span class='warning'>You start to feel tired...</span>`(this.holder);
@@ -393,7 +393,7 @@ class Morphine extends Medicine {
 		} else if (this.time_in_mob > 24) {
 			//TODO: M.Sleeping(40, 0)
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.Morphine = Morphine;
@@ -410,7 +410,7 @@ Object.assign(Morphine.prototype, {
 
 class Atropine extends Medicine {
 	// /datum/reagent/medicine/atropine
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		if (this.holder.c.LivingMob.health < 0) {
 			this.holder.c.LivingMob.adjust_damage("tox", -1 * dt);
 			this.holder.c.LivingMob.adjust_damage("brute", -1 * dt);
@@ -422,7 +422,7 @@ class Atropine extends Medicine {
 			this.holder.c.CarbonMob.dizziness = Math.max(2.5 * dt, this.holder.c.CarbonMob.dizziness);
 			this.holder.c.CarbonMob.jitteriness = Math.max(2.5 * dt, this.holder.c.CarbonMob.jitteriness);
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		this.holder.c.LivingMob.adjust_damage("tox", 0.25 * dt);
@@ -444,7 +444,7 @@ Object.assign(Atropine.prototype, {
 
 class Epinephrine extends Medicine {
 	// /datum/reagent/medicine/epinephrine
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		if (this.holder.c.LivingMob.health < 0) {
 			this.holder.c.LivingMob.adjust_damage("tox", -0.25 * dt);
 			this.holder.c.LivingMob.adjust_damage("brute", -0.25 * dt);
@@ -465,7 +465,7 @@ class Epinephrine extends Medicine {
 			this.holder.c.LivingMob.adjust_effect("Knockdown", -1000 * dt);
 			this.holder.c.LivingMob.adjust_effect("Unconscious", -1000 * dt);
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		if (Math.random() < 0.33) {
@@ -489,9 +489,9 @@ Object.assign(Epinephrine.prototype, {
 
 class Mannitol extends Medicine {
 	// /datum/reagent/medicine/mannitol
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.adjust_damage("brain", -1.5 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.Mannitol = Mannitol;
@@ -503,7 +503,7 @@ Object.assign(Mannitol.prototype, {
 
 class Stimulants extends Medicine {
 	// /datum/reagent/medicine/stimulants
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.status_flags |= combat_defines.GOTTAGOFAST;
 		if (this.a.c.LivingMob.health < 50 && this.a.c.LivingMob.health > 0) {
 			this.holder.c.LivingMob.adjust_damage("oxy", -0.5 * dt);
@@ -515,7 +515,7 @@ class Stimulants extends Medicine {
 		this.holder.c.LivingMob.adjust_effect("Knockdown", -3000 * dt);
 		this.holder.c.LivingMob.adjust_effect("Unconscious", -3000 * dt);
 		this.holder.c.LivingMob.adjust_damage("stamina", -2.5 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 
 	overdose_process(dt: number) {
@@ -549,9 +549,9 @@ Object.assign(Insulin.prototype, {
 
 class Bicaridine extends Medicine {
 	// /datum/reagent/medicine/bicaridine
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.adjust_damage("brute", -1 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		this.holder.c.LivingMob.adjust_damage("brute", 2 * dt);
@@ -569,9 +569,9 @@ Object.assign(Bicaridine.prototype, {
 
 class Dexalin extends Medicine {
 	// /datum/reagent/medicine/dexalin
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.adjust_damage("oxy", -1 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		this.holder.c.LivingMob.adjust_damage("oxy", 2 * dt);
@@ -589,9 +589,9 @@ Object.assign(Dexalin.prototype, {
 
 class Kelotane extends Medicine {
 	// /datum/reagent/medicine/kelotane
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.adjust_damage("burn", -1 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		this.holder.c.LivingMob.adjust_damage("burn", 2 * dt);
@@ -609,14 +609,14 @@ Object.assign(Kelotane.prototype, {
 
 class AntiToxin extends Medicine {
 	// /datum/reagent/medicine/antitoxin
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.holder.c.LivingMob.adjust_damage("tox", -1 * dt);
 		for (const key of this.holder.c.ReagentHolder.reagents.keys()) {
 			if (key !== this.constructor.name) {
 				this.holder.c.ReagentHolder.remove(key, 0.5 * dt);
 			}
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		this.holder.c.LivingMob.adjust_damage("tox", 2 * dt);
@@ -635,11 +635,11 @@ Object.assign(AntiToxin.prototype, {
 
 class Inaprovaline extends Medicine {
 	// /datum/reagent/medicine/inaprovaline
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		if (this.holder.c.CarbonMob.losebreath >= 2.5 * dt) {
 			this.holder.c.CarbonMob.losebreath -= 2.5 * dt;
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.Inaprovaline = Inaprovaline;
@@ -652,14 +652,14 @@ Object.assign(Inaprovaline.prototype, {
 
 class Tricordrazine extends Medicine {
 	// /datum/reagent/medicine/tricordrazine
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		if (Math.random() < 0.8) {
 			this.holder.c.LivingMob.adjust_damage("brute", -0.5 * dt);
 			this.holder.c.LivingMob.adjust_damage("burn", -0.5 * dt);
 			this.holder.c.LivingMob.adjust_damage("oxy", -0.5 * dt);
 			this.holder.c.LivingMob.adjust_damage("tox", -0.5 * dt);
 		}
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 	overdose_process(dt: number) {
 		this.holder.c.LivingMob.adjust_damage("brute", 1 * dt);
@@ -681,7 +681,7 @@ Object.assign(Tricordrazine.prototype, {
 
 class Haloperidol extends Medicine {
 	// /datum/reagent/medicine/haloperidol
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		for (const key of this.holder.c.ReagentHolder.reagents.keys()) {
 			if (key !== this.constructor.name) {
 				this.holder.c.ReagentHolder.remove(key, 2.5 * dt);
@@ -698,7 +698,7 @@ class Haloperidol extends Medicine {
 			this.holder.c.LivingMob.adjust_damage("brain", 0.5 * dt);
 		}
 		this.holder.c.LivingMob.adjust_damage("stamina", 1.25 * dt);
-		super.mob_life(dt);
+		super.mob_life(dt, mob);
 	}
 }
 module.exports.reagents.Haloperidol = Haloperidol;
