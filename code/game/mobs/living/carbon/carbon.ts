@@ -294,10 +294,22 @@ class CarbonMob extends Component.Networked {
 	handle_hunger_thirst() {
 		if (this.hunger <= 100 && this.hunger > 0)
 			{this.hunger -= 0.05;}
+		if (this.hunger <= 0)
+			{
+				this.a.c.LivingMob.health -= 0.25;
+				if (Math.random() < 0.05)
+					{to_chat`<span class='warning'>You feel very hungry!</span>`(this.a);}
+			}
 		this.hunger = Number(Math.min(Math.max(this.hunger, 0), 100).toFixed(2));
 
 		if (this.thirst <= 100 && this.thirst > 0)
 			{this.thirst -= 0.08;}
+		if (this.thirst <= 0)
+			{
+				this.a.c.LivingMob.health -= 0.3;
+				if (Math.random() < 0.05)
+					{to_chat`<span class='warning'>You feel very thirsty!</span>`(this.a);}
+			}
 		this.thirst = Number(Math.min(Math.max(this.thirst, 0), 100).toFixed(2));
 	}
 	handle_organs() {
