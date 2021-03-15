@@ -9,6 +9,7 @@ Water:
 	glass_desc: "The father of all refreshments."
 	shot_glass_icon_state: "shotglassclear"
 	subtype: "chemical"
+	hydration_factor: 2
 
 WeldingFuel:
 	name: "Welding fuel"

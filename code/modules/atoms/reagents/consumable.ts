@@ -35,10 +35,6 @@ class Consumable extends Component {
 
 			this.a.c.ReagentHolder.react_atom(target, "ingest");
 			this.a.c.ReagentHolder.transfer_percent_to(target, 1);
-			if (this.raw)
-			{
-				//TODO: Make the ingester sick
-			}
 			this.a.destroy();
 		})();
 		return true;

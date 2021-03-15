@@ -20,10 +20,11 @@ class Reagent extends EventEmitter {
 		this.reagent_state = "liquid";
 		this.color = [0, 0, 0];
 		this.can_synth = true;
-		this.metabolization_rate = 0.2;
+		this.metabolizatifon_rate = 0.2;
 		this.overdose_threshold = 0;
 		this.addiction_threshold = 0;
 		this.nutriment_factor = 0;
+		this.hydration_factor = 0;
 		this.boozepwr = 0;
 		this.toxpwr = 0;
 		this.subtype = "chemical";
@@ -100,9 +101,18 @@ class Reagent extends EventEmitter {
 		}
 	}
 
-	mob_life(dt: number) {
+	mob_life(dt: number, mob: Record<string,any> = null) {
 		this.time_in_mob += dt;
-		this.remove(this.metabolization_rate * dt);
+		const removal = this.metabolization_rate * dt;
+		if (this.volume > 0 && mob) {
+			if (this.nutriment_factor > 0)
+				{mob.hunger += removal*this.nutriment_factor;}
+			else if (this.hydration_factor > 0)
+				{mob.thirst += removal*this.hydration_factor;}
+			if (this.toxpwr > 0)
+			{mob.a.c.LivingMob.adjust_damage("tox", this.toxpwr * dt);}
+		}
+		this.remove(removal);
 	}
 
 	reaction_obj() {return;}

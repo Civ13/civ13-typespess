@@ -3,10 +3,11 @@ meat:
 	vars:
 		components:
 			ReagentHolder:
-				maximum_volume: 10
+				maximum_volume: 5
 				init_reagents:
 					Protein: 2
 					Fat: 2
+					Salmonella: 1
 			
 			Examine:
 				desc: "A slab of meat."

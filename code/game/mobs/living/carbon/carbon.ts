@@ -52,6 +52,11 @@ class CarbonMob extends Component.Networked {
 		this.a.c.LivingMob.damages.stamina.affects_health = false;
 
 		this.organs = {};
+
+		this.hunger = 100;
+		this.thirst = 100;
+		this.mood = 100;
+
 		new Atom(this.a.server, "organ_lungs").c.Organ.insert(this.a);
 		new Atom(this.a.server, "organ_liver").c.Organ.insert(this.a);
 	}
@@ -66,7 +71,6 @@ class CarbonMob extends Component.Networked {
 
 	health_changed() {
 		this.update_damage_hud();
-		this.update_health_hud();
 	}
 
 	damage_changed(type: string) {
@@ -114,16 +118,28 @@ class CarbonMob extends Component.Networked {
 	update_health_hud() {
 		const health_hud = this.a.c.Eye.screen.health;
 		if (!health_hud) {return;}
-		const health = this.a.c.LivingMob.health - this.a.c.LivingMob.get_damage("stamina");
-		const max_health = this.a.c.LivingMob.max_health;
-		let variant;
+		let variant = 0;
 		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
-			variant = Math.min(Math.max(5 - Math.floor((health / max_health) * 5), 0), 6);
-		} else {
-			variant = 7;
-		}
-		health_hud.icon = "icons/ui/screen_gen/";
-		health_hud.icon_state = `health${variant}`;
+			if (this.a.c.CarbonMob.mood >= 85) {variant = 0;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is excellent!";}
+			else if (this.a.c.CarbonMob.mood < 85 && this.a.c.CarbonMob.mood >= 70) {variant = 1;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is very good!";}
+			else if (this.a.c.CarbonMob.mood < 70 && this.a.c.CarbonMob.mood >= 55) {variant = 2;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is good.";}
+			else if (this.a.c.CarbonMob.mood < 55 && this.a.c.CarbonMob.mood >= 40) {variant = 3;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is decent.";}
+			else if (this.a.c.CarbonMob.mood < 40 && this.a.c.CarbonMob.mood >= 25) {variant = 4;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is low.";}
+			else if (this.a.c.CarbonMob.mood < 25 && this.a.c.CarbonMob.mood >= 12) {variant = 5;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is bad!";}
+			else if (this.a.c.CarbonMob.mood < 12 && this.a.c.CarbonMob.mood >= 0) {variant = 6;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is terrible!";}
+		} else {variant = 7;this.a.c.Eye.screen.health.components.Examine.desc = "You are dead.";}
+		this.a.c.Eye.screen.health.icon_state = `health${variant}`;
+		const nutrition_hud = this.a.c.Eye.screen.nutrition;
+		if (!nutrition_hud) {return;}
+		variant = 0;
+		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
+			this.a.c.Eye.screen.nutrition.components.Examine.desc = `<b>Hunger:</b> ${this.a.c.CarbonMob.hunger}<br><b>Thirst:</b> ${this.a.c.CarbonMob.thirst}`;
+			if (this.a.c.CarbonMob.thirst >= 75 && this.a.c.CarbonMob.hunger >= 75) {variant = 1;}
+			else if ((this.a.c.CarbonMob.thirst < 75 && this.a.c.CarbonMob.thirst >= 50) || (this.a.c.CarbonMob.hunger < 75 && this.a.c.CarbonMob.hunger >= 50)) {variant = 2;}
+			else if ((this.a.c.CarbonMob.thirst < 50 && this.a.c.CarbonMob.thirst >= 25) || (this.a.c.CarbonMob.hunger < 50 && this.a.c.CarbonMob.hunger >= 25)) {variant = 3;}
+			else if ((this.a.c.CarbonMob.thirst < 25 && this.a.c.CarbonMob.thirst >= 0) || (this.a.c.CarbonMob.hunger < 25 && this.a.c.CarbonMob.hunger >= 0)) {variant = 4;}
+		} else {variant = 0;this.a.c.Eye.screen.nutrition.components.Examine.desc = "You are dead.";}
+		this.a.c.Eye.screen.nutrition.icon_state = `nutrition${variant}`;
 	}
 
 	update_damage_hud() {
@@ -261,9 +277,41 @@ class CarbonMob extends Component.Networked {
 		this.handle_organs();
 		this.handle_blood();
 		this.handle_liver();
+
+		this.handle_hunger_thirst();
+		this.handle_mood();
+		this.update_health_hud();
 		this.a.c.LivingMob.adjust_damage("stamina", -3);
 	}
 
+	handle_mood() {
+		if (this.hunger <= 30)
+			{this.mood -= 0.1;}
+		if (this.thirst <= 30)
+			{this.mood -= 0.12;}
+		this.mood = Number(Math.min(Math.max(this.mood, 0), 100).toFixed(2));
+	}
+	handle_hunger_thirst() {
+		if (this.hunger <= 100 && this.hunger > 0)
+			{this.hunger -= 0.05;}
+		if (this.hunger <= 0)
+			{
+				this.a.c.LivingMob.health -= 0.25;
+				if (Math.random() < 0.05)
+					{to_chat`<span class='warning'>You feel very hungry!</span>`(this.a);}
+			}
+		this.hunger = Number(Math.min(Math.max(this.hunger, 0), 100).toFixed(2));
+
+		if (this.thirst <= 100 && this.thirst > 0)
+			{this.thirst -= 0.08;}
+		if (this.thirst <= 0)
+			{
+				this.a.c.LivingMob.health -= 0.3;
+				if (Math.random() < 0.05)
+					{to_chat`<span class='warning'>You feel very thirsty!</span>`(this.a);}
+			}
+		this.thirst = Number(Math.min(Math.max(this.thirst, 0), 100).toFixed(2));
+	}
 	handle_organs() {
 		if (this.organs) {
 			for (const torgan of Object.values(this.organs)) {

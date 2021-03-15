@@ -437,16 +437,40 @@ class MobInventory extends Component {
 		});
 
 		this.a.c.Eye.screen.health = new Atom(this.a.server, {
+			components: ["Examine"],
 			vars: {
+				components: {
+					Examine: {
+						desc: "Your mood is good.",
+						dont_declare: true,
+						}
+				},
 				icon: "icons/ui/screen_gen/",
-				icon_state: "health0",
-				name: "health",
+				icon_state: "health7",
+				name: "mood",
 				screen_loc_x: 13.875,
 				screen_loc_y: 6.46875,
 				layer: 30,
 			},
 		});
 
+		this.a.c.Eye.screen.nutrition = new Atom(this.a.server, {
+			components: ["Examine"],
+			vars: {
+				components: {
+					Examine: {
+						desc: "You feel full.",
+						dont_declare: true,
+						}
+				},
+				icon: "icons/ui/screen_gen/",
+				icon_state: "nutrition0",
+				name: "nutrition",
+				screen_loc_x: 13.875,
+				screen_loc_y: 7.46875,
+				layer: 30,
+			},
+		});
 		this.on("handcuffed_changed", this.handcuffed_changed.bind(this));
 
 		make_watched_property(this, "handcuffed");

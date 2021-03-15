@@ -82,9 +82,6 @@ module.exports = {
 	ATTACK_EFFECT_CLAW: "claw",
 	ATTACK_EFFECT_DISARM: "disarm",
 	ATTACK_EFFECT_BITE: "bite",
-	ATTACK_EFFECT_MECHFIRE: "mech_fire",
-	ATTACK_EFFECT_MECHTOXIN: "mech_toxin",
-	ATTACK_EFFECT_BOOP: "boop", //Honk
 
 	//intent defines
 	INTENT_HELP: "help",
@@ -120,10 +117,6 @@ module.exports = {
 	WEAPON_LIGHT: 1,
 	WEAPON_MEDIUM: 2,
 	WEAPON_HEAVY: 3,
-	//Gun trigger guards
-	TRIGGER_GUARD_ALLOW_ALL: -1,
-	TRIGGER_GUARD_NONE: 0,
-	TRIGGER_GUARD_NORMAL: 1,
 
 	//Object/Item sharpness
 	IS_BLUNT: 0,
