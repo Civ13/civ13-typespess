@@ -1084,7 +1084,7 @@ class Slot extends EventEmitter {
 		return this[_item];
 	}
 	set item(value) {
-		if (!has_component(value, "Item") && typeof value !== "undefined") {
+		if (!has_component(value, "Item") && typeof value !== "undefined" && value !== null) {
 			throw new TypeError(`${value} is not an atom with item component or undefined!`);
 		}
 		if (this[_item]) {
