@@ -176,13 +176,11 @@ class LargeContainer extends Component {
 		if (user.loc === this.a) {
 			return;
 		}
-		if (this.opened) {
-			if (item.c.Item.slot && item.c.Item.slot.can_unequip()) {
+		if (this.opened && item.c.Item.slot && item.c.Item.slot.can_unequip()) {
 				item.glide_size = 0;
 				item.loc = this.a.fine_loc;
 				return true;
 			}
-		}
 		return prev();
 	}
 
