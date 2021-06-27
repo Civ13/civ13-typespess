@@ -120,7 +120,7 @@ class CarbonMob extends Component.Networked {
 		if (!health_hud) {return;}
 		let variant = 0;
 		if (this.a.c.LivingMob.stat !== combat_defines.DEAD) {
-			if (this.a.c.CarbonMob.mood >= 85) {variant = 0;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is excellent!";}
+			if (this.a.c.CarbonMob.mood >= 85) {this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is excellent!";}
 			else if (this.a.c.CarbonMob.mood < 85 && this.a.c.CarbonMob.mood >= 70) {variant = 1;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is very good!";}
 			else if (this.a.c.CarbonMob.mood < 70 && this.a.c.CarbonMob.mood >= 55) {variant = 2;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is good.";}
 			else if (this.a.c.CarbonMob.mood < 55 && this.a.c.CarbonMob.mood >= 40) {variant = 3;this.a.c.Eye.screen.health.components.Examine.desc = "Your mood is decent.";}
@@ -138,7 +138,7 @@ class CarbonMob extends Component.Networked {
 			else if ((this.a.c.CarbonMob.thirst < 75 && this.a.c.CarbonMob.thirst >= 50) || (this.a.c.CarbonMob.hunger < 75 && this.a.c.CarbonMob.hunger >= 50)) {variant = 2;}
 			else if ((this.a.c.CarbonMob.thirst < 50 && this.a.c.CarbonMob.thirst >= 25) || (this.a.c.CarbonMob.hunger < 50 && this.a.c.CarbonMob.hunger >= 25)) {variant = 3;}
 			else if ((this.a.c.CarbonMob.thirst < 25 && this.a.c.CarbonMob.thirst >= 0) || (this.a.c.CarbonMob.hunger < 25 && this.a.c.CarbonMob.hunger >= 0)) {variant = 4;}
-		} else {variant = 0;this.a.c.Eye.screen.nutrition.components.Examine.desc = "You are dead.";}
+		} else {this.a.c.Eye.screen.nutrition.components.Examine.desc = "You are dead.";}
 		this.a.c.Eye.screen.nutrition.icon_state = `nutrition${variant}`;
 	}
 

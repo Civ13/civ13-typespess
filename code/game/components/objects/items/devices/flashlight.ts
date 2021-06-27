@@ -8,11 +8,10 @@ class Flashlight extends Component {
 		this.a.c.ItemActions.add_action({name: "Toggle Flashlight"});
 		this.a.c.LightSource.on("enabled_changed", this.enabled_changed.bind(this));
 		this.a.c.Item.attack_self = this.attack_self.bind(this);
-		this.enabled_changed();
 	}
 
 	enabled_changed() {
-		if (this.a.c.LightSource.enabled) {
+		if (!this.a.c.LightSource.enabled) {
 			this.a.icon_state = this.a.template.vars.icon_state + "-on";
 		} else {
 			this.a.icon_state = this.a.template.vars.icon_state;
@@ -21,6 +20,7 @@ class Flashlight extends Component {
 
 	attack_self() {
 		this.a.c.LightSource.enabled = !this.a.c.LightSource.enabled;
+		this.enabled_changed();
 	}
 }
 
