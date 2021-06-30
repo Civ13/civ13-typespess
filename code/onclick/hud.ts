@@ -45,7 +45,7 @@ class MobHud extends Component {
 			icon_state: string;
 		};
 		if (this.alerts[category]) {
-			thealert = this.do_alerts(thealert, category, new_master, template, severity);
+			thealert = this.do_alerts(category, new_master, template, severity);
 			if (!thealert) {return false;}
 		} else {
 			thealert = new Atom(this.a.server, template);
@@ -80,8 +80,8 @@ class MobHud extends Component {
 			}, thealert.c.Alert.timeout);
 		}
 	}
-	do_alerts(thealert: any, category: any, new_master: any, template: any, severity: any): any {
-		thealert = this.alerts[category];
+	do_alerts(category: any, new_master: any, template: any, severity: any): any {
+		const thealert = this.alerts[category];
 		if (thealert.c.Alert.override_alerts) {
 			return null;
 		}
