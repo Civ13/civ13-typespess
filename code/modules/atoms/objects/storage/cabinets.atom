@@ -8,6 +8,8 @@ emergency_closet:
 	components: ["Closet"]
 	vars:
 		components:
+			Closet:
+				base_icon: "locker"
 			Examine:
 				desc: "It's a storage unit for emergency breath maks and O2 tanks."
 			
@@ -21,6 +23,8 @@ fire_closet:
 	components: ["Closet"]
 	vars:
 		components:
+			Closet:
+				base_icon: "locker"
 			Examine:
 				desc: "It's a storage unit for fire-fighting supplies."
 			
@@ -35,8 +39,7 @@ tool_closet:
 	vars:
 		components:
 			Closet:
-				icon_door: "eng_tool"
-			
+				base_icon: "locker"
 			Examine:
 				desc: "It's a storage unit for tools."
 			
@@ -51,8 +54,7 @@ radiation_closet:
 	vars:
 		components:
 			Closet:
-				icon_door: "eng_rad"
-			
+				base_icon: "locker"
 			Examine:
 				desc: "It's a storage unit for rad-protective suits."
 			

@@ -12,16 +12,14 @@ class Closet extends Component {
 	open(prev: any) {
 		if (!prev()) {return false;}
 		this.a.layer = layers.BELOW_OBJ_LAYER;
-		this.a.overlays.door = {icon_state: "[parent]_open"};
+		this.a.icon_state =this.base_icon+"_open";
 		return true;
 	}
 
 	close(prev: any) {
 		if (!prev()) {return false;}
 		this.a.layer = layers.OBJ_LAYER;
-		this.a.overlays.door = {
-			icon_state: `${this.icon_door || "[parent]"}_door`,
-		};
+		this.a.icon_state =this.base_icon;
 		return true;
 	}
 }
@@ -33,7 +31,7 @@ Closet.template = {
 	vars: {
 		components: {
 			Closet: {
-				icon_door: null,
+				base_icon: "cabinet",
 				welded: false,
 			},
 			Examine: {
