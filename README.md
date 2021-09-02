@@ -22,7 +22,7 @@ Welcome! This is an attempt at remaking Civ13, a [BYOND](http://www.byond.com/) 
 
 Check the original Civ13 here: https://github.com/civ13/civ13.
 
-**The code for the client, which is cloned automatically when you setup the repo, is located here: https://github.com/civ13/typespess-client**
+<span style="color:orange">**The code for the client, which is cloned automatically when you setup the repo, is located here: https://github.com/civ13/typespess-client**</span>
 
 **Please read the [Contribution Guide](.github/CONTRIBUTING.md) page if you're willing to help! All help is appreciated!**
 

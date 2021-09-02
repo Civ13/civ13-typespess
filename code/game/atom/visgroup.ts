@@ -97,7 +97,6 @@ class VisibilityGroup {
 			}
 			return;
 		}
-		let match;
 		const can_see = viewer.c.Eye.can_see(atom);
 
 		if (key === "visible") {
@@ -115,7 +114,8 @@ class VisibilityGroup {
 			return;
 		}
 
-		if ((match = key.match(/^([^.]+)$/i))) {
+		const match = key.match(/^([^.]+)$/i);
+		if (match) {
 			const netid = viewer.c.Eye[mob_symbols._server_to_net][atom.object_id];
 			if (netid) {
 				viewer.c.Eye.enqueue_update_atom_var(netid, atom, match[1], 0);

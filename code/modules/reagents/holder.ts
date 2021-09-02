@@ -229,7 +229,7 @@ class ReagentHolder extends Component {
 
 		for (const [key, reagent] of this.reagents) {
 			if (!this.should_metabolize_reagent(key /*, reagent*/)) {continue;}
-			dt = Math.min(reagent.volume,Math.max(reagent.volume*0.01, 0.03));
+			const dt = Math.min(reagent.volume,Math.max(reagent.volume*0.01, 0.03));
 			if (reagent.overdose_threshold && reagent.volume >= reagent.overdose_threshold && !reagent.overdosed) {
 				reagent.overdosed = true;
 				reagent.overdose_start();

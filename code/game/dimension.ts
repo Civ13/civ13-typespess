@@ -164,7 +164,8 @@ class Location {
 		if (dir & 8) {
 			newx--;
 		}
-		return (this[_step_cache][dir] = this.dim.location(newx, newy, this.z));
+		this[_step_cache][dir] = this.dim.location(newx, newy, this.z);
+		return (this[_step_cache][dir]);
 	}
 
 	get opacity() {
