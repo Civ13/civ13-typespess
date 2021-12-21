@@ -25,7 +25,7 @@ Box.template = {
 				storage_slots: 7,
 			},
 			Item: {
-				inhand_icon_state: "syringe_kit",
+				inhand_icon_state: "electropack",
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_rhand_icon: "icons/mob/inhands/righthand/",
 				size: 3,

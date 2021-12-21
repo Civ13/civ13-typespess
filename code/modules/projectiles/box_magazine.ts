@@ -21,7 +21,9 @@ class AmmoBox extends Component {
 				this.a.icon_state = `${this.a.template.vars.icon_state}-${this.stored_ammo.length % this.ammo_mod}`;
 				break;
 			case 2:
-				this.a.icon_state = `${this.a.template.vars.icon_state}-${this.stored_ammo.length ? "1" : "0"}`;
+				if(this.stored_ammo.length) {this.a.icon_state = this.a.template.vars.icon_state;}
+				else
+					{this.a.icon_state = `${this.a.template.vars.icon_state}-0`;}
 				break;
 		}
 		this.a.c.Examine.desc = `${this.a.template.vars.components.Examine.desc} There are ${
@@ -167,7 +169,7 @@ AmmoBox.template = {
 				size: 1,
 				inhand_lhand_icon: "icons/mob/inhands/lefthand/",
 				inhand_rhand_icon: "icons/mob/inhands/righthand/",
-				inhand_icon_state: "syringe_kit",
+				inhand_icon_state: "ammo_can",
 				materials: {metal: 30000},
 			},
 			Tangile: {
@@ -179,7 +181,7 @@ AmmoBox.template = {
 		},
 		icon: "icons/obj/guns/ammo/",
 		icon_state: "pouch_closed",
-		name: "ammo box (null_reference_exception)",
+		name: "ammo box",
 	},
 };
 
@@ -187,7 +189,6 @@ class GunMagazine extends Component {}
 
 GunMagazine.loadBefore = ["AmmoBox"];
 GunMagazine.depends = ["AmmoBox"];
-
 GunMagazine.template = {
 	vars: {
 		components: {

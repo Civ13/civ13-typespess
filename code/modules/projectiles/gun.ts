@@ -1,7 +1,6 @@
 export{};
 const {Component, has_component, Sound, visible_message, to_chat} = require("./../../../code/game/server.js");
 const combat_defines = require("../../defines/combat_defines.js");
-const sounds = require("../../defines/sounds.js");
 
 class Gun extends Component {
 	constructor(atom: any, template: any) {
@@ -12,7 +11,7 @@ class Gun extends Component {
 	}
 
 	after_attack(target: any, user: any, prox: any, e: any) {
-		if (this.firing_burst || !target.loc || !target.loc.is_base_loc) {
+		if (this.firing_burst || !target || !target.loc || !target.loc.is_base_loc) {
 			return;
 		}
 		if (prox) {
@@ -158,7 +157,7 @@ Gun.template = {
 	vars: {
 		components: {
 			Gun: {
-				fire_sound: sounds.gunshot,
+				fire_sound: "sound/weapons/gunshot4.ogg",
 				suppressed: null,
 				recoil: 0,
 				clumsy_check: true,

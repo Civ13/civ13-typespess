@@ -107,7 +107,7 @@ class BallisticGun extends Component {
 		prev();
 		let state = this.a.template.vars.icon_state;
 		if (this.empty_state && !this.a.c.Gun.chambered) {
-			state += "-e";
+			state += "0";
 		}
 		if (this.a.c.Gun.suppressed) {
 			state += "-suppressed";
