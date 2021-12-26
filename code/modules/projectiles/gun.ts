@@ -77,6 +77,11 @@ class Gun extends Component {
 		if (!this.a.c.Item.slot || this.a.c.Item.slot.mob !== user || !this.a.c.Item.slot.props.is_hand_slot) {return false;}
 
 		if (this.chambered) {
+			new Sound(this.a.server, {
+				path: this.fire_sound,
+				volume: this.suppressed ? 0.1 : 0.5,
+				vary: true,
+			}).emit_from(user);
 			if (
 				this.chambered.c.AmmoCasing.fire({
 					target,
@@ -106,11 +111,6 @@ class Gun extends Component {
 	}
 
 	shoot_live_shot(user: any, point_blank: number = null, message = true) {
-		new Sound(this.a.server, {
-			path: this.fire_sound,
-			volume: this.suppressed ? 0.1 : 0.5,
-			vary: true,
-		}).emit_from(user);
 		if (!this.suppressed && message) {
 			if (point_blank) {
 				visible_message`<span class='danger'>The ${user} fires the ${this.a} point blank at the ${point_blank}!</span>`
