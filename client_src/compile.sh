@@ -1,3 +1,4 @@
 npm install
-npx ts-node ./client_src/compile.ts
+cd client_src/
+npx ts-node compile.ts
 echo done.
