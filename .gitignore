@@ -78,6 +78,7 @@ ts-built/
 *.js
 reports/test-report.xml
 out/
-client_src/
+client_src/.vscode/
+client_src/node_modules/
 tools/
 resources/icons/imgconvert.py
