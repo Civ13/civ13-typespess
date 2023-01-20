@@ -1,4 +1,3 @@
 npm install
-npx tsc -p tsconfig.json
-node compile.js
+npx ts-node compile.ts
 echo done.
