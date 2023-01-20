@@ -19,7 +19,7 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
 
-            - run: sudo sh client_src/compile.sh
+            - run: sudo sh ./client_src/compile.sh
 
             - uses: EndBug/add-and-commit@v9
               with:
