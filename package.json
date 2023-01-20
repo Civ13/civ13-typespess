@@ -13,7 +13,7 @@
     "browserify": "^17.0.0",
     "cson": "^7.20.0",
     "finalhandler": "^1.1.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "pouchdb": "^7.2.2",
     "pouchdb-server": "^4.2.0",
     "serve-static": "^1.14.1",
