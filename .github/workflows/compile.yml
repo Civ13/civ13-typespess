@@ -21,7 +21,7 @@ jobs:
 
             - run: sudo sh client_src/compile.sh
 
-            - uses: EndBug/add-and-commit@v7
+            - uses: EndBug/add-and-commit@v9
               with:
-                  add: "resources/client.js --force"
+                  add: "./resources/client.js --force"
                   message: "uploading client"
