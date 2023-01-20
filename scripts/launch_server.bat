@@ -3,9 +3,6 @@
 title Typespess Server
 
 cd..
-cd client_src
-call git pull
-cd..
 echo Transpiling Server...
 call npx tsc -p tsconfig.json
 cd client_src

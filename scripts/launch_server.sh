@@ -1,8 +1,5 @@
 #!/bin/bash
 cd -
-cd client_src
-git pull
-cd -
 echo Transpiling Server...
 npx tsc -p tsconfig.json
 cd client_src
