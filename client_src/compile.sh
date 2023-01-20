@@ -1,4 +1,5 @@
 npm install
 cd client_src/
-npx ts-node compile.ts
+npx tsc -p tsconfig.json
+node compile.js
 echo done.
