@@ -1,4 +1,4 @@
 npm install
 npx tsc -p tsconfig.json
-node compile.js
+node ./client_src/compile.js
 echo done.
