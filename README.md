@@ -49,6 +49,24 @@ If you have the database login system enabled (in **server.cson**), you also nee
 
 You can also use `launch_client.bat` to automatically update the dependencies and launch the game on the browser (Windows only).
 
+## CI validation
+
+The `Node.js CI` workflow selects Node.js 24 and installs the committed lockfile
+with development dependencies. TypeScript is pinned to the existing locked
+version, 4.9.4; the launcher invokes that local compiler directly.
+
+Run `sh scripts/test_launch_test.sh` for isolated launcher regression controls.
+These mock commands and verify that installation, compilation, bundling, map
+generation, and application failures stop the pipeline and return a failure.
+They do not start the game or open a port.
+
+`sh scripts/launch_test.sh` runs the full existing application test in CI,
+including `node index.js test`. That application path starts the server before
+exiting, so run it only in an isolated test environment. The launcher preserves
+npm's lifecycle-script policy; a blocked native dependency must be reported as
+unverified rather than worked around by changing script approvals. Compilation
+and mocked launcher controls alone do not verify actual application startup.
+
 ## Licenses
 
 All code is licensed under [GNU AGPL v3](https://www.gnu.org/licenses/agpl-3.0.html).
