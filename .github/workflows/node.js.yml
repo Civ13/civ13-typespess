@@ -15,14 +15,24 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.x]
+                node-version: [24.x]
                 # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
             - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v1
+              uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
 
-            - run: sudo sh scripts/launch_test.sh
+            - name: Verify selected runtime
+              run: |
+                  node --version
+                  npm --version
+                  node -e "if (process.versions.node.split('.')[0] !== '24') process.exit(1)"
+
+            - name: Launcher regression controls (no server)
+              run: sh scripts/test_launch_test.sh
+
+            - name: Compile and test application
+              run: sh scripts/launch_test.sh
