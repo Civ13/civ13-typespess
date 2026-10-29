@@ -6,9 +6,9 @@ cd "$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 compiler="$PWD/node_modules/typescript/bin/tsc"
 
 # The compiler and type declarations are required to build, including in CI.
-# Keep npm's lifecycle-script policy intact; do not install distro Node over
-# the runtime selected by actions/setup-node.
-npm ci --include=dev
+# Disable lifecycle scripts; do not install distro Node over the runtime
+# selected by actions/setup-node or relax native-package script approvals.
+npm ci --include=dev --ignore-scripts
 
 echo Transpiling to JavaScript...
 node "$compiler" -p tsconfig.json --noEmitOnError

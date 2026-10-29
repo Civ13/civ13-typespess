@@ -52,7 +52,7 @@ You can also use `launch_client.bat` to automatically update the dependencies an
 ## CI validation
 
 The `Node.js CI` workflow selects Node.js 24 and installs the committed lockfile
-with development dependencies. TypeScript is pinned to the existing locked
+with development dependencies and lifecycle scripts disabled. TypeScript is pinned to the existing locked
 version, 4.9.4; the launcher invokes that local compiler directly.
 
 Run `sh scripts/test_launch_test.sh` for isolated launcher regression controls.
@@ -63,7 +63,7 @@ They do not start the game or open a port.
 `sh scripts/launch_test.sh` runs the full existing application test in CI,
 including `node index.js test`. That application path starts the server before
 exiting, so run it only in an isolated test environment. The launcher preserves
-npm's lifecycle-script policy; a blocked native dependency must be reported as
+npm's native-package script approvals by disabling lifecycle scripts; a blocked native dependency must be reported as
 unverified rather than worked around by changing script approvals. Compilation
 and mocked launcher controls alone do not verify actual application startup.
 

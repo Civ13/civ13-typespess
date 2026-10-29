@@ -10,7 +10,7 @@ cp "$checkout/scripts/launch_test.sh" "$fixture/repo/scripts/launch_test.sh"
 cat > "$fixture/bin/npm" <<'MOCK'
 #!/bin/sh
 set -eu
-[ "$*" = 'ci --include=dev' ] || exit 90
+[ "$*" = 'ci --include=dev --ignore-scripts' ] || exit 90
 echo install >> "$STAGE_LOG"
 if [ "$FAIL_STAGE" = install ]; then exit 41; fi
 MOCK
